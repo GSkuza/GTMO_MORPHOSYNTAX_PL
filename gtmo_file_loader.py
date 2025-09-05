@@ -58,18 +58,14 @@ class GTMOFileLoader:
     def find_md_files(self, recursive: bool = True) -> List[Path]:
         """
         Find all MD files in the specified location.
-        
-        Args:
-            recursive: Search subdirectories
-            
-        Returns:
-            List of Path objects for MD files
         """
+        if self.base_path.is_file() and self.base_path.suffix.lower() == ".md":
+            logger.info(f"Single MD file provided: {self.base_path}")
+            return [self.base_path]
         if recursive:
             pattern = "**/*.md"
         else:
             pattern = "*.md"
-        
         md_files = list(self.base_path.glob(pattern))
         logger.info(f"Found {len(md_files)} MD files in {self.base_path}")
         return sorted(md_files)
