@@ -10,6 +10,7 @@ import numpy as np
 from typing import Dict, Tuple, List
 import logging
 from gtmo_pure_rhetoric import integrate_with_gtmo
+from gtmo_json_saver import GTMOOptimizedSaver
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -286,28 +287,74 @@ def batch_analyze(texts: List[str]) -> List[Dict]:
 
 # Test examples
 if __name__ == "__main__":
-    test_texts = [
-        "Skąd się biorą dzieci?",
-        "Ona ma tunele w uszach.",
-        "Wczoraj padało, a może nie będzie?",
-        "Kocham cię bardzo mocno i tak samo nienawidzę!",
-        "PraWO jest prawem."
-    ]
-    
-    print("GTMØ Polish Morphosyntax Engine - Test Run")
-    print("=" * 50)
-    
-    if not morfeusz or not nlp:
-        print("Missing required components. Install:")
-        print("pip install morfeusz2 spacy")
-        print("python -m spacy download pl_core_news_lg")
+    import sys
+    import pathlib
+
+    if len(sys.argv) > 1:
+        input_path = sys.argv[1]
+        with open(input_path, encoding="utf-8") as f:
+            text = f.read()
+        import spacy
+        nlp = spacy.load("pl_core_news_sm")
+        doc = nlp(text)
+        saver = GTMOOptimizedSaver()
+        # --- ANALIZA PO ZDANIACH ---
+        for i, sent in enumerate(doc.sents, 1):
+            print(f"\nAnalyzing sentence {i}: {sent.text}")
+            result = gtmo_analyze(sent.text)
+            saver.save_md_analysis(
+                md_file_path=input_path,
+                text_content=sent.text,
+                coordinates=result['coordinates'],
+                additional_metrics=result.get('morphology')
+            )
+            print(f"  D={result['coordinates']['determination']:.3f}, S={result['coordinates']['stability']:.3f}, E={result['coordinates']['entropy']:.3f}")
     else:
-        results = batch_analyze(test_texts)
+        test_texts = [
+            "Skąd się biorą dzieci?",
+            "Ona ma tunele w uszach.",
+            "Wczoraj padało, a może nie będzie?",
+            "Kocham cię bardzo mocno i tak samo nienawidzę!",
+            "PraWO jest prawem."
+        ]
         
-        print("\nSummary:")
-        for r in results:
-            if 'coordinates' in r:
-                c = r['coordinates']
-                print(f"'{r['text']}' -> D={c['determination']:.3f}, S={c['stability']:.3f}, E={c['entropy']:.3f}")
-            else:
-                print(f"'{r['text']}' -> ERROR: {r['error']}")
+        print("GTMØ Polish Morphosyntax Engine - Test Run")
+        print("=" * 50)
+        
+        if not morfeusz or not nlp:
+            print("Missing required components. Install:")
+            print("pip install morfeusz2 spacy")
+            print("python -m spacy download pl_core_news_lg")
+        else:
+            results = batch_analyze(test_texts)
+            
+            print("\nSummary:")
+            for r in results:
+                if 'coordinates' in r:
+                    c = r['coordinates']
+                    print(f"'{r['text']}' -> D={c['determination']:.3f}, S={c['stability']:.3f}, E={c['entropy']:.3f}")
+                else:
+                    print(f"'{r['text']}' -> ERROR: {r['error']}")
+    
+    import spacy
+    nlp = spacy.load("pl_core_news_sm")
+    from gtmo_morphosyntax import gtmo_analyze
+    from gtmo_json_saver import GTMOOptimizedSaver
+
+    saver = GTMOOptimizedSaver()
+
+    with open("C:\\Users\\develop22\\Downloads\\gtmo-session-summary.md", encoding="utf-8") as f:
+        text = f.read()
+
+    doc = nlp(text)
+    for i, token in enumerate(doc, 1):
+        if not token.is_space:
+            result = gtmo_analyze(token.text)
+            saver.save_md_analysis(
+                md_file_path="C:\\Users\\develop22\\Downloads\\gtmo-session-summary.md",
+                text_content=token.text,
+                coordinates=result['coordinates'],
+                additional_metrics=result.get('morphology')
+            )
+            print(f"Word {i}: {token.text}")
+            print(f"  D={result['coordinates']['determination']:.3f}, S={result['coordinates']['stability']:.3f}, E={result['coordinates']['entropy']:.3f}")
