@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.336927",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-foundations.md",
+    "name": "gtmo-foundations.md",
+    "extension": ".md",
+    "hash": "f26520b35d2a1258200f0c73101b47307065e552dc75ed70f9bb9f35963a8cae"
+  },
+  "content": {
+    "text": "DEF1 = \"Definition: Knowledge particle Ψᴷ – a fragment such that ΨGTMØ(x) ≥ dynamic particle threshold.\" DEF2 = \"Definition: Knowledge shadow Ψʰ – a fragment such that ΨGTMØ(x) ≤ dynamic shadow threshold.\" DEF3 = \"Definition: Cognitive entropy EGTMØ(x) = -Σ pᵢ log₂ pᵢ, where pᵢ are semantic partitions of x.\" DEF1dyn = \"(Dynamic) Definition: Knowledge particle Ψᴷ – fragment with ΨGTMØ(x) ≥ particle threshold (dynamic percentile).\" DEF2dyn = \"(Dynamic) Definition: Knowledge shadow Ψʰ – fragment with ΨGTMØ(x) ≤ shadow threshold (dynamic percentile).\" DEF1pl = \"Definicja: Cząstka wiedzy Ψᴷ – fragment poznania, dla którego ΨGTMØ(x) ≥ dynamiczny próg cząstek.\" DEF2pl = \"Definicja: Cień wiedzy Ψʰ – fragment o ΨGTMØ(x) ≤ dynamiczny próg cieni.\" DEF3pl = \"Definicja: Entropia poznawcza EGTMØ(x) = -Σ pᵢ log₂ pᵢ, pᵢ – podziały semantyczne x.\" DEF1dynpl = \"Definicja (dynamiczna): Cząstka wiedzy Ψᴷ – fragment, dla którego ΨGTMØ(x) ≥ prógcząstek (dynamiczny percentyl).\" DEF2dynpl = \"Definicja (dynamiczna): Cień wiedzy Ψʰ – fragment, dla którego ΨGTMØ(x) ≤ prógcieni (dynamiczny percentyl).\" GTMØdefinitions = [DEF1, DEF2, DEF3, DEF1dyn, DEF2dyn, DEF1pl, DEF2pl, DEF3pl, DEF1dynpl, DEF2dyn_pl]",
+    "length": 1193,
+    "word_count": 172
+  },
+  "coordinates": {
+    "determination": 0.866323,
+    "stability": 0.898914,
+    "entropy": 0.11284
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.337624",
+    "sequence_number": 826,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "--- DEFINICJE FORMALNE ---   # PL: DEFINICJE FORMALNE",
+    "text": "DEF1 = \"Definition: Knowledge particle Ψᴷ – a fragment such that ΨGTMØ(x) ≥ dynamic particle threshold.\" DEF2 = \"Definition: Knowledge shadow Ψʰ – a fragment such that ΨGTMØ(x) ≤ dynamic shadow threshold.\" DEF3 = \"Definition: Cognitive entropy EGTMØ(x) = -Σ pᵢ log₂ pᵢ, where pᵢ are semantic partitions of x.\" DEF1dyn = \"(Dynamic) Definition: Knowledge particle Ψᴷ – fragment with ΨGTMØ(x) ≥ particle threshold (dynamic percentile).\" DEF2dyn = \"(Dynamic) Definition: Knowledge shadow Ψʰ – fragment with ΨGTMØ(x) ≤ shadow threshold (dynamic percentile).\" DEF1pl = \"Definicja: Cząstka wiedzy Ψᴷ – fragment poznania, dla którego ΨGTMØ(x) ≥ dynamiczny próg cząstek.\" DEF2pl = \"Definicja: Cień wiedzy Ψʰ – fragment o ΨGTMØ(x) ≤ dynamiczny próg cieni.\" DEF3pl = \"Definicja: Entropia poznawcza EGTMØ(x) = -Σ pᵢ log₂ pᵢ, pᵢ – podziały semantyczne x.\" DEF1dynpl = \"Definicja (dynamiczna): Cząstka wiedzy Ψᴷ – fragment, dla którego ΨGTMØ(x) ≥ prógcząstek (dynamiczny percentyl).\" DEF2dynpl = \"Definicja (dynamiczna): Cień wiedzy Ψʰ – fragment, dla którego ΨGTMØ(x) ≤ prógcieni (dynamiczny percentyl).\" GTMØdefinitions = [DEF1, DEF2, DEF3, DEF1dyn, DEF2dyn, DEF1pl, DEF2pl, DEF3pl, DEF1dynpl, DEF2dyn_pl]",
+    "char_count": 1193,
+    "word_count": 172
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8841
+  }
+}

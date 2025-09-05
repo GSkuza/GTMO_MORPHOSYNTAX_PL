@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.759960",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\sanb5_documentation.md",
+    "name": "sanb5_documentation.md",
+    "extension": ".md",
+    "hash": "969109530abb44d66ea1ac6bc59cf62ab2f51a562e850922affdcd8e0568f9cb"
+  },
+  "content": {
+    "text": "```python from sanb5_logic import SANB5Logic, SANB5Value, GTMOTransformations",
+    "length": 77,
+    "word_count": 7
+  },
+  "coordinates": {
+    "determination": 0.7592,
+    "stability": 0.7748,
+    "entropy": 0.2408
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.760134",
+    "sequence_number": 465,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Basic Setup",
+    "text": "```python from sanb5_logic import SANB5Logic, SANB5Value, GTMOTransformations",
+    "char_count": 77,
+    "word_count": 7
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7644
+  }
+}

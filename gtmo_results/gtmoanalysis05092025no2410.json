@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:43.839371",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\system_lo_geometry.md",
+    "name": "system_lo_geometry.md",
+    "extension": ".md",
+    "hash": "b8eaba7b0453adf7698a48d6a2df06d1b66cebde291db8b618c2574b08f9014b"
+  },
+  "content": {
+    "text": "- \\(x ⊗ Ø = Ø\\) Reguły: - \\(x / Ø = Ø\\) - \\(Ø / x = Ø\\) - \\(α / ι = e / √2\\)",
+    "length": 76,
+    "word_count": 27
+  },
+  "coordinates": {
+    "determination": 0.7576,
+    "stability": 0.83584,
+    "entropy": 0.20408
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:43.839703",
+    "sequence_number": 2410,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7965
+  }
+}

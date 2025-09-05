@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:45.860487",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\theory.md",
+    "name": "theory.md",
+    "extension": ".md",
+    "hash": "8e9cd029bd671250eadcebba3eb3dc91a81945f28da51194f9341f72c2eabf66"
+  },
+  "content": {
+    "text": "Dynamic Thresholds: Classification thresholds for Ψᴷ and Ψʰ adaptively depend on the global distribution of knowledge quality Meta-feedback Loop: Iteratively optimizes classification, dynamically adapting to changes",
+    "length": 215,
+    "word_count": 26
+  },
+  "coordinates": {
+    "determination": 0.699766,
+    "stability": 0.742149,
+    "entropy": 0.341091
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:45.860888",
+    "sequence_number": 2496,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "high_quality",
+    "overall_score": 0.7003
+  }
+}

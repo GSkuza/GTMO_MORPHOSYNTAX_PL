@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:32.874277",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-session-summary.md",
+    "name": "gtmo-session-summary.md",
+    "extension": ".md",
+    "hash": "10d52735c3484bbe6285884204dc832dbce6aa424b020aad701d5c256e6bbaa2"
+  },
+  "content": {
+    "text": "- Stabilność numeryczna: odchylenia między przebiegami < 0.003 (0.5%)",
+    "length": 69,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.72,
+    "stability": 0.74232,
+    "entropy": 0.28416
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:32.874640",
+    "sequence_number": 1870,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7261
+  }
+}

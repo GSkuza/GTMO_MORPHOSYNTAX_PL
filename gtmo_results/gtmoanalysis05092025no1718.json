@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:29.838977",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-fractal-docs-pl.md",
+    "name": "gtmo-fractal-docs-pl.md",
+    "extension": ".md",
+    "hash": "49c2689e2fafb2b2d39981678a6e03e52162fc36f2396056728fc331d2d3a0a5"
+  },
+  "content": {
+    "text": "Parametr Julia: c = -0.8 + 0.156i - Natura: Paradoksy, sprzeczności - Przykład: \"To zdanie jest fałszywe\"",
+    "length": 105,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.733973,
+    "stability": 0.789443,
+    "entropy": 0.244914
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:29.839362",
+    "sequence_number": 1718,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7595
+  }
+}

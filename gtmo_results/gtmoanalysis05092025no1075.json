@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.682745",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\GTMØ Topology Core v1 Documentation.md",
+    "name": "GTMØ Topology Core v1 Documentation.md",
+    "extension": ".md",
+    "hash": "c62b72b27fd9e46425b8de9c1ecd1b9c4b9d50ed2807d5ec2b708493cf3e1951"
+  },
+  "content": {
+    "text": "- : Custom list of attractors (defaults to standard GTMØ set)",
+    "length": 61,
+    "word_count": 11
+  },
+  "coordinates": {
+    "determination": 0.712723,
+    "stability": 0.725954,
+    "entropy": 0.301185
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.682965",
+    "sequence_number": 1075,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Constructor",
+    "text": "- : Custom list of attractors (defaults to standard GTMØ set)",
+    "char_count": 61,
+    "word_count": 11
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7125
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:53.035399",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\topology_v2_optimized_docs.md",
+    "name": "topology_v2_optimized_docs.md",
+    "extension": ".md",
+    "hash": "cceb55353a8333bf983f9a98eb6ad1160e6ed04bd0b88cc18beceb0ac20d4470"
+  },
+  "content": {
+    "text": "The module's integration with the broader GTMØ v2 ecosystem enables sophisticated analyses while maintaining ease of use through clear APIs and comprehensive error handling.",
+    "length": 173,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.6156,
+    "stability": 0.67976,
+    "entropy": 0.54048
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:53.035754",
+    "sequence_number": 641,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Conclusion",
+    "text": "The module's integration with the broader GTMØ v2 ecosystem enables sophisticated analyses while maintaining ease of use through clear APIs and comprehensive error handling.",
+    "char_count": 173,
+    "word_count": 24
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.585
+  }
+}

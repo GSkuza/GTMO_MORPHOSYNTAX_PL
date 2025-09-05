@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.206142",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\axioms.md",
+    "name": "axioms.md",
+    "extension": ".md",
+    "hash": "69704f08c45d1bc50079491cb92949c4a9059842060452361cf8f14706fd7453"
+  },
+  "content": {
+    "text": "No standard mathematical operators transform indefiniteness (Ø) into defined elements: * $\\neg \\exists \\text{Op} \\in \\text{StandardOperators} : \\text{Op}(Ø) = x, \\quad x \\in \\text{Domain}(\\text{GTMØ})$",
+    "length": 201,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.796738,
+    "stability": 0.800723,
+    "entropy": 0.230231
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.206398",
+    "sequence_number": 743,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "AX9: Operator Irreducibility",
+    "text": "No standard mathematical operators transform indefiniteness (Ø) into defined elements: * $\\neg \\exists \\text{Op} \\in \\text{StandardOperators} : \\text{Op}(Ø) = x, \\quad x \\in \\text{Domain}(\\text{GTMØ})$",
+    "char_count": 201,
+    "word_count": 24
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7891
+  }
+}

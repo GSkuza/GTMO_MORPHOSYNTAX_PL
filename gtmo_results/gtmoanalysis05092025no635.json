@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:53.028194",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\topology_v2_optimized_docs.md",
+    "name": "topology_v2_optimized_docs.md",
+    "extension": ".md",
+    "hash": "cceb55353a8333bf983f9a98eb6ad1160e6ed04bd0b88cc18beceb0ac20d4470"
+  },
+  "content": {
+    "text": "analyzephasespace_topology(system) # Returns {'error': '...'} ```",
+    "length": 65,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.7704,
+    "stability": 0.803086,
+    "entropy": 0.220029
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:53.028409",
+    "sequence_number": 635,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Without GTMØ v2 modules",
+    "text": "analyzephasespace_topology(system) # Returns {'error': '...'} ```",
+    "char_count": 65,
+    "word_count": 6
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7845
+  }
+}

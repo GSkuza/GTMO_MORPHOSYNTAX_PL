@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.457402",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-fractal-theory-md.md",
+    "name": "gtmo-fractal-theory-md.md",
+    "extension": ".md",
+    "hash": "e590ce5bc5fd7b078aa77bce0df287ce3075d696bae0927e1cb377f97f103e4a"
+  },
+  "content": {
+    "text": "When \"0\" and \"1\" are written on paper: - Touching horizontally: observed as \"01\" - Touching vertically: observed as \"10\" - Separated: observed as \"0 1\" or \"0∠1\" - At critical distance: may produce AlienatedNumber(\"01\") or collapse to Ø This simple observation reveals that mathematical identity is inseparable from spatial configuration",
+    "length": 336,
+    "word_count": 51
+  },
+  "coordinates": {
+    "determination": 0.756956,
+    "stability": 0.915423,
+    "entropy": 0.197705
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.457605",
+    "sequence_number": 897,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "The Discovery",
+    "text": "When \"0\" and \"1\" are written on paper: - Touching horizontally: observed as \"01\" - Touching vertically: observed as \"10\" - Separated: observed as \"0 1\" or \"0∠1\" - At critical distance: may produce AlienatedNumber(\"01\") or collapse to Ø This simple observation reveals that mathematical identity is inseparable from spatial configuration",
+    "char_count": 336,
+    "word_count": 51
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8249
+  }
+}

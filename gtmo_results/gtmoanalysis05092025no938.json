@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.503862",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-fractal-theory-md.md",
+    "name": "gtmo-fractal-theory-md.md",
+    "extension": ".md",
+    "hash": "e590ce5bc5fd7b078aa77bce0df287ce3075d696bae0927e1cb377f97f103e4a"
+  },
+  "content": {
+    "text": "Mathematical objects don't have fixed identities Their nature depends on how they're arranged in space and observed.",
+    "length": 116,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.70096,
+    "stability": 0.69448,
+    "entropy": 0.34004
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.504083",
+    "sequence_number": 938,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "2. Identity is Configurational",
+    "text": "Mathematical objects don't have fixed identities Their nature depends on how they're arranged in space and observed.",
+    "char_count": 116,
+    "word_count": 17
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6851
+  }
+}

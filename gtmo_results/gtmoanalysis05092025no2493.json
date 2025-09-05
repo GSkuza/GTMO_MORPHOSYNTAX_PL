@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:45.795918",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\theory.md",
+    "name": "theory.md",
+    "extension": ".md",
+    "hash": "8e9cd029bd671250eadcebba3eb3dc91a81945f28da51194f9341f72c2eabf66"
+  },
+  "content": {
+    "text": "Translogical Isolation: No classical function leads to Ø 3 Epistemic Singularity: Ø is not fully knowable 4 Non-representability:",
+    "length": 129,
+    "word_count": 18
+  },
+  "coordinates": {
+    "determination": 0.684459,
+    "stability": 0.693681,
+    "entropy": 0.34177
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:45.796623",
+    "sequence_number": 2493,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6788
+  }
+}

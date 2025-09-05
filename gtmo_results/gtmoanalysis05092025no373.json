@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.623063",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\GTMØ Topology Core v1 Documentation.md",
+    "name": "GTMØ Topology Core v1 Documentation.md",
+    "extension": ".md",
+    "hash": "c62b72b27fd9e46425b8de9c1ecd1b9c4b9d50ed2807d5ec2b708493cf3e1951"
+  },
+  "content": {
+    "text": "testpoint = PhasePoint(0.5, 0.5, 0.5) # Neutral point for i in range(10): # Classify before breathing ktype1, conf1 = gtmo.classifypoint(testpoint) # Breathe the space gtmo.breathe(np.pi / 4) # Classify after breathing ktype2, conf2 = gtmo.classifypoint(testpoint) if ktype1 != ktype2: print(f\"Step {i}: Classification changed from {ktype1.name} to {k_type2.name}\") ```",
+    "length": 369,
+    "word_count": 48
+  },
+  "coordinates": {
+    "determination": 0.825788,
+    "stability": 0.912242,
+    "entropy": 0.131891
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.623352",
+    "sequence_number": 373,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Simulate breathing cognitive space",
+    "text": "testpoint = PhasePoint(0.5, 0.5, 0.5) # Neutral point for i in range(10): # Classify before breathing ktype1, conf1 = gtmo.classifypoint(testpoint) # Breathe the space gtmo.breathe(np.pi / 4) # Classify after breathing ktype2, conf2 = gtmo.classifypoint(testpoint) if ktype1 != ktype2: print(f\"Step {i}: Classification changed from {ktype1.name} to {k_type2.name}\") ```",
+    "char_count": 369,
+    "word_count": 48
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8687
+  }
+}

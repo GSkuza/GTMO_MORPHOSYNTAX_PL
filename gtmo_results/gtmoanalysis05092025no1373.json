@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:25.097119",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\vertical_search_ai_fashion_industry_report.md",
+    "name": "vertical_search_ai_fashion_industry_report.md",
+    "extension": ".md",
+    "hash": "6a5cf799acc151e63e5c7012f8796fe2e97279abdaf7b2f14c176d286bb9831a"
+  },
+  "content": {
+    "text": "While they share common goals of improving search accuracy and enhancing the shopping experience, they differ significantly in their technological approaches, target markets, integration strategies, and business models Key findings include: 1",
+    "length": 242,
+    "word_count": 32
+  },
+  "coordinates": {
+    "determination": 0.705667,
+    "stability": 0.748093,
+    "entropy": 0.394267
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:25.097413",
+    "sequence_number": 1373,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Executive Summary",
+    "text": "While they share common goals of improving search accuracy and enhancing the shopping experience, they differ significantly in their technological approaches, target markets, integration strategies, and business models Key findings include: 1",
+    "char_count": 242,
+    "word_count": 32
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6865
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:32.773822",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-session-summary.md",
+    "name": "gtmo-session-summary.md",
+    "extension": ".md",
+    "hash": "10d52735c3484bbe6285884204dc832dbce6aa424b020aad701d5c256e6bbaa2"
+  },
+  "content": {
+    "text": "706 | 0.667 | 0.374 | Przestrzeń interpretacyjna | | \"Wczoraj padało, a może...\"",
+    "length": 80,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.711933,
+    "stability": 0.766533,
+    "entropy": 0.267933
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:32.774125",
+    "sequence_number": 1864,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7368
+  }
+}

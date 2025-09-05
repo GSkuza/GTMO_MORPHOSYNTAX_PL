@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:40.483296",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\README.md",
+    "name": "README.md",
+    "extension": ".md",
+    "hash": "8ecef45e48c829b205aab4ac4b71cef3504dfe189e11293d999e103368dfa616"
+  },
+  "content": {
+    "text": "There exist entities, statements, or processes that are neither reducible to being, non-being, nor infinity, but rather manifest as indefinite (Ø)",
+    "length": 146,
+    "word_count": 21
+  },
+  "coordinates": {
+    "determination": 0.716695,
+    "stability": 0.759114,
+    "entropy": 0.295962
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:40.483803",
+    "sequence_number": 2257,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7266
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.638731",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo_fractal_theory_docs.md",
+    "name": "gtmo_fractal_theory_docs.md",
+    "extension": ".md",
+    "hash": "98c0457f37f2bbe7c8b1092c35ddf407447d93de519d5636ec68849eb4f130a8"
+  },
+  "content": {
+    "text": "for config in fractal_result['configurations'][:10]: print(f\"{config['objects']} → {config['result']}\") ```",
+    "length": 107,
+    "word_count": 8
+  },
+  "coordinates": {
+    "determination": 0.800873,
+    "stability": 0.856036,
+    "entropy": 0.163073
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.638962",
+    "sequence_number": 1039,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Examine sample configurations",
+    "text": "for config in fractal_result['configurations'][:10]: print(f\"{config['objects']} → {config['result']}\") ```",
+    "char_count": 107,
+    "word_count": 8
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8313
+  }
+}

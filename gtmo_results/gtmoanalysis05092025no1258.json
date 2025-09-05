@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.929466",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\system_lo_geometry_bilingual.md",
+    "name": "system_lo_geometry_bilingual.md",
+    "extension": ".md",
+    "hash": "720339b1e5c1c43630654764e9fa2353dfeab41dcbb63864e1273a89b8cb70d5"
+  },
+  "content": {
+    "text": "The metric defines cognitive distance between layers: | Layers | d(x, y) | | ------------- | ------- | | P₀ ↔ R | 1 | | R ↔ I | 2 | | I ↔ A | 3 | | A ↔ Ø | ∞ | | Ø ↔ anything | ∞ | > Ø is infinitely distant from everything but can project onto other layers via singularity \\(Φ\\).",
+    "length": 279,
+    "word_count": 69
+  },
+  "coordinates": {
+    "determination": 0.710531,
+    "stability": 0.876015,
+    "entropy": 0.244204
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.929806",
+    "sequence_number": 1258,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "2. COGNITIVE METRIC (d)",
+    "text": "The metric defines cognitive distance between layers: | Layers | d(x, y) | | ------------- | ------- | | P₀ ↔ R | 1 | | R ↔ I | 2 | | I ↔ A | 3 | | A ↔ Ø | ∞ | | Ø ↔ anything | ∞ | > Ø is infinitely distant from everything but can project onto other layers via singularity \\(Φ\\).",
+    "char_count": 279,
+    "word_count": 69
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7808
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.686321",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\Ramy Poznawcze GTMØ.md",
+    "name": "Ramy Poznawcze GTMØ.md",
+    "extension": ".md",
+    "hash": "2bcf3af8360cb0366d0d170b7ef429666045c33c66ff1d5f9e5b310a2c9338bf"
+  },
+  "content": {
+    "text": "System nie może posiadać jawnej wiedzy o Ø.",
+    "length": 43,
+    "word_count": 8
+  },
+  "coordinates": {
+    "determination": 0.655,
+    "stability": 0.6374,
+    "entropy": 0.39
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.686597",
+    "sequence_number": 414,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Aksjomat 3: Epistemiczna Osobliwość",
+    "text": "System nie może posiadać jawnej wiedzy o Ø.",
+    "char_count": 43,
+    "word_count": 8
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6341
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:39.990199",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\Indefiniteness Core_PL.md",
+    "name": "Indefiniteness Core_PL.md",
+    "extension": ".md",
+    "hash": "40efa8084707c7f44670075167ff3640de614304eee89f947fc20ce4a41b4e90"
+  },
+  "content": {
+    "text": "else: print(\"\\nTryb Ścisły jest WYŁĄCZONY (ustaw GTM_STRICT=1, aby włączyć)\")",
+    "length": 77,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.728444,
+    "stability": 0.740978,
+    "entropy": 0.286652
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:39.990543",
+    "sequence_number": 2234,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7276
+  }
+}

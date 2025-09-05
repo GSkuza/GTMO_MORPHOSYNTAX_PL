@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:37.293867",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\GTMØ Topology Core v1 Documentation.md",
+    "name": "GTMØ Topology Core v1 Documentation.md",
+    "extension": ".md",
+    "hash": "c62b72b27fd9e46425b8de9c1ecd1b9c4b9d50ed2807d5ec2b708493cf3e1951"
+  },
+  "content": {
+    "text": "creative, or paradoxical the meaning is - 0 = perfect order, no creativity - 1 = maximum chaos and creativity",
+    "length": 109,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.736353,
+    "stability": 0.736235,
+    "entropy": 0.290918
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:37.294255",
+    "sequence_number": 2096,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7272
+  }
+}

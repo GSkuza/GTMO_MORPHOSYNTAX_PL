@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:25.225507",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\vertical_search_ai_fashion_industry_report.md",
+    "name": "vertical_search_ai_fashion_industry_report.md",
+    "extension": ".md",
+    "hash": "6a5cf799acc151e63e5c7012f8796fe2e97279abdaf7b2f14c176d286bb9831a"
+  },
+  "content": {
+    "text": "The most successful solutions will likely be those that combine fashion-specific AI capabilities with seamless integration across the value chain and a clear focus on measurable business outcomes.",
+    "length": 196,
+    "word_count": 28
+  },
+  "coordinates": {
+    "determination": 0.646311,
+    "stability": 0.674467,
+    "entropy": 0.433822
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:25.225849",
+    "sequence_number": 1440,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Conclusion",
+    "text": "The most successful solutions will likely be those that combine fashion-specific AI capabilities with seamless integration across the value chain and a clear focus on measurable business outcomes.",
+    "char_count": 196,
+    "word_count": 28
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.629
+  }
+}

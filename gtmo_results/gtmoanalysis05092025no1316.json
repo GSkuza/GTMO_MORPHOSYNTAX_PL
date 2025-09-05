@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:25.022544",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\TopologiaØ-GTMØ_PL.md",
+    "name": "TopologiaØ-GTMØ_PL.md",
+    "extension": ".md",
+    "hash": "0e17a49798d36ab7bdd16137095d14794abd0021caa6c42f2d87200d43222d2c"
+  },
+  "content": {
+    "text": "- - - - -",
+    "length": 9,
+    "word_count": 5
+  },
+  "coordinates": {
+    "determination": 0.7952,
+    "stability": 0.8204,
+    "entropy": 0.1868
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:25.022727",
+    "sequence_number": 1316,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "🔹 Wizualizacje",
+    "text": "- - - - -",
+    "char_count": 9,
+    "word_count": 5
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8096
+  }
+}

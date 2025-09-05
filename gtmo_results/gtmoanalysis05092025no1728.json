@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:30.027882",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-fractal-docs-pl.md",
+    "name": "gtmo-fractal-docs-pl.md",
+    "extension": ".md",
+    "hash": "49c2689e2fafb2b2d39981678a6e03e52162fc36f2396056728fc331d2d3a0a5"
+  },
+  "content": {
+    "text": "Prędkość ucieczki - Granice fraktalne:",
+    "length": 38,
+    "word_count": 5
+  },
+  "coordinates": {
+    "determination": 0.722752,
+    "stability": 0.728688,
+    "entropy": 0.2872
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:30.028983",
+    "sequence_number": 1728,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7214
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:29.340246",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-fractal-docs-en.md",
+    "name": "gtmo-fractal-docs-en.md",
+    "extension": ".md",
+    "hash": "4cb01a59f86bc26e502643ea23e43febce14bcee9c21fdb16ad0f09c793a1119"
+  },
+  "content": {
+    "text": "| >0 = chaos | | Space Coverage | [0, 1] | >0.5 = good exploration | |",
+    "length": 70,
+    "word_count": 18
+  },
+  "coordinates": {
+    "determination": 0.7814,
+    "stability": 0.84156,
+    "entropy": 0.18104
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:29.340569",
+    "sequence_number": 1693,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.814
+  }
+}

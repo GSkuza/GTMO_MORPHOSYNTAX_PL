@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.906453",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\system_lo_geometry.md",
+    "name": "system_lo_geometry.md",
+    "extension": ".md",
+    "hash": "b8eaba7b0453adf7698a48d6a2df06d1b66cebde291db8b618c2574b08f9014b"
+  },
+  "content": {
+    "text": "Reguły: - \\(0 ⊕ 1 = 1\\) - \\(1 ⊕ ι = 1 + √2\\) - \\(ι ⊕ α = √2 + e\\) - \\(x ⊕ Ø = Ø\\) Reguły: - \\(0 ⊗ x = 0\\) - \\(1 ⊗ ι = √2\\) - \\(ι ⊗ α = √2e\\) - \\(x ⊗ Ø = Ø\\) Reguły: - \\(x / Ø = Ø\\) - \\(Ø / x = Ø\\) - \\(α / ι = e / √2\\) Reguły: - \\(1^α = 1\\) - \\(ι^2 = 2\\) - \\(α^0 = 1\\) - \\(Ø^x = Ø\\)",
+    "length": 281,
+    "word_count": 92
+  },
+  "coordinates": {
+    "determination": 0.8268,
+    "stability": 0.899246,
+    "entropy": 0.117577
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.906788",
+    "sequence_number": 1238,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "2. OPERATORY ARYTMETYCZNE",
+    "text": "Reguły: - \\(0 ⊕ 1 = 1\\) - \\(1 ⊕ ι = 1 + √2\\) - \\(ι ⊕ α = √2 + e\\) - \\(x ⊕ Ø = Ø\\) Reguły: - \\(0 ⊗ x = 0\\) - \\(1 ⊗ ι = √2\\) - \\(ι ⊗ α = √2e\\) - \\(x ⊗ Ø = Ø\\) Reguły: - \\(x / Ø = Ø\\) - \\(Ø / x = Ø\\) - \\(α / ι = e / √2\\) Reguły: - \\(1^α = 1\\) - \\(ι^2 = 2\\) - \\(α^0 = 1\\) - \\(Ø^x = Ø\\)",
+    "char_count": 281,
+    "word_count": 92
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8695
+  }
+}

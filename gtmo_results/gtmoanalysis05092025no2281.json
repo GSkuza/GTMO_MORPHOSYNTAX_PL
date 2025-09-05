@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:41.025886",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\sanb5_documentation.md",
+    "name": "sanb5_documentation.md",
+    "extension": ".md",
+    "hash": "969109530abb44d66ea1ac6bc59cf62ab2f51a562e850922affdcd8e0568f9cb"
+  },
+  "content": {
+    "text": "Minimal entropy, point of logical collapse - Examples: \"This statement is false\", division by zero",
+    "length": 98,
+    "word_count": 15
+  },
+  "coordinates": {
+    "determination": 0.740316,
+    "stability": 0.754316,
+    "entropy": 0.278947
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:41.026195",
+    "sequence_number": 2281,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7386
+  }
+}

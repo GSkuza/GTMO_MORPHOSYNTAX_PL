@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.722814",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\README.md",
+    "name": "README.md",
+    "extension": ".md",
+    "hash": "8ecef45e48c829b205aab4ac4b71cef3504dfe189e11293d999e103368dfa616"
+  },
+  "content": {
+    "text": "GTMØ is not only a technical mathematical theory but also a proposal for mapping and understanding the limits of reasoning, artificial intelligence, and the structure of knowledge itself",
+    "length": 186,
+    "word_count": 28
+  },
+  "coordinates": {
+    "determination": 0.637029,
+    "stability": 0.671371,
+    "entropy": 0.4688
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.723481",
+    "sequence_number": 438,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Meta-cognitive and Meta-mathematical Consequences:",
+    "text": "GTMØ is not only a technical mathematical theory but also a proposal for mapping and understanding the limits of reasoning, artificial intelligence, and the structure of knowledge itself",
+    "char_count": 186,
+    "word_count": 28
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6132
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.671258",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\GTMØ Topology Core v1 Documentation.md",
+    "name": "GTMØ Topology Core v1 Documentation.md",
+    "extension": ".md",
+    "hash": "c62b72b27fd9e46425b8de9c1ecd1b9c4b9d50ed2807d5ec2b708493cf3e1951"
+  },
+  "content": {
+    "text": "The system defines eight topological attractors representing different epistemic states: | Type | Symbol | Description | Position [D,S,E] | |------|--------|-------------|------------------| | Singularity | Ø | Paradoxes, logical contradictions | [1.0, 1.0, 0.0] | | Knowledge Particle | Ψᴷ | Clear, stable information | [0.85, 0.85, 0.15] | | Knowledge Shadow | Ψʰ | Unclear, unstable information | [0.15, 0.15, 0.85] | | Emergent | Ψᴺ | Information creating new meanings | [0.5, 0.3, 0.9] | | Transcendent | Ψ↑ | Transcendent knowledge | [0.7, 0.7, 0.3] | | Flux | Ψ~ | Fluid, changing knowledge | [0.5, 0.5, 0.8] | | Void | Ψ◊ | Void or absent knowledge | [0.0, 0.0, 0.5] | | Alienated | ℓ∅ | Alienated numbers (hybrid meanings) | [0.999, 0.999, 0.001] |",
+    "length": 757,
+    "word_count": 129
+  },
+  "coordinates": {
+    "determination": 0.87661,
+    "stability": 0.95331,
+    "entropy": 0.050712
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.671554",
+    "sequence_number": 1067,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Knowledge Types (Attractors)",
+    "text": "The system defines eight topological attractors representing different epistemic states: | Type | Symbol | Description | Position [D,S,E] | |------|--------|-------------|------------------| | Singularity | Ø | Paradoxes, logical contradictions | [1.0, 1.0, 0.0] | | Knowledge Particle | Ψᴷ | Clear, stable information | [0.85, 0.85, 0.15] | | Knowledge Shadow | Ψʰ | Unclear, unstable information | [0.15, 0.15, 0.85] | | Emergent | Ψᴺ | Information creating new meanings | [0.5, 0.3, 0.9] | | Transcendent | Ψ↑ | Transcendent knowledge | [0.7, 0.7, 0.3] | | Flux | Ψ~ | Fluid, changing knowledge | [0.5, 0.5, 0.8] | | Void | Ψ◊ | Void or absent knowledge | [0.0, 0.0, 0.5] | | Alienated | ℓ∅ | Alienated numbers (hybrid meanings) | [0.999, 0.999, 0.001] |",
+    "char_count": 757,
+    "word_count": 129
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.9264
+  }
+}

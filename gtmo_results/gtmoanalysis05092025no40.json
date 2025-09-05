@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.174121",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\DOCUMENTATION — kopia.md",
+    "name": "DOCUMENTATION — kopia.md",
+    "extension": ".md",
+    "hash": "f143af87e986b30c805a8e9e60ce4938c23baa980d503c023805e638f9ca9d74"
+  },
+  "content": {
+    "text": "Jest to globalny singleton reprezentujący ontologiczną osobliwość Stanowi element absorbujący dla wszelkich działań arytmetycznych Właściwości: - Singleton: zawsze tylko jedna instancja - Reprezentacja ASCII:",
+    "length": 208,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.6962,
+    "stability": 0.711473,
+    "entropy": 0.322182
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.174323",
+    "sequence_number": 40,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "`Singularity` (O – ontologiczna osobliwość Ø)",
+    "text": "Jest to globalny singleton reprezentujący ontologiczną osobliwość Stanowi element absorbujący dla wszelkich działań arytmetycznych Właściwości: - Singleton: zawsze tylko jedna instancja - Reprezentacja ASCII:",
+    "char_count": 208,
+    "word_count": 24
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "moderate_quality",
+    "overall_score": 0.6952
+  }
+}

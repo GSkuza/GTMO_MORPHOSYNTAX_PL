@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:39.204457",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\Indefiniteness Core_ENG.md",
+    "name": "Indefiniteness Core_ENG.md",
+    "extension": ".md",
+    "hash": "ee2041c97f75134dd11f405cc19bef69535e528457e7d94f3dfa925ce88ce3e4"
+  },
+  "content": {
+    "text": "If Strict Mode is enabled, such operations will raise a - Type:",
+    "length": 63,
+    "word_count": 12
+  },
+  "coordinates": {
+    "determination": 0.716353,
+    "stability": 0.725106,
+    "entropy": 0.301671
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:39.204787",
+    "sequence_number": 2191,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7133
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.944899",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\theory — kopia.md",
+    "name": "theory — kopia.md",
+    "extension": ".md",
+    "hash": "8e9cd029bd671250eadcebba3eb3dc91a81945f28da51194f9341f72c2eabf66"
+  },
+  "content": {
+    "text": "φ′(t) – denotes cognitive acceleration, measuring the speed of transitions between states.",
+    "length": 90,
+    "word_count": 12
+  },
+  "coordinates": {
+    "determination": 0.7934,
+    "stability": 0.8258,
+    "entropy": 0.2174
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.945154",
+    "sequence_number": 1273,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Cognitive Trajectories φ(t)",
+    "text": "φ′(t) – denotes cognitive acceleration, measuring the speed of transitions between states.",
+    "char_count": 90,
+    "word_count": 12
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8006
+  }
+}

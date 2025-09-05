@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.371882",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-fractal-docs-pl.md",
+    "name": "gtmo-fractal-docs-pl.md",
+    "extension": ".md",
+    "hash": "49c2689e2fafb2b2d39981678a6e03e52162fc36f2396056728fc331d2d3a0a5"
+  },
+  "content": {
+    "text": "- Skuza, G (2024) GTMØ as an attempt to capture the subjectivity of language - Mandelbrot, B (1982) The Fractal Geometry of Nature - Julia, G (1918)",
+    "length": 148,
+    "word_count": 27
+  },
+  "coordinates": {
+    "determination": 0.744093,
+    "stability": 0.819068,
+    "entropy": 0.231688
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.372378",
+    "sequence_number": 172,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "📖 Bibliografia",
+    "text": "- Skuza, G (2024) GTMØ as an attempt to capture the subjectivity of language - Mandelbrot, B (1982) The Fractal Geometry of Nature - Julia, G (1918)",
+    "char_count": 148,
+    "word_count": 27
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7772
+  }
+}

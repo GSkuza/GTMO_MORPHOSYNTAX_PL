@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.716353",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\GTMØ Topology Core v1 Documentation.md",
+    "name": "GTMØ Topology Core v1 Documentation.md",
+    "extension": ".md",
+    "hash": "c62b72b27fd9e46425b8de9c1ecd1b9c4b9d50ed2807d5ec2b708493cf3e1951"
+  },
+  "content": {
+    "text": "gtmo = GTMOTopologyCore() analysis = gtmo.analyzetrajectory(cooltrajectory) print(f\"Total semantic drift: {analysis['totaldistance']:.3f}\") print(f\"Dominant knowledge types: {analysis['dominanttypes']}\") ```",
+    "length": 207,
+    "word_count": 15
+  },
+  "coordinates": {
+    "determination": 0.803763,
+    "stability": 0.891437,
+    "entropy": 0.13983
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.716695",
+    "sequence_number": 1091,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Analyze the trajectory",
+    "text": "gtmo = GTMOTopologyCore() analysis = gtmo.analyzetrajectory(cooltrajectory) print(f\"Total semantic drift: {analysis['totaldistance']:.3f}\") print(f\"Dominant knowledge types: {analysis['dominanttypes']}\") ```",
+    "char_count": 207,
+    "word_count": 15
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8518
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:48.373797",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\vertical_search_ai_fashion_industry_report.md",
+    "name": "vertical_search_ai_fashion_industry_report.md",
+    "extension": ".md",
+    "hash": "6a5cf799acc151e63e5c7012f8796fe2e97279abdaf7b2f14c176d286bb9831a"
+  },
+  "content": {
+    "text": "The research identified eight key players in this space:",
+    "length": 56,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.7488,
+    "stability": 0.771067,
+    "entropy": 0.2774
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:48.374128",
+    "sequence_number": 2613,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7475
+  }
+}

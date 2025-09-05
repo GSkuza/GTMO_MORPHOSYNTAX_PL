@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.934602",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\system_lo_geometry_bilingual.md",
+    "name": "system_lo_geometry_bilingual.md",
+    "extension": ".md",
+    "hash": "720339b1e5c1c43630654764e9fa2353dfeab41dcbb63864e1273a89b8cb70d5"
+  },
+  "content": {
+    "text": "Rules: - \\(0 ⊗ x = 0\\) - \\(1 ⊗ ι = √2\\) - \\(ι ⊗ α = √2e\\) - \\(x ⊗ Ø = Ø\\) Rules: - \\(x / Ø = Ø\\) - \\(Ø / x = Ø\\) - \\(α / ι = e / √2\\) Rules: - \\(1^α = 1\\) - \\(ι^2 = 2\\) - \\(α^0 = 1\\) - \\(Ø^x = Ø\\)",
+    "length": 196,
+    "word_count": 63
+  },
+  "coordinates": {
+    "determination": 0.8456,
+    "stability": 0.968,
+    "entropy": 0.032
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.934816",
+    "sequence_number": 1263,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "2. ARITHMETIC OPERATORS",
+    "text": "Rules: - \\(0 ⊗ x = 0\\) - \\(1 ⊗ ι = √2\\) - \\(ι ⊗ α = √2e\\) - \\(x ⊗ Ø = Ø\\) Rules: - \\(x / Ø = Ø\\) - \\(Ø / x = Ø\\) - \\(α / ι = e / √2\\) Rules: - \\(1^α = 1\\) - \\(ι^2 = 2\\) - \\(α^0 = 1\\) - \\(Ø^x = Ø\\)",
+    "char_count": 196,
+    "word_count": 63
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.9272
+  }
+}

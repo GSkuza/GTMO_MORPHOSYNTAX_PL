@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:33.730382",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo_core_v2_docs.md",
+    "name": "gtmo_core_v2_docs.md",
+    "extension": ".md",
+    "hash": "3d281b5c3771e05b48102025c136a5d1754a4a3cdf0b455032d6d8fc591e24c6"
+  },
+  "content": {
+    "text": "alienbtc = AlienatedNumber(\"bitcoin2030\", context={ 'temporaldistance': 5.5, 'volatility': 0.9, 'predictability': 0.1, 'domain': 'futureprediction' }) print(f\"PSI Score: {alienbtc.psigtmscore():.4f}\") # ~0.",
+    "length": 206,
+    "word_count": 18
+  },
+  "coordinates": {
+    "determination": 0.798303,
+    "stability": 0.947886,
+    "entropy": 0.065629
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:33.730727",
+    "sequence_number": 1909,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8935
+  }
+}

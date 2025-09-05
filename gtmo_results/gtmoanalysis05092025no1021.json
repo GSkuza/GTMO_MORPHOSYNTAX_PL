@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.605495",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo_fractal_theory_docs.md",
+    "name": "gtmo_fractal_theory_docs.md",
+    "extension": ".md",
+    "hash": "98c0457f37f2bbe7c8b1092c35ddf407447d93de519d5636ec68849eb4f130a8"
+  },
+  "content": {
+    "text": "The distance between configurations uses a non-additive metric: Where: - are parameter weights - are parameter vectors - represents observer difference - is the observer influence factor ---",
+    "length": 190,
+    "word_count": 28
+  },
+  "coordinates": {
+    "determination": 0.707257,
+    "stability": 0.758229,
+    "entropy": 0.302657
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.605716",
+    "sequence_number": 1021,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "GTMØ Metric",
+    "text": "The distance between configurations uses a non-additive metric: Where: - are parameter weights - are parameter vectors - represents observer difference - is the observer influence factor ---",
+    "char_count": 190,
+    "word_count": 28
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7209
+  }
+}

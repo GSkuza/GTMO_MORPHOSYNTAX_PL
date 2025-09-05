@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:50.783531",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\vertical_search_ai_fashion_industry_report.md",
+    "name": "vertical_search_ai_fashion_industry_report.md",
+    "extension": ".md",
+    "hash": "6a5cf799acc151e63e5c7012f8796fe2e97279abdaf7b2f14c176d286bb9831a"
+  },
+  "content": {
+    "text": "Enterprise Dominance: The majority of specialized fashion vertical search AI",
+    "length": 76,
+    "word_count": 10
+  },
+  "coordinates": {
+    "determination": 0.745333,
+    "stability": 0.761822,
+    "entropy": 0.2722
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:50.783864",
+    "sequence_number": 2710,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.745
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.185259",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\alienated_numbers.md",
+    "name": "alienated_numbers.md",
+    "extension": ".md",
+    "hash": "faf5b5a711621c52aba4b386f8b24b9a6ac2cfb588274d3741a5f4cf2e223cc5"
+  },
+  "content": {
+    "text": "| ℓ∅ Property | Classical Numbers | ℓ∅ | |----------------------------------|-------------------|----| | Belongs to ℕ, ℤ, ℝ, ℂ | ✅ | ❌ | | Has symbolic representation | ✅ | ❌ | | Operates under algebraic rules | ✅ | ❌ | | Behaves stably under functions",
+    "length": 252,
+    "word_count": 46
+  },
+  "coordinates": {
+    "determination": 0.77864,
+    "stability": 0.93776,
+    "entropy": 0.08812
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.185433",
+    "sequence_number": 730,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "🧬 ℓ∅ as a mathematical-epistemic phenomenon",
+    "text": "| ℓ∅ Property | Classical Numbers | ℓ∅ | |----------------------------------|-------------------|----| | Belongs to ℕ, ℤ, ℝ, ℂ | ✅ | ❌ | | Has symbolic representation | ✅ | ❌ | | Operates under algebraic rules | ✅ | ❌ | | Behaves stably under functions",
+    "char_count": 252,
+    "word_count": 46
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8761
+  }
+}

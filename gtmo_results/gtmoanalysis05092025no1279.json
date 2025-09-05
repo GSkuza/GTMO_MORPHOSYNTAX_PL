@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.951220",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\theory — kopia.md",
+    "name": "theory — kopia.md",
+    "extension": ".md",
+    "hash": "8e9cd029bd671250eadcebba3eb3dc91a81945f28da51194f9341f72c2eabf66"
+  },
+  "content": {
+    "text": "GTMØ finds applications across various fields: Solving problems involving undefined or paradoxical phenomena Modeling cognitive and evolutionary processes in artificial intelligence",
+    "length": 181,
+    "word_count": 21
+  },
+  "coordinates": {
+    "determination": 0.724686,
+    "stability": 0.701886,
+    "entropy": 0.329114
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.951391",
+    "sequence_number": 1279,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Applications",
+    "text": "GTMØ finds applications across various fields: Solving problems involving undefined or paradoxical phenomena Modeling cognitive and evolutionary processes in artificial intelligence",
+    "char_count": 181,
+    "word_count": 21
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "moderate_quality",
+    "overall_score": 0.6992
+  }
+}

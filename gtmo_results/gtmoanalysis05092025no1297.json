@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.990891",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\theory.md",
+    "name": "theory.md",
+    "extension": ".md",
+    "hash": "8e9cd029bd671250eadcebba3eb3dc91a81945f28da51194f9341f72c2eabf66"
+  },
+  "content": {
+    "text": "* Analyzing epistemic boundaries within mathematical and logical sciences.",
+    "length": 74,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.677867,
+    "stability": 0.628133,
+    "entropy": 0.412067
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.991113",
+    "sequence_number": 1297,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Applications",
+    "text": "* Analyzing epistemic boundaries within mathematical and logical sciences.",
+    "char_count": 74,
+    "word_count": 9
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6313
+  }
+}

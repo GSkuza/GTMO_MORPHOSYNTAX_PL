@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:31.212371",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-fractal-theory-md.md",
+    "name": "gtmo-fractal-theory-md.md",
+    "extension": ".md",
+    "hash": "e590ce5bc5fd7b078aa77bce0df287ce3075d696bae0927e1cb377f97f103e4a"
+  },
+  "content": {
+    "text": "- Open configurations: Every configuration can be modified - Discontinuous:",
+    "length": 75,
+    "word_count": 10
+  },
+  "coordinates": {
+    "determination": 0.659757,
+    "stability": 0.680922,
+    "entropy": 0.334974
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:31.212957",
+    "sequence_number": 1788,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6686
+  }
+}

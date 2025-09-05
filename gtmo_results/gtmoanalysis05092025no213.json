@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.421881",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-fractal-theory-md.md",
+    "name": "gtmo-fractal-theory-md.md",
+    "extension": ".md",
+    "hash": "e590ce5bc5fd7b078aa77bce0df287ce3075d696bae0927e1cb377f97f103e4a"
+  },
+  "content": {
+    "text": "- Recognition includes spatial relationships - \"01\" ≠ \"10\" - order matters - Handles indefinite relationships",
+    "length": 109,
+    "word_count": 16
+  },
+  "coordinates": {
+    "determination": 0.7856,
+    "stability": 0.84088,
+    "entropy": 0.17672
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.422080",
+    "sequence_number": 213,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "2. Context-Aware AI",
+    "text": "- Recognition includes spatial relationships - \"01\" ≠ \"10\" - order matters - Handles indefinite relationships",
+    "char_count": 109,
+    "word_count": 16
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8166
+  }
+}

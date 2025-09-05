@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.285393",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-foundations.md",
+    "name": "gtmo-foundations.md",
+    "extension": ".md",
+    "hash": "f26520b35d2a1258200f0c73101b47307065e552dc75ed70f9bb9f35963a8cae"
+  },
+  "content": {
+    "text": "AX1 = \"Ø is a fundamentally different mathematical category: Ø ∉ {0, 1, ∞} ∧ ¬∃f, D: f(D) = Ø, D ⊆ {0,1,∞}\" AX2 = \"Translogical isolation: ¬∃f: D → Ø, D ⊆ DefinableSystems\" AX3 = \"Epistemic singularity: ¬∃S: Know(Ø) ∈ S, S ∈ CognitiveSystems\" AX4 = \"Non-representability: Ø ∉ Repr(S), ∀S ⊇ {0,1,∞}\" AX5 = \"Topological boundary: Ø ∈ ∂(CognitiveSpace)\" AX6 = \"Heuristic extremum: EGTMØ(Ø) = min EGTMØ(x), x ∈ KnowledgeDomain\" AX7 = \"Meta-closure: Ø ∈ MetaClosure(GTMØ) ∧ Ø triggers system self-evaluation\" AX8v2 = \"Ø is not a topological limit point: ¬∃Seq(xₙ) ⊆ Domain(GTMØ): lim(xₙ) = Ø\" AX9v2 = \"Operator irreducibility (strict): ¬∃Op ∈ StandardOperators: Op(Ø) = x, x ∈ Domain(GTMØ)\" AX10 = \"Meta-operator definition: ΨGTMØ, EGTMØ are meta-operators acting on Ø\" GTMØaxioms = [AX1, AX2, AX3, AX4, AX5, AX6, AX7, AX8v2, AX9_v2, AX10]",
+    "length": 834,
+    "word_count": 135
+  },
+  "coordinates": {
+    "determination": 0.765985,
+    "stability": 0.914706,
+    "entropy": 0.097185
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.285697",
+    "sequence_number": 107,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "--- AKSJOMATY GTMØ ---        # PL: AKSJOMATY GTMØ",
+    "text": "AX1 = \"Ø is a fundamentally different mathematical category: Ø ∉ {0, 1, ∞} ∧ ¬∃f, D: f(D) = Ø, D ⊆ {0,1,∞}\" AX2 = \"Translogical isolation: ¬∃f: D → Ø, D ⊆ DefinableSystems\" AX3 = \"Epistemic singularity: ¬∃S: Know(Ø) ∈ S, S ∈ CognitiveSystems\" AX4 = \"Non-representability: Ø ∉ Repr(S), ∀S ⊇ {0,1,∞}\" AX5 = \"Topological boundary: Ø ∈ ∂(CognitiveSpace)\" AX6 = \"Heuristic extremum: EGTMØ(Ø) = min EGTMØ(x), x ∈ KnowledgeDomain\" AX7 = \"Meta-closure: Ø ∈ MetaClosure(GTMØ) ∧ Ø triggers system self-evaluation\" AX8v2 = \"Ø is not a topological limit point: ¬∃Seq(xₙ) ⊆ Domain(GTMØ): lim(xₙ) = Ø\" AX9v2 = \"Operator irreducibility (strict): ¬∃Op ∈ StandardOperators: Op(Ø) = x, x ∈ Domain(GTMØ)\" AX10 = \"Meta-operator definition: ΨGTMØ, EGTMØ are meta-operators acting on Ø\" GTMØaxioms = [AX1, AX2, AX3, AX4, AX5, AX6, AX7, AX8v2, AX9_v2, AX10]",
+    "char_count": 834,
+    "word_count": 135
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8612
+  }
+}

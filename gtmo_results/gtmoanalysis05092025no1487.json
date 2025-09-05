@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:25.122745",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\Consciousness and Identity_ Axioms and Algorithms.md",
+    "name": "Consciousness and Identity_ Axioms and Algorithms.md",
+    "extension": ".md",
+    "hash": "a061e25bfef8f1f57bf67b08bd4bda6232ff5870992174103885a92bf7b4e3b0"
+  },
+  "content": {
+    "text": "1 Sklonuj repozytorium: 2 Przejdź do katalogu projektu: 3 Uruchom skrypt:",
+    "length": 73,
+    "word_count": 11
+  },
+  "coordinates": {
+    "determination": 0.692708,
+    "stability": 0.687908,
+    "entropy": 0.351292
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:25.123010",
+    "sequence_number": 1487,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6764
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:50.902960",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\vertical_search_ai_fashion_industry_report.md",
+    "name": "vertical_search_ai_fashion_industry_report.md",
+    "extension": ".md",
+    "hash": "6a5cf799acc151e63e5c7012f8796fe2e97279abdaf7b2f14c176d286bb9831a"
+  },
+  "content": {
+    "text": "Secondhand Market Growth: The emergence of specialized solutions for the secondhand market (e.g., ThredUp) reflects the growing importance of this segment in fashion retail",
+    "length": 172,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.7454,
+    "stability": 0.8034,
+    "entropy": 0.311
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:50.903301",
+    "sequence_number": 2716,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7459
+  }
+}

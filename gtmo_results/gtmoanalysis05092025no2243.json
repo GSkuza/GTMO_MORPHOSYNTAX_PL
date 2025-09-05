@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:40.169702",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\Ramy Poznawcze GTMØ.md",
+    "name": "Ramy Poznawcze GTMØ.md",
+    "extension": ".md",
+    "hash": "2bcf3af8360cb0366d0d170b7ef429666045c33c66ff1d5f9e5b310a2c9338bf"
+  },
+  "content": {
+    "text": "Określa, czy trajektoria poznawcza przekracza próg, przechodząc od niedefinitywności (Ø) do definiowalnej tożsamości (1).",
+    "length": 121,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.680567,
+    "stability": 0.691143,
+    "entropy": 0.354808
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:40.170006",
+    "sequence_number": 2243,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6723
+  }
+}

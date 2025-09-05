@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.798217",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\Ramy Poznawcze GTMØ.md",
+    "name": "Ramy Poznawcze GTMØ.md",
+    "extension": ".md",
+    "hash": "2bcf3af8360cb0366d0d170b7ef429666045c33c66ff1d5f9e5b310a2c9338bf"
+  },
+  "content": {
+    "text": "Analizuje stabilność klarowności poznawczej na podstawie wariancji.",
+    "length": 67,
+    "word_count": 7
+  },
+  "coordinates": {
+    "determination": 0.670606,
+    "stability": 0.64617,
+    "entropy": 0.38497
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.798402",
+    "sequence_number": 1145,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Analiza Stabilności Poznawczej",
+    "text": "Analizuje stabilność klarowności poznawczej na podstawie wariancji.",
+    "char_count": 67,
+    "word_count": 7
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6439
+  }
+}

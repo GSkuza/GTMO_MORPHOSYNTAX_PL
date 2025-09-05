@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:25.122428",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\vertical_search_ai_fashion_industry_report.md",
+    "name": "vertical_search_ai_fashion_industry_report.md",
+    "extension": ".md",
+    "hash": "6a5cf799acc151e63e5c7012f8796fe2e97279abdaf7b2f14c176d286bb9831a"
+  },
+  "content": {
+    "text": "- Automated attribute tagging: Using AI to identify and tag product features (color, pattern, style, etc.) - Taxonomy creation: Building consistent product hierarchies across catalogs - Metadata enrichment: Adding detailed descriptive attributes to improve searchability",
+    "length": 270,
+    "word_count": 35
+  },
+  "coordinates": {
+    "determination": 0.742791,
+    "stability": 0.808009,
+    "entropy": 0.241626
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:25.122638",
+    "sequence_number": 1393,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "2. Enhanced Product Tagging & Categorization",
+    "text": "- Automated attribute tagging: Using AI to identify and tag product features (color, pattern, style, etc.) - Taxonomy creation: Building consistent product hierarchies across catalogs - Metadata enrichment: Adding detailed descriptive attributes to improve searchability",
+    "char_count": 270,
+    "word_count": 35
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7697
+  }
+}

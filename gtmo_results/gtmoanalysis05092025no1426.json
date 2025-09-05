@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:25.193160",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\vertical_search_ai_fashion_industry_report.md",
+    "name": "vertical_search_ai_fashion_industry_report.md",
+    "extension": ".md",
+    "hash": "6a5cf799acc151e63e5c7012f8796fe2e97279abdaf7b2f14c176d286bb9831a"
+  },
+  "content": {
+    "text": "- SaaS Providers: Most solutions operate as SaaS providers to retailers - Platform Features: ThredUp's AI tools are features of its marketplace - Acquisition Strategy: Donde Search was acquired by Shopify for platform integration",
+    "length": 229,
+    "word_count": 34
+  },
+  "coordinates": {
+    "determination": 0.719904,
+    "stability": 0.756009,
+    "entropy": 0.332704
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:25.193509",
+    "sequence_number": 1426,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Business Model Differentiation",
+    "text": "- SaaS Providers: Most solutions operate as SaaS providers to retailers - Platform Features: ThredUp's AI tools are features of its marketplace - Acquisition Strategy: Donde Search was acquired by Shopify for platform integration",
+    "char_count": 229,
+    "word_count": 34
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "high_quality",
+    "overall_score": 0.7144
+  }
+}

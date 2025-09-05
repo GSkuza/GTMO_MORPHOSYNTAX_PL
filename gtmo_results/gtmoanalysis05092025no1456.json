@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:24.473720",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\alienated_numbers.md",
+    "name": "alienated_numbers.md",
+    "extension": ".md",
+    "hash": "faf5b5a711621c52aba4b386f8b24b9a6ac2cfb588274d3741a5f4cf2e223cc5"
+  },
+  "content": {
+    "text": "⛔ Formally: Where is any function defined in a known formal system (e.g., ZFC logic, Peano arithmetic, real analysis, etc.).",
+    "length": 124,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.736648,
+    "stability": 0.806221,
+    "entropy": 0.245262
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:24.474052",
+    "sequence_number": 1456,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7659
+  }
+}

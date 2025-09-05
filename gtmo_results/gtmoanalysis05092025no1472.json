@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:24.830212",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\axioms.md",
+    "name": "axioms.md",
+    "extension": ".md",
+    "hash": "69704f08c45d1bc50079491cb92949c4a9059842060452361cf8f14706fd7453"
+  },
+  "content": {
+    "text": "Indefiniteness (Ø) cannot be conventionally represented * $Ø \\notin \\text{Repr}(S), \\quad \\forall S \\supseteq \\{0, 1, \\infty\\}$",
+    "length": 127,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.702886,
+    "stability": 0.724886,
+    "entropy": 0.296943
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:24.830825",
+    "sequence_number": 1472,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7103
+  }
+}

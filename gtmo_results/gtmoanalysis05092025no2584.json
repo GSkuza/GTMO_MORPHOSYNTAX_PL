@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:47.702055",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\topology_v2_optimized_docs.md",
+    "name": "topology_v2_optimized_docs.md",
+    "extension": ".md",
+    "hash": "cceb55353a8333bf983f9a98eb6ad1160e6ed04bd0b88cc18beceb0ac20d4470"
+  },
+  "content": {
+    "text": "Creates an interactive 3D visualization of the phase space Note: Requires matplotlib Prints warning if not available.",
+    "length": 117,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.7198,
+    "stability": 0.6798,
+    "entropy": 0.3562
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:47.702371",
+    "sequence_number": 2584,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6811
+  }
+}

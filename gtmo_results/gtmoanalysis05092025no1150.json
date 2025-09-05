@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.802971",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\README.md",
+    "name": "README.md",
+    "extension": ".md",
+    "hash": "8ecef45e48c829b205aab4ac4b71cef3504dfe189e11293d999e103368dfa616"
+  },
+  "content": {
+    "text": "Four Ontological Categories: GTMØ posits that all objects and phenomena can, in principle, be classified into four fundamental categories: Zero (0) : Non-being (nothingness) One (1) : Being (definite existence) Infinity (∞) : Unboundedness (that which surpasses all finite limits) Indefiniteness (Ø) : That which cannot be fully defined, determined, or reduced to the previous categories; the mathematical and epistemic singularity.",
+    "length": 432,
+    "word_count": 61
+  },
+  "coordinates": {
+    "determination": 0.711137,
+    "stability": 0.848589,
+    "entropy": 0.201
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.803195",
+    "sequence_number": 1150,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Core Assumptions:",
+    "text": "Four Ontological Categories: GTMØ posits that all objects and phenomena can, in principle, be classified into four fundamental categories: Zero (0) : Non-being (nothingness) One (1) : Being (definite existence) Infinity (∞) : Unboundedness (that which surpasses all finite limits) Indefiniteness (Ø) : That which cannot be fully defined, determined, or reduced to the previous categories; the mathematical and epistemic singularity.",
+    "char_count": 432,
+    "word_count": 61
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7862
+  }
+}

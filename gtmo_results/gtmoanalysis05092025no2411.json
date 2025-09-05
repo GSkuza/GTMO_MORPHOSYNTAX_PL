@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:43.853076",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\system_lo_geometry.md",
+    "name": "system_lo_geometry.md",
+    "extension": ".md",
+    "hash": "b8eaba7b0453adf7698a48d6a2df06d1b66cebde291db8b618c2574b08f9014b"
+  },
+  "content": {
+    "text": "Reguły: - \\(1^α = 1\\) - \\(ι^2 = 2\\) - \\(α^0 = 1\\) - \\(Ø^x = Ø\\)",
+    "length": 63,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.772308,
+    "stability": 0.797785,
+    "entropy": 0.2354
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:43.853391",
+    "sequence_number": 2411,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7782
+  }
+}

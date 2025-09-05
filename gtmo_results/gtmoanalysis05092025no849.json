@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.391981",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-fractal-docs-en.md",
+    "name": "gtmo-fractal-docs-en.md",
+    "extension": ".md",
+    "hash": "4cb01a59f86bc26e502643ea23e43febce14bcee9c21fdb16ad0f09c793a1119"
+  },
+  "content": {
+    "text": "point = fractal.project_text(\"paradox\")",
+    "length": 39,
+    "word_count": 3
+  },
+  "coordinates": {
+    "determination": 0.744914,
+    "stability": 0.732857,
+    "entropy": 0.2872
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.392418",
+    "sequence_number": 849,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Text projection",
+    "text": "point = fractal.project_text(\"paradox\")",
+    "char_count": 39,
+    "word_count": 3
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7302
+  }
+}

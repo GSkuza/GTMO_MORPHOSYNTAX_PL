@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.573375",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo_core_v2_docs.md",
+    "name": "gtmo_core_v2_docs.md",
+    "extension": ".md",
+    "hash": "3d281b5c3771e05b48102025c136a5d1754a4a3cdf0b455032d6d8fc591e24c6"
+  },
+  "content": {
+    "text": "The module includes a comprehensive demonstration function that showcases: 1 Dynamic Context-Aware Values vs static constants 2 Topological Phase Space Classification vs threshold-based 3 Executable Axioms in Action with quantum state creation 4",
+    "length": 245,
+    "word_count": 33
+  },
+  "coordinates": {
+    "determination": 0.685891,
+    "stability": 0.715564,
+    "entropy": 0.352309
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.573614",
+    "sequence_number": 995,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "🔬 Demonstration Function",
+    "text": "The module includes a comprehensive demonstration function that showcases: 1 Dynamic Context-Aware Values vs static constants 2 Topological Phase Space Classification vs threshold-based 3 Executable Axioms in Action with quantum state creation 4",
+    "char_count": 245,
+    "word_count": 33
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.683
+  }
+}

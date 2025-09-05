@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.953433",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\theory — kopia.md",
+    "name": "theory — kopia.md",
+    "extension": ".md",
+    "hash": "8e9cd029bd671250eadcebba3eb3dc91a81945f28da51194f9341f72c2eabf66"
+  },
+  "content": {
+    "text": "The Generalized Theory of Mathematical Indefiniteness (GTMØ), developed by Grzegorz Skuza, allows exploration of epistemic and mathematical boundary phenomena",
+    "length": 158,
+    "word_count": 19
+  },
+  "coordinates": {
+    "determination": 0.720632,
+    "stability": 0.743937,
+    "entropy": 0.3008
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.953607",
+    "sequence_number": 1281,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Summary",
+    "text": "The Generalized Theory of Mathematical Indefiniteness (GTMØ), developed by Grzegorz Skuza, allows exploration of epistemic and mathematical boundary phenomena",
+    "char_count": 158,
+    "word_count": 19
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7213
+  }
+}

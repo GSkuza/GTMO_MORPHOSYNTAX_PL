@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:39.364862",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\Indefiniteness Core_ENG.md",
+    "name": "Indefiniteness Core_ENG.md",
+    "extension": ".md",
+    "hash": "ee2041c97f75134dd11f405cc19bef69535e528457e7d94f3dfa925ce88ce3e4"
+  },
+  "content": {
+    "text": "When Strict Mode is enabled, any arithmetic operation that would normally result in due to the involvement of or an will instead raise a This provides a \"fail-fast\" mechanism.",
+    "length": 175,
+    "word_count": 29
+  },
+  "coordinates": {
+    "determination": 0.675933,
+    "stability": 0.716527,
+    "entropy": 0.368442
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:39.365182",
+    "sequence_number": 2199,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6747
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:32.155696",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-fractal-theory-md.md",
+    "name": "gtmo-fractal-theory-md.md",
+    "extension": ".md",
+    "hash": "e590ce5bc5fd7b078aa77bce0df287ce3075d696bae0927e1cb377f97f103e4a"
+  },
+  "content": {
+    "text": "New properties arise from configurations that cannot be predicted from components alone This is not a limitation but a feature.",
+    "length": 127,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.663874,
+    "stability": 0.667684,
+    "entropy": 0.367863
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:32.155985",
+    "sequence_number": 1839,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6546
+  }
+}

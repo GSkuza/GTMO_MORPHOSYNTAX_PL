@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:30.709779",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-fractal-theory-md.md",
+    "name": "gtmo-fractal-theory-md.md",
+    "extension": ".md",
+    "hash": "e590ce5bc5fd7b078aa77bce0df287ce3075d696bae0927e1cb377f97f103e4a"
+  },
+  "content": {
+    "text": "1 Introduction 2 Fundamental Paradigm 3 Axioms 4 Core Concepts",
+    "length": 62,
+    "word_count": 10
+  },
+  "coordinates": {
+    "determination": 0.5072,
+    "stability": 0.5036,
+    "entropy": 0.4964
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:30.710108",
+    "sequence_number": 1765,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.5048
+  }
+}

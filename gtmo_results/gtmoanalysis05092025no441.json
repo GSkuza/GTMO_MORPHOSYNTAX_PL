@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.727552",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\sanb5_documentation.md",
+    "name": "sanb5_documentation.md",
+    "extension": ".md",
+    "hash": "969109530abb44d66ea1ac6bc59cf62ab2f51a562e850922affdcd8e0568f9cb"
+  },
+  "content": {
+    "text": "SANB-5 (Singularity, Alienation, Nothingness, Boolean - 5 values) is a five-valued logic system designed to integrate with the Generalized Theory of Mathematical Indefiniteness (GTMØ)",
+    "length": 183,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.7296,
+    "stability": 0.789,
+    "entropy": 0.2434
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.727754",
+    "sequence_number": 441,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Overview",
+    "text": "SANB-5 (Singularity, Alienation, Nothingness, Boolean - 5 values) is a five-valued logic system designed to integrate with the Generalized Theory of Mathematical Indefiniteness (GTMØ)",
+    "char_count": 183,
+    "word_count": 24
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7584
+  }
+}

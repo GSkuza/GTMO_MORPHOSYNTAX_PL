@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:25.103251",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\vertical_search_ai_fashion_industry_report.md",
+    "name": "vertical_search_ai_fashion_industry_report.md",
+    "extension": ".md",
+    "hash": "6a5cf799acc151e63e5c7012f8796fe2e97279abdaf7b2f14c176d286bb9831a"
+  },
+  "content": {
+    "text": "The fashion vertical search AI market continues to evolve, with emerging trends including increased AI specialization for fashion, omnichannel integration, performance-based differentiation, sustainability focus, and specialized solutions for the growing secondhand market.",
+    "length": 273,
+    "word_count": 32
+  },
+  "coordinates": {
+    "determination": 0.725849,
+    "stability": 0.782929,
+    "entropy": 0.306231
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:25.103505",
+    "sequence_number": 1378,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Executive Summary",
+    "text": "The fashion vertical search AI market continues to evolve, with emerging trends including increased AI specialization for fashion, omnichannel integration, performance-based differentiation, sustainability focus, and specialized solutions for the growing secondhand market.",
+    "char_count": 273,
+    "word_count": 32
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7342
+  }
+}

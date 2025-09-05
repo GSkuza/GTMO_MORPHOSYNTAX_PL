@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:46.936929",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\topology_v2_optimized_docs.md",
+    "name": "topology_v2_optimized_docs.md",
+    "extension": ".md",
+    "hash": "cceb55353a8333bf983f9a98eb6ad1160e6ed04bd0b88cc18beceb0ac20d4470"
+  },
+  "content": {
+    "text": "scale",
+    "length": 5,
+    "word_count": 1
+  },
+  "coordinates": {
+    "determination": 0.5072,
+    "stability": 0.5036,
+    "entropy": 0.4964
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:46.937300",
+    "sequence_number": 2544,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.5048
+  }
+}

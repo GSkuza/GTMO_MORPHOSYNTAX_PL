@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.884066",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\System ŁØ.md",
+    "name": "System ŁØ.md",
+    "extension": ".md",
+    "hash": "720339b1e5c1c43630654764e9fa2353dfeab41dcbb63864e1273a89b8cb70d5"
+  },
+  "content": {
+    "text": "The geometric structure (𝔾Ø) represents a space of cognitive layers, and the arithmetic of the system (𝔸Ø) defines algebraic operations that emphasize the special role of Ø, a singularity absorbing values and obstructing standard algebraic properties such as commutativity and inverses",
+    "length": 285,
+    "word_count": 41
+  },
+  "coordinates": {
+    "determination": 0.710724,
+    "stability": 0.742343,
+    "entropy": 0.316514
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.884301",
+    "sequence_number": 1218,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "System ŁØ (English version)",
+    "text": "The geometric structure (𝔾Ø) represents a space of cognitive layers, and the arithmetic of the system (𝔸Ø) defines algebraic operations that emphasize the special role of Ø, a singularity absorbing values and obstructing standard algebraic properties such as commutativity and inverses",
+    "char_count": 285,
+    "word_count": 41
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7122
+  }
+}

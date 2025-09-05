@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:48.313002",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\TopologyØ-GTMØ_EN.md",
+    "name": "TopologyØ-GTMØ_EN.md",
+    "extension": ".md",
+    "hash": "b5191ba95ba50fb10310d68c4ded23d53b3da56341b6f409ccb855300af1ce50"
+  },
+  "content": {
+    "text": "+ Matplotlib + NumPy",
+    "length": 20,
+    "word_count": 4
+  },
+  "coordinates": {
+    "determination": 0.5072,
+    "stability": 0.518,
+    "entropy": 0.4856
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:48.313942",
+    "sequence_number": 2611,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.5132
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.369505",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-fractal-docs-pl.md",
+    "name": "gtmo-fractal-docs-pl.md",
+    "extension": ".md",
+    "hash": "49c2689e2fafb2b2d39981678a6e03e52162fc36f2396056728fc331d2d3a0a5"
+  },
+  "content": {
+    "text": "1 Granice między znaczeniami są fraktalne - mają wymiar niecałkowity (~1.585) 2 Każdy typ wiedzy ma unikalny \"odcisk palca\" fraktalny - parametr Julia 3 Znaczenia ewoluują chaotycznie ale w ramach atraktorów 4",
+    "length": 209,
+    "word_count": 32
+  },
+  "coordinates": {
+    "determination": 0.724863,
+    "stability": 0.753366,
+    "entropy": 0.283688
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.369817",
+    "sequence_number": 170,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "🎯 Kluczowe Wnioski",
+    "text": "1 Granice między znaczeniami są fraktalne - mają wymiar niecałkowity (~1.585) 2 Każdy typ wiedzy ma unikalny \"odcisk palca\" fraktalny - parametr Julia 3 Znaczenia ewoluują chaotycznie ale w ramach atraktorów 4",
+    "char_count": 209,
+    "word_count": 32
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7315
+  }
+}

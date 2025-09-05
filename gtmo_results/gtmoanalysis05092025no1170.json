@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.825110",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\sanb5_documentation.md",
+    "name": "sanb5_documentation.md",
+    "extension": ".md",
+    "hash": "969109530abb44d66ea1ac6bc59cf62ab2f51a562e850922affdcd8e0568f9cb"
+  },
+  "content": {
+    "text": "- Meaning: Multiple meanings held simultaneously, metaphor, ambiguity - Characteristics: High potential entropy, medium stability - Examples: \"Juliet is the sun\", poetic language, irony",
+    "length": 185,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.7492,
+    "stability": 0.8416,
+    "entropy": 0.1958
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.825290",
+    "sequence_number": 1170,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Ψ (Psi/Superposition) - Coherent Superposition",
+    "text": "- Meaning: Multiple meanings held simultaneously, metaphor, ambiguity - Characteristics: High potential entropy, medium stability - Examples: \"Juliet is the sun\", poetic language, irony",
+    "char_count": 185,
+    "word_count": 24
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7983
+  }
+}

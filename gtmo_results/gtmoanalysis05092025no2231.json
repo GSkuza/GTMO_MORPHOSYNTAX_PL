@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:39.953782",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\Indefiniteness Core_PL.md",
+    "name": "Indefiniteness Core_PL.md",
+    "extension": ".md",
+    "hash": "40efa8084707c7f44670075167ff3640de614304eee89f947fc20ce4a41b4e90"
+  },
+  "content": {
+    "text": "# Ta linia nie zostanie osiągnięta except SingularityError as e: print(f\"Tryb ścisły przechwycił błąd dla 'O / 2': {e}\") try: wynikanstrict = liczbaw - 7 print(f\"AlienatedNumber - 7 w trybie ścisłym = {wynikanstrict}\")",
+    "length": 218,
+    "word_count": 33
+  },
+  "coordinates": {
+    "determination": 0.731409,
+    "stability": 0.824565,
+    "entropy": 0.240397
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:39.954109",
+    "sequence_number": 2231,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7719
+  }
+}

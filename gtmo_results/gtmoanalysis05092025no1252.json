@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.922407",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\system_lo_geometry_bilingual.md",
+    "name": "system_lo_geometry_bilingual.md",
+    "extension": ".md",
+    "hash": "720339b1e5c1c43630654764e9fa2353dfeab41dcbb63864e1273a89b8cb70d5"
+  },
+  "content": {
+    "text": "- Równanie poznawczej asymptoty: \\(\\lim_{x o A} Ψ(x) = Ø\\) - Równanie entropii poznawczej: \\(E(x) = \\ln(d(x, Ø))\\) - Równanie dezintegracji: \\(Ψ^n(P₀) = Ø, \\quad ext{przy } n o ∞\\) ---",
+    "length": 184,
+    "word_count": 31
+  },
+  "coordinates": {
+    "determination": 0.735937,
+    "stability": 0.867595,
+    "entropy": 0.203034
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.922595",
+    "sequence_number": 1252,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "4. RÓWNANIA CHARAKTERYSTYCZNE",
+    "text": "- Równanie poznawczej asymptoty: \\(\\lim_{x o A} Ψ(x) = Ø\\) - Równanie entropii poznawczej: \\(E(x) = \\ln(d(x, Ø))\\) - Równanie dezintegracji: \\(Ψ^n(P₀) = Ø, \\quad ext{przy } n o ∞\\) ---",
+    "char_count": 184,
+    "word_count": 31
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8002
+  }
+}

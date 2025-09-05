@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.635534",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\GTMØ Topology Core v1 Documentation.md",
+    "name": "GTMØ Topology Core v1 Documentation.md",
+    "extension": ".md",
+    "hash": "c62b72b27fd9e46425b8de9c1ecd1b9c4b9d50ed2807d5ec2b708493cf3e1951"
+  },
+  "content": {
+    "text": "- Follow PEP 8 - Add docstrings to all functions and classes - Include type hints where appropriate - Add unit tests for new features",
+    "length": 133,
+    "word_count": 25
+  },
+  "coordinates": {
+    "determination": 0.671273,
+    "stability": 0.714218,
+    "entropy": 0.385636
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.635712",
+    "sequence_number": 385,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Code Style",
+    "text": "- Follow PEP 8 - Add docstrings to all functions and classes - Include type hints where appropriate - Add unit tests for new features",
+    "char_count": 133,
+    "word_count": 25
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6666
+  }
+}

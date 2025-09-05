@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.441433",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-session-summary.md",
+    "name": "gtmo-session-summary.md",
+    "extension": ".md",
+    "hash": "10d52735c3484bbe6285884204dc832dbce6aa424b020aad701d5c256e6bbaa2"
+  },
+  "content": {
+    "text": "1 Wersja bazowa - podstawowe mapowanie POS i przypadków 2 Optymalizacja 1 - dostrojenie współrzędnych przymiotników i przysłówków 3 Optymalizacja 2 - drobne korekty dla lepszej dyskryminacji 4 Wersja finalna - osiągnięcie optimum lokalnego",
+    "length": 239,
+    "word_count": 34
+  },
+  "coordinates": {
+    "determination": 0.7118,
+    "stability": 0.6938,
+    "entropy": 0.340933
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.441619",
+    "sequence_number": 230,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Iteracje rozwojowe:",
+    "text": "1 Wersja bazowa - podstawowe mapowanie POS i przypadków 2 Optymalizacja 1 - dostrojenie współrzędnych przymiotników i przysłówków 3 Optymalizacja 2 - drobne korekty dla lepszej dyskryminacji 4 Wersja finalna - osiągnięcie optimum lokalnego",
+    "char_count": 239,
+    "word_count": 34
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6882
+  }
+}

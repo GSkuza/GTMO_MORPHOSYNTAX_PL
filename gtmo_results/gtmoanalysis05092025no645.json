@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:53.041621",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\TopologyØ-GTMØ_EN.md",
+    "name": "TopologyØ-GTMØ_EN.md",
+    "extension": ".md",
+    "hash": "b5191ba95ba50fb10310d68c4ded23d53b3da56341b6f409ccb855300af1ce50"
+  },
+  "content": {
+    "text": "- Derivative of cognitive trajectory:",
+    "length": 37,
+    "word_count": 5
+  },
+  "coordinates": {
+    "determination": 0.8024,
+    "stability": 0.806,
+    "entropy": 0.2012
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:53.041837",
+    "sequence_number": 645,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "3. Operator φ′(t)",
+    "text": "- Derivative of cognitive trajectory:",
+    "char_count": 37,
+    "word_count": 5
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8024
+  }
+}

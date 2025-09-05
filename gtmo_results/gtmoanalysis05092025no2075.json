@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:36.895712",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo_fractal_theory_docs.md",
+    "name": "gtmo_fractal_theory_docs.md",
+    "extension": ".md",
+    "hash": "98c0457f37f2bbe7c8b1092c35ddf407447d93de519d5636ec68849eb4f130a8"
+  },
+  "content": {
+    "text": "This implementation provides: - Complete mathematical framework for working with configurational mathematics - Robust algorithms for detecting emergence and analyzing fractal structure - Practical tools for experimental mathematics research - Foundation for developing configuration-aware computational systems The theory opens new avenues for understanding mathematical truth as something that emerges from the interplay between abstract concepts, spatial arrangement, and observational perspective",
+    "length": 499,
+    "word_count": 60
+  },
+  "coordinates": {
+    "determination": 0.616,
+    "stability": 0.75864,
+    "entropy": 0.48928
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:36.896169",
+    "sequence_number": 2075,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6285
+  }
+}

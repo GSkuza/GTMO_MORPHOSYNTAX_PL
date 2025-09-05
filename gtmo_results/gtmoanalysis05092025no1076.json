@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.683785",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\GTMØ Topology Core v1 Documentation.md",
+    "name": "GTMØ Topology Core v1 Documentation.md",
+    "extension": ".md",
+    "hash": "c62b72b27fd9e46425b8de9c1ecd1b9c4b9d50ed2807d5ec2b708493cf3e1951"
+  },
+  "content": {
+    "text": "Calculate effective distance from a point to an attractor - Parameters: - : or - Point in phase space - : - Target attractor - Returns: Effective distance (weighted by attractor strength)",
+    "length": 187,
+    "word_count": 32
+  },
+  "coordinates": {
+    "determination": 0.714123,
+    "stability": 0.787574,
+    "entropy": 0.296256
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.684064",
+    "sequence_number": 1076,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "`calculate_distance(point, attractor) -> float`",
+    "text": "Calculate effective distance from a point to an attractor - Parameters: - : or - Point in phase space - : - Target attractor - Returns: Effective distance (weighted by attractor strength)",
+    "char_count": 187,
+    "word_count": 32
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7351
+  }
+}

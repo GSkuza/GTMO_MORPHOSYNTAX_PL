@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:53.150757",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\vertical_search_ai_fashion_industry_report.md",
+    "name": "vertical_search_ai_fashion_industry_report.md",
+    "extension": ".md",
+    "hash": "6a5cf799acc151e63e5c7012f8796fe2e97279abdaf7b2f14c176d286bb9831a"
+  },
+  "content": {
+    "text": "Consolidation Trend: The acquisition of Donde Search by Shopify suggests a trend toward integration of specialized AI capabilities into larger e-commerce platforms 6",
+    "length": 165,
+    "word_count": 23
+  },
+  "coordinates": {
+    "determination": 0.688853,
+    "stability": 0.712158,
+    "entropy": 0.369811
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:53.151006",
+    "sequence_number": 716,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Conclusion",
+    "text": "Consolidation Trend: The acquisition of Donde Search by Shopify suggests a trend toward integration of specialized AI capabilities into larger e-commerce platforms 6",
+    "char_count": 165,
+    "word_count": 23
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6771
+  }
+}

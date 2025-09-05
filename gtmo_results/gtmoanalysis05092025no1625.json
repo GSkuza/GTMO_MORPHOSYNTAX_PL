@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:27.818758",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-core-v2-docs.md",
+    "name": "gtmo-core-v2-docs.md",
+    "extension": ".md",
+    "hash": "4f068b8163acf85afed7c8b708ee00d728c04717b89061ff8831432eb615a407"
+  },
+  "content": {
+    "text": ": Classification system learns from feedback",
+    "length": 44,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.7348,
+    "stability": 0.722015,
+    "entropy": 0.302754
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:27.819121",
+    "sequence_number": 1625,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.718
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:46.994046",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\topology_v2_optimized_docs.md",
+    "name": "topology_v2_optimized_docs.md",
+    "extension": ".md",
+    "hash": "cceb55353a8333bf983f9a98eb6ad1160e6ed04bd0b88cc18beceb0ac20d4470"
+  },
+  "content": {
+    "text": "Parameters: - (OptimizedTrajectoryObserver): Observer instance with registered patterns Returns: - Dictionary containing: - : Count of high-confidence dimensions - : Distribution across stable, chaotic, and transient patterns Clustering Logic: - Stable patterns: Total variance 0.3 - Transient patterns: 0.05 ≤ total variance ≤ 0.",
+    "length": 330,
+    "word_count": 44
+  },
+  "coordinates": {
+    "determination": 0.783641,
+    "stability": 0.914483,
+    "entropy": 0.127697
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:46.994381",
+    "sequence_number": 2546,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8568
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.443383",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-session-summary.md",
+    "name": "gtmo-session-summary.md",
+    "extension": ".md",
+    "hash": "10d52735c3484bbe6285884204dc832dbce6aa424b020aad701d5c256e6bbaa2"
+  },
+  "content": {
+    "text": "| Tekst | Typ | D | S | E | Interpretacja | |-------|-----|---|---|---|---------------| | \"Ona ma tunele w uszach\" | Fakt | 0.724 | 0.738 | 0.273 | Najniższa E - konkret | | Fragment Reymonta | Proza | 0.708 | 0.747 | 0.314 | Najwyższa S - harmonia | | \"Prawo jest prawem\" | Tautologia | 0.710 | 0.701 | 0.322 | Wysokie D/S, niska E | | Konstytucja RP | Prawo | 0.706 | 0.667 | 0.374 | Przestrzeń interpretacyjna | | \"Wczoraj padało, a może...\" | Niepewność | 0.648 | 0.649 | 0.381 | Perfekcyjna symetria D≈S | | \"Skąd się biorą dzieci?\" | Pytanie | 0.643 | 0.599 | 0.442 | Wysoka E epistemiczna | | \"Kocham",
+    "length": 607,
+    "word_count": 122
+  },
+  "coordinates": {
+    "determination": 0.778599,
+    "stability": 0.897937,
+    "entropy": 0.115088
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.443703",
+    "sequence_number": 232,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Przypadki testowe - wyniki finalne:",
+    "text": "| Tekst | Typ | D | S | E | Interpretacja | |-------|-----|---|---|---|---------------| | \"Ona ma tunele w uszach\" | Fakt | 0.724 | 0.738 | 0.273 | Najniższa E - konkret | | Fragment Reymonta | Proza | 0.708 | 0.747 | 0.314 | Najwyższa S - harmonia | | \"Prawo jest prawem\" | Tautologia | 0.710 | 0.701 | 0.322 | Wysokie D/S, niska E | | Konstytucja RP | Prawo | 0.706 | 0.667 | 0.374 | Przestrzeń interpretacyjna | | \"Wczoraj padało, a może...\" | Niepewność | 0.648 | 0.649 | 0.381 | Perfekcyjna symetria D≈S | | \"Skąd się biorą dzieci?\" | Pytanie | 0.643 | 0.599 | 0.442 | Wysoka E epistemiczna | | \"Kocham",
+    "char_count": 607,
+    "word_count": 122
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8538
+  }
+}

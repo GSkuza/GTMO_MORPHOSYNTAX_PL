@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:25.026992",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\topology_v2_optimized_docs.md",
+    "name": "topology_v2_optimized_docs.md",
+    "extension": ".md",
+    "hash": "cceb55353a8333bf983f9a98eb6ad1160e6ed04bd0b88cc18beceb0ac20d4470"
+  },
+  "content": {
+    "text": "This module focuses on analyzing the distribution of epistemic entities in phase space and identifying emergent behavioral patterns in particle trajectories.",
+    "length": 157,
+    "word_count": 21
+  },
+  "coordinates": {
+    "determination": 0.695,
+    "stability": 0.6946,
+    "entropy": 0.3544
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:25.027462",
+    "sequence_number": 1320,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Overview",
+    "text": "This module focuses on analyzing the distribution of epistemic entities in phase space and identifying emergent behavioral patterns in particle trajectories.",
+    "char_count": 157,
+    "word_count": 21
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6784
+  }
+}

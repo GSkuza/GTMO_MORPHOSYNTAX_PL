@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.539039",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo_core_v2_docs.md",
+    "name": "gtmo_core_v2_docs.md",
+    "extension": ".md",
+    "hash": "3d281b5c3771e05b48102025c136a5d1754a4a3cdf0b455032d6d8fc591e24c6"
+  },
+  "content": {
+    "text": "Context-aware alienated numbers with dynamic properties based on semantic analysis",
+    "length": 82,
+    "word_count": 10
+  },
+  "coordinates": {
+    "determination": 0.7284,
+    "stability": 0.731333,
+    "entropy": 0.306467
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.539236",
+    "sequence_number": 968,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "`AlienatedNumber` Class",
+    "text": "Context-aware alienated numbers with dynamic properties based on semantic analysis",
+    "char_count": 82,
+    "word_count": 10
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7178
+  }
+}

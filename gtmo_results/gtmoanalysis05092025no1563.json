@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:26.664226",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-core-v2-docs.md",
+    "name": "gtmo-core-v2-docs.md",
+    "extension": ".md",
+    "hash": "4f068b8163acf85afed7c8b708ee00d728c04717b89061ff8831432eb615a407"
+  },
+  "content": {
+    "text": "standard numbers - Maintains ontological distinctiveness",
+    "length": 56,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.7668,
+    "stability": 0.771067,
+    "entropy": 0.2432
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:26.665070",
+    "sequence_number": 1563,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7649
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:33.456591",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo_core_v2_docs.md",
+    "name": "gtmo_core_v2_docs.md",
+    "extension": ".md",
+    "hash": "3d281b5c3771e05b48102025c136a5d1754a4a3cdf0b455032d6d8fc591e24c6"
+  },
+  "content": {
+    "text": "O 42 # → Oemptysingularity result3 = O / 3.14 # →",
+    "length": 49,
+    "word_count": 12
+  },
+  "coordinates": {
+    "determination": 0.715644,
+    "stability": 0.738489,
+    "entropy": 0.272222
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:33.456903",
+    "sequence_number": 1898,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7273
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:42.400202",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\System ŁØ.md",
+    "name": "System ŁØ.md",
+    "extension": ".md",
+    "hash": "720339b1e5c1c43630654764e9fa2353dfeab41dcbb63864e1273a89b8cb70d5"
+  },
+  "content": {
+    "text": "Definicja Systemu ŁØ w ramach GTMØ: System ŁØ jest formalnym systemem geometryczno-arytmetycznym zbudowanym na teorii niedefinitywności GTMØ (Generalized Theory of Mathematical Indefiniteness)",
+    "length": 192,
+    "word_count": 22
+  },
+  "coordinates": {
+    "determination": 0.673008,
+    "stability": 0.695287,
+    "entropy": 0.35503
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:42.400649",
+    "sequence_number": 2353,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6711
+  }
+}

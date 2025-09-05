@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:43.621721",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\system_lo_geometry.md",
+    "name": "system_lo_geometry.md",
+    "extension": ".md",
+    "hash": "b8eaba7b0453adf7698a48d6a2df06d1b66cebde291db8b618c2574b08f9014b"
+  },
+  "content": {
+    "text": "Metryka wyznacza poznawczą odległość między warstwami: | Warstwy | d(x, y) | | ------------- | ------- | | P₀ ↔ R | 1 | | R ↔ I | 2 | | I ↔ A |",
+    "length": 143,
+    "word_count": 36
+  },
+  "coordinates": {
+    "determination": 0.7392,
+    "stability": 0.880407,
+    "entropy": 0.174142
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:43.622227",
+    "sequence_number": 2402,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8152
+  }
+}

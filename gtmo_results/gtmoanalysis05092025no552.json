@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.865664",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\theory — kopia.md",
+    "name": "theory — kopia.md",
+    "extension": ".md",
+    "hash": "8e9cd029bd671250eadcebba3eb3dc91a81945f28da51194f9341f72c2eabf66"
+  },
+  "content": {
+    "text": "Cognitive trajectories represent the dynamics of cognitive state changes over time, with Ø serving as a critical boundary point: φ(t) – models the progression and transformations of cognitive processes",
+    "length": 201,
+    "word_count": 29
+  },
+  "coordinates": {
+    "determination": 0.700383,
+    "stability": 0.736609,
+    "entropy": 0.329261
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.865850",
+    "sequence_number": 552,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Cognitive Trajectories φ(t)",
+    "text": "Cognitive trajectories represent the dynamics of cognitive state changes over time, with Ø serving as a critical boundary point: φ(t) – models the progression and transformations of cognitive processes",
+    "char_count": 201,
+    "word_count": 29
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7026
+  }
+}

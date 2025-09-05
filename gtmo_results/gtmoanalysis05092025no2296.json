@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:41.463686",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\sanb5_documentation.md",
+    "name": "sanb5_documentation.md",
+    "extension": ".md",
+    "hash": "969109530abb44d66ea1ac6bc59cf62ab2f51a562e850922affdcd8e0568f9cb"
+  },
+  "content": {
+    "text": "Tests if two values have the same ontological status: | ↔ | Z | O | Ø | ∞ | Ψ | |---|---|---|---|---|---| | Z | O | Z | Z | Z | Z | | O | Z | O | Ø | ∞ | Ψ | | Ø | Z | Ø | Ø | Ø | Ø | | ∞ | Z | ∞ | Ø | ∞ | ∞ | | Ψ | Z | Ψ | Ø | ∞ | O |",
+    "length": 235,
+    "word_count": 88
+  },
+  "coordinates": {
+    "determination": 0.651595,
+    "stability": 0.808376,
+    "entropy": 0.283494
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:41.464052",
+    "sequence_number": 2296,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7255
+  }
+}

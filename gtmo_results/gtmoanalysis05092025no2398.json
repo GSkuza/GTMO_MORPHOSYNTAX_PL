@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:43.508717",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\system_lo_geometry.md",
+    "name": "system_lo_geometry.md",
+    "extension": ".md",
+    "hash": "b8eaba7b0453adf7698a48d6a2df06d1b66cebde291db8b618c2574b08f9014b"
+  },
+  "content": {
+    "text": "Struktura geometryczna (𝔾Ø) reprezentuje przestrzeń warstw poznawczych, a arytmetyka systemu (𝔸Ø) definiuje operacje algebraiczne uwzględniające szczególną rolę Ø, będącego osobliwością pochłaniającą wartości i blokującą standardowe własności algebraiczne, takie jak przemienność i odwrotność",
+    "length": 292,
+    "word_count": 32
+  },
+  "coordinates": {
+    "determination": 0.650469,
+    "stability": 0.724452,
+    "entropy": 0.459036
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:43.509192",
+    "sequence_number": 2398,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6386
+  }
+}

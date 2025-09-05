@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:45.778408",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\theory.md",
+    "name": "theory.md",
+    "extension": ".md",
+    "hash": "8e9cd029bd671250eadcebba3eb3dc91a81945f28da51194f9341f72c2eabf66"
+  },
+  "content": {
+    "text": "1 Ontological Indefiniteness: Ø ∉ {0, 1, ∞} 2",
+    "length": 45,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.7952,
+    "stability": 0.8132,
+    "entropy": 0.1922
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:45.779817",
+    "sequence_number": 2492,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8054
+  }
+}

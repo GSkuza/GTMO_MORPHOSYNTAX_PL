@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.631423",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\GTMØ Topology Core v1 Documentation.md",
+    "name": "GTMØ Topology Core v1 Documentation.md",
+    "extension": ".md",
+    "hash": "c62b72b27fd9e46425b8de9c1ecd1b9c4b9d50ed2807d5ec2b708493cf3e1951"
+  },
+  "content": {
+    "text": "```python from gtmotopologycore_v1 import GTMOTopologyCore, TopologicalAttractor, KnowledgeType import numpy as np",
+    "length": 114,
+    "word_count": 11
+  },
+  "coordinates": {
+    "determination": 0.7592,
+    "stability": 0.77936,
+    "entropy": 0.24044
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.631646",
+    "sequence_number": 381,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Custom Attractors",
+    "text": "```python from gtmotopologycore_v1 import GTMOTopologyCore, TopologicalAttractor, KnowledgeType import numpy as np",
+    "char_count": 114,
+    "word_count": 11
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.766
+  }
+}

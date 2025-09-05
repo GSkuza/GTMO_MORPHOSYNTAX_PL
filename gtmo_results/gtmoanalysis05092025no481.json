@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.777269",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\sanb5_documentation.md",
+    "name": "sanb5_documentation.md",
+    "extension": ".md",
+    "hash": "969109530abb44d66ea1ac6bc59cf62ab2f51a562e850922affdcd8e0568f9cb"
+  },
+  "content": {
+    "text": "SANB-5 provides the formal logical foundation for GTMØ's concepts: 1 Singularity (Ø) maps to the ontological singularity where AlienatedNumbers collapse 2 Superposition (Ψ) models AlienatedNumbers before collapse 3",
+    "length": 214,
+    "word_count": 28
+  },
+  "coordinates": {
+    "determination": 0.752178,
+    "stability": 0.780933,
+    "entropy": 0.249533
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.777446",
+    "sequence_number": 481,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Integration with GTMØ Theory",
+    "text": "SANB-5 provides the formal logical foundation for GTMØ's concepts: 1 Singularity (Ø) maps to the ontological singularity where AlienatedNumbers collapse 2 Superposition (Ψ) models AlienatedNumbers before collapse 3",
+    "char_count": 214,
+    "word_count": 28
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7612
+  }
+}

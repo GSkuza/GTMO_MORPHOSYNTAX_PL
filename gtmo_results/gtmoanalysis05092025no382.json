@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.632433",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\GTMØ Topology Core v1 Documentation.md",
+    "name": "GTMØ Topology Core v1 Documentation.md",
+    "extension": ".md",
+    "hash": "c62b72b27fd9e46425b8de9c1ecd1b9c4b9d50ed2807d5ec2b708493cf3e1951"
+  },
+  "content": {
+    "text": "customattractors = [ TopologicalAttractor( name=\"Custom Knowledge\", knowledgetype=KnowledgeType.PARTICLE, position=np.array([0.6, 0.6, 0.4]), radius=0.2, strength=1.5 ) ]",
+    "length": 170,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.8096,
+    "stability": 0.9284,
+    "entropy": 0.104
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.632653",
+    "sequence_number": 382,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Define custom attractors",
+    "text": "customattractors = [ TopologicalAttractor( name=\"Custom Knowledge\", knowledgetype=KnowledgeType.PARTICLE, position=np.array([0.6, 0.6, 0.4]), radius=0.2, strength=1.5 ) ]",
+    "char_count": 170,
+    "word_count": 14
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.878
+  }
+}

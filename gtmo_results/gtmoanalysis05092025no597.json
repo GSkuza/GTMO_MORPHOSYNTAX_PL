@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.945096",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\TopologiaØ-GTMØ_PL.md",
+    "name": "TopologiaØ-GTMØ_PL.md",
+    "extension": ".md",
+    "hash": "0e17a49798d36ab7bdd16137095d14794abd0021caa6c42f2d87200d43222d2c"
+  },
+  "content": {
+    "text": "- Podstawowe testy: poprawność E(x), φ(t), klasyfikacja Ψᴷ - Złożone testy: φ′(t), zakres emergencji, zgodność E(x) z Ø, osobliwości",
+    "length": 132,
+    "word_count": 19
+  },
+  "coordinates": {
+    "determination": 0.716296,
+    "stability": 0.813255,
+    "entropy": 0.230274
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.945420",
+    "sequence_number": 597,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "🔹 Testy jednostkowe",
+    "text": "- Podstawowe testy: poprawność E(x), φ(t), klasyfikacja Ψᴷ - Złożone testy: φ′(t), zakres emergencji, zgodność E(x) z Ø, osobliwości",
+    "char_count": 132,
+    "word_count": 19
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7664
+  }
+}

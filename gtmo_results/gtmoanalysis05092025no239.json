@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.452004",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-session-summary.md",
+    "name": "gtmo-session-summary.md",
+    "extension": ".md",
+    "hash": "10d52735c3484bbe6285884204dc832dbce6aa424b020aad701d5c256e6bbaa2"
+  },
+  "content": {
+    "text": "- Analiza sentymentu w tekstach prawnych - Detekcja sprzeczności w dokumentach - Ocena spójności narracji - Badania lingwistyczne nad entropią językową",
+    "length": 151,
+    "word_count": 21
+  },
+  "coordinates": {
+    "determination": 0.68853,
+    "stability": 0.691844,
+    "entropy": 0.339377
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.452192",
+    "sequence_number": 239,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Możliwe zastosowania:",
+    "text": "- Analiza sentymentu w tekstach prawnych - Detekcja sprzeczności w dokumentach - Ocena spójności narracji - Badania lingwistyczne nad entropią językową",
+    "char_count": 151,
+    "word_count": 21
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6803
+  }
+}

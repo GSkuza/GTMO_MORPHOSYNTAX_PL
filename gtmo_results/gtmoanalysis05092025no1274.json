@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.946532",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\theory — kopia.md",
+    "name": "theory — kopia.md",
+    "extension": ".md",
+    "hash": "8e9cd029bd671250eadcebba3eb3dc91a81945f28da51194f9341f72c2eabf66"
+  },
+  "content": {
+    "text": "Cognitive entropy measures the level of order or disorder within knowledge: Lower entropy corresponds to stable, well-defined states (Ψᴷ) Higher entropy indicates less defined states (Ψʰ).",
+    "length": 188,
+    "word_count": 26
+  },
+  "coordinates": {
+    "determination": 0.742779,
+    "stability": 0.80549,
+    "entropy": 0.257745
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.946777",
+    "sequence_number": 1274,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Cognitive Entropy E(x)",
+    "text": "Cognitive entropy measures the level of order or disorder within knowledge: Lower entropy corresponds to stable, well-defined states (Ψᴷ) Higher entropy indicates less defined states (Ψʰ).",
+    "char_count": 188,
+    "word_count": 26
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7635
+  }
+}

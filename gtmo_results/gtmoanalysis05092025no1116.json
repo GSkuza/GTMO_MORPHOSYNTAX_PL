@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.757992",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\Indefiniteness Core_ENG.md",
+    "name": "Indefiniteness Core_ENG.md",
+    "extension": ".md",
+    "hash": "ee2041c97f75134dd11f405cc19bef69535e528457e7d94f3dfa925ce88ce3e4"
+  },
+  "content": {
+    "text": "- Representation: yields the string - Arithmetic Behavior: - Default Mode: Any arithmetic operation involving an instance (e.g., ) results in - Strict Mode: If Strict Mode is enabled, such operations will raise a - Type: The class inherits from",
+    "length": 244,
+    "word_count": 40
+  },
+  "coordinates": {
+    "determination": 0.742867,
+    "stability": 0.856467,
+    "entropy": 0.238244
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.758187",
+    "sequence_number": 1116,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "2. `AlienatedNumber` (Alienated Numbers ℓ∅)",
+    "text": "- Representation: yields the string - Arithmetic Behavior: - Default Mode: Any arithmetic operation involving an instance (e.g., ) results in - Strict Mode: If Strict Mode is enabled, such operations will raise a - Type: The class inherits from",
+    "char_count": 244,
+    "word_count": 40
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.787
+  }
+}

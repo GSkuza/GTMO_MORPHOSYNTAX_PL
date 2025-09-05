@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:48.995961",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\vertical_search_ai_fashion_industry_report.md",
+    "name": "vertical_search_ai_fashion_industry_report.md",
+    "extension": ".md",
+    "hash": "6a5cf799acc151e63e5c7012f8796fe2e97279abdaf7b2f14c176d286bb9831a"
+  },
+  "content": {
+    "text": "A fashion-specific visual AI solution that automatically tags products with detailed attributes and enables image-based product discovery.",
+    "length": 138,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.694114,
+    "stability": 0.726762,
+    "entropy": 0.369533
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:48.996619",
+    "sequence_number": 2636,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6838
+  }
+}

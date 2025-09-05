@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.677297",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\GTMØ Topology Core v1 Documentation.md",
+    "name": "GTMØ Topology Core v1 Documentation.md",
+    "extension": ".md",
+    "hash": "c62b72b27fd9e46425b8de9c1ecd1b9c4b9d50ed2807d5ec2b708493cf3e1951"
+  },
+  "content": {
+    "text": "point = PhasePoint( determination=0.95, stability=0.95, entropy=0.05, label=\"Mathematical fact: 2+2=4\" ) knowledgetype, confidence = gtmo.classifypoint(point) print(f\"Type: {knowledge_type.value}, Confidence: {confidence:.2%}\")",
+    "length": 227,
+    "word_count": 18
+  },
+  "coordinates": {
+    "determination": 0.795467,
+    "stability": 0.91897,
+    "entropy": 0.127612
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.678453",
+    "sequence_number": 1072,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Classify a concept",
+    "text": "point = PhasePoint( determination=0.95, stability=0.95, entropy=0.05, label=\"Mathematical fact: 2+2=4\" ) knowledgetype, confidence = gtmo.classifypoint(point) print(f\"Type: {knowledge_type.value}, Confidence: {confidence:.2%}\")",
+    "char_count": 227,
+    "word_count": 18
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8623
+  }
+}

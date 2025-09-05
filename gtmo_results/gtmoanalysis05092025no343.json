@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.588786",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\GTMØ Topology Core v1 Documentation.md",
+    "name": "GTMØ Topology Core v1 Documentation.md",
+    "extension": ".md",
+    "hash": "c62b72b27fd9e46425b8de9c1ecd1b9c4b9d50ed2807d5ec2b708493cf3e1951"
+  },
+  "content": {
+    "text": "- Phase Space Analysis: 3D semantic space with determination, stability, and entropy dimensions - Topological Attractors: Eight knowledge types that classify information naturally - Trajectory Analysis: Track semantic evolution of concepts over time - Dynamic Modeling: Cognitive space that \"breathes\" to model knowledge boundaries - Visualization: 3D plotting capabilities for phase space exploration",
+    "length": 401,
+    "word_count": 53
+  },
+  "coordinates": {
+    "determination": 0.742444,
+    "stability": 0.8456,
+    "entropy": 0.265489
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.589494",
+    "sequence_number": 343,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Key Features",
+    "text": "- Phase Space Analysis: 3D semantic space with determination, stability, and entropy dimensions - Topological Attractors: Eight knowledge types that classify information naturally - Trajectory Analysis: Track semantic evolution of concepts over time - Dynamic Modeling: Cognitive space that \"breathes\" to model knowledge boundaries - Visualization: 3D plotting capabilities for phase space exploration",
+    "char_count": 401,
+    "word_count": 53
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7742
+  }
+}

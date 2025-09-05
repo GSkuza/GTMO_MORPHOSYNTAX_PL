@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.614453",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\GTMØ Topology Core v1 Documentation.md",
+    "name": "GTMØ Topology Core v1 Documentation.md",
+    "extension": ".md",
+    "hash": "c62b72b27fd9e46425b8de9c1ecd1b9c4b9d50ed2807d5ec2b708493cf3e1951"
+  },
+  "content": {
+    "text": "Create a semantic trajectory for a word - Parameters: - : The word being traced - : List of (determination, stability, entropy) tuples - : Optional labels for each time point - Returns: List of PhasePoint objects",
+    "length": 212,
+    "word_count": 37
+  },
+  "coordinates": {
+    "determination": 0.73912,
+    "stability": 0.81608,
+    "entropy": 0.22884
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.614624",
+    "sequence_number": 365,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "`create_semantic_trajectory(word, time_points, labels=None) -> List[PhasePoint]`",
+    "text": "Create a semantic trajectory for a word - Parameters: - : The word being traced - : List of (determination, stability, entropy) tuples - : Optional labels for each time point - Returns: List of PhasePoint objects",
+    "char_count": 212,
+    "word_count": 37
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7755
+  }
+}

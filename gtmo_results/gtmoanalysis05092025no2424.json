@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:44.195332",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\system_lo_geometry_bilingual.md",
+    "name": "system_lo_geometry_bilingual.md",
+    "extension": ".md",
+    "hash": "720339b1e5c1c43630654764e9fa2353dfeab41dcbb63864e1273a89b8cb70d5"
+  },
+  "content": {
+    "text": "jest granicą geometryczną systemu – zbiorem niemożliwym do osiągnięcia metrycznie, ale lokalizującym źródło deformacji poznawczej.",
+    "length": 130,
+    "word_count": 15
+  },
+  "coordinates": {
+    "determination": 0.661423,
+    "stability": 0.657367,
+    "entropy": 0.376028
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:44.195709",
+    "sequence_number": 2424,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6476
+  }
+}

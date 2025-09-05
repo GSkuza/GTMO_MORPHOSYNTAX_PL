@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:35.934151",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo_fractal_theory_docs.md",
+    "name": "gtmo_fractal_theory_docs.md",
+    "extension": ".md",
+    "hash": "98c0457f37f2bbe7c8b1092c35ddf407447d93de519d5636ec68849eb4f130a8"
+  },
+  "content": {
+    "text": "{ 'objects': (obj1, obj2), 'parameters': ConfigurationParameters, 'observer': Optional[Dict], 'result': Union[str, AlienatedNumber, Singularity], 'timestamp': float, 'iscritical': bool, 'isemergent': bool",
+    "length": 204,
+    "word_count": 18
+  },
+  "coordinates": {
+    "determination": 0.80216,
+    "stability": 0.964672,
+    "entropy": 0.036608
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:35.934483",
+    "sequence_number": 2023,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.9101
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:43.566275",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\system_lo_geometry.md",
+    "name": "system_lo_geometry.md",
+    "extension": ".md",
+    "hash": "b8eaba7b0453adf7698a48d6a2df06d1b66cebde291db8b618c2574b08f9014b"
+  },
+  "content": {
+    "text": "\\(𝔾Ø = (𝕂, d, Φ, SØ)\\) gdzie: - \\(𝕂\\) – zbiór warstw poznawczych \\((P_0, R, I, A, Ø)\\) - \\(d: 𝕂 × 𝕂 → ℝ⁺ ∪ \\{∞\\}\\) – metryka poznawcza - \\(Φ: 𝕂 → ℝ^n\\)",
+    "length": 151,
+    "word_count": 35
+  },
+  "coordinates": {
+    "determination": 0.735018,
+    "stability": 0.875807,
+    "entropy": 0.180309
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:43.566599",
+    "sequence_number": 2400,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8102
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:35.317934",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo_fractal_theory_docs.md",
+    "name": "gtmo_fractal_theory_docs.md",
+    "extension": ".md",
+    "hash": "98c0457f37f2bbe7c8b1092c35ddf407447d93de519d5636ec68849eb4f130a8"
+  },
+  "content": {
+    "text": "Observed as \"01\" - Vertical touching: Observed as \"10\" - Separated arrangement: Observed as \"0∠1\" - Critical distance: May produce AlienatedNumber(\"01\") or collapse to singularity Ø This simple observation reveals that mathematical identity is inseparable from spatial configuration, fundamentally challenging the abstraction principle of traditional mathematics",
+    "length": 362,
+    "word_count": 46
+  },
+  "coordinates": {
+    "determination": 0.752026,
+    "stability": 0.858723,
+    "entropy": 0.219205
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:35.318319",
+    "sequence_number": 1991,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7972
+  }
+}

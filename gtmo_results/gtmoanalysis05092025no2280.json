@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:41.012119",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\sanb5_documentation.md",
+    "name": "sanb5_documentation.md",
+    "extension": ".md",
+    "hash": "969109530abb44d66ea1ac6bc59cf62ab2f51a562e850922affdcd8e0568f9cb"
+  },
+  "content": {
+    "text": "- Meaning: Where logic breaks down, paradoxes, recursive self-reference - Characteristics:",
+    "length": 90,
+    "word_count": 11
+  },
+  "coordinates": {
+    "determination": 0.788133,
+    "stability": 0.832756,
+    "entropy": 0.1852
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:41.012675",
+    "sequence_number": 2280,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8119
+  }
+}

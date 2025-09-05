@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.814329",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\system_lo_geometry.md",
+    "name": "system_lo_geometry.md",
+    "extension": ".md",
+    "hash": "b8eaba7b0453adf7698a48d6a2df06d1b66cebde291db8b618c2574b08f9014b"
+  },
+  "content": {
+    "text": "Całość prowadzi do matematycznej reprezentacji stanów epistemicznych oraz ich wzajemnych relacji w kontekście poznawczej niedefinitywności.",
+    "length": 139,
+    "word_count": 15
+  },
+  "coordinates": {
+    "determination": 0.656448,
+    "stability": 0.628003,
+    "entropy": 0.404679
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.814539",
+    "sequence_number": 512,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "System ŁØ",
+    "text": "Całość prowadzi do matematycznej reprezentacji stanów epistemicznych oraz ich wzajemnych relacji w kontekście poznawczej niedefinitywności.",
+    "char_count": 139,
+    "word_count": 15
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6266
+  }
+}

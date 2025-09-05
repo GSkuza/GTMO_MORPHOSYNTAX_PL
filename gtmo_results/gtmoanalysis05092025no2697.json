@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:50.427792",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\vertical_search_ai_fashion_industry_report.md",
+    "name": "vertical_search_ai_fashion_industry_report.md",
+    "extension": ".md",
+    "hash": "6a5cf799acc151e63e5c7012f8796fe2e97279abdaf7b2f14c176d286bb9831a"
+  },
+  "content": {
+    "text": "1 AI Specialization: Increasing focus on fashion-specific AI rather than general-purpose solutions 2 Omnichannel Integration: Growing emphasis on consistent experiences across all touchpoints 3",
+    "length": 193,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.712229,
+    "stability": 0.7532,
+    "entropy": 0.3376
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:50.428116",
+    "sequence_number": 2697,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "high_quality",
+    "overall_score": 0.7093
+  }
+}

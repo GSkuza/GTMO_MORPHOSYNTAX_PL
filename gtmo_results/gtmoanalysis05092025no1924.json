@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:34.010205",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo_core_v2_docs.md",
+    "name": "gtmo_core_v2_docs.md",
+    "extension": ".md",
+    "hash": "3d281b5c3771e05b48102025c136a5d1754a4a3cdf0b455032d6d8fc591e24c6"
+  },
+  "content": {
+    "text": "Optional neural network for learning optimal defense strategies:",
+    "length": 64,
+    "word_count": 8
+  },
+  "coordinates": {
+    "determination": 0.7632,
+    "stability": 0.771067,
+    "entropy": 0.2414
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:34.010572",
+    "sequence_number": 1924,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7643
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:32.824697",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-session-summary.md",
+    "name": "gtmo-session-summary.md",
+    "extension": ".md",
+    "hash": "10d52735c3484bbe6285884204dc832dbce6aa424b020aad701d5c256e6bbaa2"
+  },
+  "content": {
+    "text": "442 | Wysoka E epistemiczna | | \"Kocham",
+    "length": 39,
+    "word_count": 8
+  },
+  "coordinates": {
+    "determination": 0.6768,
+    "stability": 0.64488,
+    "entropy": 0.39316
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:32.824980",
+    "sequence_number": 1868,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6428
+  }
+}

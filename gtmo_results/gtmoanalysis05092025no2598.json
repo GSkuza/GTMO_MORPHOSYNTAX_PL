@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:47.976800",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\topology_v2_optimized_docs.md",
+    "name": "topology_v2_optimized_docs.md",
+    "extension": ".md",
+    "hash": "cceb55353a8333bf983f9a98eb6ad1160e6ed04bd0b88cc18beceb0ac20d4470"
+  },
+  "content": {
+    "text": "Streaming analysis for long-running simulations",
+    "length": 47,
+    "word_count": 5
+  },
+  "coordinates": {
+    "determination": 0.7056,
+    "stability": 0.67976,
+    "entropy": 0.35148
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:47.977139",
+    "sequence_number": 2598,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.678
+  }
+}

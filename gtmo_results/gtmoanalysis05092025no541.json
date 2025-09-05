@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.847020",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\system_lo_geometry_bilingual.md",
+    "name": "system_lo_geometry_bilingual.md",
+    "extension": ".md",
+    "hash": "720339b1e5c1c43630654764e9fa2353dfeab41dcbb63864e1273a89b8cb70d5"
+  },
+  "content": {
+    "text": "Set \\(K\\) of numerical values assigned to layers: | Layer | Symbol | Cognitive-numerical value | | ----- | ------ | ------------------------- | | P₀ | 0 | 0 | | R | 1 | 1 | | I | ι | √2 | | A | α | e | | Ø | Ø | undefined (∅/∞) |",
+    "length": 229,
+    "word_count": 59
+  },
+  "coordinates": {
+    "determination": 0.758548,
+    "stability": 0.916151,
+    "entropy": 0.093588
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.847203",
+    "sequence_number": 541,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "1. NUMERIC ELEMENTS",
+    "text": "Set \\(K\\) of numerical values assigned to layers: | Layer | Symbol | Cognitive-numerical value | | ----- | ------ | ------------------------- | | P₀ | 0 | 0 | | R | 1 | 1 | | I | ι | √2 | | A | α | e | | Ø | Ø | undefined (∅/∞) |",
+    "char_count": 229,
+    "word_count": 59
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8604
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:32.729443",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-session-summary.md",
+    "name": "gtmo-session-summary.md",
+    "extension": ".md",
+    "hash": "10d52735c3484bbe6285884204dc832dbce6aa424b020aad701d5c256e6bbaa2"
+  },
+  "content": {
+    "text": "| Tekst | Typ | D | S | E | Interpretacja | |-------|-----|---|---|---|---------------| | \"Ona ma tunele w uszach\" | Fakt | 0.724 | 0.738 | 0.273 | Najniższa E - konkret | | Fragment Reymonta | Proza | 0.708 | 0.747 | 0.314 | Najwyższa S - harmonia | | \"Prawo jest prawem\" | Tautologia | 0.710 | 0.701 | 0.322",
+    "length": 309,
+    "word_count": 63
+  },
+  "coordinates": {
+    "determination": 0.79698,
+    "stability": 0.926364,
+    "entropy": 0.082912
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:32.729796",
+    "sequence_number": 1860,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8801
+  }
+}

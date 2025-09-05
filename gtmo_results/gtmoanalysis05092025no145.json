@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.341113",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-fractal-docs-pl.md",
+    "name": "gtmo-fractal-docs-pl.md",
+    "extension": ".md",
+    "hash": "49c2689e2fafb2b2d39981678a6e03e52162fc36f2396056728fc331d2d3a0a5"
+  },
+  "content": {
+    "text": "- Pozycja: [0.85, 0.85, 0.15] - Parametr Julia: c = -0.4 + 0.6i - Natura: Stabilna, zwarta wiedza - Przykład: \"2+2=4\"",
+    "length": 117,
+    "word_count": 21
+  },
+  "coordinates": {
+    "determination": 0.795765,
+    "stability": 0.923459,
+    "entropy": 0.118188
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.341401",
+    "sequence_number": 145,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "1. **Ψᴷ - Cząstka Wiedzy**",
+    "text": "- Pozycja: [0.85, 0.85, 0.15] - Parametr Julia: c = -0.4 + 0.6i - Natura: Stabilna, zwarta wiedza - Przykład: \"2+2=4\"",
+    "char_count": 117,
+    "word_count": 21
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.867
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.633940",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo_fractal_theory_docs.md",
+    "name": "gtmo_fractal_theory_docs.md",
+    "extension": ".md",
+    "hash": "98c0457f37f2bbe7c8b1092c35ddf407447d93de519d5636ec68849eb4f130a8"
+  },
+  "content": {
+    "text": "resulth = algorithms.observeconfiguration(0, 1, paramshorizontal) resultv = algorithms.observeconfiguration(0, 1, paramsvertical) resultc = algorithms.observeconfiguration(0, 1, paramscritical) print(f\"Horizontal: {resulth['result']}\") # Expected: \"01\" print(f\"Vertical: {resultv['result']}\") # Expected: \"10\" print(f\"Critical: {resultc['result']}\") # Expected: AlienatedNumber or Ø ```",
+    "length": 386,
+    "word_count": 33
+  },
+  "coordinates": {
+    "determination": 0.845518,
+    "stability": 0.966369,
+    "entropy": 0.034259
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.634146",
+    "sequence_number": 1035,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Observe configurations",
+    "text": "resulth = algorithms.observeconfiguration(0, 1, paramshorizontal) resultv = algorithms.observeconfiguration(0, 1, paramsvertical) resultc = algorithms.observeconfiguration(0, 1, paramscritical) print(f\"Horizontal: {resulth['result']}\") # Expected: \"01\" print(f\"Vertical: {resultv['result']}\") # Expected: \"10\" print(f\"Critical: {resultc['result']}\") # Expected: AlienatedNumber or Ø ```",
+    "char_count": 386,
+    "word_count": 33
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.9259
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:24.640068",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\alienated_numbers.md",
+    "name": "alienated_numbers.md",
+    "extension": ".md",
+    "hash": "faf5b5a711621c52aba4b386f8b24b9a6ac2cfb588274d3741a5f4cf2e223cc5"
+  },
+  "content": {
+    "text": "| ✅ | ❌ | | Triggers Ø during operations | ❌ | ✅ |",
+    "length": 50,
+    "word_count": 15
+  },
+  "coordinates": {
+    "determination": 0.5072,
+    "stability": 0.554,
+    "entropy": 0.4586
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:24.640496",
+    "sequence_number": 1463,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.5342
+  }
+}

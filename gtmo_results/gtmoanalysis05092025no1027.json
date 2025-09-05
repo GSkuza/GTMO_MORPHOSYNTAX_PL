@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.621178",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo_fractal_theory_docs.md",
+    "name": "gtmo_fractal_theory_docs.md",
+    "extension": ".md",
+    "hash": "98c0457f37f2bbe7c8b1092c35ddf407447d93de519d5636ec68849eb4f130a8"
+  },
+  "content": {
+    "text": "Generates the fractal structure of configuration space: Applications: - Reveals self-similar patterns in configuration space - Maps hierarchical structure of mathematical relationships - Calculates fractal dimension of configuration space",
+    "length": 238,
+    "word_count": 29
+  },
+  "coordinates": {
+    "determination": 0.776,
+    "stability": 0.8244,
+    "entropy": 0.23
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.621470",
+    "sequence_number": 1027,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "2. Fractal Mapping Algorithm",
+    "text": "Generates the fractal structure of configuration space: Applications: - Reveals self-similar patterns in configuration space - Maps hierarchical structure of mathematical relationships - Calculates fractal dimension of configuration space",
+    "char_count": 238,
+    "word_count": 29
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7901
+  }
+}

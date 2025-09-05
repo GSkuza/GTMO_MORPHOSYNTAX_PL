@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:46.159169",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\TopologiaØ-GTMØ_PL (1).md",
+    "name": "TopologiaØ-GTMØ_PL (1).md",
+    "extension": ".md",
+    "hash": "0e17a49798d36ab7bdd16137095d14794abd0021caa6c42f2d87200d43222d2c"
+  },
+  "content": {
+    "text": "Ten plik stanowi implementację topologii Ø jako kluczowego składnika metapoznawczego systemu GTMØ (Generalized Theory of Mathematical Indefiniteness).",
+    "length": 150,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.66356,
+    "stability": 0.66344,
+    "entropy": 0.40456
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:46.159515",
+    "sequence_number": 2510,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6408
+  }
+}

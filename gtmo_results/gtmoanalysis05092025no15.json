@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.134693",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\axioms.md",
+    "name": "axioms.md",
+    "extension": ".md",
+    "hash": "69704f08c45d1bc50079491cb92949c4a9059842060452361cf8f14706fd7453"
+  },
+  "content": {
+    "text": "Indefiniteness (Ø) is fundamentally distinct from classical categories: $Ø \\notin \\{0, 1, \\infty\\}$ No classical function maps into Ø.",
+    "length": 134,
+    "word_count": 19
+  },
+  "coordinates": {
+    "determination": 0.746011,
+    "stability": 0.789663,
+    "entropy": 0.276126
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.135092",
+    "sequence_number": 15,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "AX1: Ontological Indefiniteness",
+    "text": "Indefiniteness (Ø) is fundamentally distinct from classical categories: $Ø \\notin \\{0, 1, \\infty\\}$ No classical function maps into Ø.",
+    "char_count": 134,
+    "word_count": 19
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7532
+  }
+}

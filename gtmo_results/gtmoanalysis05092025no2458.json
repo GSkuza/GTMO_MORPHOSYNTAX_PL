@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:45.000189",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\theory — kopia.md",
+    "name": "theory — kopia.md",
+    "extension": ".md",
+    "hash": "8e9cd029bd671250eadcebba3eb3dc91a81945f28da51194f9341f72c2eabf66"
+  },
+  "content": {
+    "text": "GTMØ explores the boundaries of mathematical, logical, and epistemic cognition, taking into account phenomena that are not fully definable or reducible to classical categories (0, 1, ∞)",
+    "length": 185,
+    "word_count": 27
+  },
+  "coordinates": {
+    "determination": 0.690286,
+    "stability": 0.738686,
+    "entropy": 0.328505
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:45.000518",
+    "sequence_number": 2458,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7002
+  }
+}

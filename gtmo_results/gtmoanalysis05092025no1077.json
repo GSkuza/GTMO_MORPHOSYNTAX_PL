@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.684883",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\GTMØ Topology Core v1 Documentation.md",
+    "name": "GTMØ Topology Core v1 Documentation.md",
+    "extension": ".md",
+    "hash": "c62b72b27fd9e46425b8de9c1ecd1b9c4b9d50ed2807d5ec2b708493cf3e1951"
+  },
+  "content": {
+    "text": "Classify a point by finding the nearest attractor - Parameters: - : or - Point to classify - Returns: Tuple of (knowledge_type, confidence)",
+    "length": 139,
+    "word_count": 23
+  },
+  "coordinates": {
+    "determination": 0.699966,
+    "stability": 0.763648,
+    "entropy": 0.29291
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.685086",
+    "sequence_number": 1077,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "`classify_point(point) -> Tuple[KnowledgeType, float]`",
+    "text": "Classify a point by finding the nearest attractor - Parameters: - : or - Point to classify - Returns: Tuple of (knowledge_type, confidence)",
+    "char_count": 139,
+    "word_count": 23
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7236
+  }
+}

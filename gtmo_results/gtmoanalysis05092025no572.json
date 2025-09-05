@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.896202",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\theory.md",
+    "name": "theory.md",
+    "extension": ".md",
+    "hash": "8e9cd029bd671250eadcebba3eb3dc91a81945f28da51194f9341f72c2eabf66"
+  },
+  "content": {
+    "text": "1 Ontological Indefiniteness: Ø ∉ {0, 1, ∞} 2 Translogical Isolation: No classical function leads to Ø 3 Epistemic Singularity: Ø is not fully knowable 4 Non-representability: Ø cannot be represented conventionally 5",
+    "length": 216,
+    "word_count": 33
+  },
+  "coordinates": {
+    "determination": 0.677894,
+    "stability": 0.717932,
+    "entropy": 0.330314
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.896456",
+    "sequence_number": 572,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "GTMØ Axioms",
+    "text": "1 Ontological Indefiniteness: Ø ∉ {0, 1, ∞} 2 Translogical Isolation: No classical function leads to Ø 3 Epistemic Singularity: Ø is not fully knowable 4 Non-representability: Ø cannot be represented conventionally 5",
+    "char_count": 216,
+    "word_count": 33
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6885
+  }
+}

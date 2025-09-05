@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.607311",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\GTMØ Topology Core v1 Documentation.md",
+    "name": "GTMØ Topology Core v1 Documentation.md",
+    "extension": ".md",
+    "hash": "c62b72b27fd9e46425b8de9c1ecd1b9c4b9d50ed2807d5ec2b708493cf3e1951"
+  },
+  "content": {
+    "text": "Analyze a path through phase space - Parameters: - : - Sequence of points - Returns: Dictionary with trajectory metrics",
+    "length": 119,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.731091,
+    "stability": 0.782655,
+    "entropy": 0.257891
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.607607",
+    "sequence_number": 358,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "`analyze_trajectory(trajectory) -> Dict`",
+    "text": "Analyze a path through phase space - Parameters: - : - Sequence of points - Returns: Dictionary with trajectory metrics",
+    "char_count": 119,
+    "word_count": 20
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.752
+  }
+}

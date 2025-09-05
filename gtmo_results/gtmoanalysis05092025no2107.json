@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:37.532608",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\GTMØ Topology Core v1 Documentation.md",
+    "name": "GTMØ Topology Core v1 Documentation.md",
+    "extension": ".md",
+    "hash": "c62b72b27fd9e46425b8de9c1ecd1b9c4b9d50ed2807d5ec2b708493cf3e1951"
+  },
+  "content": {
+    "text": "wget https://example.com/gtmotopologycore_v1.py ```",
+    "length": 51,
+    "word_count": 3
+  },
+  "coordinates": {
+    "determination": 0.746743,
+    "stability": 0.734,
+    "entropy": 0.281086
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:37.532929",
+    "sequence_number": 2107,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7332
+  }
+}

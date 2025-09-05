@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:30.338948",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-fractal-docs-pl.md",
+    "name": "gtmo-fractal-docs-pl.md",
+    "extension": ".md",
+    "hash": "49c2689e2fafb2b2d39981678a6e03e52162fc36f2396056728fc331d2d3a0a5"
+  },
+  "content": {
+    "text": "analysis = fractal.detectstrangeattractor(trajectory) if analysis['is_strange']",
+    "length": 79,
+    "word_count": 5
+  },
+  "coordinates": {
+    "determination": 0.7952,
+    "stability": 0.8204,
+    "entropy": 0.1868
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:30.339448",
+    "sequence_number": 1746,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8096
+  }
+}

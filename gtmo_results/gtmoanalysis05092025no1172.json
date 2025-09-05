@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.827696",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\sanb5_documentation.md",
+    "name": "sanb5_documentation.md",
+    "extension": ".md",
+    "hash": "969109530abb44d66ea1ac6bc59cf62ab2f51a562e850922affdcd8e0568f9cb"
+  },
+  "content": {
+    "text": "O → (0.95, 0.95, 0.05) # High determinacy/stability, low entropy Z → (0.95, 0.95, 0.05) # High determinacy/stability, low entropy Ø → (0.01, 0.01, 0.01) # Singularity point ∞ → (0.05, 0.05, 0.95) # Low determinacy/stability, high entropy Ψ → (0.50, 0.30, 0.70) # Medium values, collapse potential ```",
+    "length": 300,
+    "word_count": 49
+  },
+  "coordinates": {
+    "determination": 0.789391,
+    "stability": 0.903722,
+    "entropy": 0.108661
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.828043",
+    "sequence_number": 1172,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Determinacy, Stability, Entropy",
+    "text": "O → (0.95, 0.95, 0.05) # High determinacy/stability, low entropy Z → (0.95, 0.95, 0.05) # High determinacy/stability, low entropy Ø → (0.01, 0.01, 0.01) # Singularity point ∞ → (0.05, 0.05, 0.95) # Low determinacy/stability, high entropy Ψ → (0.50, 0.30, 0.70) # Medium values, collapse potential ```",
+    "char_count": 300,
+    "word_count": 49
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8615
+  }
+}

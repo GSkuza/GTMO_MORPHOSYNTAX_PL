@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:33.503871",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo_core_v2_docs.md",
+    "name": "gtmo_core_v2_docs.md",
+    "extension": ".md",
+    "hash": "3d281b5c3771e05b48102025c136a5d1754a4a3cdf0b455032d6d8fc591e24c6"
+  },
+  "content": {
+    "text": "Context-aware alienated numbers with dynamic",
+    "length": 44,
+    "word_count": 5
+  },
+  "coordinates": {
+    "determination": 0.7952,
+    "stability": 0.7988,
+    "entropy": 0.203
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:33.504207",
+    "sequence_number": 1901,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.797
+  }
+}

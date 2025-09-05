@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:24.706175",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\axioms.md",
+    "name": "axioms.md",
+    "extension": ".md",
+    "hash": "69704f08c45d1bc50079491cb92949c4a9059842060452361cf8f14706fd7453"
+  },
+  "content": {
+    "text": "This document describes the core axioms of the Generalized Theory of Mathematical Indefiniteness (GTMØ)",
+    "length": 103,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.7862,
+    "stability": 0.8078,
+    "entropy": 0.2318
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:24.706582",
+    "sequence_number": 1466,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7874
+  }
+}

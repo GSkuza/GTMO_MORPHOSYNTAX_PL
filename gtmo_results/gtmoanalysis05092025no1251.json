@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.920992",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\system_lo_geometry_bilingual.md",
+    "name": "system_lo_geometry_bilingual.md",
+    "extension": ".md",
+    "hash": "720339b1e5c1c43630654764e9fa2353dfeab41dcbb63864e1273a89b8cb70d5"
+  },
+  "content": {
+    "text": "\\(𝔸Ø = (K, ⊕, ⊗, /, ^, Ø)\\) - Nie jest ciałem ani pierścieniem: brak odwrotności dla Ø, brak przemienności w obecności osobliwości.",
+    "length": 131,
+    "word_count": 23
+  },
+  "coordinates": {
+    "determination": 0.686503,
+    "stability": 0.746092,
+    "entropy": 0.320319
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.921175",
+    "sequence_number": 1251,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "3. STRUKTURA ARYTMETYCZNA (𝔸Ø)",
+    "text": "\\(𝔸Ø = (K, ⊕, ⊗, /, ^, Ø)\\) - Nie jest ciałem ani pierścieniem: brak odwrotności dla Ø, brak przemienności w obecności osobliwości.",
+    "char_count": 131,
+    "word_count": 23
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7041
+  }
+}

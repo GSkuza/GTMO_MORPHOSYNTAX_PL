@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:40.224944",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\Ramy Poznawcze GTMØ.md",
+    "name": "Ramy Poznawcze GTMØ.md",
+    "extension": ".md",
+    "hash": "2bcf3af8360cb0366d0d170b7ef429666045c33c66ff1d5f9e5b310a2c9338bf"
+  },
+  "content": {
+    "text": "Mierzy przyspieszenie zmian klarowności poznawczej.",
+    "length": 51,
+    "word_count": 5
+  },
+  "coordinates": {
+    "determination": 0.673873,
+    "stability": 0.637691,
+    "entropy": 0.396164
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:40.225255",
+    "sequence_number": 2246,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6385
+  }
+}

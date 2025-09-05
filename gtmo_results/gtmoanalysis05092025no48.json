@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.181903",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\DOCUMENTATION — kopia.md",
+    "name": "DOCUMENTATION — kopia.md",
+    "extension": ".md",
+    "hash": "f143af87e986b30c805a8e9e60ce4938c23baa980d503c023805e638f9ca9d74"
+  },
+  "content": {
+    "text": "import os os.environ[\"GTM_STRICT\"] = \"1\" try: print(a + b) except SingularityError as e: print(f\"Wystąpił błąd: {e}\") ```",
+    "length": 121,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.76216,
+    "stability": 0.83952,
+    "entropy": 0.21548
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.182072",
+    "sequence_number": 48,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Tryb ścisły generuje wyjątek",
+    "text": "import os os.environ[\"GTM_STRICT\"] = \"1\" try: print(a + b) except SingularityError as e: print(f\"Wystąpił błąd: {e}\") ```",
+    "char_count": 121,
+    "word_count": 17
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7954
+  }
+}

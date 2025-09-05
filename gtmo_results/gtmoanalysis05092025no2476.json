@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:45.403940",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\theory — kopia.md",
+    "name": "theory — kopia.md",
+    "extension": ".md",
+    "hash": "8e9cd029bd671250eadcebba3eb3dc91a81945f28da51194f9341f72c2eabf66"
+  },
+  "content": {
+    "text": "Solving problems involving undefined or paradoxical phenomena Modeling cognitive and evolutionary processes in artificial intelligence",
+    "length": 134,
+    "word_count": 15
+  },
+  "coordinates": {
+    "determination": 0.711733,
+    "stability": 0.676733,
+    "entropy": 0.362133
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:45.404276",
+    "sequence_number": 2476,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6754
+  }
+}

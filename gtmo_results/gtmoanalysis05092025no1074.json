@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.681657",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\GTMØ Topology Core v1 Documentation.md",
+    "name": "GTMØ Topology Core v1 Documentation.md",
+    "extension": ".md",
+    "hash": "c62b72b27fd9e46425b8de9c1ecd1b9c4b9d50ed2807d5ec2b708493cf3e1951"
+  },
+  "content": {
+    "text": "Main class implementing the GTMØ topology system.",
+    "length": 49,
+    "word_count": 7
+  },
+  "coordinates": {
+    "determination": 0.689914,
+    "stability": 0.642429,
+    "entropy": 0.398657
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.681860",
+    "sequence_number": 1074,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "`GTMOTopologyCore`",
+    "text": "Main class implementing the GTMØ topology system.",
+    "char_count": 49,
+    "word_count": 7
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6446
+  }
+}

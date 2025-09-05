@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:28.022022",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-foundations.md",
+    "name": "gtmo-foundations.md",
+    "extension": ".md",
+    "hash": "f26520b35d2a1258200f0c73101b47307065e552dc75ed70f9bb9f35963a8cae"
+  },
+  "content": {
+    "text": "DEF2 = \"Definition: Knowledge shadow Ψʰ – a fragment such that ΨGTMØ(x) ≤ dynamic shadow threshold.\" DEF3 = \"Definition: Cognitive entropy EGTMØ(x) = -Σ pᵢ log₂ pᵢ, where pᵢ are semantic partitions of x.\" DEF1dyn = \"(Dynamic) Definition: Knowledge particle Ψᴷ – fragment with ΨGTMØ(x) ≥ particle threshold (dynamic percentile).",
+    "length": 327,
+    "word_count": 50
+  },
+  "coordinates": {
+    "determination": 0.802832,
+    "stability": 0.941362,
+    "entropy": 0.107719
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:28.022602",
+    "sequence_number": 1631,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8788
+  }
+}

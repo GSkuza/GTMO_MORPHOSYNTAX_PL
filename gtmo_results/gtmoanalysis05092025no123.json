@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.316072",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-fractal-docs-en.md",
+    "name": "gtmo-fractal-docs-en.md",
+    "extension": ".md",
+    "hash": "4cb01a59f86bc26e502643ea23e43febce14bcee9c21fdb16ad0f09c793a1119"
+  },
+  "content": {
+    "text": "| Trajectory Type | Interpretation | Example | |-----------------|----------------|---------| | Convergent | Meaning stabilises | \"Mathematics\" → Ψᴷ | | Oscillating | Meaning fluctuates | \"Art\" ↔ various interpretations | | Chaotic | Meaning unpredictable | \"Meme\" → chaos | | Escaping | Meaning dissolves | Neologism → ∞ |",
+    "length": 323,
+    "word_count": 50
+  },
+  "coordinates": {
+    "determination": 0.815343,
+    "stability": 0.962057,
+    "entropy": 0.040229
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.316324",
+    "sequence_number": 123,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Meaning Classification",
+    "text": "| Trajectory Type | Interpretation | Example | |-----------------|----------------|---------| | Convergent | Meaning stabilises | \"Mathematics\" → Ψᴷ | | Oscillating | Meaning fluctuates | \"Art\" ↔ various interpretations | | Chaotic | Meaning unpredictable | \"Meme\" → chaos | | Escaping | Meaning dissolves | Neologism → ∞ |",
+    "char_count": 323,
+    "word_count": 50
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.9124
+  }
+}

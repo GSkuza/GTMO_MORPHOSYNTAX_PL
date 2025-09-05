@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:25.227186",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\vertical_search_ai_fashion_industry_report.md",
+    "name": "vertical_search_ai_fashion_industry_report.md",
+    "extension": ".md",
+    "hash": "6a5cf799acc151e63e5c7012f8796fe2e97279abdaf7b2f14c176d286bb9831a"
+  },
+  "content": {
+    "text": "1 Lily AI - https://www.lily.ai/ 2 ThredUp - https://www.digitalcommerce360.com/2024/08/08/thredup-ai-tools-for-search-and-discovery-q2/ 3 Syte.ai - https://www.syte.ai/ 4 Donde Search - https://www.cbinsights.com/company/donde1 5",
+    "length": 230,
+    "word_count": 19
+  },
+  "coordinates": {
+    "determination": 0.756446,
+    "stability": 0.769482,
+    "entropy": 0.246357
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:25.227531",
+    "sequence_number": 1441,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "References",
+    "text": "1 Lily AI - https://www.lily.ai/ 2 ThredUp - https://www.digitalcommerce360.com/2024/08/08/thredup-ai-tools-for-search-and-discovery-q2/ 3 Syte.ai - https://www.syte.ai/ 4 Donde Search - https://www.cbinsights.com/company/donde1 5",
+    "char_count": 230,
+    "word_count": 19
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7599
+  }
+}

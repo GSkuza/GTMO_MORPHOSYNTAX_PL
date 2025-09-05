@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.449458",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo-fractal-docs-pl.md",
+    "name": "gtmo-fractal-docs-pl.md",
+    "extension": ".md",
+    "hash": "49c2689e2fafb2b2d39981678a6e03e52162fc36f2396056728fc331d2d3a0a5"
+  },
+  "content": {
+    "text": "| Metryka | Zakres | Znaczenie | |---------|--------|-----------| | Wykładnik Lapunowa | [-∞, +∞] | >0 = chaos | | Pokrycie przestrzeni | [0, 1] | >0.5 = dobra eksploracja | | Wymiar fraktalny | [1, 2] | ~1.585 = granica semantyczna | | Prędkość ucieczki | [0, ∞] | Stabilność znaczenia | ---",
+    "length": 292,
+    "word_count": 54
+  },
+  "coordinates": {
+    "determination": 0.789692,
+    "stability": 0.907056,
+    "entropy": 0.106551
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.449647",
+    "sequence_number": 889,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "📈 Metryki i Wskaźniki",
+    "text": "| Metryka | Zakres | Znaczenie | |---------|--------|-----------| | Wykładnik Lapunowa | [-∞, +∞] | >0 = chaos | | Pokrycie przestrzeni | [0, 1] | >0.5 = dobra eksploracja | | Wymiar fraktalny | [1, 2] | ~1.585 = granica semantyczna | | Prędkość ucieczki | [0, ∞] | Stabilność znaczenia | ---",
+    "char_count": 292,
+    "word_count": 54
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8634
+  }
+}

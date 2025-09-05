@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.538040",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\gtmo_fractal_theory_docs.md",
+    "name": "gtmo_fractal_theory_docs.md",
+    "extension": ".md",
+    "hash": "98c0457f37f2bbe7c8b1092c35ddf407447d93de519d5636ec68849eb4f130a8"
+  },
+  "content": {
+    "text": "Identifies emergent patterns in configuration sequences:",
+    "length": 56,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.7632,
+    "stability": 0.771067,
+    "entropy": 0.2414
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.538273",
+    "sequence_number": 304,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "3. Emergence Detector",
+    "text": "Identifies emergent patterns in configuration sequences:",
+    "char_count": 56,
+    "word_count": 6
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7643
+  }
+}

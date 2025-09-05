@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:24.564452",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\alienated_numbers.md",
+    "name": "alienated_numbers.md",
+    "extension": ".md",
+    "hash": "faf5b5a711621c52aba4b386f8b24b9a6ac2cfb588274d3741a5f4cf2e223cc5"
+  },
+  "content": {
+    "text": "This signals the cognitive boundary:",
+    "length": 36,
+    "word_count": 5
+  },
+  "coordinates": {
+    "determination": 0.7952,
+    "stability": 0.7988,
+    "entropy": 0.203
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:24.565059",
+    "sequence_number": 1460,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.797
+  }
+}

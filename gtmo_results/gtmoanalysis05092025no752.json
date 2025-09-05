@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.217230",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\Consciousness and Identity_ Axioms and Algorithms.md",
+    "name": "Consciousness and Identity_ Axioms and Algorithms.md",
+    "extension": ".md",
+    "hash": "a061e25bfef8f1f57bf67b08bd4bda6232ff5870992174103885a92bf7b4e3b0"
+  },
+  "content": {
+    "text": "Zapraszamy do zgłaszania uwag, propozycji ulepszeń oraz współpracy nad rozwojem projektu poprzez system Issues i Pull Requests na GitHubie ---",
+    "length": 142,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.658907,
+    "stability": 0.644667,
+    "entropy": 0.411396
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.217413",
+    "sequence_number": 752,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "🤝 Współpraca",
+    "text": "Zapraszamy do zgłaszania uwag, propozycji ulepszeń oraz współpracy nad rozwojem projektu poprzez system Issues i Pull Requests na GitHubie ---",
+    "char_count": 142,
+    "word_count": 20
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6307
+  }
+}

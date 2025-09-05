@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:42.588434",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\System ŁØ.md",
+    "name": "System ŁØ.md",
+    "extension": ".md",
+    "hash": "720339b1e5c1c43630654764e9fa2353dfeab41dcbb63864e1273a89b8cb70d5"
+  },
+  "content": {
+    "text": "3 | | A ↔ Ø | ∞ | | Ø ↔ cokolwiek | ∞ | > Ø jest nieskończenie oddalona od wszystkiego, ale może rzutować się na inne warstwy przez osobliwość \\(Φ\\).",
+    "length": 149,
+    "word_count": 33
+  },
+  "coordinates": {
+    "determination": 0.66573,
+    "stability": 0.709425,
+    "entropy": 0.349372
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:42.588847",
+    "sequence_number": 2360,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6753
+  }
+}

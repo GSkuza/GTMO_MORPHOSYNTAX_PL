@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:53.148984",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\vertical_search_ai_fashion_industry_report.md",
+    "name": "vertical_search_ai_fashion_industry_report.md",
+    "extension": ".md",
+    "hash": "6a5cf799acc151e63e5c7012f8796fe2e97279abdaf7b2f14c176d286bb9831a"
+  },
+  "content": {
+    "text": "Pricing Opacity: Limited pricing transparency is common in the market, with most enterprise solutions using a \"Request a Demo\" approach rather than published pricing 5",
+    "length": 167,
+    "word_count": 25
+  },
+  "coordinates": {
+    "determination": 0.714554,
+    "stability": 0.747785,
+    "entropy": 0.294723
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:53.149485",
+    "sequence_number": 715,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Conclusion",
+    "text": "Pricing Opacity: Limited pricing transparency is common in the market, with most enterprise solutions using a \"Request a Demo\" approach rather than published pricing 5",
+    "char_count": 167,
+    "word_count": 25
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7225
+  }
+}

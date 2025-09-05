@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:25:24.807719",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\README.md",
+    "name": "README.md",
+    "extension": ".md",
+    "hash": "8ecef45e48c829b205aab4ac4b71cef3504dfe189e11293d999e103368dfa616"
+  },
+  "content": {
+    "text": "The theory treats boundaries of formal systems (such as Gödelian incompleteness, Turing’s halting problem, and set-theoretic paradoxes) as dynamic phenomena",
+    "length": 156,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.741867,
+    "stability": 0.771524,
+    "entropy": 0.255152
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:25:24.807946",
+    "sequence_number": 1154,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Dynamic Boundaries:",
+    "text": "The theory treats boundaries of formal systems (such as Gödelian incompleteness, Turing’s halting problem, and set-theoretic paradoxes) as dynamic phenomena",
+    "char_count": 156,
+    "word_count": 20
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.7527
+  }
+}

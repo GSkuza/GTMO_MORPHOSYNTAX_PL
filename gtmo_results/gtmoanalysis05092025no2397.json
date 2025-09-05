@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:43.478029",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\system_lo_geometry.md",
+    "name": "system_lo_geometry.md",
+    "extension": ".md",
+    "hash": "b8eaba7b0453adf7698a48d6a2df06d1b66cebde291db8b618c2574b08f9014b"
+  },
+  "content": {
+    "text": "W systemie tym kluczowym elementem jest zbiór osobliwości poznawczych (Ø), które definiują granice poznania oraz asymptotyczne punkty skupienia trajektorii poznawczych",
+    "length": 167,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.66532,
+    "stability": 0.684566,
+    "entropy": 0.400731
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:43.478337",
+    "sequence_number": 2397,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "medium",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6497
+  }
+}

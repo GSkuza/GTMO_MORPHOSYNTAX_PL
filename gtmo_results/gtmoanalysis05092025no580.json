@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:20:52.906940",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\tmø_custom_report.md",
+    "name": "tmø_custom_report.md",
+    "extension": ".md",
+    "hash": "91047b011cf40e816bd9f520899065d51bf6a46cf8b30e06fc1931a1b227acad"
+  },
+  "content": {
+    "text": "[7, 0, 7] [7, 0, 7] [7, 7, 0]",
+    "length": 29,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.8096,
+    "stability": 0.8852,
+    "entropy": 0.1364
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:20:52.907167",
+    "sequence_number": 580,
+    "daily_date": "05092025"
+  },
+  "additional_metrics": {
+    "header": "Test Input (3x3):",
+    "text": "[7, 0, 7] [7, 0, 7] [7, 7, 0]",
+    "char_count": 29,
+    "word_count": 9
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "ordered",
+    "overall": "high_quality",
+    "overall_score": 0.8528
+  }
+}

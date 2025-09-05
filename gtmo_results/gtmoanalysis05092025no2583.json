@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-05T13:39:47.682653",
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Downloads\\topology_v2_optimized_docs.md",
+    "name": "topology_v2_optimized_docs.md",
+    "extension": ".md",
+    "hash": "cceb55353a8333bf983f9a98eb6ad1160e6ed04bd0b88cc18beceb0ac20d4470"
+  },
+  "content": {
+    "text": "Computes statistical metrics for the particle distribution in phase space Raises: - Returns error dict if GTMØ v2 ecosystem is not available - Returns error dict if no particles exist in the system",
+    "length": 197,
+    "word_count": 33
+  },
+  "coordinates": {
+    "determination": 0.717754,
+    "stability": 0.731631,
+    "entropy": 0.333969
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-05T13:39:47.682979",
+    "sequence_number": 2583,
+    "daily_date": "05092025"
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "stable",
+    "entropy": "mixed",
+    "overall": "high_quality",
+    "overall_score": 0.7051
+  }
+}
