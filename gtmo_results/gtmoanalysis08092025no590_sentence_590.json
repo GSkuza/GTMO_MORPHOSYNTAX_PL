@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:47.848825",
+  "content": {
+    "text": "Ustrój i właściwość sądów oraz postępowanie przed sądami określają\nustawy.",
+    "length": 74,
+    "word_count": 10
+  },
+  "coordinates": {
+    "determination": 0.756329,
+    "stability": 0.670023,
+    "entropy": 0.375873
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:47.848825",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 590,
+    "saved_at": "2025-09-08T15:32:47.849986",
+    "file_counter": 590
+  },
+  "additional_metrics": {
+    "total_analyses": 19,
+    "cases": {
+      "nom": 5,
+      "acc": 2,
+      "gen": 2
+    },
+    "pos": {
+      "subst": 8,
+      "part": 1,
+      "conj": 2,
+      "adv": 1,
+      "prep": 2,
+      "interp": 1
+    },
+    "ambiguity": 1.9,
+    "debug_tags": [
+      "Ustrój:impt:sg:sec:perf",
+      "Ustrój:subst:sg:nom.acc:m3",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "właściwość:subst:sg:nom:f",
+      "właściwość:subst:sg:acc:f",
+      "sądów:subst:pl:gen:m3",
+      "oraz:adv",
+      "oraz:conj"
+    ],
+    "coords_count": 18
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6908
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.032,
+    "quantum_words": 6,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.330614,
+    "formula": "0.766 × 0.675 × 0.639 = 0.331"
+  },
+  "sentence_number": 590,
+  "total_sentences": 805
+}

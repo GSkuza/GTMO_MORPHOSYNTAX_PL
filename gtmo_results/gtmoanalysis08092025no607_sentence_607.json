@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:48.363387",
+  "content": {
+    "text": "Udział obywateli w sprawowaniu wymiaru sprawiedliwości określa\nustawa.\n\nArt. 183. 1.",
+    "length": 84,
+    "word_count": 11
+  },
+  "coordinates": {
+    "determination": 0.796805,
+    "stability": 0.683053,
+    "entropy": 0.324862
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:48.363387",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 607,
+    "saved_at": "2025-09-08T15:32:48.363942",
+    "file_counter": 607
+  },
+  "additional_metrics": {
+    "total_analyses": 25,
+    "cases": {
+      "nom": 5,
+      "gen": 4,
+      "acc": 1,
+      "loc": 2,
+      "dat": 3,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 13,
+      "prep": 2,
+      "interp": 4
+    },
+    "ambiguity": 2.272727272727273,
+    "debug_tags": [
+      "Udział:subst:sg:nom.acc:m3",
+      "Udział:praet:sg:m1.m2.m3:perf",
+      "obywateli:subst:pl:gen.acc:m1",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "sprawowaniu:subst:sg:dat:n:ncol",
+      "sprawowaniu:subst:sg:loc:n:ncol",
+      "sprawowaniu:ger:sg:dat.loc:n:imperf:aff",
+      "wymiaru:subst:sg:gen:m3",
+      "sprawiedliwości:subst:sg:gen:f"
+    ],
+    "coords_count": 17
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7262
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0816,
+    "quantum_words": 8,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.383113,
+    "formula": "0.807 × 0.688 × 0.690 = 0.383"
+  },
+  "sentence_number": 607,
+  "total_sentences": 805
+}

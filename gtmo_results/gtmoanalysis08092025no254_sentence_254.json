@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:40.154526",
+  "content": {
+    "text": "Każdy ma prawo wystąpienia, na zasadach określonych w ustawie, do\nRzecznika Praw Obywatelskich z wnioskiem o pomoc w ochronie swoich wolności\nlub praw naruszonych przez organy władzy publicznej.",
+    "length": 194,
+    "word_count": 28
+  },
+  "coordinates": {
+    "determination": 0.664116,
+    "stability": 0.62155,
+    "entropy": 0.454661
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:40.154526",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 254,
+    "saved_at": "2025-09-08T15:32:40.154856",
+    "file_counter": 254
+  },
+  "additional_metrics": {
+    "total_analyses": 72,
+    "cases": {
+      "acc": 12,
+      "nom": 11,
+      "gen": 17,
+      "loc": 10,
+      "dat": 5,
+      "voc": 1
+    },
+    "pos": {
+      "adj": 15,
+      "subst": 25,
+      "adv": 1,
+      "interp": 3,
+      "prep": 12,
+      "part": 1,
+      "conj": 1
+    },
+    "ambiguity": 2.5714285714285716,
+    "debug_tags": [
+      "Każdy:adj:sg:acc:m3:pos",
+      "Każdy:adj:sg:nom.voc:m1.m2.m3:pos",
+      "ma:adj:sg:nom.voc:f:pos",
+      "ma:fin:sg:ter:imperf",
+      "prawo:subst:sg:nom.acc.voc:n:ncol",
+      "prawo:adv:pos",
+      "wystąpienia:subst:sg:gen:n:ncol",
+      "wystąpienia:subst:pl:nom.acc.voc:n:ncol",
+      "wystąpienia:ger:pl:nom.acc:n:perf:aff",
+      "wystąpienia:ger:sg:gen:n:perf:aff"
+    ],
+    "coords_count": 57
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6157
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.901,
+    "quantum_words": 25,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.236669,
+    "formula": "0.674 × 0.627 × 0.560 = 0.237"
+  },
+  "sentence_number": 254,
+  "total_sentences": 805
+}

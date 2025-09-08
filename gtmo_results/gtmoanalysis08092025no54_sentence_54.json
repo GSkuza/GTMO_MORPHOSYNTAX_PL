@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:35.827579",
+  "content": {
+    "text": "Władze publiczne w Rzeczypospolitej Polskiej zachowują bezstronność w\nsprawach przekonań religijnych, światopoglądowych i filozoficznych, zapewniając\nswobodę ich wyrażania w życiu publicznym.",
+    "length": 191,
+    "word_count": 21
+  },
+  "coordinates": {
+    "determination": 0.718763,
+    "stability": 0.631144,
+    "entropy": 0.441523
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:35.827579",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 54,
+    "saved_at": "2025-09-08T15:32:35.827876",
+    "file_counter": 54
+  },
+  "additional_metrics": {
+    "total_analyses": 52,
+    "cases": {
+      "nom": 5,
+      "acc": 11,
+      "loc": 10,
+      "gen": 11,
+      "dat": 6
+    },
+    "pos": {
+      "subst": 13,
+      "adj": 19,
+      "prep": 6,
+      "interp": 3,
+      "part": 1,
+      "conj": 1
+    },
+    "ambiguity": 2.4761904761904763,
+    "debug_tags": [
+      "Władze:subst:pl:nom.acc.voc:f",
+      "publiczne:adj:pl:acc:m2.m3.f.n:pos",
+      "publiczne:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "publiczne:adj:sg:acc:n:pos",
+      "publiczne:adj:sg:nom.voc:n:pos",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "w:prep:acc:nwok"
+    ],
+    "coords_count": 35
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6444
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8032,
+    "quantum_words": 16,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.265863,
+    "formula": "0.729 × 0.636 × 0.573 = 0.266"
+  },
+  "sentence_number": 54,
+  "total_sentences": 805
+}

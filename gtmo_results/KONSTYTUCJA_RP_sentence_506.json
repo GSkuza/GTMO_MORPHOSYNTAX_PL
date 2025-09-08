@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:46.440027",
+  "content": {
+    "text": "Gdy Prezydent Rzeczypospolitej\nnie jest w stanie zawiadomić Marszałka Sejmu o niemożności sprawowania urzędu,\nwówczas o stwierdzeniu przeszkody w sprawowaniu urzędu przez Prezydenta\nRzeczypospolitej rozstrzyga Trybunał Konstytucyjny na wniosek Marszałka Sejmu.",
+    "length": 260,
+    "word_count": 31
+  },
+  "coordinates": {
+    "determination": 0.733979,
+    "stability": 0.652935,
+    "entropy": 0.394201
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:46.440027",
+    "sequence_number": 506,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 70,
+    "cases": {
+      "nom": 12,
+      "gen": 16,
+      "dat": 7,
+      "acc": 9,
+      "loc": 8,
+      "voc": 2
+    },
+    "pos": {
+      "adv": 2,
+      "subst": 33,
+      "conj": 1,
+      "part": 1,
+      "prep": 11,
+      "interp": 2,
+      "adj": 2
+    },
+    "ambiguity": 2.2580645161290325,
+    "debug_tags": [
+      "Gdy:adv",
+      "Gdy:comp",
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "nie:conj",
+      "nie:interj"
+    ],
+    "coords_count": 45
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6712
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=45, cases={'nom': 12, 'gen': 16, 'dat': 7, 'acc': 9, 'loc': 8, 'voc': 2}, pos={'adv': 2, 'subst': 33, 'conj': 1, 'part': 1, 'prep': 11, 'interp': 2, 'adj': 2}",
+    "  MORPH_COORDS: [0.762, 0.729, 0.313]",
+    "  MORPH_TAGS: ['Gdy:adv', 'Gdy:comp', 'Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f', 'Prezydent:subst:sg:nom:m1', 'Rzeczypospolitej:subst:sg:gen:f', 'Rzeczypospolitej:subst:sg:dat.loc:f', 'Rzeczypospolitej:subst:sg:gen:f', 'Rzeczypospolitej:subst:sg:dat.loc:f', 'nie:conj', 'nie:interj']",
+    "  SYNTAX_COORDS: [0.692, 0.451, 0.571]",
+    "  FINAL: D=0.744, S=0.658, E=0.379"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.0378,
+    "quantum_words": 20,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:49.343206",
+  "content": {
+    "text": "Ponowny wybór do składu Trybunału jest niedopuszczalny.",
+    "length": 55,
+    "word_count": 7
+  },
+  "coordinates": {
+    "determination": 0.765,
+    "stability": 0.692934,
+    "entropy": 0.327357
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:49.343206",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 640,
+    "saved_at": "2025-09-08T15:32:49.343663",
+    "file_counter": 640
+  },
+  "additional_metrics": {
+    "total_analyses": 11,
+    "cases": {
+      "acc": 2,
+      "nom": 4,
+      "gen": 3
+    },
+    "pos": {
+      "adj": 4,
+      "subst": 4,
+      "prep": 1,
+      "interp": 1
+    },
+    "ambiguity": 1.5714285714285714,
+    "debug_tags": [
+      "Ponowny:adj:sg:acc:m3:pos",
+      "Ponowny:adj:sg:nom.voc:m1.m2.m3:pos",
+      "wybór:subst:sg:nom.acc:m3",
+      "do:prep:gen",
+      "do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "składu:subst:sg:gen:m3",
+      "Trybunału:subst:sg:gen:m3",
+      "jest:fin:sg:ter:imperf",
+      "niedopuszczalny:adj:sg:acc:m3:pos",
+      "niedopuszczalny:adj:sg:nom.voc:m1.m2.m3:pos"
+    ],
+    "coords_count": 14
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7157
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9974,
+    "quantum_words": 6,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.371946,
+    "formula": "0.775 × 0.698 × 0.688 = 0.372"
+  },
+  "sentence_number": 640,
+  "total_sentences": 805
+}

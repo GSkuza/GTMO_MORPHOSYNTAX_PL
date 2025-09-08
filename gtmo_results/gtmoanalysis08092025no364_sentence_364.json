@@ -1,0 +1,77 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:42.674746",
+  "content": {
+    "text": "Sejm powołuje komisje stałe oraz może powoływać komisje nadzwyczajne.",
+    "length": 69,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.796896,
+    "stability": 0.666734,
+    "entropy": 0.357715
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:42.674746",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 364,
+    "saved_at": "2025-09-08T15:32:42.675386",
+    "file_counter": 364
+  },
+  "additional_metrics": {
+    "total_analyses": 20,
+    "cases": {
+      "nom": 8,
+      "acc": 4
+    },
+    "pos": {
+      "subst": 4,
+      "adj": 8,
+      "adv": 1,
+      "conj": 1,
+      "part": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.2222222222222223,
+    "debug_tags": [
+      "Sejm:subst:sg:nom.acc:m3",
+      "powołuje:fin:sg:ter:imperf",
+      "komisje:subst:pl:nom.acc.voc:f",
+      "komisje:subst:pl:nom.acc.voc:f",
+      "stałe:adj:pl:acc:m2.m3.f.n:pos",
+      "stałe:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "stałe:adj:sg:acc:n:pos",
+      "stałe:adj:sg:nom.voc:n:pos",
+      "stałe:subst:pl:nom.acc.voc:f",
+      "oraz:adv"
+    ],
+    "coords_count": 13
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7115
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.5801,
+    "quantum_words": 4,
+    "entanglements": 1,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.356261,
+    "formula": "0.807 × 0.672 × 0.657 = 0.356"
+  },
+  "sentence_number": 364,
+  "total_sentences": 805
+}

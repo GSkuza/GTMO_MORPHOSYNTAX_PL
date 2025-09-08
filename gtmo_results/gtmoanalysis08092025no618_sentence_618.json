@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:48.789966",
+  "content": {
+    "text": "Krajowa Rada Sądownictwa wybiera spośród swoich członków\nprzewodniczącego i dwóch wiceprzewodniczących.",
+    "length": 103,
+    "word_count": 11
+  },
+  "coordinates": {
+    "determination": 0.691114,
+    "stability": 0.617611,
+    "entropy": 0.412528
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:48.789966",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 618,
+    "saved_at": "2025-09-08T15:32:48.790876",
+    "file_counter": 618
+  },
+  "additional_metrics": {
+    "total_analyses": 34,
+    "cases": {
+      "nom": 5,
+      "gen": 15,
+      "acc": 4,
+      "loc": 4
+    },
+    "pos": {
+      "adj": 7,
+      "subst": 15,
+      "prep": 1,
+      "part": 1,
+      "conj": 1,
+      "num": 3,
+      "interp": 1
+    },
+    "ambiguity": 3.090909090909091,
+    "debug_tags": [
+      "Krajowa:adj:sg:nom.voc:f:pos",
+      "Krajowa:subst:sg:gen:m3",
+      "Rada:subst:sg:nom:f",
+      "Rada:subst:sg:gen.acc:m1",
+      "Rada:adj:sg:nom:f:pos",
+      "Rada:winien:sg:f:imperf",
+      "Sądownictwa:subst:sg:gen:n:ncol",
+      "Sądownictwa:subst:pl:nom.acc.voc:n:ncol",
+      "wybiera:fin:sg:ter:imperf",
+      "spośród:prep:gen"
+    ],
+    "coords_count": 25
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.638
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8817,
+    "quantum_words": 9,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.262992,
+    "formula": "0.701 × 0.623 × 0.602 = 0.263"
+  },
+  "sentence_number": 618,
+  "total_sentences": 805
+}

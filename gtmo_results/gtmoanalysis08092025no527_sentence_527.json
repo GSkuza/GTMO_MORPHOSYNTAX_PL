@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:46.367873",
+  "content": {
+    "text": "Członkowie Rady Ministrów ponoszą odpowiedzialność przed\nTrybunałem Stanu za naruszenie Konstytucji lub ustaw, a także za przestępstwa\npopełnione w związku z zajmowanym stanowiskiem.",
+    "length": 182,
+    "word_count": 23
+  },
+  "coordinates": {
+    "determination": 0.708108,
+    "stability": 0.605584,
+    "entropy": 0.491562
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:46.367873",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 527,
+    "saved_at": "2025-09-08T15:32:46.368419",
+    "file_counter": 527
+  },
+  "additional_metrics": {
+    "total_analyses": 55,
+    "cases": {
+      "nom": 12,
+      "gen": 12,
+      "acc": 5,
+      "dat": 2,
+      "loc": 3,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 22,
+      "prep": 13,
+      "part": 5,
+      "conj": 2,
+      "interp": 2
+    },
+    "ambiguity": 2.391304347826087,
+    "debug_tags": [
+      "Członkowie:subst:pl:nom.voc:m1",
+      "Członkowie:subst:pl:nom.voc:m1",
+      "Rady:depr:pl:nom.acc.voc:m2",
+      "Rady:subst:pl:nom.acc.voc:m3",
+      "Rady:subst:sg:gen:f",
+      "Rady:subst:pl:nom.acc.voc:f",
+      "Rady:subst:sg:gen:m1",
+      "Ministrów:subst:pl:gen.acc:m1",
+      "ponoszą:fin:pl:ter:perf",
+      "ponoszą:fin:pl:ter:imperf"
+    ],
+    "coords_count": 42
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6174
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8799,
+    "quantum_words": 17,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.229509,
+    "formula": "0.718 × 0.611 × 0.523 = 0.230"
+  },
+  "sentence_number": 527,
+  "total_sentences": 805
+}

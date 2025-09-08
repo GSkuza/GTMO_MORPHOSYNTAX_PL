@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:42.475330",
+  "content": {
+    "text": "Za naruszenie zakazów, o których mowa w ust. 1, poseł, uchwałą Sejmu\npodjętą na wniosek Marszałka Sejmu, może być pociągnięty do odpowiedzialności\nprzed Trybunałem Stanu, który orzeka w przedmiocie pozbawienia mandatu.",
+    "length": 218,
+    "word_count": 31
+  },
+  "coordinates": {
+    "determination": 0.65425,
+    "stability": 0.589221,
+    "entropy": 0.496822
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:42.475330",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 357,
+    "saved_at": "2025-09-08T15:32:42.475929",
+    "file_counter": 357
+  },
+  "additional_metrics": {
+    "total_analyses": 69,
+    "cases": {
+      "acc": 10,
+      "gen": 17,
+      "nom": 12,
+      "loc": 6,
+      "dat": 1,
+      "voc": 2
+    },
+    "pos": {
+      "prep": 14,
+      "part": 2,
+      "subst": 26,
+      "interp": 7,
+      "adj": 5
+    },
+    "ambiguity": 2.225806451612903,
+    "debug_tags": [
+      "Za:prep:acc",
+      "Za:prep:gen",
+      "Za:prep:inst",
+      "Za:part",
+      "naruszenie:ger:sg:nom.acc:n:perf:aff",
+      "naruszenie:subst:sg:nom.acc.voc:n:ncol",
+      "zakazów:subst:pl:gen:m3",
+      ",:interp",
+      ",:interp",
+      ",:interp"
+    ],
+    "coords_count": 53
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.5894
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9336,
+    "quantum_words": 24,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.204531,
+    "formula": "0.664 × 0.594 × 0.518 = 0.205"
+  },
+  "sentence_number": 357,
+  "total_sentences": 805
+}

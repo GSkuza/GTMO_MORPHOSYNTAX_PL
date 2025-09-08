@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:50.547127",
+  "content": {
+    "text": "Rzecznik Praw Obywatelskich corocznie informuje Sejm i Senat o\nswojej działalności oraz o stanie przestrzegania wolności i praw człowieka i\nobywatela.",
+    "length": 150,
+    "word_count": 21
+  },
+  "coordinates": {
+    "determination": 0.690771,
+    "stability": 0.598786,
+    "entropy": 0.500676
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:50.547127",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 692,
+    "saved_at": "2025-09-08T15:32:50.547796",
+    "file_counter": 692
+  },
+  "additional_metrics": {
+    "total_analyses": 57,
+    "cases": {
+      "nom": 10,
+      "gen": 11,
+      "acc": 3,
+      "loc": 5,
+      "dat": 3,
+      "voc": 3
+    },
+    "pos": {
+      "subst": 21,
+      "adj": 6,
+      "adv": 2,
+      "part": 3,
+      "conj": 4,
+      "prep": 4,
+      "interp": 1
+    },
+    "ambiguity": 2.7142857142857144,
+    "debug_tags": [
+      "Rzecznik:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Rzecznik:subst:sg:nom:m1",
+      "Praw:adjc",
+      "Praw:subst:pl:gen:n:ncol",
+      "Praw:impt:sg:sec:imperf",
+      "Obywatelskich:adj:pl:acc:m1:pos",
+      "Obywatelskich:adj:pl:gen:m1.m2.m3.f.n:pos",
+      "Obywatelskich:adj:pl:loc:m1.m2.m3.f.n:pos",
+      "corocznie:adv:pos",
+      "informuje:fin:sg:ter:imperf"
+    ],
+    "coords_count": 33
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.6057
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.988,
+    "quantum_words": 14,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.217619,
+    "formula": "0.701 × 0.604 × 0.514 = 0.218"
+  },
+  "sentence_number": 692,
+  "total_sentences": 805
+}

@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:53.769243",
+  "content": {
+    "text": "Obowiązujące w dniu wejścia w życie Konstytucji akty prawa miejscowego\noraz przepisy gminne stają się aktami prawa miejscowego w rozumieniu art. 87 ust. 2\nKonstytucji.",
+    "length": 167,
+    "word_count": 25
+  },
+  "coordinates": {
+    "determination": 0.679556,
+    "stability": 0.642322,
+    "entropy": 0.406334
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:53.769243",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 799,
+    "saved_at": "2025-09-08T15:32:53.770017",
+    "file_counter": 799
+  },
+  "additional_metrics": {
+    "total_analyses": 72,
+    "cases": {
+      "acc": 9,
+      "nom": 19,
+      "loc": 6,
+      "voc": 3,
+      "gen": 15,
+      "dat": 4
+    },
+    "pos": {
+      "adj": 14,
+      "prep": 6,
+      "subst": 34,
+      "adv": 1,
+      "conj": 1,
+      "part": 1,
+      "interp": 3
+    },
+    "ambiguity": 2.88,
+    "debug_tags": [
+      "Obowiązujące:adj:pl:acc:m2.m3.f.n:pos",
+      "Obowiązujące:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "Obowiązujące:adj:sg:acc:n:pos",
+      "Obowiązujące:adj:sg:nom.voc:n:pos",
+      "Obowiązujące:pact:pl:nom.acc.voc:m2.m3.f.n:imperf:aff",
+      "Obowiązujące:pact:sg:nom.acc.voc:n:imperf:aff",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok"
+    ],
+    "coords_count": 34
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6426
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.2161,
+    "quantum_words": 13,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.271687,
+    "formula": "0.690 × 0.647 × 0.609 = 0.272"
+  },
+  "sentence_number": 799,
+  "total_sentences": 805
+}

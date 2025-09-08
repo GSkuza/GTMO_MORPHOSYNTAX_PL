@@ -1,0 +1,75 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:49.139247",
+  "content": {
+    "text": "Orzeczenia Trybunału Konstytucyjnego zapadają większością głosów.",
+    "length": 65,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.770863,
+    "stability": 0.643605,
+    "entropy": 0.390682
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:49.139247",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 631,
+    "saved_at": "2025-09-08T15:32:49.139830",
+    "file_counter": 631
+  },
+  "additional_metrics": {
+    "total_analyses": 11,
+    "cases": {
+      "gen": 5,
+      "nom": 2,
+      "acc": 1
+    },
+    "pos": {
+      "subst": 5,
+      "adj": 2,
+      "interp": 1
+    },
+    "ambiguity": 1.8333333333333333,
+    "debug_tags": [
+      "Orzeczenia:subst:sg:gen:n:ncol",
+      "Orzeczenia:subst:pl:nom.acc.voc:n:ncol",
+      "Orzeczenia:ger:pl:nom.acc:n:perf:aff",
+      "Orzeczenia:ger:sg:gen:n:perf:aff",
+      "Trybunału:subst:sg:gen:m3",
+      "Konstytucyjnego:adj:sg:acc:m1.m2:pos",
+      "Konstytucyjnego:adj:sg:gen:m1.m2.m3.n:pos",
+      "zapadają:fin:pl:ter:imperf",
+      "większością:subst:sg:inst:f",
+      "głosów:subst:pl:gen:m3"
+    ],
+    "coords_count": 10
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6842
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.909,
+    "quantum_words": 4,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.316199,
+    "formula": "0.781 × 0.649 × 0.624 = 0.316"
+  },
+  "sentence_number": 631,
+  "total_sentences": 805
+}

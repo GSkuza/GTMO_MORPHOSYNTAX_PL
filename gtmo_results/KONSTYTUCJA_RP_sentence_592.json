@@ -1,0 +1,83 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:48.172263",
+  "content": {
+    "text": "Prezydent\nRzeczypospolitej powołuje tak wybraną Radę Ministrów i odbiera przysięgę od jej\nczłonków.",
+    "length": 99,
+    "word_count": 13
+  },
+  "coordinates": {
+    "determination": 0.720654,
+    "stability": 0.603312,
+    "entropy": 0.433055
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:48.172263",
+    "sequence_number": 592,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 32,
+    "cases": {
+      "nom": 2,
+      "gen": 9,
+      "dat": 2,
+      "acc": 6
+    },
+    "pos": {
+      "subst": 15,
+      "part": 2,
+      "adv": 1,
+      "adj": 2,
+      "conj": 1,
+      "prep": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.4615384615384617,
+    "debug_tags": [
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "powołuje:fin:sg:ter:imperf",
+      "tak:interj",
+      "tak:part",
+      "tak:subst:pl:gen:f",
+      "tak:adv:pos",
+      "wybraną:adj:sg:acc:f:pos"
+    ],
+    "coords_count": 26
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6393
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=26, cases={'nom': 2, 'gen': 9, 'dat': 2, 'acc': 6}, pos={'subst': 15, 'part': 2, 'adv': 1, 'adj': 2, 'conj': 1, 'prep': 1, 'interp': 1}",
+    "  MORPH_COORDS: [0.716, 0.660, 0.394]",
+    "  MORPH_TAGS: ['Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f', 'Prezydent:subst:sg:nom:m1', 'Rzeczypospolitej:subst:sg:gen:f', 'Rzeczypospolitej:subst:sg:dat.loc:f', 'powołuje:fin:sg:ter:imperf', 'tak:interj', 'tak:part', 'tak:subst:pl:gen:f', 'tak:adv:pos', 'wybraną:adj:sg:acc:f:pos']",
+    "  SYNTAX_COORDS: [0.775, 0.451, 0.491]",
+    "  FINAL: D=0.731, S=0.608, E=0.418"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.136,
+    "quantum_words": 10,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

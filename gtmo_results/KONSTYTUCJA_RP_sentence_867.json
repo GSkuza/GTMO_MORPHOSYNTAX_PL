@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:53.073160",
+  "content": {
+    "text": "Przedłużenie tego stanu\nmoże nastąpić za zgodą Sejmu.",
+    "length": 53,
+    "word_count": 8
+  },
+  "coordinates": {
+    "determination": 0.732627,
+    "stability": 0.585968,
+    "entropy": 0.421708
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:53.073160",
+    "sequence_number": 867,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 17,
+    "cases": {
+      "nom": 2,
+      "acc": 2,
+      "gen": 5
+    },
+    "pos": {
+      "subst": 5,
+      "adj": 2,
+      "part": 2,
+      "prep": 3,
+      "interp": 1
+    },
+    "ambiguity": 2.125,
+    "debug_tags": [
+      "Przedłużenie:subst:sg:nom.acc.voc:n:ncol",
+      "Przedłużenie:ger:sg:nom.acc:n:perf:aff",
+      "tego:adj:sg:acc:m1.m2:pos",
+      "tego:adj:sg:gen:m1.m2.m3.n:pos",
+      "tego:subst:sg:gen:n:ncol",
+      "stanu:subst:sg:gen:m3",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "nastąpić:inf:perf"
+    ],
+    "coords_count": 15
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6423
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=15, cases={'nom': 2, 'acc': 2, 'gen': 5}, pos={'subst': 5, 'adj': 2, 'part': 2, 'prep': 3, 'interp': 1}",
+    "  MORPH_COORDS: [0.706, 0.638, 0.419]",
+    "  MORPH_TAGS: ['Przedłużenie:subst:sg:nom.acc.voc:n:ncol', 'Przedłużenie:ger:sg:nom.acc:n:perf:aff', 'tego:adj:sg:acc:m1.m2:pos', 'tego:adj:sg:gen:m1.m2.m3.n:pos', 'tego:subst:sg:gen:n:ncol', 'stanu:subst:sg:gen:m3', 'może:interj', 'może:part', 'może:fin:sg:ter:imperf', 'nastąpić:inf:perf']",
+    "  SYNTAX_COORDS: [0.850, 0.452, 0.371]",
+    "  FINAL: D=0.743, S=0.591, E=0.407"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.068,
+    "quantum_words": 5,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

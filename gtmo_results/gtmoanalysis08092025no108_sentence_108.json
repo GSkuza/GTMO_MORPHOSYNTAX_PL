@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:37.074406",
+  "content": {
+    "text": "Zasada ta nie stoi na przeszkodzie ukaraniu za czyn, który w czasie jego popełnienia\nstanowił przestępstwo w myśl prawa międzynarodowego.",
+    "length": 137,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.737752,
+    "stability": 0.624453,
+    "entropy": 0.390417
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:37.074406",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 108,
+    "saved_at": "2025-09-08T15:32:37.074788",
+    "file_counter": 108
+  },
+  "additional_metrics": {
+    "total_analyses": 54,
+    "cases": {
+      "nom": 13,
+      "acc": 10,
+      "gen": 9,
+      "dat": 3,
+      "loc": 4,
+      "voc": 2
+    },
+    "pos": {
+      "subst": 17,
+      "adj": 6,
+      "part": 3,
+      "conj": 1,
+      "prep": 9,
+      "interp": 2
+    },
+    "ambiguity": 2.7,
+    "debug_tags": [
+      "Zasada:subst:sg:nom:f",
+      "Zasada:subst:sg:nom:f",
+      "Zasada:subst:sg:nom:m1",
+      "ta:adj:sg:nom.voc:f:pos",
+      "ta:part",
+      "nie:conj",
+      "nie:interj",
+      "nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "nie:part"
+    ],
+    "coords_count": 39
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6653
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8169,
+    "quantum_words": 18,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.293975,
+    "formula": "0.748 × 0.629 × 0.625 = 0.294"
+  },
+  "sentence_number": 108,
+  "total_sentences": 805
+}

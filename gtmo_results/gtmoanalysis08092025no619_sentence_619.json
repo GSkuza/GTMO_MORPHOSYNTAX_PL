@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:48.824530",
+  "content": {
+    "text": "Kadencja wybranych członków Krajowej Rady Sądownictwa trwa cztery\nlata.",
+    "length": 71,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.748801,
+    "stability": 0.671941,
+    "entropy": 0.344609
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:48.824530",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 619,
+    "saved_at": "2025-09-08T15:32:48.825371",
+    "file_counter": 619
+  },
+  "additional_metrics": {
+    "total_analyses": 30,
+    "cases": {
+      "nom": 8,
+      "acc": 2,
+      "gen": 12,
+      "loc": 4,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 17,
+      "adj": 6,
+      "num": 1,
+      "interp": 1
+    },
+    "ambiguity": 3.3333333333333335,
+    "debug_tags": [
+      "Kadencja:subst:sg:nom:f",
+      "wybranych:adj:pl:acc:m1:pos",
+      "wybranych:adj:pl:gen:m1.m2.m3.f.n:pos",
+      "wybranych:adj:pl:loc:m1.m2.m3.f.n:pos",
+      "wybranych:subst:pl:gen.acc:m1",
+      "wybranych:subst:pl:loc:m1",
+      "wybranych:subst:pl:gen:f",
+      "wybranych:subst:pl:loc:f",
+      "wybranych:ppas:pl:acc:m1:perf:aff",
+      "wybranych:ppas:pl:gen.loc:m1.m2.m3.f.n:perf:aff"
+    ],
+    "coords_count": 18
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6977
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0375,
+    "quantum_words": 8,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.344355,
+    "formula": "0.759 × 0.677 × 0.670 = 0.344"
+  },
+  "sentence_number": 619,
+  "total_sentences": 805
+}

@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:42.301338",
+  "content": {
+    "text": "W takim\nprzypadku ulega również zawieszeniu na ten czas bieg przedawnienia w\npostępowaniu karnym.",
+    "length": 97,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.735872,
+    "stability": 0.691803,
+    "entropy": 0.305529
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:42.301338",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 348,
+    "saved_at": "2025-09-08T15:32:42.301848",
+    "file_counter": 348
+  },
+  "additional_metrics": {
+    "total_analyses": 42,
+    "cases": {
+      "acc": 4,
+      "loc": 11,
+      "dat": 8,
+      "voc": 2,
+      "gen": 3,
+      "nom": 5
+    },
+    "pos": {
+      "prep": 6,
+      "adj": 8,
+      "subst": 19,
+      "part": 1,
+      "interp": 1
+    },
+    "ambiguity": 3.0,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "takim:adj:pl:dat:m1.m2.m3.f.n:pos",
+      "takim:adj:sg:inst:m1.m2.m3.n:pos",
+      "takim:adj:sg:loc:m1.m2.m3.n:pos",
+      "przypadku:subst:sg:loc:m3",
+      "przypadku:subst:sg:voc:m3",
+      "przypadku:subst:sg:gen:m3",
+      "przypadku:subst:sg:loc:m3",
+      "przypadku:subst:sg:voc:m3"
+    ],
+    "coords_count": 27
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7102
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9789,
+    "quantum_words": 12,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.368731,
+    "formula": "0.746 × 0.697 × 0.709 = 0.369"
+  },
+  "sentence_number": 348,
+  "total_sentences": 805
+}

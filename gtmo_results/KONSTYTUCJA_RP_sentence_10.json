@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:36.978589",
+  "content": {
+    "text": "Rzeczpospolita Polska jest państwem jednolitym.\nArt. 4. 1.",
+    "length": 58,
+    "word_count": 8
+  },
+  "coordinates": {
+    "determination": 0.74117,
+    "stability": 0.695315,
+    "entropy": 0.254689
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:36.978589",
+    "sequence_number": 10,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 24,
+    "cases": {
+      "nom": 7,
+      "voc": 3,
+      "gen": 1,
+      "dat": 1,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 11,
+      "adj": 4,
+      "interp": 4
+    },
+    "ambiguity": 3.0,
+    "debug_tags": [
+      "Rzeczpospolita:subst:sg:nom:f",
+      "Rzeczpospolita:subst:sg:voc:f",
+      "Rzeczpospolita:subst:sg:nom:f",
+      "Rzeczpospolita:subst:sg:voc:f",
+      "Polska:adj:sg:nom.voc:f:pos",
+      "Polska:adjp:gen",
+      "Polska:subst:sg:nom:f",
+      "Polska:subst:sg:voc:f",
+      "Polska:subst:sg:nom:f",
+      "jest:fin:sg:ter:imperf"
+    ],
+    "coords_count": 11
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "low",
+    "overall": "moderate_quality",
+    "overall_score": 0.7287
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=11, cases={'nom': 7, 'voc': 3, 'gen': 1, 'dat': 1, 'loc': 1}, pos={'subst': 11, 'adj': 4, 'interp': 4}",
+    "  MORPH_COORDS: [0.796, 0.794, 0.236]",
+    "  MORPH_TAGS: ['Rzeczpospolita:subst:sg:nom:f', 'Rzeczpospolita:subst:sg:voc:f', 'Rzeczpospolita:subst:sg:nom:f', 'Rzeczpospolita:subst:sg:voc:f', 'Polska:adj:sg:nom.voc:f:pos', 'Polska:adjp:gen', 'Polska:subst:sg:nom:f', 'Polska:subst:sg:voc:f', 'Polska:subst:sg:nom:f', 'jest:fin:sg:ter:imperf']",
+    "  SYNTAX_COORDS: [0.631, 0.450, 0.250]",
+    "  FINAL: D=0.751, S=0.700, E=0.240"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.8708,
+    "quantum_words": 4,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

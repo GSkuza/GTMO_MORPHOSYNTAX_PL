@@ -1,0 +1,83 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:46.234899",
+  "content": {
+    "text": "W razie niepowołania Rady Ministrów w trybie ust. 1 lub nieudzielenia jej\nwotum zaufania w trybie ust. 2 Sejm w ciągu 14 dni od upływu terminów\nokreślonych w ust. 1 lub ust. 2 wybiera Prezesa Rady Ministrów oraz\nproponowanych przez niego członków Rady Ministrów bezwzględną większością\ngłosów w obecności co najmniej połowy ustawowej liczby posłów.",
+    "length": 348,
+    "word_count": 55
+  },
+  "coordinates": {
+    "determination": 0.630592,
+    "stability": 0.562375,
+    "entropy": 0.550744
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:46.234899",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 520,
+    "saved_at": "2025-09-08T15:32:46.235395",
+    "file_counter": 520
+  },
+  "additional_metrics": {
+    "total_analyses": 136,
+    "cases": {
+      "acc": 14,
+      "loc": 14,
+      "voc": 6,
+      "nom": 23,
+      "gen": 44,
+      "dat": 6
+    },
+    "pos": {
+      "prep": 17,
+      "subst": 65,
+      "interp": 5,
+      "conj": 3,
+      "adj": 8,
+      "adv": 2,
+      "part": 2,
+      "num": 2
+    },
+    "ambiguity": 2.4727272727272727,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "razie:subst:sg:loc:m3",
+      "razie:subst:sg:voc:m3",
+      "razie:subst:sg:loc:m3",
+      "razie:subst:sg:voc:m3",
+      "niepowołania:ger:pl:nom.acc:n:perf:neg",
+      "niepowołania:ger:sg:gen:n:perf:neg",
+      "Rady:depr:pl:nom.acc.voc:m2",
+      "Rady:subst:pl:nom.acc.voc:m3"
+    ],
+    "coords_count": 71
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5557
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8696,
+    "quantum_words": 33,
+    "entanglements": 12,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.168736,
+    "formula": "0.641 × 0.567 × 0.464 = 0.169"
+  },
+  "sentence_number": 520,
+  "total_sentences": 805
+}

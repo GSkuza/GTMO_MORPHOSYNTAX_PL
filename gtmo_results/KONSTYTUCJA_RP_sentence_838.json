@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:52.504944",
+  "content": {
+    "text": "Narodowy Bank Polski odpowiada za wartość polskiego\npieniądza.\n\nOrganami Narodowego Banku Polskiego są: Prezes Narodowego Banku\nPolskiego,",
+    "length": 138,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.725856,
+    "stability": 0.646936,
+    "entropy": 0.351025
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:52.504944",
+    "sequence_number": 838,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 66,
+    "cases": {
+      "acc": 9,
+      "nom": 11,
+      "voc": 8,
+      "gen": 18,
+      "loc": 6
+    },
+    "pos": {
+      "adj": 14,
+      "subst": 43,
+      "prep": 3,
+      "part": 1,
+      "interp": 3
+    },
+    "ambiguity": 3.8823529411764706,
+    "debug_tags": [
+      "Narodowy:adj:sg:acc:m3:pos",
+      "Narodowy:adj:sg:nom.voc:m1.m2.m3:pos",
+      "Bank:subst:sg:nom.acc:m3",
+      "Bank:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Bank:subst:sg:nom:m1",
+      "Polski:subst:sg:nom:m1",
+      "Polski:subst:sg:voc:m1",
+      "Polski:subst:sg:nom.acc:m3",
+      "Polski:subst:sg:voc:m3",
+      "Polski:subst:sg:gen:f"
+    ],
+    "coords_count": 30
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6791
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=30, cases={'acc': 9, 'nom': 11, 'voc': 8, 'gen': 18, 'loc': 6}, pos={'adj': 14, 'subst': 43, 'prep': 3, 'part': 1, 'interp': 3}",
+    "  MORPH_COORDS: [0.765, 0.731, 0.307]",
+    "  MORPH_TAGS: ['Narodowy:adj:sg:acc:m3:pos', 'Narodowy:adj:sg:nom.voc:m1.m2.m3:pos', 'Bank:subst:sg:nom.acc:m3', 'Bank:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f', 'Bank:subst:sg:nom:m1', 'Polski:subst:sg:nom:m1', 'Polski:subst:sg:voc:m1', 'Polski:subst:sg:nom.acc:m3', 'Polski:subst:sg:voc:m3', 'Polski:subst:sg:gen:f']",
+    "  SYNTAX_COORDS: [0.661, 0.450, 0.410]",
+    "  FINAL: D=0.736, S=0.652, E=0.336"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.7967,
+    "quantum_words": 11,
+    "entanglements": 0,
+    "superposition_type": "MIXED_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

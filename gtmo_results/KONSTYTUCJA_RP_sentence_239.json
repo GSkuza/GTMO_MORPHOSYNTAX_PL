@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:41.350857",
+  "content": {
+    "text": "Pracownik ma prawo do określonych w ustawie dni wolnych od pracy i\ncorocznych płatnych urlopów; maksymalne normy czasu pracy określa ustawa.",
+    "length": 140,
+    "word_count": 21
+  },
+  "coordinates": {
+    "determination": 0.729978,
+    "stability": 0.646515,
+    "entropy": 0.40327
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:41.350857",
+    "sequence_number": 239,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 56,
+    "cases": {
+      "nom": 9,
+      "gen": 18,
+      "acc": 9,
+      "loc": 9,
+      "dat": 3
+    },
+    "pos": {
+      "subst": 22,
+      "adj": 20,
+      "adv": 1,
+      "prep": 4,
+      "part": 1,
+      "conj": 1,
+      "interp": 2
+    },
+    "ambiguity": 2.6666666666666665,
+    "debug_tags": [
+      "Pracownik:subst:sg:nom:m1",
+      "ma:adj:sg:nom.voc:f:pos",
+      "ma:fin:sg:ter:imperf",
+      "prawo:subst:sg:nom.acc.voc:n:ncol",
+      "prawo:adv:pos",
+      "do:prep:gen",
+      "do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "określonych:adj:pl:acc:m1:pos",
+      "określonych:adj:pl:gen:m1.m2.m3.f.n:pos",
+      "określonych:adj:pl:loc:m1.m2.m3.f.n:pos"
+    ],
+    "coords_count": 44
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.665
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=44, cases={'nom': 9, 'gen': 18, 'acc': 9, 'loc': 9, 'dat': 3}, pos={'subst': 22, 'adj': 20, 'adv': 1, 'prep': 4, 'part': 1, 'conj': 1, 'interp': 2}",
+    "  MORPH_COORDS: [0.749, 0.719, 0.321]",
+    "  MORPH_TAGS: ['Pracownik:subst:sg:nom:m1', 'ma:adj:sg:nom.voc:f:pos', 'ma:fin:sg:ter:imperf', 'prawo:subst:sg:nom.acc.voc:n:ncol', 'prawo:adv:pos', 'do:prep:gen', 'do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol', 'określonych:adj:pl:acc:m1:pos', 'określonych:adj:pl:gen:m1.m2.m3.f.n:pos', 'określonych:adj:pl:loc:m1.m2.m3.f.n:pos']",
+    "  SYNTAX_COORDS: [0.713, 0.456, 0.584]",
+    "  FINAL: D=0.740, S=0.652, E=0.388"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.0426,
+    "quantum_words": 18,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

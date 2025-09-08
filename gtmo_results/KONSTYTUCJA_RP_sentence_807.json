@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:51.903080",
+  "content": {
+    "text": "Nie wolno zaciągać pożyczek lub udzielać gwarancji i poręczeń\nfinansowych, w następstwie których państwowy dług publiczny przekroczy 3/5\nwartości rocznego produktu krajowego brutto.",
+    "length": 181,
+    "word_count": 23
+  },
+  "coordinates": {
+    "determination": 0.698897,
+    "stability": 0.624555,
+    "entropy": 0.455426
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:51.903080",
+    "sequence_number": 807,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 74,
+    "cases": {
+      "acc": 15,
+      "gen": 15,
+      "dat": 5,
+      "loc": 7,
+      "nom": 9,
+      "voc": 1
+    },
+    "pos": {
+      "conj": 3,
+      "part": 2,
+      "adv": 2,
+      "subst": 13,
+      "adj": 37,
+      "interp": 3,
+      "prep": 2
+    },
+    "ambiguity": 3.217391304347826,
+    "debug_tags": [
+      "Nie:conj",
+      "Nie:interj",
+      "Nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "Nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "Nie:part",
+      "wolno:pred",
+      "wolno:adv:pos",
+      "zaciągać:inf:imperf",
+      "pożyczek:subst:pl:gen:f",
+      "lub:conj"
+    ],
+    "coords_count": 41
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6303
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=41, cases={'acc': 15, 'gen': 15, 'dat': 5, 'loc': 7, 'nom': 9, 'voc': 1}, pos={'conj': 3, 'part': 2, 'adv': 2, 'subst': 13, 'adj': 37, 'interp': 3, 'prep': 2}",
+    "  MORPH_COORDS: [0.720, 0.692, 0.351]",
+    "  MORPH_TAGS: ['Nie:conj', 'Nie:interj', 'Nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep', 'Nie:ppron3:sg:acc:n:ter:akc.nakc:praep', 'Nie:part', 'wolno:pred', 'wolno:adv:pos', 'zaciągać:inf:imperf', 'pożyczek:subst:pl:gen:f', 'lub:conj']",
+    "  SYNTAX_COORDS: [0.678, 0.453, 0.693]",
+    "  FINAL: D=0.709, S=0.630, E=0.440"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9802,
+    "quantum_words": 16,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

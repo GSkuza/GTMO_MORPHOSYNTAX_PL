@@ -1,0 +1,75 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:40.255417",
+  "content": {
+    "text": "Obowiązkiem obywatela polskiego jest obrona Ojczyzny.",
+    "length": 53,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.777119,
+    "stability": 0.690706,
+    "entropy": 0.315193
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:40.255417",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 261,
+    "saved_at": "2025-09-08T15:32:40.255823",
+    "file_counter": 261
+  },
+  "additional_metrics": {
+    "total_analyses": 11,
+    "cases": {
+      "gen": 5,
+      "acc": 1,
+      "nom": 2
+    },
+    "pos": {
+      "subst": 7,
+      "adj": 2,
+      "interp": 1
+    },
+    "ambiguity": 1.8333333333333333,
+    "debug_tags": [
+      "Obowiązkiem:subst:sg:inst:m3",
+      "obywatela:subst:sg:gen.acc:m1",
+      "polskiego:subst:sg:gen:n:ncol",
+      "polskiego:subst:sg:gen:m3",
+      "polskiego:adj:sg:acc:m1.m2:pos",
+      "polskiego:adj:sg:gen:m1.m2.m3.n:pos",
+      "jest:fin:sg:ter:imperf",
+      "obrona:subst:sg:nom:f",
+      "Ojczyzny:subst:sg:gen:f",
+      "Ojczyzny:subst:pl:nom.acc.voc:f"
+    ],
+    "coords_count": 11
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7235
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8459,
+    "quantum_words": 4,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.383217,
+    "formula": "0.787 × 0.696 × 0.700 = 0.383"
+  },
+  "sentence_number": 261,
+  "total_sentences": 805
+}

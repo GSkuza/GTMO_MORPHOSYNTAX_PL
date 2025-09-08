@@ -1,0 +1,76 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:50.852869",
+  "content": {
+    "text": "Organizację Skarbu Państwa oraz sposób zarządzania majątkiem\nSkarbu Państwa określa ustawa.\n\nArt. 219. 1.",
+    "length": 105,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.757663,
+    "stability": 0.684034,
+    "entropy": 0.366845
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:50.852869",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 708,
+    "saved_at": "2025-09-08T15:32:50.853301",
+    "file_counter": 708
+  },
+  "additional_metrics": {
+    "total_analyses": 30,
+    "cases": {
+      "acc": 1,
+      "gen": 8,
+      "nom": 8
+    },
+    "pos": {
+      "subst": 16,
+      "adv": 1,
+      "conj": 1,
+      "interp": 4
+    },
+    "ambiguity": 2.142857142857143,
+    "debug_tags": [
+      "Organizację:subst:sg:acc:f",
+      "Skarbu:subst:sg:gen:m3",
+      "Skarbu:subst:sg:gen:m3",
+      "Państwa:subst:pl:gen.acc:m1:pt",
+      "Państwa:subst:sg:gen:n:ncol",
+      "Państwa:subst:pl:nom.acc.voc:n:ncol",
+      "Państwa:subst:pl:gen.acc:m1:pt",
+      "Państwa:subst:sg:gen:n:ncol",
+      "Państwa:subst:pl:nom.acc.voc:n:ncol",
+      "oraz:adv"
+    ],
+    "coords_count": 18
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6982
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0114,
+    "quantum_words": 7,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.342839,
+    "formula": "0.768 × 0.689 × 0.648 = 0.343"
+  },
+  "sentence_number": 708,
+  "total_sentences": 805
+}

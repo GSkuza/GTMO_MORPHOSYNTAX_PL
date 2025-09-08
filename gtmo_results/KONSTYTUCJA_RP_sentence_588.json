@@ -1,0 +1,83 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:48.074511",
+  "content": {
+    "text": "Prezes Rady Ministrów, w ciągu 14 dni od dnia powołania przez Prezydenta\nRzeczypospolitej, przedstawia Sejmowi program działania Rady Ministrów z\nwnioskiem o udzielenie jej wotum zaufania.",
+    "length": 188,
+    "word_count": 26
+  },
+  "coordinates": {
+    "determination": 0.719417,
+    "stability": 0.638094,
+    "entropy": 0.394993
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:48.074511",
+    "sequence_number": 588,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 64,
+    "cases": {
+      "nom": 19,
+      "gen": 22,
+      "acc": 3,
+      "loc": 4,
+      "voc": 1,
+      "dat": 4
+    },
+    "pos": {
+      "subst": 36,
+      "interp": 3,
+      "prep": 8,
+      "adj": 1,
+      "part": 1
+    },
+    "ambiguity": 2.4615384615384617,
+    "debug_tags": [
+      "Prezes:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezes:subst:sg:nom:m1",
+      "Rady:depr:pl:nom.acc.voc:m2",
+      "Rady:subst:pl:nom.acc.voc:m3",
+      "Rady:subst:sg:gen:f",
+      "Rady:subst:pl:nom.acc.voc:f",
+      "Rady:subst:sg:gen:m1",
+      "Rady:depr:pl:nom.acc.voc:m2",
+      "Rady:subst:pl:nom.acc.voc:m3",
+      "Rady:subst:sg:gen:f"
+    ],
+    "coords_count": 46
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6607
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=46, cases={'nom': 19, 'gen': 22, 'acc': 3, 'loc': 4, 'voc': 1, 'dat': 4}, pos={'subst': 36, 'interp': 3, 'prep': 8, 'adj': 1, 'part': 1}",
+    "  MORPH_COORDS: [0.761, 0.712, 0.335]",
+    "  MORPH_TAGS: ['Prezes:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f', 'Prezes:subst:sg:nom:m1', 'Rady:depr:pl:nom.acc.voc:m2', 'Rady:subst:pl:nom.acc.voc:m3', 'Rady:subst:sg:gen:f', 'Rady:subst:pl:nom.acc.voc:f', 'Rady:subst:sg:gen:m1', 'Rady:depr:pl:nom.acc.voc:m2', 'Rady:subst:pl:nom.acc.voc:m3', 'Rady:subst:sg:gen:f']",
+    "  SYNTAX_COORDS: [0.642, 0.454, 0.503]",
+    "  FINAL: D=0.729, S=0.643, E=0.380"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9353,
+    "quantum_words": 21,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:35.942674",
+  "content": {
+    "text": "Przepis ten nie narusza praw mniejszości narodowych wynikających z\nratyfikowanych umów międzynarodowych.",
+    "length": 104,
+    "word_count": 12
+  },
+  "coordinates": {
+    "determination": 0.702484,
+    "stability": 0.595992,
+    "entropy": 0.46116
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:35.942674",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 62,
+    "saved_at": "2025-09-08T15:32:35.943059",
+    "file_counter": 62
+  },
+  "additional_metrics": {
+    "total_analyses": 34,
+    "cases": {
+      "nom": 3,
+      "acc": 7,
+      "gen": 10,
+      "dat": 1,
+      "voc": 1,
+      "loc": 2
+    },
+    "pos": {
+      "subst": 9,
+      "adj": 8,
+      "conj": 1,
+      "part": 2,
+      "prep": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.8333333333333335,
+    "debug_tags": [
+      "Przepis:subst:sg:nom.acc:m3",
+      "ten:adj:sg:acc:m3:pos",
+      "ten:adj:sg:nom.voc:m1.m2.m3:pos",
+      "nie:conj",
+      "nie:interj",
+      "nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "nie:part",
+      "narusza:fin:sg:ter:imperf",
+      "praw:adjc"
+    ],
+    "coords_count": 23
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6214
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.2522,
+    "quantum_words": 11,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.237153,
+    "formula": "0.712 × 0.601 × 0.554 = 0.237"
+  },
+  "sentence_number": 62,
+  "total_sentences": 805
+}

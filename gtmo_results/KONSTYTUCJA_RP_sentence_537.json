@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:47.052386",
+  "content": {
+    "text": "Orędzia nie czyni się przedmiotem\ndebaty.",
+    "length": 41,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.721607,
+    "stability": 0.630194,
+    "entropy": 0.353335
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:47.052386",
+    "sequence_number": 537,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 13,
+    "cases": {
+      "gen": 2,
+      "nom": 2,
+      "acc": 2
+    },
+    "pos": {
+      "subst": 5,
+      "conj": 1,
+      "part": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.1666666666666665,
+    "debug_tags": [
+      "Orędzia:subst:sg:gen:n:ncol",
+      "Orędzia:subst:pl:nom.acc.voc:n:ncol",
+      "nie:conj",
+      "nie:interj",
+      "nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "nie:part",
+      "czyni:fin:sg:ter:imperf",
+      "się:part",
+      "przedmiotem:subst:sg:inst:m3"
+    ],
+    "coords_count": 10
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6717
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=10, cases={'gen': 2, 'nom': 2, 'acc': 2}, pos={'subst': 5, 'conj': 1, 'part': 2, 'interp': 1}",
+    "  MORPH_COORDS: [0.719, 0.689, 0.364]",
+    "  MORPH_TAGS: ['Orędzia:subst:sg:gen:n:ncol', 'Orędzia:subst:pl:nom.acc.voc:n:ncol', 'nie:conj', 'nie:interj', 'nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep', 'nie:ppron3:sg:acc:n:ter:akc.nakc:praep', 'nie:part', 'czyni:fin:sg:ter:imperf', 'się:part', 'przedmiotem:subst:sg:inst:m3']",
+    "  SYNTAX_COORDS: [0.775, 0.450, 0.250]",
+    "  FINAL: D=0.732, S=0.635, E=0.338"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.3487,
+    "quantum_words": 3,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

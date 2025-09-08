@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:46.306592",
+  "content": {
+    "text": "Sejm w ciągu 14 dni od dnia powołania Rady Ministrów przez Prezydenta\nRzeczypospolitej udziela jej wotum zaufania większością głosów w obecności co\nnajmniej połowy ustawowej liczby posłów.",
+    "length": 188,
+    "word_count": 27
+  },
+  "coordinates": {
+    "determination": 0.713089,
+    "stability": 0.586988,
+    "entropy": 0.438127
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:46.306592",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 524,
+    "saved_at": "2025-09-08T15:32:46.307143",
+    "file_counter": 524
+  },
+  "additional_metrics": {
+    "total_analyses": 70,
+    "cases": {
+      "nom": 17,
+      "acc": 5,
+      "loc": 5,
+      "gen": 26,
+      "voc": 2,
+      "dat": 5
+    },
+    "pos": {
+      "subst": 41,
+      "prep": 9,
+      "part": 2,
+      "num": 2,
+      "adv": 1,
+      "adj": 3,
+      "interp": 1
+    },
+    "ambiguity": 2.5925925925925926,
+    "debug_tags": [
+      "Sejm:subst:sg:nom.acc:m3",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "ciągu:subst:sg:gen:m3",
+      "ciągu:subst:sg:loc:m3",
+      "ciągu:subst:sg:voc:m3",
+      "14:dig",
+      "dni:subst:pl:nom.acc.voc:m3"
+    ],
+    "coords_count": 52
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6299
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8673,
+    "quantum_words": 23,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.246936,
+    "formula": "0.723 × 0.592 × 0.577 = 0.247"
+  },
+  "sentence_number": 524,
+  "total_sentences": 805
+}

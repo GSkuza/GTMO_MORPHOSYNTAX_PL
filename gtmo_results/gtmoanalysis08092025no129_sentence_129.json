@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:37.428002",
+  "content": {
+    "text": "Władze publiczne nie mogą pozyskiwać, gromadzić i udostępniać innych\ninformacji o obywatelach niż niezbędne w demokratycznym państwie prawnym.",
+    "length": 142,
+    "word_count": 18
+  },
+  "coordinates": {
+    "determination": 0.689198,
+    "stability": 0.647434,
+    "entropy": 0.422902
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:37.428002",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 129,
+    "saved_at": "2025-09-08T15:32:37.428678",
+    "file_counter": 129
+  },
+  "additional_metrics": {
+    "total_analyses": 50,
+    "cases": {
+      "nom": 7,
+      "acc": 9,
+      "gen": 5,
+      "loc": 8,
+      "dat": 3
+    },
+    "pos": {
+      "subst": 10,
+      "adj": 17,
+      "conj": 3,
+      "part": 2,
+      "interp": 2,
+      "prep": 5
+    },
+    "ambiguity": 2.7777777777777777,
+    "debug_tags": [
+      "Władze:subst:pl:nom.acc.voc:f",
+      "publiczne:adj:pl:acc:m2.m3.f.n:pos",
+      "publiczne:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "publiczne:adj:sg:acc:n:pos",
+      "publiczne:adj:sg:nom.voc:n:pos",
+      "nie:conj",
+      "nie:interj",
+      "nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "nie:part"
+    ],
+    "coords_count": 34
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.643
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.7252,
+    "quantum_words": 13,
+    "entanglements": 3,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.270103,
+    "formula": "0.699 × 0.652 × 0.592 = 0.270"
+  },
+  "sentence_number": 129,
+  "total_sentences": 805
+}

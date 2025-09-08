@@ -1,0 +1,83 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:52.690432",
+  "content": {
+    "text": "W sytuacjach szczególnych zagrożeń, jeżeli zwykłe środki\nkonstytucyjne są niewystarczające, może zostać wprowadzony odpowiedni stan\nnadzwyczajny: stan wojenny, stan wyjątkowy lub stan klęski żywiołowej.",
+    "length": 202,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.710779,
+    "stability": 0.689621,
+    "entropy": 0.367032
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:52.690432",
+    "sequence_number": 846,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 58,
+    "cases": {
+      "acc": 13,
+      "loc": 4,
+      "gen": 5,
+      "nom": 22,
+      "dat": 1
+    },
+    "pos": {
+      "prep": 2,
+      "subst": 10,
+      "adj": 28,
+      "interp": 5,
+      "part": 1,
+      "conj": 1
+    },
+    "ambiguity": 2.4166666666666665,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "sytuacjach:subst:pl:loc:f",
+      "szczególnych:adj:pl:acc:m1:pos",
+      "szczególnych:adj:pl:gen:m1.m2.m3.f.n:pos",
+      "szczególnych:adj:pl:loc:m1.m2.m3.f.n:pos",
+      "zagrożeń:ger:pl:gen:n:perf:aff",
+      "zagrożeń:subst:pl:gen:n:ncol",
+      ",:interp",
+      ",:interp"
+    ],
+    "coords_count": 36
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6811
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=36, cases={'acc': 13, 'loc': 4, 'gen': 5, 'nom': 22, 'dat': 1}, pos={'prep': 2, 'subst': 10, 'adj': 28, 'interp': 5, 'part': 1, 'conj': 1}",
+    "  MORPH_COORDS: [0.781, 0.778, 0.245]",
+    "  MORPH_TAGS: ['W:prep:acc:nwok', 'W:prep:loc:nwok', 'sytuacjach:subst:pl:loc:f', 'szczególnych:adj:pl:acc:m1:pos', 'szczególnych:adj:pl:gen:m1.m2.m3.f.n:pos', 'szczególnych:adj:pl:loc:m1.m2.m3.f.n:pos', 'zagrożeń:ger:pl:gen:n:perf:aff', 'zagrożeń:subst:pl:gen:n:ncol', ',:interp', ',:interp']",
+    "  SYNTAX_COORDS: [0.545, 0.453, 0.663]",
+    "  FINAL: D=0.721, S=0.695, E=0.352"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.0313,
+    "quantum_words": 16,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:41.423076",
+  "content": {
+    "text": "Obywatel pozostający bez pracy nie z własnej woli i nie mający innych\nśrodków utrzymania ma prawo do zabezpieczenia społecznego, którego zakres i\nformy określa ustawa.",
+    "length": 167,
+    "word_count": 25
+  },
+  "coordinates": {
+    "determination": 0.739412,
+    "stability": 0.636037,
+    "entropy": 0.435368
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:41.423076",
+    "sequence_number": 243,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 77,
+    "cases": {
+      "nom": 20,
+      "acc": 11,
+      "gen": 20,
+      "dat": 3,
+      "loc": 3
+    },
+    "pos": {
+      "subst": 23,
+      "prep": 4,
+      "conj": 4,
+      "part": 5,
+      "adj": 14,
+      "adv": 1,
+      "interp": 2
+    },
+    "ambiguity": 3.08,
+    "debug_tags": [
+      "Obywatel:subst:sg:nom:m1",
+      "pozostający:pact:pl:nom.voc:m1:imperf:aff",
+      "pozostający:pact:sg:acc:m3:imperf:aff",
+      "pozostający:pact:sg:nom.voc:m1.m2.m3:imperf:aff",
+      "bez:prep:gen:nwok",
+      "bez:subst:sg:nom.acc:m3",
+      "bez:subst:pl:gen:f",
+      "pracy:subst:sg:gen:f",
+      "pracy:subst:sg:dat.loc:f",
+      "nie:conj"
+    ],
+    "coords_count": 51
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.656
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=51, cases={'nom': 20, 'acc': 11, 'gen': 20, 'dat': 3, 'loc': 3}, pos={'subst': 23, 'prep': 4, 'conj': 4, 'part': 5, 'adj': 14, 'adv': 1, 'interp': 2}",
+    "  MORPH_COORDS: [0.745, 0.708, 0.333]",
+    "  MORPH_TAGS: ['Obywatel:subst:sg:nom:m1', 'pozostający:pact:pl:nom.voc:m1:imperf:aff', 'pozostający:pact:sg:acc:m3:imperf:aff', 'pozostający:pact:sg:nom.voc:m1.m2.m3:imperf:aff', 'bez:prep:gen:nwok', 'bez:subst:sg:nom.acc:m3', 'bez:subst:pl:gen:f', 'pracy:subst:sg:gen:f', 'pracy:subst:sg:dat.loc:f', 'nie:conj']",
+    "  SYNTAX_COORDS: [0.762, 0.455, 0.664]",
+    "  FINAL: D=0.749, S=0.641, E=0.420"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9628,
+    "quantum_words": 21,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

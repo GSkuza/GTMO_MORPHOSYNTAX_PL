@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:52.054655",
+  "content": {
+    "text": "Sejm uchwala budżet państwa na rok budżetowy w formie ustawy\nbudżetowej.\n\nZasady i tryb opracowania projektu budżetu państwa, stopień jego\nszczegółowości oraz wymagania, którym powinien odpowiadać projekt ustawy\nbudżetowej, a także zasady i tryb wykonywania ustawy budżetowej określa ustawa.",
+    "length": 291,
+    "word_count": 39
+  },
+  "coordinates": {
+    "determination": 0.725387,
+    "stability": 0.647493,
+    "entropy": 0.436731
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:52.054655",
+    "sequence_number": 813,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 98,
+    "cases": {
+      "nom": 28,
+      "gen": 28,
+      "acc": 4,
+      "loc": 6,
+      "dat": 6,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 44,
+      "prep": 5,
+      "adj": 14,
+      "interp": 5,
+      "part": 4,
+      "conj": 4,
+      "adv": 1
+    },
+    "ambiguity": 2.5128205128205128,
+    "debug_tags": [
+      "Sejm:subst:sg:nom.acc:m3",
+      "uchwala:fin:sg:ter:imperf",
+      "budżet:subst:sg:nom.acc:m3",
+      "państwa:subst:pl:gen.acc:m1:pt",
+      "państwa:subst:sg:gen:n:ncol",
+      "państwa:subst:pl:nom.acc.voc:n:ncol",
+      "państwa:subst:pl:gen.acc:m1:pt",
+      "państwa:subst:sg:gen:n:ncol",
+      "państwa:subst:pl:nom.acc.voc:n:ncol",
+      "na:prep:acc"
+    ],
+    "coords_count": 57
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6534
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=57, cases={'nom': 28, 'gen': 28, 'acc': 4, 'loc': 6, 'dat': 6, 'voc': 1}, pos={'subst': 44, 'prep': 5, 'adj': 14, 'interp': 5, 'part': 4, 'conj': 4, 'adv': 1}",
+    "  MORPH_COORDS: [0.755, 0.725, 0.319]",
+    "  MORPH_TAGS: ['Sejm:subst:sg:nom.acc:m3', 'uchwala:fin:sg:ter:imperf', 'budżet:subst:sg:nom.acc:m3', 'państwa:subst:pl:gen.acc:m1:pt', 'państwa:subst:sg:gen:n:ncol', 'państwa:subst:pl:nom.acc.voc:n:ncol', 'państwa:subst:pl:gen.acc:m1:pt', 'państwa:subst:sg:gen:n:ncol', 'państwa:subst:pl:nom.acc.voc:n:ncol', 'na:prep:acc']",
+    "  SYNTAX_COORDS: [0.681, 0.454, 0.703]",
+    "  FINAL: D=0.735, S=0.652, E=0.422"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9275,
+    "quantum_words": 25,
+    "entanglements": 8,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:50.800100",
+  "content": {
+    "text": "Nie wolno zaciągać pożyczek lub udzielać gwarancji i poręczeń\nfinansowych, w następstwie których państwowy dług publiczny przekroczy 3/5\nwartości rocznego produktu krajowego brutto.",
+    "length": 181,
+    "word_count": 23
+  },
+  "coordinates": {
+    "determination": 0.694783,
+    "stability": 0.60156,
+    "entropy": 0.489098
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:50.800100",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 705,
+    "saved_at": "2025-09-08T15:32:50.800476",
+    "file_counter": 705
+  },
+  "additional_metrics": {
+    "total_analyses": 74,
+    "cases": {
+      "acc": 15,
+      "gen": 15,
+      "dat": 5,
+      "loc": 7,
+      "nom": 9,
+      "voc": 1
+    },
+    "pos": {
+      "conj": 3,
+      "part": 2,
+      "adv": 2,
+      "subst": 13,
+      "adj": 37,
+      "interp": 3,
+      "prep": 2
+    },
+    "ambiguity": 3.217391304347826,
+    "debug_tags": [
+      "Nie:conj",
+      "Nie:interj",
+      "Nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "Nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "Nie:part",
+      "wolno:pred",
+      "wolno:adv:pos",
+      "zaciągać:inf:imperf",
+      "pożyczek:subst:pl:gen:f",
+      "lub:conj"
+    ],
+    "coords_count": 41
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6117
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9046,
+    "quantum_words": 16,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.22482,
+    "formula": "0.705 × 0.607 × 0.526 = 0.225"
+  },
+  "sentence_number": 705,
+  "total_sentences": 805
+}

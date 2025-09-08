@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:52.267908",
+  "content": {
+    "text": "Sejm może je uchylić bezwzględną większością głosów w\nobecności co najmniej połowy ustawowej liczby posłów.",
+    "length": 107,
+    "word_count": 15
+  },
+  "coordinates": {
+    "determination": 0.728065,
+    "stability": 0.61466,
+    "entropy": 0.428841
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:52.267908",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 753,
+    "saved_at": "2025-09-08T15:32:52.268324",
+    "file_counter": 753
+  },
+  "additional_metrics": {
+    "total_analyses": 41,
+    "cases": {
+      "nom": 8,
+      "acc": 6,
+      "gen": 10,
+      "loc": 2,
+      "dat": 2,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 17,
+      "part": 3,
+      "adj": 5,
+      "prep": 5,
+      "num": 2,
+      "adv": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.7333333333333334,
+    "debug_tags": [
+      "Sejm:subst:sg:nom.acc:m3",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "je:fin:sg:ter:imperf",
+      "je:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:npraep",
+      "je:ppron3:sg:acc:n:ter:akc.nakc:npraep",
+      "uchylić:inf:perf",
+      "bezwzględną:adj:sg:acc:f:pos",
+      "bezwzględną:adj:sg:inst:f:pos"
+    ],
+    "coords_count": 30
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.647
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0062,
+    "quantum_words": 12,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.26808,
+    "formula": "0.738 × 0.620 × 0.586 = 0.268"
+  },
+  "sentence_number": 753,
+  "total_sentences": 805
+}

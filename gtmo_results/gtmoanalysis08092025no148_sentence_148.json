@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:37.831485",
+  "content": {
+    "text": "Wolność uzewnętrzniania religii może być ograniczona jedynie w drodze\nustawy i tylko wtedy, gdy jest to konieczne do ochrony bezpieczeństwa państwa,\nporządku publicznego, zdrowia, moralności lub wolności i praw innych osób.",
+    "length": 223,
+    "word_count": 31
+  },
+  "coordinates": {
+    "determination": 0.632219,
+    "stability": 0.567128,
+    "entropy": 0.542391
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:37.831485",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 148,
+    "saved_at": "2025-09-08T15:32:37.832558",
+    "file_counter": 148
+  },
+  "additional_metrics": {
+    "total_analyses": 87,
+    "cases": {
+      "nom": 16,
+      "acc": 8,
+      "gen": 22,
+      "dat": 4,
+      "loc": 4,
+      "voc": 3
+    },
+    "pos": {
+      "subst": 38,
+      "part": 6,
+      "adj": 12,
+      "prep": 3,
+      "conj": 5,
+      "adv": 2,
+      "interp": 5
+    },
+    "ambiguity": 2.806451612903226,
+    "debug_tags": [
+      "Wolność:subst:sg:nom:f",
+      "Wolność:subst:sg:acc:f",
+      "uzewnętrzniania:ger:pl:nom.acc:n:imperf:aff",
+      "uzewnętrzniania:ger:sg:gen:n:imperf:aff",
+      "religii:subst:sg:gen:f",
+      "religii:subst:sg:dat.loc:f",
+      "religii:subst:pl:gen:f",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf"
+    ],
+    "coords_count": 59
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5603
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.933,
+    "quantum_words": 22,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.173651,
+    "formula": "0.642 × 0.572 × 0.473 = 0.174"
+  },
+  "sentence_number": 148,
+  "total_sentences": 805
+}

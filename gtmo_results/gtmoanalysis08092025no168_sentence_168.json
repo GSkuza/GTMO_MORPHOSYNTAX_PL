@@ -1,0 +1,76 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:38.212746",
+  "content": {
+    "text": "Każdemu zapewnia się wolność zrzeszania się.",
+    "length": 44,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.772852,
+    "stability": 0.665775,
+    "entropy": 0.350119
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:38.212746",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 168,
+    "saved_at": "2025-09-08T15:32:38.213539",
+    "file_counter": 168
+  },
+  "additional_metrics": {
+    "total_analyses": 9,
+    "cases": {
+      "dat": 1,
+      "nom": 2,
+      "acc": 1,
+      "gen": 1
+    },
+    "pos": {
+      "adj": 1,
+      "part": 2,
+      "subst": 2,
+      "interp": 1
+    },
+    "ambiguity": 1.5,
+    "debug_tags": [
+      "Każdemu:adj:sg:dat:m1.m2.m3.n:pos",
+      "zapewnia:fin:sg:ter:imperf",
+      "się:part",
+      "się:part",
+      "wolność:subst:sg:nom:f",
+      "wolność:subst:sg:acc:f",
+      "zrzeszania:ger:pl:nom.acc:n:imperf:aff",
+      "zrzeszania:ger:sg:gen:n:imperf:aff",
+      ".:interp"
+    ],
+    "coords_count": 7
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7038
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9877,
+    "quantum_words": 3,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.349141,
+    "formula": "0.783 × 0.671 × 0.665 = 0.349"
+  },
+  "sentence_number": 168,
+  "total_sentences": 805
+}

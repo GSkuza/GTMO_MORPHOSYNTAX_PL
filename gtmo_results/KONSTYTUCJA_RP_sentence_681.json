@@ -1,0 +1,75 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:49.722798",
+  "content": {
+    "text": "Sędziowie są nieusuwalni.",
+    "length": 25,
+    "word_count": 3
+  },
+  "coordinates": {
+    "determination": 0.859724,
+    "stability": 0.79417,
+    "entropy": 0.18549
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:49.722798",
+    "sequence_number": 681,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 4,
+    "cases": {
+      "nom": 2
+    },
+    "pos": {
+      "subst": 1,
+      "adj": 1,
+      "interp": 1
+    },
+    "ambiguity": 1.3333333333333333,
+    "debug_tags": [
+      "Sędziowie:subst:pl:nom.voc:m1",
+      "są:fin:pl:ter:imperf",
+      "nieusuwalni:adj:pl:nom.voc:m1:pos",
+      ".:interp"
+    ],
+    "coords_count": 5
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "high",
+    "entropy": "low",
+    "overall": "high_quality",
+    "overall_score": 0.8265
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=5, cases={'nom': 2}, pos={'subst': 1, 'adj': 1, 'interp': 1}",
+    "  MORPH_COORDS: [0.860, 0.864, 0.146]",
+    "  MORPH_TAGS: ['Sędziowie:subst:pl:nom.voc:m1', 'są:fin:pl:ter:imperf', 'nieusuwalni:adj:pl:nom.voc:m1:pos', '.:interp']",
+    "  SYNTAX_COORDS: [0.900, 0.600, 0.250]",
+    "  FINAL: D=0.870, S=0.795, E=0.173"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.98,
+    "quantum_words": 2,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "topology": {
+    "attractor": "Ψᴷ",
+    "distance": 0.0720619742166421,
+    "in_basin": true
+  }
+}

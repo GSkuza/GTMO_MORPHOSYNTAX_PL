@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:49.693128",
+  "content": {
+    "text": "Sędziowie są powoływani przez Prezydenta Rzeczypospolitej, na\nwniosek Krajowej Rady Sądownictwa, na czas nieoznaczony.",
+    "length": 118,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.729125,
+    "stability": 0.684478,
+    "entropy": 0.319216
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:49.693128",
+    "sequence_number": 679,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 33,
+    "cases": {
+      "nom": 10,
+      "acc": 5,
+      "gen": 6,
+      "dat": 2,
+      "loc": 3
+    },
+    "pos": {
+      "subst": 12,
+      "prep": 5,
+      "interp": 3,
+      "adj": 5
+    },
+    "ambiguity": 2.357142857142857,
+    "debug_tags": [
+      "Sędziowie:subst:pl:nom.voc:m1",
+      "są:fin:pl:ter:imperf",
+      "powoływani:ppas:pl:nom.voc:m1:imperf:aff",
+      "przez:prep:acc:nwok",
+      "Prezydenta:subst:sg:gen.acc:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      ",:interp",
+      ",:interp",
+      "na:prep:acc"
+    ],
+    "coords_count": 25
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7012
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=25, cases={'nom': 10, 'acc': 5, 'gen': 6, 'dat': 2, 'loc': 3}, pos={'subst': 12, 'prep': 5, 'interp': 3, 'adj': 5}",
+    "  MORPH_COORDS: [0.807, 0.783, 0.247]",
+    "  MORPH_TAGS: ['Sędziowie:subst:pl:nom.voc:m1', 'są:fin:pl:ter:imperf', 'powoływani:ppas:pl:nom.voc:m1:imperf:aff', 'przez:prep:acc:nwok', 'Prezydenta:subst:sg:gen.acc:m1', 'Rzeczypospolitej:subst:sg:gen:f', 'Rzeczypospolitej:subst:sg:dat.loc:f', ',:interp', ',:interp', 'na:prep:acc']",
+    "  SYNTAX_COORDS: [0.567, 0.451, 0.451]",
+    "  FINAL: D=0.739, S=0.689, E=0.304"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.7778,
+    "quantum_words": 12,
+    "entanglements": 1,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

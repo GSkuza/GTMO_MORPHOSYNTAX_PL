@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:44.739682",
+  "content": {
+    "text": "Prezydent Rzeczypospolitej przed ratyfikowaniem umowy międzynarodowej\nmoże zwrócić się do Trybunału Konstytucyjnego z wnioskiem w sprawie jej\nzgodności z Konstytucją.",
+    "length": 166,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.664933,
+    "stability": 0.585045,
+    "entropy": 0.445892
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:44.739682",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 454,
+    "saved_at": "2025-09-08T15:32:44.740144",
+    "file_counter": 454
+  },
+  "additional_metrics": {
+    "total_analyses": 44,
+    "cases": {
+      "nom": 6,
+      "gen": 11,
+      "dat": 5,
+      "acc": 4,
+      "loc": 2,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 16,
+      "prep": 9,
+      "adj": 7,
+      "part": 4,
+      "interp": 1
+    },
+    "ambiguity": 2.2,
+    "debug_tags": [
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "przed:prep:acc:nwok",
+      "przed:prep:inst:nwok",
+      "ratyfikowaniem:ger:sg:inst:n:imperf.perf:aff",
+      "umowy:subst:sg:gen:f",
+      "umowy:subst:pl:nom.acc.voc:f",
+      "umowy:adj:sg:acc:m3:pos"
+    ],
+    "coords_count": 33
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6077
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8489,
+    "quantum_words": 13,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.226642,
+    "formula": "0.675 × 0.590 × 0.569 = 0.227"
+  },
+  "sentence_number": 454,
+  "total_sentences": 805
+}

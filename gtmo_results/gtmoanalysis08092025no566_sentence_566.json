@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:47.374794",
+  "content": {
+    "text": "Źródła dochodów jednostek samorządu terytorialnego są określone w\nustawie.",
+    "length": 74,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.717239,
+    "stability": 0.625666,
+    "entropy": 0.404566
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:47.374794",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 566,
+    "saved_at": "2025-09-08T15:32:47.375349",
+    "file_counter": 566
+  },
+  "additional_metrics": {
+    "total_analyses": 19,
+    "cases": {
+      "nom": 6,
+      "gen": 5,
+      "acc": 4,
+      "loc": 1,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 7,
+      "adj": 6,
+      "prep": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.111111111111111,
+    "debug_tags": [
+      "Źródła:subst:pl:nom.acc.voc:n:pt",
+      "Źródła:subst:sg:gen:n:ncol",
+      "Źródła:subst:pl:nom.acc.voc:n:ncol",
+      "dochodów:subst:pl:gen:m3",
+      "jednostek:subst:pl:gen:f",
+      "samorządu:subst:sg:gen:m3",
+      "terytorialnego:adj:sg:acc:m1.m2:pos",
+      "terytorialnego:adj:sg:gen:m1.m2.m3.n:pos",
+      "są:fin:pl:ter:imperf",
+      "określone:adj:pl:acc:m2.m3.f.n:pos"
+    ],
+    "coords_count": 17
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6532
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0416,
+    "quantum_words": 8,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.279973,
+    "formula": "0.727 × 0.631 × 0.610 = 0.280"
+  },
+  "sentence_number": 566,
+  "total_sentences": 805
+}

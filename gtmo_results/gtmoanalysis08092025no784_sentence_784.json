@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:53.059483",
+  "content": {
+    "text": "W przypadku gdy przepisy obowiązujące przed dniem wejścia w życie\nKonstytucji nie ustalały tej kadencji, a od dnia wyboru lub powołania upłynął okres\nkrótszy niż ustalony przez Konstytucję dla konstytucyjnych organów władzy\npublicznej lub osób wchodzących w ich skład, czas, w którym organy te lub osoby\npełniły funkcje według przepisów dotychczasowych, wlicza się do kadencji ustalonej\nw Konstytucji.\nArt. 239. 1.",
+    "length": 414,
+    "word_count": 61
+  },
+  "coordinates": {
+    "determination": 0.647015,
+    "stability": 0.59556,
+    "entropy": 0.507823
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:53.059483",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 784,
+    "saved_at": "2025-09-08T15:32:53.059970",
+    "file_counter": 784
+  },
+  "additional_metrics": {
+    "total_analyses": 152,
+    "cases": {
+      "acc": 20,
+      "loc": 16,
+      "voc": 3,
+      "gen": 39,
+      "nom": 29,
+      "dat": 8
+    },
+    "pos": {
+      "prep": 19,
+      "subst": 56,
+      "adv": 1,
+      "adj": 26,
+      "conj": 6,
+      "part": 3,
+      "interp": 8
+    },
+    "ambiguity": 2.4918032786885247,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "przypadku:subst:sg:loc:m3",
+      "przypadku:subst:sg:voc:m3",
+      "przypadku:subst:sg:gen:m3",
+      "przypadku:subst:sg:loc:m3",
+      "przypadku:subst:sg:voc:m3",
+      "gdy:adv",
+      "gdy:comp",
+      "przepisy:subst:pl:nom.acc.voc:m3"
+    ],
+    "coords_count": 100
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5851
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0883,
+    "quantum_words": 44,
+    "entanglements": 15,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.20012,
+    "formula": "0.657 × 0.601 × 0.507 = 0.200"
+  },
+  "sentence_number": 784,
+  "total_sentences": 805
+}

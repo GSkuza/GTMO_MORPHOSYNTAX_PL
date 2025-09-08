@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:37.340684",
+  "content": {
+    "text": "Ich\nograniczenie może nastąpić jedynie w przypadkach określonych w ustawie i w\nsposób w niej określony.",
+    "length": 103,
+    "word_count": 16
+  },
+  "coordinates": {
+    "determination": 0.680813,
+    "stability": 0.608554,
+    "entropy": 0.466196
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:37.340684",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 125,
+    "saved_at": "2025-09-08T15:32:37.341350",
+    "file_counter": 125
+  },
+  "additional_metrics": {
+    "total_analyses": 40,
+    "cases": {
+      "acc": 9,
+      "gen": 4,
+      "nom": 5,
+      "loc": 8,
+      "dat": 2
+    },
+    "pos": {
+      "adv": 1,
+      "subst": 5,
+      "part": 3,
+      "prep": 8,
+      "adj": 5,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.5,
+    "debug_tags": [
+      "Ich:ppron3:pl:acc:m1:ter:akc.nakc:npraep",
+      "Ich:ppron3:pl:gen:m1.m2.m3.f.n:ter:akc.nakc:npraep",
+      "ograniczenie:adv:pos",
+      "ograniczenie:subst:sg:nom.acc.voc:n:ncol",
+      "ograniczenie:ger:sg:nom.acc:n:perf:aff",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "nastąpić:inf:perf",
+      "jedynie:part"
+    ],
+    "coords_count": 22
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.615
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8844,
+    "quantum_words": 9,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.232611,
+    "formula": "0.691 × 0.614 × 0.549 = 0.233"
+  },
+  "sentence_number": 125,
+  "total_sentences": 805
+}

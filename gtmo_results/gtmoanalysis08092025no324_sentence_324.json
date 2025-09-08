@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:41.689527",
+  "content": {
+    "text": "Kandydatów na posłów i senatorów mogą zgłaszać partie\npolityczne oraz wyborcy.",
+    "length": 78,
+    "word_count": 11
+  },
+  "coordinates": {
+    "determination": 0.716238,
+    "stability": 0.626493,
+    "entropy": 0.438844
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:41.689527",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 324,
+    "saved_at": "2025-09-08T15:32:41.689895",
+    "file_counter": 324
+  },
+  "additional_metrics": {
+    "total_analyses": 23,
+    "cases": {
+      "gen": 4,
+      "acc": 3,
+      "loc": 1,
+      "nom": 5,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 7,
+      "prep": 2,
+      "part": 1,
+      "conj": 2,
+      "adj": 4,
+      "adv": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.090909090909091,
+    "debug_tags": [
+      "Kandydatów:subst:pl:gen.acc:m1",
+      "na:prep:acc",
+      "na:prep:loc",
+      "na:interj",
+      "posłów:subst:pl:gen.acc:m1",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "senatorów:subst:pl:gen.acc:m1",
+      "mogą:fin:pl:ter:imperf"
+    ],
+    "coords_count": 19
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6428
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.2303,
+    "quantum_words": 7,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.264233,
+    "formula": "0.726 × 0.631 × 0.576 = 0.264"
+  },
+  "sentence_number": 324,
+  "total_sentences": 805
+}

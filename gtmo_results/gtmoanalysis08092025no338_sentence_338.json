@@ -1,0 +1,70 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:41.927334",
+  "content": {
+    "text": "Posłowie są przedstawicielami Narodu.",
+    "length": 37,
+    "word_count": 4
+  },
+  "coordinates": {
+    "determination": 0.82235,
+    "stability": 0.72661,
+    "entropy": 0.27853
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:41.927334",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 338,
+    "saved_at": "2025-09-08T15:32:41.927698",
+    "file_counter": 338
+  },
+  "additional_metrics": {
+    "total_analyses": 7,
+    "cases": {
+      "nom": 3,
+      "gen": 1
+    },
+    "pos": {
+      "subst": 5,
+      "interp": 1
+    },
+    "ambiguity": 1.75,
+    "debug_tags": [
+      "Posłowie:subst:sg:nom.acc.voc:n:ncol",
+      "Posłowie:subst:pl:nom.voc:m1",
+      "Posłowie:subst:pl:nom.voc:m1",
+      "są:fin:pl:ter:imperf",
+      "przedstawicielami:subst:pl:inst:m1",
+      "Narodu:subst:sg:gen:m3",
+      ".:interp"
+    ],
+    "coords_count": 6
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "high",
+    "entropy": "low",
+    "overall": "high_quality",
+    "overall_score": 0.7634
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.98,
+    "quantum_words": 2,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.448478,
+    "formula": "0.832 × 0.732 × 0.736 = 0.448"
+  },
+  "sentence_number": 338,
+  "total_sentences": 805
+}

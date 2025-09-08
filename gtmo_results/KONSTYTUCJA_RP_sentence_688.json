@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:49.893883",
+  "content": {
+    "text": "Sędzia nie może być, bez uprzedniej zgody sądu określonego w\nustawie, pociągnięty do odpowiedzialności karnej ani pozbawiony wolności.",
+    "length": 134,
+    "word_count": 18
+  },
+  "coordinates": {
+    "determination": 0.689917,
+    "stability": 0.628018,
+    "entropy": 0.45496
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:49.893883",
+    "sequence_number": 688,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 53,
+    "cases": {
+      "nom": 9,
+      "acc": 7,
+      "gen": 15,
+      "dat": 5,
+      "loc": 3,
+      "voc": 2
+    },
+    "pos": {
+      "subst": 20,
+      "conj": 2,
+      "part": 3,
+      "interp": 3,
+      "prep": 4,
+      "adj": 8
+    },
+    "ambiguity": 2.9444444444444446,
+    "debug_tags": [
+      "Sędzia:subst:sg:nom:f",
+      "Sędzia:subst:sg:nom:m1",
+      "nie:conj",
+      "nie:interj",
+      "nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "nie:part",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf"
+    ],
+    "coords_count": 38
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6279
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=38, cases={'nom': 9, 'acc': 7, 'gen': 15, 'dat': 5, 'loc': 3, 'voc': 2}, pos={'subst': 20, 'conj': 2, 'part': 3, 'interp': 3, 'prep': 4, 'adj': 8}",
+    "  MORPH_COORDS: [0.732, 0.692, 0.352]",
+    "  MORPH_TAGS: ['Sędzia:subst:sg:nom:f', 'Sędzia:subst:sg:nom:m1', 'nie:conj', 'nie:interj', 'nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep', 'nie:ppron3:sg:acc:n:ter:akc.nakc:praep', 'nie:part', 'może:interj', 'może:part', 'może:fin:sg:ter:imperf']",
+    "  SYNTAX_COORDS: [0.605, 0.455, 0.705]",
+    "  FINAL: D=0.700, S=0.633, E=0.440"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.1029,
+    "quantum_words": 16,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

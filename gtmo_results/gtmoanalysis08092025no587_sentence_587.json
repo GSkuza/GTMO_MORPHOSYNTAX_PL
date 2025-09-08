@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:47.805042",
+  "content": {
+    "text": "Sąd wyjątkowy lub tryb doraźny może być ustanowiony tylko na czas wojny.",
+    "length": 72,
+    "word_count": 12
+  },
+  "coordinates": {
+    "determination": 0.714501,
+    "stability": 0.663345,
+    "entropy": 0.350482
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:47.805042",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 587,
+    "saved_at": "2025-09-08T15:32:47.805450",
+    "file_counter": 587
+  },
+  "additional_metrics": {
+    "total_analyses": 28,
+    "cases": {
+      "nom": 7,
+      "acc": 4,
+      "gen": 4,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 7,
+      "adj": 4,
+      "conj": 2,
+      "part": 2,
+      "prep": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.3333333333333335,
+    "debug_tags": [
+      "Sąd:subst:sg:nom.acc:m3",
+      "wyjątkowy:adj:sg:acc:m3:pos",
+      "wyjątkowy:adj:sg:nom.voc:m1.m2.m3:pos",
+      "lub:conj",
+      "lub:impt:sg:sec:imperf",
+      "tryb:subst:sg:nom.acc:m3",
+      "tryb:subst:pl:gen:f",
+      "tryb:impt:sg:sec:imperf",
+      "doraźny:adj:sg:acc:m3:pos",
+      "doraźny:adj:sg:nom.voc:m1.m2.m3:pos"
+    ],
+    "coords_count": 22
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6797
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0228,
+    "quantum_words": 9,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.321771,
+    "formula": "0.725 × 0.668 × 0.665 = 0.322"
+  },
+  "sentence_number": 587,
+  "total_sentences": 805
+}

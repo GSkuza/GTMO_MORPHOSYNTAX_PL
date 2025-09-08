@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:42.388483",
+  "content": {
+    "text": "O zatrzymaniu\nniezwłocznie powiadamia się Marszałka Sejmu, który może nakazać natychmiastowe\nzwolnienie zatrzymanego.",
+    "length": 117,
+    "word_count": 13
+  },
+  "coordinates": {
+    "determination": 0.726492,
+    "stability": 0.624216,
+    "entropy": 0.423821
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:42.388483",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 352,
+    "saved_at": "2025-09-08T15:32:42.388800",
+    "file_counter": 352
+  },
+  "additional_metrics": {
+    "total_analyses": 32,
+    "cases": {
+      "acc": 6,
+      "loc": 2,
+      "dat": 2,
+      "gen": 6,
+      "nom": 6
+    },
+    "pos": {
+      "prep": 2,
+      "subst": 7,
+      "adv": 1,
+      "part": 2,
+      "interp": 2,
+      "adj": 8
+    },
+    "ambiguity": 2.4615384615384617,
+    "debug_tags": [
+      "O:interj",
+      "O:prep:acc",
+      "O:prep:loc",
+      "zatrzymaniu:subst:sg:dat:n:ncol",
+      "zatrzymaniu:subst:sg:loc:n:ncol",
+      "zatrzymaniu:ger:sg:dat.loc:n:perf:aff",
+      "niezwłocznie:adv:pos",
+      "powiadamia:fin:sg:ter:imperf",
+      "się:part",
+      "Marszałka:subst:sg:gen.acc:m1"
+    ],
+    "coords_count": 22
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6507
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0815,
+    "quantum_words": 8,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.273959,
+    "formula": "0.736 × 0.629 × 0.591 = 0.274"
+  },
+  "sentence_number": 352,
+  "total_sentences": 805
+}

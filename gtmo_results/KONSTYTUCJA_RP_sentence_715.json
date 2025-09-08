@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:50.337086",
+  "content": {
+    "text": "Orzeczenie Trybunału Konstytucyjnego wchodzi w życie z dniem\nogłoszenia, jednak Trybunał Konstytucyjny może określić inny termin utraty mocy\nobowiązującej aktu normatywnego.",
+    "length": 173,
+    "word_count": 21
+  },
+  "coordinates": {
+    "determination": 0.701356,
+    "stability": 0.626356,
+    "entropy": 0.437517
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:50.337086",
+    "sequence_number": 715,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 49,
+    "cases": {
+      "nom": 12,
+      "gen": 13,
+      "acc": 5,
+      "loc": 3,
+      "voc": 2,
+      "dat": 2
+    },
+    "pos": {
+      "subst": 19,
+      "adj": 11,
+      "prep": 4,
+      "part": 3,
+      "interp": 2,
+      "conj": 1
+    },
+    "ambiguity": 2.3333333333333335,
+    "debug_tags": [
+      "Orzeczenie:ger:sg:nom.acc:n:perf:aff",
+      "Orzeczenie:subst:sg:nom.acc.voc:n:ncol",
+      "Trybunału:subst:sg:gen:m3",
+      "Konstytucyjnego:adj:sg:acc:m1.m2:pos",
+      "Konstytucyjnego:adj:sg:gen:m1.m2.m3.n:pos",
+      "wchodzi:fin:sg:ter:imperf",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "życie:subst:sg:nom.acc.voc:n:ncol",
+      "życie:subst:sg:loc:n:ncol"
+    ],
+    "coords_count": 40
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6372
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=40, cases={'nom': 12, 'gen': 13, 'acc': 5, 'loc': 3, 'voc': 2, 'dat': 2}, pos={'subst': 19, 'adj': 11, 'prep': 4, 'part': 3, 'interp': 2, 'conj': 1}",
+    "  MORPH_COORDS: [0.738, 0.698, 0.346]",
+    "  MORPH_TAGS: ['Orzeczenie:ger:sg:nom.acc:n:perf:aff', 'Orzeczenie:subst:sg:nom.acc.voc:n:ncol', 'Trybunału:subst:sg:gen:m3', 'Konstytucyjnego:adj:sg:acc:m1.m2:pos', 'Konstytucyjnego:adj:sg:gen:m1.m2.m3.n:pos', 'wchodzi:fin:sg:ter:imperf', 'w:prep:acc:nwok', 'w:prep:loc:nwok', 'życie:subst:sg:nom.acc.voc:n:ncol', 'życie:subst:sg:loc:n:ncol']",
+    "  SYNTAX_COORDS: [0.640, 0.455, 0.624]",
+    "  FINAL: D=0.711, S=0.631, E=0.423"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.8519,
+    "quantum_words": 16,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

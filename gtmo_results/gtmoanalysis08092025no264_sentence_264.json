@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:40.301462",
+  "content": {
+    "text": "Każdy jest obowiązany do dbałości o stan środowiska i ponosi\nodpowiedzialność za spowodowane przez siebie jego pogorszenie.",
+    "length": 123,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.711132,
+    "stability": 0.62756,
+    "entropy": 0.428931
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:40.301462",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 264,
+    "saved_at": "2025-09-08T15:32:40.301876",
+    "file_counter": 264
+  },
+  "additional_metrics": {
+    "total_analyses": 45,
+    "cases": {
+      "acc": 9,
+      "nom": 14,
+      "voc": 2,
+      "gen": 8,
+      "dat": 1,
+      "loc": 1
+    },
+    "pos": {
+      "adj": 4,
+      "subst": 14,
+      "prep": 7,
+      "part": 2,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.6470588235294117,
+    "debug_tags": [
+      "Każdy:adj:sg:acc:m3:pos",
+      "Każdy:adj:sg:nom.voc:m1.m2.m3:pos",
+      "jest:fin:sg:ter:imperf",
+      "obowiązany:ppas:sg:acc:m3:perf:aff",
+      "obowiązany:ppas:sg:nom.voc:m1.m2.m3:perf:aff",
+      "obowiązany:subst:sg:nom:m1",
+      "obowiązany:subst:sg:voc:m1",
+      "obowiązany:adj:sg:acc:m3:pos",
+      "obowiązany:adj:sg:nom.voc:m1.m2.m3:pos",
+      "do:prep:gen"
+    ],
+    "coords_count": 31
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.644
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.7509,
+    "quantum_words": 14,
+    "entanglements": 4,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.267341,
+    "formula": "0.721 × 0.633 × 0.586 = 0.267"
+  },
+  "sentence_number": 264,
+  "total_sentences": 805
+}

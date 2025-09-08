@@ -1,0 +1,83 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:46.795363",
+  "content": {
+    "text": "Kompetencje Naczelnego\nDowódcy Sił Zbrojnych i zasady jego podległości konstytucyjnym organom\nRzeczypospolitej Polskiej określa ustawa.",
+    "length": 135,
+    "word_count": 15
+  },
+  "coordinates": {
+    "determination": 0.702366,
+    "stability": 0.630335,
+    "entropy": 0.42222
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:46.795363",
+    "sequence_number": 524,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 41,
+    "cases": {
+      "nom": 5,
+      "acc": 3,
+      "gen": 13,
+      "dat": 10,
+      "loc": 3,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 22,
+      "adj": 11,
+      "part": 1,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.7333333333333334,
+    "debug_tags": [
+      "Kompetencje:subst:pl:nom.acc.voc:f",
+      "Naczelnego:adj:sg:acc:m1.m2:pos",
+      "Naczelnego:adj:sg:gen:m1.m2.m3.n:pos",
+      "Naczelnego:subst:sg:gen.acc:m1",
+      "Dowódcy:subst:sg:gen:m1",
+      "Dowódcy:subst:sg:dat.loc:m1",
+      "Dowódcy:subst:pl:nom.voc:m1",
+      "Sił:subst:pl:gen:f",
+      "Zbrojnych:adj:pl:acc:m1:pos",
+      "Zbrojnych:adj:pl:gen:m1.m2.m3.f.n:pos"
+    ],
+    "coords_count": 30
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6434
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=30, cases={'nom': 5, 'acc': 3, 'gen': 13, 'dat': 10, 'loc': 3, 'voc': 1}, pos={'subst': 22, 'adj': 11, 'part': 1, 'conj': 1, 'interp': 1}",
+    "  MORPH_COORDS: [0.735, 0.703, 0.343]",
+    "  MORPH_TAGS: ['Kompetencje:subst:pl:nom.acc.voc:f', 'Naczelnego:adj:sg:acc:m1.m2:pos', 'Naczelnego:adj:sg:gen:m1.m2.m3.n:pos', 'Naczelnego:subst:sg:gen.acc:m1', 'Dowódcy:subst:sg:gen:m1', 'Dowódcy:subst:sg:dat.loc:m1', 'Dowódcy:subst:pl:nom.voc:m1', 'Sił:subst:pl:gen:f', 'Zbrojnych:adj:pl:acc:m1:pos', 'Zbrojnych:adj:pl:gen:m1.m2.m3.f.n:pos']",
+    "  SYNTAX_COORDS: [0.650, 0.453, 0.582]",
+    "  FINAL: D=0.712, S=0.635, E=0.407"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9095,
+    "quantum_words": 13,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

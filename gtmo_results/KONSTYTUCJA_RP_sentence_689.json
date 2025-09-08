@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:49.918838",
+  "content": {
+    "text": "Sędzia\nnie może być zatrzymany lub aresztowany, z wyjątkiem ujęcia go na gorącym\nuczynku przestępstwa, jeżeli jego zatrzymanie jest niezbędne do zapewnienia\nprawidłowego toku postępowania.",
+    "length": 188,
+    "word_count": 25
+  },
+  "coordinates": {
+    "determination": 0.70846,
+    "stability": 0.641039,
+    "entropy": 0.429464
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:49.918838",
+    "sequence_number": 689,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 79,
+    "cases": {
+      "nom": 21,
+      "acc": 12,
+      "gen": 18,
+      "voc": 4,
+      "loc": 4,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 25,
+      "conj": 2,
+      "part": 3,
+      "adj": 13,
+      "interp": 3,
+      "prep": 5
+    },
+    "ambiguity": 3.16,
+    "debug_tags": [
+      "Sędzia:subst:sg:nom:f",
+      "Sędzia:subst:sg:nom:m1",
+      "nie:conj",
+      "nie:interj",
+      "nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "nie:part",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf"
+    ],
+    "coords_count": 49
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6469
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=49, cases={'nom': 21, 'acc': 12, 'gen': 18, 'voc': 4, 'loc': 4, 'dat': 1}, pos={'subst': 25, 'conj': 2, 'part': 3, 'adj': 13, 'interp': 3, 'prep': 5}",
+    "  MORPH_COORDS: [0.744, 0.711, 0.333]",
+    "  MORPH_TAGS: ['Sędzia:subst:sg:nom:f', 'Sędzia:subst:sg:nom:m1', 'nie:conj', 'nie:interj', 'nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep', 'nie:ppron3:sg:acc:n:ter:akc.nakc:praep', 'nie:part', 'może:interj', 'może:part', 'może:fin:sg:ter:imperf']",
+    "  SYNTAX_COORDS: [0.642, 0.454, 0.654]",
+    "  FINAL: D=0.718, S=0.646, E=0.414"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.0717,
+    "quantum_words": 20,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:45.816039",
+  "content": {
+    "text": "W sprawach o szczególnym znaczeniu dla państwa może być\nprzeprowadzone referendum ogólnokrajowe.",
+    "length": 96,
+    "word_count": 12
+  },
+  "coordinates": {
+    "determination": 0.707625,
+    "stability": 0.659471,
+    "entropy": 0.35806
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:45.816039",
+    "sequence_number": 471,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 34,
+    "cases": {
+      "acc": 4,
+      "loc": 6,
+      "dat": 4,
+      "gen": 6,
+      "nom": 6
+    },
+    "pos": {
+      "prep": 5,
+      "subst": 12,
+      "adj": 7,
+      "part": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.8333333333333335,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "sprawach:subst:pl:loc:f",
+      "o:interj",
+      "o:prep:acc",
+      "o:prep:loc",
+      "szczególnym:adj:pl:dat:m1.m2.m3.f.n:pos",
+      "szczególnym:adj:sg:inst:m1.m2.m3.n:pos",
+      "szczególnym:adj:sg:loc:m1.m2.m3.n:pos",
+      "znaczeniu:ger:sg:dat.loc:n:imperf:aff"
+    ],
+    "coords_count": 23
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6735
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=23, cases={'acc': 4, 'loc': 6, 'dat': 4, 'gen': 6, 'nom': 6}, pos={'prep': 5, 'subst': 12, 'adj': 7, 'part': 1, 'interp': 1}",
+    "  MORPH_COORDS: [0.751, 0.732, 0.308]",
+    "  MORPH_TAGS: ['W:prep:acc:nwok', 'W:prep:loc:nwok', 'sprawach:subst:pl:loc:f', 'o:interj', 'o:prep:acc', 'o:prep:loc', 'szczególnym:adj:pl:dat:m1.m2.m3.f.n:pos', 'szczególnym:adj:sg:inst:m1.m2.m3.n:pos', 'szczególnym:adj:sg:loc:m1.m2.m3.n:pos', 'znaczeniu:ger:sg:dat.loc:n:imperf:aff']",
+    "  SYNTAX_COORDS: [0.614, 0.455, 0.453]",
+    "  FINAL: D=0.718, S=0.664, E=0.343"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.158,
+    "quantum_words": 11,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

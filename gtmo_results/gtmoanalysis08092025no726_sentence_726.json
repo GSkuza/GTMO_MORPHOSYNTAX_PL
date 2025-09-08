@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:51.365772",
+  "content": {
+    "text": "Sejm rozpatruje przedłożone sprawozdanie i po zapoznaniu się z opinią\nNajwyższej Izby Kontroli podejmuje, w ciągu 90 dni od dnia przedłożenia Sejmowi\nsprawozdania, uchwałę o udzieleniu lub o odmowie udzielenia Radzie Ministrów\nabsolutorium.",
+    "length": 240,
+    "word_count": 33
+  },
+  "coordinates": {
+    "determination": 0.700636,
+    "stability": 0.58752,
+    "entropy": 0.517268
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:51.365772",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 726,
+    "saved_at": "2025-09-08T15:32:51.366398",
+    "file_counter": 726
+  },
+  "additional_metrics": {
+    "total_analyses": 81,
+    "cases": {
+      "nom": 19,
+      "acc": 5,
+      "dat": 10,
+      "loc": 9,
+      "gen": 18,
+      "voc": 2
+    },
+    "pos": {
+      "subst": 37,
+      "part": 3,
+      "conj": 2,
+      "prep": 12,
+      "adj": 4,
+      "interp": 3
+    },
+    "ambiguity": 2.4545454545454546,
+    "debug_tags": [
+      "Sejm:subst:sg:nom.acc:m3",
+      "rozpatruje:fin:sg:ter:imperf",
+      "przedłożone:ppas:pl:nom.acc.voc:m2.m3.f.n:perf:aff",
+      "przedłożone:ppas:sg:nom.acc.voc:n:perf:aff",
+      "sprawozdanie:subst:sg:nom.acc.voc:n:ncol",
+      "sprawozdanie:ger:sg:nom.acc:n:perf:aff",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "po:prep:acc"
+    ],
+    "coords_count": 55
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.6013
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9414,
+    "quantum_words": 25,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.209578,
+    "formula": "0.711 × 0.593 × 0.498 = 0.210"
+  },
+  "sentence_number": 726,
+  "total_sentences": 805
+}

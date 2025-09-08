@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:40.968185",
+  "content": {
+    "text": "Nie mogą one\nstanowić podstawy decyzji wobec obywateli, osób prawnych oraz innych\npodmiotów.",
+    "length": 92,
+    "word_count": 13
+  },
+  "coordinates": {
+    "determination": 0.660674,
+    "stability": 0.596008,
+    "entropy": 0.484594
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:40.968185",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 296,
+    "saved_at": "2025-09-08T15:32:40.969067",
+    "file_counter": 296
+  },
+  "additional_metrics": {
+    "total_analyses": 32,
+    "cases": {
+      "acc": 5,
+      "nom": 3,
+      "gen": 10,
+      "dat": 1,
+      "loc": 3
+    },
+    "pos": {
+      "conj": 2,
+      "part": 1,
+      "adj": 8,
+      "subst": 10,
+      "prep": 1,
+      "adv": 2,
+      "interp": 2
+    },
+    "ambiguity": 2.4615384615384617,
+    "debug_tags": [
+      "Nie:conj",
+      "Nie:interj",
+      "Nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "Nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "Nie:part",
+      "mogą:fin:pl:ter:imperf",
+      "one:adj:pl:acc:m2.m3.f.n:pos",
+      "one:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "one:ppron3:pl:nom:m2.m3.f.n:ter:akc.nakc:praep.npraep",
+      "stanowić:inf:imperf"
+    ],
+    "coords_count": 27
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.5977
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0547,
+    "quantum_words": 10,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.213797,
+    "formula": "0.671 × 0.601 × 0.530 = 0.214"
+  },
+  "sentence_number": 296,
+  "total_sentences": 805
+}

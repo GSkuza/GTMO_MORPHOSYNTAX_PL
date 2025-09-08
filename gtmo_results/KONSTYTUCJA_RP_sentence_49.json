@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:37.674883",
+  "content": {
+    "text": "Małżeństwo jako związek kobiety i mężczyzny, rodzina,\nmacierzyństwo i rodzicielstwo znajdują się pod ochroną i opieką Rzeczypospolitej\nPolskiej.",
+    "length": 144,
+    "word_count": 18
+  },
+  "coordinates": {
+    "determination": 0.699115,
+    "stability": 0.674829,
+    "entropy": 0.406905
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:37.674883",
+    "sequence_number": 49,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 42,
+    "cases": {
+      "nom": 8,
+      "voc": 1,
+      "gen": 6,
+      "acc": 1,
+      "dat": 3,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 16,
+      "conj": 4,
+      "prep": 3,
+      "part": 4,
+      "interp": 3,
+      "adj": 3
+    },
+    "ambiguity": 2.3333333333333335,
+    "debug_tags": [
+      "Małżeństwo:subst:sg:nom.acc.voc:n:ncol",
+      "jako:conj",
+      "jako:frag",
+      "jako:comp",
+      "jako:prep:nom",
+      "jako:subst:sg:voc:f",
+      "związek:subst:sg:nom.acc:m3",
+      "związek:subst:pl:gen:f",
+      "kobiety:subst:sg:gen:f",
+      "kobiety:subst:pl:nom.acc.voc:f"
+    ],
+    "coords_count": 32
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.66
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=32, cases={'nom': 8, 'voc': 1, 'gen': 6, 'acc': 1, 'dat': 3, 'loc': 1}, pos={'subst': 16, 'conj': 4, 'prep': 3, 'part': 4, 'interp': 3, 'adj': 3}",
+    "  MORPH_COORDS: [0.775, 0.763, 0.276]",
+    "  MORPH_TAGS: ['Małżeństwo:subst:sg:nom.acc.voc:n:ncol', 'jako:conj', 'jako:frag', 'jako:comp', 'jako:prep:nom', 'jako:subst:sg:voc:f', 'związek:subst:sg:nom.acc:m3', 'związek:subst:pl:gen:f', 'kobiety:subst:sg:gen:f', 'kobiety:subst:pl:nom.acc.voc:f']",
+    "  SYNTAX_COORDS: [0.530, 0.455, 0.705]",
+    "  FINAL: D=0.709, S=0.680, E=0.392"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.8977,
+    "quantum_words": 11,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:39.405638",
+  "content": {
+    "text": "Bieg przedawnienia w stosunku do przestępstw, nie ściganych z\nprzyczyn politycznych, popełnionych przez funkcjonariuszy publicznych lub na ich\nzlecenie, ulega zawieszeniu do czasu ustania tych przyczyn.",
+    "length": 202,
+    "word_count": 26
+  },
+  "coordinates": {
+    "determination": 0.684776,
+    "stability": 0.619471,
+    "entropy": 0.457633
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:39.405638",
+    "sequence_number": 136,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 68,
+    "cases": {
+      "nom": 12,
+      "gen": 21,
+      "acc": 11,
+      "loc": 8,
+      "voc": 1,
+      "dat": 2
+    },
+    "pos": {
+      "subst": 21,
+      "prep": 9,
+      "interp": 4,
+      "conj": 2,
+      "part": 2,
+      "adj": 9
+    },
+    "ambiguity": 2.6153846153846154,
+    "debug_tags": [
+      "Bieg:subst:sg:nom.acc:m3",
+      "Bieg:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Bieg:subst:sg:nom:m1",
+      "Bieg:subst:pl:gen:f",
+      "przedawnienia:subst:sg:gen:n:ncol",
+      "przedawnienia:subst:pl:nom.acc.voc:n:ncol",
+      "przedawnienia:ger:pl:nom.acc:n:perf:aff",
+      "przedawnienia:ger:sg:gen:n:perf:aff",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok"
+    ],
+    "coords_count": 47
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6225
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=47, cases={'nom': 12, 'gen': 21, 'acc': 11, 'loc': 8, 'voc': 1, 'dat': 2}, pos={'subst': 21, 'prep': 9, 'interp': 4, 'conj': 2, 'part': 2, 'adj': 9}",
+    "  MORPH_COORDS: [0.735, 0.689, 0.360]",
+    "  MORPH_TAGS: ['Bieg:subst:sg:nom.acc:m3', 'Bieg:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f', 'Bieg:subst:sg:nom:m1', 'Bieg:subst:pl:gen:f', 'przedawnienia:subst:sg:gen:n:ncol', 'przedawnienia:subst:pl:nom.acc.voc:n:ncol', 'przedawnienia:ger:pl:nom.acc:n:perf:aff', 'przedawnienia:ger:sg:gen:n:perf:aff', 'w:prep:acc:nwok', 'w:prep:loc:nwok']",
+    "  SYNTAX_COORDS: [0.588, 0.454, 0.663]",
+    "  FINAL: D=0.695, S=0.624, E=0.443"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.8677,
+    "quantum_words": 22,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:47.671101",
+  "content": {
+    "text": "Prezes i wiceprezes Rady Ministrów mogą pełnić także funkcję ministra.",
+    "length": 70,
+    "word_count": 10
+  },
+  "coordinates": {
+    "determination": 0.749884,
+    "stability": 0.632599,
+    "entropy": 0.41199
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:47.671101",
+    "sequence_number": 564,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 19,
+    "cases": {
+      "nom": 7,
+      "gen": 4,
+      "acc": 1
+    },
+    "pos": {
+      "subst": 11,
+      "part": 2,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 1.9,
+    "debug_tags": [
+      "Prezes:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezes:subst:sg:nom:m1",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "wiceprezes:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "wiceprezes:subst:sg:nom:m1",
+      "Rady:depr:pl:nom.acc.voc:m2",
+      "Rady:subst:pl:nom.acc.voc:m3",
+      "Rady:subst:sg:gen:f"
+    ],
+    "coords_count": 16
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6661
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=16, cases={'nom': 7, 'gen': 4, 'acc': 1}, pos={'subst': 11, 'part': 2, 'conj': 1, 'interp': 1}",
+    "  MORPH_COORDS: [0.743, 0.704, 0.350]",
+    "  MORPH_TAGS: ['Prezes:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f', 'Prezes:subst:sg:nom:m1', 'i:interj', 'i:part', 'i:conj', 'wiceprezes:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f', 'wiceprezes:subst:sg:nom:m1', 'Rady:depr:pl:nom.acc.voc:m2', 'Rady:subst:pl:nom.acc.voc:m3', 'Rady:subst:sg:gen:f']",
+    "  SYNTAX_COORDS: [0.809, 0.450, 0.530]",
+    "  FINAL: D=0.760, S=0.638, E=0.397"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9894,
+    "quantum_words": 6,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

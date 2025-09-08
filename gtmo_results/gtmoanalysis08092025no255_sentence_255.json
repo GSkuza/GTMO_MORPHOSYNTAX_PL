@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:40.175947",
+  "content": {
+    "text": "Praw określonych w art. 65 ust. 4 i 5, art. 66, art. 69, art. 71 i art. 74–\n76 można dochodzić w granicach określonych w ustawie.",
+    "length": 129,
+    "word_count": 26
+  },
+  "coordinates": {
+    "determination": 0.642849,
+    "stability": 0.628959,
+    "entropy": 0.461619
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:40.175947",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 255,
+    "saved_at": "2025-09-08T15:32:40.176448",
+    "file_counter": 255
+  },
+  "additional_metrics": {
+    "total_analyses": 57,
+    "cases": {
+      "gen": 6,
+      "acc": 7,
+      "loc": 6,
+      "nom": 1,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 4,
+      "adj": 7,
+      "prep": 6,
+      "interp": 11,
+      "part": 2,
+      "conj": 2
+    },
+    "ambiguity": 2.1923076923076925,
+    "debug_tags": [
+      "Praw:adjc",
+      "Praw:subst:pl:gen:n:ncol",
+      "Praw:impt:sg:sec:imperf",
+      "określonych:adj:pl:acc:m1:pos",
+      "określonych:adj:pl:gen:m1.m2.m3.f.n:pos",
+      "określonych:adj:pl:loc:m1.m2.m3.f.n:pos",
+      "określonych:ppas:pl:acc:m1:perf:aff",
+      "określonych:ppas:pl:gen.loc:m1.m2.m3.f.n:perf:aff",
+      "określonych:adj:pl:acc:m1:pos",
+      "określonych:adj:pl:gen:m1.m2.m3.f.n:pos"
+    ],
+    "coords_count": 19
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6073
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8823,
+    "quantum_words": 7,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.229033,
+    "formula": "0.653 × 0.634 × 0.553 = 0.229"
+  },
+  "sentence_number": 255,
+  "total_sentences": 805
+}

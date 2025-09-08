@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:35.373860",
+  "content": {
+    "text": "Partie polityczne zrzeszają na zasadach dobrowolności i równości\nobywateli polskich w celu wpływania metodami demokratycznymi na kształtowanie\npolityki państwa.",
+    "length": 160,
+    "word_count": 19
+  },
+  "coordinates": {
+    "determination": 0.717667,
+    "stability": 0.632094,
+    "entropy": 0.414911
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:35.373860",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 27,
+    "saved_at": "2025-09-08T15:32:35.374502",
+    "file_counter": 27
+  },
+  "additional_metrics": {
+    "total_analyses": 53,
+    "cases": {
+      "nom": 12,
+      "acc": 6,
+      "loc": 8,
+      "gen": 13,
+      "dat": 2,
+      "voc": 3
+    },
+    "pos": {
+      "subst": 27,
+      "adj": 8,
+      "prep": 6,
+      "part": 1,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.789473684210526,
+    "debug_tags": [
+      "Partie:subst:pl:nom.acc.voc:f",
+      "Partie:subst:pl:nom.acc.voc:f",
+      "polityczne:adj:pl:acc:m2.m3.f.n:pos",
+      "polityczne:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "polityczne:adj:sg:acc:n:pos",
+      "polityczne:adj:sg:nom.voc:n:pos",
+      "polityczne:depr:pl:nom.acc.voc:m2",
+      "zrzeszają:fin:pl:ter:imperf",
+      "na:prep:acc",
+      "na:prep:loc"
+    ],
+    "coords_count": 32
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6522
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9073,
+    "quantum_words": 14,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.278196,
+    "formula": "0.728 × 0.637 × 0.600 = 0.278"
+  },
+  "sentence_number": 27,
+  "total_sentences": 805
+}

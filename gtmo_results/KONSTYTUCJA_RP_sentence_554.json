@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:47.478664",
+  "content": {
+    "text": "Z dniem podjęcia uchwały o postawieniu Prezydenta Rzeczypospolitej w\nstan oskarżenia przed Trybunałem Stanu sprawowanie urzędu przez Prezydenta\nRzeczypospolitej ulega zawieszeniu.",
+    "length": 179,
+    "word_count": 21
+  },
+  "coordinates": {
+    "determination": 0.771769,
+    "stability": 0.640702,
+    "entropy": 0.388106
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:47.478664",
+    "sequence_number": 554,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 40,
+    "cases": {
+      "gen": 12,
+      "nom": 8,
+      "acc": 4,
+      "loc": 3,
+      "dat": 5
+    },
+    "pos": {
+      "prep": 9,
+      "part": 1,
+      "subst": 20,
+      "interp": 1
+    },
+    "ambiguity": 1.9047619047619047,
+    "debug_tags": [
+      "Z:prep:gen:nwok",
+      "Z:prep:inst:nwok",
+      "Z:part:nwok",
+      "dniem:subst:sg:inst:m3",
+      "podjęcia:ger:pl:nom.acc:n:perf:aff",
+      "podjęcia:ger:sg:gen:n:perf:aff",
+      "podjęcia:subst:sg:gen:n:ncol",
+      "podjęcia:subst:pl:nom.acc.voc:n:ncol",
+      "uchwały:subst:sg:gen:f",
+      "uchwały:subst:pl:nom.acc.voc:f"
+    ],
+    "coords_count": 35
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6845
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=35, cases={'gen': 12, 'nom': 8, 'acc': 4, 'loc': 3, 'dat': 5}, pos={'prep': 9, 'part': 1, 'subst': 20, 'interp': 1}",
+    "  MORPH_COORDS: [0.761, 0.717, 0.326]",
+    "  MORPH_TAGS: ['Z:prep:gen:nwok', 'Z:prep:inst:nwok', 'Z:part:nwok', 'dniem:subst:sg:inst:m3', 'podjęcia:ger:pl:nom.acc:n:perf:aff', 'podjęcia:ger:sg:gen:n:perf:aff', 'podjęcia:subst:sg:gen:n:ncol', 'podjęcia:subst:pl:nom.acc.voc:n:ncol', 'uchwały:subst:sg:gen:f', 'uchwały:subst:pl:nom.acc.voc:f']",
+    "  SYNTAX_COORDS: [0.838, 0.451, 0.501]",
+    "  FINAL: D=0.782, S=0.646, E=0.373"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9124,
+    "quantum_words": 16,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

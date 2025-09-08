@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:37.452815",
+  "content": {
+    "text": "Rzeczpospolita Polska zapewnia wolność prasy i innych środków\nspołecznego przekazu.\n\nArt. 15. 1.",
+    "length": 96,
+    "word_count": 13
+  },
+  "coordinates": {
+    "determination": 0.727315,
+    "stability": 0.644011,
+    "entropy": 0.409775
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:37.452815",
+    "sequence_number": 37,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 36,
+    "cases": {
+      "nom": 9,
+      "voc": 3,
+      "gen": 8,
+      "acc": 3,
+      "loc": 2
+    },
+    "pos": {
+      "subst": 18,
+      "adj": 6,
+      "part": 1,
+      "conj": 1,
+      "interp": 4
+    },
+    "ambiguity": 2.769230769230769,
+    "debug_tags": [
+      "Rzeczpospolita:subst:sg:nom:f",
+      "Rzeczpospolita:subst:sg:voc:f",
+      "Rzeczpospolita:subst:sg:nom:f",
+      "Rzeczpospolita:subst:sg:voc:f",
+      "Polska:adj:sg:nom.voc:f:pos",
+      "Polska:adjp:gen",
+      "Polska:subst:sg:nom:f",
+      "Polska:subst:sg:voc:f",
+      "Polska:subst:sg:nom:f",
+      "zapewnia:fin:sg:ter:imperf"
+    ],
+    "coords_count": 23
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6612
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=23, cases={'nom': 9, 'voc': 3, 'gen': 8, 'acc': 3, 'loc': 2}, pos={'subst': 18, 'adj': 6, 'part': 1, 'conj': 1, 'interp': 4}",
+    "  MORPH_COORDS: [0.744, 0.709, 0.340]",
+    "  MORPH_TAGS: ['Rzeczpospolita:subst:sg:nom:f', 'Rzeczpospolita:subst:sg:voc:f', 'Rzeczpospolita:subst:sg:nom:f', 'Rzeczpospolita:subst:sg:voc:f', 'Polska:adj:sg:nom.voc:f:pos', 'Polska:adjp:gen', 'Polska:subst:sg:nom:f', 'Polska:subst:sg:voc:f', 'Polska:subst:sg:nom:f', 'zapewnia:fin:sg:ter:imperf']",
+    "  SYNTAX_COORDS: [0.716, 0.455, 0.574]",
+    "  FINAL: D=0.737, S=0.649, E=0.395"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.2537,
+    "quantum_words": 9,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

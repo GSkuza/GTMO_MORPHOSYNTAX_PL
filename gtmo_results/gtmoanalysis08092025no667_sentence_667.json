@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:49.958162",
+  "content": {
+    "text": "Najwyższa Izba Kontroli kontroluje działalność organów\nadministracji rządowej, Narodowego Banku Polskiego, państwowych osób prawnych\ni innych państwowych jednostek organizacyjnych z punktu widzenia legalności,\ngospodarności, celowości i rzetelności.",
+    "length": 249,
+    "word_count": 27
+  },
+  "coordinates": {
+    "determination": 0.641434,
+    "stability": 0.585101,
+    "entropy": 0.511056
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:49.958162",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 667,
+    "saved_at": "2025-09-08T15:32:49.958803",
+    "file_counter": 667
+  },
+  "additional_metrics": {
+    "total_analyses": 92,
+    "cases": {
+      "nom": 11,
+      "gen": 35,
+      "dat": 7,
+      "acc": 8,
+      "loc": 10,
+      "voc": 7
+    },
+    "pos": {
+      "adj": 23,
+      "subst": 52,
+      "interp": 5,
+      "part": 3,
+      "conj": 2,
+      "prep": 2
+    },
+    "ambiguity": 3.4074074074074074,
+    "debug_tags": [
+      "Najwyższa:adj:sg:nom.voc:f:sup",
+      "Izba:subst:sg:nom:f",
+      "Izba:subst:sg:nom:f",
+      "Izba:subst:sg:nom:m1",
+      "Kontroli:subst:sg:gen:f",
+      "Kontroli:subst:sg:dat.loc:f",
+      "Kontroli:subst:pl:gen:f",
+      "kontroluje:fin:sg:ter:imperf",
+      "działalność:subst:sg:nom:f",
+      "działalność:subst:sg:acc:f"
+    ],
+    "coords_count": 53
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5788
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0066,
+    "quantum_words": 23,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.193722,
+    "formula": "0.651 × 0.590 × 0.504 = 0.194"
+  },
+  "sentence_number": 667,
+  "total_sentences": 805
+}

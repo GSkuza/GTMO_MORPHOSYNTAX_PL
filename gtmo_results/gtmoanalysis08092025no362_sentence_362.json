@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:42.649494",
+  "content": {
+    "text": "Sejm wybiera ze swojego grona Marszałka Sejmu i\nwicemarszałków.",
+    "length": 63,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.677639,
+    "stability": 0.569543,
+    "entropy": 0.493129
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:42.649494",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 362,
+    "saved_at": "2025-09-08T15:32:42.649848",
+    "file_counter": 362
+  },
+  "additional_metrics": {
+    "total_analyses": 18,
+    "cases": {
+      "nom": 2,
+      "gen": 8,
+      "acc": 1
+    },
+    "pos": {
+      "subst": 8,
+      "prep": 2,
+      "part": 2,
+      "adj": 2,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.0,
+    "debug_tags": [
+      "Sejm:subst:sg:nom.acc:m3",
+      "wybiera:fin:sg:ter:imperf",
+      "ze:prep:gen:wok",
+      "ze:prep:inst:wok",
+      "ze:part:wok",
+      "swojego:adj:sg:acc:m1.m2:pos",
+      "swojego:adj:sg:gen:m1.m2.m3.n:pos",
+      "swojego:subst:sg:gen:n:ncol",
+      "grona:subst:sg:gen:n:ncol",
+      "grona:subst:pl:nom.acc.voc:n:ncol"
+    ],
+    "coords_count": 19
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.594
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8368,
+    "quantum_words": 7,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.20618,
+    "formula": "0.688 × 0.575 × 0.522 = 0.206"
+  },
+  "sentence_number": 362,
+  "total_sentences": 805
+}

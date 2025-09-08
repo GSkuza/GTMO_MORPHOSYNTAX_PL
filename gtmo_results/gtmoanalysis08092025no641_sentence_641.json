@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:49.358067",
+  "content": {
+    "text": "Prezesa i Wiceprezesa Trybunału Konstytucyjnego powołuje Prezydent\nRzeczypospolitej spośród kandydatów przedstawionych przez Zgromadzenie Ogólne\nSędziów Trybunału Konstytucyjnego.",
+    "length": 179,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.681024,
+    "stability": 0.580609,
+    "entropy": 0.485968
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:49.358067",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 641,
+    "saved_at": "2025-09-08T15:32:49.358746",
+    "file_counter": 641
+  },
+  "additional_metrics": {
+    "total_analyses": 29,
+    "cases": {
+      "gen": 11,
+      "acc": 6,
+      "nom": 6,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 11,
+      "part": 1,
+      "conj": 1,
+      "adj": 8,
+      "prep": 2,
+      "interp": 1
+    },
+    "ambiguity": 1.7058823529411764,
+    "debug_tags": [
+      "Prezesa:subst:sg:gen.acc:m1",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "Wiceprezesa:subst:sg:gen.acc:m1",
+      "Trybunału:subst:sg:gen:m3",
+      "Trybunału:subst:sg:gen:m3",
+      "Konstytucyjnego:adj:sg:acc:m1.m2:pos",
+      "Konstytucyjnego:adj:sg:gen:m1.m2.m3.n:pos",
+      "Konstytucyjnego:adj:sg:acc:m1.m2:pos"
+    ],
+    "coords_count": 28
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6008
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0906,
+    "quantum_words": 13,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.214083,
+    "formula": "0.691 × 0.586 × 0.529 = 0.214"
+  },
+  "sentence_number": 641,
+  "total_sentences": 805
+}

@@ -1,0 +1,77 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:37.903658",
+  "content": {
+    "text": "Cenzura prewencyjna środków społecznego przekazu oraz koncesjonowanie\nprasy są zakazane.",
+    "length": 88,
+    "word_count": 10
+  },
+  "coordinates": {
+    "determination": 0.717496,
+    "stability": 0.640236,
+    "entropy": 0.383304
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:37.903658",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 153,
+    "saved_at": "2025-09-08T15:32:37.904049",
+    "file_counter": 153
+  },
+  "additional_metrics": {
+    "total_analyses": 20,
+    "cases": {
+      "nom": 8,
+      "gen": 5,
+      "acc": 3
+    },
+    "pos": {
+      "subst": 6,
+      "adj": 7,
+      "adv": 1,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.0,
+    "debug_tags": [
+      "Cenzura:subst:sg:nom:f",
+      "prewencyjna:adj:sg:nom.voc:f:pos",
+      "środków:subst:pl:gen:n:pt",
+      "środków:subst:pl:gen:m3",
+      "społecznego:adj:sg:acc:m1.m2:pos",
+      "społecznego:adj:sg:gen:m1.m2.m3.n:pos",
+      "przekazu:subst:sg:gen:m3",
+      "oraz:adv",
+      "oraz:conj",
+      "koncesjonowanie:ger:sg:nom.acc:n:imperf.perf:aff"
+    ],
+    "coords_count": 18
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6641
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8652,
+    "quantum_words": 8,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.296522,
+    "formula": "0.727 × 0.645 × 0.632 = 0.297"
+  },
+  "sentence_number": 153,
+  "total_sentences": 805
+}

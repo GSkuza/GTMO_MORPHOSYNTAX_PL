@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:41.337840",
+  "content": {
+    "text": "Sejm i Senat są wybierane na czteroletnie kadencje.",
+    "length": 51,
+    "word_count": 8
+  },
+  "coordinates": {
+    "determination": 0.820027,
+    "stability": 0.698122,
+    "entropy": 0.250412
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:41.337840",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 309,
+    "saved_at": "2025-09-08T15:32:41.338255",
+    "file_counter": 309
+  },
+  "additional_metrics": {
+    "total_analyses": 21,
+    "cases": {
+      "nom": 9,
+      "acc": 5,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 3,
+      "part": 1,
+      "conj": 1,
+      "adj": 8,
+      "prep": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.625,
+    "debug_tags": [
+      "Sejm:subst:sg:nom.acc:m3",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "Senat:subst:sg:nom.acc:m3",
+      "są:fin:pl:ter:imperf",
+      "wybierane:adj:pl:acc:m2.m3.f.n:pos",
+      "wybierane:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "wybierane:adj:sg:acc:n:pos",
+      "wybierane:adj:sg:nom.voc:n:pos"
+    ],
+    "coords_count": 15
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "low",
+    "overall": "moderate_quality",
+    "overall_score": 0.7623
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.5741,
+    "quantum_words": 6,
+    "entanglements": 2,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.446221,
+    "formula": "0.830 × 0.703 × 0.765 = 0.446"
+  },
+  "sentence_number": 309,
+  "total_sentences": 805
+}

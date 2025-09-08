@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:48.611908",
+  "content": {
+    "text": "Prezydent Rzeczypospolitej odwołuje ministra, któremu Sejm wyraził wotum\nnieufności większością głosów ustawowej liczby posłów.",
+    "length": 127,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.785472,
+    "stability": 0.640603,
+    "entropy": 0.36998
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:48.611908",
+    "sequence_number": 615,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 29,
+    "cases": {
+      "nom": 6,
+      "gen": 9,
+      "dat": 5,
+      "loc": 2,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 21,
+      "interp": 2,
+      "adj": 4
+    },
+    "ambiguity": 2.0714285714285716,
+    "debug_tags": [
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "odwołuje:fin:sg:ter:imperf",
+      "ministra:subst:sg:gen.acc:m1",
+      ",:interp",
+      "któremu:adj:sg:dat:m1.m2.m3.n:pos",
+      "Sejm:subst:sg:nom.acc:m3",
+      "wyraził:praet:sg:m1.m2.m3:perf"
+    ],
+    "coords_count": 25
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6954
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=25, cases={'nom': 6, 'gen': 9, 'dat': 5, 'loc': 2, 'voc': 1}, pos={'subst': 21, 'interp': 2, 'adj': 4}",
+    "  MORPH_COORDS: [0.759, 0.713, 0.335]",
+    "  MORPH_TAGS: ['Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f', 'Prezydent:subst:sg:nom:m1', 'Rzeczypospolitej:subst:sg:gen:f', 'Rzeczypospolitej:subst:sg:dat.loc:f', 'odwołuje:fin:sg:ter:imperf', 'ministra:subst:sg:gen.acc:m1', ',:interp', 'któremu:adj:sg:dat:m1.m2.m3.n:pos', 'Sejm:subst:sg:nom.acc:m3', 'wyraził:praet:sg:m1.m2.m3:perf']",
+    "  SYNTAX_COORDS: [0.900, 0.453, 0.411]",
+    "  FINAL: D=0.795, S=0.646, E=0.355"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.0077,
+    "quantum_words": 11,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

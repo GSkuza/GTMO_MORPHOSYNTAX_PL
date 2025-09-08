@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:35.617213",
+  "content": {
+    "text": "Samorządy te nie mogą naruszać wolności wykonywania zawodu ani ograniczać\nwolności podejmowania działalności gospodarczej.",
+    "length": 122,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.757842,
+    "stability": 0.617963,
+    "entropy": 0.449745
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:35.617213",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 41,
+    "saved_at": "2025-09-08T15:32:35.617963",
+    "file_counter": 41
+  },
+  "additional_metrics": {
+    "total_analyses": 39,
+    "cases": {
+      "nom": 8,
+      "voc": 4,
+      "acc": 3,
+      "gen": 10,
+      "dat": 4,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 18,
+      "adj": 5,
+      "conj": 2,
+      "part": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.7857142857142856,
+    "debug_tags": [
+      "Samorządy:subst:pl:nom.acc.voc:m3",
+      "te:ppron12:sg:voc:m1.m2.m3.f.n:sec",
+      "te:adj:pl:acc:m2.m3.f.n:pos",
+      "te:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "te:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "nie:conj",
+      "nie:interj",
+      "nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "nie:part"
+    ],
+    "coords_count": 21
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6536
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0035,
+    "quantum_words": 9,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.270382,
+    "formula": "0.768 × 0.623 × 0.565 = 0.270"
+  },
+  "sentence_number": 41,
+  "total_sentences": 805
+}

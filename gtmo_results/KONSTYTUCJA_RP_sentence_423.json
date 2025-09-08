@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:44.700920",
+  "content": {
+    "text": "Jeżeli wymaga tego dobro państwa,\nSejm może bezwzględną większością głosów w obecności co najmniej połowy\nustawowej liczby posłów uchwalić tajność obrad.\n\nArt. 114. 1.",
+    "length": 167,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.705535,
+    "stability": 0.622175,
+    "entropy": 0.426834
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:44.700920",
+    "sequence_number": 423,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 60,
+    "cases": {
+      "acc": 6,
+      "gen": 16,
+      "nom": 13,
+      "loc": 2,
+      "dat": 2,
+      "voc": 1
+    },
+    "pos": {
+      "adj": 7,
+      "subst": 28,
+      "interp": 5,
+      "part": 3,
+      "prep": 5,
+      "num": 2,
+      "adv": 1
+    },
+    "ambiguity": 2.5,
+    "debug_tags": [
+      "Jeżeli:comp",
+      "wymaga:fin:sg:ter:imperf",
+      "tego:adj:sg:acc:m1.m2:pos",
+      "tego:adj:sg:gen:m1.m2.m3.n:pos",
+      "tego:subst:sg:gen:n:ncol",
+      "dobro:subst:sg:nom.acc.voc:n:ncol",
+      "państwa:subst:pl:gen.acc:m1:pt",
+      "państwa:subst:sg:gen:n:ncol",
+      "państwa:subst:pl:nom.acc.voc:n:ncol",
+      ",:interp"
+    ],
+    "coords_count": 43
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6408
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=43, cases={'acc': 6, 'gen': 16, 'nom': 13, 'loc': 2, 'dat': 2, 'voc': 1}, pos={'adj': 7, 'subst': 28, 'interp': 5, 'part': 3, 'prep': 5, 'num': 2, 'adv': 1}",
+    "  MORPH_COORDS: [0.749, 0.700, 0.346]",
+    "  MORPH_TAGS: ['Jeżeli:comp', 'wymaga:fin:sg:ter:imperf', 'tego:adj:sg:acc:m1.m2:pos', 'tego:adj:sg:gen:m1.m2.m3.n:pos', 'tego:subst:sg:gen:n:ncol', 'dobro:subst:sg:nom.acc.voc:n:ncol', 'państwa:subst:pl:gen.acc:m1:pt', 'państwa:subst:sg:gen:n:ncol', 'państwa:subst:pl:nom.acc.voc:n:ncol', ',:interp']",
+    "  SYNTAX_COORDS: [0.634, 0.451, 0.571]",
+    "  FINAL: D=0.716, S=0.627, E=0.412"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.6729,
+    "quantum_words": 17,
+    "entanglements": 1,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

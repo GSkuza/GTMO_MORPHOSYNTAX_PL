@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:43.329753",
+  "content": {
+    "text": "Senat w ciągu 30 dni od dnia przekazania ustawy może ją przyjąć bez zmian,\nuchwalić poprawki albo uchwalić odrzucenie jej w całości.",
+    "length": 132,
+    "word_count": 22
+  },
+  "coordinates": {
+    "determination": 0.759445,
+    "stability": 0.604981,
+    "entropy": 0.4765
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:43.329753",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 395,
+    "saved_at": "2025-09-08T15:32:43.330268",
+    "file_counter": 395
+  },
+  "additional_metrics": {
+    "total_analyses": 46,
+    "cases": {
+      "nom": 9,
+      "acc": 3,
+      "loc": 3,
+      "gen": 14,
+      "voc": 3,
+      "dat": 2
+    },
+    "pos": {
+      "subst": 22,
+      "prep": 6,
+      "part": 2,
+      "interp": 2,
+      "conj": 1
+    },
+    "ambiguity": 2.090909090909091,
+    "debug_tags": [
+      "Senat:subst:sg:nom.acc:m3",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "ciągu:subst:sg:gen:m3",
+      "ciągu:subst:sg:loc:m3",
+      "ciągu:subst:sg:voc:m3",
+      "30:dig",
+      "dni:subst:pl:nom.acc.voc:m3"
+    ],
+    "coords_count": 36
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6423
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.234,
+    "quantum_words": 16,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.252743,
+    "formula": "0.769 × 0.610 × 0.539 = 0.253"
+  },
+  "sentence_number": 395,
+  "total_sentences": 805
+}

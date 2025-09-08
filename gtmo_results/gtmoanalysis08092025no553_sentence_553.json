@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:47.077178",
+  "content": {
+    "text": "Samorząd terytorialny wykonuje zadania publiczne nie zastrzeżone\nprzez Konstytucję lub ustawy dla organów innych władz publicznych.\n\nArt. 164. 1. Podstawową jednostką samorządu terytorialnego jest gmina.",
+    "length": 203,
+    "word_count": 25
+  },
+  "coordinates": {
+    "determination": 0.722735,
+    "stability": 0.629479,
+    "entropy": 0.428389
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:47.077178",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 553,
+    "saved_at": "2025-09-08T15:32:47.077645",
+    "file_counter": 553
+  },
+  "additional_metrics": {
+    "total_analyses": 57,
+    "cases": {
+      "nom": 12,
+      "acc": 11,
+      "gen": 14,
+      "loc": 3
+    },
+    "pos": {
+      "subst": 18,
+      "adj": 16,
+      "conj": 2,
+      "part": 1,
+      "prep": 2,
+      "interp": 5
+    },
+    "ambiguity": 2.28,
+    "debug_tags": [
+      "Samorząd:subst:sg:nom.acc:m3",
+      "terytorialny:adj:sg:acc:m3:pos",
+      "terytorialny:adj:sg:nom.voc:m1.m2.m3:pos",
+      "wykonuje:fin:sg:ter:imperf",
+      "zadania:subst:sg:gen:n:ncol",
+      "zadania:subst:pl:nom.acc.voc:n:ncol",
+      "zadania:ger:pl:nom.acc:n:perf:aff",
+      "zadania:ger:sg:gen:n:perf:aff",
+      "publiczne:adj:pl:acc:m2.m3.f.n:pos",
+      "publiczne:adj:pl:nom.voc:m2.m3.f.n:pos"
+    ],
+    "coords_count": 42
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6494
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9985,
+    "quantum_words": 19,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.272719,
+    "formula": "0.733 × 0.634 × 0.587 = 0.273"
+  },
+  "sentence_number": 553,
+  "total_sentences": 805
+}

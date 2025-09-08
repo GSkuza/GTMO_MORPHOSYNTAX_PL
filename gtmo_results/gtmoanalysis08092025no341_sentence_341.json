@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:42.056444",
+  "content": {
+    "text": "Ślubowanie może być złożone z dodaniem zdania „Tak mi dopomóż Bóg”.",
+    "length": 67,
+    "word_count": 11
+  },
+  "coordinates": {
+    "determination": 0.773142,
+    "stability": 0.613706,
+    "entropy": 0.436625
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:42.056444",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 341,
+    "saved_at": "2025-09-08T15:32:42.057706",
+    "file_counter": 341
+  },
+  "additional_metrics": {
+    "total_analyses": 36,
+    "cases": {
+      "nom": 11,
+      "gen": 6,
+      "acc": 2,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 9,
+      "part": 3,
+      "adj": 4,
+      "prep": 2,
+      "interp": 3,
+      "adv": 1
+    },
+    "ambiguity": 3.272727272727273,
+    "debug_tags": [
+      "Ślubowanie:ger:sg:nom.acc:n:imperf.perf:aff",
+      "Ślubowanie:subst:sg:nom.acc.voc:n:ncol",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "być:subst:pl:gen:n:ncol",
+      "być:ger:pl:gen:n:imperf:aff",
+      "być:inf:imperf",
+      "złożone:adj:pl:acc:m2.m3.f.n:pos",
+      "złożone:adj:pl:nom.voc:m2.m3.f.n:pos"
+    ],
+    "coords_count": 25
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6624
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8097,
+    "quantum_words": 8,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.280243,
+    "formula": "0.783 × 0.619 × 0.578 = 0.280"
+  },
+  "sentence_number": 341,
+  "total_sentences": 805
+}

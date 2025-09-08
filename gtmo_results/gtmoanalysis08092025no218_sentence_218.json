@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:39.254336",
+  "content": {
+    "text": "Nauka w szkołach publicznych jest bezpłatna.",
+    "length": 44,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.802266,
+    "stability": 0.76568,
+    "entropy": 0.24458
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:39.254336",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 218,
+    "saved_at": "2025-09-08T15:32:39.254788",
+    "file_counter": 218
+  },
+  "additional_metrics": {
+    "total_analyses": 12,
+    "cases": {
+      "nom": 4,
+      "acc": 2,
+      "loc": 3,
+      "gen": 1
+    },
+    "pos": {
+      "subst": 4,
+      "prep": 2,
+      "adj": 4,
+      "interp": 1
+    },
+    "ambiguity": 2.0,
+    "debug_tags": [
+      "Nauka:subst:sg:nom:f",
+      "Nauka:subst:sg:nom:f",
+      "Nauka:subst:sg:nom:m1",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "szkołach:subst:pl:loc:f",
+      "publicznych:adj:pl:acc:m1:pos",
+      "publicznych:adj:pl:gen:m1.m2.m3.f.n:pos",
+      "publicznych:adj:pl:loc:m1.m2.m3.f.n:pos",
+      "jest:fin:sg:ter:imperf"
+    ],
+    "coords_count": 11
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "high",
+    "entropy": "low",
+    "overall": "high_quality",
+    "overall_score": 0.7772
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9369,
+    "quantum_words": 5,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "topology": {
+    "attractor": "Ψᴷ",
+    "distance": 0.1363141438642112,
+    "in_basin": true
+  },
+  "quantum_tensor": {
+    "value": 0.481336,
+    "formula": "0.812 × 0.770 × 0.770 = 0.481"
+  },
+  "sentence_number": 218,
+  "total_sentences": 805
+}

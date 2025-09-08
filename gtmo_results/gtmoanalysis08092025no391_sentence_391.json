@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:43.239656",
+  "content": {
+    "text": "Wnioskodawca może wycofać projekt ustawy w toku postępowania\nustawodawczego w Sejmie do czasu zakończenia drugiego czytania projektu.",
+    "length": 133,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.756348,
+    "stability": 0.616062,
+    "entropy": 0.428434
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:43.239656",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 391,
+    "saved_at": "2025-09-08T15:32:43.240100",
+    "file_counter": 391
+  },
+  "additional_metrics": {
+    "total_analyses": 41,
+    "cases": {
+      "nom": 10,
+      "gen": 16,
+      "acc": 4,
+      "loc": 4,
+      "voc": 2
+    },
+    "pos": {
+      "subst": 21,
+      "part": 1,
+      "prep": 5,
+      "adj": 4,
+      "interp": 1
+    },
+    "ambiguity": 2.411764705882353,
+    "debug_tags": [
+      "Wnioskodawca:subst:sg:nom:m1",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "wycofać:inf:perf",
+      "projekt:subst:sg:nom.acc:m3",
+      "ustawy:subst:sg:gen:f",
+      "ustawy:subst:pl:nom.acc.voc:f",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok"
+    ],
+    "coords_count": 32
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6588
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.1621,
+    "quantum_words": 14,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.279176,
+    "formula": "0.766 × 0.621 × 0.587 = 0.279"
+  },
+  "sentence_number": 391,
+  "total_sentences": 805
+}

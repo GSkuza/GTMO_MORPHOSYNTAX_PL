@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:52.605285",
+  "content": {
+    "text": "Rozporządzenia, o których mowa w ust. 1, mają charakter źródeł\npowszechnie obowiązującego prawa.",
+    "length": 96,
+    "word_count": 13
+  },
+  "coordinates": {
+    "determination": 0.734532,
+    "stability": 0.669926,
+    "entropy": 0.364544
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:52.605285",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 763,
+    "saved_at": "2025-09-08T15:32:52.605827",
+    "file_counter": 763
+  },
+  "additional_metrics": {
+    "total_analyses": 36,
+    "cases": {
+      "nom": 8,
+      "gen": 8,
+      "acc": 5,
+      "loc": 3,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 12,
+      "interp": 4,
+      "prep": 4,
+      "adj": 6,
+      "adv": 1
+    },
+    "ambiguity": 2.769230769230769,
+    "debug_tags": [
+      "Rozporządzenia:ger:pl:nom.acc:n:perf:aff",
+      "Rozporządzenia:ger:sg:gen:n:perf:aff",
+      "Rozporządzenia:subst:sg:gen:n:ncol",
+      "Rozporządzenia:subst:pl:nom.acc.voc:n:ncol",
+      ",:interp",
+      ",:interp",
+      "o:interj",
+      "o:prep:acc",
+      "o:prep:loc",
+      "których:adj:pl:acc:m1:pos"
+    ],
+    "coords_count": 27
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6854
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.1514,
+    "quantum_words": 11,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.326857,
+    "formula": "0.745 × 0.675 × 0.650 = 0.327"
+  },
+  "sentence_number": 763,
+  "total_sentences": 805
+}

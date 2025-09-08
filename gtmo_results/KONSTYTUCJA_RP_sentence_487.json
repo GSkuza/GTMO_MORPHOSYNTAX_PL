@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:46.075766",
+  "content": {
+    "text": "Jeżeli żaden z kandydatów nie uzyska\nwymaganej większości, czternastego dnia po pierwszym głosowaniu przeprowadza\nsię ponowne głosowanie.",
+    "length": 137,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.699372,
+    "stability": 0.612394,
+    "entropy": 0.419179
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:46.075766",
+    "sequence_number": 487,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 53,
+    "cases": {
+      "acc": 7,
+      "nom": 6,
+      "gen": 9,
+      "dat": 9,
+      "voc": 1,
+      "loc": 6
+    },
+    "pos": {
+      "adj": 11,
+      "prep": 5,
+      "part": 3,
+      "subst": 22,
+      "conj": 1,
+      "interp": 2
+    },
+    "ambiguity": 3.1176470588235294,
+    "debug_tags": [
+      "Jeżeli:comp",
+      "żaden:adj:sg:acc:m3:pos",
+      "żaden:adj:sg:nom.voc:m1.m2.m3:pos",
+      "z:prep:gen:nwok",
+      "z:prep:inst:nwok",
+      "z:part:nwok",
+      "kandydatów:subst:pl:gen.acc:m1",
+      "nie:conj",
+      "nie:interj",
+      "nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep"
+    ],
+    "coords_count": 32
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6377
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=32, cases={'acc': 7, 'nom': 6, 'gen': 9, 'dat': 9, 'voc': 1, 'loc': 6}, pos={'adj': 11, 'prep': 5, 'part': 3, 'subst': 22, 'conj': 1, 'interp': 2}",
+    "  MORPH_COORDS: [0.717, 0.671, 0.374]",
+    "  MORPH_TAGS: ['Jeżeli:comp', 'żaden:adj:sg:acc:m3:pos', 'żaden:adj:sg:nom.voc:m1.m2.m3:pos', 'z:prep:gen:nwok', 'z:prep:inst:nwok', 'z:part:nwok', 'kandydatów:subst:pl:gen.acc:m1', 'nie:conj', 'nie:interj', 'nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep']",
+    "  SYNTAX_COORDS: [0.686, 0.456, 0.494]",
+    "  FINAL: D=0.709, S=0.617, E=0.404"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.0996,
+    "quantum_words": 13,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

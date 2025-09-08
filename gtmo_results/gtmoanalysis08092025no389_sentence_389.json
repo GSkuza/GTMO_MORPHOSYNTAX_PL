@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:43.195992",
+  "content": {
+    "text": "Prawo wnoszenia poprawek do projektu ustawy w czasie rozpatrywania go\nprzez Sejm przysługuje wnioskodawcy projektu, posłom i Radzie Ministrów.",
+    "length": 142,
+    "word_count": 19
+  },
+  "coordinates": {
+    "determination": 0.743228,
+    "stability": 0.621004,
+    "entropy": 0.428526
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:43.195992",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 389,
+    "saved_at": "2025-09-08T15:32:43.196696",
+    "file_counter": 389
+  },
+  "additional_metrics": {
+    "total_analyses": 42,
+    "cases": {
+      "nom": 11,
+      "gen": 11,
+      "acc": 3,
+      "loc": 4,
+      "voc": 2,
+      "dat": 4
+    },
+    "pos": {
+      "subst": 23,
+      "adv": 1,
+      "prep": 4,
+      "interp": 2,
+      "part": 1,
+      "conj": 1
+    },
+    "ambiguity": 2.210526315789474,
+    "debug_tags": [
+      "Prawo:subst:sg:nom.acc.voc:n:ncol",
+      "Prawo:adv:pos",
+      "wnoszenia:ger:pl:nom.acc:n:imperf:aff",
+      "wnoszenia:ger:sg:gen:n:imperf:aff",
+      "poprawek:subst:pl:gen:f",
+      "do:prep:gen",
+      "do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "projektu:subst:sg:gen:m3",
+      "projektu:subst:sg:gen:m3",
+      "ustawy:subst:sg:gen:f"
+    ],
+    "coords_count": 36
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.655
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0724,
+    "quantum_words": 16,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.276536,
+    "formula": "0.753 × 0.626 × 0.586 = 0.277"
+  },
+  "sentence_number": 389,
+  "total_sentences": 805
+}

@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:43.427436",
+  "content": {
+    "text": "Przed podpisaniem ustawy Prezydent Rzeczypospolitej może wystąpić do\nTrybunału Konstytucyjnego z wnioskiem w sprawie zgodności ustawy z\nKonstytucją.",
+    "length": 148,
+    "word_count": 18
+  },
+  "coordinates": {
+    "determination": 0.681649,
+    "stability": 0.594029,
+    "entropy": 0.440448
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:43.427436",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 401,
+    "saved_at": "2025-09-08T15:32:43.427783",
+    "file_counter": 401
+  },
+  "additional_metrics": {
+    "total_analyses": 37,
+    "cases": {
+      "acc": 3,
+      "gen": 10,
+      "nom": 6,
+      "dat": 3,
+      "loc": 1,
+      "voc": 1
+    },
+    "pos": {
+      "prep": 9,
+      "subst": 18,
+      "part": 3,
+      "adj": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.0555555555555554,
+    "debug_tags": [
+      "Przed:prep:acc:nwok",
+      "Przed:prep:inst:nwok",
+      "podpisaniem:ger:sg:inst:n:perf:aff",
+      "ustawy:subst:sg:gen:f",
+      "ustawy:subst:pl:nom.acc.voc:f",
+      "ustawy:subst:sg:gen:f",
+      "ustawy:subst:pl:nom.acc.voc:f",
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f"
+    ],
+    "coords_count": 28
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6187
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.7354,
+    "quantum_words": 11,
+    "entanglements": 1,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.238047,
+    "formula": "0.692 × 0.599 × 0.575 = 0.238"
+  },
+  "sentence_number": 401,
+  "total_sentences": 805
+}

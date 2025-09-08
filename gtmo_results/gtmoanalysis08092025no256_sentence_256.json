@@ -1,0 +1,69 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:40.189793",
+  "content": {
+    "text": "Obowiązki\nArt. 82.",
+    "length": 18,
+    "word_count": 3
+  },
+  "coordinates": {
+    "determination": 0.72352,
+    "stability": 0.698704,
+    "entropy": 0.220456
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:40.189793",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 256,
+    "saved_at": "2025-09-08T15:32:40.190198",
+    "file_counter": 256
+  },
+  "additional_metrics": {
+    "total_analyses": 7,
+    "cases": {
+      "nom": 3
+    },
+    "pos": {
+      "subst": 3,
+      "interp": 2
+    },
+    "ambiguity": 2.3333333333333335,
+    "debug_tags": [
+      "Obowiązki:subst:pl:nom.acc.voc:m3",
+      "Art:brev:pun",
+      "Art:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Art:subst:sg:nom:m1",
+      ".:interp",
+      ".:interp",
+      "82:dig"
+    ],
+    "coords_count": 5
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "low",
+    "overall": "moderate_quality",
+    "overall_score": 0.7329
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.98,
+    "quantum_words": 2,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.410128,
+    "formula": "0.734 × 0.704 × 0.795 = 0.410"
+  },
+  "sentence_number": 256,
+  "total_sentences": 805
+}

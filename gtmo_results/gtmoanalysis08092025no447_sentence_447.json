@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:44.611377",
+  "content": {
+    "text": "W razie uznania przejściowej niemożności sprawowania urzędu przez Prezydenta\nRzeczypospolitej Trybunał Konstytucyjny powierza Marszałkowi Sejmu\ntymczasowe wykonywanie obowiązków Prezydenta Rzeczypospolitej.",
+    "length": 206,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.781436,
+    "stability": 0.62137,
+    "entropy": 0.398656
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:44.611377",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 447,
+    "saved_at": "2025-09-08T15:32:44.611800",
+    "file_counter": 447
+  },
+  "additional_metrics": {
+    "total_analyses": 45,
+    "cases": {
+      "acc": 5,
+      "loc": 4,
+      "voc": 3,
+      "gen": 14,
+      "nom": 11,
+      "dat": 6
+    },
+    "pos": {
+      "prep": 3,
+      "subst": 25,
+      "adj": 10,
+      "interp": 1
+    },
+    "ambiguity": 2.25,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "razie:subst:sg:loc:m3",
+      "razie:subst:sg:voc:m3",
+      "razie:subst:sg:loc:m3",
+      "razie:subst:sg:voc:m3",
+      "uznania:subst:sg:gen:n:ncol",
+      "uznania:subst:pl:nom.acc.voc:n:ncol",
+      "uznania:ger:pl:nom.acc:n:perf:aff",
+      "uznania:ger:sg:gen:n:perf:aff"
+    ],
+    "coords_count": 35
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6794
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.1429,
+    "quantum_words": 17,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.305541,
+    "formula": "0.791 × 0.626 × 0.616 = 0.306"
+  },
+  "sentence_number": 447,
+  "total_sentences": 805
+}

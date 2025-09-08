@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:36.899168",
+  "content": {
+    "text": "Każdy pozbawiony wolności nie na podstawie wyroku sądowego ma prawo\nodwołania się do sądu w celu niezwłocznego ustalenia legalności tego pozbawienia.",
+    "length": 149,
+    "word_count": 21
+  },
+  "coordinates": {
+    "determination": 0.726525,
+    "stability": 0.608165,
+    "entropy": 0.425721
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:36.899168",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 99,
+    "saved_at": "2025-09-08T15:32:36.900290",
+    "file_counter": 99
+  },
+  "additional_metrics": {
+    "total_analyses": 59,
+    "cases": {
+      "acc": 9,
+      "nom": 13,
+      "gen": 18,
+      "dat": 3,
+      "voc": 4,
+      "loc": 4
+    },
+    "pos": {
+      "adj": 9,
+      "subst": 27,
+      "conj": 1,
+      "part": 2,
+      "prep": 5,
+      "adv": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.8095238095238093,
+    "debug_tags": [
+      "Każdy:adj:sg:acc:m3:pos",
+      "Każdy:adj:sg:nom.voc:m1.m2.m3:pos",
+      "pozbawiony:ppas:sg:acc:m3:perf:aff",
+      "pozbawiony:ppas:sg:nom.voc:m1.m2.m3:perf:aff",
+      "wolności:subst:sg:gen:f",
+      "wolności:subst:sg:dat.loc:f",
+      "wolności:subst:sg:voc:f",
+      "wolności:subst:pl:nom.acc.voc:f",
+      "wolności:subst:pl:gen:f",
+      "nie:conj"
+    ],
+    "coords_count": 45
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6453
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8698,
+    "quantum_words": 20,
+    "entanglements": 7,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.266125,
+    "formula": "0.737 × 0.613 × 0.589 = 0.266"
+  },
+  "sentence_number": 99,
+  "total_sentences": 805
+}

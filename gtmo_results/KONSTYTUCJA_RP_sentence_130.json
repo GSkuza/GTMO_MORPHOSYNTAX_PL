@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:39.294925",
+  "content": {
+    "text": "Każdy, przeciw komu prowadzone jest postępowanie karne, ma prawo do\nobrony we wszystkich stadiach postępowania.",
+    "length": 111,
+    "word_count": 15
+  },
+  "coordinates": {
+    "determination": 0.759253,
+    "stability": 0.689542,
+    "entropy": 0.303396
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:39.294925",
+    "sequence_number": 130,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 44,
+    "cases": {
+      "acc": 8,
+      "nom": 17,
+      "dat": 2,
+      "gen": 6,
+      "loc": 4
+    },
+    "pos": {
+      "adj": 14,
+      "interp": 3,
+      "prep": 4,
+      "subst": 14,
+      "adv": 1
+    },
+    "ambiguity": 2.933333333333333,
+    "debug_tags": [
+      "Każdy:adj:sg:acc:m3:pos",
+      "Każdy:adj:sg:nom.voc:m1.m2.m3:pos",
+      ",:interp",
+      ",:interp",
+      "przeciw:impt:sg:sec:imperf",
+      "przeciw:prep:dat",
+      "komu:subst:sg:dat:m1",
+      "prowadzone:adj:pl:acc:m2.m3.f.n:pos",
+      "prowadzone:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "prowadzone:adj:sg:acc:n:pos"
+    ],
+    "coords_count": 34
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7195
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=34, cases={'acc': 8, 'nom': 17, 'dat': 2, 'gen': 6, 'loc': 4}, pos={'adj': 14, 'interp': 3, 'prep': 4, 'subst': 14, 'adv': 1}",
+    "  MORPH_COORDS: [0.789, 0.783, 0.242]",
+    "  MORPH_TAGS: ['Każdy:adj:sg:acc:m3:pos', 'Każdy:adj:sg:nom.voc:m1.m2.m3:pos', ',:interp', ',:interp', 'przeciw:impt:sg:sec:imperf', 'przeciw:prep:dat', 'komu:subst:sg:dat:m1', 'prowadzone:adj:pl:acc:m2.m3.f.n:pos', 'prowadzone:adj:pl:nom.voc:m2.m3.f.n:pos', 'prowadzone:adj:sg:acc:n:pos']",
+    "  SYNTAX_COORDS: [0.716, 0.456, 0.413]",
+    "  FINAL: D=0.769, S=0.695, E=0.288"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9056,
+    "quantum_words": 14,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

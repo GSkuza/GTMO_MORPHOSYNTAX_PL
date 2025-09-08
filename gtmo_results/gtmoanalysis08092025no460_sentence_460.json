@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:44.887994",
+  "content": {
+    "text": "Czas trwania kadencji, tryb i warunki\nodwołania przed jej upływem określa ustawa.",
+    "length": 81,
+    "word_count": 12
+  },
+  "coordinates": {
+    "determination": 0.781214,
+    "stability": 0.679397,
+    "entropy": 0.357659
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:44.887994",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 460,
+    "saved_at": "2025-09-08T15:32:44.888598",
+    "file_counter": 460
+  },
+  "additional_metrics": {
+    "total_analyses": 31,
+    "cases": {
+      "nom": 9,
+      "gen": 8,
+      "dat": 2,
+      "acc": 1
+    },
+    "pos": {
+      "subst": 14,
+      "interp": 2,
+      "part": 1,
+      "conj": 1,
+      "prep": 2
+    },
+    "ambiguity": 2.5833333333333335,
+    "debug_tags": [
+      "Czas:pred",
+      "Czas:subst:sg:nom.acc:m3",
+      "trwania:subst:sg:gen:n:ncol",
+      "trwania:subst:pl:nom.acc.voc:n:ncol",
+      "trwania:ger:pl:nom.acc:n:imperf:aff",
+      "trwania:ger:sg:gen:n:imperf:aff",
+      "kadencji:subst:sg:gen:f",
+      "kadencji:subst:sg:dat.loc:f",
+      "kadencji:subst:pl:gen:f",
+      ",:interp"
+    ],
+    "coords_count": 22
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.709
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0826,
+    "quantum_words": 9,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.355953,
+    "formula": "0.791 × 0.684 × 0.657 = 0.356"
+  },
+  "sentence_number": 460,
+  "total_sentences": 805
+}

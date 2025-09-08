@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:41.181439",
+  "content": {
+    "text": "Każdemu zapewnia się wolność wyboru i wykonywania zawodu\noraz wyboru miejsca pracy.",
+    "length": 83,
+    "word_count": 12
+  },
+  "coordinates": {
+    "determination": 0.713505,
+    "stability": 0.588043,
+    "entropy": 0.490301
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:41.181439",
+    "sequence_number": 229,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 20,
+    "cases": {
+      "dat": 2,
+      "nom": 3,
+      "acc": 1,
+      "gen": 6
+    },
+    "pos": {
+      "adj": 1,
+      "part": 2,
+      "subst": 9,
+      "conj": 2,
+      "adv": 1,
+      "interp": 1
+    },
+    "ambiguity": 1.6666666666666667,
+    "debug_tags": [
+      "Każdemu:adj:sg:dat:m1.m2.m3.n:pos",
+      "zapewnia:fin:sg:ter:imperf",
+      "się:part",
+      "wolność:subst:sg:nom:f",
+      "wolność:subst:sg:acc:f",
+      "wyboru:subst:sg:gen:m3",
+      "wyboru:subst:sg:gen:m3",
+      "i:interj",
+      "i:part",
+      "i:conj"
+    ],
+    "coords_count": 19
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6147
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=19, cases={'dat': 2, 'nom': 3, 'acc': 1, 'gen': 6}, pos={'adj': 1, 'part': 2, 'subst': 9, 'conj': 2, 'adv': 1, 'interp': 1}",
+    "  MORPH_COORDS: [0.689, 0.639, 0.417]",
+    "  MORPH_TAGS: ['Każdemu:adj:sg:dat:m1.m2.m3.n:pos', 'zapewnia:fin:sg:ter:imperf', 'się:part', 'wolność:subst:sg:nom:f', 'wolność:subst:sg:acc:f', 'wyboru:subst:sg:gen:m3', 'wyboru:subst:sg:gen:m3', 'i:interj', 'i:part', 'i:conj']",
+    "  SYNTAX_COORDS: [0.829, 0.453, 0.653]",
+    "  FINAL: D=0.724, S=0.593, E=0.475"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.1392,
+    "quantum_words": 7,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

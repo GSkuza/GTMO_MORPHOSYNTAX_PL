@@ -1,0 +1,72 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:45.458688",
+  "content": {
+    "text": "Przepis art. 131 stosuje się odpowiednio.",
+    "length": 41,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.727362,
+    "stability": 0.648136,
+    "entropy": 0.37452
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:45.458688",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 490,
+    "saved_at": "2025-09-08T15:32:45.459651",
+    "file_counter": 490
+  },
+  "additional_metrics": {
+    "total_analyses": 8,
+    "cases": {
+      "nom": 1
+    },
+    "pos": {
+      "subst": 1,
+      "interp": 2,
+      "part": 1,
+      "adv": 1
+    },
+    "ambiguity": 1.3333333333333333,
+    "debug_tags": [
+      "Przepis:subst:sg:nom.acc:m3",
+      "art:brev:pun",
+      ".:interp",
+      ".:interp",
+      "131:dig",
+      "stosuje:fin:sg:ter:imperf",
+      "się:part",
+      "odpowiednio:adv:pos"
+    ],
+    "coords_count": 5
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.673
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.98,
+    "quantum_words": 1,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.308454,
+    "formula": "0.737 × 0.653 × 0.640 = 0.308"
+  },
+  "sentence_number": 490,
+  "total_sentences": 805
+}

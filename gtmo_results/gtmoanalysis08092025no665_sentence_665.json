@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:49.917978",
+  "content": {
+    "text": "Najwyższa Izba Kontroli działa na zasadach kolegialności.",
+    "length": 57,
+    "word_count": 7
+  },
+  "coordinates": {
+    "determination": 0.779685,
+    "stability": 0.699423,
+    "entropy": 0.267568
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:49.917978",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 665,
+    "saved_at": "2025-09-08T15:32:49.918546",
+    "file_counter": 665
+  },
+  "additional_metrics": {
+    "total_analyses": 21,
+    "cases": {
+      "nom": 6,
+      "gen": 5,
+      "dat": 2,
+      "acc": 1,
+      "loc": 2,
+      "voc": 1
+    },
+    "pos": {
+      "adj": 1,
+      "subst": 14,
+      "prep": 2,
+      "interp": 1
+    },
+    "ambiguity": 3.0,
+    "debug_tags": [
+      "Najwyższa:adj:sg:nom.voc:f:sup",
+      "Izba:subst:sg:nom:f",
+      "Izba:subst:sg:nom:f",
+      "Izba:subst:sg:nom:m1",
+      "Kontroli:subst:sg:gen:f",
+      "Kontroli:subst:sg:dat.loc:f",
+      "Kontroli:subst:pl:gen:f",
+      "działa:subst:sg:gen:n:ncol",
+      "działa:subst:pl:nom.acc.voc:n:ncol",
+      "działa:fin:sg:ter:imperf"
+    ],
+    "coords_count": 15
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "low",
+    "overall": "moderate_quality",
+    "overall_score": 0.7414
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.1784,
+    "quantum_words": 7,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.415776,
+    "formula": "0.790 × 0.704 × 0.747 = 0.416"
+  },
+  "sentence_number": 665,
+  "total_sentences": 805
+}

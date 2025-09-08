@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:39.954530",
+  "content": {
+    "text": "Każdy ma prawo do wynagrodzenia szkody, jaka została mu\nwyrządzona przez niezgodne z prawem działanie organu władzy publicznej.",
+    "length": 127,
+    "word_count": 18
+  },
+  "coordinates": {
+    "determination": 0.80587,
+    "stability": 0.617852,
+    "entropy": 0.397546
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:39.954530",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 248,
+    "saved_at": "2025-09-08T15:32:39.955059",
+    "file_counter": 248
+  },
+  "additional_metrics": {
+    "total_analyses": 42,
+    "cases": {
+      "acc": 4,
+      "nom": 14,
+      "gen": 10,
+      "dat": 4,
+      "loc": 1
+    },
+    "pos": {
+      "adj": 11,
+      "subst": 14,
+      "adv": 1,
+      "prep": 4,
+      "interp": 2,
+      "part": 1
+    },
+    "ambiguity": 2.3333333333333335,
+    "debug_tags": [
+      "Każdy:adj:sg:acc:m3:pos",
+      "Każdy:adj:sg:nom.voc:m1.m2.m3:pos",
+      "ma:adj:sg:nom.voc:f:pos",
+      "ma:fin:sg:ter:imperf",
+      "prawo:subst:sg:nom.acc.voc:n:ncol",
+      "prawo:adv:pos",
+      "do:prep:gen",
+      "do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "wynagrodzenia:subst:sg:gen:n:ncol",
+      "wynagrodzenia:subst:pl:nom.acc.voc:n:ncol"
+    ],
+    "coords_count": 37
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6884
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.707,
+    "quantum_words": 16,
+    "entanglements": 6,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.313769,
+    "formula": "0.816 × 0.623 × 0.617 = 0.314"
+  },
+  "sentence_number": 248,
+  "total_sentences": 805
+}

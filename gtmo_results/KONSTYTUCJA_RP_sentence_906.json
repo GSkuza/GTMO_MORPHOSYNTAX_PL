@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:53.789148",
+  "content": {
+    "text": "Umowy międzynarodowe ratyfikowane dotychczas przez\nRzeczpospolitą Polską na podstawie obowiązujących w czasie ich ratyfikacji\nprzepisów konstytucyjnych i ogłoszone w Dzienniku Ustaw uznaje się za umowy\nratyfikowane za uprzednią zgodą wyrażoną w ustawie i stosuje się do nich przepisy\nart. 91 Konstytucji, jeżeli z treści umowy międzynarodowej wynika, że dotyczą one\nkategorii spraw wymienionych w art. 89 ust. 1 Konstytucji.",
+    "length": 424,
+    "word_count": 59
+  },
+  "coordinates": {
+    "determination": 0.668219,
+    "stability": 0.619893,
+    "entropy": 0.462011
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:53.789148",
+    "sequence_number": 906,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 141,
+    "cases": {
+      "gen": 28,
+      "nom": 19,
+      "acc": 26,
+      "loc": 12,
+      "dat": 8,
+      "voc": 4
+    },
+    "pos": {
+      "subst": 45,
+      "adj": 25,
+      "adv": 1,
+      "prep": 20,
+      "part": 8,
+      "conj": 2,
+      "interp": 6
+    },
+    "ambiguity": 2.389830508474576,
+    "debug_tags": [
+      "Umowy:subst:sg:gen:f",
+      "Umowy:subst:pl:nom.acc.voc:f",
+      "Umowy:adj:sg:acc:m3:pos",
+      "Umowy:adj:sg:nom.voc:m1.m2.m3:pos",
+      "międzynarodowe:adj:pl:acc:m2.m3.f.n:pos",
+      "międzynarodowe:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "międzynarodowe:adj:sg:acc:n:pos",
+      "międzynarodowe:adj:sg:nom.voc:n:pos",
+      "ratyfikowane:ppas:pl:nom.acc.voc:m2.m3.f.n:imperf.perf:aff",
+      "ratyfikowane:ppas:sg:nom.acc.voc:n:imperf.perf:aff"
+    ],
+    "coords_count": 78
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6147
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=78, cases={'gen': 28, 'nom': 19, 'acc': 26, 'loc': 12, 'dat': 8, 'voc': 4}, pos={'subst': 45, 'adj': 25, 'adv': 1, 'prep': 20, 'part': 8, 'conj': 2, 'interp': 6}",
+    "  MORPH_COORDS: [0.732, 0.687, 0.355]",
+    "  MORPH_TAGS: ['Umowy:subst:sg:gen:f', 'Umowy:subst:pl:nom.acc.voc:f', 'Umowy:adj:sg:acc:m3:pos', 'Umowy:adj:sg:nom.voc:m1.m2.m3:pos', 'międzynarodowe:adj:pl:acc:m2.m3.f.n:pos', 'międzynarodowe:adj:pl:nom.voc:m2.m3.f.n:pos', 'międzynarodowe:adj:sg:acc:n:pos', 'międzynarodowe:adj:sg:nom.voc:n:pos', 'ratyfikowane:ppas:pl:nom.acc.voc:m2.m3.f.n:imperf.perf:aff', 'ratyfikowane:ppas:sg:nom.acc.voc:n:imperf.perf:aff']",
+    "  SYNTAX_COORDS: [0.529, 0.452, 0.702]",
+    "  FINAL: D=0.678, S=0.625, E=0.447"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9547,
+    "quantum_words": 35,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

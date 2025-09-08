@@ -1,0 +1,74 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:41.422895",
+  "content": {
+    "text": "Przepis ust. 5 stosuje się odpowiednio.",
+    "length": 39,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.71703,
+    "stability": 0.622411,
+    "entropy": 0.410366
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:41.422895",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 314,
+    "saved_at": "2025-09-08T15:32:41.423322",
+    "file_counter": 314
+  },
+  "additional_metrics": {
+    "total_analyses": 9,
+    "cases": {
+      "nom": 1,
+      "gen": 1
+    },
+    "pos": {
+      "subst": 2,
+      "interp": 2,
+      "part": 1,
+      "adv": 1
+    },
+    "ambiguity": 1.5,
+    "debug_tags": [
+      "Przepis:subst:sg:nom.acc:m3",
+      "ust:subst:pl:gen:n:pt",
+      "ust:brev:pun",
+      ".:interp",
+      ".:interp",
+      "5:dig",
+      "stosuje:fin:sg:ter:imperf",
+      "się:part",
+      "odpowiednio:adv:pos"
+    ],
+    "coords_count": 7
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6504
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.98,
+    "quantum_words": 2,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.275802,
+    "formula": "0.727 × 0.627 × 0.605 = 0.276"
+  },
+  "sentence_number": 314,
+  "total_sentences": 805
+}

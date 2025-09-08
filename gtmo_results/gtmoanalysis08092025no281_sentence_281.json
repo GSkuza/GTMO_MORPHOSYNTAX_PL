@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:40.719910",
+  "content": {
+    "text": "Rzeczpospolita Polska może na podstawie umowy międzynarodowej\nprzekazać organizacji międzynarodowej lub organowi międzynarodowemu\nkompetencje organów władzy państwowej w niektórych sprawach.",
+    "length": 190,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.703564,
+    "stability": 0.633453,
+    "entropy": 0.42277
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:40.719910",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 281,
+    "saved_at": "2025-09-08T15:32:40.720398",
+    "file_counter": 281
+  },
+  "additional_metrics": {
+    "total_analyses": 55,
+    "cases": {
+      "nom": 9,
+      "voc": 3,
+      "gen": 14,
+      "acc": 4,
+      "loc": 8,
+      "dat": 9
+    },
+    "pos": {
+      "subst": 25,
+      "adj": 17,
+      "part": 1,
+      "prep": 4,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.75,
+    "debug_tags": [
+      "Rzeczpospolita:subst:sg:nom:f",
+      "Rzeczpospolita:subst:sg:voc:f",
+      "Rzeczpospolita:subst:sg:nom:f",
+      "Rzeczpospolita:subst:sg:voc:f",
+      "Polska:adj:sg:nom.voc:f:pos",
+      "Polska:adjp:gen",
+      "Polska:subst:sg:nom:f",
+      "Polska:subst:sg:voc:f",
+      "Polska:subst:sg:nom:f",
+      "może:interj"
+    ],
+    "coords_count": 39
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6446
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.2466,
+    "quantum_words": 16,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.269806,
+    "formula": "0.714 × 0.638 × 0.592 = 0.270"
+  },
+  "sentence_number": 281,
+  "total_sentences": 805
+}

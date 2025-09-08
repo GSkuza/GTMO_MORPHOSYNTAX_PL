@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:48.009315",
+  "content": {
+    "text": "W celu zapewnienia zawodowego, rzetelnego, bezstronnego i\npolitycznie neutralnego wykonywania zadań państwa, w urzędach administracji\nrządowej działa korpus służby cywilnej.",
+    "length": 173,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.697966,
+    "stability": 0.633454,
+    "entropy": 0.440504
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:48.009315",
+    "sequence_number": 584,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 51,
+    "cases": {
+      "acc": 6,
+      "loc": 6,
+      "gen": 18,
+      "voc": 1,
+      "nom": 7,
+      "dat": 3
+    },
+    "pos": {
+      "prep": 4,
+      "subst": 18,
+      "adj": 14,
+      "interp": 4,
+      "part": 1,
+      "conj": 1,
+      "adv": 1
+    },
+    "ambiguity": 2.55,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "celu:subst:sg:gen:m3",
+      "celu:subst:sg:loc:m3",
+      "celu:subst:sg:voc:m3",
+      "zapewnienia:subst:sg:gen:n:ncol",
+      "zapewnienia:subst:pl:nom.acc.voc:n:ncol",
+      "zapewnienia:ger:pl:nom.acc:n:perf:aff",
+      "zapewnienia:ger:sg:gen:n:perf:aff",
+      "zawodowego:adj:sg:acc:m1.m2:pos"
+    ],
+    "coords_count": 40
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6371
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=40, cases={'acc': 6, 'loc': 6, 'gen': 18, 'voc': 1, 'nom': 7, 'dat': 3}, pos={'prep': 4, 'subst': 18, 'adj': 14, 'interp': 4, 'part': 1, 'conj': 1, 'adv': 1}",
+    "  MORPH_COORDS: [0.731, 0.692, 0.354]",
+    "  MORPH_TAGS: ['W:prep:acc:nwok', 'W:prep:loc:nwok', 'celu:subst:sg:gen:m3', 'celu:subst:sg:loc:m3', 'celu:subst:sg:voc:m3', 'zapewnienia:subst:sg:gen:n:ncol', 'zapewnienia:subst:pl:nom.acc.voc:n:ncol', 'zapewnienia:ger:pl:nom.acc:n:perf:aff', 'zapewnienia:ger:sg:gen:n:perf:aff', 'zawodowego:adj:sg:acc:m1.m2:pos']",
+    "  SYNTAX_COORDS: [0.631, 0.458, 0.667]",
+    "  FINAL: D=0.708, S=0.638, E=0.426"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.3083,
+    "quantum_words": 18,
+    "entanglements": 9,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

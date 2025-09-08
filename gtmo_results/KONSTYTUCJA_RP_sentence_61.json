@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:37.888963",
+  "content": {
+    "text": "Zasada\nta nie narusza postanowień art. 21 i art. 22.\n\nArt. 24.",
+    "length": 62,
+    "word_count": 12
+  },
+  "coordinates": {
+    "determination": 0.687721,
+    "stability": 0.630484,
+    "entropy": 0.397252
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:37.888963",
+    "sequence_number": 61,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 29,
+    "cases": {
+      "nom": 6,
+      "acc": 2,
+      "gen": 2
+    },
+    "pos": {
+      "subst": 6,
+      "adj": 1,
+      "part": 3,
+      "conj": 2,
+      "interp": 5
+    },
+    "ambiguity": 2.4166666666666665,
+    "debug_tags": [
+      "Zasada:subst:sg:nom:f",
+      "Zasada:subst:sg:nom:f",
+      "Zasada:subst:sg:nom:m1",
+      "ta:adj:sg:nom.voc:f:pos",
+      "ta:part",
+      "nie:conj",
+      "nie:interj",
+      "nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "nie:part"
+    ],
+    "coords_count": 15
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6451
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=15, cases={'nom': 6, 'acc': 2, 'gen': 2}, pos={'subst': 6, 'adj': 1, 'part': 3, 'conj': 2, 'interp': 5}",
+    "  MORPH_COORDS: [0.719, 0.701, 0.344]",
+    "  MORPH_TAGS: ['Zasada:subst:sg:nom:f', 'Zasada:subst:sg:nom:f', 'Zasada:subst:sg:nom:m1', 'ta:adj:sg:nom.voc:f:pos', 'ta:part', 'nie:conj', 'nie:interj', 'nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep', 'nie:ppron3:sg:acc:n:ter:akc.nakc:praep', 'nie:part']",
+    "  SYNTAX_COORDS: [0.637, 0.450, 0.490]",
+    "  FINAL: D=0.698, S=0.635, E=0.382"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.98,
+    "quantum_words": 5,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

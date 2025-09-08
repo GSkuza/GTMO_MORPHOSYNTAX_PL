@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:42.053084",
+  "content": {
+    "text": "Każdemu zapewnia się wolność twórczości artystycznej, badań\nnaukowych oraz ogłaszania ich wyników, wolność nauczania, a także wolność\nkorzystania z dóbr kultury.\n\nArt. 74. 1.",
+    "length": 174,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.671108,
+    "stability": 0.579505,
+    "entropy": 0.503554
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:42.053084",
+    "sequence_number": 276,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 59,
+    "cases": {
+      "dat": 3,
+      "nom": 12,
+      "acc": 5,
+      "gen": 16,
+      "voc": 1,
+      "loc": 2
+    },
+    "pos": {
+      "adj": 7,
+      "part": 4,
+      "subst": 21,
+      "interp": 7,
+      "adv": 1,
+      "conj": 2,
+      "prep": 3
+    },
+    "ambiguity": 2.4583333333333335,
+    "debug_tags": [
+      "Każdemu:adj:sg:dat:m1.m2.m3.n:pos",
+      "zapewnia:fin:sg:ter:imperf",
+      "się:part",
+      "wolność:subst:sg:nom:f",
+      "wolność:subst:sg:acc:f",
+      "wolność:subst:sg:nom:f",
+      "wolność:subst:sg:acc:f",
+      "wolność:subst:sg:nom:f",
+      "wolność:subst:sg:acc:f",
+      "twórczości:subst:sg:gen:f"
+    ],
+    "coords_count": 38
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5912
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=38, cases={'dat': 3, 'nom': 12, 'acc': 5, 'gen': 16, 'voc': 1, 'loc': 2}, pos={'adj': 7, 'part': 4, 'subst': 21, 'interp': 7, 'adv': 1, 'conj': 2, 'prep': 3}",
+    "  MORPH_COORDS: [0.704, 0.642, 0.410]",
+    "  MORPH_TAGS: ['Każdemu:adj:sg:dat:m1.m2.m3.n:pos', 'zapewnia:fin:sg:ter:imperf', 'się:part', 'wolność:subst:sg:nom:f', 'wolność:subst:sg:acc:f', 'wolność:subst:sg:nom:f', 'wolność:subst:sg:acc:f', 'wolność:subst:sg:nom:f', 'wolność:subst:sg:acc:f', 'twórczości:subst:sg:gen:f']",
+    "  SYNTAX_COORDS: [0.621, 0.433, 0.695]",
+    "  FINAL: D=0.681, S=0.585, E=0.489"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.8434,
+    "quantum_words": 16,
+    "entanglements": 8,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

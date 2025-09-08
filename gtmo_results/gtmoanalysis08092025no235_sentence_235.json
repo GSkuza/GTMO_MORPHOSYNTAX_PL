@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:39.712860",
+  "content": {
+    "text": "W toku ustalania praw dziecka organy władzy publicznej oraz osoby\nodpowiedzialne za dziecko są obowiązane do wysłuchania i w miarę możliwości\nuwzględnienia zdania dziecka.",
+    "length": 171,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.692075,
+    "stability": 0.615045,
+    "entropy": 0.448981
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:39.712860",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 235,
+    "saved_at": "2025-09-08T15:32:39.713479",
+    "file_counter": 235
+  },
+  "additional_metrics": {
+    "total_analyses": 71,
+    "cases": {
+      "acc": 8,
+      "loc": 4,
+      "gen": 19,
+      "voc": 2,
+      "nom": 24,
+      "dat": 3
+    },
+    "pos": {
+      "prep": 8,
+      "subst": 30,
+      "adj": 11,
+      "adv": 1,
+      "conj": 2,
+      "part": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.9583333333333335,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "toku:subst:sg:gen:m3",
+      "toku:subst:sg:loc:m3",
+      "toku:subst:sg:voc:m3",
+      "ustalania:ger:pl:nom.acc:n:imperf:aff",
+      "ustalania:ger:sg:gen:n:imperf:aff",
+      "praw:adjc",
+      "praw:subst:pl:gen:n:ncol",
+      "praw:impt:sg:sec:imperf"
+    ],
+    "coords_count": 47
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6266
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.927,
+    "quantum_words": 20,
+    "entanglements": 7,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.246398,
+    "formula": "0.702 × 0.620 × 0.566 = 0.246"
+  },
+  "sentence_number": 235,
+  "total_sentences": 805
+}

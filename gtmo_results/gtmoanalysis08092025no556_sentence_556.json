@@ -1,0 +1,75 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:47.130492",
+  "content": {
+    "text": "Jednostki samorządu terytorialnego mają osobowość prawną.",
+    "length": 57,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.798274,
+    "stability": 0.694546,
+    "entropy": 0.325476
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:47.130492",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 556,
+    "saved_at": "2025-09-08T15:32:47.131586",
+    "file_counter": 556
+  },
+  "additional_metrics": {
+    "total_analyses": 13,
+    "cases": {
+      "gen": 3,
+      "nom": 2,
+      "acc": 3
+    },
+    "pos": {
+      "subst": 6,
+      "adj": 4,
+      "interp": 1
+    },
+    "ambiguity": 2.1666666666666665,
+    "debug_tags": [
+      "Jednostki:subst:sg:gen:f",
+      "Jednostki:subst:pl:nom.acc.voc:f",
+      "samorządu:subst:sg:gen:m3",
+      "terytorialnego:adj:sg:acc:m1.m2:pos",
+      "terytorialnego:adj:sg:gen:m1.m2.m3.n:pos",
+      "mają:fin:pl:ter:imperf",
+      "mają:fin:pl:ter:imperf",
+      "mają:subst:sg:inst:f",
+      "osobowość:subst:sg:nom:f",
+      "osobowość:subst:sg:acc:f"
+    ],
+    "coords_count": 12
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.73
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8415,
+    "quantum_words": 5,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.389874,
+    "formula": "0.808 × 0.700 × 0.690 = 0.390"
+  },
+  "sentence_number": 556,
+  "total_sentences": 805
+}

@@ -1,0 +1,83 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:49.038309",
+  "content": {
+    "text": "Jeżeli wynika to z uzasadnionych potrzeb państwa, ustawa może zlecić\njednostkom samorządu terytorialnego wykonywanie innych zadań publicznych.",
+    "length": 142,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.745012,
+    "stability": 0.609042,
+    "entropy": 0.430882
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:49.038309",
+    "sequence_number": 635,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 46,
+    "cases": {
+      "acc": 8,
+      "nom": 6,
+      "gen": 13,
+      "loc": 4,
+      "dat": 1
+    },
+    "pos": {
+      "conj": 1,
+      "part": 3,
+      "adj": 13,
+      "subst": 14,
+      "prep": 2,
+      "interp": 2
+    },
+    "ambiguity": 2.7058823529411766,
+    "debug_tags": [
+      "Jeżeli:comp",
+      "wynika:fin:sg:ter:imperf",
+      "to:conj",
+      "to:part",
+      "to:adj:sg:acc:n:pos",
+      "to:adj:sg:nom.voc:n:pos",
+      "to:subst:sg:nom:n:ncol",
+      "to:subst:sg:acc:n:ncol",
+      "to:comp",
+      "to:pred"
+    ],
+    "coords_count": 33
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6515
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=33, cases={'acc': 8, 'nom': 6, 'gen': 13, 'loc': 4, 'dat': 1}, pos={'conj': 1, 'part': 3, 'adj': 13, 'subst': 14, 'prep': 2, 'interp': 2}",
+    "  MORPH_COORDS: [0.719, 0.675, 0.372]",
+    "  MORPH_TAGS: ['Jeżeli:comp', 'wynika:fin:sg:ter:imperf', 'to:conj', 'to:part', 'to:adj:sg:acc:n:pos', 'to:adj:sg:nom.voc:n:pos', 'to:subst:sg:nom:n:ncol', 'to:subst:sg:acc:n:ncol', 'to:comp', 'to:pred']",
+    "  SYNTAX_COORDS: [0.850, 0.453, 0.532]",
+    "  FINAL: D=0.755, S=0.614, E=0.416"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.8594,
+    "quantum_words": 13,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

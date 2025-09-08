@@ -1,0 +1,83 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:49.115740",
+  "content": {
+    "text": "Jednostkom samorządu terytorialnego zapewnia się udział w\ndochodach publicznych odpowiednio do przypadających im zadań.",
+    "length": 119,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.73078,
+    "stability": 0.627071,
+    "entropy": 0.394876
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:49.115740",
+    "sequence_number": 639,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 24,
+    "cases": {
+      "dat": 2,
+      "gen": 7,
+      "acc": 4,
+      "nom": 2,
+      "loc": 3
+    },
+    "pos": {
+      "subst": 6,
+      "adj": 5,
+      "part": 1,
+      "prep": 3,
+      "adv": 1,
+      "interp": 1
+    },
+    "ambiguity": 1.7142857142857142,
+    "debug_tags": [
+      "Jednostkom:subst:pl:dat:f",
+      "samorządu:subst:sg:gen:m3",
+      "terytorialnego:adj:sg:acc:m1.m2:pos",
+      "terytorialnego:adj:sg:gen:m1.m2.m3.n:pos",
+      "zapewnia:fin:sg:ter:imperf",
+      "się:part",
+      "udział:subst:sg:nom.acc:m3",
+      "udział:praet:sg:m1.m2.m3:perf",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok"
+    ],
+    "coords_count": 24
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.662
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=24, cases={'dat': 2, 'gen': 7, 'acc': 4, 'nom': 2, 'loc': 3}, pos={'subst': 6, 'adj': 5, 'part': 1, 'prep': 3, 'adv': 1, 'interp': 1}",
+    "  MORPH_COORDS: [0.730, 0.687, 0.357]",
+    "  MORPH_TAGS: ['Jednostkom:subst:pl:dat:f', 'samorządu:subst:sg:gen:m3', 'terytorialnego:adj:sg:acc:m1.m2:pos', 'terytorialnego:adj:sg:gen:m1.m2.m3.n:pos', 'zapewnia:fin:sg:ter:imperf', 'się:part', 'udział:subst:sg:nom.acc:m3', 'udział:praet:sg:m1.m2.m3:perf', 'w:prep:acc:nwok', 'w:prep:loc:nwok']",
+    "  SYNTAX_COORDS: [0.775, 0.454, 0.453]",
+    "  FINAL: D=0.741, S=0.632, E=0.380"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.2398,
+    "quantum_words": 11,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

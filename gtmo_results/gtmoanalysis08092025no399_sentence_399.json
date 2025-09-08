@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:43.389813",
+  "content": {
+    "text": "Po zakończeniu postępowania określonego w art. 121 Marszałek\nSejmu przedstawia uchwaloną ustawę do podpisu Prezydentowi Rzeczypospolitej.",
+    "length": 137,
+    "word_count": 16
+  },
+  "coordinates": {
+    "determination": 0.741949,
+    "stability": 0.629841,
+    "entropy": 0.413049
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:43.389813",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 399,
+    "saved_at": "2025-09-08T15:32:43.390156",
+    "file_counter": 399
+  },
+  "additional_metrics": {
+    "total_analyses": 34,
+    "cases": {
+      "acc": 6,
+      "dat": 5,
+      "loc": 3,
+      "nom": 7,
+      "gen": 8
+    },
+    "pos": {
+      "prep": 6,
+      "subst": 15,
+      "adj": 2,
+      "interp": 2
+    },
+    "ambiguity": 2.125,
+    "debug_tags": [
+      "Po:prep:acc",
+      "Po:prep:dat",
+      "Po:prep:loc",
+      "zakończeniu:subst:sg:dat:n:ncol",
+      "zakończeniu:subst:sg:loc:n:ncol",
+      "zakończeniu:ger:sg:dat.loc:n:perf:aff",
+      "postępowania:ger:pl:nom.acc:n:imperf:aff",
+      "postępowania:ger:sg:gen:n:imperf:aff",
+      "postępowania:subst:sg:gen:n:ncol",
+      "postępowania:subst:pl:nom.acc.voc:n:ncol"
+    ],
+    "coords_count": 27
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6618
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8796,
+    "quantum_words": 13,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.287352,
+    "formula": "0.752 × 0.635 × 0.602 = 0.287"
+  },
+  "sentence_number": 399,
+  "total_sentences": 805
+}

@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:36.150993",
+  "content": {
+    "text": "Przyrodzona i niezbywalna godność człowieka stanowi źródło\nwolności i praw człowieka i obywatela.",
+    "length": 97,
+    "word_count": 13
+  },
+  "coordinates": {
+    "determination": 0.726683,
+    "stability": 0.642788,
+    "entropy": 0.418674
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:36.150993",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 71,
+    "saved_at": "2025-09-08T15:32:36.151483",
+    "file_counter": 71
+  },
+  "additional_metrics": {
+    "total_analyses": 30,
+    "cases": {
+      "nom": 7,
+      "acc": 1,
+      "gen": 6,
+      "dat": 2,
+      "voc": 1
+    },
+    "pos": {
+      "adj": 3,
+      "part": 3,
+      "conj": 3,
+      "subst": 13,
+      "interp": 1
+    },
+    "ambiguity": 2.3076923076923075,
+    "debug_tags": [
+      "Przyrodzona:adj:sg:nom.voc:f:pos",
+      "Przyrodzona:ppas:sg:nom.voc:f:perf:aff",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "i:interj",
+      "i:part"
+    ],
+    "coords_count": 22
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6579
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0108,
+    "quantum_words": 9,
+    "entanglements": 5,
+    "superposition_type": "HIGHLY_ENTANGLED_COHERENT"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.284575,
+    "formula": "0.737 × 0.648 × 0.596 = 0.285"
+  },
+  "sentence_number": 71,
+  "total_sentences": 805
+}

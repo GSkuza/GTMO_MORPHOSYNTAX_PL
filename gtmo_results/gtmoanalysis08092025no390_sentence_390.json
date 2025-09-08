@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:43.211641",
+  "content": {
+    "text": "Marszałek Sejmu może odmówić poddania pod głosowanie poprawki, która\nuprzednio nie była przedłożona komisji.",
+    "length": 108,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.789345,
+    "stability": 0.650266,
+    "entropy": 0.38705
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:43.211641",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 390,
+    "saved_at": "2025-09-08T15:32:43.212226",
+    "file_counter": 390
+  },
+  "additional_metrics": {
+    "total_analyses": 36,
+    "cases": {
+      "nom": 13,
+      "gen": 6,
+      "acc": 3,
+      "voc": 1,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 15,
+      "part": 2,
+      "prep": 2,
+      "interp": 2,
+      "adj": 2,
+      "adv": 1,
+      "conj": 1
+    },
+    "ambiguity": 2.5714285714285716,
+    "debug_tags": [
+      "Marszałek:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Marszałek:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Marszałek:subst:sg:nom:m1",
+      "Marszałek:subst:sg:nom:m1",
+      "Sejmu:subst:sg:gen:m3",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "odmówić:inf:perf",
+      "poddania:ger:pl:nom.acc:n:perf:aff"
+    ],
+    "coords_count": 27
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6947
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9783,
+    "quantum_words": 11,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.32891,
+    "formula": "0.799 × 0.655 × 0.628 = 0.329"
+  },
+  "sentence_number": 390,
+  "total_sentences": 805
+}

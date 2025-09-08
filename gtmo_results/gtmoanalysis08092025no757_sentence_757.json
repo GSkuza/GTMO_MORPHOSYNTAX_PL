@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:52.370025",
+  "content": {
+    "text": "Ustawa określająca zakres ograniczeń wolności i praw człowieka i\nobywatela w czasie stanu wojennego i wyjątkowego nie może ograniczać wolności i\n\npraw określonych w art. 30 (godność człowieka), art. 34 i art. 36 (obywatelstwo), art.\n38 (ochrona życia), art. 39, art. 40 i art. 41 ust. 4 (humanitarne traktowanie), art. 42\n(ponoszenie odpowiedzialności karnej), art. 45 (dostęp do sądu), art. 47 (dobra\nosobiste), art. 53 (sumienie i religia), art. 63 (petycje) oraz art. 48 i art. 72 (rodzina i\ndziecko).",
+    "length": 504,
+    "word_count": 80
+  },
+  "coordinates": {
+    "determination": 0.627541,
+    "stability": 0.607671,
+    "entropy": 0.493042
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:52.370025",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 757,
+    "saved_at": "2025-09-08T15:32:52.370503",
+    "file_counter": 757
+  },
+  "additional_metrics": {
+    "total_analyses": 196,
+    "cases": {
+      "nom": 29,
+      "gen": 25,
+      "dat": 4,
+      "voc": 4,
+      "acc": 13,
+      "loc": 5
+    },
+    "pos": {
+      "subst": 45,
+      "part": 11,
+      "conj": 11,
+      "prep": 5,
+      "adj": 19,
+      "interp": 45,
+      "adv": 1
+    },
+    "ambiguity": 2.45,
+    "debug_tags": [
+      "Ustawa:subst:sg:nom:f",
+      "określająca:pact:sg:nom.voc:f:imperf:aff",
+      "zakres:subst:sg:nom.acc:m3",
+      "ograniczeń:subst:pl:gen:n:ncol",
+      "ograniczeń:ger:pl:gen:n:perf:aff",
+      "wolności:subst:sg:gen:f",
+      "wolności:subst:sg:dat.loc:f",
+      "wolności:subst:sg:voc:f",
+      "wolności:subst:pl:nom.acc.voc:f",
+      "wolności:subst:pl:gen:f"
+    ],
+    "coords_count": 80
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.5854
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.124,
+    "quantum_words": 35,
+    "entanglements": 11,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.203878,
+    "formula": "0.638 × 0.613 × 0.522 = 0.204"
+  },
+  "sentence_number": 757,
+  "total_sentences": 805
+}

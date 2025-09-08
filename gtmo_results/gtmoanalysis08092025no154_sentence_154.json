@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:37.918019",
+  "content": {
+    "text": "Ustawa może wprowadzić obowiązek uprzedniego uzyskania\nkoncesji na prowadzenie stacji radiowej lub telewizyjnej.",
+    "length": 112,
+    "word_count": 13
+  },
+  "coordinates": {
+    "determination": 0.777692,
+    "stability": 0.646867,
+    "entropy": 0.412593
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:37.918019",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 154,
+    "saved_at": "2025-09-08T15:32:37.918396",
+    "file_counter": 154
+  },
+  "additional_metrics": {
+    "total_analyses": 30,
+    "cases": {
+      "nom": 5,
+      "acc": 2,
+      "gen": 8,
+      "dat": 4,
+      "loc": 3
+    },
+    "pos": {
+      "subst": 9,
+      "part": 1,
+      "adj": 8,
+      "prep": 2,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.3076923076923075,
+    "debug_tags": [
+      "Ustawa:subst:sg:nom:f",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "wprowadzić:inf:perf",
+      "obowiązek:subst:sg:nom.acc:m3",
+      "uprzedniego:adj:sg:acc:m1.m2:pos",
+      "uprzedniego:adj:sg:gen:m1.m2.m3.n:pos",
+      "uzyskania:ger:pl:nom.acc:n:perf:aff",
+      "uzyskania:ger:sg:gen:n:perf:aff"
+    ],
+    "coords_count": 22
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6814
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9644,
+    "quantum_words": 10,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.309318,
+    "formula": "0.788 × 0.652 × 0.602 = 0.309"
+  },
+  "sentence_number": 154,
+  "total_sentences": 805
+}

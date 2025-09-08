@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:50.019650",
+  "content": {
+    "text": "Pierwszego Prezesa Sądu Najwyższego powołuje Prezydent\nRzeczypospolitej na sześcioletnią kadencję spośród kandydatów przedstawionych\nprzez Zgromadzenie Ogólne Sędziów Sądu Najwyższego.\nArt. 184.",
+    "length": 194,
+    "word_count": 21
+  },
+  "coordinates": {
+    "determination": 0.700384,
+    "stability": 0.638217,
+    "entropy": 0.40218
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:50.019650",
+    "sequence_number": 696,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 44,
+    "cases": {
+      "acc": 10,
+      "gen": 16,
+      "nom": 8,
+      "dat": 1,
+      "loc": 1
+    },
+    "pos": {
+      "adj": 12,
+      "subst": 18,
+      "prep": 4,
+      "interp": 3
+    },
+    "ambiguity": 2.0952380952380953,
+    "debug_tags": [
+      "Pierwszego:adj:sg:acc:m1.m2:pos",
+      "Pierwszego:adj:sg:gen:m1.m2.m3.n:pos",
+      "Pierwszego:subst:sg:gen:n:ncol",
+      "Pierwszego:subst:sg:gen.acc:m2",
+      "Pierwszego:subst:sg:gen:m3",
+      "Prezesa:subst:sg:gen.acc:m1",
+      "Sądu:subst:sg:gen:m3",
+      "Sądu:subst:sg:gen:m3",
+      "Najwyższego:subst:sg:gen.acc:m1",
+      "Najwyższego:adj:sg:acc:m1.m2:sup"
+    ],
+    "coords_count": 36
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.651
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=36, cases={'acc': 10, 'gen': 16, 'nom': 8, 'dat': 1, 'loc': 1}, pos={'adj': 12, 'subst': 18, 'prep': 4, 'interp': 3}",
+    "  MORPH_COORDS: [0.758, 0.707, 0.336]",
+    "  MORPH_TAGS: ['Pierwszego:adj:sg:acc:m1.m2:pos', 'Pierwszego:adj:sg:gen:m1.m2.m3.n:pos', 'Pierwszego:subst:sg:gen:n:ncol', 'Pierwszego:subst:sg:gen.acc:m2', 'Pierwszego:subst:sg:gen:m3', 'Prezesa:subst:sg:gen.acc:m1', 'Sądu:subst:sg:gen:m3', 'Sądu:subst:sg:gen:m3', 'Najwyższego:subst:sg:gen.acc:m1', 'Najwyższego:adj:sg:acc:m1.m2:sup']",
+    "  SYNTAX_COORDS: [0.567, 0.453, 0.542]",
+    "  FINAL: D=0.710, S=0.643, E=0.387"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.1077,
+    "quantum_words": 17,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

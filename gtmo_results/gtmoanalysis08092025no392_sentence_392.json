@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:43.269862",
+  "content": {
+    "text": "Sejm uchwala ustawy zwykłą większością głosów w obecności co\nnajmniej połowy ustawowej liczby posłów, chyba że Konstytucja przewiduje inną\nwiększość.",
+    "length": 149,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.744885,
+    "stability": 0.604545,
+    "entropy": 0.399528
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:43.269862",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 392,
+    "saved_at": "2025-09-08T15:32:43.270464",
+    "file_counter": 392
+  },
+  "additional_metrics": {
+    "total_analyses": 48,
+    "cases": {
+      "nom": 11,
+      "gen": 11,
+      "acc": 6,
+      "loc": 2,
+      "dat": 2,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 22,
+      "adj": 7,
+      "prep": 5,
+      "part": 4,
+      "num": 2,
+      "adv": 1,
+      "interp": 2
+    },
+    "ambiguity": 2.4,
+    "debug_tags": [
+      "Sejm:subst:sg:nom.acc:m3",
+      "uchwala:fin:sg:ter:imperf",
+      "ustawy:subst:sg:gen:f",
+      "ustawy:subst:pl:nom.acc.voc:f",
+      "zwykłą:adj:sg:acc:f:pos",
+      "zwykłą:adj:sg:inst:f:pos",
+      "większością:subst:sg:inst:f",
+      "głosów:subst:pl:gen:m3",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok"
+    ],
+    "coords_count": 39
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6595
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9336,
+    "quantum_words": 15,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.283201,
+    "formula": "0.755 × 0.610 × 0.615 = 0.283"
+  },
+  "sentence_number": 392,
+  "total_sentences": 805
+}

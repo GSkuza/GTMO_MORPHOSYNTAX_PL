@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:52.942348",
+  "content": {
+    "text": "Do czasu wejścia w życie tych ustaw\nobowiązują przepisy dotyczące rewizji nadzwyczajnej od orzeczeń Naczelnego Sądu\nAdministracyjnego.\nArt. 237. 1.",
+    "length": 147,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.713412,
+    "stability": 0.607375,
+    "entropy": 0.432452
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:52.942348",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 778,
+    "saved_at": "2025-09-08T15:32:52.942794",
+    "file_counter": 778
+  },
+  "additional_metrics": {
+    "total_analyses": 46,
+    "cases": {
+      "gen": 17,
+      "nom": 10,
+      "acc": 4,
+      "loc": 4,
+      "dat": 2
+    },
+    "pos": {
+      "prep": 4,
+      "subst": 17,
+      "adj": 10,
+      "interp": 4
+    },
+    "ambiguity": 2.3,
+    "debug_tags": [
+      "Do:prep:gen",
+      "Do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "czasu:subst:sg:gen:m3",
+      "wejścia:subst:sg:gen:n:ncol",
+      "wejścia:subst:pl:nom.acc.voc:n:ncol",
+      "wejścia:ger:pl:nom.acc:n:perf:aff",
+      "wejścia:ger:sg:gen:n:perf:aff",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "życie:subst:sg:nom.acc.voc:n:ncol"
+    ],
+    "coords_count": 37
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6378
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0094,
+    "quantum_words": 17,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.258069,
+    "formula": "0.723 × 0.612 × 0.583 = 0.258"
+  },
+  "sentence_number": 778,
+  "total_sentences": 805
+}

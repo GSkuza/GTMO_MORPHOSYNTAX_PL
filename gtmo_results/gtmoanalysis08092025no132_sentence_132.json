@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:37.486182",
+  "content": {
+    "text": "Każdy ma prawo do żądania sprostowania oraz usunięcia informacji\nnieprawdziwych, niepełnych lub zebranych w sposób sprzeczny z ustawą.",
+    "length": 134,
+    "word_count": 18
+  },
+  "coordinates": {
+    "determination": 0.741464,
+    "stability": 0.62948,
+    "entropy": 0.457525
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:37.486182",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 132,
+    "saved_at": "2025-09-08T15:32:37.486743",
+    "file_counter": 132
+  },
+  "additional_metrics": {
+    "total_analyses": 48,
+    "cases": {
+      "acc": 6,
+      "nom": 12,
+      "gen": 13,
+      "dat": 1,
+      "loc": 3
+    },
+    "pos": {
+      "adj": 11,
+      "subst": 13,
+      "adv": 2,
+      "prep": 5,
+      "conj": 2,
+      "interp": 2,
+      "part": 1
+    },
+    "ambiguity": 2.6666666666666665,
+    "debug_tags": [
+      "Każdy:adj:sg:acc:m3:pos",
+      "Każdy:adj:sg:nom.voc:m1.m2.m3:pos",
+      "ma:adj:sg:nom.voc:f:pos",
+      "ma:fin:sg:ter:imperf",
+      "prawo:subst:sg:nom.acc.voc:n:ncol",
+      "prawo:adv:pos",
+      "do:prep:gen",
+      "do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "żądania:subst:sg:gen:n:ncol",
+      "żądania:subst:pl:nom.acc.voc:n:ncol"
+    ],
+    "coords_count": 38
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6482
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.2483,
+    "quantum_words": 15,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.265798,
+    "formula": "0.751 × 0.634 × 0.557 = 0.266"
+  },
+  "sentence_number": 132,
+  "total_sentences": 805
+}

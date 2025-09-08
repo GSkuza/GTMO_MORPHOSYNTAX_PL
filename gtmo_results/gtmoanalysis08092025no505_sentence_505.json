@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:45.831905",
+  "content": {
+    "text": "Rada Ministrów, na wniosek Prezesa Rady Ministrów, może uchylić rozporządzenie\nlub zarządzenie ministra.",
+    "length": 104,
+    "word_count": 13
+  },
+  "coordinates": {
+    "determination": 0.733087,
+    "stability": 0.660929,
+    "entropy": 0.398689
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:45.831905",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 505,
+    "saved_at": "2025-09-08T15:32:45.832613",
+    "file_counter": 505
+  },
+  "additional_metrics": {
+    "total_analyses": 30,
+    "cases": {
+      "nom": 10,
+      "gen": 7,
+      "acc": 1,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 13,
+      "adj": 1,
+      "interp": 3,
+      "prep": 2,
+      "part": 1,
+      "conj": 1
+    },
+    "ambiguity": 2.3076923076923075,
+    "debug_tags": [
+      "Rada:subst:sg:nom:f",
+      "Rada:subst:sg:gen.acc:m1",
+      "Rada:adj:sg:nom:f:pos",
+      "Rada:winien:sg:f:imperf",
+      "Ministrów:subst:pl:gen.acc:m1",
+      "Ministrów:subst:pl:gen.acc:m1",
+      ",:interp",
+      ",:interp",
+      "na:prep:acc",
+      "na:prep:loc"
+    ],
+    "coords_count": 23
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6719
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0697,
+    "quantum_words": 9,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.304977,
+    "formula": "0.743 × 0.666 × 0.616 = 0.305"
+  },
+  "sentence_number": 505,
+  "total_sentences": 805
+}

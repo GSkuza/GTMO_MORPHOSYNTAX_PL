@@ -1,0 +1,76 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:45.655198",
+  "content": {
+    "text": "Prezes i wiceprezes Rady Ministrów mogą pełnić także funkcję ministra.",
+    "length": 70,
+    "word_count": 10
+  },
+  "coordinates": {
+    "determination": 0.748982,
+    "stability": 0.636038,
+    "entropy": 0.409552
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:45.655198",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 499,
+    "saved_at": "2025-09-08T15:32:45.656219",
+    "file_counter": 499
+  },
+  "additional_metrics": {
+    "total_analyses": 19,
+    "cases": {
+      "nom": 7,
+      "gen": 4,
+      "acc": 1
+    },
+    "pos": {
+      "subst": 11,
+      "part": 2,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 1.9,
+    "debug_tags": [
+      "Prezes:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezes:subst:sg:nom:m1",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "wiceprezes:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "wiceprezes:subst:sg:nom:m1",
+      "Rady:depr:pl:nom.acc.voc:m2",
+      "Rady:subst:pl:nom.acc.voc:m3",
+      "Rady:subst:sg:gen:f"
+    ],
+    "coords_count": 16
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6675
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.1249,
+    "quantum_words": 6,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.294573,
+    "formula": "0.759 × 0.641 × 0.605 = 0.295"
+  },
+  "sentence_number": 499,
+  "total_sentences": 805
+}

@@ -1,0 +1,92 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T16:15:24.355172",
+  "content": {
+    "text": "Konstytucja definiuje podstawowe prawa obywatelskie.",
+    "length": 52,
+    "word_count": 5
+  },
+  "coordinates": {
+    "determination": 0.82821,
+    "stability": 0.737886,
+    "entropy": 0.237252
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T16:15:24.355172",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 2,
+    "saved_at": "2025-09-08T16:15:24.355977",
+    "file_counter": 2
+  },
+  "additional_metrics": {
+    "total_analyses": 16,
+    "cases": {
+      "nom": 8,
+      "acc": 4,
+      "voc": 1,
+      "gen": 1
+    },
+    "pos": {
+      "subst": 5,
+      "adj": 9,
+      "interp": 1
+    },
+    "ambiguity": 3.2,
+    "debug_tags": [
+      "Konstytucja:subst:sg:nom:f",
+      "definiuje:fin:sg:ter:imperf",
+      "podstawowe:adj:pl:acc:m2.m3.f.n:pos",
+      "podstawowe:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "podstawowe:adj:sg:acc:n:pos",
+      "podstawowe:adj:sg:nom.voc:n:pos",
+      "prawa:subst:sg:nom:f",
+      "prawa:subst:sg:voc:f",
+      "prawa:subst:sg:gen:n:ncol",
+      "prawa:subst:pl:nom.acc.voc:n:ncol"
+    ],
+    "coords_count": 10
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "high",
+    "entropy": "low",
+    "overall": "high_quality",
+    "overall_score": 0.7815
+  },
+  "source_file": "test_ci.md",
+  "quantum_metrics": {
+    "total_coherence": 0.4721,
+    "quantum_words": 4,
+    "entanglements": 1,
+    "superposition_type": "DECOHERENT_CLASSICAL"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "topology": {
+    "attractor": "Ψᴷ",
+    "distance": 0.14411838416782027,
+    "in_basin": true
+  },
+  "quantum_tensor": {
+    "value": 0.483918,
+    "formula": "0.838 × 0.743 × 0.778 = 0.484"
+  },
+  "constitutional_indefiniteness": {
+    "value": 1.0453,
+    "formula": "(1/3.20) × 2 × √(0.838×0.743/0.222) = 1.05",
+    "components": {
+      "ambiguity": 3.2,
+      "depth": 2,
+      "D": 0.8381507402195234,
+      "S": 0.7425802423116821,
+      "E": 0.22249009420207844
+    }
+  },
+  "sentence_number": 2,
+  "total_sentences": 2
+}

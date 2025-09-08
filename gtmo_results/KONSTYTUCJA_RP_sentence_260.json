@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:41.741720",
+  "content": {
+    "text": "Warunki\nzakładania i działalności szkół niepublicznych oraz udziału władz publicznych w ich\nfinansowaniu, a także zasady nadzoru pedagogicznego nad szkołami i zakładami\nwychowawczymi, określa ustawa.",
+    "length": 199,
+    "word_count": 25
+  },
+  "coordinates": {
+    "determination": 0.676359,
+    "stability": 0.614127,
+    "entropy": 0.473095
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:41.741720",
+    "sequence_number": 260,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 52,
+    "cases": {
+      "nom": 8,
+      "gen": 12,
+      "dat": 2,
+      "voc": 1,
+      "acc": 6,
+      "loc": 3
+    },
+    "pos": {
+      "subst": 16,
+      "part": 4,
+      "conj": 4,
+      "adj": 9,
+      "adv": 1,
+      "prep": 5,
+      "interp": 3
+    },
+    "ambiguity": 2.08,
+    "debug_tags": [
+      "Warunki:depr:pl:nom.acc.voc:m2",
+      "Warunki:subst:pl:nom.acc.voc:n:pt",
+      "Warunki:subst:pl:nom.acc.voc:m3",
+      "zakładania:ger:pl:nom.acc:n:imperf:aff",
+      "zakładania:ger:sg:gen:n:imperf:aff",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "i:interj",
+      "i:part"
+    ],
+    "coords_count": 43
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6129
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=43, cases={'nom': 8, 'gen': 12, 'dat': 2, 'voc': 1, 'acc': 6, 'loc': 3}, pos={'subst': 16, 'part': 4, 'conj': 4, 'adj': 9, 'adv': 1, 'prep': 5, 'interp': 3}",
+    "  MORPH_COORDS: [0.722, 0.683, 0.364]",
+    "  MORPH_TAGS: ['Warunki:depr:pl:nom.acc.voc:m2', 'Warunki:subst:pl:nom.acc.voc:n:pt', 'Warunki:subst:pl:nom.acc.voc:m3', 'zakładania:ger:pl:nom.acc:n:imperf:aff', 'zakładania:ger:sg:gen:n:imperf:aff', 'i:interj', 'i:part', 'i:conj', 'i:interj', 'i:part']",
+    "  SYNTAX_COORDS: [0.594, 0.454, 0.703]",
+    "  FINAL: D=0.686, S=0.619, E=0.458"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.8214,
+    "quantum_words": 17,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

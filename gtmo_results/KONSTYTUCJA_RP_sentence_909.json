@@ -1,0 +1,83 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:53.824214",
+  "content": {
+    "text": "Senatorowie wybrani przed dniem wejścia w życie Konstytucji, którzy nie\nukończyli 30 lat, zachowują swoje mandaty do końca kadencji, na którą zostali\nwybrani.",
+    "length": 158,
+    "word_count": 23
+  },
+  "coordinates": {
+    "determination": 0.739944,
+    "stability": 0.680412,
+    "entropy": 0.352935
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:53.824214",
+    "sequence_number": 909,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 57,
+    "cases": {
+      "nom": 19,
+      "acc": 8,
+      "gen": 10,
+      "loc": 3,
+      "dat": 2
+    },
+    "pos": {
+      "subst": 22,
+      "adj": 9,
+      "prep": 7,
+      "interp": 4,
+      "conj": 1,
+      "part": 1
+    },
+    "ambiguity": 2.4782608695652173,
+    "debug_tags": [
+      "Senatorowie:subst:pl:nom.voc:m1",
+      "Senatorowie:subst:pl:nom.voc:m1",
+      "wybrani:adj:pl:nom.voc:m1:pos",
+      "wybrani:subst:pl:nom.voc:m1",
+      "wybrani:ppas:pl:nom.voc:m1:perf:aff",
+      "wybrani:adj:pl:nom.voc:m1:pos",
+      "wybrani:subst:pl:nom.voc:m1",
+      "wybrani:ppas:pl:nom.voc:m1:perf:aff",
+      "przed:prep:acc:nwok",
+      "przed:prep:inst:nwok"
+    ],
+    "coords_count": 41
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6942
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=41, cases={'nom': 19, 'acc': 8, 'gen': 10, 'loc': 3, 'dat': 2}, pos={'subst': 22, 'adj': 9, 'prep': 7, 'interp': 4, 'conj': 1, 'part': 1}",
+    "  MORPH_COORDS: [0.780, 0.762, 0.272]",
+    "  MORPH_TAGS: ['Senatorowie:subst:pl:nom.voc:m1', 'Senatorowie:subst:pl:nom.voc:m1', 'wybrani:adj:pl:nom.voc:m1:pos', 'wybrani:subst:pl:nom.voc:m1', 'wybrani:ppas:pl:nom.voc:m1:perf:aff', 'wybrani:adj:pl:nom.voc:m1:pos', 'wybrani:subst:pl:nom.voc:m1', 'wybrani:ppas:pl:nom.voc:m1:perf:aff', 'przed:prep:acc:nwok', 'przed:prep:inst:nwok']",
+    "  SYNTAX_COORDS: [0.659, 0.452, 0.541]",
+    "  FINAL: D=0.750, S=0.685, E=0.338"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.144,
+    "quantum_words": 17,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

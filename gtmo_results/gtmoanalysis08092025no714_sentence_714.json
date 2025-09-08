@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:50.994552",
+  "content": {
+    "text": "Zwiększenie wydatków lub ograniczenie dochodów planowanych\nprzez Radę Ministrów nie może powodować ustalenia przez Sejm większego\ndeficytu budżetowego niż przewidziany w projekcie ustawy budżetowej.",
+    "length": 198,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.728952,
+    "stability": 0.607717,
+    "entropy": 0.458581
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:50.994552",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 714,
+    "saved_at": "2025-09-08T15:32:50.995256",
+    "file_counter": 714
+  },
+  "additional_metrics": {
+    "total_analyses": 55,
+    "cases": {
+      "nom": 11,
+      "gen": 13,
+      "acc": 12,
+      "loc": 3,
+      "voc": 1,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 17,
+      "conj": 3,
+      "adv": 1,
+      "prep": 5,
+      "part": 2,
+      "adj": 9,
+      "interp": 1
+    },
+    "ambiguity": 2.2916666666666665,
+    "debug_tags": [
+      "Zwiększenie:ger:sg:nom.acc:n:perf:aff",
+      "Zwiększenie:subst:sg:nom.acc.voc:n:ncol",
+      "wydatków:subst:pl:gen:m3",
+      "lub:conj",
+      "lub:impt:sg:sec:imperf",
+      "ograniczenie:adv:pos",
+      "ograniczenie:subst:sg:nom.acc.voc:n:ncol",
+      "ograniczenie:ger:sg:nom.acc:n:perf:aff",
+      "dochodów:subst:pl:gen:m3",
+      "planowanych:ppas:pl:acc:m1:imperf:aff"
+    ],
+    "coords_count": 45
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6363
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8211,
+    "quantum_words": 20,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.251929,
+    "formula": "0.739 × 0.613 × 0.556 = 0.252"
+  },
+  "sentence_number": 714,
+  "total_sentences": 805
+}

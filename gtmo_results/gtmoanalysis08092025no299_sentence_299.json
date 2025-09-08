@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:41.108434",
+  "content": {
+    "text": "Zasady i\ntryb wydawania aktów prawa miejscowego określa ustawa.\n\nRozdział IV\nSEJM I SENAT\nArt. 95. 1.",
+    "length": 101,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.752993,
+    "stability": 0.637661,
+    "entropy": 0.424399
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:41.108434",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 299,
+    "saved_at": "2025-09-08T15:32:41.109241",
+    "file_counter": 299
+  },
+  "additional_metrics": {
+    "total_analyses": 48,
+    "cases": {
+      "nom": 16,
+      "gen": 12,
+      "voc": 1,
+      "acc": 1
+    },
+    "pos": {
+      "subst": 24,
+      "part": 2,
+      "conj": 2,
+      "adj": 3,
+      "interp": 4
+    },
+    "ambiguity": 2.823529411764706,
+    "debug_tags": [
+      "Zasady:subst:pl:nom.acc.voc:n:pt",
+      "Zasady:subst:sg:gen:f",
+      "Zasady:subst:pl:nom.acc.voc:f",
+      "Zasady:subst:sg:gen:f",
+      "Zasady:subst:pl:nom.acc.voc:f",
+      "Zasady:subst:sg:gen:m1",
+      "Zasady:depr:pl:nom.acc.voc:m2",
+      "i:interj",
+      "i:part",
+      "i:conj"
+    ],
+    "coords_count": 29
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6652
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.999,
+    "quantum_words": 11,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.289599,
+    "formula": "0.763 × 0.643 × 0.591 = 0.290"
+  },
+  "sentence_number": 299,
+  "total_sentences": 805
+}

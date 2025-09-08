@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:39.620055",
+  "content": {
+    "text": "Rodziny znajdujące się w trudnej sytuacji materialnej i społecznej,\nzwłaszcza wielodzietne i niepełne, mają prawo do szczególnej pomocy ze strony\nwładz publicznych.",
+    "length": 164,
+    "word_count": 22
+  },
+  "coordinates": {
+    "determination": 0.647812,
+    "stability": 0.584538,
+    "entropy": 0.511382
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:39.620055",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 229,
+    "saved_at": "2025-09-08T15:32:39.620519",
+    "file_counter": 229
+  },
+  "additional_metrics": {
+    "total_analyses": 63,
+    "cases": {
+      "gen": 14,
+      "nom": 13,
+      "acc": 6,
+      "loc": 6,
+      "dat": 6,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 15,
+      "part": 5,
+      "prep": 5,
+      "adj": 23,
+      "conj": 2,
+      "interp": 3,
+      "adv": 1
+    },
+    "ambiguity": 2.8636363636363638,
+    "debug_tags": [
+      "Rodziny:subst:sg:gen:f",
+      "Rodziny:subst:pl:nom.acc.voc:f",
+      "znajdujące:pact:pl:nom.acc.voc:m2.m3.f.n:imperf:aff",
+      "znajdujące:pact:sg:nom.acc.voc:n:imperf:aff",
+      "znajdujące:pact:pl:nom.acc.voc:m2.m3.f.n:imperf:aff",
+      "znajdujące:pact:sg:nom.acc.voc:n:imperf:aff",
+      "się:part",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "trudnej:adj:sg:dat:f:pos"
+    ],
+    "coords_count": 43
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5811
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8605,
+    "quantum_words": 17,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.195306,
+    "formula": "0.658 × 0.590 × 0.504 = 0.195"
+  },
+  "sentence_number": 229,
+  "total_sentences": 805
+}

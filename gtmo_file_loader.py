@@ -21,10 +21,10 @@ from gtmo_json_saver import GTMOOptimizedSaver
 
 # Import the GTMØ morphosyntax engine
 try:
-    from gtmo_morphosyntax import gtmo_analyze, batch_analyze
+    # Usuńmy niepotrzebne importy - będziemy używać funkcji bezpośrednio
+    pass
 except ImportError:
-    print("Error: gtmo_morphosyntax.py not found in path")
-    sys.exit(1)
+    pass
 
 # Configure logging
 logging.basicConfig(
@@ -336,8 +336,8 @@ def main():
     parser.add_argument('--recursive', '-r', action='store_true',
                        help='Search subdirectories')
     parser.add_argument('--filter', '-f', help='Regex pattern for file filtering')
-    parser.add_argument('--chunk-size', '-c', type=int, default=500,
-                       help='Chunk size for text analysis (default: 500)')
+    parser.add_argument('--chunk-size', '-c', type=int, default=700,
+                       help='Chunk size for text analysis (default: 700)')
     
     args = parser.parse_args()
     
@@ -387,6 +387,42 @@ def main():
     print(f"Analysis saved to: gtmo_results.json")
     print(f"Files processed: {len(loader.processed_files)}")
     print(f"Errors encountered: {len(loader.errors)}")
+
+
+def load_markdown_file(file_path: str) -> List[str]:
+    """
+    Load and parse a markdown file into sentences.
+    
+    Args:
+        file_path: Path to the markdown file
+        
+    Returns:
+        List of sentences from the file
+    """
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Remove markdown formatting
+        content = re.sub(r'#+ ', '', content)  # Remove headers
+        content = re.sub(r'\*\*(.*?)\*\*', r'\1', content)  # Remove bold
+        content = re.sub(r'\*(.*?)\*', r'\1', content)  # Remove italic
+        content = re.sub(r'\[(.*?)\]\(.*?\)', r'\1', content)  # Remove links
+        content = re.sub(r'`(.*?)`', r'\1', content)  # Remove code
+        
+        # Split into sentences using spaCy
+        doc = nlp(content)
+        sentences = [sent.text.strip() for sent in doc.sents if sent.text.strip()]
+        
+        # Filter out very short sentences (less than 10 characters)
+        sentences = [s for s in sentences if len(s) >= 10]
+        
+        logger.info(f"Loaded {len(sentences)} sentences from {file_path}")
+        return sentences
+        
+    except Exception as e:
+        logger.error(f"Error loading file {file_path}: {e}")
+        return []
 
 
 if __name__ == "__main__":

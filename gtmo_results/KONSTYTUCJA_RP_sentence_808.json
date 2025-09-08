@@ -1,0 +1,83 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:51.920929",
+  "content": {
+    "text": "Sposób obliczania wartości rocznego\nproduktu krajowego brutto oraz państwowego długu publicznego określa ustawa.",
+    "length": 112,
+    "word_count": 13
+  },
+  "coordinates": {
+    "determination": 0.736428,
+    "stability": 0.605892,
+    "entropy": 0.444974
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:51.920929",
+    "sequence_number": 808,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 53,
+    "cases": {
+      "nom": 11,
+      "gen": 12,
+      "dat": 4,
+      "voc": 2,
+      "acc": 10,
+      "loc": 4
+    },
+    "pos": {
+      "subst": 13,
+      "adj": 31,
+      "adv": 2,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 4.076923076923077,
+    "debug_tags": [
+      "Sposób:subst:sg:nom.acc:m3",
+      "Sposób:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Sposób:subst:sg:nom:m1",
+      "Sposób:pred",
+      "Sposób:impt:sg:sec:imperf",
+      "obliczania:ger:pl:nom.acc:n:imperf:aff",
+      "obliczania:ger:sg:gen:n:imperf:aff",
+      "wartości:subst:sg:gen:f",
+      "wartości:subst:sg:dat.loc:f",
+      "wartości:subst:sg:voc:f"
+    ],
+    "coords_count": 25
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6428
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=25, cases={'nom': 11, 'gen': 12, 'dat': 4, 'voc': 2, 'acc': 10, 'loc': 4}, pos={'subst': 13, 'adj': 31, 'adv': 2, 'conj': 1, 'interp': 1}",
+    "  MORPH_COORDS: [0.725, 0.674, 0.369]",
+    "  MORPH_TAGS: ['Sposób:subst:sg:nom.acc:m3', 'Sposób:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f', 'Sposób:subst:sg:nom:m1', 'Sposób:pred', 'Sposób:impt:sg:sec:imperf', 'obliczania:ger:pl:nom.acc:n:imperf:aff', 'obliczania:ger:sg:gen:n:imperf:aff', 'wartości:subst:sg:gen:f', 'wartości:subst:sg:dat.loc:f', 'wartości:subst:sg:voc:f']",
+    "  SYNTAX_COORDS: [0.800, 0.453, 0.582]",
+    "  FINAL: D=0.746, S=0.611, E=0.430"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.7468,
+    "quantum_words": 11,
+    "entanglements": 2,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:38.423269",
+  "content": {
+    "text": "Związki zawodowe oraz pracodawcy i ich organizacje mają prawo do\nrokowań, w szczególności w celu rozwiązywania sporów zbiorowych, oraz do\nzawierania układów zbiorowych pracy i innych porozumień.",
+    "length": 194,
+    "word_count": 27
+  },
+  "coordinates": {
+    "determination": 0.707468,
+    "stability": 0.604273,
+    "entropy": 0.493666
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:38.423269",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 174,
+    "saved_at": "2025-09-08T15:32:38.423877",
+    "file_counter": 174
+  },
+  "additional_metrics": {
+    "total_analyses": 71,
+    "cases": {
+      "nom": 13,
+      "gen": 21,
+      "acc": 8,
+      "dat": 3,
+      "loc": 7,
+      "voc": 2
+    },
+    "pos": {
+      "subst": 27,
+      "adj": 13,
+      "adv": 3,
+      "conj": 4,
+      "part": 2,
+      "prep": 6,
+      "interp": 3
+    },
+    "ambiguity": 2.6296296296296298,
+    "debug_tags": [
+      "Związki:depr:pl:nom.acc.voc:m2",
+      "Związki:subst:sg:gen:f",
+      "Związki:subst:pl:nom.acc.voc:f",
+      "Związki:subst:pl:nom.acc.voc:m3",
+      "zawodowe:adj:pl:acc:m2.m3.f.n:pos",
+      "zawodowe:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "zawodowe:adj:sg:acc:n:pos",
+      "zawodowe:adj:sg:nom.voc:n:pos",
+      "oraz:adv",
+      "oraz:conj"
+    ],
+    "coords_count": 45
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6162
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.025,
+    "quantum_words": 19,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.227893,
+    "formula": "0.717 × 0.609 × 0.521 = 0.228"
+  },
+  "sentence_number": 174,
+  "total_sentences": 805
+}

@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:49.258543",
+  "content": {
+    "text": "Zasady i tryb wyborów oraz odwoływania organów wykonawczych\njednostek samorządu terytorialnego określa ustawa.",
+    "length": 110,
+    "word_count": 13
+  },
+  "coordinates": {
+    "determination": 0.719563,
+    "stability": 0.594832,
+    "entropy": 0.488383
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:49.258543",
+    "sequence_number": 649,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 33,
+    "cases": {
+      "nom": 7,
+      "gen": 15,
+      "acc": 2,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 17,
+      "part": 1,
+      "conj": 2,
+      "adv": 1,
+      "adj": 5,
+      "interp": 1
+    },
+    "ambiguity": 2.5384615384615383,
+    "debug_tags": [
+      "Zasady:subst:pl:nom.acc.voc:n:pt",
+      "Zasady:subst:sg:gen:f",
+      "Zasady:subst:pl:nom.acc.voc:f",
+      "Zasady:subst:sg:gen:f",
+      "Zasady:subst:pl:nom.acc.voc:f",
+      "Zasady:subst:sg:gen:m1",
+      "Zasady:depr:pl:nom.acc.voc:m2",
+      "i:interj",
+      "i:part",
+      "i:conj"
+    ],
+    "coords_count": 24
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6198
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=24, cases={'nom': 7, 'gen': 15, 'acc': 2, 'loc': 1}, pos={'subst': 17, 'part': 1, 'conj': 2, 'adv': 1, 'adj': 5, 'interp': 1}",
+    "  MORPH_COORDS: [0.707, 0.648, 0.412]",
+    "  MORPH_TAGS: ['Zasady:subst:pl:nom.acc.voc:n:pt', 'Zasady:subst:sg:gen:f', 'Zasady:subst:pl:nom.acc.voc:f', 'Zasady:subst:sg:gen:f', 'Zasady:subst:pl:nom.acc.voc:f', 'Zasady:subst:sg:gen:m1', 'Zasady:depr:pl:nom.acc.voc:m2', 'i:interj', 'i:part', 'i:conj']",
+    "  SYNTAX_COORDS: [0.800, 0.452, 0.661]",
+    "  FINAL: D=0.730, S=0.600, E=0.473"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.142,
+    "quantum_words": 10,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

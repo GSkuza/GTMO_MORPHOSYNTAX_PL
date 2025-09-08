@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:51.349473",
+  "content": {
+    "text": "Organizację oraz tryb działania Najwyższej Izby Kontroli określa\nustawa.",
+    "length": 72,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.763878,
+    "stability": 0.666581,
+    "entropy": 0.381981
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:51.349473",
+    "sequence_number": 775,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 26,
+    "cases": {
+      "acc": 1,
+      "nom": 8,
+      "gen": 9,
+      "dat": 2,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 15,
+      "adv": 1,
+      "conj": 1,
+      "adj": 3,
+      "interp": 1
+    },
+    "ambiguity": 2.888888888888889,
+    "debug_tags": [
+      "Organizację:subst:sg:acc:f",
+      "oraz:adv",
+      "oraz:conj",
+      "tryb:subst:sg:nom.acc:m3",
+      "tryb:subst:pl:gen:f",
+      "tryb:impt:sg:sec:imperf",
+      "działania:subst:sg:gen:n:ncol",
+      "działania:subst:pl:nom.acc.voc:n:ncol",
+      "działania:ger:pl:nom.acc:n:imperf:aff",
+      "działania:ger:sg:gen:n:imperf:aff"
+    ],
+    "coords_count": 17
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6909
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=17, cases={'acc': 1, 'nom': 8, 'gen': 9, 'dat': 2, 'loc': 1}, pos={'subst': 15, 'adv': 1, 'conj': 1, 'adj': 3, 'interp': 1}",
+    "  MORPH_COORDS: [0.763, 0.737, 0.307]",
+    "  MORPH_TAGS: ['Organizację:subst:sg:acc:f', 'oraz:adv', 'oraz:conj', 'tryb:subst:sg:nom.acc:m3', 'tryb:subst:pl:gen:f', 'tryb:impt:sg:sec:imperf', 'działania:subst:sg:gen:n:ncol', 'działania:subst:pl:nom.acc.voc:n:ncol', 'działania:ger:pl:nom.acc:n:imperf:aff', 'działania:ger:sg:gen:n:imperf:aff']",
+    "  SYNTAX_COORDS: [0.809, 0.450, 0.570]",
+    "  FINAL: D=0.774, S=0.672, E=0.367"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.3145,
+    "quantum_words": 7,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

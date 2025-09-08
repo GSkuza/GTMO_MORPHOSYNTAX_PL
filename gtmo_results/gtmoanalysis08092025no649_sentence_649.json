@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:49.556234",
+  "content": {
+    "text": "Organizację Trybunału Konstytucyjnego oraz tryb postępowania\nprzed Trybunałem określa ustawa.",
+    "length": 93,
+    "word_count": 10
+  },
+  "coordinates": {
+    "determination": 0.760169,
+    "stability": 0.654861,
+    "entropy": 0.368659
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:49.556234",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 649,
+    "saved_at": "2025-09-08T15:32:49.556699",
+    "file_counter": 649
+  },
+  "additional_metrics": {
+    "total_analyses": 19,
+    "cases": {
+      "acc": 3,
+      "gen": 5,
+      "nom": 4
+    },
+    "pos": {
+      "subst": 8,
+      "adj": 2,
+      "adv": 1,
+      "conj": 1,
+      "prep": 2,
+      "interp": 1
+    },
+    "ambiguity": 1.9,
+    "debug_tags": [
+      "Organizację:subst:sg:acc:f",
+      "Trybunału:subst:sg:gen:m3",
+      "Konstytucyjnego:adj:sg:acc:m1.m2:pos",
+      "Konstytucyjnego:adj:sg:gen:m1.m2.m3.n:pos",
+      "oraz:adv",
+      "oraz:conj",
+      "tryb:subst:sg:nom.acc:m3",
+      "tryb:subst:pl:gen:f",
+      "tryb:impt:sg:sec:imperf",
+      "postępowania:ger:pl:nom.acc:n:imperf:aff"
+    ],
+    "coords_count": 18
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6899
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8466,
+    "quantum_words": 7,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.328474,
+    "formula": "0.770 × 0.660 × 0.646 = 0.328"
+  },
+  "sentence_number": 649,
+  "total_sentences": 805
+}

@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:38.497748",
+  "content": {
+    "text": "Wszyscy mają prawo do równego\ntraktowania przez władze publiczne.",
+    "length": 65,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.780232,
+    "stability": 0.686934,
+    "entropy": 0.315945
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:38.497748",
+    "sequence_number": 95,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 24,
+    "cases": {
+      "nom": 9,
+      "voc": 1,
+      "gen": 5,
+      "acc": 4
+    },
+    "pos": {
+      "subst": 9,
+      "adj": 7,
+      "adv": 1,
+      "prep": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.6666666666666665,
+    "debug_tags": [
+      "Wszyscy:subst:pl:nom:m1:pt",
+      "Wszyscy:subst:pl:voc:m1:pt",
+      "Wszyscy:adj:pl:nom.voc:m1:pos",
+      "mają:fin:pl:ter:imperf",
+      "mają:fin:pl:ter:imperf",
+      "mają:subst:sg:inst:f",
+      "prawo:subst:sg:nom.acc.voc:n:ncol",
+      "prawo:adv:pos",
+      "do:prep:gen",
+      "do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol"
+    ],
+    "coords_count": 22
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7234
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=22, cases={'nom': 9, 'voc': 1, 'gen': 5, 'acc': 4}, pos={'subst': 9, 'adj': 7, 'adv': 1, 'prep': 2, 'interp': 1}",
+    "  MORPH_COORDS: [0.785, 0.761, 0.268]",
+    "  MORPH_TAGS: ['Wszyscy:subst:pl:nom:m1:pt', 'Wszyscy:subst:pl:voc:m1:pt', 'Wszyscy:adj:pl:nom.voc:m1:pos', 'mają:fin:pl:ter:imperf', 'mają:fin:pl:ter:imperf', 'mają:subst:sg:inst:f', 'prawo:subst:sg:nom.acc.voc:n:ncol', 'prawo:adv:pos', 'do:prep:gen', 'do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol']",
+    "  SYNTAX_COORDS: [0.809, 0.456, 0.413]",
+    "  FINAL: D=0.790, S=0.692, E=0.301"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.3311,
+    "quantum_words": 8,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

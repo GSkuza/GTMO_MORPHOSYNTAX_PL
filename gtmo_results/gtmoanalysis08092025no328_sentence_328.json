@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:41.773711",
+  "content": {
+    "text": "Ważność wyborów do Sejmu i Senatu stwierdza Sąd Najwyższy.",
+    "length": 58,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.760953,
+    "stability": 0.633375,
+    "entropy": 0.419828
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:41.773711",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 328,
+    "saved_at": "2025-09-08T15:32:41.774217",
+    "file_counter": 328
+  },
+  "additional_metrics": {
+    "total_analyses": 18,
+    "cases": {
+      "nom": 5,
+      "acc": 2,
+      "gen": 5,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 10,
+      "prep": 1,
+      "part": 1,
+      "conj": 1,
+      "adj": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.0,
+    "debug_tags": [
+      "Ważność:subst:sg:nom:f",
+      "Ważność:subst:sg:acc:f",
+      "wyborów:subst:pl:gen:n:pt",
+      "wyborów:subst:pl:gen:m3",
+      "do:prep:gen",
+      "do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "Sejmu:subst:sg:gen:m3",
+      "i:interj",
+      "i:part",
+      "i:conj"
+    ],
+    "coords_count": 19
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6684
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0721,
+    "quantum_words": 7,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.292918,
+    "formula": "0.771 × 0.638 × 0.595 = 0.293"
+  },
+  "sentence_number": 328,
+  "total_sentences": 805
+}

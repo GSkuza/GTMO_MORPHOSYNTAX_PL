@@ -1,0 +1,83 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:39.986990",
+  "content": {
+    "text": "Osoba, której pochodzenie polskie zostało stwierdzone zgodnie z ustawą,\nmoże osiedlić się na terytorium Rzeczypospolitej Polskiej na stałe.",
+    "length": 139,
+    "word_count": 18
+  },
+  "coordinates": {
+    "determination": 0.71401,
+    "stability": 0.642966,
+    "entropy": 0.390516
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:39.986990",
+    "sequence_number": 169,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 55,
+    "cases": {
+      "nom": 17,
+      "dat": 5,
+      "gen": 6,
+      "loc": 5,
+      "acc": 6
+    },
+    "pos": {
+      "subst": 18,
+      "interp": 3,
+      "adj": 14,
+      "adv": 1,
+      "prep": 6,
+      "part": 3
+    },
+    "ambiguity": 3.0555555555555554,
+    "debug_tags": [
+      "Osoba:subst:sg:nom:f",
+      "Osoba:subst:sg:nom:f",
+      "Osoba:subst:sg:nom:m1",
+      ",:interp",
+      ",:interp",
+      "której:adj:sg:dat:f:pos",
+      "której:adj:sg:gen:f:pos",
+      "której:adj:sg:loc:f:pos",
+      "pochodzenie:ger:sg:nom.acc:n:imperf:aff",
+      "pochodzenie:ger:sg:nom.acc:n:perf:aff"
+    ],
+    "coords_count": 31
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6613
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=31, cases={'nom': 17, 'dat': 5, 'gen': 6, 'loc': 5, 'acc': 6}, pos={'subst': 18, 'interp': 3, 'adj': 14, 'adv': 1, 'prep': 6, 'part': 3}",
+    "  MORPH_COORDS: [0.741, 0.713, 0.325]",
+    "  MORPH_TAGS: ['Osoba:subst:sg:nom:f', 'Osoba:subst:sg:nom:f', 'Osoba:subst:sg:nom:m1', ',:interp', ',:interp', 'której:adj:sg:dat:f:pos', 'której:adj:sg:gen:f:pos', 'której:adj:sg:loc:f:pos', 'pochodzenie:ger:sg:nom.acc:n:imperf:aff', 'pochodzenie:ger:sg:nom.acc:n:perf:aff']",
+    "  SYNTAX_COORDS: [0.673, 0.451, 0.531]",
+    "  FINAL: D=0.724, S=0.648, E=0.376"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.1285,
+    "quantum_words": 11,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

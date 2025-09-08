@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:37.712323",
+  "content": {
+    "text": "Wolność religii obejmuje\ntakże posiadanie świątyń i innych miejsc kultu w zależności od potrzeb ludzi\nwierzących oraz prawo osób do korzystania z pomocy religijnej tam, gdzie się\nznajdują.",
+    "length": 188,
+    "word_count": 28
+  },
+  "coordinates": {
+    "determination": 0.639104,
+    "stability": 0.555633,
+    "entropy": 0.549865
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:37.712323",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 144,
+    "saved_at": "2025-09-08T15:32:37.712841",
+    "file_counter": 144
+  },
+  "additional_metrics": {
+    "total_analyses": 72,
+    "cases": {
+      "nom": 9,
+      "acc": 6,
+      "gen": 25,
+      "dat": 4,
+      "loc": 7,
+      "voc": 2
+    },
+    "pos": {
+      "subst": 33,
+      "part": 6,
+      "conj": 2,
+      "adj": 9,
+      "prep": 6,
+      "adv": 4,
+      "interp": 2
+    },
+    "ambiguity": 2.5714285714285716,
+    "debug_tags": [
+      "Wolność:subst:sg:nom:f",
+      "Wolność:subst:sg:acc:f",
+      "religii:subst:sg:gen:f",
+      "religii:subst:sg:dat.loc:f",
+      "religii:subst:pl:gen:f",
+      "obejmuje:fin:sg:ter:imperf",
+      "także:part",
+      "posiadanie:ger:sg:nom.acc:n:imperf:aff",
+      "posiadanie:ger:sg:nom.acc:n:perf:aff",
+      "posiadanie:subst:sg:nom.acc.voc:n:ncol"
+    ],
+    "coords_count": 59
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5574
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8032,
+    "quantum_words": 21,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.169267,
+    "formula": "0.649 × 0.561 × 0.465 = 0.169"
+  },
+  "sentence_number": 144,
+  "total_sentences": 805
+}

@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:40.834569",
+  "content": {
+    "text": "Jeżeli wynika to z ratyfikowanej przez Rzeczpospolitą Polską umowy\nkonstytuującej organizację międzynarodową, prawo przez nią stanowione jest\nstosowane bezpośrednio, mając pierwszeństwo w przypadku kolizji z ustawami.",
+    "length": 217,
+    "word_count": 26
+  },
+  "coordinates": {
+    "determination": 0.690462,
+    "stability": 0.625208,
+    "entropy": 0.461303
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:40.834569",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 288,
+    "saved_at": "2025-09-08T15:32:40.835097",
+    "file_counter": 288
+  },
+  "additional_metrics": {
+    "total_analyses": 67,
+    "cases": {
+      "acc": 15,
+      "nom": 12,
+      "gen": 8,
+      "loc": 3,
+      "voc": 2,
+      "dat": 1
+    },
+    "pos": {
+      "conj": 1,
+      "part": 3,
+      "adj": 12,
+      "subst": 23,
+      "prep": 8,
+      "interp": 3,
+      "adv": 2
+    },
+    "ambiguity": 2.576923076923077,
+    "debug_tags": [
+      "Jeżeli:comp",
+      "wynika:fin:sg:ter:imperf",
+      "to:conj",
+      "to:part",
+      "to:adj:sg:acc:n:pos",
+      "to:adj:sg:nom.voc:n:pos",
+      "to:subst:sg:nom:n:ncol",
+      "to:subst:sg:acc:n:ncol",
+      "to:comp",
+      "to:pred"
+    ],
+    "coords_count": 43
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6254
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0246,
+    "quantum_words": 18,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.244422,
+    "formula": "0.700 × 0.630 × 0.554 = 0.244"
+  },
+  "sentence_number": 288,
+  "total_sentences": 805
+}

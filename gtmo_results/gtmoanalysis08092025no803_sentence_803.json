@@ -1,0 +1,75 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:53.949811",
+  "content": {
+    "text": "Nr 106, poz. 488)",
+    "length": 17,
+    "word_count": 4
+  },
+  "coordinates": {
+    "determination": 0.836292,
+    "stability": 0.839163,
+    "entropy": 0.153034
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:53.949811",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 803,
+    "saved_at": "2025-09-08T15:32:53.950791",
+    "file_counter": 803
+  },
+  "additional_metrics": {
+    "total_analyses": 8,
+    "cases": {
+      "nom": 1
+    },
+    "pos": {
+      "subst": 1,
+      "interp": 3
+    },
+    "ambiguity": 2.0,
+    "debug_tags": [
+      "Nr:subst:sg:nom.acc:m3",
+      "Nr:brev:npun",
+      "106:dig",
+      ",:interp",
+      "poz:brev:pun",
+      ".:interp",
+      "488:dig",
+      "):interp"
+    ],
+    "coords_count": 5
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "high",
+    "entropy": "low",
+    "overall": "high_quality",
+    "overall_score": 0.8404
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.98,
+    "quantum_words": 1,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "topology": {
+    "attractor": "Ψᴷ",
+    "distance": 0.026002084512984695,
+    "in_basin": true
+  },
+  "quantum_tensor": {
+    "value": 0.606493,
+    "formula": "0.840 × 0.839 × 0.861 = 0.606"
+  },
+  "sentence_number": 803,
+  "total_sentences": 805
+}

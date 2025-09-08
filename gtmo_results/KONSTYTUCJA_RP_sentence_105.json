@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:38.880922",
+  "content": {
+    "text": "Art. 35. 1. Rzeczpospolita Polska zapewnia obywatelom polskim należącym do\nmniejszości narodowych i etnicznych wolność zachowania i rozwoju własnego\njęzyka, zachowania obyczajów i tradycji oraz rozwoju własnej kultury.\n\nMniejszości narodowe i etniczne mają prawo do tworzenia własnych\ninstytucji edukacyjnych, kulturalnych i instytucji służących ochronie tożsamości\nreligijnej oraz do uczestnictwa w rozstrzyganiu spraw dotyczących ich tożsamości\nkulturowej.\nArt. 36.",
+    "length": 467,
+    "word_count": 58
+  },
+  "coordinates": {
+    "determination": 0.699723,
+    "stability": 0.630678,
+    "entropy": 0.454459
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:38.880922",
+    "sequence_number": 105,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 188,
+    "cases": {
+      "nom": 30,
+      "voc": 9,
+      "gen": 48,
+      "dat": 20,
+      "loc": 21,
+      "acc": 16
+    },
+    "pos": {
+      "subst": 85,
+      "interp": 9,
+      "adj": 44,
+      "prep": 5,
+      "part": 5,
+      "conj": 7,
+      "adv": 3
+    },
+    "ambiguity": 3.2413793103448274,
+    "debug_tags": [
+      "Art:brev:pun",
+      "Art:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Art:subst:sg:nom:m1",
+      "Art:brev:pun",
+      "Art:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Art:subst:sg:nom:m1",
+      ".:interp",
+      ".:interp",
+      ".:interp",
+      ".:interp"
+    ],
+    "coords_count": 90
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6328
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=90, cases={'nom': 30, 'voc': 9, 'gen': 48, 'dat': 20, 'loc': 21, 'acc': 16}, pos={'subst': 85, 'interp': 9, 'adj': 44, 'prep': 5, 'part': 5, 'conj': 7, 'adv': 3}",
+    "  MORPH_COORDS: [0.735, 0.703, 0.340]",
+    "  MORPH_TAGS: ['Art:brev:pun', 'Art:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f', 'Art:subst:sg:nom:m1', 'Art:brev:pun', 'Art:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f', 'Art:subst:sg:nom:m1', '.:interp', '.:interp', '.:interp', '.:interp']",
+    "  SYNTAX_COORDS: [0.643, 0.455, 0.705]",
+    "  FINAL: D=0.710, S=0.636, E=0.439"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.8702,
+    "quantum_words": 39,
+    "entanglements": 17,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

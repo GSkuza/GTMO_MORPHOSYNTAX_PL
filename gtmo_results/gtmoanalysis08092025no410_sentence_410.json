@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:43.660514",
+  "content": {
+    "text": "Rada Ministrów może uznać uchwalony przez siebie projekt\nustawy za pilny, z wyjątkiem projektów ustaw podatkowych, ustaw dotyczących\nwyboru Prezydenta Rzeczypospolitej, Sejmu, Senatu oraz organów samorządu\nterytorialnego, ustaw regulujących ustrój i właściwość władz publicznych, a także\nkodeksów.",
+    "length": 297,
+    "word_count": 37
+  },
+  "coordinates": {
+    "determination": 0.640943,
+    "stability": 0.549954,
+    "entropy": 0.562463
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:43.660514",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 410,
+    "saved_at": "2025-09-08T15:32:43.661264",
+    "file_counter": 410
+  },
+  "additional_metrics": {
+    "total_analyses": 83,
+    "cases": {
+      "nom": 9,
+      "gen": 28,
+      "acc": 12,
+      "loc": 3,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 27,
+      "adj": 14,
+      "part": 6,
+      "prep": 7,
+      "interp": 7,
+      "adv": 1,
+      "conj": 3
+    },
+    "ambiguity": 2.2432432432432434,
+    "debug_tags": [
+      "Rada:subst:sg:nom:f",
+      "Rada:subst:sg:gen.acc:m1",
+      "Rada:adj:sg:nom:f:pos",
+      "Rada:winien:sg:f:imperf",
+      "Ministrów:subst:pl:gen.acc:m1",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "uznać:inf:perf",
+      "uchwalony:ppas:sg:acc:m3:perf:aff"
+    ],
+    "coords_count": 69
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5526
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9952,
+    "quantum_words": 29,
+    "entanglements": 10,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.163476,
+    "formula": "0.651 × 0.555 × 0.453 = 0.163"
+  },
+  "sentence_number": 410,
+  "total_sentences": 805
+}

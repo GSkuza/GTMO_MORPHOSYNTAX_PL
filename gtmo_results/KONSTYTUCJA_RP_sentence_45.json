@@ -1,0 +1,83 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:37.596620",
+  "content": {
+    "text": "W drodze ustawy można tworzyć samorządy zawodowe,\nreprezentujące osoby wykonujące zawody zaufania publicznego i sprawujące pieczę\nnad należytym wykonywaniem tych zawodów w granicach interesu publicznego i dla\njego ochrony.",
+    "length": 222,
+    "word_count": 29
+  },
+  "coordinates": {
+    "determination": 0.737373,
+    "stability": 0.671281,
+    "entropy": 0.403953
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:37.596620",
+    "sequence_number": 45,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 61,
+    "cases": {
+      "acc": 10,
+      "loc": 5,
+      "dat": 2,
+      "gen": 14,
+      "nom": 17
+    },
+    "pos": {
+      "prep": 7,
+      "subst": 17,
+      "adj": 15,
+      "interp": 2,
+      "part": 2,
+      "conj": 2
+    },
+    "ambiguity": 2.103448275862069,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "drodze:subst:sg:dat.loc:f",
+      "ustawy:subst:sg:gen:f",
+      "ustawy:subst:pl:nom.acc.voc:f",
+      "można:adj:sg:nom.voc:f:pos",
+      "można:pred",
+      "tworzyć:inf:imperf",
+      "samorządy:subst:pl:nom.acc.voc:m3",
+      "zawodowe:adj:pl:acc:m2.m3.f.n:pos"
+    ],
+    "coords_count": 48
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6751
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=48, cases={'acc': 10, 'loc': 5, 'dat': 2, 'gen': 14, 'nom': 17}, pos={'prep': 7, 'subst': 17, 'adj': 15, 'interp': 2, 'part': 2, 'conj': 2}",
+    "  MORPH_COORDS: [0.774, 0.747, 0.289]",
+    "  MORPH_TAGS: ['W:prep:acc:nwok', 'W:prep:loc:nwok', 'drodze:subst:sg:dat.loc:f', 'ustawy:subst:sg:gen:f', 'ustawy:subst:pl:nom.acc.voc:f', 'można:adj:sg:nom.voc:f:pos', 'można:pred', 'tworzyć:inf:imperf', 'samorządy:subst:pl:nom.acc.voc:m3', 'zawodowe:adj:pl:acc:m2.m3.f.n:pos']",
+    "  SYNTAX_COORDS: [0.665, 0.455, 0.704]",
+    "  FINAL: D=0.747, S=0.676, E=0.389"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.1907,
+    "quantum_words": 24,
+    "entanglements": 7,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

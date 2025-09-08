@@ -1,0 +1,77 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:47.585344",
+  "content": {
+    "text": "Jednostki samorządu terytorialnego mają prawo zrzeszania się.",
+    "length": 61,
+    "word_count": 7
+  },
+  "coordinates": {
+    "determination": 0.757738,
+    "stability": 0.641271,
+    "entropy": 0.394459
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:47.585344",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 578,
+    "saved_at": "2025-09-08T15:32:47.585844",
+    "file_counter": 578
+  },
+  "additional_metrics": {
+    "total_analyses": 14,
+    "cases": {
+      "gen": 4,
+      "nom": 3,
+      "acc": 1
+    },
+    "pos": {
+      "subst": 5,
+      "adj": 2,
+      "adv": 1,
+      "part": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.0,
+    "debug_tags": [
+      "Jednostki:subst:sg:gen:f",
+      "Jednostki:subst:pl:nom.acc.voc:f",
+      "samorządu:subst:sg:gen:m3",
+      "terytorialnego:adj:sg:acc:m1.m2:pos",
+      "terytorialnego:adj:sg:gen:m1.m2.m3.n:pos",
+      "mają:fin:pl:ter:imperf",
+      "mają:fin:pl:ter:imperf",
+      "mają:subst:sg:inst:f",
+      "prawo:subst:sg:nom.acc.voc:n:ncol",
+      "prawo:adv:pos"
+    ],
+    "coords_count": 13
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6771
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.208,
+    "quantum_words": 5,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.307892,
+    "formula": "0.768 × 0.646 × 0.621 = 0.308"
+  },
+  "sentence_number": 578,
+  "total_sentences": 805
+}

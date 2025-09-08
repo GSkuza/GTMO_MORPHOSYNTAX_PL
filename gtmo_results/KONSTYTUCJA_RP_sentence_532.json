@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:46.976598",
+  "content": {
+    "text": "Prezydent Rzeczypospolitej nadaje ordery i odznaczenia.",
+    "length": 55,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.791083,
+    "stability": 0.716287,
+    "entropy": 0.329578
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:46.976598",
+    "sequence_number": 532,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 15,
+    "cases": {
+      "nom": 5,
+      "gen": 3,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 7,
+      "part": 1,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.5,
+    "debug_tags": [
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "nadaje:fin:sg:ter:perf",
+      "nadaje:fin:sg:ter:imperf",
+      "ordery:subst:pl:nom.acc.voc:m3",
+      "i:interj",
+      "i:part",
+      "i:conj"
+    ],
+    "coords_count": 11
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "high",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7324
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=11, cases={'nom': 5, 'gen': 3, 'dat': 1}, pos={'subst': 7, 'part': 1, 'conj': 1, 'interp': 1}",
+    "  MORPH_COORDS: [0.771, 0.758, 0.286]",
+    "  MORPH_TAGS: ['Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f', 'Prezydent:subst:sg:nom:m1', 'Rzeczypospolitej:subst:sg:gen:f', 'Rzeczypospolitej:subst:sg:dat.loc:f', 'nadaje:fin:sg:ter:perf', 'nadaje:fin:sg:ter:imperf', 'ordery:subst:pl:nom.acc.voc:m3', 'i:interj', 'i:part', 'i:conj']",
+    "  SYNTAX_COORDS: [0.900, 0.600, 0.410]",
+    "  FINAL: D=0.801, S=0.721, E=0.315"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.2897,
+    "quantum_words": 4,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

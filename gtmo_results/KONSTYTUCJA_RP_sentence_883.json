@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:53.401250",
+  "content": {
+    "text": "Z\nwnioskiem w tej sprawie podmioty te zwracają się do Marszałka Sejmu, który\nzarządza niezwłocznie przeprowadzenie referendum w ciągu 60 dni od dnia złożenia\nwniosku.",
+    "length": 166,
+    "word_count": 25
+  },
+  "coordinates": {
+    "determination": 0.717454,
+    "stability": 0.623039,
+    "entropy": 0.412758
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:53.401250",
+    "sequence_number": 883,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 54,
+    "cases": {
+      "gen": 16,
+      "acc": 4,
+      "loc": 6,
+      "dat": 3,
+      "nom": 11,
+      "voc": 3
+    },
+    "pos": {
+      "prep": 8,
+      "part": 2,
+      "subst": 25,
+      "adj": 7,
+      "interp": 2,
+      "adv": 1
+    },
+    "ambiguity": 2.16,
+    "debug_tags": [
+      "Z:prep:gen:nwok",
+      "Z:prep:inst:nwok",
+      "Z:part:nwok",
+      "wnioskiem:subst:sg:inst:m3",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "tej:adj:sg:dat:f:pos",
+      "tej:adj:sg:gen:f:pos"
+    ],
+    "coords_count": 44
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6501
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=44, cases={'gen': 16, 'acc': 4, 'loc': 6, 'dat': 3, 'nom': 11, 'voc': 3}, pos={'prep': 8, 'part': 2, 'subst': 25, 'adj': 7, 'interp': 2, 'adv': 1}",
+    "  MORPH_COORDS: [0.736, 0.685, 0.364]",
+    "  MORPH_TAGS: ['Z:prep:gen:nwok', 'Z:prep:inst:nwok', 'Z:part:nwok', 'wnioskiem:subst:sg:inst:m3', 'w:prep:acc:nwok', 'w:prep:loc:nwok', 'w:prep:acc:nwok', 'w:prep:loc:nwok', 'tej:adj:sg:dat:f:pos', 'tej:adj:sg:gen:f:pos']",
+    "  SYNTAX_COORDS: [0.700, 0.453, 0.502]",
+    "  FINAL: D=0.727, S=0.628, E=0.398"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.1577,
+    "quantum_words": 18,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

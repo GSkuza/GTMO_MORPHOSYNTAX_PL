@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:42.662114",
+  "content": {
+    "text": "Marszałek Sejmu przewodniczy obradom Sejmu, strzeże praw Sejmu oraz\nreprezentuje Sejm na zewnątrz.",
+    "length": 98,
+    "word_count": 13
+  },
+  "coordinates": {
+    "determination": 0.773122,
+    "stability": 0.638257,
+    "entropy": 0.374025
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:42.662114",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 363,
+    "saved_at": "2025-09-08T15:32:42.662474",
+    "file_counter": 363
+  },
+  "additional_metrics": {
+    "total_analyses": 28,
+    "cases": {
+      "nom": 7,
+      "gen": 5,
+      "acc": 2,
+      "dat": 2,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 11,
+      "adj": 3,
+      "interp": 2,
+      "adv": 2,
+      "conj": 1,
+      "prep": 3
+    },
+    "ambiguity": 2.1538461538461537,
+    "debug_tags": [
+      "Marszałek:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Marszałek:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Marszałek:subst:sg:nom:m1",
+      "Marszałek:subst:sg:nom:m1",
+      "Sejmu:subst:sg:gen:m3",
+      "Sejmu:subst:sg:gen:m3",
+      "Sejmu:subst:sg:gen:m3",
+      "przewodniczy:fin:sg:ter:imperf",
+      "przewodniczy:adj:pl:nom.voc:m1:pos",
+      "przewodniczy:adj:sg:acc:m3:pos"
+    ],
+    "coords_count": 21
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6885
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9433,
+    "quantum_words": 8,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.322891,
+    "formula": "0.783 × 0.643 × 0.641 = 0.323"
+  },
+  "sentence_number": 363,
+  "total_sentences": 805
+}

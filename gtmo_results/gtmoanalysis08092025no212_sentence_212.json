@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:39.167219",
+  "content": {
+    "text": "Władze publiczne popierają rozwój kultury fizycznej, zwłaszcza wśród dzieci\ni młodzieży.",
+    "length": 88,
+    "word_count": 11
+  },
+  "coordinates": {
+    "determination": 0.727049,
+    "stability": 0.638915,
+    "entropy": 0.372332
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:39.167219",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 212,
+    "saved_at": "2025-09-08T15:32:39.167571",
+    "file_counter": 212
+  },
+  "additional_metrics": {
+    "total_analyses": 25,
+    "cases": {
+      "nom": 6,
+      "acc": 2,
+      "gen": 6,
+      "dat": 2,
+      "loc": 1,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 10,
+      "adj": 7,
+      "interp": 2,
+      "part": 2,
+      "prep": 1,
+      "conj": 1
+    },
+    "ambiguity": 2.272727272727273,
+    "debug_tags": [
+      "Władze:subst:pl:nom.acc.voc:f",
+      "publiczne:adj:pl:acc:m2.m3.f.n:pos",
+      "publiczne:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "publiczne:adj:sg:acc:n:pos",
+      "publiczne:adj:sg:nom.voc:n:pos",
+      "popierają:fin:pl:ter:imperf",
+      "rozwój:subst:sg:nom.acc:m3",
+      "kultury:subst:sg:gen:f",
+      "kultury:subst:pl:nom.acc.voc:f",
+      "fizycznej:adj:sg:dat:f:pos"
+    ],
+    "coords_count": 21
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6708
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.2139,
+    "quantum_words": 8,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.305009,
+    "formula": "0.737 × 0.644 × 0.643 = 0.305"
+  },
+  "sentence_number": 212,
+  "total_sentences": 805
+}

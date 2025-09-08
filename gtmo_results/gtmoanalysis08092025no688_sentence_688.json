@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:50.423784",
+  "content": {
+    "text": "Rzecznik Praw Obywatelskich jest w swojej działalności niezawisły,\nniezależny od innych organów państwowych i odpowiada jedynie przed Sejmem na\nzasadach określonych w ustawie.",
+    "length": 175,
+    "word_count": 23
+  },
+  "coordinates": {
+    "determination": 0.645494,
+    "stability": 0.617353,
+    "entropy": 0.455333
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:50.423784",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 688,
+    "saved_at": "2025-09-08T15:32:50.424160",
+    "file_counter": 688
+  },
+  "additional_metrics": {
+    "total_analyses": 59,
+    "cases": {
+      "nom": 5,
+      "gen": 16,
+      "acc": 11,
+      "loc": 10,
+      "dat": 3,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 18,
+      "adj": 19,
+      "prep": 9,
+      "interp": 2,
+      "part": 2,
+      "conj": 1
+    },
+    "ambiguity": 2.5652173913043477,
+    "debug_tags": [
+      "Rzecznik:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Rzecznik:subst:sg:nom:m1",
+      "Praw:adjc",
+      "Praw:subst:pl:gen:n:ncol",
+      "Praw:impt:sg:sec:imperf",
+      "Obywatelskich:adj:pl:acc:m1:pos",
+      "Obywatelskich:adj:pl:gen:m1.m2.m3.f.n:pos",
+      "Obywatelskich:adj:pl:loc:m1.m2.m3.f.n:pos",
+      "jest:fin:sg:ter:imperf",
+      "w:prep:acc:nwok"
+    ],
+    "coords_count": 42
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6068
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9084,
+    "quantum_words": 17,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.228316,
+    "formula": "0.655 × 0.622 × 0.560 = 0.228"
+  },
+  "sentence_number": 688,
+  "total_sentences": 805
+}

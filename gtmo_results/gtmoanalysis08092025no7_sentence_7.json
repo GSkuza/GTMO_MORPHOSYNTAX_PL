@@ -1,0 +1,75 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:35.048725",
+  "content": {
+    "text": "Rozdział I\nRZECZPOSPOLITA\nArt. 1.",
+    "length": 33,
+    "word_count": 5
+  },
+  "coordinates": {
+    "determination": 0.714685,
+    "stability": 0.72813,
+    "entropy": 0.289299
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:35.048725",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 7,
+    "saved_at": "2025-09-08T15:32:35.049698",
+    "file_counter": 7
+  },
+  "additional_metrics": {
+    "total_analyses": 16,
+    "cases": {
+      "nom": 5,
+      "voc": 2
+    },
+    "pos": {
+      "subst": 7,
+      "part": 1,
+      "conj": 1,
+      "interp": 2
+    },
+    "ambiguity": 3.2,
+    "debug_tags": [
+      "Rozdział:praet:sg:m1.m2.m3:perf",
+      "Rozdział:subst:sg:nom.acc:m3",
+      "I:interj",
+      "I:part",
+      "I:romandig",
+      "I:conj",
+      "RZECZPOSPOLITA:subst:sg:nom:f",
+      "RZECZPOSPOLITA:subst:sg:voc:f",
+      "RZECZPOSPOLITA:subst:sg:nom:f",
+      "RZECZPOSPOLITA:subst:sg:voc:f"
+    ],
+    "coords_count": 9
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "high",
+    "entropy": "low",
+    "overall": "high_quality",
+    "overall_score": 0.7175
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.7108,
+    "quantum_words": 3,
+    "entanglements": 0,
+    "superposition_type": "MIXED_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.385557,
+    "formula": "0.725 × 0.733 × 0.726 = 0.386"
+  },
+  "sentence_number": 7,
+  "total_sentences": 805
+}

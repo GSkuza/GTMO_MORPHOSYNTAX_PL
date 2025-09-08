@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:37.311021",
+  "content": {
+    "text": "Ograniczenie lub pozbawienie praw rodzicielskich może nastąpić tylko w\nprzypadkach określonych w ustawie i tylko na podstawie prawomocnego orzeczenia\nsądu.",
+    "length": 155,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.663996,
+    "stability": 0.610038,
+    "entropy": 0.47952
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:37.311021",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 123,
+    "saved_at": "2025-09-08T15:32:37.311585",
+    "file_counter": 123
+  },
+  "additional_metrics": {
+    "total_analyses": 48,
+    "cases": {
+      "nom": 6,
+      "gen": 8,
+      "acc": 7,
+      "loc": 7,
+      "dat": 2
+    },
+    "pos": {
+      "adv": 1,
+      "subst": 10,
+      "conj": 4,
+      "adj": 8,
+      "part": 4,
+      "prep": 6,
+      "interp": 1
+    },
+    "ambiguity": 2.4,
+    "debug_tags": [
+      "Ograniczenie:adv:pos",
+      "Ograniczenie:subst:sg:nom.acc.voc:n:ncol",
+      "Ograniczenie:ger:sg:nom.acc:n:perf:aff",
+      "lub:conj",
+      "lub:impt:sg:sec:imperf",
+      "pozbawienie:ger:sg:nom.acc:n:perf:aff",
+      "pozbawienie:subst:sg:nom.acc.voc:n:ncol",
+      "praw:adjc",
+      "praw:subst:pl:gen:n:ncol",
+      "praw:impt:sg:sec:imperf"
+    ],
+    "coords_count": 34
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6048
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0449,
+    "quantum_words": 13,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.221974,
+    "formula": "0.674 × 0.615 × 0.535 = 0.222"
+  },
+  "sentence_number": 123,
+  "total_sentences": 805
+}

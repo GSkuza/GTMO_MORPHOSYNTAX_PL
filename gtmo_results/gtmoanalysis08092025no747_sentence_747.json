@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:52.038068",
+  "content": {
+    "text": "W razie zewnętrznego zagrożenia państwa, zbrojnej napaści na\nterytorium Rzeczypospolitej Polskiej lub gdy z umowy międzynarodowej wynika\nzobowiązanie do wspólnej obrony przeciwko agresji, Prezydent Rzeczypospolitej na\nwniosek Rady Ministrów może wprowadzić stan wojenny na części albo na całym\nterytorium państwa.",
+    "length": 313,
+    "word_count": 40
+  },
+  "coordinates": {
+    "determination": 0.628463,
+    "stability": 0.58129,
+    "entropy": 0.523758
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:52.038068",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 747,
+    "saved_at": "2025-09-08T15:32:52.042376",
+    "file_counter": 747
+  },
+  "additional_metrics": {
+    "total_analyses": 116,
+    "cases": {
+      "acc": 8,
+      "loc": 14,
+      "voc": 5,
+      "gen": 29,
+      "nom": 23,
+      "dat": 14
+    },
+    "pos": {
+      "prep": 14,
+      "subst": 57,
+      "adj": 22,
+      "interp": 3,
+      "conj": 2,
+      "adv": 1,
+      "part": 3
+    },
+    "ambiguity": 2.9,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "razie:subst:sg:loc:m3",
+      "razie:subst:sg:voc:m3",
+      "razie:subst:sg:loc:m3",
+      "razie:subst:sg:voc:m3",
+      "zewnętrznego:adj:sg:acc:m1.m2:pos",
+      "zewnętrznego:adj:sg:gen:m1.m2.m3.n:pos",
+      "zagrożenia:subst:sg:gen:n:ncol",
+      "zagrożenia:subst:pl:nom.acc.voc:n:ncol"
+    ],
+    "coords_count": 70
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5686
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8289,
+    "quantum_words": 29,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.183884,
+    "formula": "0.638 × 0.586 × 0.491 = 0.184"
+  },
+  "sentence_number": 747,
+  "total_sentences": 805
+}

@@ -1,0 +1,83 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:53.821703",
+  "content": {
+    "text": "Tracą moc:\n\nustawa konstytucyjna z dnia 17 października 1992 r. o wzajemnych stosunkach\nmiędzy władzą ustawodawczą i wykonawczą Rzeczypospolitej Polskiej oraz o\nsamorządzie terytorialnym (Dz.",
+    "length": 191,
+    "word_count": 25
+  },
+  "coordinates": {
+    "determination": 0.664961,
+    "stability": 0.628416,
+    "entropy": 0.446026
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:53.821703",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 800,
+    "saved_at": "2025-09-08T15:32:53.822263",
+    "file_counter": 800
+  },
+  "additional_metrics": {
+    "total_analyses": 59,
+    "cases": {
+      "nom": 4,
+      "acc": 7,
+      "gen": 8,
+      "loc": 8,
+      "dat": 4,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 14,
+      "num": 2,
+      "interp": 4,
+      "adj": 14,
+      "prep": 8,
+      "part": 2,
+      "conj": 2,
+      "adv": 1
+    },
+    "ambiguity": 2.36,
+    "debug_tags": [
+      "Tracą:fin:pl:ter:imperf",
+      "moc:subst:sg:nom:f",
+      "moc:subst:sg:acc:f",
+      "moc:num:sg.pl:gen:m1.m2.m3.f.n:congr",
+      "moc:num:sg.pl:nom.acc:m1.m2.m3.f.n:rec",
+      "::interp",
+      "ustawa:subst:sg:nom:f",
+      "konstytucyjna:adj:sg:nom.voc:f:pos",
+      "z:prep:gen:nwok",
+      "z:prep:inst:nwok"
+    ],
+    "coords_count": 43
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6207
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.119,
+    "quantum_words": 16,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.243254,
+    "formula": "0.675 × 0.633 × 0.569 = 0.243"
+  },
+  "sentence_number": 800,
+  "total_sentences": 805
+}

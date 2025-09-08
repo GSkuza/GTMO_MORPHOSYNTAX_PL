@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:37.449392",
+  "content": {
+    "text": "Każdy ma prawo dostępu do dotyczących go urzędowych dokumentów i\nzbiorów danych.",
+    "length": 80,
+    "word_count": 12
+  },
+  "coordinates": {
+    "determination": 0.743246,
+    "stability": 0.61472,
+    "entropy": 0.451927
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:37.449392",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 130,
+    "saved_at": "2025-09-08T15:32:37.449887",
+    "file_counter": 130
+  },
+  "additional_metrics": {
+    "total_analyses": 33,
+    "cases": {
+      "acc": 6,
+      "nom": 5,
+      "gen": 12,
+      "loc": 4
+    },
+    "pos": {
+      "adj": 9,
+      "subst": 10,
+      "adv": 1,
+      "prep": 1,
+      "part": 1,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.75,
+    "debug_tags": [
+      "Każdy:adj:sg:acc:m3:pos",
+      "Każdy:adj:sg:nom.voc:m1.m2.m3:pos",
+      "ma:adj:sg:nom.voc:f:pos",
+      "ma:fin:sg:ter:imperf",
+      "prawo:subst:sg:nom.acc.voc:n:ncol",
+      "prawo:adv:pos",
+      "dostępu:subst:sg:gen:m3",
+      "do:prep:gen",
+      "do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "dotyczących:pact:pl:acc:m1:imperf:aff"
+    ],
+    "coords_count": 27
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6461
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9311,
+    "quantum_words": 11,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.262843,
+    "formula": "0.753 × 0.620 × 0.563 = 0.263"
+  },
+  "sentence_number": 130,
+  "total_sentences": 805
+}

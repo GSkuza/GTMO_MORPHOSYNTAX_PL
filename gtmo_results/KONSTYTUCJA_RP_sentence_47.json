@@ -1,0 +1,83 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:37.637091",
+  "content": {
+    "text": "Samorządy te nie mogą naruszać wolności wykonywania zawodu ani ograniczać\nwolności podejmowania działalności gospodarczej.",
+    "length": 122,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.74958,
+    "stability": 0.627824,
+    "entropy": 0.437378
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:37.637091",
+    "sequence_number": 47,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 39,
+    "cases": {
+      "nom": 8,
+      "voc": 4,
+      "acc": 3,
+      "gen": 10,
+      "dat": 4,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 18,
+      "adj": 5,
+      "conj": 2,
+      "part": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.7857142857142856,
+    "debug_tags": [
+      "Samorządy:subst:pl:nom.acc.voc:m3",
+      "te:ppron12:sg:voc:m1.m2.m3.f.n:sec",
+      "te:adj:pl:acc:m2.m3.f.n:pos",
+      "te:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "te:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "nie:conj",
+      "nie:interj",
+      "nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "nie:part"
+    ],
+    "coords_count": 21
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.657
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=21, cases={'nom': 8, 'voc': 4, 'acc': 3, 'gen': 10, 'dat': 4, 'loc': 1}, pos={'subst': 18, 'adj': 5, 'conj': 2, 'part': 2, 'interp': 1}",
+    "  MORPH_COORDS: [0.721, 0.682, 0.368]",
+    "  MORPH_TAGS: ['Samorządy:subst:pl:nom.acc.voc:m3', 'te:ppron12:sg:voc:m1.m2.m3.f.n:sec', 'te:adj:pl:acc:m2.m3.f.n:pos', 'te:adj:pl:nom.voc:m2.m3.f.n:pos', 'te:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol', 'nie:conj', 'nie:interj', 'nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep', 'nie:ppron3:sg:acc:n:ter:akc.nakc:praep', 'nie:part']",
+    "  SYNTAX_COORDS: [0.900, 0.453, 0.622]",
+    "  FINAL: D=0.760, S=0.633, E=0.422"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.4663,
+    "quantum_words": 9,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

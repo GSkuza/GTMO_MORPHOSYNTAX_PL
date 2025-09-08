@@ -1,0 +1,76 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:46.120562",
+  "content": {
+    "text": "Prezes Rady Ministrów jest zwierzchnikiem korpusu służby cywilnej.\nArt. 154. 1.",
+    "length": 79,
+    "word_count": 11
+  },
+  "coordinates": {
+    "determination": 0.718161,
+    "stability": 0.65779,
+    "entropy": 0.332903
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:46.120562",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 514,
+    "saved_at": "2025-09-08T15:32:46.120950",
+    "file_counter": 514
+  },
+  "additional_metrics": {
+    "total_analyses": 25,
+    "cases": {
+      "nom": 8,
+      "gen": 6,
+      "dat": 1,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 13,
+      "adj": 3,
+      "interp": 4
+    },
+    "ambiguity": 2.272727272727273,
+    "debug_tags": [
+      "Prezes:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezes:subst:sg:nom:m1",
+      "Rady:depr:pl:nom.acc.voc:m2",
+      "Rady:subst:pl:nom.acc.voc:m3",
+      "Rady:subst:sg:gen:f",
+      "Rady:subst:pl:nom.acc.voc:f",
+      "Rady:subst:sg:gen:m1",
+      "Ministrów:subst:pl:gen.acc:m1",
+      "jest:fin:sg:ter:imperf",
+      "zwierzchnikiem:subst:sg:inst:m1"
+    ],
+    "coords_count": 16
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6847
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.044,
+    "quantum_words": 7,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.329192,
+    "formula": "0.728 × 0.663 × 0.682 = 0.329"
+  },
+  "sentence_number": 514,
+  "total_sentences": 805
+}

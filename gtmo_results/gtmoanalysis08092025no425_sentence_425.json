@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:44.018676",
+  "content": {
+    "text": "Prezydent Rzeczypospolitej jest wybierany na pięcioletnią kadencję i może\nbyć ponownie wybrany tylko raz.",
+    "length": 105,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.685164,
+    "stability": 0.644064,
+    "entropy": 0.391182
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:44.018676",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 425,
+    "saved_at": "2025-09-08T15:32:44.019055",
+    "file_counter": 425
+  },
+  "additional_metrics": {
+    "total_analyses": 36,
+    "cases": {
+      "nom": 9,
+      "gen": 3,
+      "dat": 1,
+      "acc": 7,
+      "loc": 1,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 10,
+      "adj": 6,
+      "prep": 2,
+      "part": 3,
+      "conj": 2,
+      "adv": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.5714285714285716,
+    "debug_tags": [
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "jest:fin:sg:ter:imperf",
+      "wybierany:adj:sg:acc:m3:pos",
+      "wybierany:adj:sg:nom.voc:m1.m2.m3:pos",
+      "wybierany:ppas:sg:acc:m3:imperf:aff",
+      "wybierany:ppas:sg:nom.voc:m1.m2.m3:imperf:aff",
+      "na:prep:acc"
+    ],
+    "coords_count": 26
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6499
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.1554,
+    "quantum_words": 9,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.28147,
+    "formula": "0.695 × 0.649 × 0.624 = 0.281"
+  },
+  "sentence_number": 425,
+  "total_sentences": 805
+}

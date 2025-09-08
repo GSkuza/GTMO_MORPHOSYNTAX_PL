@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:38.071864",
+  "content": {
+    "text": "Cudzoziemcy mogą korzystać z prawa azylu w Rzeczypospolitej\nPolskiej na zasadach określonych w ustawie.",
+    "length": 103,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.693965,
+    "stability": 0.65006,
+    "entropy": 0.396507
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:38.071864",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 162,
+    "saved_at": "2025-09-08T15:32:38.072269",
+    "file_counter": 162
+  },
+  "additional_metrics": {
+    "total_analyses": 36,
+    "cases": {
+      "nom": 4,
+      "gen": 8,
+      "voc": 2,
+      "loc": 7,
+      "acc": 5,
+      "dat": 4
+    },
+    "pos": {
+      "subst": 14,
+      "prep": 8,
+      "part": 1,
+      "adj": 7,
+      "interp": 1
+    },
+    "ambiguity": 2.5714285714285716,
+    "debug_tags": [
+      "Cudzoziemcy:subst:pl:nom.voc:m1",
+      "mogą:fin:pl:ter:imperf",
+      "korzystać:inf:imperf",
+      "z:prep:gen:nwok",
+      "z:prep:inst:nwok",
+      "z:part:nwok",
+      "prawa:subst:sg:nom:f",
+      "prawa:subst:sg:voc:f",
+      "prawa:subst:sg:gen:n:ncol",
+      "prawa:subst:pl:nom.acc.voc:n:ncol"
+    ],
+    "coords_count": 26
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6537
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0291,
+    "quantum_words": 11,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.285212,
+    "formula": "0.704 × 0.655 × 0.618 = 0.285"
+  },
+  "sentence_number": 162,
+  "total_sentences": 805
+}

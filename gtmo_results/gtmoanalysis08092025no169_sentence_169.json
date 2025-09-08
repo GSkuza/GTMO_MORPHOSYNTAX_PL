@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:38.247600",
+  "content": {
+    "text": "Zakazane są zrzeszenia, których cel lub działalność są sprzeczne z\nKonstytucją lub ustawą.",
+    "length": 90,
+    "word_count": 13
+  },
+  "coordinates": {
+    "determination": 0.730131,
+    "stability": 0.660587,
+    "entropy": 0.403411
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:38.247600",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 169,
+    "saved_at": "2025-09-08T15:32:38.248880",
+    "file_counter": 169
+  },
+  "additional_metrics": {
+    "total_analyses": 34,
+    "cases": {
+      "nom": 10,
+      "acc": 6,
+      "gen": 5,
+      "loc": 1
+    },
+    "pos": {
+      "adj": 11,
+      "subst": 8,
+      "interp": 2,
+      "conj": 2,
+      "prep": 2,
+      "part": 1
+    },
+    "ambiguity": 2.6153846153846154,
+    "debug_tags": [
+      "Zakazane:ppas:pl:nom.acc.voc:m2.m3.f.n:perf:aff",
+      "Zakazane:ppas:sg:nom.acc.voc:n:perf:aff",
+      "Zakazane:adj:pl:acc:m2.m3.f.n:pos",
+      "Zakazane:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "Zakazane:adj:sg:acc:n:pos",
+      "Zakazane:adj:sg:nom.voc:n:pos",
+      "są:fin:pl:ter:imperf",
+      "są:fin:pl:ter:imperf",
+      "zrzeszenia:subst:sg:gen:n:ncol",
+      "zrzeszenia:subst:pl:nom.acc.voc:n:ncol"
+    ],
+    "coords_count": 20
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6692
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9832,
+    "quantum_words": 7,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.301282,
+    "formula": "0.740 × 0.666 × 0.612 = 0.301"
+  },
+  "sentence_number": 169,
+  "total_sentences": 805
+}

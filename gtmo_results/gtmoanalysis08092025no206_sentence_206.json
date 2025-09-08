@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:39.078815",
+  "content": {
+    "text": "Obywatel pozostający bez pracy nie z własnej woli i nie mający innych\nśrodków utrzymania ma prawo do zabezpieczenia społecznego, którego zakres i\nformy określa ustawa.",
+    "length": 167,
+    "word_count": 25
+  },
+  "coordinates": {
+    "determination": 0.741166,
+    "stability": 0.610487,
+    "entropy": 0.4694
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:39.078815",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 206,
+    "saved_at": "2025-09-08T15:32:39.079240",
+    "file_counter": 206
+  },
+  "additional_metrics": {
+    "total_analyses": 77,
+    "cases": {
+      "nom": 20,
+      "acc": 11,
+      "gen": 20,
+      "dat": 3,
+      "loc": 3
+    },
+    "pos": {
+      "subst": 23,
+      "prep": 4,
+      "conj": 4,
+      "part": 5,
+      "adj": 14,
+      "adv": 1,
+      "interp": 2
+    },
+    "ambiguity": 3.08,
+    "debug_tags": [
+      "Obywatel:subst:sg:nom:m1",
+      "pozostający:pact:pl:nom.voc:m1:imperf:aff",
+      "pozostający:pact:sg:acc:m3:imperf:aff",
+      "pozostający:pact:sg:nom.voc:m1.m2.m3:imperf:aff",
+      "bez:prep:gen:nwok",
+      "bez:subst:sg:nom.acc:m3",
+      "bez:subst:pl:gen:f",
+      "pracy:subst:sg:gen:f",
+      "pracy:subst:sg:dat.loc:f",
+      "nie:conj"
+    ],
+    "coords_count": 51
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6388
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8422,
+    "quantum_words": 21,
+    "entanglements": 7,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.252249,
+    "formula": "0.751 × 0.615 × 0.546 = 0.252"
+  },
+  "sentence_number": 206,
+  "total_sentences": 805
+}

@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:41.541263",
+  "content": {
+    "text": "Wybrany do Sejmu może być obywatel polski mający prawo\nwybierania, który najpóźniej w dniu wyborów kończy 21 lat.",
+    "length": 113,
+    "word_count": 18
+  },
+  "coordinates": {
+    "determination": 0.743697,
+    "stability": 0.607474,
+    "entropy": 0.457522
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:41.541263",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 320,
+    "saved_at": "2025-09-08T15:32:41.542573",
+    "file_counter": 320
+  },
+  "additional_metrics": {
+    "total_analyses": 46,
+    "cases": {
+      "acc": 7,
+      "nom": 15,
+      "voc": 3,
+      "gen": 9,
+      "loc": 2
+    },
+    "pos": {
+      "subst": 16,
+      "adj": 6,
+      "prep": 3,
+      "part": 1,
+      "adv": 2,
+      "interp": 2
+    },
+    "ambiguity": 2.5555555555555554,
+    "debug_tags": [
+      "Wybrany:ppas:sg:acc:m3:perf:aff",
+      "Wybrany:ppas:sg:nom.voc:m1.m2.m3:perf:aff",
+      "Wybrany:subst:pl:nom.acc.voc:n:pt",
+      "Wybrany:subst:sg:nom:m1",
+      "Wybrany:subst:sg:voc:m1",
+      "Wybrany:adj:sg:acc:m3:pos",
+      "Wybrany:adj:sg:nom.voc:m1.m2.m3:pos",
+      "do:prep:gen",
+      "do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "Sejmu:subst:sg:gen:m3"
+    ],
+    "coords_count": 34
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6425
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9077,
+    "quantum_words": 14,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.257343,
+    "formula": "0.754 × 0.612 × 0.557 = 0.257"
+  },
+  "sentence_number": 320,
+  "total_sentences": 805
+}

@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:41.082524",
+  "content": {
+    "text": "Organy samorządu terytorialnego oraz terenowe organy administracji\nrządowej, na podstawie i w granicach upoważnień zawartych w ustawie, ustanawiają\nakty prawa miejscowego obowiązujące na obszarze działania tych organów.",
+    "length": 219,
+    "word_count": 27
+  },
+  "coordinates": {
+    "determination": 0.675266,
+    "stability": 0.615543,
+    "entropy": 0.480295
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:41.082524",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 298,
+    "saved_at": "2025-09-08T15:32:41.083182",
+    "file_counter": 298
+  },
+  "additional_metrics": {
+    "total_analyses": 80,
+    "cases": {
+      "nom": 22,
+      "gen": 21,
+      "acc": 12,
+      "dat": 4,
+      "loc": 8,
+      "voc": 2
+    },
+    "pos": {
+      "subst": 33,
+      "adj": 19,
+      "adv": 1,
+      "conj": 2,
+      "interp": 3,
+      "prep": 8,
+      "part": 1
+    },
+    "ambiguity": 2.962962962962963,
+    "debug_tags": [
+      "Organy:subst:pl:nom.acc.voc:n:pt",
+      "Organy:subst:pl:nom.acc.voc:m3",
+      "Organy:subst:pl:nom.acc.voc:m3",
+      "Organy:subst:sg:gen:f",
+      "Organy:subst:pl:nom.acc.voc:f",
+      "Organy:subst:sg:gen:m1",
+      "Organy:depr:pl:nom.acc.voc:m2",
+      "Organy:depr:pl:nom.acc.voc:m2",
+      "samorządu:subst:sg:gen:m3",
+      "terytorialnego:adj:sg:acc:m1.m2:pos"
+    ],
+    "coords_count": 51
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6107
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.7738,
+    "quantum_words": 22,
+    "entanglements": 7,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.227377,
+    "formula": "0.685 × 0.621 × 0.535 = 0.227"
+  },
+  "sentence_number": 298,
+  "total_sentences": 805
+}

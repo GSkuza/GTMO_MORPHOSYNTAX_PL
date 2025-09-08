@@ -1,0 +1,77 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:35.757118",
+  "content": {
+    "text": "Zasada\nta nie narusza postanowień art. 21 i art. 22.\n\nArt. 24.",
+    "length": 62,
+    "word_count": 12
+  },
+  "coordinates": {
+    "determination": 0.687721,
+    "stability": 0.630484,
+    "entropy": 0.397252
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:35.757118",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 50,
+    "saved_at": "2025-09-08T15:32:35.757584",
+    "file_counter": 50
+  },
+  "additional_metrics": {
+    "total_analyses": 29,
+    "cases": {
+      "nom": 6,
+      "acc": 2,
+      "gen": 2
+    },
+    "pos": {
+      "subst": 6,
+      "adj": 1,
+      "part": 3,
+      "conj": 2,
+      "interp": 5
+    },
+    "ambiguity": 2.4166666666666665,
+    "debug_tags": [
+      "Zasada:subst:sg:nom:f",
+      "Zasada:subst:sg:nom:f",
+      "Zasada:subst:sg:nom:m1",
+      "ta:adj:sg:nom.voc:f:pos",
+      "ta:part",
+      "nie:conj",
+      "nie:interj",
+      "nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "nie:part"
+    ],
+    "coords_count": 15
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6451
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.98,
+    "quantum_words": 5,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.273903,
+    "formula": "0.698 × 0.635 × 0.618 = 0.274"
+  },
+  "sentence_number": 50,
+  "total_sentences": 805
+}

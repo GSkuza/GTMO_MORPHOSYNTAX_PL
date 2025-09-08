@@ -1,0 +1,77 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:45.807641",
+  "content": {
+    "text": "Minister kierujący działem administracji rządowej wydaje rozporządzenia.",
+    "length": 72,
+    "word_count": 7
+  },
+  "coordinates": {
+    "determination": 0.810682,
+    "stability": 0.679766,
+    "entropy": 0.354392
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:45.807641",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 504,
+    "saved_at": "2025-09-08T15:32:45.808487",
+    "file_counter": 504
+  },
+  "additional_metrics": {
+    "total_analyses": 21,
+    "cases": {
+      "nom": 6,
+      "acc": 1,
+      "gen": 5,
+      "dat": 2,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 9,
+      "adj": 3,
+      "interp": 1
+    },
+    "ambiguity": 3.0,
+    "debug_tags": [
+      "Minister:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Minister:subst:sg:nom:m1",
+      "kierujący:pact:pl:nom.voc:m1:imperf:aff",
+      "kierujący:pact:sg:acc:m3:imperf:aff",
+      "kierujący:pact:sg:nom.voc:m1.m2.m3:imperf:aff",
+      "dział:praet:sg:m1.m2.m3:imperf",
+      "działem:subst:sg:inst:m3",
+      "działem:subst:sg:inst:n:ncol",
+      "em:aglt:sg:pri:imperf:wok",
+      "administracji:subst:sg:gen:f"
+    ],
+    "coords_count": 11
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7219
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9941,
+    "quantum_words": 5,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.371245,
+    "formula": "0.821 × 0.685 × 0.661 = 0.371"
+  },
+  "sentence_number": 504,
+  "total_sentences": 805
+}

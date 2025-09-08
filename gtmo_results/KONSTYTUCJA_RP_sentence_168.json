@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:39.968231",
+  "content": {
+    "text": "Obywatela polskiego nie można wydalić z kraju ani zakazać mu powrotu do\nkraju.",
+    "length": 78,
+    "word_count": 13
+  },
+  "coordinates": {
+    "determination": 0.707834,
+    "stability": 0.58051,
+    "entropy": 0.484652
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:39.968231",
+    "sequence_number": 168,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 32,
+    "cases": {
+      "gen": 9,
+      "acc": 3,
+      "nom": 2,
+      "loc": 2,
+      "voc": 2,
+      "dat": 2
+    },
+    "pos": {
+      "subst": 11,
+      "adj": 3,
+      "conj": 2,
+      "part": 3,
+      "prep": 3,
+      "interp": 1
+    },
+    "ambiguity": 2.4615384615384617,
+    "debug_tags": [
+      "Obywatela:subst:sg:gen.acc:m1",
+      "polskiego:subst:sg:gen:n:ncol",
+      "polskiego:subst:sg:gen:m3",
+      "polskiego:adj:sg:acc:m1.m2:pos",
+      "polskiego:adj:sg:gen:m1.m2.m3.n:pos",
+      "nie:conj",
+      "nie:interj",
+      "nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "nie:part"
+    ],
+    "coords_count": 24
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6119
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=24, cases={'gen': 9, 'acc': 3, 'nom': 2, 'loc': 2, 'voc': 2, 'dat': 2}, pos={'subst': 11, 'adj': 3, 'conj': 2, 'part': 3, 'prep': 3, 'interp': 1}",
+    "  MORPH_COORDS: [0.689, 0.634, 0.420]",
+    "  MORPH_TAGS: ['Obywatela:subst:sg:gen.acc:m1', 'polskiego:subst:sg:gen:n:ncol', 'polskiego:subst:sg:gen:m3', 'polskiego:adj:sg:acc:m1.m2:pos', 'polskiego:adj:sg:gen:m1.m2.m3.n:pos', 'nie:conj', 'nie:interj', 'nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep', 'nie:ppron3:sg:acc:n:ter:akc.nakc:praep', 'nie:part']",
+    "  SYNTAX_COORDS: [0.800, 0.450, 0.610]",
+    "  FINAL: D=0.718, S=0.586, E=0.470"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9719,
+    "quantum_words": 9,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

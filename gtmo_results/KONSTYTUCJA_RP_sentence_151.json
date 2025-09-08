@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:39.687092",
+  "content": {
+    "text": "Zapewnia się wolność i ochronę tajemnicy komunikowania się.",
+    "length": 59,
+    "word_count": 8
+  },
+  "coordinates": {
+    "determination": 0.71812,
+    "stability": 0.671985,
+    "entropy": 0.412631
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:39.687092",
+    "sequence_number": 151,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 14,
+    "cases": {
+      "nom": 2,
+      "acc": 2,
+      "gen": 2,
+      "dat": 1
+    },
+    "pos": {
+      "part": 3,
+      "subst": 5,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 1.75,
+    "debug_tags": [
+      "Zapewnia:fin:sg:ter:imperf",
+      "się:part",
+      "się:part",
+      "wolność:subst:sg:nom:f",
+      "wolność:subst:sg:acc:f",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "ochronę:subst:sg:acc:f",
+      "tajemnicy:subst:sg:gen:f"
+    ],
+    "coords_count": 11
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6651
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=11, cases={'nom': 2, 'acc': 2, 'gen': 2, 'dat': 1}, pos={'part': 3, 'subst': 5, 'conj': 1, 'interp': 1}",
+    "  MORPH_COORDS: [0.727, 0.695, 0.354]",
+    "  MORPH_TAGS: ['Zapewnia:fin:sg:ter:imperf', 'się:part', 'się:part', 'wolność:subst:sg:nom:f', 'wolność:subst:sg:acc:f', 'i:interj', 'i:part', 'i:conj', 'ochronę:subst:sg:acc:f', 'tajemnicy:subst:sg:gen:f']",
+    "  SYNTAX_COORDS: [0.733, 0.607, 0.574]",
+    "  FINAL: D=0.728, S=0.677, E=0.398"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.6017,
+    "quantum_words": 4,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

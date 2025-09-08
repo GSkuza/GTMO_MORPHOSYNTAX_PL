@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:53.627965",
+  "content": {
+    "text": "W okresie 2 lat od dnia wejścia w życie Konstytucji Rada Ministrów ustali,\nktóre z uchwał Rady Ministrów oraz zarządzeń ministrów lub innych organów\nadministracji rządowej, podjęte lub wydane przed dniem wejścia w życie\nKonstytucji, wymagają – stosownie do warunków określonych w art. 87 ust. 1 i art.\n92 Konstytucji – zastąpienia ich przez rozporządzenia wydane na podstawie\nupoważnienia ustawy, której projekt w odpowiednim czasie Rada Ministrów\nprzedstawi Sejmowi.",
+    "length": 467,
+    "word_count": 69
+  },
+  "coordinates": {
+    "determination": 0.624308,
+    "stability": 0.581229,
+    "entropy": 0.524938
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:53.627965",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 797,
+    "saved_at": "2025-09-08T15:32:53.629291",
+    "file_counter": 797
+  },
+  "additional_metrics": {
+    "total_analyses": 164,
+    "cases": {
+      "acc": 14,
+      "loc": 16,
+      "voc": 2,
+      "gen": 50,
+      "nom": 33,
+      "dat": 9
+    },
+    "pos": {
+      "prep": 19,
+      "subst": 62,
+      "adj": 23,
+      "interp": 10,
+      "part": 2,
+      "adv": 2,
+      "conj": 4
+    },
+    "ambiguity": 2.3768115942028984,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "okresie:subst:sg:loc:m3",
+      "okresie:subst:sg:voc:m3",
+      "2:dig",
+      "lat:subst:pl:gen:n:ncol",
+      "lat:subst:pl:gen:m3",
+      "od:prep:gen:nwok",
+      "od:subst:pl:gen:f",
+      "dnia:subst:sg:gen:m3"
+    ],
+    "coords_count": 96
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5666
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0197,
+    "quantum_words": 42,
+    "entanglements": 13,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.182229,
+    "formula": "0.634 × 0.586 × 0.490 = 0.182"
+  },
+  "sentence_number": 797,
+  "total_sentences": 805
+}

@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:47.151652",
+  "content": {
+    "text": "Przysługują im prawo własności i inne prawa majątkowe.",
+    "length": 54,
+    "word_count": 8
+  },
+  "coordinates": {
+    "determination": 0.772741,
+    "stability": 0.647259,
+    "entropy": 0.350201
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:47.151652",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 557,
+    "saved_at": "2025-09-08T15:32:47.152088",
+    "file_counter": 557
+  },
+  "additional_metrics": {
+    "total_analyses": 28,
+    "cases": {
+      "dat": 2,
+      "nom": 10,
+      "gen": 3,
+      "voc": 2,
+      "acc": 4
+    },
+    "pos": {
+      "subst": 10,
+      "adv": 1,
+      "part": 1,
+      "conj": 1,
+      "adj": 9,
+      "interp": 1
+    },
+    "ambiguity": 3.5,
+    "debug_tags": [
+      "Przysługują:fin:pl:ter:imperf",
+      "im:comp",
+      "im:ppron3:pl:dat:m1.m2.m3.f.n:ter:akc.nakc:npraep",
+      "prawo:subst:sg:nom.acc.voc:n:ncol",
+      "prawo:adv:pos",
+      "własności:subst:sg:gen:f",
+      "własności:subst:sg:dat.loc:f",
+      "własności:subst:sg:voc:f",
+      "własności:subst:pl:nom.acc.voc:f",
+      "własności:subst:pl:gen:f"
+    ],
+    "coords_count": 16
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6982
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.045,
+    "quantum_words": 6,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.339413,
+    "formula": "0.783 × 0.652 × 0.665 = 0.339"
+  },
+  "sentence_number": 557,
+  "total_sentences": 805
+}

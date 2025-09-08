@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:51.474120",
+  "content": {
+    "text": "Prezes Narodowego Banku Polskiego nie może należeć do partii politycznej,\nzwiązku zawodowego ani prowadzić działalności publicznej nie dającej się pogodzić\nz godnością jego urzędu.",
+    "length": 180,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.631668,
+    "stability": 0.558999,
+    "entropy": 0.540874
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:51.474120",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 733,
+    "saved_at": "2025-09-08T15:32:51.474693",
+    "file_counter": 733
+  },
+  "additional_metrics": {
+    "total_analyses": 68,
+    "cases": {
+      "nom": 4,
+      "acc": 8,
+      "gen": 20,
+      "loc": 6,
+      "voc": 5,
+      "dat": 4
+    },
+    "pos": {
+      "subst": 26,
+      "adj": 12,
+      "conj": 3,
+      "part": 6,
+      "prep": 3,
+      "interp": 2
+    },
+    "ambiguity": 2.8333333333333335,
+    "debug_tags": [
+      "Prezes:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezes:subst:sg:nom:m1",
+      "Narodowego:adj:sg:acc:m1.m2:pos",
+      "Narodowego:adj:sg:gen:m1.m2.m3.n:pos",
+      "Banku:subst:sg:gen:m3",
+      "Banku:subst:sg:loc:m3",
+      "Banku:subst:sg:voc:m3",
+      "Banku:subst:sg:loc:m1",
+      "Banku:subst:sg:voc:m1",
+      "Banku:subst:sg:loc:m1"
+    ],
+    "coords_count": 41
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5581
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9438,
+    "quantum_words": 16,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.171586,
+    "formula": "0.642 × 0.564 × 0.474 = 0.172"
+  },
+  "sentence_number": 733,
+  "total_sentences": 805
+}

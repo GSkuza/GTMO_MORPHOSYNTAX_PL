@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:47.113024",
+  "content": {
+    "text": "Gmina wykonuje wszystkie zadania samorządu terytorialnego nie\nzastrzeżone dla innych jednostek samorządu terytorialnego.\nArt. 165. 1.",
+    "length": 133,
+    "word_count": 16
+  },
+  "coordinates": {
+    "determination": 0.711658,
+    "stability": 0.600515,
+    "entropy": 0.422579
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:47.113024",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 555,
+    "saved_at": "2025-09-08T15:32:47.113838",
+    "file_counter": 555
+  },
+  "additional_metrics": {
+    "total_analyses": 39,
+    "cases": {
+      "nom": 9,
+      "acc": 7,
+      "gen": 10,
+      "loc": 2
+    },
+    "pos": {
+      "subst": 10,
+      "adj": 11,
+      "conj": 1,
+      "part": 1,
+      "prep": 1,
+      "interp": 4
+    },
+    "ambiguity": 2.4375,
+    "debug_tags": [
+      "Gmina:subst:sg:nom:f",
+      "wykonuje:fin:sg:ter:imperf",
+      "wszystkie:adj:pl:acc:m2.m3.f.n:pos",
+      "wszystkie:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "wszystkie:adj:sg:acc:n:pos",
+      "wszystkie:adj:sg:nom.voc:n:pos",
+      "zadania:subst:sg:gen:n:ncol",
+      "zadania:subst:pl:nom.acc.voc:n:ncol",
+      "zadania:ger:pl:nom.acc:n:perf:aff",
+      "zadania:ger:sg:gen:n:perf:aff"
+    ],
+    "coords_count": 24
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.638
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8322,
+    "quantum_words": 11,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.258873,
+    "formula": "0.722 × 0.606 × 0.592 = 0.259"
+  },
+  "sentence_number": 555,
+  "total_sentences": 805
+}

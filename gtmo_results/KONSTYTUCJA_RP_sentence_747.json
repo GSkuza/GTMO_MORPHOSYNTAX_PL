@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:50.870925",
+  "content": {
+    "text": "Zastępcy przewodniczącego Trybunału oraz co\nnajmniej połowa członków Trybunału Stanu powinni mieć kwalifikacje wymagane\ndo zajmowania stanowiska sędziego.",
+    "length": 154,
+    "word_count": 18
+  },
+  "coordinates": {
+    "determination": 0.712317,
+    "stability": 0.610274,
+    "entropy": 0.468706
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:50.870925",
+    "sequence_number": 747,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 46,
+    "cases": {
+      "gen": 17,
+      "dat": 1,
+      "nom": 13,
+      "acc": 4
+    },
+    "pos": {
+      "subst": 20,
+      "adj": 3,
+      "adv": 2,
+      "conj": 1,
+      "prep": 4,
+      "part": 2,
+      "num": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.5555555555555554,
+    "debug_tags": [
+      "Zastępcy:subst:sg:gen:m1",
+      "Zastępcy:subst:sg:dat.loc:m1",
+      "Zastępcy:subst:pl:nom.voc:m1",
+      "przewodniczącego:subst:sg:gen.acc:m1",
+      "przewodniczącego:adj:sg:acc:m1.m2:pos",
+      "przewodniczącego:adj:sg:gen:m1.m2.m3.n:pos",
+      "przewodniczącego:pact:sg:acc:m1.m2:imperf:aff",
+      "przewodniczącego:pact:sg:gen:m1.m2.m3.n:imperf:aff",
+      "Trybunału:subst:sg:gen:m3",
+      "Trybunału:subst:sg:gen:m3"
+    ],
+    "coords_count": 37
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6274
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=37, cases={'gen': 17, 'dat': 1, 'nom': 13, 'acc': 4}, pos={'subst': 20, 'adj': 3, 'adv': 2, 'conj': 1, 'prep': 4, 'part': 2, 'num': 2, 'interp': 1}",
+    "  MORPH_COORDS: [0.736, 0.675, 0.375]",
+    "  MORPH_TAGS: ['Zastępcy:subst:sg:gen:m1', 'Zastępcy:subst:sg:dat.loc:m1', 'Zastępcy:subst:pl:nom.voc:m1', 'przewodniczącego:subst:sg:gen.acc:m1', 'przewodniczącego:adj:sg:acc:m1.m2:pos', 'przewodniczącego:adj:sg:gen:m1.m2.m3.n:pos', 'przewodniczącego:pact:sg:acc:m1.m2:imperf:aff', 'przewodniczącego:pact:sg:gen:m1.m2.m3.n:imperf:aff', 'Trybunału:subst:sg:gen:m3', 'Trybunału:subst:sg:gen:m3']",
+    "  SYNTAX_COORDS: [0.686, 0.455, 0.665]",
+    "  FINAL: D=0.722, S=0.615, E=0.454"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.8763,
+    "quantum_words": 15,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

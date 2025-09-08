@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:41.252501",
+  "content": {
+    "text": "Wybory do Sejmu są powszechne, równe, bezpośrednie i proporcjonalne\noraz odbywają się w głosowaniu tajnym.",
+    "length": 106,
+    "word_count": 15
+  },
+  "coordinates": {
+    "determination": 0.683563,
+    "stability": 0.657156,
+    "entropy": 0.371813
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:41.252501",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 304,
+    "saved_at": "2025-09-08T15:32:41.253044",
+    "file_counter": 304
+  },
+  "additional_metrics": {
+    "total_analyses": 42,
+    "cases": {
+      "nom": 13,
+      "gen": 2,
+      "acc": 9,
+      "loc": 3,
+      "dat": 3
+    },
+    "pos": {
+      "subst": 8,
+      "prep": 3,
+      "adj": 19,
+      "interp": 3,
+      "part": 2,
+      "conj": 2,
+      "adv": 1
+    },
+    "ambiguity": 2.8,
+    "debug_tags": [
+      "Wybory:subst:pl:nom.acc.voc:n:pt",
+      "Wybory:subst:pl:nom.acc.voc:m3",
+      "do:prep:gen",
+      "do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "Sejmu:subst:sg:gen:m3",
+      "są:fin:pl:ter:imperf",
+      "powszechne:adj:pl:acc:m2.m3.f.n:pos",
+      "powszechne:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "powszechne:adj:sg:acc:n:pos",
+      "powszechne:adj:sg:nom.voc:n:pos"
+    ],
+    "coords_count": 29
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.659
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9183,
+    "quantum_words": 10,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.295382,
+    "formula": "0.694 × 0.662 × 0.643 = 0.295"
+  },
+  "sentence_number": 304,
+  "total_sentences": 805
+}

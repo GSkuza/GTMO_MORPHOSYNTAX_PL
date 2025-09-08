@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:38.309381",
+  "content": {
+    "text": "Ustawa określa rodzaje zrzeszeń podlegających sądowej rejestracji, tryb tej\nrejestracji oraz formy nadzoru nad tymi zrzeszeniami.",
+    "length": 129,
+    "word_count": 16
+  },
+  "coordinates": {
+    "determination": 0.728972,
+    "stability": 0.622149,
+    "entropy": 0.456398
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:38.309381",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 171,
+    "saved_at": "2025-09-08T15:32:38.310225",
+    "file_counter": 171
+  },
+  "additional_metrics": {
+    "total_analyses": 34,
+    "cases": {
+      "nom": 4,
+      "gen": 12,
+      "acc": 2,
+      "dat": 4,
+      "loc": 2
+    },
+    "pos": {
+      "subst": 15,
+      "adj": 7,
+      "interp": 2,
+      "adv": 1,
+      "conj": 1,
+      "prep": 2
+    },
+    "ambiguity": 2.125,
+    "debug_tags": [
+      "Ustawa:subst:sg:nom:f",
+      "określa:fin:sg:ter:imperf",
+      "rodzaje:subst:pl:nom.acc.voc:m3",
+      "zrzeszeń:ger:pl:gen:n:perf:aff",
+      "zrzeszeń:subst:pl:gen:n:ncol",
+      "podlegających:pact:pl:acc:m1:imperf:aff",
+      "podlegających:pact:pl:gen.loc:m1.m2.m3.f.n:imperf:aff",
+      "sądowej:adj:sg:dat:f:pos",
+      "sądowej:adj:sg:gen:f:pos",
+      "sądowej:adj:sg:loc:f:pos"
+    ],
+    "coords_count": 27
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6413
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.18,
+    "quantum_words": 11,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.258882,
+    "formula": "0.739 × 0.627 × 0.559 = 0.259"
+  },
+  "sentence_number": 171,
+  "total_sentences": 805
+}

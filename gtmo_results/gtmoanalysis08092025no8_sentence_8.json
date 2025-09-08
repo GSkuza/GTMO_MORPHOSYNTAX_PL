@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:35.066789",
+  "content": {
+    "text": "Rzeczpospolita Polska jest dobrem wspólnym wszystkich obywateli.\nArt. 2.",
+    "length": 72,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.725478,
+    "stability": 0.675464,
+    "entropy": 0.292521
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:35.066789",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 8,
+    "saved_at": "2025-09-08T15:32:35.067352",
+    "file_counter": 8
+  },
+  "additional_metrics": {
+    "total_analyses": 28,
+    "cases": {
+      "nom": 7,
+      "voc": 3,
+      "gen": 4,
+      "dat": 1,
+      "loc": 3,
+      "acc": 2
+    },
+    "pos": {
+      "subst": 14,
+      "adj": 7,
+      "interp": 3
+    },
+    "ambiguity": 3.111111111111111,
+    "debug_tags": [
+      "Rzeczpospolita:subst:sg:nom:f",
+      "Rzeczpospolita:subst:sg:voc:f",
+      "Rzeczpospolita:subst:sg:nom:f",
+      "Rzeczpospolita:subst:sg:voc:f",
+      "Polska:adj:sg:nom.voc:f:pos",
+      "Polska:adjp:gen",
+      "Polska:subst:sg:nom:f",
+      "Polska:subst:sg:voc:f",
+      "Polska:subst:sg:nom:f",
+      "jest:fin:sg:ter:imperf"
+    ],
+    "coords_count": 16
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "low",
+    "overall": "moderate_quality",
+    "overall_score": 0.7051
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.1886,
+    "quantum_words": 6,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.361576,
+    "formula": "0.735 × 0.680 × 0.722 = 0.362"
+  },
+  "sentence_number": 8,
+  "total_sentences": 805
+}

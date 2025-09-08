@@ -1,0 +1,77 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:47.791647",
+  "content": {
+    "text": "Sąd Najwyższy, sądy powszechne, sądy administracyjne oraz sądy wojskowe.",
+    "length": 72,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.712827,
+    "stability": 0.742323,
+    "entropy": 0.283535
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:47.791647",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 586,
+    "saved_at": "2025-09-08T15:32:47.792092",
+    "file_counter": 586
+  },
+  "additional_metrics": {
+    "total_analyses": 26,
+    "cases": {
+      "nom": 13,
+      "voc": 1,
+      "acc": 7
+    },
+    "pos": {
+      "subst": 6,
+      "adj": 14,
+      "interp": 3,
+      "adv": 1,
+      "conj": 1
+    },
+    "ambiguity": 2.888888888888889,
+    "debug_tags": [
+      "Sąd:subst:sg:nom.acc:m3",
+      "Najwyższy:subst:sg:nom:m1",
+      "Najwyższy:subst:sg:voc:m1",
+      "Najwyższy:adj:sg:acc:m3:sup",
+      "Najwyższy:adj:sg:nom.voc:m1.m2.m3:sup",
+      ",:interp",
+      ",:interp",
+      "sądy:subst:pl:nom.acc.voc:m3",
+      "sądy:subst:pl:nom.acc.voc:m3",
+      "sądy:subst:pl:nom.acc.voc:m3"
+    ],
+    "coords_count": 17
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "high",
+    "entropy": "low",
+    "overall": "high_quality",
+    "overall_score": 0.7228
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.7999,
+    "quantum_words": 6,
+    "entanglements": 1,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.395127,
+    "formula": "0.723 × 0.747 × 0.731 = 0.395"
+  },
+  "sentence_number": 586,
+  "total_sentences": 805
+}

@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:48.210707",
+  "content": {
+    "text": "W razie zmiany ustroju sądów lub zmiany granic okręgów sądowych wolno\nsędziego przenosić do innego sądu lub w stan spoczynku z pozostawieniem mu\npełnego uposażenia.",
+    "length": 164,
+    "word_count": 25
+  },
+  "coordinates": {
+    "determination": 0.67401,
+    "stability": 0.586824,
+    "entropy": 0.51266
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:48.210707",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 603,
+    "saved_at": "2025-09-08T15:32:48.211394",
+    "file_counter": 603
+  },
+  "additional_metrics": {
+    "total_analyses": 55,
+    "cases": {
+      "acc": 5,
+      "loc": 7,
+      "voc": 4,
+      "gen": 18,
+      "nom": 6,
+      "dat": 2
+    },
+    "pos": {
+      "prep": 7,
+      "subst": 25,
+      "conj": 2,
+      "adj": 7,
+      "adv": 1,
+      "part": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.2,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "razie:subst:sg:loc:m3",
+      "razie:subst:sg:voc:m3",
+      "razie:subst:sg:loc:m3",
+      "razie:subst:sg:voc:m3",
+      "zmiany:subst:sg:gen:f",
+      "zmiany:subst:pl:nom.acc.voc:f",
+      "zmiany:subst:sg:gen:f",
+      "zmiany:subst:pl:nom.acc.voc:f"
+    ],
+    "coords_count": 43
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5919
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.098,
+    "quantum_words": 19,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.203354,
+    "formula": "0.684 × 0.592 × 0.502 = 0.203"
+  },
+  "sentence_number": 603,
+  "total_sentences": 805
+}

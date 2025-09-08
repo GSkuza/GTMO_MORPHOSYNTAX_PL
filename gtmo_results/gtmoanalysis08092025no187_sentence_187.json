@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:38.659688",
+  "content": {
+    "text": "Każdy ma prawo składać petycje, wnioski i skargi w interesie\npublicznym, własnym lub innej osoby za jej zgodą do organów władzy publicznej\noraz do organizacji i instytucji społecznych w związku z wykonywanymi przez nie\nzadaniami zleconymi z zakresu administracji publicznej.",
+    "length": 274,
+    "word_count": 40
+  },
+  "coordinates": {
+    "determination": 0.640873,
+    "stability": 0.580306,
+    "entropy": 0.525949
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:38.659688",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 187,
+    "saved_at": "2025-09-08T15:32:38.660016",
+    "file_counter": 187
+  },
+  "additional_metrics": {
+    "total_analyses": 100,
+    "cases": {
+      "acc": 8,
+      "nom": 9,
+      "gen": 25,
+      "loc": 11,
+      "voc": 2,
+      "dat": 11
+    },
+    "pos": {
+      "adj": 21,
+      "subst": 35,
+      "adv": 2,
+      "interp": 3,
+      "part": 6,
+      "conj": 5,
+      "prep": 14
+    },
+    "ambiguity": 2.5,
+    "debug_tags": [
+      "Każdy:adj:sg:acc:m3:pos",
+      "Każdy:adj:sg:nom.voc:m1.m2.m3:pos",
+      "ma:adj:sg:nom.voc:f:pos",
+      "ma:fin:sg:ter:imperf",
+      "prawo:subst:sg:nom.acc.voc:n:ncol",
+      "prawo:adv:pos",
+      "składać:inf:imperf",
+      "petycje:subst:pl:nom.acc.voc:f",
+      ",:interp",
+      ",:interp"
+    ],
+    "coords_count": 68
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5727
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0148,
+    "quantum_words": 27,
+    "entanglements": 10,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.186309,
+    "formula": "0.651 × 0.585 × 0.489 = 0.186"
+  },
+  "sentence_number": 187,
+  "total_sentences": 805
+}

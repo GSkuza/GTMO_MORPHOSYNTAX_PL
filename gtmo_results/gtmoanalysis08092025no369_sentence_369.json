@@ -1,0 +1,75 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:42.786172",
+  "content": {
+    "text": "Posiedzenia Sejmu są jawne.",
+    "length": 27,
+    "word_count": 4
+  },
+  "coordinates": {
+    "determination": 0.798158,
+    "stability": 0.683711,
+    "entropy": 0.316661
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:42.786172",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 369,
+    "saved_at": "2025-09-08T15:32:42.787072",
+    "file_counter": 369
+  },
+  "additional_metrics": {
+    "total_analyses": 11,
+    "cases": {
+      "gen": 3,
+      "nom": 4,
+      "acc": 2
+    },
+    "pos": {
+      "subst": 3,
+      "adj": 4,
+      "interp": 1
+    },
+    "ambiguity": 2.75,
+    "debug_tags": [
+      "Posiedzenia:subst:sg:gen:n:ncol",
+      "Posiedzenia:subst:pl:nom.acc.voc:n:ncol",
+      "Posiedzenia:ger:pl:nom.acc:n:perf:aff",
+      "Posiedzenia:ger:sg:gen:n:perf:aff",
+      "Sejmu:subst:sg:gen:m3",
+      "są:fin:pl:ter:imperf",
+      "jawne:adj:pl:acc:m2.m3.f.n:pos",
+      "jawne:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "jawne:adj:sg:acc:n:pos",
+      "jawne:adj:sg:nom.voc:n:pos"
+    ],
+    "coords_count": 7
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7294
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9056,
+    "quantum_words": 3,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.388687,
+    "formula": "0.808 × 0.689 × 0.698 = 0.389"
+  },
+  "sentence_number": 369,
+  "total_sentences": 805
+}

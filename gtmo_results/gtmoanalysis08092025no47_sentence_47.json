@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:35.713997",
+  "content": {
+    "text": "Wywłaszczenie jest dopuszczalne jedynie wówczas, gdy jest dokonywane na\ncele publiczne i za słusznym odszkodowaniem.",
+    "length": 116,
+    "word_count": 15
+  },
+  "coordinates": {
+    "determination": 0.686821,
+    "stability": 0.649425,
+    "entropy": 0.389265
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:35.713997",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 47,
+    "saved_at": "2025-09-08T15:32:35.714674",
+    "file_counter": 47
+  },
+  "additional_metrics": {
+    "total_analyses": 37,
+    "cases": {
+      "nom": 10,
+      "acc": 6,
+      "loc": 2,
+      "gen": 1,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 4,
+      "adj": 11,
+      "part": 3,
+      "adv": 2,
+      "interp": 2,
+      "prep": 5,
+      "conj": 1
+    },
+    "ambiguity": 2.466666666666667,
+    "debug_tags": [
+      "Wywłaszczenie:ger:sg:nom.acc:n:perf:aff",
+      "Wywłaszczenie:subst:sg:nom.acc.voc:n:ncol",
+      "jest:fin:sg:ter:imperf",
+      "jest:fin:sg:ter:imperf",
+      "dopuszczalne:adj:pl:acc:m2.m3.f.n:pos",
+      "dopuszczalne:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "dopuszczalne:adj:sg:acc:n:pos",
+      "dopuszczalne:adj:sg:nom.voc:n:pos",
+      "jedynie:part",
+      "wówczas:adv"
+    ],
+    "coords_count": 24
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6528
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.3033,
+    "quantum_words": 8,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.285346,
+    "formula": "0.697 × 0.654 × 0.626 = 0.285"
+  },
+  "sentence_number": 47,
+  "total_sentences": 805
+}

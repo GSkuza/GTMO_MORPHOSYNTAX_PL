@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:35.772673",
+  "content": {
+    "text": "Praca znajduje się pod ochroną Rzeczypospolitej Polskiej.",
+    "length": 57,
+    "word_count": 7
+  },
+  "coordinates": {
+    "determination": 0.752815,
+    "stability": 0.651724,
+    "entropy": 0.323843
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:35.772673",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 51,
+    "saved_at": "2025-09-08T15:32:35.772966",
+    "file_counter": 51
+  },
+  "additional_metrics": {
+    "total_analyses": 16,
+    "cases": {
+      "nom": 2,
+      "acc": 1,
+      "gen": 3,
+      "dat": 3,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 7,
+      "part": 1,
+      "prep": 2,
+      "adj": 3,
+      "interp": 1
+    },
+    "ambiguity": 2.2857142857142856,
+    "debug_tags": [
+      "Praca:subst:sg:nom:f",
+      "Praca:subst:sg:nom:f",
+      "znajduje:fin:sg:ter:imperf",
+      "znajduje:fin:sg:ter:imperf",
+      "się:part",
+      "pod:prep:acc:nwok",
+      "pod:prep:inst:nwok",
+      "ochroną:subst:sg:inst:f",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f"
+    ],
+    "coords_count": 12
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6995
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8747,
+    "quantum_words": 4,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.346241,
+    "formula": "0.763 × 0.657 × 0.691 = 0.346"
+  },
+  "sentence_number": 51,
+  "total_sentences": 805
+}

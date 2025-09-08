@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:36.405038",
+  "content": {
+    "text": "Kobieta i mężczyzna mają w szczególności równe prawo do kształcenia,\nzatrudnienia i awansów, do jednakowego wynagradzania za pracę jednakowej\nwartości, do zabezpieczenia społecznego oraz do zajmowania stanowisk, pełnienia\nfunkcji oraz uzyskiwania godności publicznych i odznaczeń.",
+    "length": 280,
+    "word_count": 35
+  },
+  "coordinates": {
+    "determination": 0.683865,
+    "stability": 0.573276,
+    "entropy": 0.538072
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:36.405038",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 84,
+    "saved_at": "2025-09-08T15:32:36.405402",
+    "file_counter": 84
+  },
+  "additional_metrics": {
+    "total_analyses": 101,
+    "cases": {
+      "nom": 25,
+      "acc": 8,
+      "loc": 3,
+      "gen": 33,
+      "dat": 5,
+      "voc": 3
+    },
+    "pos": {
+      "subst": 39,
+      "part": 4,
+      "conj": 5,
+      "prep": 9,
+      "adj": 14,
+      "adv": 3,
+      "interp": 5
+    },
+    "ambiguity": 2.8857142857142857,
+    "debug_tags": [
+      "Kobieta:subst:sg:nom:f",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "i:interj",
+      "i:part",
+      "i:conj"
+    ],
+    "coords_count": 59
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5841
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.7716,
+    "quantum_words": 26,
+    "entanglements": 11,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.191365,
+    "formula": "0.694 × 0.578 × 0.477 = 0.191"
+  },
+  "sentence_number": 84,
+  "total_sentences": 805
+}

@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:43.411626",
+  "content": {
+    "text": "Prezydent Rzeczypospolitej podpisuje ustawę w ciągu 21 dni od dnia\nprzedstawienia i zarządza jej ogłoszenie w Dzienniku Ustaw Rzeczypospolitej\nPolskiej.",
+    "length": 152,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.705322,
+    "stability": 0.610373,
+    "entropy": 0.442112
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:43.411626",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 400,
+    "saved_at": "2025-09-08T15:32:43.412037",
+    "file_counter": 400
+  },
+  "additional_metrics": {
+    "total_analyses": 46,
+    "cases": {
+      "nom": 7,
+      "gen": 13,
+      "dat": 5,
+      "acc": 3,
+      "loc": 6,
+      "voc": 3
+    },
+    "pos": {
+      "subst": 24,
+      "prep": 5,
+      "part": 1,
+      "conj": 1,
+      "adj": 3,
+      "interp": 1
+    },
+    "ambiguity": 2.3,
+    "debug_tags": [
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "podpisuje:fin:sg:ter:imperf",
+      "ustawę:subst:sg:acc:f",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok"
+    ],
+    "coords_count": 32
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6326
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.939,
+    "quantum_words": 14,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.25218,
+    "formula": "0.715 × 0.615 × 0.573 = 0.252"
+  },
+  "sentence_number": 400,
+  "total_sentences": 805
+}

@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:49.610848",
+  "content": {
+    "text": "Za naruszenie Konstytucji lub ustawy, w związku z zajmowanym\nstanowiskiem lub w zakresie swojego urzędowania, odpowiedzialność konstytucyjną\nprzed Trybunałem Stanu ponoszą: Prezydent Rzeczypospolitej, Prezes Rady\nMinistrów oraz członkowie Rady Ministrów, Prezes Narodowego Banku Polskiego,\nPrezes Najwyższej Izby Kontroli, członkowie Krajowej Rady Radiofonii i Telewizji,\nosoby, którym Prezes Rady Ministrów powierzył kierowanie ministerstwem, oraz\nNaczelny Dowódca Sił Zbrojnych.",
+    "length": 480,
+    "word_count": 57
+  },
+  "coordinates": {
+    "determination": 0.63492,
+    "stability": 0.590147,
+    "entropy": 0.512593
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:49.610848",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 651,
+    "saved_at": "2025-09-08T15:32:49.611442",
+    "file_counter": 651
+  },
+  "additional_metrics": {
+    "total_analyses": 155,
+    "cases": {
+      "acc": 11,
+      "gen": 43,
+      "nom": 39,
+      "dat": 9,
+      "loc": 12,
+      "voc": 6
+    },
+    "pos": {
+      "prep": 11,
+      "part": 3,
+      "subst": 84,
+      "conj": 5,
+      "interp": 11,
+      "adj": 22,
+      "adv": 2
+    },
+    "ambiguity": 2.719298245614035,
+    "debug_tags": [
+      "Za:prep:acc",
+      "Za:prep:gen",
+      "Za:prep:inst",
+      "Za:part",
+      "naruszenie:ger:sg:nom.acc:n:perf:aff",
+      "naruszenie:subst:sg:nom.acc.voc:n:ncol",
+      "Konstytucji:subst:sg:gen:f",
+      "Konstytucji:subst:sg:dat.loc:f",
+      "Konstytucji:subst:pl:gen:f",
+      "lub:conj"
+    ],
+    "coords_count": 88
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5772
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0708,
+    "quantum_words": 37,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.192835,
+    "formula": "0.645 × 0.595 × 0.502 = 0.193"
+  },
+  "sentence_number": 651,
+  "total_sentences": 805
+}

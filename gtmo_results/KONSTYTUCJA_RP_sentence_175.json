@@ -1,0 +1,83 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:40.071878",
+  "content": {
+    "text": "Rodzice mają prawo do zapewnienia dzieciom wychowania i nauczania\nmoralnego i religijnego zgodnie ze swoimi przekonaniami.",
+    "length": 122,
+    "word_count": 16
+  },
+  "coordinates": {
+    "determination": 0.718388,
+    "stability": 0.616774,
+    "entropy": 0.458587
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:40.071878",
+    "sequence_number": 175,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 44,
+    "cases": {
+      "nom": 12,
+      "gen": 10,
+      "dat": 1,
+      "acc": 2
+    },
+    "pos": {
+      "subst": 16,
+      "adv": 2,
+      "prep": 3,
+      "part": 3,
+      "conj": 2,
+      "adj": 5,
+      "interp": 1
+    },
+    "ambiguity": 2.75,
+    "debug_tags": [
+      "Rodzice:subst:pl:nom.voc:m1:pt",
+      "Rodzice:subst:pl:nom.voc:m1",
+      "Rodzice:subst:pl:nom.acc.voc:f",
+      "Rodzice:depr:pl:nom.acc.voc:m2",
+      "mają:fin:pl:ter:imperf",
+      "mają:fin:pl:ter:imperf",
+      "mają:subst:sg:inst:f",
+      "prawo:subst:sg:nom.acc.voc:n:ncol",
+      "prawo:adv:pos",
+      "do:prep:gen"
+    ],
+    "coords_count": 31
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6348
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=31, cases={'nom': 12, 'gen': 10, 'dat': 1, 'acc': 2}, pos={'subst': 16, 'adv': 2, 'prep': 3, 'part': 3, 'conj': 2, 'adj': 5, 'interp': 1}",
+    "  MORPH_COORDS: [0.726, 0.687, 0.357]",
+    "  MORPH_TAGS: ['Rodzice:subst:pl:nom.voc:m1:pt', 'Rodzice:subst:pl:nom.voc:m1', 'Rodzice:subst:pl:nom.acc.voc:f', 'Rodzice:depr:pl:nom.acc.voc:m2', 'mają:fin:pl:ter:imperf', 'mają:fin:pl:ter:imperf', 'mają:subst:sg:inst:f', 'prawo:subst:sg:nom.acc.voc:n:ncol', 'prawo:adv:pos', 'do:prep:gen']",
+    "  SYNTAX_COORDS: [0.733, 0.455, 0.664]",
+    "  FINAL: D=0.728, S=0.622, E=0.444"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.7855,
+    "quantum_words": 10,
+    "entanglements": 4,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

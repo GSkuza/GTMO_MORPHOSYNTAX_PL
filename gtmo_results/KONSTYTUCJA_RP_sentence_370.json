@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:43.751489",
+  "content": {
+    "text": "Wybraną do Sejmu lub do Senatu nie może być osoba skazana\nprawomocnym wyrokiem na karę pozbawienia wolności za przestępstwo umyślne\nścigane z oskarżenia publicznego.",
+    "length": 165,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.697934,
+    "stability": 0.63364,
+    "entropy": 0.447284
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:43.751489",
+    "sequence_number": 370,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 68,
+    "cases": {
+      "acc": 11,
+      "gen": 15,
+      "nom": 17,
+      "voc": 2,
+      "dat": 2,
+      "loc": 2
+    },
+    "pos": {
+      "adj": 12,
+      "subst": 22,
+      "prep": 9,
+      "conj": 2,
+      "part": 4,
+      "interp": 1
+    },
+    "ambiguity": 2.8333333333333335,
+    "debug_tags": [
+      "Wybraną:adj:sg:acc:f:pos",
+      "Wybraną:adj:sg:inst:f:pos",
+      "Wybraną:ppas:sg:acc.inst:f:perf:aff",
+      "Wybraną:subst:sg:acc:f",
+      "Wybraną:subst:sg:inst:f",
+      "do:prep:gen",
+      "do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "do:prep:gen",
+      "do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "Sejmu:subst:sg:gen:m3"
+    ],
+    "coords_count": 49
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6351
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=49, cases={'acc': 11, 'gen': 15, 'nom': 17, 'voc': 2, 'dat': 2, 'loc': 2}, pos={'adj': 12, 'subst': 22, 'prep': 9, 'conj': 2, 'part': 4, 'interp': 1}",
+    "  MORPH_COORDS: [0.735, 0.697, 0.346]",
+    "  MORPH_TAGS: ['Wybraną:adj:sg:acc:f:pos', 'Wybraną:adj:sg:inst:f:pos', 'Wybraną:ppas:sg:acc.inst:f:perf:aff', 'Wybraną:subst:sg:acc:f', 'Wybraną:subst:sg:inst:f', 'do:prep:gen', 'do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol', 'do:prep:gen', 'do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol', 'Sejmu:subst:sg:gen:m3']",
+    "  SYNTAX_COORDS: [0.622, 0.454, 0.704]",
+    "  FINAL: D=0.708, S=0.639, E=0.432"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.1932,
+    "quantum_words": 20,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

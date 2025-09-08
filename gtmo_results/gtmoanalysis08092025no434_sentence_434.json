@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:44.188144",
+  "content": {
+    "text": "Zasady i tryb zgłaszania kandydatów i przeprowadzania wyborów oraz\nwarunki ważności wyboru Prezydenta Rzeczypospolitej określa ustawa.",
+    "length": 134,
+    "word_count": 16
+  },
+  "coordinates": {
+    "determination": 0.77383,
+    "stability": 0.590594,
+    "entropy": 0.513494
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:44.188144",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 434,
+    "saved_at": "2025-09-08T15:32:44.188591",
+    "file_counter": 434
+  },
+  "additional_metrics": {
+    "total_analyses": 39,
+    "cases": {
+      "nom": 11,
+      "gen": 14,
+      "dat": 2,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 23,
+      "part": 2,
+      "conj": 3,
+      "adv": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.4375,
+    "debug_tags": [
+      "Zasady:subst:pl:nom.acc.voc:n:pt",
+      "Zasady:subst:sg:gen:f",
+      "Zasady:subst:pl:nom.acc.voc:f",
+      "Zasady:subst:sg:gen:f",
+      "Zasady:subst:pl:nom.acc.voc:f",
+      "Zasady:subst:sg:gen:m1",
+      "Zasady:depr:pl:nom.acc.voc:m2",
+      "i:interj",
+      "i:part",
+      "i:conj"
+    ],
+    "coords_count": 27
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.6327
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.1986,
+    "quantum_words": 12,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.234125,
+    "formula": "0.784 × 0.596 × 0.502 = 0.234"
+  },
+  "sentence_number": 434,
+  "total_sentences": 805
+}

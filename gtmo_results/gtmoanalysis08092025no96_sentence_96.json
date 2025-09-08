@@ -1,0 +1,77 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:36.814686",
+  "content": {
+    "text": "Zakazuje się stosowania kar cielesnych.\n\nArt. 41. 1.",
+    "length": 52,
+    "word_count": 8
+  },
+  "coordinates": {
+    "determination": 0.770257,
+    "stability": 0.663514,
+    "entropy": 0.360954
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:36.814686",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 96,
+    "saved_at": "2025-09-08T15:32:36.815668",
+    "file_counter": 96
+  },
+  "additional_metrics": {
+    "total_analyses": 19,
+    "cases": {
+      "nom": 4,
+      "gen": 4,
+      "acc": 1,
+      "loc": 1
+    },
+    "pos": {
+      "part": 1,
+      "subst": 5,
+      "adj": 3,
+      "interp": 4
+    },
+    "ambiguity": 2.375,
+    "debug_tags": [
+      "Zakazuje:fin:sg:ter:imperf",
+      "się:part",
+      "stosowania:ger:pl:nom.acc:n:imperf:aff",
+      "stosowania:ger:sg:gen:n:imperf:aff",
+      "kar:subst:sg:nom.acc:m3",
+      "kar:subst:pl:gen:f",
+      "kar:subst:pl:gen:n:ncol",
+      "cielesnych:adj:pl:acc:m1:pos",
+      "cielesnych:adj:pl:gen:m1.m2.m3.f.n:pos",
+      "cielesnych:adj:pl:loc:m1.m2.m3.f.n:pos"
+    ],
+    "coords_count": 9
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6989
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.6987,
+    "quantum_words": 4,
+    "entanglements": 2,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.341159,
+    "formula": "0.780 × 0.669 × 0.654 = 0.341"
+  },
+  "sentence_number": 96,
+  "total_sentences": 805
+}

@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:37.804936",
+  "content": {
+    "text": "Religia kościoła lub innego związku wyznaniowego o uregulowanej sytuacji\nprawnej może być przedmiotem nauczania w szkole, przy czym nie może być\nnaruszona wolność sumienia i religii innych osób.",
+    "length": 194,
+    "word_count": 28
+  },
+  "coordinates": {
+    "determination": 0.634883,
+    "stability": 0.607688,
+    "entropy": 0.486031
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:37.804936",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 147,
+    "saved_at": "2025-09-08T15:32:37.805510",
+    "file_counter": 147
+  },
+  "additional_metrics": {
+    "total_analyses": 72,
+    "cases": {
+      "nom": 6,
+      "gen": 21,
+      "acc": 8,
+      "loc": 8,
+      "voc": 1,
+      "dat": 4
+    },
+    "pos": {
+      "subst": 27,
+      "conj": 3,
+      "adj": 10,
+      "prep": 5,
+      "part": 5,
+      "interp": 2
+    },
+    "ambiguity": 2.5714285714285716,
+    "debug_tags": [
+      "Religia:subst:sg:nom:f",
+      "kościoła:subst:sg:gen:m3",
+      "lub:conj",
+      "lub:impt:sg:sec:imperf",
+      "innego:subst:sg:gen.acc:m1",
+      "innego:adj:sg:acc:m1.m2:pos",
+      "innego:adj:sg:gen:m1.m2.m3.n:pos",
+      "związku:subst:sg:gen:m3",
+      "związku:subst:sg:loc:m3",
+      "związku:subst:sg:voc:m3"
+    ],
+    "coords_count": 53
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.5905
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0811,
+    "quantum_words": 22,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.209002,
+    "formula": "0.645 × 0.613 × 0.529 = 0.209"
+  },
+  "sentence_number": 147,
+  "total_sentences": 805
+}

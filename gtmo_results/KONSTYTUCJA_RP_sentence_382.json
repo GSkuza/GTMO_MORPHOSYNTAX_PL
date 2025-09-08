@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:43.955212",
+  "content": {
+    "text": "Mandatu posła nie można łączyć z funkcją Prezesa Narodowego\nBanku Polskiego, Prezesa Najwyższej Izby Kontroli, Rzecznika Praw\nObywatelskich, Rzecznika Praw Dziecka i ich zastępców, członka Rady Polityki\nPieniężnej, członka Krajowej Rady Radiofonii i Telewizji, ambasadora oraz z\nzatrudnieniem w Kancelarii Sejmu, Kancelarii Senatu, Kancelarii Prezydenta\nRzeczypospolitej lub z zatrudnieniem w administracji rządowej.",
+    "length": 416,
+    "word_count": 52
+  },
+  "coordinates": {
+    "determination": 0.62203,
+    "stability": 0.583209,
+    "entropy": 0.511599
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:43.955212",
+    "sequence_number": 382,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 145,
+    "cases": {
+      "gen": 59,
+      "acc": 8,
+      "nom": 13,
+      "loc": 10,
+      "voc": 3,
+      "dat": 13
+    },
+    "pos": {
+      "subst": 74,
+      "conj": 5,
+      "part": 6,
+      "adj": 20,
+      "prep": 10,
+      "interp": 9,
+      "adv": 1
+    },
+    "ambiguity": 2.7884615384615383,
+    "debug_tags": [
+      "Mandatu:subst:sg:gen:m3",
+      "posła:subst:sg:gen.acc:m1",
+      "nie:conj",
+      "nie:interj",
+      "nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "nie:part",
+      "można:adj:sg:nom.voc:f:pos",
+      "można:pred",
+      "łączyć:inf:imperf"
+    ],
+    "coords_count": 80
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5703
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=80, cases={'gen': 59, 'acc': 8, 'nom': 13, 'loc': 10, 'voc': 3, 'dat': 13}, pos={'subst': 74, 'conj': 5, 'part': 6, 'adj': 20, 'prep': 10, 'interp': 9, 'adv': 1}",
+    "  MORPH_COORDS: [0.698, 0.636, 0.424]",
+    "  MORPH_TAGS: ['Mandatu:subst:sg:gen:m3', 'posła:subst:sg:gen.acc:m1', 'nie:conj', 'nie:interj', 'nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep', 'nie:ppron3:sg:acc:n:ter:akc.nakc:praep', 'nie:part', 'można:adj:sg:nom.voc:f:pos', 'można:pred', 'łączyć:inf:imperf']",
+    "  SYNTAX_COORDS: [0.445, 0.451, 0.701]",
+    "  FINAL: D=0.632, S=0.588, E=0.497"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9944,
+    "quantum_words": 34,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

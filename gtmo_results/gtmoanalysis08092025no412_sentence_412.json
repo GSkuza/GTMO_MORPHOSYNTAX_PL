@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:43.731275",
+  "content": {
+    "text": "W postępowaniu w sprawie ustawy, której projekt został uznany za pilny,\ntermin jej rozpatrzenia przez Senat wynosi 14 dni, a termin podpisania ustawy przez\nPrezydenta Rzeczypospolitej wynosi 7 dni.",
+    "length": 197,
+    "word_count": 29
+  },
+  "coordinates": {
+    "determination": 0.733883,
+    "stability": 0.634103,
+    "entropy": 0.409832
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:43.731275",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 412,
+    "saved_at": "2025-09-08T15:32:43.732277",
+    "file_counter": 412
+  },
+  "additional_metrics": {
+    "total_analyses": 64,
+    "cases": {
+      "acc": 8,
+      "loc": 4,
+      "dat": 6,
+      "gen": 13,
+      "nom": 16
+    },
+    "pos": {
+      "prep": 10,
+      "subst": 20,
+      "interp": 4,
+      "adj": 7,
+      "part": 2,
+      "conj": 1
+    },
+    "ambiguity": 2.206896551724138,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "postępowaniu:subst:sg:dat:n:ncol",
+      "postępowaniu:subst:sg:loc:n:ncol",
+      "postępowaniu:ger:sg:dat.loc:n:imperf:aff",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "sprawie:subst:sg:dat.loc:f",
+      "ustawy:subst:sg:gen:f",
+      "ustawy:subst:pl:nom.acc.voc:f"
+    ],
+    "coords_count": 43
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6608
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0444,
+    "quantum_words": 20,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.287707,
+    "formula": "0.744 × 0.639 × 0.605 = 0.288"
+  },
+  "sentence_number": 412,
+  "total_sentences": 805
+}

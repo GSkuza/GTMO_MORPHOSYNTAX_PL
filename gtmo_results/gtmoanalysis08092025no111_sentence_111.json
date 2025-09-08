@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:37.125967",
+  "content": {
+    "text": "Każdego uważa się za niewinnego, dopóki jego wina nie zostanie\nstwierdzona prawomocnym wyrokiem sądu.",
+    "length": 101,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.719462,
+    "stability": 0.608845,
+    "entropy": 0.38738
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:37.125967",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 111,
+    "saved_at": "2025-09-08T15:32:37.126476",
+    "file_counter": 111
+  },
+  "additional_metrics": {
+    "total_analyses": 34,
+    "cases": {
+      "acc": 7,
+      "gen": 8,
+      "nom": 4,
+      "dat": 1,
+      "loc": 1
+    },
+    "pos": {
+      "adj": 9,
+      "part": 3,
+      "prep": 3,
+      "interp": 2,
+      "subst": 5,
+      "conj": 1
+    },
+    "ambiguity": 2.4285714285714284,
+    "debug_tags": [
+      "Każdego:adj:sg:acc:m1.m2:pos",
+      "Każdego:adj:sg:gen:m1.m2.m3.n:pos",
+      "uważa:fin:sg:ter:imperf",
+      "się:part",
+      "za:prep:acc",
+      "za:prep:gen",
+      "za:prep:inst",
+      "za:part",
+      "niewinnego:adj:sg:acc:m1.m2:pos",
+      "niewinnego:adj:sg:gen:m1.m2.m3.n:pos"
+    ],
+    "coords_count": 23
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6542
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0214,
+    "quantum_words": 10,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.281034,
+    "formula": "0.729 × 0.614 × 0.628 = 0.281"
+  },
+  "sentence_number": 111,
+  "total_sentences": 805
+}

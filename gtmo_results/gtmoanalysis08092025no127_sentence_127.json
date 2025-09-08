@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:37.392618",
+  "content": {
+    "text": "Przeszukanie mieszkania,\npomieszczenia lub pojazdu może nastąpić jedynie w przypadkach określonych w\nustawie i w sposób w niej określony.\n\nArt. 51. 1.",
+    "length": 150,
+    "word_count": 22
+  },
+  "coordinates": {
+    "determination": 0.685956,
+    "stability": 0.632091,
+    "entropy": 0.459857
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:37.392618",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 127,
+    "saved_at": "2025-09-08T15:32:37.393289",
+    "file_counter": 127
+  },
+  "additional_metrics": {
+    "total_analyses": 57,
+    "cases": {
+      "nom": 11,
+      "gen": 8,
+      "acc": 8,
+      "loc": 8,
+      "dat": 2
+    },
+    "pos": {
+      "subst": 12,
+      "interp": 5,
+      "conj": 2,
+      "part": 3,
+      "prep": 8,
+      "adj": 5
+    },
+    "ambiguity": 2.590909090909091,
+    "debug_tags": [
+      "Przeszukanie:subst:sg:nom.acc.voc:n:ncol",
+      "Przeszukanie:ger:sg:nom.acc:n:perf:aff",
+      "mieszkania:subst:sg:gen:n:ncol",
+      "mieszkania:subst:pl:nom.acc.voc:n:ncol",
+      "mieszkania:ger:pl:nom.acc:n:imperf:aff",
+      "mieszkania:ger:sg:gen:n:imperf:aff",
+      ",:interp",
+      "pomieszczenia:subst:sg:gen:n:ncol",
+      "pomieszczenia:subst:pl:nom.acc.voc:n:ncol",
+      "pomieszczenia:ger:pl:nom.acc:n:perf:aff"
+    ],
+    "coords_count": 30
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6261
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9977,
+    "quantum_words": 12,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.246144,
+    "formula": "0.696 × 0.637 × 0.555 = 0.246"
+  },
+  "sentence_number": 127,
+  "total_sentences": 805
+}

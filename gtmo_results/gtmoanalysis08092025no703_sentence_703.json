@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:50.769643",
+  "content": {
+    "text": "Ustanowienie monopolu następuje w drodze ustawy.",
+    "length": 48,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.818831,
+    "stability": 0.727971,
+    "entropy": 0.287943
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:50.769643",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 703,
+    "saved_at": "2025-09-08T15:32:50.770029",
+    "file_counter": 703
+  },
+  "additional_metrics": {
+    "total_analyses": 11,
+    "cases": {
+      "nom": 2,
+      "gen": 2,
+      "loc": 2,
+      "voc": 1,
+      "acc": 1,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 6,
+      "prep": 2,
+      "interp": 1
+    },
+    "ambiguity": 1.8333333333333333,
+    "debug_tags": [
+      "Ustanowienie:ger:sg:nom.acc:n:perf:aff",
+      "monopolu:subst:sg:gen:m3",
+      "monopolu:subst:sg:loc:m3",
+      "monopolu:subst:sg:voc:m3",
+      "następuje:fin:sg:ter:imperf",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "drodze:subst:sg:dat.loc:f",
+      "ustawy:subst:sg:gen:f",
+      "ustawy:subst:pl:nom.acc.voc:f"
+    ],
+    "coords_count": 10
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "high",
+    "entropy": "low",
+    "overall": "high_quality",
+    "overall_score": 0.7595
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8994,
+    "quantum_words": 5,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.441694,
+    "formula": "0.829 × 0.733 × 0.727 = 0.442"
+  },
+  "sentence_number": 703,
+  "total_sentences": 805
+}

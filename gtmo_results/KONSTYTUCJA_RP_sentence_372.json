@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:43.780699",
+  "content": {
+    "text": "Kandydatów na posłów i senatorów mogą zgłaszać partie\npolityczne oraz wyborcy.",
+    "length": 78,
+    "word_count": 11
+  },
+  "coordinates": {
+    "determination": 0.717197,
+    "stability": 0.618005,
+    "entropy": 0.44801
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:43.780699",
+    "sequence_number": 372,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 23,
+    "cases": {
+      "gen": 4,
+      "acc": 3,
+      "loc": 1,
+      "nom": 5,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 7,
+      "prep": 2,
+      "part": 1,
+      "conj": 2,
+      "adj": 4,
+      "adv": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.090909090909091,
+    "debug_tags": [
+      "Kandydatów:subst:pl:gen.acc:m1",
+      "na:prep:acc",
+      "na:prep:loc",
+      "na:interj",
+      "posłów:subst:pl:gen.acc:m1",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "senatorów:subst:pl:gen.acc:m1",
+      "mogą:fin:pl:ter:imperf"
+    ],
+    "coords_count": 19
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6379
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=19, cases={'gen': 4, 'acc': 3, 'loc': 1, 'nom': 5, 'dat': 1}, pos={'subst': 7, 'prep': 2, 'part': 1, 'conj': 2, 'adj': 4, 'adv': 1, 'interp': 1}",
+    "  MORPH_COORDS: [0.720, 0.686, 0.365]",
+    "  MORPH_TAGS: ['Kandydatów:subst:pl:gen.acc:m1', 'na:prep:acc', 'na:prep:loc', 'na:interj', 'posłów:subst:pl:gen.acc:m1', 'i:interj', 'i:part', 'i:conj', 'senatorów:subst:pl:gen.acc:m1', 'mogą:fin:pl:ter:imperf']",
+    "  SYNTAX_COORDS: [0.746, 0.455, 0.614]",
+    "  FINAL: D=0.727, S=0.623, E=0.433"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.8629,
+    "quantum_words": 7,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

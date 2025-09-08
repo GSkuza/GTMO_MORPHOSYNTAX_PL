@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:53.205046",
+  "content": {
+    "text": "W okresie roku od dnia wejścia w życie Konstytucji ustawa\nbudżetowa może przewidywać pokrywanie deficytu budżetowego przez zaciąganie\nzobowiązań w centralnym banku państwa.",
+    "length": 172,
+    "word_count": 23
+  },
+  "coordinates": {
+    "determination": 0.721131,
+    "stability": 0.615204,
+    "entropy": 0.42383
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:53.205046",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 790,
+    "saved_at": "2025-09-08T15:32:53.205812",
+    "file_counter": 790
+  },
+  "additional_metrics": {
+    "total_analyses": 54,
+    "cases": {
+      "acc": 5,
+      "loc": 10,
+      "voc": 4,
+      "gen": 16,
+      "nom": 9,
+      "dat": 3
+    },
+    "pos": {
+      "prep": 8,
+      "subst": 29,
+      "adj": 6,
+      "part": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.347826086956522,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "okresie:subst:sg:loc:m3",
+      "okresie:subst:sg:voc:m3",
+      "roku:subst:sg:gen:m3",
+      "roku:subst:sg:loc:m3",
+      "roku:subst:sg:voc:m3",
+      "roku:subst:sg:gen:m3",
+      "roku:subst:sg:loc:m3",
+      "roku:subst:sg:voc:m3"
+    ],
+    "coords_count": 42
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6459
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8484,
+    "quantum_words": 20,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.268066,
+    "formula": "0.731 × 0.620 × 0.591 = 0.268"
+  },
+  "sentence_number": 790,
+  "total_sentences": 805
+}

@@ -1,0 +1,75 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:42.099737",
+  "content": {
+    "text": "Odmowa złożenia ślubowania oznacza zrzeczenie się mandatu.",
+    "length": 58,
+    "word_count": 7
+  },
+  "coordinates": {
+    "determination": 0.790778,
+    "stability": 0.686703,
+    "entropy": 0.34079
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:42.099737",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 342,
+    "saved_at": "2025-09-08T15:32:42.100428",
+    "file_counter": 342
+  },
+  "additional_metrics": {
+    "total_analyses": 18,
+    "cases": {
+      "nom": 9,
+      "gen": 6
+    },
+    "pos": {
+      "adj": 1,
+      "subst": 7,
+      "part": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.5714285714285716,
+    "debug_tags": [
+      "Odmowa:adj:sg:nom.voc:f:pos",
+      "Odmowa:subst:sg:nom:f",
+      "złożenia:ger:pl:nom.acc:n:perf:aff",
+      "złożenia:ger:sg:gen:n:perf:aff",
+      "złożenia:ger:pl:nom.acc:n:perf:aff",
+      "złożenia:ger:sg:gen:n:perf:aff",
+      "złożenia:subst:sg:gen:n:ncol",
+      "złożenia:subst:pl:nom.acc.voc:n:ncol",
+      "ślubowania:subst:sg:gen:n:ncol",
+      "ślubowania:subst:pl:nom.acc.voc:n:ncol"
+    ],
+    "coords_count": 13
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7201
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9708,
+    "quantum_words": 5,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.373446,
+    "formula": "0.801 × 0.692 × 0.674 = 0.373"
+  },
+  "sentence_number": 342,
+  "total_sentences": 805
+}

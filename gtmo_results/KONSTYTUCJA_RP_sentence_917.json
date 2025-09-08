@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:53.989511",
+  "content": {
+    "text": "U. Nr 84, poz. 426, z 1995 r.",
+    "length": 29,
+    "word_count": 8
+  },
+  "coordinates": {
+    "determination": 0.702202,
+    "stability": 0.6306,
+    "entropy": 0.38518
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:53.989511",
+    "sequence_number": 917,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 22,
+    "cases": {
+      "gen": 2,
+      "nom": 1
+    },
+    "pos": {
+      "prep": 3,
+      "interp": 5,
+      "subst": 1,
+      "part": 1
+    },
+    "ambiguity": 2.75,
+    "debug_tags": [
+      "U:brev:pun",
+      "U:brev:pun",
+      "U:brev:pun",
+      "U:prep:gen",
+      ".:interp",
+      ".:interp",
+      ".:interp",
+      "Nr:subst:sg:nom.acc:m3",
+      "Nr:brev:npun",
+      "84:dig"
+    ],
+    "coords_count": 9
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6545
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=9, cases={'gen': 2, 'nom': 1}, pos={'prep': 3, 'interp': 5, 'subst': 1, 'part': 1}",
+    "  MORPH_COORDS: [0.741, 0.659, 0.384]",
+    "  MORPH_TAGS: ['U:brev:pun', 'U:brev:pun', 'U:brev:pun', 'U:prep:gen', '.:interp', '.:interp', '.:interp', 'Nr:subst:sg:nom.acc:m3', 'Nr:brev:npun', '84:dig']",
+    "  SYNTAX_COORDS: [0.631, 0.570, 0.330]",
+    "  FINAL: D=0.712, S=0.636, E=0.370"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.98,
+    "quantum_words": 3,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

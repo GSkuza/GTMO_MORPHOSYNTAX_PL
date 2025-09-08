@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:48.214039",
+  "content": {
+    "text": "W razie niepowołania Rady Ministrów w trybie art. 154 ust. 3\nPrezydent Rzeczypospolitej w ciągu 14 dni powołuje Prezesa Rady Ministrów i na\njego wniosek pozostałych członków Rady Ministrów oraz odbiera od nich przysięgę.",
+    "length": 220,
+    "word_count": 34
+  },
+  "coordinates": {
+    "determination": 0.680901,
+    "stability": 0.628744,
+    "entropy": 0.449658
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:48.214039",
+    "sequence_number": 594,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 79,
+    "cases": {
+      "acc": 8,
+      "loc": 10,
+      "voc": 4,
+      "nom": 14,
+      "gen": 24,
+      "dat": 2
+    },
+    "pos": {
+      "prep": 9,
+      "subst": 39,
+      "interp": 3,
+      "part": 1,
+      "conj": 2,
+      "adj": 3,
+      "adv": 1
+    },
+    "ambiguity": 2.323529411764706,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "razie:subst:sg:loc:m3",
+      "razie:subst:sg:voc:m3",
+      "razie:subst:sg:loc:m3",
+      "razie:subst:sg:voc:m3",
+      "niepowołania:ger:pl:nom.acc:n:perf:neg",
+      "niepowołania:ger:sg:gen:n:perf:neg",
+      "Rady:depr:pl:nom.acc.voc:m2",
+      "Rady:subst:pl:nom.acc.voc:m3"
+    ],
+    "coords_count": 45
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6261
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=45, cases={'acc': 8, 'loc': 10, 'voc': 4, 'nom': 14, 'gen': 24, 'dat': 2}, pos={'prep': 9, 'subst': 39, 'interp': 3, 'part': 1, 'conj': 2, 'adj': 3, 'adv': 1}",
+    "  MORPH_COORDS: [0.739, 0.698, 0.355]",
+    "  MORPH_TAGS: ['W:prep:acc:nwok', 'W:prep:loc:nwok', 'razie:subst:sg:loc:m3', 'razie:subst:sg:voc:m3', 'razie:subst:sg:loc:m3', 'razie:subst:sg:voc:m3', 'niepowołania:ger:pl:nom.acc:n:perf:neg', 'niepowołania:ger:sg:gen:n:perf:neg', 'Rady:depr:pl:nom.acc.voc:m2', 'Rady:subst:pl:nom.acc.voc:m3']",
+    "  SYNTAX_COORDS: [0.554, 0.451, 0.661]",
+    "  FINAL: D=0.691, S=0.634, E=0.435"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9934,
+    "quantum_words": 21,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

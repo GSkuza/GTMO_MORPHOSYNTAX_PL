@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:47.240875",
+  "content": {
+    "text": "Jeżeli wynika to z uzasadnionych potrzeb państwa, ustawa może zlecić\njednostkom samorządu terytorialnego wykonywanie innych zadań publicznych.",
+    "length": 142,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.757688,
+    "stability": 0.588018,
+    "entropy": 0.446724
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:47.240875",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 560,
+    "saved_at": "2025-09-08T15:32:47.241497",
+    "file_counter": 560
+  },
+  "additional_metrics": {
+    "total_analyses": 46,
+    "cases": {
+      "acc": 8,
+      "nom": 6,
+      "gen": 13,
+      "loc": 4,
+      "dat": 1
+    },
+    "pos": {
+      "conj": 1,
+      "part": 3,
+      "adj": 13,
+      "subst": 14,
+      "prep": 2,
+      "interp": 2
+    },
+    "ambiguity": 2.7058823529411766,
+    "debug_tags": [
+      "Jeżeli:comp",
+      "wynika:fin:sg:ter:imperf",
+      "to:conj",
+      "to:part",
+      "to:adj:sg:acc:n:pos",
+      "to:adj:sg:nom.voc:n:pos",
+      "to:subst:sg:nom:n:ncol",
+      "to:subst:sg:acc:n:ncol",
+      "to:comp",
+      "to:pred"
+    ],
+    "coords_count": 33
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6455
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.7906,
+    "quantum_words": 13,
+    "entanglements": 4,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.258709,
+    "formula": "0.768 × 0.593 × 0.568 = 0.259"
+  },
+  "sentence_number": 560,
+  "total_sentences": 805
+}

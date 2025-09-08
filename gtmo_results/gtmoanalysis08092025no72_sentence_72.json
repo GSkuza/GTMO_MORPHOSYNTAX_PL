@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:36.185898",
+  "content": {
+    "text": "Jest ona nienaruszalna, a jej poszanowanie i\nochrona jest obowiązkiem władz publicznych.",
+    "length": 88,
+    "word_count": 12
+  },
+  "coordinates": {
+    "determination": 0.72978,
+    "stability": 0.6608,
+    "entropy": 0.381733
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:36.185898",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 72,
+    "saved_at": "2025-09-08T15:32:36.186304",
+    "file_counter": 72
+  },
+  "additional_metrics": {
+    "total_analyses": 25,
+    "cases": {
+      "nom": 7,
+      "dat": 1,
+      "gen": 3,
+      "acc": 1,
+      "loc": 1
+    },
+    "pos": {
+      "adj": 5,
+      "interp": 2,
+      "conj": 2,
+      "prep": 1,
+      "part": 2,
+      "subst": 4
+    },
+    "ambiguity": 2.0833333333333335,
+    "debug_tags": [
+      "Jest:fin:sg:ter:imperf",
+      "ona:ppron3:sg:nom:f:ter:akc.nakc:praep.npraep",
+      "ona:adj:sg:nom.voc:f:pos",
+      "nienaruszalna:adj:sg:nom.voc:f:pos",
+      ",:interp",
+      "a:conj",
+      "a:interj",
+      "a:prep:nom",
+      "a:part",
+      "jej:interj"
+    ],
+    "coords_count": 22
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6756
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9854,
+    "quantum_words": 8,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.311913,
+    "formula": "0.740 × 0.666 × 0.633 = 0.312"
+  },
+  "sentence_number": 72,
+  "total_sentences": 805
+}

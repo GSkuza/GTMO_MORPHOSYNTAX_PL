@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:40.355582",
+  "content": {
+    "text": "Źródłami powszechnie obowiązującego prawa Rzeczypospolitej\nPolskiej są: Konstytucja, ustawy, ratyfikowane umowy międzynarodowe oraz\nrozporządzenia.",
+    "length": 147,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.677999,
+    "stability": 0.661396,
+    "entropy": 0.389834
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:40.355582",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 268,
+    "saved_at": "2025-09-08T15:32:40.355930",
+    "file_counter": 268
+  },
+  "additional_metrics": {
+    "total_analyses": 44,
+    "cases": {
+      "nom": 14,
+      "acc": 5,
+      "gen": 10,
+      "voc": 1,
+      "dat": 3,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 18,
+      "adv": 2,
+      "adj": 12,
+      "interp": 4,
+      "conj": 1
+    },
+    "ambiguity": 3.142857142857143,
+    "debug_tags": [
+      "Źródłami:subst:pl:inst:n:pt",
+      "Źródłami:subst:pl:inst:n:ncol",
+      "powszechnie:adv:pos",
+      "powszechnie:subst:pl:nom.acc.voc:f",
+      "obowiązującego:pact:sg:acc:m1.m2:imperf:aff",
+      "obowiązującego:pact:sg:gen:m1.m2.m3.n:imperf:aff",
+      "obowiązującego:adj:sg:acc:m1.m2:pos",
+      "obowiązującego:adj:sg:gen:m1.m2.m3.n:pos",
+      "prawa:subst:sg:nom:f",
+      "prawa:subst:sg:voc:f"
+    ],
+    "coords_count": 31
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6527
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.7779,
+    "quantum_words": 11,
+    "entanglements": 1,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.286625,
+    "formula": "0.688 × 0.666 × 0.625 = 0.287"
+  },
+  "sentence_number": 268,
+  "total_sentences": 805
+}

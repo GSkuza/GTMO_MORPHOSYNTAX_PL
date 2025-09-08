@@ -1,0 +1,76 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:45.978230",
+  "content": {
+    "text": "1. Przedstawicielem Rady Ministrów w województwie jest\nwojewoda.",
+    "length": 64,
+    "word_count": 8
+  },
+  "coordinates": {
+    "determination": 0.76175,
+    "stability": 0.716545,
+    "entropy": 0.27747
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:45.978230",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 510,
+    "saved_at": "2025-09-08T15:32:45.978683",
+    "file_counter": 510
+  },
+  "additional_metrics": {
+    "total_analyses": 15,
+    "cases": {
+      "nom": 4,
+      "gen": 3,
+      "acc": 1,
+      "loc": 2
+    },
+    "pos": {
+      "interp": 2,
+      "subst": 8,
+      "prep": 2
+    },
+    "ambiguity": 1.875,
+    "debug_tags": [
+      "1:dig",
+      ".:interp",
+      ".:interp",
+      "Przedstawicielem:subst:sg:inst:m1",
+      "Rady:depr:pl:nom.acc.voc:m2",
+      "Rady:subst:pl:nom.acc.voc:m3",
+      "Rady:subst:sg:gen:f",
+      "Rady:subst:pl:nom.acc.voc:f",
+      "Rady:subst:sg:gen:m1",
+      "Ministrów:subst:pl:gen.acc:m1"
+    ],
+    "coords_count": 12
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "high",
+    "entropy": "low",
+    "overall": "high_quality",
+    "overall_score": 0.7364
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.3046,
+    "quantum_words": 5,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.410695,
+    "formula": "0.772 × 0.722 × 0.738 = 0.411"
+  },
+  "sentence_number": 510,
+  "total_sentences": 805
+}

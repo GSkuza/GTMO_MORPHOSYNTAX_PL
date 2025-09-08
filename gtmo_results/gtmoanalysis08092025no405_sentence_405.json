@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:43.501772",
+  "content": {
+    "text": "Jeżeli Prezydent Rzeczypospolitej nie wystąpił z wnioskiem do Trybunału\nKonstytucyjnego w trybie ust. 3, może z umotywowanym wnioskiem przekazać\nustawę Sejmowi do ponownego rozpatrzenia.",
+    "length": 186,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.659683,
+    "stability": 0.601249,
+    "entropy": 0.445392
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:43.501772",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 405,
+    "saved_at": "2025-09-08T15:32:43.502164",
+    "file_counter": 405
+  },
+  "additional_metrics": {
+    "total_analyses": 54,
+    "cases": {
+      "nom": 8,
+      "gen": 12,
+      "dat": 4,
+      "acc": 6,
+      "loc": 3,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 17,
+      "conj": 1,
+      "part": 4,
+      "prep": 8,
+      "adj": 5,
+      "interp": 3
+    },
+    "ambiguity": 2.25,
+    "debug_tags": [
+      "Jeżeli:comp",
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "nie:conj",
+      "nie:interj",
+      "nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "nie:part"
+    ],
+    "coords_count": 37
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6106
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9881,
+    "quantum_words": 15,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.231257,
+    "formula": "0.670 × 0.606 × 0.570 = 0.231"
+  },
+  "sentence_number": 405,
+  "total_sentences": 805
+}

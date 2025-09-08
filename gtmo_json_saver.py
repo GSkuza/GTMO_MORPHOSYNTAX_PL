@@ -372,6 +372,58 @@ class GTMOOptimizedSaver:
         else:
             with open(filepath, 'r', encoding='utf-8') as f:
                 return json.load(f)
+    
+    def save_sentence_analysis(self, 
+                             result: Dict,
+                             sentence: str,
+                             sentence_number: int,
+                             compress: bool = False) -> str:
+        """
+        Save individual sentence analysis result with optimized format.
+        
+        Args:
+            result: Complete GTMØ analysis result
+            sentence: Original sentence text
+            sentence_number: Sentence number in document
+            compress: Whether to gzip the output
+            
+        Returns:
+            Path to saved JSON file
+        """
+        # Generate filename
+        filename = self._get_next_filename()
+        if compress:
+            filename = filename.replace('.json', '.json.gz')
+        
+        # Create custom filename with sentence number
+        base_name = filename.replace('.json', '')
+        if compress:
+            base_name = base_name.replace('.gz', '')
+        
+        custom_filename = f"{base_name}_sentence_{sentence_number}.json"
+        if compress:
+            custom_filename += ".gz"
+        
+        filepath = self.output_dir / custom_filename
+        
+        # Ensure result has proper structure and add sentence info
+        if 'analysis_metadata' not in result:
+            result['analysis_metadata'] = {}
+        
+        result['analysis_metadata']['sentence_number'] = sentence_number
+        result['analysis_metadata']['saved_at'] = datetime.now().isoformat()
+        result['analysis_metadata']['file_counter'] = self.daily_counter - 1
+        
+        # Save file
+        if compress:
+            with gzip.open(filepath, 'wt', encoding='utf-8') as f:
+                json.dump(result, f, ensure_ascii=False, indent=2)
+        else:
+            with open(filepath, 'w', encoding='utf-8') as f:
+                json.dump(result, f, ensure_ascii=False, indent=2)
+        
+        logger.info(f"Saved sentence {sentence_number} analysis to: {filepath}")
+        return str(filepath)
 
 
 def main():

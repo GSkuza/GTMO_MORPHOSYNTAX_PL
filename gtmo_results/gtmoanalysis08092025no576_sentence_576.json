@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:47.555580",
+  "content": {
+    "text": "Sejm, na wniosek Prezesa Rady Ministrów, może rozwiązać organ\nstanowiący samorządu terytorialnego, jeżeli organ ten rażąco narusza Konstytucję\nlub ustawy.",
+    "length": 154,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.73006,
+    "stability": 0.627064,
+    "entropy": 0.461145
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:47.555580",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 576,
+    "saved_at": "2025-09-08T15:32:47.556024",
+    "file_counter": 576
+  },
+  "additional_metrics": {
+    "total_analyses": 40,
+    "cases": {
+      "nom": 13,
+      "acc": 5,
+      "loc": 1,
+      "gen": 7
+    },
+    "pos": {
+      "subst": 16,
+      "interp": 4,
+      "prep": 2,
+      "part": 1,
+      "adj": 4,
+      "adv": 1,
+      "conj": 1
+    },
+    "ambiguity": 2.0,
+    "debug_tags": [
+      "Sejm:subst:sg:nom.acc:m3",
+      ",:interp",
+      ",:interp",
+      ",:interp",
+      "na:prep:acc",
+      "na:prep:loc",
+      "na:interj",
+      "wniosek:subst:sg:nom.acc:m3",
+      "Prezesa:subst:sg:gen.acc:m1",
+      "Rady:depr:pl:nom.acc.voc:m2"
+    ],
+    "coords_count": 30
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6418
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.92,
+    "quantum_words": 13,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.259074,
+    "formula": "0.740 × 0.632 × 0.554 = 0.259"
+  },
+  "sentence_number": 576,
+  "total_sentences": 805
+}

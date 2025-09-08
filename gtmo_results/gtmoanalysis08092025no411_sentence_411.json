@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:43.693021",
+  "content": {
+    "text": "Regulamin Sejmu oraz regulamin Senatu określają odrębności w\npostępowaniu ustawodawczym w sprawie projektu pilnego.",
+    "length": 115,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.716579,
+    "stability": 0.638371,
+    "entropy": 0.390239
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:43.693021",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 411,
+    "saved_at": "2025-09-08T15:32:43.693676",
+    "file_counter": 411
+  },
+  "additional_metrics": {
+    "total_analyses": 27,
+    "cases": {
+      "nom": 3,
+      "gen": 6,
+      "dat": 5,
+      "voc": 1,
+      "acc": 3,
+      "loc": 4
+    },
+    "pos": {
+      "subst": 13,
+      "adv": 1,
+      "conj": 1,
+      "prep": 4,
+      "adj": 5,
+      "interp": 1
+    },
+    "ambiguity": 1.9285714285714286,
+    "debug_tags": [
+      "Regulamin:subst:sg:nom.acc:m3",
+      "Sejmu:subst:sg:gen:m3",
+      "oraz:adv",
+      "oraz:conj",
+      "regulamin:subst:sg:nom.acc:m3",
+      "Senatu:subst:sg:gen:m3",
+      "określają:fin:pl:ter:imperf",
+      "odrębności:subst:sg:gen:f",
+      "odrębności:subst:sg:dat.loc:f",
+      "odrębności:subst:sg:voc:f"
+    ],
+    "coords_count": 25
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6611
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9218,
+    "quantum_words": 11,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.292051,
+    "formula": "0.727 × 0.643 × 0.625 = 0.292"
+  },
+  "sentence_number": 411,
+  "total_sentences": 805
+}

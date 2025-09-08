@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:36.795401",
+  "content": {
+    "text": "KONSTYTUCJA\nRZECZYPOSPOLITEJ POLSKIEJ\nz dnia 2 kwietnia 1997 r.\nW trosce o byt i przyszłość naszej Ojczyzny,\nodzyskawszy w 1989 roku możliwość suwerennego i demokratycznego\nstanowienia o Jej losie,\nmy, Naród Polski – wszyscy obywatele Rzeczypospolitej,\nzarówno wierzący w Boga\nbędącego źródłem prawdy, sprawiedliwości, dobra i piękna,\njak i nie podzielający tej wiary,\na te uniwersalne wartości wywodzący z innych źródeł,\nrówni w prawach i w powinnościach wobec dobra wspólnego – Polski,\nwdzięczni naszym przodkom za ich pracę, za walkę o niepodległość\nokupioną ogromnymi ofiarami, za kulturę zakorzenioną w chrześcijańskim\ndziedzictwie Narodu i ogólnoludzkich wartościach,\nnawiązując do najlepszych tradycji Pierwszej i Drugiej Rzeczypospolitej,\nzobowiązani, by przekazać przyszłym pokoleniom wszystko, co cenne\nz ponad tysiącletniego dorobku,\nzłączeni więzami wspólnoty z naszymi rodakami rozsianymi po świecie,\nświadomi potrzeby współpracy ze wszystkimi krajami dla dobra Rodziny\nLudzkiej,\npomni gorzkich doświadczeń z czasów, gdy podstawowe wolności i prawa\nczłowieka były w naszej Ojczyźnie łamane,\npragnąc na zawsze zagwarantować prawa obywatelskie, a działaniu\ninstytucji publicznych zapewnić rzetelność i sprawność,\nw poczuciu odpowiedzialności przed Bogiem lub przed własnym\nsumieniem,\nustanawiamy Konstytucję Rzeczypospolitej Polskiej\njako prawa podstawowe dla państwa\n\nOpracowano na\npodstawie: Dz.",
+    "length": 1408,
+    "word_count": 186
+  },
+  "coordinates": {
+    "determination": 0.6697,
+    "stability": 0.643767,
+    "entropy": 0.436345
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:36.795401",
+    "sequence_number": 1,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 529,
+    "cases": {
+      "nom": 101,
+      "gen": 92,
+      "dat": 44,
+      "loc": 45,
+      "acc": 68,
+      "voc": 23
+    },
+    "pos": {
+      "subst": 192,
+      "adj": 114,
+      "prep": 67,
+      "part": 24,
+      "interp": 29,
+      "conj": 16,
+      "adv": 6
+    },
+    "ambiguity": 2.8440860215053765,
+    "debug_tags": [
+      "KONSTYTUCJA:subst:sg:nom:f",
+      "RZECZYPOSPOLITEJ:subst:sg:gen:f",
+      "RZECZYPOSPOLITEJ:subst:sg:dat.loc:f",
+      "POLSKIEJ:adj:sg:dat:f:pos",
+      "POLSKIEJ:adj:sg:gen:f:pos",
+      "POLSKIEJ:adj:sg:loc:f:pos",
+      "POLSKIEJ:subst:sg:gen:f",
+      "POLSKIEJ:subst:sg:dat.loc:f",
+      "z:prep:gen:nwok",
+      "z:prep:inst:nwok"
+    ],
+    "coords_count": 290
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6301
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=290, cases={'nom': 101, 'gen': 92, 'dat': 44, 'loc': 45, 'acc': 68, 'voc': 23}, pos={'subst': 192, 'adj': 114, 'prep': 67, 'part': 24, 'interp': 29, 'conj': 16, 'adv': 6}",
+    "  MORPH_COORDS: [0.743, 0.719, 0.320]",
+    "  MORPH_TAGS: ['KONSTYTUCJA:subst:sg:nom:f', 'RZECZYPOSPOLITEJ:subst:sg:gen:f', 'RZECZYPOSPOLITEJ:subst:sg:dat.loc:f', 'POLSKIEJ:adj:sg:dat:f:pos', 'POLSKIEJ:adj:sg:gen:f:pos', 'POLSKIEJ:adj:sg:loc:f:pos', 'POLSKIEJ:subst:sg:gen:f', 'POLSKIEJ:subst:sg:dat.loc:f', 'z:prep:gen:nwok', 'z:prep:inst:nwok']",
+    "  SYNTAX_COORDS: [0.505, 0.454, 0.703]",
+    "  FINAL: D=0.680, S=0.649, E=0.421"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9487,
+    "quantum_words": 119,
+    "entanglements": 39,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

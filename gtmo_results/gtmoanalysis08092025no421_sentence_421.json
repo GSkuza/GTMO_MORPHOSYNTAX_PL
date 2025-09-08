@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:43.961768",
+  "content": {
+    "text": "Prezydent Rzeczypospolitej czuwa nad przestrzeganiem Konstytucji, stoi na\nstraży suwerenności i bezpieczeństwa państwa oraz nienaruszalności i\nniepodzielności jego terytorium.",
+    "length": 175,
+    "word_count": 19
+  },
+  "coordinates": {
+    "determination": 0.683821,
+    "stability": 0.612175,
+    "entropy": 0.479288
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:43.961768",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 421,
+    "saved_at": "2025-09-08T15:32:43.962230",
+    "file_counter": 421
+  },
+  "additional_metrics": {
+    "total_analyses": 63,
+    "cases": {
+      "nom": 8,
+      "gen": 21,
+      "dat": 9,
+      "acc": 3,
+      "loc": 2,
+      "voc": 4
+    },
+    "pos": {
+      "subst": 42,
+      "prep": 4,
+      "interp": 2,
+      "part": 2,
+      "conj": 3,
+      "adv": 1
+    },
+    "ambiguity": 3.3157894736842106,
+    "debug_tags": [
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "czuwa:fin:sg:ter:imperf",
+      "nad:prep:acc:nwok",
+      "nad:prep:inst:nwok",
+      "przestrzeganiem:ger:sg:inst:n:imperf:aff",
+      "Konstytucji:subst:sg:gen:f",
+      "Konstytucji:subst:sg:dat.loc:f"
+    ],
+    "coords_count": 33
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6134
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.2234,
+    "quantum_words": 14,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.229397,
+    "formula": "0.694 × 0.617 × 0.536 = 0.229"
+  },
+  "sentence_number": 421,
+  "total_sentences": 805
+}

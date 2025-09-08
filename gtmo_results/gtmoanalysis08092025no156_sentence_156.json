@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:37.947699",
+  "content": {
+    "text": "Ekstradycja obywatela polskiego jest zakazana, z wyjątkiem\nprzypadków określonych w ust. 2 i 3.",
+    "length": 95,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.665339,
+    "stability": 0.602825,
+    "entropy": 0.463926
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:37.947699",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 156,
+    "saved_at": "2025-09-08T15:32:37.948269",
+    "file_counter": 156
+  },
+  "additional_metrics": {
+    "total_analyses": 32,
+    "cases": {
+      "nom": 3,
+      "gen": 10,
+      "acc": 4,
+      "loc": 2
+    },
+    "pos": {
+      "subst": 8,
+      "adj": 6,
+      "interp": 3,
+      "prep": 4,
+      "part": 2,
+      "conj": 1
+    },
+    "ambiguity": 2.2857142857142856,
+    "debug_tags": [
+      "Ekstradycja:subst:sg:nom:f",
+      "obywatela:subst:sg:gen.acc:m1",
+      "polskiego:subst:sg:gen:n:ncol",
+      "polskiego:subst:sg:gen:m3",
+      "polskiego:adj:sg:acc:m1.m2:pos",
+      "polskiego:adj:sg:gen:m1.m2.m3.n:pos",
+      "jest:fin:sg:ter:imperf",
+      "zakazana:adj:sg:nom.voc:f:pos",
+      "zakazana:ppas:sg:nom.voc:f:perf:aff",
+      ",:interp"
+    ],
+    "coords_count": 25
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6078
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8345,
+    "quantum_words": 9,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.226209,
+    "formula": "0.675 × 0.608 × 0.551 = 0.226"
+  },
+  "sentence_number": 156,
+  "total_sentences": 805
+}

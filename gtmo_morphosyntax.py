@@ -16,7 +16,6 @@ import logging
 import json
 import hashlib
 from datetime import datetime
-import os
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -51,7 +50,7 @@ ENTROPY_THRESHOLD_SINGULARITY = 0.001
 BOUNDARY_THICKNESS = 0.02                        
 META_REFLECTION_THRESHOLD = 0.95                 
 DECOHERENCE_RATE = 0.02      
-ENTANGLEMENT_THRESHOLD = 0.707 
+ENTANGLEMENT_THRESHOLD = 0.7  
 
 # GTMØ coordinates for Polish cases
 CASE_COORDS = {
@@ -146,15 +145,20 @@ class GTMOAxiomSystem:
     
     def execute_all_axioms(self, system_state: Dict) -> Dict:
         """Execute all 13 axioms in sequence."""
+        # Reset activation levels for each run
+        for state in self.axiom_states.values():
+            state.activation_level = AxiomActivationLevel.DORMANT.value
+            state.last_activation_reason = ""
+            state.meta_reflection_triggered = False
         modified_state = system_state.copy()
-        
+
         for i in range(13):
             axiom_id = f"AX{i}"
             try:
                 modified_state = self._execute_single_axiom(axiom_id, modified_state)
             except (SingularityError, EpistemicBoundaryError) as e:
                 self._handle_axiom_violation(axiom_id, str(e), modified_state)
-        
+
         modified_state['axiom_execution_summary'] = {
             'axioms_activated': sum(1 for state in self.axiom_states.values() 
                                   if state.activation_level > 0.3),
@@ -163,7 +167,7 @@ class GTMOAxiomSystem:
             'meta_reflections': sum(1 for state in self.axiom_states.values() 
                                   if state.meta_reflection_triggered)
         }
-        
+
         return modified_state
     
     def _execute_single_axiom(self, axiom_id: str, state: Dict) -> Dict:
@@ -230,14 +234,13 @@ class GTMOAxiomSystem:
             'timestamp': datetime.now().isoformat()
         })
     
-    # === WSZYSTKIE IMPLEMENTACJE AKSJOMATÓW ===
-    
+    # Complete axiom implementations
     def _ax0_systemic_uncertainty(self, state: Dict) -> Dict:
-        """AX0: Introduce systemic uncertainty."""
         coords = self._extract_coordinates(state)
         if coords is None:
             return state
         
+        # Introduce quantum superposition
         uncertainty_vector = np.array([-0.01, -0.005, 0.015])
         new_coords = coords + uncertainty_vector
         new_coords = np.clip(new_coords, 0, 1)
@@ -245,14 +248,13 @@ class GTMOAxiomSystem:
         return self._update_coordinates(state, new_coords)
     
     def _ax1_ontological_difference(self, state: Dict) -> Dict:
-        """AX1: Prevent reduction to Singularity."""
         coords = self._extract_coordinates(state)
         if coords is None:
             return state
         
         distance_to_singularity = np.linalg.norm(coords - SINGULARITY_COORDS)
         if distance_to_singularity < 0.05:
-            self._activate_axiom("AX1", "Preventing singularity approach")
+            self._activate_axiom("AX1", f"Preventing singularity approach")
             direction = coords - SINGULARITY_COORDS
             if np.linalg.norm(direction) > 0:
                 push_direction = direction / np.linalg.norm(direction)
@@ -263,17 +265,25 @@ class GTMOAxiomSystem:
         return state
     
     def _ax2_translogical_isolation(self, state: Dict) -> Dict:
-        """AX2: Prevent definable functions from producing Singularity."""
+        """Prevent definable functions from producing Singularity."""
         coords = self._extract_coordinates(state)
         if coords is None:
             return state
-
-        # Simplified check - just return state without complex logic
-        # This prevents the error while maintaining functionality
+        
+        # Check if approaching singularity through computation
+        if 'operation_result' in state:
+            result_coords = self._extract_coordinates({'coordinates': state['operation_result']})
+            if result_coords is not None:
+                distance = np.linalg.norm(result_coords - SINGULARITY_COORDS)
+                if distance < 0.01:
+                    self._activate_axiom("AX2", "Blocking translogical path to Singularity")
+                    state['operation_result'] = COGNITIVE_CENTER.tolist()
+                    raise SingularityError("AX2: Translogical isolation prevents path to Ø")
+        
         return state
-
+    
     def _ax3_epistemic_singularity(self, state: Dict) -> Dict:
-        """AX3: Prevent claims of knowing Singularity."""
+        """Prevent claims of knowing Singularity."""
         coords = self._extract_coordinates(state)
         if coords is None:
             return state
@@ -287,7 +297,7 @@ class GTMOAxiomSystem:
         return state
     
     def _ax4_non_representability(self, state: Dict) -> Dict:
-        """AX4: Prevent standard representation of Singularity."""
+        """Prevent standard representation of Singularity."""
         coords = self._extract_coordinates(state)
         if coords is None:
             return state
@@ -301,7 +311,7 @@ class GTMOAxiomSystem:
         return state
     
     def _ax5_topological_boundary(self, state: Dict) -> Dict:
-        """AX5: Maintain Singularity at boundary."""
+        """Maintain Singularity at boundary."""
         coords = self._extract_coordinates(state)
         if coords is None:
             return state
@@ -317,7 +327,7 @@ class GTMOAxiomSystem:
         return state
     
     def _ax6_heuristic_extremum(self, state: Dict) -> Dict:
-        """AX6: Enforce minimal entropy for Singularity."""
+        """Enforce minimal entropy for Singularity."""
         coords = self._extract_coordinates(state)
         if coords is None:
             return state
@@ -326,7 +336,7 @@ class GTMOAxiomSystem:
         if distance < 0.1:
             current_entropy = coords[2]
             if current_entropy > ENTROPY_THRESHOLD_SINGULARITY:
-                self._activate_axiom("AX6", "Enforcing minimal entropy near Ø")
+                self._activate_axiom("AX6", f"Enforcing minimal entropy near Ø")
                 proximity_factor = (0.1 - distance) / 0.1
                 target_entropy = current_entropy * (1 - proximity_factor * 0.9)
                 target_entropy = max(target_entropy, ENTROPY_THRESHOLD_SINGULARITY)
@@ -337,7 +347,7 @@ class GTMOAxiomSystem:
         return state
     
     def _ax7_meta_closure(self, state: Dict) -> Dict:
-        """AX7: Trigger meta-reflection near singularity."""
+        """Trigger meta-reflection near singularity."""
         coords = self._extract_coordinates(state)
         if coords is None:
             return state
@@ -361,7 +371,7 @@ class GTMOAxiomSystem:
         return state
     
     def _ax8_not_limit_point(self, state: Dict) -> Dict:
-        """AX8: Prevent sequences converging to Singularity."""
+        """Prevent sequences converging to Singularity."""
         if 'trajectory' in state and len(state['trajectory']) > 3:
             trajectory = np.array(state['trajectory'])
             recent_points = trajectory[-3:]
@@ -379,7 +389,7 @@ class GTMOAxiomSystem:
         return state
     
     def _ax9_operator_irreducibility(self, state: Dict) -> Dict:
-        """AX9: Prevent standard operators from acting on Singularity."""
+        """Prevent standard operators from acting on Singularity."""
         coords = self._extract_coordinates(state)
         if coords is None:
             return state
@@ -389,13 +399,14 @@ class GTMOAxiomSystem:
             if distance < 0.05:
                 blocked_ops = ['add', 'subtract', 'multiply', 'divide']
                 if any(op in str(state['operation']).lower() for op in blocked_ops):
-                    self._activate_axiom("AX9", "Blocking operator near Ø")
+                    self._activate_axiom("AX9", f"Blocking operator near Ø")
                     state['operation_result'] = {'type': 'irreducible'}
+                    raise SingularityError(f"AX9: Operator cannot act on Ø")
         
         return state
     
     def _ax10_meta_operator_definition(self, state: Dict) -> Dict:
-        """AX10: Allow only meta-operators near Singularity."""
+        """Allow only meta-operators near Singularity."""
         coords = self._extract_coordinates(state)
         if coords is None:
             return state
@@ -404,14 +415,14 @@ class GTMOAxiomSystem:
         if distance < 0.05 and 'meta_operation' in state:
             allowed_meta_ops = ['psi_gtmo', 'e_gtmo', 'topology_classification']
             if any(allowed in str(state['meta_operation']).lower() for allowed in allowed_meta_ops):
-                self._activate_axiom("AX10", "Allowing meta-operator near Ø")
+                self._activate_axiom("AX10", f"Allowing meta-operator near Ø")
             else:
-                state['operation_blocked'] = True
+                raise SingularityError("AX10: Only meta-operators can act near Ø")
         
         return state
     
     def _ax11_adaptive_learning(self, state: Dict) -> Dict:
-        """AX11: Learn from boundary encounters."""
+        """Learn from boundary encounters."""
         if not self.enable_adaptive_learning:
             return state
             
@@ -444,7 +455,7 @@ class GTMOAxiomSystem:
         return state
     
     def _ax12_topological_classification(self, state: Dict) -> Dict:
-        """AX12: Classify knowledge via topological attractors."""
+        """Classify knowledge via topological attractors."""
         coords = self._extract_coordinates(state)
         if coords is None:
             return state
@@ -476,25 +487,39 @@ class GTMOAxiomSystem:
                 state = self._update_coordinates(state, new_coords)
         
         return state
-    
+
 class QuantumMorphosyntaxEngine:
-    """Integrated GTMØ engine with morphosyntax, quantum mechanics, and axioms."""
-    
+    def calculate_adaptive_weights(self, text: str, morph_meta: Dict, synt_meta: Dict) -> Tuple[float, float]:
+        word_count = len(text.split())
+        # Krótkie fragmenty (1-3 słowa)
+        if word_count <= 3:
+            morph_weight = 0.40  # Zmniejszona z 0.64
+            # Ale jeśli to tylko liczby/interpunkcja, jeszcze mniej
+            if morph_meta.get('pos', {}).get('interp', 0) > word_count/2:
+                morph_weight = 0.25
+        # Średnie zdania (4-15 słów)
+        elif word_count <= 15:
+            morph_weight = 0.64  # Standardowa
+        # Długie zdania (16-30 słów)
+        elif word_count <= 30:
+            morph_weight = 0.55  # Więcej składni
+        # Bardzo długie okresy (30+ słów)
+        else:
+            morph_weight = 0.45  # Składnia dominuje
+        synt_weight = 1.0 - morph_weight
+        return morph_weight, synt_weight
+
     def __init__(self):
         self.case_coords = CASE_COORDS
         self.pos_coords = POS_COORDS
         self.quantum_states = {}
         self.entanglement_matrix = {}
         self.decoherence_history = {}
-        
-        # Quantum operators
         self.pauli_x = np.array([[0, 1], [1, 0]], dtype=complex)
         self.pauli_y = np.array([[0, -1j], [1j, 0]], dtype=complex)
         self.pauli_z = np.array([[1, 0], [0, -1]], dtype=complex)
-        
-        # Initialize axiom system
         self.axiom_system = GTMOAxiomSystem(enable_adaptive_learning=True)
-    
+
     def analyze_morphology_quantum(self, text: str) -> Tuple[np.ndarray, Dict, Dict[str, QuantumSemanticState]]:
         """Morphological analysis with quantum superposition."""
         if not morfeusz:
@@ -969,12 +994,27 @@ class QuantumMorphosyntaxEngine:
         if word_quantum_states:
             total_quantum_coherence = np.mean([qs.coherence for qs in word_quantum_states.values()])
         
-        # Fusion with quantum-adjusted weights
-        morph_weight = 0.64 + 0.1 * total_quantum_coherence
+        # Use adaptive fusion weights instead of fixed ones
+        morph_weight, synt_weight = self.calculate_adaptive_weights(text, morph_meta, synt_meta)
+        
+        # Add quantum coherence adjustment
+        morph_weight += 0.1 * total_quantum_coherence
+        morph_weight = np.clip(morph_weight, 0.2, 0.8)
         synt_weight = 1.0 - morph_weight
+        
+        # Debug: show weight calculation
+        print(f"  ADAPTIVE_WEIGHTS: morph={morph_weight:.3f}, synt={synt_weight:.3f}")
+        print(f"  WEIGHT_FACTORS: words={len(text.split())}, depth={synt_meta.get('max_depth', 0)}, ambiguity={morph_meta.get('ambiguity', 1.0):.2f}")
         
         final_coords = morph_weight * morph_coords + synt_weight * synt_coords
         final_coords = np.clip(final_coords, 0, 1)
+
+        # Quantum tensor: T_quantum = D × S × (1-E)
+        D = float(final_coords[0])
+        S = float(final_coords[1])
+        E = float(final_coords[2])
+        T_quantum = D * S * (1 - E)
+        tensor_print = f"  T_QUANTUM: {D:.3f} × {S:.3f} × {1-E:.3f} = {T_quantum:.3f}"
         
         # Create state for axiom system
         axiom_state = {
@@ -987,7 +1027,14 @@ class QuantumMorphosyntaxEngine:
             'word_quantum_states': word_quantum_states,
             'entanglements': entanglements,
             'context': 'morphosyntax_analysis',
-            'text': text
+            'text': text,
+            # Dodane wyzwalacze aksjomatów (heurystycznie lub testowo)
+            'operation_result': [float(final_coords[0]), float(final_coords[1]), float(final_coords[2])],
+            'knowledge_claims': ["Wiem, że..." if "wiem" in text.lower() else ""],
+            'representation': 1.0 if any(x in text.lower() for x in ["reprezentacja", "przedstawia"]) else 0.5,
+            'trajectory': [np.array([float(final_coords[0]), float(final_coords[1]), float(final_coords[2])]), np.array([0.9,0.9,0.1]), np.array([0.8,0.8,0.2]), np.array([0.7,0.7,0.3])],
+            'operation': 'add' if "+" in text else 'none',
+            'meta_operation': 'psi_gtmo' if "meta" in text.lower() else 'none',
         }
         
         # Apply axiom system
@@ -1058,92 +1105,188 @@ class QuantumMorphosyntaxEngine:
         if 'topological_classification' in axiom_result:
             result["topology"] = axiom_result['topological_classification']
         
-        print(f"  FINAL: D={final_coords[0]:.3f}, S={final_coords[1]:.3f}, E={final_coords[2]:.3f}")
+        print(f"  FINAL: D={D:.3f}, S={S:.3f}, E={E:.3f}")
+        print(tensor_print)
+
+        # Constitutional Indefiniteness: CI = (1/Ambiguity) × Depth × √(D×S/E)
+        ambiguity = morph_meta.get('ambiguity', 1.0)
+        depth = synt_meta.get('max_depth', 1)
+        if E > 0:
+            CI = (1.0 / ambiguity) * depth * np.sqrt((D * S) / E)
+        else:
+            CI = (1.0 / ambiguity) * depth * np.sqrt(D * S)  # Fallback when E=0
         
+        ci_formula = f"(1/{ambiguity:.2f}) × {depth} × √({D:.3f}×{S:.3f}/{E:.3f}) = {CI:.2f}"
+        print(f"  CONSTITUTIONAL_INDEFINITENESS: {ci_formula}")
+
+        # Dodaj tensor do JSON
+        result["quantum_tensor"] = {
+            "value": round(T_quantum, 6),
+            "formula": f"{D:.3f} × {S:.3f} × {1-E:.3f} = {T_quantum:.3f}"
+        }
+        
+        # Dodaj Constitutional Indefiniteness do JSON
+        result["constitutional_indefiniteness"] = {
+            "value": round(CI, 4),
+            "formula": ci_formula,
+            "components": {
+                "ambiguity": ambiguity,
+                "depth": depth,
+                "D": D,
+                "S": S,
+                "E": E
+            }
+        }
+
         return result
 
-def batch_analyze_quantum_with_axioms(texts: List[str], source_path: Optional[str] = None) -> List[Dict]:
-    """Analyze multiple texts with quantum mechanics and axioms."""
+
+# ==================================================
+# UTILITY FUNCTIONS
+# ==================================================
+
+def load_markdown_file(file_path: str) -> List[str]:
+    """
+    Load and parse a markdown file into sentences.
+    
+    Args:
+        file_path: Path to the markdown file
+        
+    Returns:
+        List of sentences from the file
+    """
+    import re
+    
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Remove markdown formatting
+        content = re.sub(r'#+ ', '', content)  # Remove headers
+        content = re.sub(r'\*\*(.*?)\*\*', r'\1', content)  # Remove bold
+        content = re.sub(r'\*(.*?)\*', r'\1', content)  # Remove italic
+        content = re.sub(r'\[(.*?)\]\(.*?\)', r'\1', content)  # Remove links
+        content = re.sub(r'`(.*?)`', r'\1', content)  # Remove code
+        
+        # Split into sentences using spaCy if available
+        if nlp:
+            doc = nlp(content)
+            sentences = [sent.text.strip() for sent in doc.sents if sent.text.strip()]
+        else:
+            # Fallback: simple sentence splitting
+            sentences = re.split(r'[.!?]+', content)
+            sentences = [s.strip() for s in sentences if s.strip()]
+        
+        # Filter out very short sentences (less than 10 characters)
+        sentences = [s for s in sentences if len(s) >= 10]
+        
+        print(f"📄 Loaded {len(sentences)} sentences from {file_path}")
+        return sentences
+        
+    except Exception as e:
+        print(f"❌ Error loading file {file_path}: {e}")
+        return []
+
+# ==================================================
+# MAIN ANALYSIS FUNCTIONS
+# ==================================================
+
+def analyze_quantum_with_axioms(text: str, source_file: str = "unknown") -> Dict:
+    """
+    Główna funkcja analizy z aksjomatami GTMØ
+    """
+    engine = QuantumMorphosyntaxEngine()
+    return engine.gtmo_analyze_quantum(text, source_file)
+
+def batch_analyze_quantum_with_axioms(texts: List[str], source_file: str = "batch") -> List[Dict]:
+    """
+    Analiza wsadowa z aksjomatami GTMØ
+    """
     engine = QuantumMorphosyntaxEngine()
     results = []
     
-    # Prepare source file info if provided
-    source_file = None
-    if source_path:
-        import os
-        source_file = {
-            "path": source_path,
-            "name": os.path.basename(source_path),
-            "extension": os.path.splitext(source_path)[1],
-            "hash": hashlib.sha256(source_path.encode()).hexdigest()
-        }
-    
-    for i, text in enumerate(texts, 1):
-        print(f"\n🌌 Quantum Batch {i}/{len(texts)}")
-        try:
-            result = engine.gtmo_analyze_quantum(text, source_file)
-            result["analysis_metadata"]["sequence_number"] = i
-            results.append(result)
-        except Exception as e:
-            print(f"Failed: {e}")
-            error_result = {
-                "version": "2.0",
-                "analysis_type": "GTMØ",
-                "timestamp": datetime.now().isoformat(),
-                "content": {"text": text, "length": len(text), "word_count": len(text.split())},
-                "error": str(e),
-                "analysis_metadata": {"sequence_number": i}
-            }
-            results.append(error_result)
+    for i, text in enumerate(texts):
+        source_info = f"{source_file}_sentence_{i+1}"
+        result = engine.gtmo_analyze_quantum(text, source_info)
+        results.append(result)
     
     return results
 
-def save_json_result(result: dict, output_dir: str, base_name: str, seq: int):
-    os.makedirs(output_dir, exist_ok=True)
-    filename = f"{base_name}_sentence_{seq}.json"
-    filepath = os.path.join(output_dir, filename)
-    with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
-    print(f"✓ Saved: {filepath}")
+# ==================================================
+# TEST IMPLEMENTATION
+# ==================================================
 
-# Test examples
 if __name__ == "__main__":
+    import json
     import sys
+    import os
+    from gtmo_json_saver import GTMOOptimizedSaver
+    
+    # Check if file argument provided
     if len(sys.argv) > 1:
-        input_path = sys.argv[1]
-        with open(input_path, encoding="utf-8") as f:
-            text = f.read()
-        if not morfeusz or not nlp:
-            print("Missing required components. Install:")
-            print("pip install morfeusz2 spacy")
-            print("python -m spacy download pl_core_news_lg")
-        else:
-            engine = QuantumMorphosyntaxEngine()
-            doc = nlp(text)
-            output_dir = "gtmo_results"
-            base_name = os.path.splitext(os.path.basename(input_path))[0]
-            for i, sent in enumerate(doc.sents, 1):
-                sent_text = sent.text.strip()
-                if not sent_text:
-                    continue
-                print(f"\nAnalyzing sentence {i}: {sent_text[:60]}")
+        file_path = sys.argv[1]
+        
+        if not os.path.exists(file_path):
+            print(f"❌ File not found: {file_path}")
+            sys.exit(1)
+        
+        print(f"🔍 Loading file: {file_path}")
+        
+        try:
+            # Load markdown file
+            sentences = load_markdown_file(file_path)
+            
+            if not sentences:
+                print("❌ No sentences found in file")
+                sys.exit(1)
+            
+            print(f"📄 Found {len(sentences)} sentences")
+            print("🌟 Starting GTMØ Quantum Analysis...")
+            print("=" * 70)
+            
+            if not morfeusz or not nlp:
+                print("❌ Missing required components. Install:")
+                print("pip install morfeusz2 spacy")
+                print("python -m spacy download pl_core_news_lg")
+                sys.exit(1)
+            
+            # Initialize saver
+            saver = GTMOOptimizedSaver()
+            
+            # Analyze each sentence and save individually
+            for i, sentence in enumerate(sentences, 1):
+                print(f"\n🌌 Analyzing sentence {i}/{len(sentences)}")
+                print(f"Text: {sentence[:60]}{'...' if len(sentence) > 60 else ''}")
+                
                 try:
-                    result = engine.gtmo_analyze_quantum(sent_text, {
-                        "path": input_path,
-                        "name": os.path.basename(input_path),
-                        "extension": os.path.splitext(input_path)[1],
-                        "hash": hashlib.sha256(input_path.encode()).hexdigest()
-                    })
-                    result["analysis_metadata"]["sequence_number"] = i
-                    save_json_result(result, output_dir, base_name, i)
+                    # Analyze single sentence
+                    result = analyze_quantum_with_axioms(sentence, os.path.basename(file_path))
+                    result["sentence_number"] = i
+                    result["total_sentences"] = len(sentences)
+                    
+                    # Save individual result
+                    saved_file = saver.save_sentence_analysis(result, sentence, i)
+                    print(f"✅ Saved to: {saved_file}")
+                    
                 except Exception as e:
-                    print(f"Error: {e}")
+                    print(f"❌ Error analyzing sentence {i}: {e}")
+                    continue
+            
+            print(f"\n🎯 Analysis complete! Check 'gtmo_results' directory for individual JSON files.")
+            
+        except Exception as e:
+            print(f"❌ Error processing file: {e}")
+            sys.exit(1)
+    
     else:
+        # Test basic functionality (original code)
         test_texts = [
             "Rzeczpospolita Polska przestrzega wiążącego ją prawa międzynarodowego.",
             "Dzień był letni i świąteczny. Wszystko na świecie jaśniało, kwitło, pachniało, śpiewało.",
             "Badania lingwistyczne nad entropią językową.",
-            "Kocham cię bardzo mocno i tak samo nienawidzę!"
+            "Kocham cię bardzo mocno i tak samo nienawidzę!",
+            "To zdanie nie istnieje.",
+            "Świnia to ptak, a świnia to ssak.",
         ]
         
         print("GTMØ QUANTUM MORPHOSYNTAX ENGINE WITH AXIOMS - Test Run")

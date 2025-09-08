@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:41.789859",
+  "content": {
+    "text": "Wyborcy przysługuje prawo zgłoszenia do Sądu Najwyższego protestu\nprzeciwko ważności wyborów na zasadach określonych w ustawie.",
+    "length": 127,
+    "word_count": 16
+  },
+  "coordinates": {
+    "determination": 0.704436,
+    "stability": 0.616691,
+    "entropy": 0.420451
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:41.789859",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 329,
+    "saved_at": "2025-09-08T15:32:41.790345",
+    "file_counter": 329
+  },
+  "additional_metrics": {
+    "total_analyses": 38,
+    "cases": {
+      "gen": 14,
+      "dat": 4,
+      "nom": 6,
+      "acc": 5,
+      "voc": 1,
+      "loc": 4
+    },
+    "pos": {
+      "subst": 19,
+      "adv": 1,
+      "prep": 6,
+      "adj": 5,
+      "interp": 1
+    },
+    "ambiguity": 2.375,
+    "debug_tags": [
+      "Wyborcy:subst:sg:gen:m1",
+      "Wyborcy:subst:sg:dat.loc:m1",
+      "Wyborcy:subst:pl:nom.voc:m1",
+      "przysługuje:fin:sg:ter:imperf",
+      "prawo:subst:sg:nom.acc.voc:n:ncol",
+      "prawo:adv:pos",
+      "zgłoszenia:subst:sg:gen:n:ncol",
+      "zgłoszenia:subst:pl:nom.acc.voc:n:ncol",
+      "zgłoszenia:ger:pl:nom.acc:n:perf:aff",
+      "zgłoszenia:ger:sg:gen:n:perf:aff"
+    ],
+    "coords_count": 34
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6406
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.1002,
+    "quantum_words": 15,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.264074,
+    "formula": "0.714 × 0.622 × 0.595 = 0.264"
+  },
+  "sentence_number": 329,
+  "total_sentences": 805
+}

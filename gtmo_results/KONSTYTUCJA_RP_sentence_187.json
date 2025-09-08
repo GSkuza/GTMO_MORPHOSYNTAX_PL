@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:40.294267",
+  "content": {
+    "text": "Ekstradycja obywatela polskiego może być dokonana na wniosek innego\npaństwa lub sądowego organu międzynarodowego, jeżeli możliwość taka wynika z\nratyfikowanej przez Rzeczpospolitą Polską umowy międzynarodowej lub ustawy\nwykonującej akt prawa stanowionego przez organizację międzynarodową, której\nRzeczpospolita Polska jest członkiem, pod warunkiem że czyn objęty wnioskiem o\nekstradycję:\nzostał popełniony poza terytorium Rzeczypospolitej Polskiej, oraz\nstanowił przestępstwo według prawa Rzeczypospolitej Polskiej lub stanowiłby\nprzestępstwo według prawa Rzeczypospolitej Polskiej w razie popełnienia na\nterytorium Rzeczypospolitej Polskiej, zarówno w czasie jego popełnienia, jak i\nw chwili złożenia wniosku.",
+    "length": 710,
+    "word_count": 85
+  },
+  "coordinates": {
+    "determination": 0.68187,
+    "stability": 0.638363,
+    "entropy": 0.443332
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:40.294267",
+    "sequence_number": 187,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 229,
+    "cases": {
+      "nom": 44,
+      "gen": 56,
+      "acc": 27,
+      "loc": 18,
+      "dat": 17,
+      "voc": 10
+    },
+    "pos": {
+      "subst": 101,
+      "adj": 38,
+      "part": 5,
+      "prep": 23,
+      "conj": 7,
+      "interp": 8,
+      "adv": 3
+    },
+    "ambiguity": 2.6941176470588237,
+    "debug_tags": [
+      "Ekstradycja:subst:sg:nom:f",
+      "obywatela:subst:sg:gen.acc:m1",
+      "polskiego:subst:sg:gen:n:ncol",
+      "polskiego:subst:sg:gen:m3",
+      "polskiego:adj:sg:acc:m1.m2:pos",
+      "polskiego:adj:sg:gen:m1.m2.m3.n:pos",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "być:subst:pl:gen:n:ncol"
+    ],
+    "coords_count": 126
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6313
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=126, cases={'nom': 44, 'gen': 56, 'acc': 27, 'loc': 18, 'dat': 17, 'voc': 10}, pos={'subst': 101, 'adj': 38, 'part': 5, 'prep': 23, 'conj': 7, 'interp': 8, 'adv': 3}",
+    "  MORPH_COORDS: [0.743, 0.710, 0.332]",
+    "  MORPH_TAGS: ['Ekstradycja:subst:sg:nom:f', 'obywatela:subst:sg:gen.acc:m1', 'polskiego:subst:sg:gen:n:ncol', 'polskiego:subst:sg:gen:m3', 'polskiego:adj:sg:acc:m1.m2:pos', 'polskiego:adj:sg:gen:m1.m2.m3.n:pos', 'może:interj', 'może:part', 'może:fin:sg:ter:imperf', 'być:subst:pl:gen:n:ncol']",
+    "  SYNTAX_COORDS: [0.546, 0.453, 0.703]",
+    "  FINAL: D=0.692, S=0.643, E=0.428"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.0086,
+    "quantum_words": 52,
+    "entanglements": 16,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

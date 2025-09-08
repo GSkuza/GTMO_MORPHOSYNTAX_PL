@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:40.658879",
+  "content": {
+    "text": "Ze\nwzględu na dobro publiczne ustawa może ograniczyć prowadzenie strajku lub\nzakazać go w odniesieniu do określonych kategorii pracowników lub w określonych\ndziedzinach.",
+    "length": 169,
+    "word_count": 23
+  },
+  "coordinates": {
+    "determination": 0.718552,
+    "stability": 0.643473,
+    "entropy": 0.441246
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:40.658879",
+    "sequence_number": 210,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 56,
+    "cases": {
+      "gen": 13,
+      "acc": 10,
+      "loc": 8,
+      "nom": 8,
+      "voc": 1,
+      "dat": 3
+    },
+    "pos": {
+      "prep": 9,
+      "part": 2,
+      "subst": 16,
+      "adj": 10,
+      "conj": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.4347826086956523,
+    "debug_tags": [
+      "Ze:prep:gen:wok",
+      "Ze:prep:inst:wok",
+      "Ze:part:wok",
+      "względu:subst:sg:gen:m3",
+      "na:prep:acc",
+      "na:prep:loc",
+      "na:interj",
+      "dobro:subst:sg:nom.acc.voc:n:ncol",
+      "publiczne:adj:pl:acc:m2.m3.f.n:pos",
+      "publiczne:adj:pl:nom.voc:m2.m3.f.n:pos"
+    ],
+    "coords_count": 37
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6481
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=37, cases={'gen': 13, 'acc': 10, 'loc': 8, 'nom': 8, 'voc': 1, 'dat': 3}, pos={'prep': 9, 'part': 2, 'subst': 16, 'adj': 10, 'conj': 2, 'interp': 1}",
+    "  MORPH_COORDS: [0.747, 0.719, 0.327]",
+    "  MORPH_TAGS: ['Ze:prep:gen:wok', 'Ze:prep:inst:wok', 'Ze:part:wok', 'względu:subst:sg:gen:m3', 'na:prep:acc', 'na:prep:loc', 'na:interj', 'dobro:subst:sg:nom.acc.voc:n:ncol', 'publiczne:adj:pl:acc:m2.m3.f.n:pos', 'publiczne:adj:pl:nom.voc:m2.m3.f.n:pos']",
+    "  SYNTAX_COORDS: [0.678, 0.453, 0.702]",
+    "  FINAL: D=0.729, S=0.648, E=0.426"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9502,
+    "quantum_words": 16,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

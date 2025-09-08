@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:43.458863",
+  "content": {
+    "text": "Prezydent Rzeczypospolitej odmawia podpisania ustawy, którą Trybunał\nKonstytucyjny uznał za niezgodną z Konstytucją.",
+    "length": 116,
+    "word_count": 13
+  },
+  "coordinates": {
+    "determination": 0.784807,
+    "stability": 0.637851,
+    "entropy": 0.385422
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:43.458863",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 403,
+    "saved_at": "2025-09-08T15:32:43.459234",
+    "file_counter": 403
+  },
+  "additional_metrics": {
+    "total_analyses": 27,
+    "cases": {
+      "nom": 6,
+      "gen": 5,
+      "dat": 1,
+      "acc": 4
+    },
+    "pos": {
+      "subst": 8,
+      "interp": 2,
+      "adj": 6,
+      "prep": 5,
+      "part": 2
+    },
+    "ambiguity": 2.076923076923077,
+    "debug_tags": [
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "odmawia:fin:sg:ter:imperf",
+      "podpisania:ger:pl:nom.acc:n:perf:aff",
+      "podpisania:ger:sg:gen:n:perf:aff",
+      "ustawy:subst:sg:gen:f",
+      "ustawy:subst:pl:nom.acc.voc:f",
+      ",:interp"
+    ],
+    "coords_count": 24
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6897
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9712,
+    "quantum_words": 10,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.321678,
+    "formula": "0.795 × 0.643 × 0.630 = 0.322"
+  },
+  "sentence_number": 403,
+  "total_sentences": 805
+}

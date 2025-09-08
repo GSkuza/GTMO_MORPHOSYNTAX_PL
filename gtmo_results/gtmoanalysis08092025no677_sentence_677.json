@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:50.168783",
+  "content": {
+    "text": "Prezes Najwyższej Izby Kontroli nie może być bez uprzedniej zgody\nSejmu pociągnięty do odpowiedzialności karnej ani pozbawiony wolności.",
+    "length": 136,
+    "word_count": 18
+  },
+  "coordinates": {
+    "determination": 0.676467,
+    "stability": 0.590519,
+    "entropy": 0.461381
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:50.168783",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 677,
+    "saved_at": "2025-09-08T15:32:50.169303",
+    "file_counter": 677
+  },
+  "additional_metrics": {
+    "total_analyses": 57,
+    "cases": {
+      "nom": 13,
+      "dat": 6,
+      "gen": 19,
+      "loc": 3,
+      "acc": 4,
+      "voc": 2
+    },
+    "pos": {
+      "subst": 28,
+      "adj": 9,
+      "conj": 2,
+      "part": 3,
+      "prep": 2,
+      "interp": 1
+    },
+    "ambiguity": 3.1666666666666665,
+    "debug_tags": [
+      "Prezes:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezes:subst:sg:nom:m1",
+      "Najwyższej:adj:sg:dat:f:sup",
+      "Najwyższej:adj:sg:gen:f:sup",
+      "Najwyższej:adj:sg:loc:f:sup",
+      "Izby:subst:pl:nom.acc.voc:n:pt",
+      "Izby:subst:sg:gen:f",
+      "Izby:subst:pl:nom.acc.voc:f",
+      "Izby:subst:sg:gen:f",
+      "Izby:subst:pl:nom.acc.voc:f"
+    ],
+    "coords_count": 37
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6093
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8856,
+    "quantum_words": 16,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.226322,
+    "formula": "0.686 × 0.596 × 0.554 = 0.226"
+  },
+  "sentence_number": 677,
+  "total_sentences": 805
+}

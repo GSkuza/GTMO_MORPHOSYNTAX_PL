@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:40.285106",
+  "content": {
+    "text": "Obywatel, któremu przekonania religijne lub wyznawane zasady moralne nie\npozwalają na odbywanie służby wojskowej, może być obowiązany do służby\nzastępczej na zasadach określonych w ustawie.",
+    "length": 189,
+    "word_count": 25
+  },
+  "coordinates": {
+    "determination": 0.712063,
+    "stability": 0.645349,
+    "entropy": 0.425581
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:40.285106",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 263,
+    "saved_at": "2025-09-08T15:32:40.285612",
+    "file_counter": 263
+  },
+  "additional_metrics": {
+    "total_analyses": 71,
+    "cases": {
+      "nom": 18,
+      "dat": 4,
+      "gen": 12,
+      "acc": 13,
+      "loc": 7,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 16,
+      "interp": 3,
+      "adj": 20,
+      "conj": 2,
+      "part": 2,
+      "prep": 7
+    },
+    "ambiguity": 2.84,
+    "debug_tags": [
+      "Obywatel:subst:sg:nom:m1",
+      ",:interp",
+      ",:interp",
+      "któremu:adj:sg:dat:m1.m2.m3.n:pos",
+      "przekonania:subst:pl:nom.acc.voc:n:pt",
+      "przekonania:subst:sg:gen:n:ncol",
+      "przekonania:subst:pl:nom.acc.voc:n:ncol",
+      "przekonania:ger:pl:nom.acc:n:perf:aff",
+      "przekonania:ger:sg:gen:n:perf:aff",
+      "religijne:adj:pl:acc:m2.m3.f.n:pos"
+    ],
+    "coords_count": 45
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6508
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.2297,
+    "quantum_words": 20,
+    "entanglements": 7,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.276787,
+    "formula": "0.722 × 0.650 × 0.589 = 0.277"
+  },
+  "sentence_number": 263,
+  "total_sentences": 805
+}

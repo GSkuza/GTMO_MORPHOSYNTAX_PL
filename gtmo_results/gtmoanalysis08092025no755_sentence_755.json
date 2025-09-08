@@ -1,0 +1,77 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:52.309397",
+  "content": {
+    "text": "Przedłużenie tego stanu\nmoże nastąpić za zgodą Sejmu.",
+    "length": 53,
+    "word_count": 8
+  },
+  "coordinates": {
+    "determination": 0.731073,
+    "stability": 0.587975,
+    "entropy": 0.422223
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:52.309397",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 755,
+    "saved_at": "2025-09-08T15:32:52.309894",
+    "file_counter": 755
+  },
+  "additional_metrics": {
+    "total_analyses": 17,
+    "cases": {
+      "nom": 2,
+      "acc": 2,
+      "gen": 5
+    },
+    "pos": {
+      "subst": 5,
+      "adj": 2,
+      "part": 2,
+      "prep": 3,
+      "interp": 1
+    },
+    "ambiguity": 2.125,
+    "debug_tags": [
+      "Przedłużenie:subst:sg:nom.acc.voc:n:ncol",
+      "Przedłużenie:ger:sg:nom.acc:n:perf:aff",
+      "tego:adj:sg:acc:m1.m2:pos",
+      "tego:adj:sg:gen:m1.m2.m3.n:pos",
+      "tego:subst:sg:gen:n:ncol",
+      "stanu:subst:sg:gen:m3",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "nastąpić:inf:perf"
+    ],
+    "coords_count": 15
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6422
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.176,
+    "quantum_words": 5,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.260489,
+    "formula": "0.741 × 0.593 × 0.593 = 0.260"
+  },
+  "sentence_number": 755,
+  "total_sentences": 805
+}

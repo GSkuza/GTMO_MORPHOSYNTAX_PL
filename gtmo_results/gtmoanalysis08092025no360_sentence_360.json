@@ -1,0 +1,77 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:42.587337",
+  "content": {
+    "text": "Sejm i Senat obradują na posiedzeniach.",
+    "length": 39,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.78919,
+    "stability": 0.758869,
+    "entropy": 0.280193
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:42.587337",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 360,
+    "saved_at": "2025-09-08T15:32:42.588023",
+    "file_counter": 360
+  },
+  "additional_metrics": {
+    "total_analyses": 12,
+    "cases": {
+      "nom": 2,
+      "acc": 1,
+      "loc": 3
+    },
+    "pos": {
+      "subst": 3,
+      "part": 1,
+      "conj": 1,
+      "prep": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.0,
+    "debug_tags": [
+      "Sejm:subst:sg:nom.acc:m3",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "Senat:subst:sg:nom.acc:m3",
+      "obradują:fin:pl:ter:imperf",
+      "na:prep:acc",
+      "na:prep:loc",
+      "na:interj",
+      "posiedzeniach:ger:pl:loc:n:perf:aff"
+    ],
+    "coords_count": 11
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "high",
+    "entropy": "low",
+    "overall": "high_quality",
+    "overall_score": 0.7593
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9574,
+    "quantum_words": 4,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.448582,
+    "formula": "0.799 × 0.764 × 0.735 = 0.449"
+  },
+  "sentence_number": 360,
+  "total_sentences": 805
+}

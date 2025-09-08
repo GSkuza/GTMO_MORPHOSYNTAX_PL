@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:52.434511",
+  "content": {
+    "text": "Sejm rozpatruje przedłożone sprawozdanie i po zapoznaniu się z opinią\nNajwyższej Izby Kontroli podejmuje, w ciągu 90 dni od dnia przedłożenia Sejmowi\nsprawozdania, uchwałę o udzieleniu lub o odmowie udzielenia Radzie Ministrów\nabsolutorium.",
+    "length": 240,
+    "word_count": 33
+  },
+  "coordinates": {
+    "determination": 0.714948,
+    "stability": 0.635634,
+    "entropy": 0.447842
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:52.434511",
+    "sequence_number": 834,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 81,
+    "cases": {
+      "nom": 19,
+      "acc": 5,
+      "dat": 10,
+      "loc": 9,
+      "gen": 18,
+      "voc": 2
+    },
+    "pos": {
+      "subst": 37,
+      "part": 3,
+      "conj": 2,
+      "prep": 12,
+      "adj": 4,
+      "interp": 3
+    },
+    "ambiguity": 2.4545454545454546,
+    "debug_tags": [
+      "Sejm:subst:sg:nom.acc:m3",
+      "rozpatruje:fin:sg:ter:imperf",
+      "przedłożone:ppas:pl:nom.acc.voc:m2.m3.f.n:perf:aff",
+      "przedłożone:ppas:sg:nom.acc.voc:n:perf:aff",
+      "sprawozdanie:subst:sg:nom.acc.voc:n:ncol",
+      "sprawozdanie:ger:sg:nom.acc:n:perf:aff",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "po:prep:acc"
+    ],
+    "coords_count": 55
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6423
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=55, cases={'nom': 19, 'acc': 5, 'dat': 10, 'loc': 9, 'gen': 18, 'voc': 2}, pos={'subst': 37, 'part': 3, 'conj': 2, 'prep': 12, 'adj': 4, 'interp': 3}",
+    "  MORPH_COORDS: [0.745, 0.709, 0.334]",
+    "  MORPH_TAGS: ['Sejm:subst:sg:nom.acc:m3', 'rozpatruje:fin:sg:ter:imperf', 'przedłożone:ppas:pl:nom.acc.voc:m2.m3.f.n:perf:aff', 'przedłożone:ppas:sg:nom.acc.voc:n:perf:aff', 'sprawozdanie:subst:sg:nom.acc.voc:n:ncol', 'sprawozdanie:ger:sg:nom.acc:n:perf:aff', 'i:interj', 'i:part', 'i:conj', 'po:prep:acc']",
+    "  SYNTAX_COORDS: [0.669, 0.452, 0.702]",
+    "  FINAL: D=0.725, S=0.641, E=0.433"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9224,
+    "quantum_words": 25,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

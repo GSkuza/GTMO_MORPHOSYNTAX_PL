@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:51.499370",
+  "content": {
+    "text": "W skład Rady Polityki Pieniężnej wchodzą Prezes Narodowego\nBanku Polskiego jako przewodniczący oraz osoby wyróżniające się wiedzą z zakresu\nfinansów, powoływane na 6 lat, w równej liczbie przez Prezydenta Rzeczypospolitej,\nSejm i Senat.",
+    "length": 236,
+    "word_count": 33
+  },
+  "coordinates": {
+    "determination": 0.628258,
+    "stability": 0.589097,
+    "entropy": 0.513886
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:51.499370",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 734,
+    "saved_at": "2025-09-08T15:32:51.500395",
+    "file_counter": 734
+  },
+  "additional_metrics": {
+    "total_analyses": 92,
+    "cases": {
+      "acc": 10,
+      "loc": 8,
+      "nom": 24,
+      "gen": 20,
+      "dat": 5,
+      "voc": 5
+    },
+    "pos": {
+      "prep": 10,
+      "subst": 38,
+      "adj": 17,
+      "conj": 3,
+      "adv": 1,
+      "part": 3,
+      "interp": 4
+    },
+    "ambiguity": 2.787878787878788,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "skład:subst:sg:nom.acc:m3",
+      "Rady:depr:pl:nom.acc.voc:m2",
+      "Rady:subst:pl:nom.acc.voc:m3",
+      "Rady:subst:sg:gen:f",
+      "Rady:subst:pl:nom.acc.voc:f",
+      "Rady:subst:sg:gen:m1",
+      "Polityki:depr:pl:nom.acc.voc:m2",
+      "Polityki:subst:sg:gen:f"
+    ],
+    "coords_count": 67
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5739
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9327,
+    "quantum_words": 27,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.190016,
+    "formula": "0.638 × 0.594 × 0.501 = 0.190"
+  },
+  "sentence_number": 734,
+  "total_sentences": 805
+}

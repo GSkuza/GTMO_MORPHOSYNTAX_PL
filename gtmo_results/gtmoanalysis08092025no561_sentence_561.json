@@ -1,0 +1,76 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:47.265041",
+  "content": {
+    "text": "Ustawa określa tryb przekazywania i sposób wykonywania zadań zleconych.",
+    "length": 71,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.786439,
+    "stability": 0.632746,
+    "entropy": 0.435301
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:47.265041",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 561,
+    "saved_at": "2025-09-08T15:32:47.266209",
+    "file_counter": 561
+  },
+  "additional_metrics": {
+    "total_analyses": 20,
+    "cases": {
+      "nom": 5,
+      "gen": 6,
+      "acc": 1
+    },
+    "pos": {
+      "subst": 5,
+      "part": 1,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.2222222222222223,
+    "debug_tags": [
+      "Ustawa:subst:sg:nom:f",
+      "określa:fin:sg:ter:imperf",
+      "tryb:subst:sg:nom.acc:m3",
+      "tryb:subst:pl:gen:f",
+      "tryb:impt:sg:sec:imperf",
+      "przekazywania:ger:pl:nom.acc:n:imperf:aff",
+      "przekazywania:ger:sg:gen:n:imperf:aff",
+      "i:interj",
+      "i:part",
+      "i:conj"
+    ],
+    "coords_count": 14
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6738
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9225,
+    "quantum_words": 7,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.294444,
+    "formula": "0.796 × 0.638 × 0.580 = 0.294"
+  },
+  "sentence_number": 561,
+  "total_sentences": 805
+}

@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:44.648790",
+  "content": {
+    "text": "Organizację wewnętrzną i porządek prac Sejmu oraz tryb\npowoływania i działalności jego organów, jak też sposób wykonywania\nkonstytucyjnych i ustawowych obowiązków organów państwowych wobec Sejmu\nokreśla regulamin Sejmu uchwalony przez Sejm.",
+    "length": 240,
+    "word_count": 31
+  },
+  "coordinates": {
+    "determination": 0.692358,
+    "stability": 0.623293,
+    "entropy": 0.45872
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:44.648790",
+    "sequence_number": 420,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 75,
+    "cases": {
+      "acc": 9,
+      "nom": 12,
+      "gen": 26,
+      "dat": 1,
+      "voc": 1,
+      "loc": 3
+    },
+    "pos": {
+      "subst": 28,
+      "adj": 13,
+      "part": 4,
+      "conj": 5,
+      "adv": 3,
+      "interp": 2,
+      "prep": 3
+    },
+    "ambiguity": 2.4193548387096775,
+    "debug_tags": [
+      "Organizację:subst:sg:acc:f",
+      "wewnętrzną:adj:sg:acc:f:pos",
+      "wewnętrzną:adj:sg:inst:f:pos",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "i:interj"
+    ],
+    "coords_count": 53
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6263
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=53, cases={'acc': 9, 'nom': 12, 'gen': 26, 'dat': 1, 'voc': 1, 'loc': 3}, pos={'subst': 28, 'adj': 13, 'part': 4, 'conj': 5, 'adv': 3, 'interp': 2, 'prep': 3}",
+    "  MORPH_COORDS: [0.736, 0.691, 0.353]",
+    "  MORPH_TAGS: ['Organizację:subst:sg:acc:f', 'wewnętrzną:adj:sg:acc:f:pos', 'wewnętrzną:adj:sg:inst:f:pos', 'i:interj', 'i:part', 'i:conj', 'i:interj', 'i:part', 'i:conj', 'i:interj']",
+    "  SYNTAX_COORDS: [0.608, 0.454, 0.694]",
+    "  FINAL: D=0.702, S=0.628, E=0.444"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9367,
+    "quantum_words": 23,
+    "entanglements": 7,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:42.705907",
+  "content": {
+    "text": "Sejm może powołać komisję śledczą do zbadania określonej\nsprawy.",
+    "length": 64,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.794147,
+    "stability": 0.658664,
+    "entropy": 0.375885
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:42.705907",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 366,
+    "saved_at": "2025-09-08T15:32:42.706468",
+    "file_counter": 366
+  },
+  "additional_metrics": {
+    "total_analyses": 22,
+    "cases": {
+      "nom": 5,
+      "acc": 2,
+      "gen": 6,
+      "dat": 1,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 8,
+      "part": 1,
+      "adj": 5,
+      "prep": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.4444444444444446,
+    "debug_tags": [
+      "Sejm:subst:sg:nom.acc:m3",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "powołać:inf:perf",
+      "komisję:subst:sg:acc:f",
+      "śledczą:subst:sg:inst:f",
+      "śledczą:adj:sg:acc:f:pos",
+      "śledczą:adj:sg:inst:f:pos",
+      "do:prep:gen"
+    ],
+    "coords_count": 18
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7025
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9108,
+    "quantum_words": 7,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.341085,
+    "formula": "0.804 × 0.664 × 0.639 = 0.341"
+  },
+  "sentence_number": 366,
+  "total_sentences": 805
+}

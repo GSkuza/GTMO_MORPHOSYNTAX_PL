@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:43.554274",
+  "content": {
+    "text": "Sejm może skrócić swoją kadencję uchwałą podjętą większością co najmniej\n2/3 głosów ustawowej liczby posłów.",
+    "length": 108,
+    "word_count": 15
+  },
+  "coordinates": {
+    "determination": 0.755609,
+    "stability": 0.625015,
+    "entropy": 0.427136
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:43.554274",
+    "sequence_number": 360,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 35,
+    "cases": {
+      "nom": 5,
+      "acc": 5,
+      "gen": 7,
+      "dat": 1,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 11,
+      "part": 3,
+      "adj": 5,
+      "prep": 3,
+      "num": 2,
+      "adv": 1,
+      "interp": 2
+    },
+    "ambiguity": 2.3333333333333335,
+    "debug_tags": [
+      "Sejm:subst:sg:nom.acc:m3",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "skrócić:inf:perf",
+      "swoją:fin:pl:ter:imperf",
+      "swoją:adj:sg:acc:f:pos",
+      "swoją:adj:sg:inst:f:pos",
+      "kadencję:subst:sg:acc:f",
+      "uchwałą:subst:sg:inst:f"
+    ],
+    "coords_count": 28
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6616
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=28, cases={'nom': 5, 'acc': 5, 'gen': 7, 'dat': 1, 'loc': 1}, pos={'subst': 11, 'part': 3, 'adj': 5, 'prep': 3, 'num': 2, 'adv': 1, 'interp': 2}",
+    "  MORPH_COORDS: [0.740, 0.689, 0.355]",
+    "  MORPH_TAGS: ['Sejm:subst:sg:nom.acc:m3', 'może:interj', 'może:part', 'może:fin:sg:ter:imperf', 'skrócić:inf:perf', 'swoją:fin:pl:ter:imperf', 'swoją:adj:sg:acc:f:pos', 'swoją:adj:sg:inst:f:pos', 'kadencję:subst:sg:acc:f', 'uchwałą:subst:sg:inst:f']",
+    "  SYNTAX_COORDS: [0.841, 0.453, 0.582]",
+    "  FINAL: D=0.766, S=0.630, E=0.412"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.0953,
+    "quantum_words": 10,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

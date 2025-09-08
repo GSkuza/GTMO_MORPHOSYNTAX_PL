@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:41.293776",
+  "content": {
+    "text": "Każdy ma prawo do bezpiecznych i higienicznych warunków pracy.",
+    "length": 62,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.749081,
+    "stability": 0.634481,
+    "entropy": 0.411841
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:41.293776",
+    "sequence_number": 236,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 22,
+    "cases": {
+      "acc": 3,
+      "nom": 4,
+      "gen": 6,
+      "loc": 2,
+      "dat": 1
+    },
+    "pos": {
+      "adj": 9,
+      "subst": 6,
+      "adv": 1,
+      "prep": 1,
+      "part": 1,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.4444444444444446,
+    "debug_tags": [
+      "Każdy:adj:sg:acc:m3:pos",
+      "Każdy:adj:sg:nom.voc:m1.m2.m3:pos",
+      "ma:adj:sg:nom.voc:f:pos",
+      "ma:fin:sg:ter:imperf",
+      "prawo:subst:sg:nom.acc.voc:n:ncol",
+      "prawo:adv:pos",
+      "do:prep:gen",
+      "do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "bezpiecznych:adj:pl:acc:m1:pos",
+      "bezpiecznych:adj:pl:gen:m1.m2.m3.f.n:pos"
+    ],
+    "coords_count": 21
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6664
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=21, cases={'acc': 3, 'nom': 4, 'gen': 6, 'loc': 2, 'dat': 1}, pos={'adj': 9, 'subst': 6, 'adv': 1, 'prep': 1, 'part': 1, 'conj': 1, 'interp': 1}",
+    "  MORPH_COORDS: [0.729, 0.699, 0.338]",
+    "  MORPH_TAGS: ['Każdy:adj:sg:acc:m3:pos', 'Każdy:adj:sg:nom.voc:m1.m2.m3:pos', 'ma:adj:sg:nom.voc:f:pos', 'ma:fin:sg:ter:imperf', 'prawo:subst:sg:nom.acc.voc:n:ncol', 'prawo:adv:pos', 'do:prep:gen', 'do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol', 'bezpiecznych:adj:pl:acc:m1:pos', 'bezpiecznych:adj:pl:gen:m1.m2.m3.f.n:pos']",
+    "  SYNTAX_COORDS: [0.850, 0.457, 0.575]",
+    "  FINAL: D=0.759, S=0.639, E=0.397"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.1317,
+    "quantum_words": 8,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

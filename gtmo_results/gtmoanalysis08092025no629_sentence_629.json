@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:49.101024",
+  "content": {
+    "text": "W przypadku orzeczeń, które wiążą się z nakładami finansowymi nie\nprzewidzianymi w ustawie budżetowej, Trybunał Konstytucyjny określa termin\nutraty mocy obowiązującej aktu normatywnego po zapoznaniu się z opinią Rady\nMinistrów.",
+    "length": 227,
+    "word_count": 30
+  },
+  "coordinates": {
+    "determination": 0.662499,
+    "stability": 0.601589,
+    "entropy": 0.432407
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:49.101024",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 629,
+    "saved_at": "2025-09-08T15:32:49.101471",
+    "file_counter": 629
+  },
+  "additional_metrics": {
+    "total_analyses": 69,
+    "cases": {
+      "acc": 9,
+      "loc": 7,
+      "voc": 3,
+      "gen": 17,
+      "nom": 9,
+      "dat": 6
+    },
+    "pos": {
+      "prep": 11,
+      "subst": 24,
+      "interp": 3,
+      "adj": 15,
+      "part": 5,
+      "conj": 1
+    },
+    "ambiguity": 2.3,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "przypadku:subst:sg:loc:m3",
+      "przypadku:subst:sg:voc:m3",
+      "przypadku:subst:sg:gen:m3",
+      "przypadku:subst:sg:loc:m3",
+      "przypadku:subst:sg:voc:m3",
+      "orzeczeń:subst:pl:gen:n:ncol",
+      "orzeczeń:ger:pl:gen:n:perf:aff",
+      ",:interp"
+    ],
+    "coords_count": 49
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6158
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8607,
+    "quantum_words": 21,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.237657,
+    "formula": "0.672 × 0.607 × 0.583 = 0.238"
+  },
+  "sentence_number": 629,
+  "total_sentences": 805
+}

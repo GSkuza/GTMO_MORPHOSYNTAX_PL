@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:38.492466",
+  "content": {
+    "text": "Zakres wolności zrzeszania się w związkach zawodowych i organizacjach\npracodawców oraz innych wolności związkowych może podlegać tylko takim\nograniczeniom ustawowym, jakie są dopuszczalne przez wiążące Rzeczpospolitą\nPolską umowy międzynarodowe.",
+    "length": 245,
+    "word_count": 29
+  },
+  "coordinates": {
+    "determination": 0.667702,
+    "stability": 0.628755,
+    "entropy": 0.459454
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:38.492466",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 177,
+    "saved_at": "2025-09-08T15:32:38.492936",
+    "file_counter": 177
+  },
+  "additional_metrics": {
+    "total_analyses": 85,
+    "cases": {
+      "nom": 16,
+      "gen": 11,
+      "dat": 6,
+      "voc": 2,
+      "acc": 18,
+      "loc": 10
+    },
+    "pos": {
+      "subst": 27,
+      "part": 4,
+      "prep": 3,
+      "adj": 35,
+      "conj": 3,
+      "adv": 1,
+      "interp": 2
+    },
+    "ambiguity": 2.9310344827586206,
+    "debug_tags": [
+      "Zakres:subst:sg:nom.acc:m3",
+      "wolności:subst:sg:gen:f",
+      "wolności:subst:sg:dat.loc:f",
+      "wolności:subst:sg:voc:f",
+      "wolności:subst:pl:nom.acc.voc:f",
+      "wolności:subst:pl:gen:f",
+      "wolności:subst:sg:gen:f",
+      "wolności:subst:sg:dat.loc:f",
+      "wolności:subst:sg:voc:f",
+      "wolności:subst:pl:nom.acc.voc:f"
+    ],
+    "coords_count": 54
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6179
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9734,
+    "quantum_words": 21,
+    "entanglements": 7,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.238606,
+    "formula": "0.678 × 0.634 × 0.556 = 0.239"
+  },
+  "sentence_number": 177,
+  "total_sentences": 805
+}

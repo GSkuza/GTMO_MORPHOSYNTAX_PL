@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:51.273796",
+  "content": {
+    "text": "Do ustawy budżetowej i ustawy o prowizorium budżetowym nie stosuje się\nprzepisu art. 122 ust. 5.\n\nW przypadku zwrócenia się Prezydenta Rzeczypospolitej do Trybunału\nKonstytucyjnego w sprawie zgodności z Konstytucją ustawy budżetowej albo ustawy\no prowizorium budżetowym przed jej podpisaniem, Trybunał orzeka w tej sprawie\nnie później niż w ciągu 2 miesięcy od dnia złożenia wniosku w Trybunale.",
+    "length": 395,
+    "word_count": 58
+  },
+  "coordinates": {
+    "determination": 0.630184,
+    "stability": 0.562355,
+    "entropy": 0.547553
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:51.273796",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 722,
+    "saved_at": "2025-09-08T15:32:51.274622",
+    "file_counter": 722
+  },
+  "additional_metrics": {
+    "total_analyses": 141,
+    "cases": {
+      "gen": 33,
+      "nom": 16,
+      "dat": 12,
+      "loc": 19,
+      "acc": 13,
+      "voc": 7
+    },
+    "pos": {
+      "prep": 22,
+      "subst": 56,
+      "adj": 17,
+      "part": 7,
+      "conj": 5,
+      "interp": 5,
+      "adv": 1
+    },
+    "ambiguity": 2.4310344827586206,
+    "debug_tags": [
+      "Do:prep:gen",
+      "Do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "ustawy:subst:sg:gen:f",
+      "ustawy:subst:pl:nom.acc.voc:f",
+      "ustawy:subst:sg:gen:f",
+      "ustawy:subst:pl:nom.acc.voc:f",
+      "ustawy:subst:sg:gen:f",
+      "ustawy:subst:pl:nom.acc.voc:f",
+      "ustawy:subst:sg:gen:f",
+      "ustawy:subst:pl:nom.acc.voc:f"
+    ],
+    "coords_count": 82
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5565
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8172,
+    "quantum_words": 34,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.169782,
+    "formula": "0.640 × 0.567 × 0.467 = 0.170"
+  },
+  "sentence_number": 722,
+  "total_sentences": 805
+}

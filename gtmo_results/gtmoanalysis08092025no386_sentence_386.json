@@ -1,0 +1,76 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:43.142599",
+  "content": {
+    "text": "Wnioskodawcy, przedkładając Sejmowi projekt ustawy, przedstawiają skutki\nfinansowe jej wykonania.",
+    "length": 97,
+    "word_count": 10
+  },
+  "coordinates": {
+    "determination": 0.823086,
+    "stability": 0.686174,
+    "entropy": 0.296557
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:43.142599",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 386,
+    "saved_at": "2025-09-08T15:32:43.143136",
+    "file_counter": 386
+  },
+  "additional_metrics": {
+    "total_analyses": 25,
+    "cases": {
+      "gen": 5,
+      "dat": 3,
+      "nom": 9,
+      "acc": 2
+    },
+    "pos": {
+      "subst": 10,
+      "interp": 3,
+      "adj": 5
+    },
+    "ambiguity": 2.5,
+    "debug_tags": [
+      "Wnioskodawcy:subst:sg:gen:m1",
+      "Wnioskodawcy:subst:sg:dat.loc:m1",
+      "Wnioskodawcy:subst:pl:nom.voc:m1",
+      ",:interp",
+      ",:interp",
+      "przedkładając:pcon:imperf",
+      "Sejmowi:subst:sg:dat:m3",
+      "Sejmowi:adj:pl:nom.voc:m1:pos",
+      "projekt:subst:sg:nom.acc:m3",
+      "ustawy:subst:sg:gen:f"
+    ],
+    "coords_count": 18
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "low",
+    "overall": "moderate_quality",
+    "overall_score": 0.7461
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8123,
+    "quantum_words": 8,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.413685,
+    "formula": "0.833 × 0.691 × 0.718 = 0.414"
+  },
+  "sentence_number": 386,
+  "total_sentences": 805
+}

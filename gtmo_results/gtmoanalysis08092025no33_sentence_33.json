@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:35.490384",
+  "content": {
+    "text": "Zasadniczy podział terytorialny państwa uwzględniający więzi społeczne,\ngospodarcze lub kulturowe i zapewniający jednostkom terytorialnym zdolność\nwykonywania zadań publicznych określa ustawa.",
+    "length": 192,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.784924,
+    "stability": 0.649914,
+    "entropy": 0.435831
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:35.490384",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 33,
+    "saved_at": "2025-09-08T15:32:35.490993",
+    "file_counter": 33
+  },
+  "additional_metrics": {
+    "total_analyses": 59,
+    "cases": {
+      "nom": 21,
+      "acc": 13,
+      "gen": 8,
+      "dat": 3,
+      "voc": 1,
+      "loc": 2
+    },
+    "pos": {
+      "adj": 26,
+      "subst": 14,
+      "interp": 2,
+      "conj": 2,
+      "part": 1
+    },
+    "ambiguity": 2.95,
+    "debug_tags": [
+      "Zasadniczy:adj:pl:nom.voc:m1:pos",
+      "Zasadniczy:adj:sg:acc:m3:pos",
+      "Zasadniczy:adj:sg:nom.voc:m1.m2.m3:pos",
+      "podział:subst:sg:nom.acc:m3",
+      "podział:praet:sg:m1.m2.m3:perf",
+      "terytorialny:adj:sg:acc:m3:pos",
+      "terytorialny:adj:sg:nom.voc:m1.m2.m3:pos",
+      "państwa:subst:pl:gen.acc:m1:pt",
+      "państwa:subst:sg:gen:n:ncol",
+      "państwa:subst:pl:nom.acc.voc:n:ncol"
+    ],
+    "coords_count": 37
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6782
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.009,
+    "quantum_words": 17,
+    "entanglements": 9,
+    "superposition_type": "HIGHLY_ENTANGLED_COHERENT"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.301519,
+    "formula": "0.795 × 0.655 × 0.579 = 0.302"
+  },
+  "sentence_number": 33,
+  "total_sentences": 805
+}

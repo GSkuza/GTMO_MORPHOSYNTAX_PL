@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:48.657814",
+  "content": {
+    "text": "Krajowa Rada Sądownictwa może wystąpić do Trybunału Konstytucyjnego z\nwnioskiem w sprawie zgodności z Konstytucją aktów normatywnych w zakresie, w\njakim dotyczą one niezależności sądów i niezawisłości sędziów.",
+    "length": 209,
+    "word_count": 28
+  },
+  "coordinates": {
+    "determination": 0.660652,
+    "stability": 0.586194,
+    "entropy": 0.482666
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:48.657814",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 615,
+    "saved_at": "2025-09-08T15:32:48.658380",
+    "file_counter": 615
+  },
+  "additional_metrics": {
+    "total_analyses": 68,
+    "cases": {
+      "nom": 10,
+      "gen": 19,
+      "acc": 6,
+      "loc": 6,
+      "dat": 5,
+      "voc": 4
+    },
+    "pos": {
+      "adj": 12,
+      "subst": 31,
+      "part": 4,
+      "prep": 11,
+      "interp": 2,
+      "conj": 1
+    },
+    "ambiguity": 2.4285714285714284,
+    "debug_tags": [
+      "Krajowa:adj:sg:nom.voc:f:pos",
+      "Krajowa:subst:sg:gen:m3",
+      "Rada:subst:sg:nom:f",
+      "Rada:subst:sg:gen.acc:m1",
+      "Rada:adj:sg:nom:f:pos",
+      "Rada:winien:sg:f:imperf",
+      "Sądownictwa:subst:sg:gen:n:ncol",
+      "Sądownictwa:subst:pl:nom.acc.voc:n:ncol",
+      "może:interj",
+      "może:part"
+    ],
+    "coords_count": 49
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.5953
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8454,
+    "quantum_words": 19,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.211063,
+    "formula": "0.671 × 0.591 × 0.532 = 0.211"
+  },
+  "sentence_number": 615,
+  "total_sentences": 805
+}

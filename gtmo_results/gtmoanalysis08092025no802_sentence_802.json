@@ -1,0 +1,77 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:53.906737",
+  "content": {
+    "text": "Nr 38, poz. 184 i\nNr 150, poz. 729 oraz z 1996 r.",
+    "length": 49,
+    "word_count": 13
+  },
+  "coordinates": {
+    "determination": 0.624033,
+    "stability": 0.600651,
+    "entropy": 0.439667
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:53.906737",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 802,
+    "saved_at": "2025-09-08T15:32:53.907624",
+    "file_counter": 802
+  },
+  "additional_metrics": {
+    "total_analyses": 28,
+    "cases": {
+      "nom": 2,
+      "gen": 1
+    },
+    "pos": {
+      "subst": 2,
+      "interp": 5,
+      "part": 2,
+      "conj": 2,
+      "adv": 1,
+      "prep": 2
+    },
+    "ambiguity": 2.1538461538461537,
+    "debug_tags": [
+      "Nr:subst:sg:nom.acc:m3",
+      "Nr:brev:npun",
+      "Nr:subst:sg:nom.acc:m3",
+      "Nr:brev:npun",
+      "38:dig",
+      ",:interp",
+      ",:interp",
+      "poz:brev:pun",
+      "poz:brev:pun",
+      ".:interp"
+    ],
+    "coords_count": 11
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.5979
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.98,
+    "quantum_words": 2,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.220929,
+    "formula": "0.634 × 0.606 × 0.575 = 0.221"
+  },
+  "sentence_number": 802,
+  "total_sentences": 805
+}

@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:42.322615",
+  "content": {
+    "text": "Poseł może wyrazić zgodę na pociągnięcie go do odpowiedzialności karnej.",
+    "length": 72,
+    "word_count": 10
+  },
+  "coordinates": {
+    "determination": 0.800015,
+    "stability": 0.672051,
+    "entropy": 0.361313
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:42.322615",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 349,
+    "saved_at": "2025-09-08T15:32:42.323116",
+    "file_counter": 349
+  },
+  "additional_metrics": {
+    "total_analyses": 29,
+    "cases": {
+      "nom": 9,
+      "acc": 3,
+      "loc": 2,
+      "gen": 6,
+      "dat": 2,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 13,
+      "part": 1,
+      "prep": 3,
+      "adj": 3,
+      "interp": 1
+    },
+    "ambiguity": 2.9,
+    "debug_tags": [
+      "Poseł:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Poseł:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Poseł:subst:sg:nom:m1",
+      "Poseł:subst:sg:nom:m1",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "wyrazić:inf:perf",
+      "zgodę:subst:sg:acc:f",
+      "na:prep:acc"
+    ],
+    "coords_count": 19
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7132
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0249,
+    "quantum_words": 8,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.358496,
+    "formula": "0.810 × 0.677 × 0.654 = 0.358"
+  },
+  "sentence_number": 349,
+  "total_sentences": 805
+}

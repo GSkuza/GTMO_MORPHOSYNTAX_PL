@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:47.091668",
+  "content": {
+    "text": "Inne jednostki samorządu regionalnego albo lokalnego i regionalnego określa\nustawa.",
+    "length": 83,
+    "word_count": 10
+  },
+  "coordinates": {
+    "determination": 0.715611,
+    "stability": 0.609507,
+    "entropy": 0.457222
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:47.091668",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 554,
+    "saved_at": "2025-09-08T15:32:47.092506",
+    "file_counter": 554
+  },
+  "additional_metrics": {
+    "total_analyses": 23,
+    "cases": {
+      "acc": 5,
+      "nom": 5,
+      "gen": 5,
+      "voc": 1
+    },
+    "pos": {
+      "adj": 10,
+      "subst": 5,
+      "part": 2,
+      "conj": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.3,
+    "debug_tags": [
+      "Inne:adj:pl:acc:m2.m3.f.n:pos",
+      "Inne:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "Inne:adj:sg:acc:n:pos",
+      "Inne:adj:sg:nom.voc:n:pos",
+      "Inne:depr:pl:nom.acc.voc:m2",
+      "jednostki:subst:sg:gen:f",
+      "jednostki:subst:pl:nom.acc.voc:f",
+      "samorządu:subst:sg:gen:m3",
+      "regionalnego:adj:sg:acc:m1.m2:pos",
+      "regionalnego:adj:sg:gen:m1.m2.m3.n:pos"
+    ],
+    "coords_count": 19
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6319
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0535,
+    "quantum_words": 7,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.248709,
+    "formula": "0.726 × 0.615 × 0.558 = 0.249"
+  },
+  "sentence_number": 554,
+  "total_sentences": 805
+}

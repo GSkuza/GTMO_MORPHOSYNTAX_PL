@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:50.477147",
+  "content": {
+    "text": "Rzecznik\nPraw Obywatelskich nie może być zatrzymany lub aresztowany, z wyjątkiem ujęcia\n\ngo na gorącym uczynku przestępstwa i jeżeli jego zatrzymanie jest niezbędne do\nzapewnienia prawidłowego toku postępowania.",
+    "length": 211,
+    "word_count": 28
+  },
+  "coordinates": {
+    "determination": 0.682875,
+    "stability": 0.602244,
+    "entropy": 0.462702
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:50.477147",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 690,
+    "saved_at": "2025-09-08T15:32:50.477679",
+    "file_counter": 690
+  },
+  "additional_metrics": {
+    "total_analyses": 87,
+    "cases": {
+      "nom": 21,
+      "gen": 20,
+      "acc": 13,
+      "loc": 5,
+      "voc": 4,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 26,
+      "adj": 16,
+      "conj": 3,
+      "part": 4,
+      "interp": 2,
+      "prep": 5
+    },
+    "ambiguity": 3.107142857142857,
+    "debug_tags": [
+      "Rzecznik:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Rzecznik:subst:sg:nom:m1",
+      "Praw:adjc",
+      "Praw:subst:pl:gen:n:ncol",
+      "Praw:impt:sg:sec:imperf",
+      "Obywatelskich:adj:pl:acc:m1:pos",
+      "Obywatelskich:adj:pl:gen:m1.m2.m3.f.n:pos",
+      "Obywatelskich:adj:pl:loc:m1.m2.m3.f.n:pos",
+      "nie:conj",
+      "nie:interj"
+    ],
+    "coords_count": 55
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.615
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.7605,
+    "quantum_words": 22,
+    "entanglements": 7,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.232377,
+    "formula": "0.693 × 0.607 × 0.552 = 0.232"
+  },
+  "sentence_number": 690,
+  "total_sentences": 805
+}

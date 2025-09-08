@@ -1,0 +1,77 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:46.868708",
+  "content": {
+    "text": "Prezydent Rzeczypospolitej odwołuje ministra, któremu Sejm wyraził wotum\nnieufności większością głosów ustawowej liczby posłów.",
+    "length": 127,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.787833,
+    "stability": 0.636244,
+    "entropy": 0.371256
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:46.868708",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 542,
+    "saved_at": "2025-09-08T15:32:46.869088",
+    "file_counter": 542
+  },
+  "additional_metrics": {
+    "total_analyses": 29,
+    "cases": {
+      "nom": 6,
+      "gen": 9,
+      "dat": 5,
+      "loc": 2,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 21,
+      "interp": 2,
+      "adj": 4
+    },
+    "ambiguity": 2.0714285714285716,
+    "debug_tags": [
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "odwołuje:fin:sg:ter:imperf",
+      "ministra:subst:sg:gen.acc:m1",
+      ",:interp",
+      "któremu:adj:sg:dat:m1.m2.m3.n:pos",
+      "Sejm:subst:sg:nom.acc:m3",
+      "wyraził:praet:sg:m1.m2.m3:perf"
+    ],
+    "coords_count": 25
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6946
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8404,
+    "quantum_words": 11,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.329344,
+    "formula": "0.798 × 0.641 × 0.644 = 0.329"
+  },
+  "sentence_number": 542,
+  "total_sentences": 805
+}

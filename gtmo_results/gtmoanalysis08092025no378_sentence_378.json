@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:42.994903",
+  "content": {
+    "text": "Sejm może podjąć uchwałę o stanie wojny jedynie w razie zbrojnej napaści\nna terytorium Rzeczypospolitej Polskiej lub gdy z umów międzynarodowych wynika\nzobowiązanie do wspólnej obrony przeciwko agresji.",
+    "length": 202,
+    "word_count": 28
+  },
+  "coordinates": {
+    "determination": 0.671022,
+    "stability": 0.603806,
+    "entropy": 0.462944
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:42.994903",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 378,
+    "saved_at": "2025-09-08T15:32:42.995312",
+    "file_counter": 378
+  },
+  "additional_metrics": {
+    "total_analyses": 76,
+    "cases": {
+      "nom": 11,
+      "acc": 5,
+      "loc": 11,
+      "voc": 4,
+      "gen": 17,
+      "dat": 9
+    },
+    "pos": {
+      "subst": 34,
+      "part": 3,
+      "prep": 10,
+      "adj": 12,
+      "conj": 1,
+      "adv": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.7142857142857144,
+    "debug_tags": [
+      "Sejm:subst:sg:nom.acc:m3",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "podjąć:inf:perf",
+      "uchwałę:subst:sg:acc:f",
+      "o:interj",
+      "o:prep:acc",
+      "o:prep:loc",
+      "stanie:subst:sg:loc:m3"
+    ],
+    "coords_count": 52
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6107
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8195,
+    "quantum_words": 22,
+    "entanglements": 7,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.228888,
+    "formula": "0.681 × 0.609 × 0.552 = 0.229"
+  },
+  "sentence_number": 378,
+  "total_sentences": 805
+}

@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:43.346426",
+  "content": {
+    "text": "Jeżeli Senat w ciągu 30\ndni od dnia przekazania ustawy nie podejmie stosownej uchwały, ustawę uznaje się\nza uchwaloną w brzmieniu przyjętym przez Sejm.",
+    "length": 151,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.711313,
+    "stability": 0.61563,
+    "entropy": 0.399761
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:43.346426",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 396,
+    "saved_at": "2025-09-08T15:32:43.347077",
+    "file_counter": 396
+  },
+  "additional_metrics": {
+    "total_analyses": 54,
+    "cases": {
+      "nom": 6,
+      "acc": 8,
+      "loc": 8,
+      "gen": 10,
+      "voc": 1,
+      "dat": 7
+    },
+    "pos": {
+      "subst": 19,
+      "prep": 9,
+      "conj": 1,
+      "part": 3,
+      "adj": 6,
+      "interp": 2
+    },
+    "ambiguity": 2.25,
+    "debug_tags": [
+      "Jeżeli:comp",
+      "Senat:subst:sg:nom.acc:m3",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "ciągu:subst:sg:gen:m3",
+      "ciągu:subst:sg:loc:m3",
+      "ciągu:subst:sg:voc:m3",
+      "30:dig"
+    ],
+    "coords_count": 41
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6493
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8505,
+    "quantum_words": 18,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.275423,
+    "formula": "0.721 × 0.621 × 0.615 = 0.275"
+  },
+  "sentence_number": 396,
+  "total_sentences": 805
+}

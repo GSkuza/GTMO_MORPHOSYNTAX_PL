@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:44.455889",
+  "content": {
+    "text": "W razie stwierdzenia nieważności wyboru Prezydenta Rzeczypospolitej\nprzeprowadza się nowe wybory, na zasadach przewidzianych w art. 128 ust. 2 dla\nprzypadku opróżnienia urzędu Prezydenta Rzeczypospolitej.",
+    "length": 204,
+    "word_count": 25
+  },
+  "coordinates": {
+    "determination": 0.685451,
+    "stability": 0.61099,
+    "entropy": 0.431852
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:44.455889",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 441,
+    "saved_at": "2025-09-08T15:32:44.456755",
+    "file_counter": 441
+  },
+  "additional_metrics": {
+    "total_analyses": 58,
+    "cases": {
+      "acc": 6,
+      "loc": 8,
+      "voc": 5,
+      "nom": 10,
+      "gen": 15,
+      "dat": 3
+    },
+    "pos": {
+      "prep": 7,
+      "subst": 29,
+      "part": 1,
+      "adj": 4,
+      "interp": 4
+    },
+    "ambiguity": 2.32,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "razie:subst:sg:loc:m3",
+      "razie:subst:sg:voc:m3",
+      "razie:subst:sg:loc:m3",
+      "razie:subst:sg:voc:m3",
+      "stwierdzenia:ger:pl:nom.acc:n:perf:aff",
+      "stwierdzenia:ger:sg:gen:n:perf:aff",
+      "stwierdzenia:subst:sg:gen:n:ncol",
+      "stwierdzenia:subst:pl:nom.acc.voc:n:ncol"
+    ],
+    "coords_count": 38
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6279
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0786,
+    "quantum_words": 18,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.249815,
+    "formula": "0.695 × 0.616 × 0.583 = 0.250"
+  },
+  "sentence_number": 441,
+  "total_sentences": 805
+}

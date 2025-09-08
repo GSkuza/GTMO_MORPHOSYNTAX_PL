@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:50.309770",
+  "content": {
+    "text": "Rzecznik Praw Obywatelskich jest powoływany przez Sejm za\nzgodą Senatu na 5 lat.",
+    "length": 80,
+    "word_count": 13
+  },
+  "coordinates": {
+    "determination": 0.705106,
+    "stability": 0.633805,
+    "entropy": 0.343969
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:50.309770",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 685,
+    "saved_at": "2025-09-08T15:32:50.310376",
+    "file_counter": 685
+  },
+  "additional_metrics": {
+    "total_analyses": 26,
+    "cases": {
+      "nom": 4,
+      "gen": 6,
+      "acc": 5,
+      "loc": 2
+    },
+    "pos": {
+      "subst": 8,
+      "adj": 3,
+      "prep": 6,
+      "part": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.0,
+    "debug_tags": [
+      "Rzecznik:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Rzecznik:subst:sg:nom:m1",
+      "Praw:adjc",
+      "Praw:subst:pl:gen:n:ncol",
+      "Praw:impt:sg:sec:imperf",
+      "Obywatelskich:adj:pl:acc:m1:pos",
+      "Obywatelskich:adj:pl:gen:m1.m2.m3.f.n:pos",
+      "Obywatelskich:adj:pl:loc:m1.m2.m3.f.n:pos",
+      "jest:fin:sg:ter:imperf",
+      "powoływany:ppas:sg:acc:m3:imperf:aff"
+    ],
+    "coords_count": 22
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.669
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.7636,
+    "quantum_words": 10,
+    "entanglements": 0,
+    "superposition_type": "MIXED_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.306536,
+    "formula": "0.715 × 0.639 × 0.671 = 0.307"
+  },
+  "sentence_number": 685,
+  "total_sentences": 805
+}

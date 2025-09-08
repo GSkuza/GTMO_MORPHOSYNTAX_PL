@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:41.018683",
+  "content": {
+    "text": "Każdy ma prawo składać petycje, wnioski i skargi w interesie\npublicznym, własnym lub innej osoby za jej zgodą do organów władzy publicznej\noraz do organizacji i instytucji społecznych w związku z wykonywanymi przez nie\nzadaniami zleconymi z zakresu administracji publicznej.",
+    "length": 274,
+    "word_count": 40
+  },
+  "coordinates": {
+    "determination": 0.671225,
+    "stability": 0.625628,
+    "entropy": 0.459274
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:41.018683",
+    "sequence_number": 223,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 100,
+    "cases": {
+      "acc": 8,
+      "nom": 9,
+      "gen": 25,
+      "loc": 11,
+      "voc": 2,
+      "dat": 11
+    },
+    "pos": {
+      "adj": 21,
+      "subst": 35,
+      "adv": 2,
+      "interp": 3,
+      "part": 6,
+      "conj": 5,
+      "prep": 14
+    },
+    "ambiguity": 2.5,
+    "debug_tags": [
+      "Każdy:adj:sg:acc:m3:pos",
+      "Każdy:adj:sg:nom.voc:m1.m2.m3:pos",
+      "ma:adj:sg:nom.voc:f:pos",
+      "ma:fin:sg:ter:imperf",
+      "prawo:subst:sg:nom.acc.voc:n:ncol",
+      "prawo:adv:pos",
+      "składać:inf:imperf",
+      "petycje:subst:pl:nom.acc.voc:f",
+      ",:interp",
+      ",:interp"
+    ],
+    "coords_count": 68
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6184
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=68, cases={'acc': 8, 'nom': 9, 'gen': 25, 'loc': 11, 'voc': 2, 'dat': 11}, pos={'adj': 21, 'subst': 35, 'adv': 2, 'interp': 3, 'part': 6, 'conj': 5, 'prep': 14}",
+    "  MORPH_COORDS: [0.722, 0.691, 0.353]",
+    "  MORPH_TAGS: ['Każdy:adj:sg:acc:m3:pos', 'Każdy:adj:sg:nom.voc:m1.m2.m3:pos', 'ma:adj:sg:nom.voc:f:pos', 'ma:fin:sg:ter:imperf', 'prawo:subst:sg:nom.acc.voc:n:ncol', 'prawo:adv:pos', 'składać:inf:imperf', 'petycje:subst:pl:nom.acc.voc:f', ',:interp', ',:interp']",
+    "  SYNTAX_COORDS: [0.563, 0.456, 0.705]",
+    "  FINAL: D=0.681, S=0.631, E=0.444"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.0206,
+    "quantum_words": 27,
+    "entanglements": 12,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

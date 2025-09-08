@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:44.215424",
+  "content": {
+    "text": "Postępowanie karne wszczęte wobec osoby przed dniem wyboru jej na posła\nulega na żądanie Sejmu zawieszeniu do czasu wygaśnięcia mandatu.",
+    "length": 136,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.705857,
+    "stability": 0.629399,
+    "entropy": 0.411666
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:44.215424",
+    "sequence_number": 396,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 44,
+    "cases": {
+      "nom": 14,
+      "acc": 5,
+      "gen": 11,
+      "dat": 3,
+      "loc": 3
+    },
+    "pos": {
+      "subst": 17,
+      "adj": 4,
+      "prep": 8,
+      "adv": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.2,
+    "debug_tags": [
+      "Postępowanie:subst:sg:nom.acc.voc:n:ncol",
+      "Postępowanie:ger:sg:nom.acc:n:imperf:aff",
+      "karne:adj:pl:acc:m2.m3.f.n:pos",
+      "karne:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "karne:adj:sg:acc:n:pos",
+      "karne:adj:sg:nom.voc:n:pos",
+      "karne:subst:pl:nom.acc.voc:m2",
+      "karne:subst:pl:nom.acc.voc:m3",
+      "wszczęte:ppas:pl:nom.acc.voc:m2.m3.f.n:perf:aff",
+      "wszczęte:ppas:sg:nom.acc.voc:n:perf:aff"
+    ],
+    "coords_count": 37
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6477
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=37, cases={'nom': 14, 'acc': 5, 'gen': 11, 'dat': 3, 'loc': 3}, pos={'subst': 17, 'adj': 4, 'prep': 8, 'adv': 1, 'interp': 1}",
+    "  MORPH_COORDS: [0.756, 0.701, 0.347]",
+    "  MORPH_TAGS: ['Postępowanie:subst:sg:nom.acc.voc:n:ncol', 'Postępowanie:ger:sg:nom.acc:n:imperf:aff', 'karne:adj:pl:acc:m2.m3.f.n:pos', 'karne:adj:pl:nom.voc:m2.m3.f.n:pos', 'karne:adj:sg:acc:n:pos', 'karne:adj:sg:nom.voc:n:pos', 'karne:subst:pl:nom.acc.voc:m2', 'karne:subst:pl:nom.acc.voc:m3', 'wszczęte:ppas:pl:nom.acc.voc:m2.m3.f.n:perf:aff', 'wszczęte:ppas:sg:nom.acc.voc:n:perf:aff']",
+    "  SYNTAX_COORDS: [0.605, 0.453, 0.532]",
+    "  FINAL: D=0.716, S=0.634, E=0.397"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.926,
+    "quantum_words": 17,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

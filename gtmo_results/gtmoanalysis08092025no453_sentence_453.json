@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:44.724926",
+  "content": {
+    "text": "Prezydent Rzeczypospolitej jako reprezentant państwa w\nstosunkach zewnętrznych:\n\nratyfikuje i wypowiada umowy międzynarodowe, o czym zawiadamia Sejm i\nSenat,\nmianuje i odwołuje pełnomocnych przedstawicieli Rzeczypospolitej Polskiej w\ninnych państwach i przy organizacjach międzynarodowych,\nprzyjmuje listy uwierzytelniające i odwołujące akredytowanych przy nim\nprzedstawicieli dyplomatycznych innych państw i organizacji\nmiędzynarodowych.",
+    "length": 438,
+    "word_count": 48
+  },
+  "coordinates": {
+    "determination": 0.653331,
+    "stability": 0.613785,
+    "entropy": 0.489583
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:44.724926",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 453,
+    "saved_at": "2025-09-08T15:32:44.725318",
+    "file_counter": 453
+  },
+  "additional_metrics": {
+    "total_analyses": 124,
+    "cases": {
+      "nom": 18,
+      "gen": 23,
+      "dat": 6,
+      "voc": 1,
+      "acc": 14,
+      "loc": 22
+    },
+    "pos": {
+      "subst": 37,
+      "conj": 7,
+      "prep": 9,
+      "adj": 30,
+      "interp": 5,
+      "part": 7
+    },
+    "ambiguity": 2.5833333333333335,
+    "debug_tags": [
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "jako:conj",
+      "jako:frag",
+      "jako:comp",
+      "jako:prep:nom"
+    ],
+    "coords_count": 67
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.5986
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8929,
+    "quantum_words": 30,
+    "entanglements": 7,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.215662,
+    "formula": "0.663 × 0.619 × 0.525 = 0.216"
+  },
+  "sentence_number": 453,
+  "total_sentences": 805
+}

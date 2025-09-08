@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:48.865787",
+  "content": {
+    "text": "Ustrój, zakres działania i tryb pracy Krajowej Rady Sądownictwa oraz\nsposób wyboru jej członków określa ustawa.",
+    "length": 111,
+    "word_count": 16
+  },
+  "coordinates": {
+    "determination": 0.703544,
+    "stability": 0.619056,
+    "entropy": 0.462661
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:48.865787",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 620,
+    "saved_at": "2025-09-08T15:32:48.866854",
+    "file_counter": 620
+  },
+  "additional_metrics": {
+    "total_analyses": 41,
+    "cases": {
+      "nom": 11,
+      "gen": 13,
+      "dat": 3,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 20,
+      "interp": 2,
+      "part": 1,
+      "conj": 2,
+      "adj": 3,
+      "adv": 1
+    },
+    "ambiguity": 2.5625,
+    "debug_tags": [
+      "Ustrój:impt:sg:sec:perf",
+      "Ustrój:subst:sg:nom.acc:m3",
+      ",:interp",
+      "zakres:subst:sg:nom.acc:m3",
+      "działania:subst:sg:gen:n:ncol",
+      "działania:subst:pl:nom.acc.voc:n:ncol",
+      "działania:ger:pl:nom.acc:n:imperf:aff",
+      "działania:ger:sg:gen:n:imperf:aff",
+      "i:interj",
+      "i:part"
+    ],
+    "coords_count": 31
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6283
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8897,
+    "quantum_words": 13,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.245952,
+    "formula": "0.714 × 0.624 × 0.552 = 0.246"
+  },
+  "sentence_number": 620,
+  "total_sentences": 805
+}

@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:40.205594",
+  "content": {
+    "text": "Obowiązkiem obywatela polskiego jest wierność Rzeczypospolitej\nPolskiej oraz troska o dobro wspólne.\n\nArt. 83.",
+    "length": 110,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.705147,
+    "stability": 0.673264,
+    "entropy": 0.349412
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:40.205594",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 257,
+    "saved_at": "2025-09-08T15:32:40.206011",
+    "file_counter": 257
+  },
+  "additional_metrics": {
+    "total_analyses": 35,
+    "cases": {
+      "gen": 7,
+      "acc": 5,
+      "nom": 7,
+      "dat": 3,
+      "loc": 2
+    },
+    "pos": {
+      "subst": 14,
+      "adj": 9,
+      "adv": 1,
+      "conj": 1,
+      "prep": 2,
+      "interp": 3
+    },
+    "ambiguity": 2.5,
+    "debug_tags": [
+      "Obowiązkiem:subst:sg:inst:m3",
+      "obywatela:subst:sg:gen.acc:m1",
+      "polskiego:subst:sg:gen:n:ncol",
+      "polskiego:subst:sg:gen:m3",
+      "polskiego:adj:sg:acc:m1.m2:pos",
+      "polskiego:adj:sg:gen:m1.m2.m3.n:pos",
+      "jest:fin:sg:ter:imperf",
+      "wierność:subst:sg:nom:f",
+      "wierność:subst:sg:acc:f",
+      "Rzeczypospolitej:subst:sg:gen:f"
+    ],
+    "coords_count": 26
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6792
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9884,
+    "quantum_words": 10,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.322849,
+    "formula": "0.715 × 0.678 × 0.666 = 0.323"
+  },
+  "sentence_number": 257,
+  "total_sentences": 805
+}

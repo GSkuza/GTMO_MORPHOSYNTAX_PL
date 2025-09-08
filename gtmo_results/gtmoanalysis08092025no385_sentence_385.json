@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:43.123193",
+  "content": {
+    "text": "Tryb postępowania w tej sprawie\nokreśla ustawa.",
+    "length": 47,
+    "word_count": 7
+  },
+  "coordinates": {
+    "determination": 0.803227,
+    "stability": 0.67853,
+    "entropy": 0.321814
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:43.123193",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 385,
+    "saved_at": "2025-09-08T15:32:43.123628",
+    "file_counter": 385
+  },
+  "additional_metrics": {
+    "total_analyses": 17,
+    "cases": {
+      "nom": 4,
+      "gen": 5,
+      "acc": 1,
+      "loc": 2,
+      "dat": 2
+    },
+    "pos": {
+      "subst": 7,
+      "prep": 2,
+      "adj": 3,
+      "interp": 1
+    },
+    "ambiguity": 2.4285714285714284,
+    "debug_tags": [
+      "Tryb:subst:sg:nom.acc:m3",
+      "Tryb:subst:pl:gen:f",
+      "Tryb:subst:pl:gen:f",
+      "Tryb:impt:sg:sec:imperf",
+      "postępowania:ger:pl:nom.acc:n:imperf:aff",
+      "postępowania:ger:sg:gen:n:imperf:aff",
+      "postępowania:subst:sg:gen:n:ncol",
+      "postępowania:subst:pl:nom.acc.voc:n:ncol",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok"
+    ],
+    "coords_count": 13
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7283
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0295,
+    "quantum_words": 6,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.385318,
+    "formula": "0.813 × 0.684 × 0.693 = 0.385"
+  },
+  "sentence_number": 385,
+  "total_sentences": 805
+}

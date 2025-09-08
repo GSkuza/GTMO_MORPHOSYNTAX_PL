@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:37.465829",
+  "content": {
+    "text": "Ograniczenie tego prawa może określić ustawa.",
+    "length": 45,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.783759,
+    "stability": 0.677097,
+    "entropy": 0.350829
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:37.465829",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 131,
+    "saved_at": "2025-09-08T15:32:37.466351",
+    "file_counter": 131
+  },
+  "additional_metrics": {
+    "total_analyses": 17,
+    "cases": {
+      "nom": 6,
+      "acc": 1,
+      "gen": 3,
+      "voc": 1
+    },
+    "pos": {
+      "adv": 1,
+      "subst": 7,
+      "adj": 3,
+      "part": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.8333333333333335,
+    "debug_tags": [
+      "Ograniczenie:adv:pos",
+      "Ograniczenie:subst:sg:nom.acc.voc:n:ncol",
+      "Ograniczenie:ger:sg:nom.acc:n:perf:aff",
+      "tego:adj:sg:acc:m1.m2:pos",
+      "tego:adj:sg:gen:m1.m2.m3.n:pos",
+      "tego:subst:sg:gen:n:ncol",
+      "prawa:subst:sg:nom:f",
+      "prawa:subst:sg:voc:f",
+      "prawa:subst:sg:gen:n:ncol",
+      "prawa:subst:pl:nom.acc.voc:n:ncol"
+    ],
+    "coords_count": 13
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7114
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.6586,
+    "quantum_words": 4,
+    "entanglements": 0,
+    "superposition_type": "MIXED_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.359596,
+    "formula": "0.794 × 0.682 × 0.664 = 0.360"
+  },
+  "sentence_number": 131,
+  "total_sentences": 805
+}

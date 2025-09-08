@@ -1,0 +1,77 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:39.230238",
+  "content": {
+    "text": "Nauka do 18 roku życia jest\nobowiązkowa.",
+    "length": 40,
+    "word_count": 7
+  },
+  "coordinates": {
+    "determination": 0.772365,
+    "stability": 0.678596,
+    "entropy": 0.294374
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:39.230238",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 216,
+    "saved_at": "2025-09-08T15:32:39.230899",
+    "file_counter": 216
+  },
+  "additional_metrics": {
+    "total_analyses": 19,
+    "cases": {
+      "nom": 7,
+      "gen": 5,
+      "loc": 2,
+      "voc": 2
+    },
+    "pos": {
+      "subst": 12,
+      "prep": 1,
+      "adj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.7142857142857144,
+    "debug_tags": [
+      "Nauka:subst:sg:nom:f",
+      "Nauka:subst:sg:nom:f",
+      "Nauka:subst:sg:nom:m1",
+      "do:prep:gen",
+      "do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "18:dig",
+      "roku:subst:sg:gen:m3",
+      "roku:subst:sg:loc:m3",
+      "roku:subst:sg:voc:m3",
+      "roku:subst:sg:gen:m3"
+    ],
+    "coords_count": 12
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "low",
+    "overall": "moderate_quality",
+    "overall_score": 0.7242
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.7753,
+    "quantum_words": 5,
+    "entanglements": 0,
+    "superposition_type": "MIXED_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.385406,
+    "formula": "0.782 × 0.684 × 0.721 = 0.385"
+  },
+  "sentence_number": 216,
+  "total_sentences": 805
+}

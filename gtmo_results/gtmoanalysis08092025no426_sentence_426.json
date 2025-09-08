@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:44.034172",
+  "content": {
+    "text": "Na Prezydenta Rzeczypospolitej może być wybrany obywatel polski, który\nnajpóźniej w dniu wyborów kończy 35 lat i korzysta z pełni praw wyborczych do\nSejmu.",
+    "length": 155,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.669205,
+    "stability": 0.582675,
+    "entropy": 0.48658
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:44.034172",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 426,
+    "saved_at": "2025-09-08T15:32:44.034527",
+    "file_counter": 426
+  },
+  "additional_metrics": {
+    "total_analyses": 59,
+    "cases": {
+      "acc": 7,
+      "loc": 4,
+      "gen": 15,
+      "dat": 2,
+      "nom": 9,
+      "voc": 3
+    },
+    "pos": {
+      "prep": 7,
+      "subst": 21,
+      "part": 3,
+      "adj": 10,
+      "interp": 2,
+      "adv": 1,
+      "conj": 1
+    },
+    "ambiguity": 2.4583333333333335,
+    "debug_tags": [
+      "Na:prep:acc",
+      "Na:prep:loc",
+      "Na:interj",
+      "Prezydenta:subst:sg:gen.acc:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "być:subst:pl:gen:n:ncol"
+    ],
+    "coords_count": 47
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.5965
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9222,
+    "quantum_words": 18,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.21092,
+    "formula": "0.679 × 0.588 × 0.528 = 0.211"
+  },
+  "sentence_number": 426,
+  "total_sentences": 805
+}

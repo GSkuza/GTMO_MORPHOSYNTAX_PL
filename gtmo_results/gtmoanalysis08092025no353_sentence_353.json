@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:42.407461",
+  "content": {
+    "text": "Szczegółowe zasady pociągania posłów do odpowiedzialności karnej oraz\ntryb postępowania określa ustawa.",
+    "length": 103,
+    "word_count": 12
+  },
+  "coordinates": {
+    "determination": 0.781486,
+    "stability": 0.637799,
+    "entropy": 0.381486
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:42.407461",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 353,
+    "saved_at": "2025-09-08T15:32:42.408006",
+    "file_counter": 353
+  },
+  "additional_metrics": {
+    "total_analyses": 31,
+    "cases": {
+      "acc": 2,
+      "nom": 10,
+      "gen": 10,
+      "dat": 2,
+      "voc": 1,
+      "loc": 1
+    },
+    "pos": {
+      "adj": 7,
+      "subst": 14,
+      "prep": 1,
+      "adv": 1,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.5833333333333335,
+    "debug_tags": [
+      "Szczegółowe:adj:pl:acc:m2.m3.f.n:pos",
+      "Szczegółowe:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "Szczegółowe:adj:sg:acc:n:pos",
+      "Szczegółowe:adj:sg:nom.voc:n:pos",
+      "zasady:subst:sg:gen:f",
+      "zasady:subst:pl:nom.acc.voc:f",
+      "pociągania:ger:pl:nom.acc:n:imperf:aff",
+      "pociągania:ger:sg:gen:n:imperf:aff",
+      "posłów:subst:pl:gen.acc:m1",
+      "do:prep:gen"
+    ],
+    "coords_count": 23
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6895
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9782,
+    "quantum_words": 10,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.322311,
+    "formula": "0.791 × 0.643 × 0.634 = 0.322"
+  },
+  "sentence_number": 353,
+  "total_sentences": 805
+}

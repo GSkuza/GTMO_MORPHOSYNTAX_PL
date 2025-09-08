@@ -1,0 +1,77 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:37.326088",
+  "content": {
+    "text": "Zapewnia się wolność i ochronę tajemnicy komunikowania się.",
+    "length": 59,
+    "word_count": 8
+  },
+  "coordinates": {
+    "determination": 0.718656,
+    "stability": 0.662872,
+    "entropy": 0.429678
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:37.326088",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 124,
+    "saved_at": "2025-09-08T15:32:37.326529",
+    "file_counter": 124
+  },
+  "additional_metrics": {
+    "total_analyses": 14,
+    "cases": {
+      "nom": 2,
+      "acc": 2,
+      "gen": 2,
+      "dat": 1
+    },
+    "pos": {
+      "part": 3,
+      "subst": 5,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 1.75,
+    "debug_tags": [
+      "Zapewnia:fin:sg:ter:imperf",
+      "się:part",
+      "się:part",
+      "wolność:subst:sg:nom:f",
+      "wolność:subst:sg:acc:f",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "ochronę:subst:sg:acc:f",
+      "tajemnicy:subst:sg:gen:f"
+    ],
+    "coords_count": 11
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6574
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.7787,
+    "quantum_words": 4,
+    "entanglements": 0,
+    "superposition_type": "MIXED_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.284846,
+    "formula": "0.729 × 0.668 × 0.585 = 0.285"
+  },
+  "sentence_number": 124,
+  "total_sentences": 805
+}

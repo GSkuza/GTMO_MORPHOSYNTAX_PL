@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:50.595138",
+  "content": {
+    "text": "Krajowa Rada Radiofonii i Telewizji stoi na straży wolności słowa,\nprawa do informacji oraz interesu publicznego w radiofonii i telewizji.",
+    "length": 138,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.668454,
+    "stability": 0.594466,
+    "entropy": 0.506381
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:50.595138",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 694,
+    "saved_at": "2025-09-08T15:32:50.595507",
+    "file_counter": 694
+  },
+  "additional_metrics": {
+    "total_analyses": 64,
+    "cases": {
+      "nom": 9,
+      "gen": 25,
+      "dat": 9,
+      "acc": 3,
+      "loc": 2,
+      "voc": 3
+    },
+    "pos": {
+      "adj": 5,
+      "subst": 41,
+      "part": 2,
+      "conj": 3,
+      "prep": 5,
+      "interp": 2,
+      "adv": 1
+    },
+    "ambiguity": 3.2,
+    "debug_tags": [
+      "Krajowa:adj:sg:nom.voc:f:pos",
+      "Krajowa:subst:sg:gen:m3",
+      "Rada:subst:sg:nom:f",
+      "Rada:subst:sg:gen.acc:m1",
+      "Rada:adj:sg:nom:f:pos",
+      "Rada:winien:sg:f:imperf",
+      "Radiofonii:subst:sg:gen:f",
+      "Radiofonii:subst:sg:dat.loc:f",
+      "Radiofonii:subst:pl:gen:f",
+      "i:interj"
+    ],
+    "coords_count": 44
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5938
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8418,
+    "quantum_words": 17,
+    "entanglements": 7,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.20686,
+    "formula": "0.678 × 0.599 × 0.509 = 0.207"
+  },
+  "sentence_number": 694,
+  "total_sentences": 805
+}

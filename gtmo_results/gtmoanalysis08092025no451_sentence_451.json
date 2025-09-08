@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:44.691604",
+  "content": {
+    "text": "Prezydent Rzeczypospolitej nie może piastować żadnego innego\nurzędu ani pełnić żadnej funkcji publicznej, z wyjątkiem tych, które są związane ze\nsprawowanym urzędem.",
+    "length": 165,
+    "word_count": 22
+  },
+  "coordinates": {
+    "determination": 0.676933,
+    "stability": 0.571168,
+    "entropy": 0.521009
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:44.691604",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 451,
+    "saved_at": "2025-09-08T15:32:44.691997",
+    "file_counter": 451
+  },
+  "additional_metrics": {
+    "total_analyses": 58,
+    "cases": {
+      "nom": 8,
+      "gen": 12,
+      "dat": 5,
+      "acc": 9,
+      "loc": 4
+    },
+    "pos": {
+      "subst": 11,
+      "conj": 2,
+      "part": 5,
+      "adj": 21,
+      "interp": 3,
+      "prep": 4
+    },
+    "ambiguity": 2.6363636363636362,
+    "debug_tags": [
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "nie:conj",
+      "nie:interj",
+      "nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "nie:part",
+      "może:interj"
+    ],
+    "coords_count": 40
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5858
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8078,
+    "quantum_words": 15,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.195516,
+    "formula": "0.687 × 0.576 × 0.494 = 0.196"
+  },
+  "sentence_number": 451,
+  "total_sentences": 805
+}

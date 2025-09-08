@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:37.731311",
+  "content": {
+    "text": "Społeczna gospodarka rynkowa oparta na wolności działalności\ngospodarczej, własności prywatnej oraz solidarności, dialogu i współpracy partnerów\nspołecznych stanowi podstawę ustroju gospodarczego Rzeczypospolitej Polskiej.",
+    "length": 222,
+    "word_count": 23
+  },
+  "coordinates": {
+    "determination": 0.665658,
+    "stability": 0.635966,
+    "entropy": 0.4474
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:37.731311",
+    "sequence_number": 53,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 66,
+    "cases": {
+      "nom": 9,
+      "acc": 4,
+      "loc": 7,
+      "gen": 19,
+      "dat": 11,
+      "voc": 6
+    },
+    "pos": {
+      "adj": 17,
+      "subst": 36,
+      "prep": 2,
+      "interp": 3,
+      "adv": 1,
+      "conj": 2,
+      "part": 1
+    },
+    "ambiguity": 2.869565217391304,
+    "debug_tags": [
+      "Społeczna:adj:sg:nom.voc:f:pos",
+      "gospodarka:subst:sg:nom:f",
+      "rynkowa:adj:sg:nom.voc:f:pos",
+      "oparta:ppas:sg:nom.voc:f:perf:aff",
+      "na:prep:acc",
+      "na:prep:loc",
+      "na:interj",
+      "wolności:subst:sg:gen:f",
+      "wolności:subst:sg:dat.loc:f",
+      "wolności:subst:sg:voc:f"
+    ],
+    "coords_count": 49
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6228
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=49, cases={'nom': 9, 'acc': 4, 'loc': 7, 'gen': 19, 'dat': 11, 'voc': 6}, pos={'adj': 17, 'subst': 36, 'prep': 2, 'interp': 3, 'adv': 1, 'conj': 2, 'part': 1}",
+    "  MORPH_COORDS: [0.739, 0.711, 0.330]",
+    "  MORPH_TAGS: ['Społeczna:adj:sg:nom.voc:f:pos', 'gospodarka:subst:sg:nom:f', 'rynkowa:adj:sg:nom.voc:f:pos', 'oparta:ppas:sg:nom.voc:f:perf:aff', 'na:prep:acc', 'na:prep:loc', 'na:interj', 'wolności:subst:sg:gen:f', 'wolności:subst:sg:dat.loc:f', 'wolności:subst:sg:voc:f']",
+    "  SYNTAX_COORDS: [0.507, 0.455, 0.705]",
+    "  FINAL: D=0.676, S=0.641, E=0.432"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.8708,
+    "quantum_words": 21,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

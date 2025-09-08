@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:52.717828",
+  "content": {
+    "text": "Pierwsze czytanie projektu ustawy o zmianie Konstytucji może odbyć się nie\nwcześniej niż trzydziestego dnia od dnia przedłożenia Sejmowi projektu ustawy.",
+    "length": 153,
+    "word_count": 21
+  },
+  "coordinates": {
+    "determination": 0.685573,
+    "stability": 0.584179,
+    "entropy": 0.454517
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:52.717828",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 767,
+    "saved_at": "2025-09-08T15:32:52.718382",
+    "file_counter": 767
+  },
+  "additional_metrics": {
+    "total_analyses": 56,
+    "cases": {
+      "acc": 6,
+      "nom": 15,
+      "gen": 16,
+      "loc": 1,
+      "dat": 3
+    },
+    "pos": {
+      "adj": 7,
+      "subst": 24,
+      "prep": 4,
+      "part": 3,
+      "conj": 2,
+      "adv": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.6666666666666665,
+    "debug_tags": [
+      "Pierwsze:adj:pl:acc:m2.m3.f.n:pos",
+      "Pierwsze:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "Pierwsze:adj:sg:acc:n:pos",
+      "Pierwsze:adj:sg:nom.voc:n:pos",
+      "Pierwsze:subst:sg:nom.acc.voc:n:ncol",
+      "Pierwsze:subst:pl:nom.acc.voc:n:ncol",
+      "Pierwsze:subst:pl:nom.acc.voc:f",
+      "Pierwsze:subst:pl:nom.acc.voc:m2",
+      "Pierwsze:subst:pl:nom.acc.voc:m3",
+      "czytanie:ger:sg:nom.acc:n:imperf:aff"
+    ],
+    "coords_count": 39
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6131
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.7919,
+    "quantum_words": 15,
+    "entanglements": 3,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.229696,
+    "formula": "0.696 × 0.589 × 0.560 = 0.230"
+  },
+  "sentence_number": 767,
+  "total_sentences": 805
+}

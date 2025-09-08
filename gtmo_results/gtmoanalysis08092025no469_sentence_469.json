@@ -1,0 +1,76 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:45.054108",
+  "content": {
+    "text": "Prezydent Rzeczypospolitej nadaje ordery i odznaczenia.",
+    "length": 55,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.795055,
+    "stability": 0.712539,
+    "entropy": 0.33387
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:45.054108",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 469,
+    "saved_at": "2025-09-08T15:32:45.054550",
+    "file_counter": 469
+  },
+  "additional_metrics": {
+    "total_analyses": 15,
+    "cases": {
+      "nom": 5,
+      "gen": 3,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 7,
+      "part": 1,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.5,
+    "debug_tags": [
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "nadaje:fin:sg:ter:perf",
+      "nadaje:fin:sg:ter:imperf",
+      "ordery:subst:pl:nom.acc.voc:m3",
+      "i:interj",
+      "i:part",
+      "i:conj"
+    ],
+    "coords_count": 11
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "high",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7316
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9809,
+    "quantum_words": 4,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.393461,
+    "formula": "0.805 × 0.718 × 0.681 = 0.393"
+  },
+  "sentence_number": 469,
+  "total_sentences": 805
+}

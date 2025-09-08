@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:47.211844",
+  "content": {
+    "text": "Zadania publiczne służące zaspokajaniu potrzeb wspólnoty\nsamorządowej są wykonywane przez jednostkę samorządu terytorialnego jako\nzadania własne.",
+    "length": 145,
+    "word_count": 16
+  },
+  "coordinates": {
+    "determination": 0.744928,
+    "stability": 0.643044,
+    "entropy": 0.387339
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:47.211844",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 559,
+    "saved_at": "2025-09-08T15:32:47.212952",
+    "file_counter": 559
+  },
+  "additional_metrics": {
+    "total_analyses": 49,
+    "cases": {
+      "gen": 9,
+      "nom": 21,
+      "acc": 10,
+      "dat": 2,
+      "loc": 1,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 15,
+      "adj": 17,
+      "prep": 2,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 3.0625,
+    "debug_tags": [
+      "Zadania:subst:sg:gen:n:ncol",
+      "Zadania:subst:pl:nom.acc.voc:n:ncol",
+      "Zadania:ger:pl:nom.acc:n:perf:aff",
+      "Zadania:ger:sg:gen:n:perf:aff",
+      "publiczne:adj:pl:acc:m2.m3.f.n:pos",
+      "publiczne:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "publiczne:adj:sg:acc:n:pos",
+      "publiczne:adj:sg:nom.voc:n:pos",
+      "służące:pact:pl:nom.acc.voc:m2.m3.f.n:imperf:aff",
+      "służące:pact:sg:nom.acc.voc:n:imperf:aff"
+    ],
+    "coords_count": 33
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6747
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0101,
+    "quantum_words": 15,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.307068,
+    "formula": "0.755 × 0.648 × 0.628 = 0.307"
+  },
+  "sentence_number": 559,
+  "total_sentences": 805
+}

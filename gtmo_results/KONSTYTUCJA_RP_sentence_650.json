@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:49.273616",
+  "content": {
+    "text": "Ustrój wewnętrzny jednostek samorządu terytorialnego określają, w\ngranicach ustaw, ich organy stanowiące.",
+    "length": 105,
+    "word_count": 12
+  },
+  "coordinates": {
+    "determination": 0.723399,
+    "stability": 0.668652,
+    "entropy": 0.359411
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:49.273616",
+    "sequence_number": 650,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 26,
+    "cases": {
+      "nom": 8,
+      "voc": 1,
+      "acc": 4,
+      "gen": 5,
+      "loc": 2
+    },
+    "pos": {
+      "subst": 10,
+      "adj": 4,
+      "interp": 3,
+      "prep": 2
+    },
+    "ambiguity": 2.1666666666666665,
+    "debug_tags": [
+      "Ustrój:impt:sg:sec:perf",
+      "Ustrój:subst:sg:nom.acc:m3",
+      "wewnętrzny:subst:sg:nom.acc:m3",
+      "wewnętrzny:subst:sg:voc:m3",
+      "wewnętrzny:adj:sg:acc:m3:pos",
+      "wewnętrzny:adj:sg:nom.voc:m1.m2.m3:pos",
+      "jednostek:subst:pl:gen:f",
+      "samorządu:subst:sg:gen:m3",
+      "terytorialnego:adj:sg:acc:m1.m2:pos",
+      "terytorialnego:adj:sg:gen:m1.m2.m3.n:pos"
+    ],
+    "coords_count": 23
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6821
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=23, cases={'nom': 8, 'voc': 1, 'acc': 4, 'gen': 5, 'loc': 2}, pos={'subst': 10, 'adj': 4, 'interp': 3, 'prep': 2}",
+    "  MORPH_COORDS: [0.782, 0.747, 0.296]",
+    "  MORPH_TAGS: ['Ustrój:impt:sg:sec:perf', 'Ustrój:subst:sg:nom.acc:m3', 'wewnętrzny:subst:sg:nom.acc:m3', 'wewnętrzny:subst:sg:voc:m3', 'wewnętrzny:adj:sg:acc:m3:pos', 'wewnętrzny:adj:sg:nom.voc:m1.m2.m3:pos', 'jednostek:subst:pl:gen:f', 'samorządu:subst:sg:gen:m3', 'terytorialnego:adj:sg:acc:m1.m2:pos', 'terytorialnego:adj:sg:gen:m1.m2.m3.n:pos']",
+    "  SYNTAX_COORDS: [0.588, 0.451, 0.491]",
+    "  FINAL: D=0.733, S=0.674, E=0.344"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.1197,
+    "quantum_words": 11,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

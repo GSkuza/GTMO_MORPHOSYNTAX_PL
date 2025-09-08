@@ -1,0 +1,73 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:49.573593",
+  "content": {
+    "text": "Trybunał Stanu\nArt. 198. 1.",
+    "length": 27,
+    "word_count": 5
+  },
+  "coordinates": {
+    "determination": 0.749952,
+    "stability": 0.741546,
+    "entropy": 0.279634
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:49.573593",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 650,
+    "saved_at": "2025-09-08T15:32:49.574084",
+    "file_counter": 650
+  },
+  "additional_metrics": {
+    "total_analyses": 10,
+    "cases": {
+      "nom": 3,
+      "gen": 1
+    },
+    "pos": {
+      "subst": 4,
+      "interp": 3
+    },
+    "ambiguity": 2.0,
+    "debug_tags": [
+      "Trybunał:subst:sg:nom.acc:m3",
+      "Stanu:subst:sg:gen:m3",
+      "Art:brev:pun",
+      "Art:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Art:subst:sg:nom:m1",
+      ".:interp",
+      ".:interp",
+      ".:interp",
+      "198:dig",
+      "1:dig"
+    ],
+    "coords_count": 7
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "high",
+    "entropy": "low",
+    "overall": "high_quality",
+    "overall_score": 0.7386
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.98,
+    "quantum_words": 3,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.417202,
+    "formula": "0.760 × 0.747 × 0.735 = 0.417"
+  },
+  "sentence_number": 650,
+  "total_sentences": 805
+}

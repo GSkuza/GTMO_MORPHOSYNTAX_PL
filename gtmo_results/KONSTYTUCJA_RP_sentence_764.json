@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:51.151117",
+  "content": {
+    "text": "Najwyższa Izba Kontroli przedkłada Sejmowi:\n\nanalizę wykonania budżetu państwa i założeń polityki pieniężnej,\nopinię w przedmiocie absolutorium dla Rady Ministrów,\ninformacje o wynikach kontroli, wnioski i wystąpienia, określone w ustawie.",
+    "length": 239,
+    "word_count": 30
+  },
+  "coordinates": {
+    "determination": 0.71654,
+    "stability": 0.66753,
+    "entropy": 0.412542
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:51.151117",
+    "sequence_number": 764,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 78,
+    "cases": {
+      "nom": 22,
+      "gen": 20,
+      "dat": 6,
+      "acc": 7,
+      "loc": 7,
+      "voc": 1
+    },
+    "pos": {
+      "adj": 9,
+      "subst": 39,
+      "interp": 6,
+      "part": 2,
+      "conj": 2,
+      "prep": 7
+    },
+    "ambiguity": 2.6,
+    "debug_tags": [
+      "Najwyższa:adj:sg:nom.voc:f:sup",
+      "Izba:subst:sg:nom:f",
+      "Izba:subst:sg:nom:f",
+      "Izba:subst:sg:nom:m1",
+      "Kontroli:subst:sg:gen:f",
+      "Kontroli:subst:sg:dat.loc:f",
+      "Kontroli:subst:pl:gen:f",
+      "przedkłada:fin:sg:ter:imperf",
+      "Sejmowi:subst:sg:dat:m3",
+      "Sejmowi:adj:pl:nom.voc:m1:pos"
+    ],
+    "coords_count": 58
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6631
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=58, cases={'nom': 22, 'gen': 20, 'dat': 6, 'acc': 7, 'loc': 7, 'voc': 1}, pos={'adj': 9, 'subst': 39, 'interp': 6, 'part': 2, 'conj': 2, 'prep': 7}",
+    "  MORPH_COORDS: [0.770, 0.743, 0.299]",
+    "  MORPH_TAGS: ['Najwyższa:adj:sg:nom.voc:f:sup', 'Izba:subst:sg:nom:f', 'Izba:subst:sg:nom:f', 'Izba:subst:sg:nom:m1', 'Kontroli:subst:sg:gen:f', 'Kontroli:subst:sg:dat.loc:f', 'Kontroli:subst:pl:gen:f', 'przedkłada:fin:sg:ter:imperf', 'Sejmowi:subst:sg:dat:m3', 'Sejmowi:adj:pl:nom.voc:m1:pos']",
+    "  SYNTAX_COORDS: [0.592, 0.453, 0.703]",
+    "  FINAL: D=0.727, S=0.673, E=0.398"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.164,
+    "quantum_words": 26,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

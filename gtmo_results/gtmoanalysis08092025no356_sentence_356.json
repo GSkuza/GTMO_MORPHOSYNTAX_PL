@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:42.456463",
+  "content": {
+    "text": "W zakresie określonym ustawą poseł nie może prowadzić\ndziałalności gospodarczej z osiąganiem korzyści z majątku Skarbu Państwa lub\nsamorządu terytorialnego ani nabywać tego majątku.",
+    "length": 181,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.680271,
+    "stability": 0.581184,
+    "entropy": 0.519415
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:42.456463",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 356,
+    "saved_at": "2025-09-08T15:32:42.456911",
+    "file_counter": 356
+  },
+  "additional_metrics": {
+    "total_analyses": 63,
+    "cases": {
+      "acc": 5,
+      "loc": 7,
+      "voc": 5,
+      "dat": 5,
+      "nom": 5,
+      "gen": 16
+    },
+    "pos": {
+      "prep": 6,
+      "subst": 27,
+      "adj": 10,
+      "conj": 3,
+      "part": 5,
+      "interp": 1
+    },
+    "ambiguity": 2.625,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "zakresie:subst:sg:loc:m3",
+      "zakresie:subst:sg:voc:m3",
+      "określonym:adj:pl:dat:m1.m2.m3.f.n:pos",
+      "określonym:adj:sg:inst:m1.m2.m3.n:pos",
+      "określonym:adj:sg:loc:m1.m2.m3.n:pos",
+      "określonym:ppas:pl:dat:m1.m2.m3.f.n:perf:aff",
+      "określonym:ppas:sg:inst.loc:m1.m2.m3.n:perf:aff",
+      "ustawą:subst:sg:inst:f"
+    ],
+    "coords_count": 39
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5906
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9565,
+    "quantum_words": 15,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.200526,
+    "formula": "0.690 × 0.586 × 0.496 = 0.201"
+  },
+  "sentence_number": 356,
+  "total_sentences": 805
+}

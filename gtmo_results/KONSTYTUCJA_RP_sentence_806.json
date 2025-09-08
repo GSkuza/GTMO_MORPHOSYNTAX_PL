@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:51.883823",
+  "content": {
+    "text": "Zaciąganie pożyczek oraz udzielanie gwarancji i poręczeń finansowych przez\npaństwo następuje na zasadach i w trybie określonych w ustawie.",
+    "length": 138,
+    "word_count": 19
+  },
+  "coordinates": {
+    "determination": 0.739398,
+    "stability": 0.66008,
+    "entropy": 0.415342
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:51.883823",
+    "sequence_number": 806,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 41,
+    "cases": {
+      "nom": 4,
+      "gen": 8,
+      "dat": 3,
+      "acc": 7,
+      "loc": 7,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 12,
+      "adv": 1,
+      "conj": 3,
+      "part": 2,
+      "adj": 6,
+      "prep": 7,
+      "interp": 1
+    },
+    "ambiguity": 2.1578947368421053,
+    "debug_tags": [
+      "Zaciąganie:ger:sg:nom.acc:n:imperf:aff",
+      "pożyczek:subst:pl:gen:f",
+      "oraz:adv",
+      "oraz:conj",
+      "udzielanie:ger:sg:nom.acc:n:imperf:aff",
+      "gwarancji:subst:sg:gen:f",
+      "gwarancji:subst:sg:dat.loc:f",
+      "gwarancji:subst:pl:gen:f",
+      "i:interj",
+      "i:part"
+    ],
+    "coords_count": 31
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6692
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=31, cases={'nom': 4, 'gen': 8, 'dat': 3, 'acc': 7, 'loc': 7, 'voc': 1}, pos={'subst': 12, 'adv': 1, 'conj': 3, 'part': 2, 'adj': 6, 'prep': 7, 'interp': 1}",
+    "  MORPH_COORDS: [0.747, 0.732, 0.308]",
+    "  MORPH_TAGS: ['Zaciąganie:ger:sg:nom.acc:n:imperf:aff', 'pożyczek:subst:pl:gen:f', 'oraz:adv', 'oraz:conj', 'udzielanie:ger:sg:nom.acc:n:imperf:aff', 'gwarancji:subst:sg:gen:f', 'gwarancji:subst:sg:dat.loc:f', 'gwarancji:subst:pl:gen:f', 'i:interj', 'i:part']",
+    "  SYNTAX_COORDS: [0.757, 0.452, 0.692]",
+    "  FINAL: D=0.749, S=0.665, E=0.400"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.1959,
+    "quantum_words": 14,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

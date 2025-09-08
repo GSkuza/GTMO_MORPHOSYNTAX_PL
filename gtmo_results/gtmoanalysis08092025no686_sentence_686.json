@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:50.361580",
+  "content": {
+    "text": "Rzecznik Praw Obywatelskich nie może zajmować innego stanowiska, z\nwyjątkiem stanowiska profesora szkoły wyższej, ani wykonywać innych zajęć\nzawodowych.",
+    "length": 152,
+    "word_count": 19
+  },
+  "coordinates": {
+    "determination": 0.670525,
+    "stability": 0.577757,
+    "entropy": 0.494435
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:50.361580",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 686,
+    "saved_at": "2025-09-08T15:32:50.362814",
+    "file_counter": 686
+  },
+  "additional_metrics": {
+    "total_analyses": 51,
+    "cases": {
+      "nom": 5,
+      "gen": 16,
+      "acc": 6,
+      "loc": 5,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 16,
+      "adj": 14,
+      "conj": 2,
+      "part": 4,
+      "interp": 3,
+      "prep": 2
+    },
+    "ambiguity": 2.6842105263157894,
+    "debug_tags": [
+      "Rzecznik:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Rzecznik:subst:sg:nom:m1",
+      "Praw:adjc",
+      "Praw:subst:pl:gen:n:ncol",
+      "Praw:impt:sg:sec:imperf",
+      "Obywatelskich:adj:pl:acc:m1:pos",
+      "Obywatelskich:adj:pl:gen:m1.m2.m3.f.n:pos",
+      "Obywatelskich:adj:pl:loc:m1.m2.m3.f.n:pos",
+      "nie:conj",
+      "nie:interj"
+    ],
+    "coords_count": 36
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.5932
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0152,
+    "quantum_words": 13,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.206446,
+    "formula": "0.681 × 0.583 × 0.521 = 0.206"
+  },
+  "sentence_number": 686,
+  "total_sentences": 805
+}

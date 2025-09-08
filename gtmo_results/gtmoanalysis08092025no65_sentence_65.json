@@ -1,0 +1,77 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:35.988642",
+  "content": {
+    "text": "Hymnem Rzeczypospolitej Polskiej jest Mazurek Dąbrowskiego.",
+    "length": 59,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.759386,
+    "stability": 0.696766,
+    "entropy": 0.315682
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:35.988642",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 65,
+    "saved_at": "2025-09-08T15:32:35.988940",
+    "file_counter": 65
+  },
+  "additional_metrics": {
+    "total_analyses": 20,
+    "cases": {
+      "gen": 7,
+      "dat": 3,
+      "loc": 1,
+      "nom": 5,
+      "acc": 1
+    },
+    "pos": {
+      "subst": 13,
+      "adj": 5,
+      "interp": 1
+    },
+    "ambiguity": 3.3333333333333335,
+    "debug_tags": [
+      "Hymnem:subst:sg:inst:m3",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "Polskiej:adj:sg:dat:f:pos",
+      "Polskiej:adj:sg:gen:f:pos",
+      "Polskiej:adj:sg:loc:f:pos",
+      "Polskiej:subst:sg:gen:f",
+      "Polskiej:subst:sg:dat.loc:f",
+      "jest:fin:sg:ter:imperf",
+      "Mazurek:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f"
+    ],
+    "coords_count": 12
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7181
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.5372,
+    "quantum_words": 4,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.377582,
+    "formula": "0.769 × 0.702 × 0.699 = 0.378"
+  },
+  "sentence_number": 65,
+  "total_sentences": 805
+}

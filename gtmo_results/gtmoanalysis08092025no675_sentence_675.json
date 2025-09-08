@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:50.122599",
+  "content": {
+    "text": "Prezes Najwyższej Izby Kontroli nie może zajmować innego stanowiska, z\nwyjątkiem stanowiska profesora szkoły wyższej, ani wykonywać innych zajęć\nzawodowych.",
+    "length": 156,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.669375,
+    "stability": 0.579156,
+    "entropy": 0.492463
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:50.122599",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 675,
+    "saved_at": "2025-09-08T15:32:50.122973",
+    "file_counter": 675
+  },
+  "additional_metrics": {
+    "total_analyses": 58,
+    "cases": {
+      "nom": 9,
+      "dat": 3,
+      "gen": 20,
+      "loc": 5,
+      "acc": 5
+    },
+    "pos": {
+      "subst": 24,
+      "adj": 14,
+      "conj": 2,
+      "part": 4,
+      "interp": 3,
+      "prep": 2
+    },
+    "ambiguity": 2.9,
+    "debug_tags": [
+      "Prezes:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezes:subst:sg:nom:m1",
+      "Najwyższej:adj:sg:dat:f:sup",
+      "Najwyższej:adj:sg:gen:f:sup",
+      "Najwyższej:adj:sg:loc:f:sup",
+      "Izby:subst:pl:nom.acc.voc:n:pt",
+      "Izby:subst:sg:gen:f",
+      "Izby:subst:pl:nom.acc.voc:f",
+      "Izby:subst:sg:gen:f",
+      "Izby:subst:pl:nom.acc.voc:f"
+    ],
+    "coords_count": 38
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.5938
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.88,
+    "quantum_words": 14,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.207375,
+    "formula": "0.679 × 0.584 × 0.523 = 0.207"
+  },
+  "sentence_number": 675,
+  "total_sentences": 805
+}

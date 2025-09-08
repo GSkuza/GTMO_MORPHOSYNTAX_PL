@@ -1,0 +1,83 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:52.223293",
+  "content": {
+    "text": "Rada Ministrów przedkłada Sejmowi najpóźniej na 3 miesiące przed\nrozpoczęciem roku budżetowego projekt ustawy budżetowej na rok następny.",
+    "length": 137,
+    "word_count": 18
+  },
+  "coordinates": {
+    "determination": 0.762399,
+    "stability": 0.672507,
+    "entropy": 0.329551
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:52.223293",
+    "sequence_number": 823,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 42,
+    "cases": {
+      "nom": 10,
+      "gen": 7,
+      "dat": 2,
+      "acc": 5,
+      "loc": 5,
+      "voc": 3
+    },
+    "pos": {
+      "subst": 19,
+      "adj": 9,
+      "adv": 1,
+      "prep": 6,
+      "interp": 1
+    },
+    "ambiguity": 2.3333333333333335,
+    "debug_tags": [
+      "Rada:subst:sg:nom:f",
+      "Rada:subst:sg:gen.acc:m1",
+      "Rada:adj:sg:nom:f:pos",
+      "Rada:winien:sg:f:imperf",
+      "Ministrów:subst:pl:gen.acc:m1",
+      "przedkłada:fin:sg:ter:imperf",
+      "Sejmowi:subst:sg:dat:m3",
+      "Sejmowi:adj:pl:nom.voc:m1:pos",
+      "najpóźniej:adv:sup",
+      "na:prep:acc"
+    ],
+    "coords_count": 32
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7078
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=32, cases={'nom': 10, 'gen': 7, 'dat': 2, 'acc': 5, 'loc': 5, 'voc': 3}, pos={'subst': 19, 'adj': 9, 'adv': 1, 'prep': 6, 'interp': 1}",
+    "  MORPH_COORDS: [0.772, 0.750, 0.283]",
+    "  MORPH_TAGS: ['Rada:subst:sg:nom:f', 'Rada:subst:sg:gen.acc:m1', 'Rada:adj:sg:nom:f:pos', 'Rada:winien:sg:f:imperf', 'Ministrów:subst:pl:gen.acc:m1', 'przedkłada:fin:sg:ter:imperf', 'Sejmowi:subst:sg:dat:m3', 'Sejmowi:adj:pl:nom.voc:m1:pos', 'najpóźniej:adv:sup', 'na:prep:acc']",
+    "  SYNTAX_COORDS: [0.775, 0.452, 0.411]",
+    "  FINAL: D=0.772, S=0.678, E=0.315"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.1653,
+    "quantum_words": 13,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

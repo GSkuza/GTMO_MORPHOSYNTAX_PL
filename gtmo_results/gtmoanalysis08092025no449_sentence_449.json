@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:44.654954",
+  "content": {
+    "text": "Jeżeli Marszałek Sejmu nie może wykonywać obowiązków Prezydenta\nRzeczypospolitej, obowiązki te przejmuje Marszałek Senatu.",
+    "length": 122,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.754296,
+    "stability": 0.610497,
+    "entropy": 0.444484
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:44.654954",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 449,
+    "saved_at": "2025-09-08T15:32:44.655344",
+    "file_counter": 449
+  },
+  "additional_metrics": {
+    "total_analyses": 32,
+    "cases": {
+      "nom": 11,
+      "gen": 5,
+      "acc": 3,
+      "dat": 1,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 16,
+      "conj": 1,
+      "part": 2,
+      "interp": 2,
+      "adj": 2
+    },
+    "ambiguity": 2.2857142857142856,
+    "debug_tags": [
+      "Jeżeli:comp",
+      "Marszałek:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Marszałek:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Marszałek:subst:sg:nom:m1",
+      "Marszałek:subst:sg:nom:m1",
+      "Marszałek:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Marszałek:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Marszałek:subst:sg:nom:m1",
+      "Marszałek:subst:sg:nom:m1",
+      "Sejmu:subst:sg:gen:m3"
+    ],
+    "coords_count": 23
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6515
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.782,
+    "quantum_words": 9,
+    "entanglements": 0,
+    "superposition_type": "MIXED_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.268384,
+    "formula": "0.764 × 0.615 × 0.571 = 0.268"
+  },
+  "sentence_number": 449,
+  "total_sentences": 805
+}

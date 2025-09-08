@@ -1,0 +1,76 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:46.018271",
+  "content": {
+    "text": "Tryb powoływania i odwoływania oraz zakres działania wojewodów określa\nustawa.",
+    "length": 78,
+    "word_count": 10
+  },
+  "coordinates": {
+    "determination": 0.738797,
+    "stability": 0.623439,
+    "entropy": 0.455739
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:46.018271",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 511,
+    "saved_at": "2025-09-08T15:32:46.019001",
+    "file_counter": 511
+  },
+  "additional_metrics": {
+    "total_analyses": 22,
+    "cases": {
+      "nom": 7,
+      "gen": 7
+    },
+    "pos": {
+      "subst": 8,
+      "part": 1,
+      "conj": 2,
+      "adv": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.2,
+    "debug_tags": [
+      "Tryb:subst:sg:nom.acc:m3",
+      "Tryb:subst:pl:gen:f",
+      "Tryb:subst:pl:gen:f",
+      "Tryb:impt:sg:sec:imperf",
+      "powoływania:ger:pl:nom.acc:n:imperf:aff",
+      "powoływania:ger:sg:gen:n:imperf:aff",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "odwoływania:ger:pl:nom.acc:n:imperf:aff"
+    ],
+    "coords_count": 17
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6458
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.7653,
+    "quantum_words": 7,
+    "entanglements": 2,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.263173,
+    "formula": "0.749 × 0.628 × 0.559 = 0.263"
+  },
+  "sentence_number": 511,
+  "total_sentences": 805
+}

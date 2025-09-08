@@ -1,0 +1,76 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:35.239781",
+  "content": {
+    "text": "Konstytucja jest najwyższym prawem Rzeczypospolitej Polskiej.",
+    "length": 61,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.776593,
+    "stability": 0.720839,
+    "entropy": 0.273228
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:35.239781",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 19,
+    "saved_at": "2025-09-08T15:32:35.240436",
+    "file_counter": 19
+  },
+  "additional_metrics": {
+    "total_analyses": 17,
+    "cases": {
+      "nom": 1,
+      "dat": 5,
+      "loc": 3,
+      "gen": 3
+    },
+    "pos": {
+      "subst": 9,
+      "adj": 6,
+      "interp": 1
+    },
+    "ambiguity": 2.8333333333333335,
+    "debug_tags": [
+      "Konstytucja:subst:sg:nom:f",
+      "jest:fin:sg:ter:imperf",
+      "najwyższym:adj:pl:dat:m1.m2.m3.f.n:sup",
+      "najwyższym:adj:sg:inst:m1.m2.m3.n:sup",
+      "najwyższym:adj:sg:loc:m1.m2.m3.n:sup",
+      "najwyższym:subst:sg:inst:m1",
+      "najwyższym:subst:sg:loc:m1",
+      "najwyższym:subst:pl:dat:m1",
+      "prawem:subst:sg:inst:n:ncol",
+      "Rzeczypospolitej:subst:sg:gen:f"
+    ],
+    "coords_count": 12
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "high",
+    "entropy": "low",
+    "overall": "high_quality",
+    "overall_score": 0.7449
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8599,
+    "quantum_words": 4,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.423507,
+    "formula": "0.787 × 0.726 × 0.742 = 0.424"
+  },
+  "sentence_number": 19,
+  "total_sentences": 805
+}

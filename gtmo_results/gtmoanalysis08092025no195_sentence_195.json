@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:38.818648",
+  "content": {
+    "text": "Obowiązek pracy może być nałożony tylko przez ustawę.",
+    "length": 53,
+    "word_count": 8
+  },
+  "coordinates": {
+    "determination": 0.732932,
+    "stability": 0.638867,
+    "entropy": 0.356279
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:38.818648",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 195,
+    "saved_at": "2025-09-08T15:32:38.819365",
+    "file_counter": 195
+  },
+  "additional_metrics": {
+    "total_analyses": 16,
+    "cases": {
+      "nom": 2,
+      "gen": 3,
+      "dat": 1,
+      "acc": 3
+    },
+    "pos": {
+      "subst": 5,
+      "part": 2,
+      "conj": 1,
+      "prep": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.0,
+    "debug_tags": [
+      "Obowiązek:subst:sg:nom.acc:m3",
+      "pracy:subst:sg:gen:f",
+      "pracy:subst:sg:dat.loc:f",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "być:subst:pl:gen:n:ncol",
+      "być:ger:pl:gen:n:imperf:aff",
+      "być:inf:imperf",
+      "nałożony:ppas:sg:acc:m3:perf:aff"
+    ],
+    "coords_count": 15
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6779
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9839,
+    "quantum_words": 6,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.315099,
+    "formula": "0.743 × 0.644 × 0.659 = 0.315"
+  },
+  "sentence_number": 195,
+  "total_sentences": 805
+}

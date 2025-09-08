@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:46.961297",
+  "content": {
+    "text": "Prezes Rady Ministrów składa dymisję Rady Ministrów również w razie:\nnieuchwalenia przez Sejm wotum zaufania dla Rady Ministrów,\nwyrażenia Radzie Ministrów wotum nieufności,\nrezygnacji Prezesa Rady Ministrów.",
+    "length": 208,
+    "word_count": 27
+  },
+  "coordinates": {
+    "determination": 0.71046,
+    "stability": 0.625843,
+    "entropy": 0.436667
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:46.961297",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 548,
+    "saved_at": "2025-09-08T15:32:46.962006",
+    "file_counter": 548
+  },
+  "additional_metrics": {
+    "total_analyses": 80,
+    "cases": {
+      "nom": 26,
+      "gen": 26,
+      "acc": 3,
+      "loc": 7,
+      "voc": 4,
+      "dat": 6
+    },
+    "pos": {
+      "subst": 59,
+      "part": 1,
+      "prep": 4,
+      "interp": 4
+    },
+    "ambiguity": 2.962962962962963,
+    "debug_tags": [
+      "Prezes:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezes:subst:sg:nom:m1",
+      "Rady:depr:pl:nom.acc.voc:m2",
+      "Rady:subst:pl:nom.acc.voc:m3",
+      "Rady:subst:sg:gen:f",
+      "Rady:subst:pl:nom.acc.voc:f",
+      "Rady:subst:sg:gen:m1",
+      "Rady:depr:pl:nom.acc.voc:m2",
+      "Rady:subst:pl:nom.acc.voc:m3",
+      "Rady:subst:sg:gen:f"
+    ],
+    "coords_count": 37
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6409
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9362,
+    "quantum_words": 17,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.262851,
+    "formula": "0.720 × 0.631 × 0.578 = 0.263"
+  },
+  "sentence_number": 548,
+  "total_sentences": 805
+}

@@ -1,0 +1,83 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:43.607672",
+  "content": {
+    "text": "Prezydent Rzeczypospolitej, po zasięgnięciu opinii Marszałka Sejmu i\nMarszałka Senatu, może w przypadkach określonych w Konstytucji zarządzić\nskrócenie kadencji Sejmu.",
+    "length": 167,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.712426,
+    "stability": 0.61985,
+    "entropy": 0.458418
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:43.607672",
+    "sequence_number": 363,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 47,
+    "cases": {
+      "nom": 4,
+      "gen": 16,
+      "dat": 6,
+      "acc": 5,
+      "loc": 6
+    },
+    "pos": {
+      "subst": 23,
+      "interp": 3,
+      "prep": 7,
+      "part": 2,
+      "conj": 1,
+      "adj": 3
+    },
+    "ambiguity": 2.35,
+    "debug_tags": [
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      ",:interp",
+      ",:interp",
+      "po:prep:acc",
+      "po:prep:dat",
+      "po:prep:loc",
+      "zasięgnięciu:ger:sg:dat.loc:n:perf:aff"
+    ],
+    "coords_count": 32
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6334
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=32, cases={'nom': 4, 'gen': 16, 'dat': 6, 'acc': 5, 'loc': 6}, pos={'subst': 23, 'interp': 3, 'prep': 7, 'part': 2, 'conj': 1, 'adj': 3}",
+    "  MORPH_COORDS: [0.731, 0.690, 0.361]",
+    "  MORPH_TAGS: ['Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f', 'Prezydent:subst:sg:nom:m1', 'Rzeczypospolitej:subst:sg:gen:f', 'Rzeczypospolitej:subst:sg:dat.loc:f', ',:interp', ',:interp', 'po:prep:acc', 'po:prep:dat', 'po:prep:loc', 'zasięgnięciu:ger:sg:dat.loc:n:perf:aff']",
+    "  SYNTAX_COORDS: [0.700, 0.452, 0.662]",
+    "  FINAL: D=0.722, S=0.625, E=0.443"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.8586,
+    "quantum_words": 14,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

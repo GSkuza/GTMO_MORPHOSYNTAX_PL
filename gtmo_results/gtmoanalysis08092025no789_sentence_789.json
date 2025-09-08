@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:53.176714",
+  "content": {
+    "text": "W mocy\npozostają prawomocne wyroki sądu oraz inne prawomocne decyzje organów władzy\npublicznej, podjęte z uwzględnieniem znaczenia przepisów ustalonego przez\nTrybunał Konstytucyjny w drodze powszechnie obowiązującej wykładni ustaw.",
+    "length": 231,
+    "word_count": 28
+  },
+  "coordinates": {
+    "determination": 0.677947,
+    "stability": 0.608547,
+    "entropy": 0.485049
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:53.176714",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 789,
+    "saved_at": "2025-09-08T15:32:53.177293",
+    "file_counter": 789
+  },
+  "additional_metrics": {
+    "total_analyses": 69,
+    "cases": {
+      "acc": 11,
+      "loc": 4,
+      "gen": 19,
+      "dat": 6,
+      "voc": 1,
+      "nom": 16
+    },
+    "pos": {
+      "prep": 7,
+      "subst": 24,
+      "adj": 20,
+      "adv": 2,
+      "conj": 1,
+      "interp": 2,
+      "part": 1
+    },
+    "ambiguity": 2.4642857142857144,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "mocy:subst:sg:gen:f",
+      "mocy:subst:sg:dat.loc:f",
+      "mocy:subst:sg:voc:f",
+      "mocy:subst:pl:gen:f",
+      "pozostają:fin:pl:ter:perf",
+      "pozostają:fin:pl:ter:imperf",
+      "prawomocne:adj:pl:acc:m2.m3.f.n:pos",
+      "prawomocne:adj:pl:nom.voc:m2.m3.f.n:pos"
+    ],
+    "coords_count": 53
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6082
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8542,
+    "quantum_words": 24,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.223686,
+    "formula": "0.688 × 0.614 × 0.530 = 0.224"
+  },
+  "sentence_number": 789,
+  "total_sentences": 805
+}

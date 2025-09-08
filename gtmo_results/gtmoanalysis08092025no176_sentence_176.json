@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:38.470571",
+  "content": {
+    "text": "Ze\nwzględu na dobro publiczne ustawa może ograniczyć prowadzenie strajku lub\nzakazać go w odniesieniu do określonych kategorii pracowników lub w określonych\ndziedzinach.",
+    "length": 169,
+    "word_count": 23
+  },
+  "coordinates": {
+    "determination": 0.71275,
+    "stability": 0.621371,
+    "entropy": 0.473065
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:38.470571",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 176,
+    "saved_at": "2025-09-08T15:32:38.471184",
+    "file_counter": 176
+  },
+  "additional_metrics": {
+    "total_analyses": 56,
+    "cases": {
+      "gen": 13,
+      "acc": 10,
+      "loc": 8,
+      "nom": 8,
+      "voc": 1,
+      "dat": 3
+    },
+    "pos": {
+      "prep": 9,
+      "part": 2,
+      "subst": 16,
+      "adj": 10,
+      "conj": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.4347826086956523,
+    "debug_tags": [
+      "Ze:prep:gen:wok",
+      "Ze:prep:inst:wok",
+      "Ze:part:wok",
+      "względu:subst:sg:gen:m3",
+      "na:prep:acc",
+      "na:prep:loc",
+      "na:interj",
+      "dobro:subst:sg:nom.acc.voc:n:ncol",
+      "publiczne:adj:pl:acc:m2.m3.f.n:pos",
+      "publiczne:adj:pl:nom.voc:m2.m3.f.n:pos"
+    ],
+    "coords_count": 37
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6296
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0104,
+    "quantum_words": 16,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.245339,
+    "formula": "0.723 × 0.626 × 0.542 = 0.245"
+  },
+  "sentence_number": 176,
+  "total_sentences": 805
+}

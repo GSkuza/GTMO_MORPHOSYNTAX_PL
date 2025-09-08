@@ -1,0 +1,76 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:47.753523",
+  "content": {
+    "text": "Sądy\nArt. 175. 1.",
+    "length": 17,
+    "word_count": 4
+  },
+  "coordinates": {
+    "determination": 0.804178,
+    "stability": 0.817368,
+    "entropy": 0.188604
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:47.753523",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 584,
+    "saved_at": "2025-09-08T15:32:47.754209",
+    "file_counter": 584
+  },
+  "additional_metrics": {
+    "total_analyses": 9,
+    "cases": {
+      "nom": 3
+    },
+    "pos": {
+      "subst": 3,
+      "interp": 3
+    },
+    "ambiguity": 2.25,
+    "debug_tags": [
+      "Sądy:subst:pl:nom.acc.voc:m3",
+      "Art:brev:pun",
+      "Art:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Art:subst:sg:nom:m1",
+      ".:interp",
+      ".:interp",
+      ".:interp",
+      "175:dig",
+      "1:dig"
+    ],
+    "coords_count": 5
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "high",
+    "entropy": "low",
+    "overall": "high_quality",
+    "overall_score": 0.8103
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.98,
+    "quantum_words": 2,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "topology": {
+    "attractor": "Ψᴷ",
+    "distance": 0.07333688578743994,
+    "in_basin": true
+  },
+  "quantum_tensor": {
+    "value": 0.547424,
+    "formula": "0.811 × 0.820 × 0.824 = 0.547"
+  },
+  "sentence_number": 584,
+  "total_sentences": 805
+}

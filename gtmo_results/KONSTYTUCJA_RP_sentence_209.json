@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:40.631302",
+  "content": {
+    "text": "Związkom zawodowym przysługuje prawo do organizowania strajków\npracowniczych i innych form protestu w granicach określonych w ustawie.",
+    "length": 134,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.712591,
+    "stability": 0.629488,
+    "entropy": 0.436242
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:40.631302",
+    "sequence_number": 209,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 39,
+    "cases": {
+      "dat": 5,
+      "loc": 8,
+      "nom": 3,
+      "gen": 10,
+      "acc": 6
+    },
+    "pos": {
+      "subst": 12,
+      "adj": 12,
+      "adv": 1,
+      "prep": 5,
+      "part": 1,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.2941176470588234,
+    "debug_tags": [
+      "Związkom:subst:pl:dat:f",
+      "Związkom:subst:pl:dat:m3",
+      "Związkom:subst:pl:dat:m1",
+      "zawodowym:adj:pl:dat:m1.m2.m3.f.n:pos",
+      "zawodowym:adj:sg:inst:m1.m2.m3.n:pos",
+      "zawodowym:adj:sg:loc:m1.m2.m3.n:pos",
+      "przysługuje:fin:sg:ter:imperf",
+      "prawo:subst:sg:nom.acc.voc:n:ncol",
+      "prawo:adv:pos",
+      "do:prep:gen"
+    ],
+    "coords_count": 33
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.643
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=33, cases={'dat': 5, 'loc': 8, 'nom': 3, 'gen': 10, 'acc': 6}, pos={'subst': 12, 'adj': 12, 'adv': 1, 'prep': 5, 'part': 1, 'conj': 1, 'interp': 1}",
+    "  MORPH_COORDS: [0.725, 0.699, 0.347]",
+    "  MORPH_TAGS: ['Związkom:subst:pl:dat:f', 'Związkom:subst:pl:dat:m3', 'Związkom:subst:pl:dat:m1', 'zawodowym:adj:pl:dat:m1.m2.m3.f.n:pos', 'zawodowym:adj:sg:inst:m1.m2.m3.n:pos', 'zawodowym:adj:sg:loc:m1.m2.m3.n:pos', 'przysługuje:fin:sg:ter:imperf', 'prawo:subst:sg:nom.acc.voc:n:ncol', 'prawo:adv:pos', 'do:prep:gen']",
+    "  SYNTAX_COORDS: [0.716, 0.457, 0.626]",
+    "  FINAL: D=0.723, S=0.634, E=0.421"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9364,
+    "quantum_words": 14,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

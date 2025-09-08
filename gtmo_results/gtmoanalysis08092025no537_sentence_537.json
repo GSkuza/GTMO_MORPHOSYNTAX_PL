@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:46.797373",
+  "content": {
+    "text": "Powtórny wniosek może być zgłoszony przed\nupływem 3 miesięcy, jeżeli wystąpi z nim co najmniej 115 posłów.",
+    "length": 106,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.675527,
+    "stability": 0.573588,
+    "entropy": 0.478865
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:46.797373",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 537,
+    "saved_at": "2025-09-08T15:32:46.798466",
+    "file_counter": 537
+  },
+  "additional_metrics": {
+    "total_analyses": 43,
+    "cases": {
+      "acc": 5,
+      "nom": 6,
+      "gen": 8,
+      "dat": 1,
+      "loc": 2
+    },
+    "pos": {
+      "adj": 2,
+      "subst": 8,
+      "part": 4,
+      "prep": 7,
+      "interp": 2,
+      "num": 2,
+      "adv": 1
+    },
+    "ambiguity": 2.5294117647058822,
+    "debug_tags": [
+      "Powtórny:adj:sg:acc:m3:pos",
+      "Powtórny:adj:sg:nom.voc:m1.m2.m3:pos",
+      "wniosek:subst:sg:nom.acc:m3",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "być:subst:pl:gen:n:ncol",
+      "być:ger:pl:gen:n:imperf:aff",
+      "być:inf:imperf",
+      "zgłoszony:ppas:sg:acc:m3:perf:aff"
+    ],
+    "coords_count": 29
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.5986
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8559,
+    "quantum_words": 11,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.212652,
+    "formula": "0.686 × 0.579 × 0.536 = 0.213"
+  },
+  "sentence_number": 537,
+  "total_sentences": 805
+}

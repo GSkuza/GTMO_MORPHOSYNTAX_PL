@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:45.714899",
+  "content": {
+    "text": "Rada Ministrów może uznać uchwalony przez siebie projekt\nustawy za pilny, z wyjątkiem projektów ustaw podatkowych, ustaw dotyczących\nwyboru Prezydenta Rzeczypospolitej, Sejmu, Senatu oraz organów samorządu\nterytorialnego, ustaw regulujących ustrój i właściwość władz publicznych, a także\nkodeksów.",
+    "length": 297,
+    "word_count": 37
+  },
+  "coordinates": {
+    "determination": 0.663438,
+    "stability": 0.585027,
+    "entropy": 0.506378
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:45.714899",
+    "sequence_number": 466,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 83,
+    "cases": {
+      "nom": 9,
+      "gen": 28,
+      "acc": 12,
+      "loc": 3,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 27,
+      "adj": 14,
+      "part": 6,
+      "prep": 7,
+      "interp": 7,
+      "adv": 1,
+      "conj": 3
+    },
+    "ambiguity": 2.2432432432432434,
+    "debug_tags": [
+      "Rada:subst:sg:nom:f",
+      "Rada:subst:sg:gen.acc:m1",
+      "Rada:adj:sg:nom:f:pos",
+      "Rada:winien:sg:f:imperf",
+      "Ministrów:subst:pl:gen.acc:m1",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "uznać:inf:perf",
+      "uchwalony:ppas:sg:acc:m3:perf:aff"
+    ],
+    "coords_count": 69
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.589
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=69, cases={'nom': 9, 'gen': 28, 'acc': 12, 'loc': 3, 'dat': 1}, pos={'subst': 27, 'adj': 14, 'part': 6, 'prep': 7, 'interp': 7, 'adv': 1, 'conj': 3}",
+    "  MORPH_COORDS: [0.703, 0.637, 0.419]",
+    "  MORPH_TAGS: ['Rada:subst:sg:nom:f', 'Rada:subst:sg:gen.acc:m1', 'Rada:adj:sg:nom:f:pos', 'Rada:winien:sg:f:imperf', 'Ministrów:subst:pl:gen.acc:m1', 'może:interj', 'może:part', 'może:fin:sg:ter:imperf', 'uznać:inf:perf', 'uchwalony:ppas:sg:acc:m3:perf:aff']",
+    "  SYNTAX_COORDS: [0.588, 0.453, 0.703]",
+    "  FINAL: D=0.673, S=0.590, E=0.491"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.0437,
+    "quantum_words": 29,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

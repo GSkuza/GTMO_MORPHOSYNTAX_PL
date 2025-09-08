@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:44.784912",
+  "content": {
+    "text": "Prezes Rady Ministrów i pozostali członkowie Rady Ministrów\nmają obowiązek udzielenia odpowiedzi na interpelacje i zapytania poselskie w ciągu\n21 dni.",
+    "length": 150,
+    "word_count": 21
+  },
+  "coordinates": {
+    "determination": 0.739386,
+    "stability": 0.677735,
+    "entropy": 0.391982
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:44.784912",
+    "sequence_number": 428,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 55,
+    "cases": {
+      "nom": 19,
+      "gen": 13,
+      "dat": 1,
+      "voc": 2,
+      "acc": 4,
+      "loc": 3
+    },
+    "pos": {
+      "subst": 28,
+      "part": 2,
+      "conj": 2,
+      "adj": 5,
+      "prep": 4,
+      "interp": 1
+    },
+    "ambiguity": 2.619047619047619,
+    "debug_tags": [
+      "Prezes:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezes:subst:sg:nom:m1",
+      "Rady:depr:pl:nom.acc.voc:m2",
+      "Rady:subst:pl:nom.acc.voc:m3",
+      "Rady:subst:sg:gen:f",
+      "Rady:subst:pl:nom.acc.voc:f",
+      "Rady:subst:sg:gen:m1",
+      "Rady:depr:pl:nom.acc.voc:m2",
+      "Rady:subst:pl:nom.acc.voc:m3",
+      "Rady:subst:sg:gen:f"
+    ],
+    "coords_count": 33
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6815
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=33, cases={'nom': 19, 'gen': 13, 'dat': 1, 'voc': 2, 'acc': 4, 'loc': 3}, pos={'subst': 28, 'part': 2, 'conj': 2, 'adj': 5, 'prep': 4, 'interp': 1}",
+    "  MORPH_COORDS: [0.785, 0.764, 0.275]",
+    "  MORPH_TAGS: ['Prezes:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f', 'Prezes:subst:sg:nom:m1', 'Rady:depr:pl:nom.acc.voc:m2', 'Rady:subst:pl:nom.acc.voc:m3', 'Rady:subst:sg:gen:f', 'Rady:subst:pl:nom.acc.voc:f', 'Rady:subst:sg:gen:m1', 'Rady:depr:pl:nom.acc.voc:m2', 'Rady:subst:pl:nom.acc.voc:m3', 'Rady:subst:sg:gen:f']",
+    "  SYNTAX_COORDS: [0.650, 0.454, 0.663]",
+    "  FINAL: D=0.749, S=0.683, E=0.377"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9802,
+    "quantum_words": 15,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

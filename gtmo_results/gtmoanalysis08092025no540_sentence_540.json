@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:46.838166",
+  "content": {
+    "text": "Wniosek o\nwyrażenie wotum nieufności może być zgłoszony przez co najmniej 69 posłów.",
+    "length": 84,
+    "word_count": 13
+  },
+  "coordinates": {
+    "determination": 0.722595,
+    "stability": 0.617056,
+    "entropy": 0.419359
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:46.838166",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 540,
+    "saved_at": "2025-09-08T15:32:46.838568",
+    "file_counter": 540
+  },
+  "additional_metrics": {
+    "total_analyses": 40,
+    "cases": {
+      "nom": 9,
+      "acc": 5,
+      "loc": 2,
+      "gen": 9,
+      "dat": 2,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 17,
+      "prep": 6,
+      "part": 3,
+      "num": 2,
+      "adv": 1,
+      "interp": 1
+    },
+    "ambiguity": 3.076923076923077,
+    "debug_tags": [
+      "Wniosek:subst:sg:nom.acc:m3",
+      "o:interj",
+      "o:prep:acc",
+      "o:prep:loc",
+      "wyrażenie:subst:sg:nom.acc.voc:n:ncol",
+      "wyrażenie:ger:sg:nom.acc:n:perf:aff",
+      "wotum:subst:sg:nom.acc.voc:n:ncol",
+      "wotum:subst:sg:gen:n:ncol",
+      "wotum:subst:sg:dat:n:ncol",
+      "wotum:subst:sg:inst:n:ncol"
+    ],
+    "coords_count": 27
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6483
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.7803,
+    "quantum_words": 11,
+    "entanglements": 0,
+    "superposition_type": "MIXED_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.271443,
+    "formula": "0.733 × 0.622 × 0.596 = 0.271"
+  },
+  "sentence_number": 540,
+  "total_sentences": 805
+}

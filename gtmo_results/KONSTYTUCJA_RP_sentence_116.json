@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:39.086279",
+  "content": {
+    "text": "Pozbawienie lub ograniczenie wolności może nastąpić tylko na zasadach i w trybie\nokreślonych w ustawie.",
+    "length": 103,
+    "word_count": 15
+  },
+  "coordinates": {
+    "determination": 0.696606,
+    "stability": 0.646338,
+    "entropy": 0.437379
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:39.086279",
+    "sequence_number": 116,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 39,
+    "cases": {
+      "nom": 5,
+      "gen": 4,
+      "dat": 3,
+      "voc": 2,
+      "acc": 5,
+      "loc": 6
+    },
+    "pos": {
+      "subst": 12,
+      "conj": 3,
+      "adv": 1,
+      "part": 3,
+      "prep": 6,
+      "adj": 3,
+      "interp": 1
+    },
+    "ambiguity": 2.6,
+    "debug_tags": [
+      "Pozbawienie:ger:sg:nom.acc:n:perf:aff",
+      "Pozbawienie:subst:sg:nom.acc.voc:n:ncol",
+      "lub:conj",
+      "lub:impt:sg:sec:imperf",
+      "ograniczenie:adv:pos",
+      "ograniczenie:subst:sg:nom.acc.voc:n:ncol",
+      "ograniczenie:ger:sg:nom.acc:n:perf:aff",
+      "wolności:subst:sg:gen:f",
+      "wolności:subst:sg:dat.loc:f",
+      "wolności:subst:sg:voc:f"
+    ],
+    "coords_count": 26
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6413
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=26, cases={'nom': 5, 'gen': 4, 'dat': 3, 'voc': 2, 'acc': 5, 'loc': 6}, pos={'subst': 12, 'conj': 3, 'adv': 1, 'part': 3, 'prep': 6, 'adj': 3, 'interp': 1}",
+    "  MORPH_COORDS: [0.723, 0.729, 0.315]",
+    "  MORPH_TAGS: ['Pozbawienie:ger:sg:nom.acc:n:perf:aff', 'Pozbawienie:subst:sg:nom.acc.voc:n:ncol', 'lub:conj', 'lub:impt:sg:sec:imperf', 'ograniczenie:adv:pos', 'ograniczenie:subst:sg:nom.acc.voc:n:ncol', 'ograniczenie:ger:sg:nom.acc:n:perf:aff', 'wolności:subst:sg:gen:f', 'wolności:subst:sg:dat.loc:f', 'wolności:subst:sg:voc:f']",
+    "  SYNTAX_COORDS: [0.665, 0.451, 0.701]",
+    "  FINAL: D=0.707, S=0.651, E=0.422"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.8131,
+    "quantum_words": 9,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

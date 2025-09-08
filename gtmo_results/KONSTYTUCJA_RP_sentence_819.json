@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:52.149954",
+  "content": {
+    "text": "Ustawa budżetowa nie może przewidywać pokrywania deficytu\nbudżetowego przez zaciąganie zobowiązania w centralnym banku państwa.",
+    "length": 127,
+    "word_count": 15
+  },
+  "coordinates": {
+    "determination": 0.766841,
+    "stability": 0.634158,
+    "entropy": 0.399274
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:52.149954",
+    "sequence_number": 819,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 37,
+    "cases": {
+      "nom": 7,
+      "acc": 5,
+      "gen": 8,
+      "loc": 4,
+      "dat": 2,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 13,
+      "adj": 6,
+      "conj": 1,
+      "part": 2,
+      "prep": 3,
+      "interp": 1
+    },
+    "ambiguity": 2.466666666666667,
+    "debug_tags": [
+      "Ustawa:subst:sg:nom:f",
+      "budżetowa:adj:sg:nom.voc:f:pos",
+      "nie:conj",
+      "nie:interj",
+      "nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "nie:part",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf"
+    ],
+    "coords_count": 28
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6772
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=28, cases={'nom': 7, 'acc': 5, 'gen': 8, 'loc': 4, 'dat': 2, 'voc': 1}, pos={'subst': 13, 'adj': 6, 'conj': 1, 'part': 2, 'prep': 3, 'interp': 1}",
+    "  MORPH_COORDS: [0.750, 0.717, 0.323]",
+    "  MORPH_TAGS: ['Ustawa:subst:sg:nom:f', 'budżetowa:adj:sg:nom.voc:f:pos', 'nie:conj', 'nie:interj', 'nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep', 'nie:ppron3:sg:acc:n:ter:akc.nakc:praep', 'nie:part', 'może:interj', 'może:part', 'może:fin:sg:ter:imperf']",
+    "  SYNTAX_COORDS: [0.841, 0.453, 0.532]",
+    "  FINAL: D=0.777, S=0.639, E=0.384"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.6516,
+    "quantum_words": 13,
+    "entanglements": 2,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

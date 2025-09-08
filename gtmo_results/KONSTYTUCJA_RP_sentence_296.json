@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:42.375566",
+  "content": {
+    "text": "Każdy ma prawo wystąpienia, na zasadach określonych w ustawie, do\nRzecznika Praw Obywatelskich z wnioskiem o pomoc w ochronie swoich wolności\nlub praw naruszonych przez organy władzy publicznej.",
+    "length": 194,
+    "word_count": 28
+  },
+  "coordinates": {
+    "determination": 0.686459,
+    "stability": 0.649918,
+    "entropy": 0.418687
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:42.375566",
+    "sequence_number": 296,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 72,
+    "cases": {
+      "acc": 12,
+      "nom": 11,
+      "gen": 17,
+      "loc": 10,
+      "dat": 5,
+      "voc": 1
+    },
+    "pos": {
+      "adj": 15,
+      "subst": 25,
+      "adv": 1,
+      "interp": 3,
+      "prep": 12,
+      "part": 1,
+      "conj": 1
+    },
+    "ambiguity": 2.5714285714285716,
+    "debug_tags": [
+      "Każdy:adj:sg:acc:m3:pos",
+      "Każdy:adj:sg:nom.voc:m1.m2.m3:pos",
+      "ma:adj:sg:nom.voc:f:pos",
+      "ma:fin:sg:ter:imperf",
+      "prawo:subst:sg:nom.acc.voc:n:ncol",
+      "prawo:adv:pos",
+      "wystąpienia:subst:sg:gen:n:ncol",
+      "wystąpienia:subst:pl:nom.acc.voc:n:ncol",
+      "wystąpienia:ger:pl:nom.acc:n:perf:aff",
+      "wystąpienia:ger:sg:gen:n:perf:aff"
+    ],
+    "coords_count": 57
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.644
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=57, cases={'acc': 12, 'nom': 11, 'gen': 17, 'loc': 10, 'dat': 5, 'voc': 1}, pos={'adj': 15, 'subst': 25, 'adv': 1, 'interp': 3, 'prep': 12, 'part': 1, 'conj': 1}",
+    "  MORPH_COORDS: [0.752, 0.724, 0.314]",
+    "  MORPH_TAGS: ['Każdy:adj:sg:acc:m3:pos', 'Każdy:adj:sg:nom.voc:m1.m2.m3:pos', 'ma:adj:sg:nom.voc:f:pos', 'ma:fin:sg:ter:imperf', 'prawo:subst:sg:nom.acc.voc:n:ncol', 'prawo:adv:pos', 'wystąpienia:subst:sg:gen:n:ncol', 'wystąpienia:subst:pl:nom.acc.voc:n:ncol', 'wystąpienia:ger:pl:nom.acc:n:perf:aff', 'wystąpienia:ger:sg:gen:n:perf:aff']",
+    "  SYNTAX_COORDS: [0.536, 0.453, 0.663]",
+    "  FINAL: D=0.696, S=0.655, E=0.404"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.0393,
+    "quantum_words": 25,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

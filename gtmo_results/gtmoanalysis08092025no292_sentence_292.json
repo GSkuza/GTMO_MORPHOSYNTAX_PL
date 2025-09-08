@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:40.895946",
+  "content": {
+    "text": "Organ upoważniony do wydania rozporządzenia nie może przekazać swoich\nkompetencji, o których mowa w ust. 1, innemu organowi.",
+    "length": 124,
+    "word_count": 18
+  },
+  "coordinates": {
+    "determination": 0.711516,
+    "stability": 0.630216,
+    "entropy": 0.428026
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:40.895946",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 292,
+    "saved_at": "2025-09-08T15:32:40.896701",
+    "file_counter": 292
+  },
+  "additional_metrics": {
+    "total_analyses": 55,
+    "cases": {
+      "nom": 12,
+      "gen": 12,
+      "acc": 7,
+      "loc": 5,
+      "dat": 5
+    },
+    "pos": {
+      "subst": 20,
+      "prep": 5,
+      "conj": 1,
+      "part": 2,
+      "adj": 8,
+      "interp": 4
+    },
+    "ambiguity": 3.0555555555555554,
+    "debug_tags": [
+      "Organ:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Organ:subst:sg:nom:m1",
+      "Organ:subst:sg:nom.acc:m3",
+      "Organ:subst:sg:nom.acc:m3",
+      "Organ:subst:pl:gen:f",
+      "upoważniony:ppas:sg:acc:m3:perf:aff",
+      "upoważniony:ppas:sg:nom.voc:m1.m2.m3:perf:aff",
+      "do:prep:gen",
+      "do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "wydania:subst:sg:gen:n:ncol"
+    ],
+    "coords_count": 37
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6453
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0019,
+    "quantum_words": 15,
+    "entanglements": 5,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.269021,
+    "formula": "0.722 × 0.635 × 0.587 = 0.269"
+  },
+  "sentence_number": 292,
+  "total_sentences": 805
+}

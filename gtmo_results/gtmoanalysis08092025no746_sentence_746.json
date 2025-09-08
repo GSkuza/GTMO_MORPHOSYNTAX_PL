@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:51.922238",
+  "content": {
+    "text": "Wybory do organów samorządu terytorialnego\nsą możliwe tylko tam, gdzie nie został wprowadzony stan nadzwyczajny.",
+    "length": 112,
+    "word_count": 15
+  },
+  "coordinates": {
+    "determination": 0.68355,
+    "stability": 0.599398,
+    "entropy": 0.429521
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:51.922238",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 746,
+    "saved_at": "2025-09-08T15:32:51.922729",
+    "file_counter": 746
+  },
+  "additional_metrics": {
+    "total_analyses": 36,
+    "cases": {
+      "nom": 8,
+      "gen": 8,
+      "acc": 7
+    },
+    "pos": {
+      "subst": 10,
+      "prep": 1,
+      "adj": 8,
+      "conj": 2,
+      "part": 4,
+      "adv": 2,
+      "interp": 2
+    },
+    "ambiguity": 2.4,
+    "debug_tags": [
+      "Wybory:subst:pl:nom.acc.voc:n:pt",
+      "Wybory:subst:pl:nom.acc.voc:m3",
+      "do:prep:gen",
+      "do:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:n:ncol",
+      "organów:subst:pl:gen:m3",
+      "organów:subst:pl:gen:m3",
+      "organów:subst:pl:gen:n:ncol",
+      "organów:subst:pl:gen:n:pt",
+      "samorządu:subst:sg:gen:m3",
+      "terytorialnego:adj:sg:acc:m1.m2:pos"
+    ],
+    "coords_count": 31
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6244
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8195,
+    "quantum_words": 11,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.245421,
+    "formula": "0.694 × 0.604 × 0.585 = 0.245"
+  },
+  "sentence_number": 746,
+  "total_sentences": 805
+}

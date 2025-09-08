@@ -1,0 +1,75 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:36.127946",
+  "content": {
+    "text": "Zasady ogólne\nArt. 30.",
+    "length": 22,
+    "word_count": 4
+  },
+  "coordinates": {
+    "determination": 0.759435,
+    "stability": 0.752081,
+    "entropy": 0.228717
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:36.127946",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 70,
+    "saved_at": "2025-09-08T15:32:36.128299",
+    "file_counter": 70
+  },
+  "additional_metrics": {
+    "total_analyses": 17,
+    "cases": {
+      "nom": 8,
+      "gen": 3,
+      "acc": 2
+    },
+    "pos": {
+      "subst": 8,
+      "adj": 4,
+      "interp": 2
+    },
+    "ambiguity": 4.25,
+    "debug_tags": [
+      "Zasady:subst:pl:nom.acc.voc:n:pt",
+      "Zasady:subst:sg:gen:f",
+      "Zasady:subst:pl:nom.acc.voc:f",
+      "Zasady:subst:sg:gen:f",
+      "Zasady:subst:pl:nom.acc.voc:f",
+      "Zasady:subst:sg:gen:m1",
+      "Zasady:depr:pl:nom.acc.voc:m2",
+      "ogólne:adj:pl:acc:m2.m3.f.n:pos",
+      "ogólne:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "ogólne:adj:sg:acc:n:pos"
+    ],
+    "coords_count": 7
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "high",
+    "entropy": "low",
+    "overall": "high_quality",
+    "overall_score": 0.7608
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.6132,
+    "quantum_words": 3,
+    "entanglements": 0,
+    "superposition_type": "MIXED_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.458029,
+    "formula": "0.769 × 0.757 × 0.786 = 0.458"
+  },
+  "sentence_number": 70,
+  "total_sentences": 805
+}

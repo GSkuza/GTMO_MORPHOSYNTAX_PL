@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:45.440404",
+  "content": {
+    "text": "Z dniem podjęcia uchwały o postawieniu Prezydenta Rzeczypospolitej w\nstan oskarżenia przed Trybunałem Stanu sprawowanie urzędu przez Prezydenta\nRzeczypospolitej ulega zawieszeniu.",
+    "length": 179,
+    "word_count": 21
+  },
+  "coordinates": {
+    "determination": 0.777975,
+    "stability": 0.619013,
+    "entropy": 0.402307
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:45.440404",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 489,
+    "saved_at": "2025-09-08T15:32:45.441189",
+    "file_counter": 489
+  },
+  "additional_metrics": {
+    "total_analyses": 40,
+    "cases": {
+      "gen": 12,
+      "nom": 8,
+      "acc": 4,
+      "loc": 3,
+      "dat": 5
+    },
+    "pos": {
+      "prep": 9,
+      "part": 1,
+      "subst": 20,
+      "interp": 1
+    },
+    "ambiguity": 1.9047619047619047,
+    "debug_tags": [
+      "Z:prep:gen:nwok",
+      "Z:prep:inst:nwok",
+      "Z:part:nwok",
+      "dniem:subst:sg:inst:m3",
+      "podjęcia:ger:pl:nom.acc:n:perf:aff",
+      "podjęcia:ger:sg:gen:n:perf:aff",
+      "podjęcia:subst:sg:gen:n:ncol",
+      "podjęcia:subst:pl:nom.acc.voc:n:ncol",
+      "uchwały:subst:sg:gen:f",
+      "uchwały:subst:pl:nom.acc.voc:f"
+    ],
+    "coords_count": 35
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6762
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9981,
+    "quantum_words": 16,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.301265,
+    "formula": "0.788 × 0.624 × 0.613 = 0.301"
+  },
+  "sentence_number": 489,
+  "total_sentences": 805
+}

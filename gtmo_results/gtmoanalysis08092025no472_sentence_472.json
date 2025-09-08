@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:45.099669",
+  "content": {
+    "text": "Prezydent Rzeczypospolitej może zwracać się z orędziem do Sejmu,\ndo Senatu lub do Zgromadzenia Narodowego.",
+    "length": 106,
+    "word_count": 15
+  },
+  "coordinates": {
+    "determination": 0.659468,
+    "stability": 0.588161,
+    "entropy": 0.456971
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:45.099669",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 472,
+    "saved_at": "2025-09-08T15:32:45.100142",
+    "file_counter": 472
+  },
+  "additional_metrics": {
+    "total_analyses": 31,
+    "cases": {
+      "nom": 7,
+      "gen": 10,
+      "dat": 1,
+      "acc": 1
+    },
+    "pos": {
+      "subst": 12,
+      "part": 3,
+      "prep": 5,
+      "interp": 2,
+      "conj": 1,
+      "adj": 2
+    },
+    "ambiguity": 2.066666666666667,
+    "debug_tags": [
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "zwracać:inf:imperf",
+      "się:part",
+      "z:prep:gen:nwok"
+    ],
+    "coords_count": 24
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6031
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9103,
+    "quantum_words": 8,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.221594,
+    "formula": "0.669 × 0.593 × 0.558 = 0.222"
+  },
+  "sentence_number": 472,
+  "total_sentences": 805
+}

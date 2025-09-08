@@ -1,0 +1,77 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:39.060821",
+  "content": {
+    "text": "Zakres i formy zabezpieczenia społecznego określa ustawa.",
+    "length": 57,
+    "word_count": 7
+  },
+  "coordinates": {
+    "determination": 0.787099,
+    "stability": 0.674637,
+    "entropy": 0.355229
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:39.060821",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 205,
+    "saved_at": "2025-09-08T15:32:39.061262",
+    "file_counter": 205
+  },
+  "additional_metrics": {
+    "total_analyses": 15,
+    "cases": {
+      "nom": 5,
+      "gen": 4,
+      "acc": 1
+    },
+    "pos": {
+      "subst": 6,
+      "part": 1,
+      "conj": 1,
+      "adj": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.142857142857143,
+    "debug_tags": [
+      "Zakres:subst:sg:nom.acc:m3",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "formy:subst:sg:gen:f",
+      "formy:subst:pl:nom.acc.voc:f",
+      "zabezpieczenia:subst:sg:gen:n:ncol",
+      "zabezpieczenia:subst:pl:nom.acc.voc:n:ncol",
+      "zabezpieczenia:ger:pl:nom.acc:n:perf:aff",
+      "zabezpieczenia:ger:sg:gen:n:perf:aff"
+    ],
+    "coords_count": 13
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7107
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.3325,
+    "quantum_words": 5,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.357423,
+    "formula": "0.797 × 0.680 × 0.660 = 0.357"
+  },
+  "sentence_number": 205,
+  "total_sentences": 805
+}

@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:38.988880",
+  "content": {
+    "text": "Sposób realizacji tego prawa oraz obowiązki pracodawcy określa ustawa.",
+    "length": 70,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.783183,
+    "stability": 0.672352,
+    "entropy": 0.352074
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:38.988880",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 201,
+    "saved_at": "2025-09-08T15:32:38.989412",
+    "file_counter": 201
+  },
+  "additional_metrics": {
+    "total_analyses": 25,
+    "cases": {
+      "nom": 9,
+      "gen": 6,
+      "dat": 2,
+      "acc": 1,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 16,
+      "adj": 3,
+      "adv": 1,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.7777777777777777,
+    "debug_tags": [
+      "Sposób:subst:sg:nom.acc:m3",
+      "Sposób:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Sposób:subst:sg:nom:m1",
+      "Sposób:pred",
+      "Sposób:impt:sg:sec:imperf",
+      "realizacji:subst:sg:gen:f",
+      "realizacji:subst:sg:dat.loc:f",
+      "realizacji:subst:pl:gen:f",
+      "tego:adj:sg:acc:m1.m2:pos",
+      "tego:adj:sg:gen:m1.m2.m3.n:pos"
+    ],
+    "coords_count": 19
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7094
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.994,
+    "quantum_words": 7,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.356166,
+    "formula": "0.793 × 0.677 × 0.663 = 0.356"
+  },
+  "sentence_number": 201,
+  "total_sentences": 805
+}

@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:36.548751",
+  "content": {
+    "text": "Kto znajduje się pod władzą Rzeczypospolitej Polskiej, korzysta z\nwolności i praw zapewnionych w Konstytucji.",
+    "length": 109,
+    "word_count": 15
+  },
+  "coordinates": {
+    "determination": 0.670767,
+    "stability": 0.609747,
+    "entropy": 0.465064
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:36.548751",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 91,
+    "saved_at": "2025-09-08T15:32:36.550028",
+    "file_counter": 91
+  },
+  "additional_metrics": {
+    "total_analyses": 38,
+    "cases": {
+      "nom": 2,
+      "acc": 3,
+      "gen": 10,
+      "dat": 5,
+      "loc": 2,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 15,
+      "part": 3,
+      "prep": 6,
+      "adj": 3,
+      "interp": 2,
+      "conj": 1
+    },
+    "ambiguity": 2.533333333333333,
+    "debug_tags": [
+      "Kto:subst:sg:nom:m1",
+      "znajduje:fin:sg:ter:imperf",
+      "znajduje:fin:sg:ter:imperf",
+      "się:part",
+      "pod:prep:acc:nwok",
+      "pod:prep:inst:nwok",
+      "władzą:subst:sg:inst:f",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "Polskiej:adj:sg:dat:f:pos"
+    ],
+    "coords_count": 27
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6117
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.1792,
+    "quantum_words": 10,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.230147,
+    "formula": "0.681 × 0.615 × 0.550 = 0.230"
+  },
+  "sentence_number": 91,
+  "total_sentences": 805
+}

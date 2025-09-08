@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:42.603010",
+  "content": {
+    "text": "Każdy jest obowiązany do dbałości o stan środowiska i ponosi\nodpowiedzialność za spowodowane przez siebie jego pogorszenie.",
+    "length": 123,
+    "word_count": 17
+  },
+  "coordinates": {
+    "determination": 0.727635,
+    "stability": 0.661178,
+    "entropy": 0.388817
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:42.603010",
+    "sequence_number": 309,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 45,
+    "cases": {
+      "acc": 9,
+      "nom": 14,
+      "voc": 2,
+      "gen": 8,
+      "dat": 1,
+      "loc": 1
+    },
+    "pos": {
+      "adj": 4,
+      "subst": 14,
+      "prep": 7,
+      "part": 2,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.6470588235294117,
+    "debug_tags": [
+      "Każdy:adj:sg:acc:m3:pos",
+      "Każdy:adj:sg:nom.voc:m1.m2.m3:pos",
+      "jest:fin:sg:ter:imperf",
+      "obowiązany:ppas:sg:acc:m3:perf:aff",
+      "obowiązany:ppas:sg:nom.voc:m1.m2.m3:perf:aff",
+      "obowiązany:subst:sg:nom:m1",
+      "obowiązany:subst:sg:voc:m1",
+      "obowiązany:adj:sg:acc:m3:pos",
+      "obowiązany:adj:sg:nom.voc:m1.m2.m3:pos",
+      "do:prep:gen"
+    ],
+    "coords_count": 31
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6728
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=31, cases={'acc': 9, 'nom': 14, 'voc': 2, 'gen': 8, 'dat': 1, 'loc': 1}, pos={'adj': 4, 'subst': 14, 'prep': 7, 'part': 2, 'conj': 1, 'interp': 1}",
+    "  MORPH_COORDS: [0.772, 0.739, 0.294]",
+    "  MORPH_TAGS: ['Każdy:adj:sg:acc:m3:pos', 'Każdy:adj:sg:nom.voc:m1.m2.m3:pos', 'jest:fin:sg:ter:imperf', 'obowiązany:ppas:sg:acc:m3:perf:aff', 'obowiązany:ppas:sg:nom.voc:m1.m2.m3:perf:aff', 'obowiązany:subst:sg:nom:m1', 'obowiązany:subst:sg:voc:m1', 'obowiązany:adj:sg:acc:m3:pos', 'obowiązany:adj:sg:nom.voc:m1.m2.m3:pos', 'do:prep:gen']",
+    "  SYNTAX_COORDS: [0.637, 0.450, 0.610]",
+    "  FINAL: D=0.738, S=0.666, E=0.374"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.0747,
+    "quantum_words": 14,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

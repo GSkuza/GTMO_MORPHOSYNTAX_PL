@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:40.368120",
+  "content": {
+    "text": "Źródłami powszechnie obowiązującego prawa Rzeczypospolitej Polskiej",
+    "length": 67,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.700407,
+    "stability": 0.669234,
+    "entropy": 0.351309
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:40.368120",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 269,
+    "saved_at": "2025-09-08T15:32:40.368419",
+    "file_counter": 269
+  },
+  "additional_metrics": {
+    "total_analyses": 20,
+    "cases": {
+      "nom": 4,
+      "acc": 2,
+      "gen": 6,
+      "voc": 1,
+      "dat": 3,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 11,
+      "adv": 1,
+      "adj": 6
+    },
+    "ambiguity": 3.3333333333333335,
+    "debug_tags": [
+      "Źródłami:subst:pl:inst:n:pt",
+      "Źródłami:subst:pl:inst:n:ncol",
+      "powszechnie:adv:pos",
+      "powszechnie:subst:pl:nom.acc.voc:f",
+      "obowiązującego:pact:sg:acc:m1.m2:imperf:aff",
+      "obowiązującego:pact:sg:gen:m1.m2.m3.n:imperf:aff",
+      "obowiązującego:adj:sg:acc:m1.m2:pos",
+      "obowiązującego:adj:sg:gen:m1.m2.m3.n:pos",
+      "prawa:subst:sg:nom:f",
+      "prawa:subst:sg:voc:f"
+    ],
+    "coords_count": 14
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6755
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9603,
+    "quantum_words": 5,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.317895,
+    "formula": "0.710 × 0.674 × 0.664 = 0.318"
+  },
+  "sentence_number": 269,
+  "total_sentences": 805
+}

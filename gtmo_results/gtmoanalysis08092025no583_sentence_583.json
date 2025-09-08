@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:47.733632",
+  "content": {
+    "text": "Sądy i Trybunały wydają wyroki w imieniu Rzeczypospolitej\nPolskiej.",
+    "length": 67,
+    "word_count": 9
+  },
+  "coordinates": {
+    "determination": 0.77429,
+    "stability": 0.683723,
+    "entropy": 0.313682
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:47.733632",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 583,
+    "saved_at": "2025-09-08T15:32:47.734107",
+    "file_counter": 583
+  },
+  "additional_metrics": {
+    "total_analyses": 23,
+    "cases": {
+      "nom": 3,
+      "acc": 1,
+      "loc": 5,
+      "dat": 6,
+      "gen": 3
+    },
+    "pos": {
+      "subst": 13,
+      "part": 1,
+      "conj": 1,
+      "prep": 2,
+      "adj": 3,
+      "interp": 1
+    },
+    "ambiguity": 2.5555555555555554,
+    "debug_tags": [
+      "Sądy:subst:pl:nom.acc.voc:m3",
+      "i:interj",
+      "i:part",
+      "i:conj",
+      "Trybunały:subst:pl:nom.acc.voc:m3",
+      "wydają:fin:pl:ter:imperf",
+      "wyroki:subst:pl:nom.acc.voc:m3",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "imieniu:subst:sg:dat:n:ncol"
+    ],
+    "coords_count": 18
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7207
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8046,
+    "quantum_words": 7,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.378823,
+    "formula": "0.784 × 0.689 × 0.701 = 0.379"
+  },
+  "sentence_number": 583,
+  "total_sentences": 805
+}

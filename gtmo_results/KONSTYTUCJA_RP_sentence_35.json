@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:37.423456",
+  "content": {
+    "text": "Zakazane jest istnienie partii politycznych i innych organizacji\nodwołujących się w swoich programach do totalitarnych metod i praktyk działania\nnazizmu, faszyzmu i komunizmu, a także tych, których program lub działalność\nzakłada lub dopuszcza nienawiść rasową i narodowościową, stosowanie przemocy w\ncelu zdobycia władzy lub wpływu na politykę państwa albo przewiduje utajnienie\nstruktur lub członkostwa.",
+    "length": 405,
+    "word_count": 54
+  },
+  "coordinates": {
+    "determination": 0.69951,
+    "stability": 0.632368,
+    "entropy": 0.453822
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:37.423456",
+    "sequence_number": 35,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 130,
+    "cases": {
+      "nom": 20,
+      "acc": 17,
+      "gen": 33,
+      "dat": 4,
+      "loc": 14,
+      "voc": 3
+    },
+    "pos": {
+      "adj": 26,
+      "subst": 48,
+      "part": 8,
+      "conj": 10,
+      "prep": 8,
+      "interp": 5
+    },
+    "ambiguity": 2.4074074074074074,
+    "debug_tags": [
+      "Zakazane:ppas:pl:nom.acc.voc:m2.m3.f.n:perf:aff",
+      "Zakazane:ppas:sg:nom.acc.voc:n:perf:aff",
+      "Zakazane:adj:pl:acc:m2.m3.f.n:pos",
+      "Zakazane:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "Zakazane:adj:sg:acc:n:pos",
+      "Zakazane:adj:sg:nom.voc:n:pos",
+      "jest:fin:sg:ter:imperf",
+      "istnienie:subst:sg:nom.acc.voc:n:ncol",
+      "istnienie:ger:sg:nom.acc:n:imperf:aff",
+      "partii:subst:sg:gen:f"
+    ],
+    "coords_count": 90
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6334
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=90, cases={'nom': 20, 'acc': 17, 'gen': 33, 'dat': 4, 'loc': 14, 'voc': 3}, pos={'adj': 26, 'subst': 48, 'part': 8, 'conj': 10, 'prep': 8, 'interp': 5}",
+    "  MORPH_COORDS: [0.736, 0.702, 0.347]",
+    "  MORPH_TAGS: ['Zakazane:ppas:pl:nom.acc.voc:m2.m3.f.n:perf:aff', 'Zakazane:ppas:sg:nom.acc.voc:n:perf:aff', 'Zakazane:adj:pl:acc:m2.m3.f.n:pos', 'Zakazane:adj:pl:nom.voc:m2.m3.f.n:pos', 'Zakazane:adj:sg:acc:n:pos', 'Zakazane:adj:sg:nom.voc:n:pos', 'jest:fin:sg:ter:imperf', 'istnienie:subst:sg:nom.acc.voc:n:ncol', 'istnienie:ger:sg:nom.acc:n:imperf:aff', 'partii:subst:sg:gen:f']",
+    "  SYNTAX_COORDS: [0.634, 0.453, 0.703]",
+    "  FINAL: D=0.710, S=0.637, E=0.439"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.0184,
+    "quantum_words": 39,
+    "entanglements": 8,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

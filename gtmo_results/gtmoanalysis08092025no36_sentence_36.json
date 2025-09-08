@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:35.534777",
+  "content": {
+    "text": "Samorząd terytorialny uczestniczy w sprawowaniu władzy publicznej.",
+    "length": 66,
+    "word_count": 7
+  },
+  "coordinates": {
+    "determination": 0.805406,
+    "stability": 0.728221,
+    "entropy": 0.281343
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:35.534777",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 36,
+    "saved_at": "2025-09-08T15:32:35.535514",
+    "file_counter": 36
+  },
+  "additional_metrics": {
+    "total_analyses": 18,
+    "cases": {
+      "nom": 4,
+      "acc": 3,
+      "loc": 3,
+      "dat": 4,
+      "gen": 2
+    },
+    "pos": {
+      "subst": 5,
+      "adj": 8,
+      "prep": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.5714285714285716,
+    "debug_tags": [
+      "Samorząd:subst:sg:nom.acc:m3",
+      "terytorialny:adj:sg:acc:m3:pos",
+      "terytorialny:adj:sg:nom.voc:m1.m2.m3:pos",
+      "uczestniczy:adj:pl:nom.voc:m1:pos",
+      "uczestniczy:adj:sg:acc:m3:pos",
+      "uczestniczy:adj:sg:nom.voc:m1.m2.m3:pos",
+      "uczestniczy:fin:sg:ter:imperf",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "sprawowaniu:subst:sg:dat:n:ncol"
+    ],
+    "coords_count": 15
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "high",
+    "entropy": "low",
+    "overall": "high_quality",
+    "overall_score": 0.7562
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8648,
+    "quantum_words": 7,
+    "entanglements": 2,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.438633,
+    "formula": "0.815 × 0.733 × 0.734 = 0.439"
+  },
+  "sentence_number": 36,
+  "total_sentences": 805
+}

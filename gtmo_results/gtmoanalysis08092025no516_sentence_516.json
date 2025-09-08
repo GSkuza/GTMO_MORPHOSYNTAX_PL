@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:46.161638",
+  "content": {
+    "text": "Prezydent Rzeczypospolitej powołuje\nPrezesa Rady Ministrów wraz z pozostałymi członkami Rady Ministrów w ciągu 14\ndni od dnia pierwszego posiedzenia Sejmu lub przyjęcia dymisji poprzedniej Rady\nMinistrów i odbiera przysięgę od członków nowo powołanej Rady Ministrów.",
+    "length": 266,
+    "word_count": 36
+  },
+  "coordinates": {
+    "determination": 0.642177,
+    "stability": 0.553464,
+    "entropy": 0.559994
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:46.161638",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 516,
+    "saved_at": "2025-09-08T15:32:46.161953",
+    "file_counter": 516
+  },
+  "additional_metrics": {
+    "total_analyses": 89,
+    "cases": {
+      "nom": 20,
+      "gen": 39,
+      "dat": 4,
+      "acc": 3,
+      "loc": 4,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 52,
+      "adv": 2,
+      "prep": 6,
+      "part": 2,
+      "adj": 9,
+      "conj": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.4722222222222223,
+    "debug_tags": [
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "powołuje:fin:sg:ter:imperf",
+      "Prezesa:subst:sg:gen.acc:m1",
+      "Rady:depr:pl:nom.acc.voc:m2",
+      "Rady:subst:pl:nom.acc.voc:m3",
+      "Rady:subst:sg:gen:f",
+      "Rady:subst:pl:nom.acc.voc:f"
+    ],
+    "coords_count": 53
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5549
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.6934,
+    "quantum_words": 21,
+    "entanglements": 4,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.165721,
+    "formula": "0.652 × 0.558 × 0.455 = 0.166"
+  },
+  "sentence_number": 516,
+  "total_sentences": 805
+}

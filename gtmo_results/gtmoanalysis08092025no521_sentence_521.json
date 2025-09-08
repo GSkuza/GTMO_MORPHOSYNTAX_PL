@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:46.249171",
+  "content": {
+    "text": "Prezydent\nRzeczypospolitej powołuje tak wybraną Radę Ministrów i odbiera przysięgę od jej\nczłonków.",
+    "length": 99,
+    "word_count": 13
+  },
+  "coordinates": {
+    "determination": 0.722081,
+    "stability": 0.598263,
+    "entropy": 0.4354
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:46.249171",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 521,
+    "saved_at": "2025-09-08T15:32:46.249684",
+    "file_counter": 521
+  },
+  "additional_metrics": {
+    "total_analyses": 32,
+    "cases": {
+      "nom": 2,
+      "gen": 9,
+      "dat": 2,
+      "acc": 6
+    },
+    "pos": {
+      "subst": 15,
+      "part": 2,
+      "adv": 1,
+      "adj": 2,
+      "conj": 1,
+      "prep": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.4615384615384617,
+    "debug_tags": [
+      "Prezydent:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezydent:subst:sg:nom:m1",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "powołuje:fin:sg:ter:imperf",
+      "tak:interj",
+      "tak:part",
+      "tak:subst:pl:gen:f",
+      "tak:adv:pos",
+      "wybraną:adj:sg:acc:f:pos"
+    ],
+    "coords_count": 26
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6377
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8935,
+    "quantum_words": 10,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.255973,
+    "formula": "0.732 × 0.603 × 0.580 = 0.256"
+  },
+  "sentence_number": 521,
+  "total_sentences": 805
+}

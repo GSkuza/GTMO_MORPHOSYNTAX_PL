@@ -1,0 +1,83 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:44.237008",
+  "content": {
+    "text": "W takim\nprzypadku ulega również zawieszeniu na ten czas bieg przedawnienia w\npostępowaniu karnym.",
+    "length": 97,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.737038,
+    "stability": 0.695273,
+    "entropy": 0.303771
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:44.237008",
+    "sequence_number": 397,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 42,
+    "cases": {
+      "acc": 4,
+      "loc": 11,
+      "dat": 8,
+      "voc": 2,
+      "gen": 3,
+      "nom": 5
+    },
+    "pos": {
+      "prep": 6,
+      "adj": 8,
+      "subst": 19,
+      "part": 1,
+      "interp": 1
+    },
+    "ambiguity": 3.0,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "takim:adj:pl:dat:m1.m2.m3.f.n:pos",
+      "takim:adj:sg:inst:m1.m2.m3.n:pos",
+      "takim:adj:sg:loc:m1.m2.m3.n:pos",
+      "przypadku:subst:sg:loc:m3",
+      "przypadku:subst:sg:voc:m3",
+      "przypadku:subst:sg:gen:m3",
+      "przypadku:subst:sg:loc:m3",
+      "przypadku:subst:sg:voc:m3"
+    ],
+    "coords_count": 27
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7123
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=27, cases={'acc': 4, 'loc': 11, 'dat': 8, 'voc': 2, 'gen': 3, 'nom': 5}, pos={'prep': 6, 'adj': 8, 'subst': 19, 'part': 1, 'interp': 1}",
+    "  MORPH_COORDS: [0.775, 0.783, 0.247]",
+    "  MORPH_TAGS: ['W:prep:acc:nwok', 'W:prep:loc:nwok', 'takim:adj:pl:dat:m1.m2.m3.f.n:pos', 'takim:adj:sg:inst:m1.m2.m3.n:pos', 'takim:adj:sg:loc:m1.m2.m3.n:pos', 'przypadku:subst:sg:loc:m3', 'przypadku:subst:sg:voc:m3', 'przypadku:subst:sg:gen:m3', 'przypadku:subst:sg:loc:m3', 'przypadku:subst:sg:voc:m3']",
+    "  SYNTAX_COORDS: [0.665, 0.455, 0.413]",
+    "  FINAL: D=0.747, S=0.700, E=0.289"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.0849,
+    "quantum_words": 12,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

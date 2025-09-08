@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:35.846976",
+  "content": {
+    "text": "Stosunki między państwem a kościołami i innymi związkami wyznaniowymi\nsą kształtowane na zasadach poszanowania ich autonomii oraz wzajemnej\nniezależności każdego w swoim zakresie, jak również współdziałania dla dobra\nczłowieka i dobra wspólnego.",
+    "length": 245,
+    "word_count": 32
+  },
+  "coordinates": {
+    "determination": 0.608149,
+    "stability": 0.591671,
+    "entropy": 0.511891
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:35.846976",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 55,
+    "saved_at": "2025-09-08T15:32:35.847731",
+    "file_counter": 55
+  },
+  "additional_metrics": {
+    "total_analyses": 87,
+    "cases": {
+      "nom": 18,
+      "acc": 6,
+      "loc": 7,
+      "gen": 17,
+      "dat": 5,
+      "voc": 2
+    },
+    "pos": {
+      "subst": 35,
+      "prep": 9,
+      "conj": 5,
+      "part": 4,
+      "adj": 14,
+      "adv": 2,
+      "interp": 2
+    },
+    "ambiguity": 2.71875,
+    "debug_tags": [
+      "Stosunki:subst:pl:nom.acc.voc:n:pt",
+      "Stosunki:subst:pl:nom.acc.voc:m3",
+      "między:prep:acc",
+      "między:prep:inst",
+      "państwem:subst:pl:inst:m1:pt",
+      "państwem:subst:sg:inst:n:ncol",
+      "a:conj",
+      "a:interj",
+      "a:prep:nom",
+      "a:part"
+    ],
+    "coords_count": 60
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5672
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9678,
+    "quantum_words": 21,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.185563,
+    "formula": "0.618 × 0.597 × 0.503 = 0.186"
+  },
+  "sentence_number": 55,
+  "total_sentences": 805
+}

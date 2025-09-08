@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:48.303898",
+  "content": {
+    "text": "Sędzia\nnie może być zatrzymany lub aresztowany, z wyjątkiem ujęcia go na gorącym\nuczynku przestępstwa, jeżeli jego zatrzymanie jest niezbędne do zapewnienia\nprawidłowego toku postępowania.",
+    "length": 188,
+    "word_count": 25
+  },
+  "coordinates": {
+    "determination": 0.697114,
+    "stability": 0.613147,
+    "entropy": 0.465402
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:48.303898",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 605,
+    "saved_at": "2025-09-08T15:32:48.304567",
+    "file_counter": 605
+  },
+  "additional_metrics": {
+    "total_analyses": 79,
+    "cases": {
+      "nom": 21,
+      "acc": 12,
+      "gen": 18,
+      "voc": 4,
+      "loc": 4,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 25,
+      "conj": 2,
+      "part": 3,
+      "adj": 13,
+      "interp": 3,
+      "prep": 5
+    },
+    "ambiguity": 3.16,
+    "debug_tags": [
+      "Sędzia:subst:sg:nom:f",
+      "Sędzia:subst:sg:nom:m1",
+      "nie:conj",
+      "nie:interj",
+      "nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "nie:part",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf"
+    ],
+    "coords_count": 49
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6232
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8639,
+    "quantum_words": 20,
+    "entanglements": 8,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.240229,
+    "formula": "0.707 × 0.618 × 0.550 = 0.240"
+  },
+  "sentence_number": 605,
+  "total_sentences": 805
+}

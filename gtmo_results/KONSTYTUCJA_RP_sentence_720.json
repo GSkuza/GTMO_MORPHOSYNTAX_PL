@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:50.412302",
+  "content": {
+    "text": "Orzeczenia Trybunału Konstytucyjnego zapadają większością głosów.",
+    "length": 65,
+    "word_count": 6
+  },
+  "coordinates": {
+    "determination": 0.764713,
+    "stability": 0.646114,
+    "entropy": 0.393039
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:50.412302",
+    "sequence_number": 720,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 11,
+    "cases": {
+      "gen": 5,
+      "nom": 2,
+      "acc": 1
+    },
+    "pos": {
+      "subst": 5,
+      "adj": 2,
+      "interp": 1
+    },
+    "ambiguity": 1.8333333333333333,
+    "debug_tags": [
+      "Orzeczenia:subst:sg:gen:n:ncol",
+      "Orzeczenia:subst:pl:nom.acc.voc:n:ncol",
+      "Orzeczenia:ger:pl:nom.acc:n:perf:aff",
+      "Orzeczenia:ger:sg:gen:n:perf:aff",
+      "Trybunału:subst:sg:gen:m3",
+      "Konstytucyjnego:adj:sg:acc:m1.m2:pos",
+      "Konstytucyjnego:adj:sg:gen:m1.m2.m3.n:pos",
+      "zapadają:fin:pl:ter:imperf",
+      "większością:subst:sg:inst:f",
+      "głosów:subst:pl:gen:m3"
+    ],
+    "coords_count": 10
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6818
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=10, cases={'gen': 5, 'nom': 2, 'acc': 1}, pos={'subst': 5, 'adj': 2, 'interp': 1}",
+    "  MORPH_COORDS: [0.737, 0.666, 0.392]",
+    "  MORPH_TAGS: ['Orzeczenia:subst:sg:gen:n:ncol', 'Orzeczenia:subst:pl:nom.acc.voc:n:ncol', 'Orzeczenia:ger:pl:nom.acc:n:perf:aff', 'Orzeczenia:ger:sg:gen:n:perf:aff', 'Trybunału:subst:sg:gen:m3', 'Konstytucyjnego:adj:sg:acc:m1.m2:pos', 'Konstytucyjnego:adj:sg:gen:m1.m2.m3.n:pos', 'zapadają:fin:pl:ter:imperf', 'większością:subst:sg:inst:f', 'głosów:subst:pl:gen:m3']",
+    "  SYNTAX_COORDS: [0.900, 0.600, 0.330]",
+    "  FINAL: D=0.775, S=0.651, E=0.378"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 1.2863,
+    "quantum_words": 4,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

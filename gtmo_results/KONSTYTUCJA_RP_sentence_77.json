@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:38.184356",
+  "content": {
+    "text": "Godłem Rzeczypospolitej Polskiej jest wizerunek orła białego w\nkoronie w czerwonym polu.\n\nBarwami Rzeczypospolitej Polskiej są kolory biały i czerwony.",
+    "length": 151,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.697921,
+    "stability": 0.663295,
+    "entropy": 0.359294
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:38.184356",
+    "sequence_number": 77,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 56,
+    "cases": {
+      "gen": 10,
+      "dat": 12,
+      "loc": 8,
+      "nom": 6,
+      "acc": 5,
+      "voc": 2
+    },
+    "pos": {
+      "subst": 30,
+      "adj": 15,
+      "prep": 4,
+      "interp": 2,
+      "part": 1,
+      "conj": 1
+    },
+    "ambiguity": 2.8,
+    "debug_tags": [
+      "Godłem:subst:sg:inst:n:ncol",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "Rzeczypospolitej:subst:sg:gen:f",
+      "Rzeczypospolitej:subst:sg:dat.loc:f",
+      "Polskiej:adj:sg:dat:f:pos",
+      "Polskiej:adj:sg:gen:f:pos",
+      "Polskiej:adj:sg:loc:f:pos",
+      "Polskiej:subst:sg:gen:f",
+      "Polskiej:subst:sg:dat.loc:f"
+    ],
+    "coords_count": 34
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6704
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=34, cases={'gen': 10, 'dat': 12, 'loc': 8, 'nom': 6, 'acc': 5, 'voc': 2}, pos={'subst': 30, 'adj': 15, 'prep': 4, 'interp': 2, 'part': 1, 'conj': 1}",
+    "  MORPH_COORDS: [0.753, 0.748, 0.289]",
+    "  MORPH_TAGS: ['Godłem:subst:sg:inst:n:ncol', 'Rzeczypospolitej:subst:sg:gen:f', 'Rzeczypospolitej:subst:sg:dat.loc:f', 'Rzeczypospolitej:subst:sg:gen:f', 'Rzeczypospolitej:subst:sg:dat.loc:f', 'Polskiej:adj:sg:dat:f:pos', 'Polskiej:adj:sg:gen:f:pos', 'Polskiej:adj:sg:loc:f:pos', 'Polskiej:subst:sg:gen:f', 'Polskiej:subst:sg:dat.loc:f']",
+    "  SYNTAX_COORDS: [0.588, 0.453, 0.492]",
+    "  FINAL: D=0.708, S=0.668, E=0.344"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.8878,
+    "quantum_words": 12,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

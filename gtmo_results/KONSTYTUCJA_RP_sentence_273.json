@@ -1,0 +1,85 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:41.994141",
+  "content": {
+    "text": "W toku ustalania praw dziecka organy władzy publicznej oraz osoby\nodpowiedzialne za dziecko są obowiązane do wysłuchania i w miarę możliwości\nuwzględnienia zdania dziecka.",
+    "length": 171,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.703967,
+    "stability": 0.640371,
+    "entropy": 0.42277
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:41.994141",
+    "sequence_number": 273,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 71,
+    "cases": {
+      "acc": 8,
+      "loc": 4,
+      "gen": 19,
+      "voc": 2,
+      "nom": 24,
+      "dat": 3
+    },
+    "pos": {
+      "prep": 8,
+      "subst": 30,
+      "adj": 11,
+      "adv": 1,
+      "conj": 2,
+      "part": 2,
+      "interp": 1
+    },
+    "ambiguity": 2.9583333333333335,
+    "debug_tags": [
+      "W:prep:acc:nwok",
+      "W:prep:loc:nwok",
+      "toku:subst:sg:gen:m3",
+      "toku:subst:sg:loc:m3",
+      "toku:subst:sg:voc:m3",
+      "ustalania:ger:pl:nom.acc:n:imperf:aff",
+      "ustalania:ger:sg:gen:n:imperf:aff",
+      "praw:adjc",
+      "praw:subst:pl:gen:n:ncol",
+      "praw:impt:sg:sec:imperf"
+    ],
+    "coords_count": 47
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6469
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=47, cases={'acc': 8, 'loc': 4, 'gen': 19, 'voc': 2, 'nom': 24, 'dat': 3}, pos={'prep': 8, 'subst': 30, 'adj': 11, 'adv': 1, 'conj': 2, 'part': 2, 'interp': 1}",
+    "  MORPH_COORDS: [0.746, 0.711, 0.333]",
+    "  MORPH_TAGS: ['W:prep:acc:nwok', 'W:prep:loc:nwok', 'toku:subst:sg:gen:m3', 'toku:subst:sg:loc:m3', 'toku:subst:sg:voc:m3', 'ustalania:ger:pl:nom.acc:n:imperf:aff', 'ustalania:ger:sg:gen:n:imperf:aff', 'praw:adjc', 'praw:subst:pl:gen:n:ncol', 'praw:impt:sg:sec:imperf']",
+    "  SYNTAX_COORDS: [0.622, 0.459, 0.617]",
+    "  FINAL: D=0.714, S=0.645, E=0.408"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9841,
+    "quantum_words": 20,
+    "entanglements": 11,
+    "superposition_type": "HIGHLY_ENTANGLED_COHERENT"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

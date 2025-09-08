@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:49.262437",
+  "content": {
+    "text": "Prezes Naczelnego Sądu Administracyjnego i Prezes Najwyższej Izby Kontroli.\n\nArt. 193.",
+    "length": 86,
+    "word_count": 11
+  },
+  "coordinates": {
+    "determination": 0.658616,
+    "stability": 0.623437,
+    "entropy": 0.404157
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:49.262437",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 636,
+    "saved_at": "2025-09-08T15:32:49.263373",
+    "file_counter": 636
+  },
+  "additional_metrics": {
+    "total_analyses": 33,
+    "cases": {
+      "nom": 10,
+      "acc": 2,
+      "gen": 10,
+      "dat": 2,
+      "loc": 1
+    },
+    "pos": {
+      "subst": 17,
+      "adj": 7,
+      "part": 1,
+      "conj": 1,
+      "interp": 3
+    },
+    "ambiguity": 3.0,
+    "debug_tags": [
+      "Prezes:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezes:subst:sg:nom:m1",
+      "Prezes:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezes:subst:sg:nom:m1",
+      "Naczelnego:adj:sg:acc:m1.m2:pos",
+      "Naczelnego:adj:sg:gen:m1.m2.m3.n:pos",
+      "Naczelnego:subst:sg:gen.acc:m1",
+      "Sądu:subst:sg:gen:m3",
+      "Administracyjnego:adj:sg:acc:m1.m2:pos",
+      "Administracyjnego:adj:sg:gen:m1.m2.m3.n:pos"
+    ],
+    "coords_count": 20
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6292
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8493,
+    "quantum_words": 8,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.256666,
+    "formula": "0.669 × 0.628 × 0.611 = 0.257"
+  },
+  "sentence_number": 636,
+  "total_sentences": 805
+}

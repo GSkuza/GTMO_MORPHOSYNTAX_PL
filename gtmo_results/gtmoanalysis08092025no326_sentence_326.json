@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:41.749820",
+  "content": {
+    "text": "Zasady i tryb zgłaszania kandydatów i przeprowadzania wyborów oraz\nwarunki ważności wyborów określa ustawa.",
+    "length": 107,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.770394,
+    "stability": 0.621178,
+    "entropy": 0.472481
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:41.749820",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 326,
+    "saved_at": "2025-09-08T15:32:41.750221",
+    "file_counter": 326
+  },
+  "additional_metrics": {
+    "total_analyses": 37,
+    "cases": {
+      "nom": 11,
+      "gen": 13,
+      "dat": 1,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 21,
+      "part": 2,
+      "conj": 3,
+      "adv": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.642857142857143,
+    "debug_tags": [
+      "Zasady:subst:pl:nom.acc.voc:n:pt",
+      "Zasady:subst:sg:gen:f",
+      "Zasady:subst:pl:nom.acc.voc:f",
+      "Zasady:subst:sg:gen:f",
+      "Zasady:subst:pl:nom.acc.voc:f",
+      "Zasady:subst:sg:gen:m1",
+      "Zasady:depr:pl:nom.acc.voc:m2",
+      "i:interj",
+      "i:part",
+      "i:conj"
+    ],
+    "coords_count": 21
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6528
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9498,
+    "quantum_words": 9,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.26511,
+    "formula": "0.780 × 0.626 × 0.543 = 0.265"
+  },
+  "sentence_number": 326,
+  "total_sentences": 805
+}

@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:36.361251",
+  "content": {
+    "text": "Nikt nie może być dyskryminowany w życiu politycznym, społecznym lub\ngospodarczym z jakiejkolwiek przyczyny.",
+    "length": 108,
+    "word_count": 14
+  },
+  "coordinates": {
+    "determination": 0.67462,
+    "stability": 0.639443,
+    "entropy": 0.430423
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:36.361251",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 81,
+    "saved_at": "2025-09-08T15:32:36.361622",
+    "file_counter": 81
+  },
+  "additional_metrics": {
+    "total_analyses": 43,
+    "cases": {
+      "nom": 3,
+      "acc": 4,
+      "gen": 5,
+      "loc": 7,
+      "dat": 7
+    },
+    "pos": {
+      "subst": 9,
+      "conj": 2,
+      "part": 3,
+      "prep": 4,
+      "adj": 12,
+      "interp": 2
+    },
+    "ambiguity": 3.0714285714285716,
+    "debug_tags": [
+      "Nikt:subst:sg:nom:m1",
+      "nie:conj",
+      "nie:interj",
+      "nie:ppron3:pl:acc:m2.m3.f.n:ter:akc.nakc:praep",
+      "nie:ppron3:sg:acc:n:ter:akc.nakc:praep",
+      "nie:part",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf",
+      "być:subst:pl:gen:n:ncol"
+    ],
+    "coords_count": 30
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6326
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0685,
+    "quantum_words": 12,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.257915,
+    "formula": "0.685 × 0.644 × 0.585 = 0.258"
+  },
+  "sentence_number": 81,
+  "total_sentences": 805
+}

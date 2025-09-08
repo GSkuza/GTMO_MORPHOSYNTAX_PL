@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:51.860933",
+  "content": {
+    "text": "Konstytucja,\nordynacje wyborcze do Sejmu, Senatu i organów samorządu terytorialnego, ustawa o\nwyborze Prezydenta Rzeczypospolitej oraz ustawy o stanach nadzwyczajnych.",
+    "length": 167,
+    "word_count": 20
+  },
+  "coordinates": {
+    "determination": 0.63523,
+    "stability": 0.616985,
+    "entropy": 0.476089
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:51.860933",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 744,
+    "saved_at": "2025-09-08T15:32:51.861668",
+    "file_counter": 744
+  },
+  "additional_metrics": {
+    "total_analyses": 44,
+    "cases": {
+      "nom": 7,
+      "acc": 6,
+      "gen": 13,
+      "loc": 5,
+      "voc": 1,
+      "dat": 1
+    },
+    "pos": {
+      "subst": 19,
+      "interp": 4,
+      "adj": 9,
+      "prep": 5,
+      "part": 1,
+      "conj": 2,
+      "adv": 1
+    },
+    "ambiguity": 2.2,
+    "debug_tags": [
+      "Konstytucja:subst:sg:nom:f",
+      ",:interp",
+      ",:interp",
+      ",:interp",
+      "ordynacje:subst:pl:nom.acc.voc:f",
+      "wyborcze:adj:pl:acc:m2.m3.f.n:pos",
+      "wyborcze:adj:pl:nom.voc:m2.m3.f.n:pos",
+      "wyborcze:adj:sg:acc:n:pos",
+      "wyborcze:adj:sg:nom.voc:n:pos",
+      "do:prep:gen"
+    ],
+    "coords_count": 41
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.5964
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0889,
+    "quantum_words": 17,
+    "entanglements": 4,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.216277,
+    "formula": "0.645 × 0.622 × 0.539 = 0.216"
+  },
+  "sentence_number": 744,
+  "total_sentences": 805
+}

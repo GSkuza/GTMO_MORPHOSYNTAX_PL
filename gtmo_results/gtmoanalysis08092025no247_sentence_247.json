@@ -1,0 +1,77 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:39.930967",
+  "content": {
+    "text": "Środki ochrony wolności i praw\nArt. 77. 1.",
+    "length": 42,
+    "word_count": 8
+  },
+  "coordinates": {
+    "determination": 0.701746,
+    "stability": 0.66632,
+    "entropy": 0.389208
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:39.930967",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 247,
+    "saved_at": "2025-09-08T15:32:39.931974",
+    "file_counter": 247
+  },
+  "additional_metrics": {
+    "total_analyses": 24,
+    "cases": {
+      "nom": 7,
+      "gen": 4,
+      "dat": 1,
+      "voc": 1
+    },
+    "pos": {
+      "subst": 12,
+      "part": 1,
+      "conj": 1,
+      "interp": 3
+    },
+    "ambiguity": 3.0,
+    "debug_tags": [
+      "Środki:subst:pl:nom.acc.voc:n:pt",
+      "Środki:subst:pl:nom.acc.voc:m3",
+      "Środki:depr:pl:nom.acc.voc:m2",
+      "ochrony:subst:sg:gen:f",
+      "ochrony:subst:pl:nom.acc.voc:f",
+      "wolności:subst:sg:gen:f",
+      "wolności:subst:sg:dat.loc:f",
+      "wolności:subst:sg:voc:f",
+      "wolności:subst:pl:nom.acc.voc:f",
+      "wolności:subst:pl:gen:f"
+    ],
+    "coords_count": 13
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6638
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.5363,
+    "quantum_words": 5,
+    "entanglements": 1,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.299009,
+    "formula": "0.712 × 0.671 × 0.626 = 0.299"
+  },
+  "sentence_number": 247,
+  "total_sentences": 805
+}

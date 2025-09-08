@@ -1,0 +1,77 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:45.597170",
+  "content": {
+    "text": "Rada Ministrów składa się z Prezesa Rady Ministrów i ministrów.",
+    "length": 63,
+    "word_count": 10
+  },
+  "coordinates": {
+    "determination": 0.658911,
+    "stability": 0.548587,
+    "entropy": 0.495778
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:45.597170",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 497,
+    "saved_at": "2025-09-08T15:32:45.597674",
+    "file_counter": 497
+  },
+  "additional_metrics": {
+    "total_analyses": 22,
+    "cases": {
+      "nom": 5,
+      "gen": 8
+    },
+    "pos": {
+      "subst": 10,
+      "adj": 1,
+      "part": 3,
+      "prep": 2,
+      "conj": 1,
+      "interp": 1
+    },
+    "ambiguity": 2.2,
+    "debug_tags": [
+      "Rada:subst:sg:nom:f",
+      "Rada:subst:sg:gen.acc:m1",
+      "Rada:adj:sg:nom:f:pos",
+      "Rada:winien:sg:f:imperf",
+      "Ministrów:subst:pl:gen.acc:m1",
+      "Ministrów:subst:pl:gen.acc:m1",
+      "składa:fin:sg:ter:imperf",
+      "się:part",
+      "z:prep:gen:nwok",
+      "z:prep:inst:nwok"
+    ],
+    "coords_count": 18
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.5794
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 1.0325,
+    "quantum_words": 6,
+    "entanglements": 0,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.192268,
+    "formula": "0.669 × 0.554 × 0.519 = 0.192"
+  },
+  "sentence_number": 497,
+  "total_sentences": 805
+}

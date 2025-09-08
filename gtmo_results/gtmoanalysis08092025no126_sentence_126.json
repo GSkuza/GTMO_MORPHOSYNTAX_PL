@@ -1,0 +1,74 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:37.352775",
+  "content": {
+    "text": "Zapewnia się nienaruszalność mieszkania.",
+    "length": 40,
+    "word_count": 4
+  },
+  "coordinates": {
+    "determination": 0.803933,
+    "stability": 0.681067,
+    "entropy": 0.307482
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:37.352775",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 126,
+    "saved_at": "2025-09-08T15:32:37.353342",
+    "file_counter": 126
+  },
+  "additional_metrics": {
+    "total_analyses": 9,
+    "cases": {
+      "nom": 3,
+      "acc": 1,
+      "gen": 2
+    },
+    "pos": {
+      "part": 1,
+      "subst": 4,
+      "interp": 1
+    },
+    "ambiguity": 2.25,
+    "debug_tags": [
+      "Zapewnia:fin:sg:ter:imperf",
+      "się:part",
+      "nienaruszalność:subst:sg:nom:f",
+      "nienaruszalność:subst:sg:acc:f",
+      "mieszkania:subst:sg:gen:n:ncol",
+      "mieszkania:subst:pl:nom.acc.voc:n:ncol",
+      "mieszkania:ger:pl:nom.acc:n:imperf:aff",
+      "mieszkania:ger:sg:gen:n:imperf:aff",
+      ".:interp"
+    ],
+    "coords_count": 6
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.7336
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.2205,
+    "quantum_words": 2,
+    "entanglements": 0,
+    "superposition_type": "DECOHERENT_CLASSICAL"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.395087,
+    "formula": "0.814 × 0.686 × 0.708 = 0.395"
+  },
+  "sentence_number": 126,
+  "total_sentences": 805
+}

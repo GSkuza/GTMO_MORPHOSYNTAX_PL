@@ -1,0 +1,86 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T13:01:50.139755",
+  "content": {
+    "text": "Krajowa Rada Sądownictwa składa się z:\n\nPierwszego Prezesa Sądu Najwyższego, Ministra Sprawiedliwości, Prezesa\nNaczelnego Sądu Administracyjnego i osoby powołanej przez Prezydenta\nRzeczypospolitej,\npiętnastu członków wybranych spośród sędziów Sądu Najwyższego, sądów\npowszechnych, sądów administracyjnych i sądów wojskowych,\nczterech członków wybranych przez Sejm spośród posłów oraz dwóch\nczłonków wybranych przez Senat spośród senatorów.",
+    "length": 439,
+    "word_count": 51
+  },
+  "coordinates": {
+    "determination": 0.636876,
+    "stability": 0.598554,
+    "entropy": 0.490733
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T13:01:50.139755",
+    "sequence_number": 704,
+    "daily_date": "08092025"
+  },
+  "additional_metrics": {
+    "total_analyses": 135,
+    "cases": {
+      "nom": 11,
+      "gen": 65,
+      "acc": 20,
+      "dat": 3,
+      "voc": 1,
+      "loc": 14
+    },
+    "pos": {
+      "adj": 33,
+      "subst": 58,
+      "part": 4,
+      "prep": 8,
+      "interp": 8,
+      "conj": 3,
+      "num": 9,
+      "adv": 1
+    },
+    "ambiguity": 2.6470588235294117,
+    "debug_tags": [
+      "Krajowa:adj:sg:nom.voc:f:pos",
+      "Krajowa:subst:sg:gen:m3",
+      "Rada:subst:sg:nom:f",
+      "Rada:subst:sg:gen.acc:m1",
+      "Rada:adj:sg:nom:f:pos",
+      "Rada:winien:sg:f:imperf",
+      "Sądownictwa:subst:sg:gen:n:ncol",
+      "Sądownictwa:subst:pl:nom.acc.voc:n:ncol",
+      "składa:fin:sg:ter:imperf",
+      "się:part"
+    ],
+    "coords_count": 80
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.5871
+  },
+  "console_like": [
+    "  MORPHOLOGY: coords_found=80, cases={'nom': 11, 'gen': 65, 'acc': 20, 'dat': 3, 'voc': 1, 'loc': 14}, pos={'adj': 33, 'subst': 58, 'part': 4, 'prep': 8, 'interp': 8, 'conj': 3, 'num': 9, 'adv': 1}",
+    "  MORPH_COORDS: [0.720, 0.658, 0.394]",
+    "  MORPH_TAGS: ['Krajowa:adj:sg:nom.voc:f:pos', 'Krajowa:subst:sg:gen:m3', 'Rada:subst:sg:nom:f', 'Rada:subst:sg:gen.acc:m1', 'Rada:adj:sg:nom:f:pos', 'Rada:winien:sg:f:imperf', 'Sądownictwa:subst:sg:gen:n:ncol', 'Sądownictwa:subst:pl:nom.acc.voc:n:ncol', 'składa:fin:sg:ter:imperf', 'się:part']",
+    "  SYNTAX_COORDS: [0.445, 0.452, 0.702]",
+    "  FINAL: D=0.647, S=0.604, E=0.476"
+  ],
+  "source_file": {
+    "path": "C:\\Users\\develop22\\Desktop\\KONSTYTUCJA_RP.md",
+    "name": "KONSTYTUCJA_RP.md",
+    "extension": ".md",
+    "hash": "8291cc49c13bed0b4cc61374ccd96506fb1f16f7e9a93e4a5ee516fda4151987"
+  },
+  "quantum_metrics": {
+    "total_coherence": 0.9457,
+    "quantum_words": 32,
+    "entanglements": 6,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 1,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  }
+}

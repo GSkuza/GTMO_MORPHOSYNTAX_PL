@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:50.008081",
+  "content": {
+    "text": "Najwyższa Izba Kontroli może również kontrolować z punktu widzenia\nlegalności i gospodarności działalność innych jednostek organizacyjnych i\npodmiotów gospodarczych w zakresie, w jakim wykorzystują one majątek lub środki\npaństwowe lub komunalne oraz wywiązują się z zobowiązań finansowych na rzecz\npaństwa.",
+    "length": 306,
+    "word_count": 40
+  },
+  "coordinates": {
+    "determination": 0.641854,
+    "stability": 0.579514,
+    "entropy": 0.526471
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:50.008081",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 669,
+    "saved_at": "2025-09-08T15:32:50.008497",
+    "file_counter": 669
+  },
+  "additional_metrics": {
+    "total_analyses": 103,
+    "cases": {
+      "nom": 20,
+      "gen": 22,
+      "dat": 4,
+      "voc": 3,
+      "acc": 14,
+      "loc": 10
+    },
+    "pos": {
+      "adj": 26,
+      "subst": 36,
+      "part": 7,
+      "prep": 10,
+      "conj": 5,
+      "interp": 2,
+      "adv": 1
+    },
+    "ambiguity": 2.575,
+    "debug_tags": [
+      "Najwyższa:adj:sg:nom.voc:f:sup",
+      "Izba:subst:sg:nom:f",
+      "Izba:subst:sg:nom:f",
+      "Izba:subst:sg:nom:m1",
+      "Kontroli:subst:sg:gen:f",
+      "Kontroli:subst:sg:dat.loc:f",
+      "Kontroli:subst:pl:gen:f",
+      "może:interj",
+      "może:part",
+      "może:fin:sg:ter:imperf"
+    ],
+    "coords_count": 66
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5727
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9414,
+    "quantum_words": 27,
+    "entanglements": 7,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.186139,
+    "formula": "0.652 × 0.585 × 0.489 = 0.186"
+  },
+  "sentence_number": 669,
+  "total_sentences": 805
+}

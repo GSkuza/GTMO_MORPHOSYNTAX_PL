@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:50.150468",
+  "content": {
+    "text": "Prezes Najwyższej Izby Kontroli nie może należeć do partii politycznej,\nzwiązku zawodowego ani prowadzić działalności publicznej nie dającej się pogodzić\nz godnością jego urzędu.",
+    "length": 178,
+    "word_count": 24
+  },
+  "coordinates": {
+    "determination": 0.629777,
+    "stability": 0.556665,
+    "entropy": 0.547379
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:50.150468",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 676,
+    "saved_at": "2025-09-08T15:32:50.151391",
+    "file_counter": 676
+  },
+  "additional_metrics": {
+    "total_analyses": 67,
+    "cases": {
+      "nom": 8,
+      "dat": 6,
+      "gen": 20,
+      "loc": 4,
+      "acc": 6,
+      "voc": 2
+    },
+    "pos": {
+      "subst": 25,
+      "adj": 11,
+      "conj": 3,
+      "part": 6,
+      "prep": 3,
+      "interp": 2
+    },
+    "ambiguity": 2.7916666666666665,
+    "debug_tags": [
+      "Prezes:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Prezes:subst:sg:nom:m1",
+      "Najwyższej:adj:sg:dat:f:sup",
+      "Najwyższej:adj:sg:gen:f:sup",
+      "Najwyższej:adj:sg:loc:f:sup",
+      "Izby:subst:pl:nom.acc.voc:n:pt",
+      "Izby:subst:sg:gen:f",
+      "Izby:subst:pl:nom.acc.voc:f",
+      "Izby:subst:sg:gen:f",
+      "Izby:subst:pl:nom.acc.voc:f"
+    ],
+    "coords_count": 40
+  },
+  "interpretation": {
+    "determination": "moderate",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5547
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.7002,
+    "quantum_words": 16,
+    "entanglements": 4,
+    "superposition_type": "PARTIALLY_ENTANGLED_MIXED"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.168035,
+    "formula": "0.640 × 0.562 × 0.468 = 0.168"
+  },
+  "sentence_number": 676,
+  "total_sentences": 805
+}

@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-09-08T15:32:51.296983",
+  "content": {
+    "text": "Jeżeli w ciągu 4 miesięcy od dnia przedłożenia Sejmowi projektu\nustawy budżetowej nie zostanie ona przedstawiona Prezydentowi Rzeczypospolitej\ndo podpisu, Prezydent Rzeczypospolitej może w ciągu 14 dni zarządzić skrócenie\nkadencji Sejmu.",
+    "length": 237,
+    "word_count": 31
+  },
+  "coordinates": {
+    "determination": 0.730186,
+    "stability": 0.580895,
+    "entropy": 0.473098
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-09-08T15:32:51.296983",
+    "sequence_number": 0,
+    "daily_date": "08092025",
+    "sentence_number": 723,
+    "saved_at": "2025-09-08T15:32:51.297808",
+    "file_counter": 723
+  },
+  "additional_metrics": {
+    "total_analyses": 61,
+    "cases": {
+      "acc": 4,
+      "loc": 5,
+      "gen": 18,
+      "voc": 2,
+      "nom": 13,
+      "dat": 6
+    },
+    "pos": {
+      "prep": 6,
+      "subst": 29,
+      "adj": 5,
+      "conj": 1,
+      "part": 2,
+      "interp": 2
+    },
+    "ambiguity": 1.967741935483871,
+    "debug_tags": [
+      "Jeżeli:comp",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "w:prep:acc:nwok",
+      "w:prep:loc:nwok",
+      "ciągu:subst:sg:gen:m3",
+      "ciągu:subst:sg:loc:m3",
+      "ciągu:subst:sg:voc:m3",
+      "ciągu:subst:sg:gen:m3",
+      "ciągu:subst:sg:loc:m3"
+    ],
+    "coords_count": 50
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "moderate_quality",
+    "overall_score": 0.6244
+  },
+  "source_file": "KONSTYTUCJA_RP.md",
+  "quantum_metrics": {
+    "total_coherence": 0.9532,
+    "quantum_words": 23,
+    "entanglements": 8,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "quantum_tensor": {
+    "value": 0.235007,
+    "formula": "0.740 × 0.586 × 0.542 = 0.235"
+  },
+  "sentence_number": 723,
+  "total_sentences": 805
+}
