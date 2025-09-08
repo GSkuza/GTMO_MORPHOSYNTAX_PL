@@ -36,7 +36,7 @@
 2. **Run analysis**  
    To analyze a file, use the following command:
    ```bash
-   python gtmo_morphosyntax.py path/to/your/file.md
+   python gtmo_file_loader.py path/to/your/file.md
    ```
    This will generate a JSON file with the analysis results in the `gtmo_results/` directory.
 
