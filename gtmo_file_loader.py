@@ -39,7 +39,7 @@ nlp = spacy.load("pl_core_news_sm")  # lub inny model polski
 class GTMOFileLoader:
     """Production-ready file loader for GTMØ analysis."""
     
-    def __init__(self, base_path: str, chunk_size: int = 200):
+    def __init__(self, base_path: str, chunk_size: int = 500):
         """
         Initialize file loader.
         
@@ -336,8 +336,8 @@ def main():
     parser.add_argument('--recursive', '-r', action='store_true',
                        help='Search subdirectories')
     parser.add_argument('--filter', '-f', help='Regex pattern for file filtering')
-    parser.add_argument('--chunk-size', '-c', type=int, default=250,
-                       help='Chunk size for text analysis (default: 250)')
+    parser.add_argument('--chunk-size', '-c', type=int, default=500,
+                       help='Chunk size for text analysis (default: 500)')
     
     args = parser.parse_args()
     
