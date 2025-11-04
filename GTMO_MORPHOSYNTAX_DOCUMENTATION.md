@@ -2,7 +2,7 @@
 
 ## Przegląd Systemu
 
-GTMØ (Gödel-Tarski-Montague-Ørsted) Quantum Morphosyntax Engine to zaawansowany system analizy morfosyntaktycznej języka polskiego z kwantową semantyką i kompletnym systemem aksjomatów działającym jako system immunologiczny.
+GTMØ Quantum Morphosyntax Engine to zaawansowany system analizy morfosyntaktycznej języka polskiego z kwantową semantyką i kompletnym systemem aksjomatów działającym jako system immunologiczny.
 
 ### Wersja
 - **Wersja modułu:** 2.0
