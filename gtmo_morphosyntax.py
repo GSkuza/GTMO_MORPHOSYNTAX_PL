@@ -36,6 +36,15 @@ except ImportError:
     RHETORICAL_ANALYZER_AVAILABLE = False
     print("✗ GTMØ Rhetorical Analyzer not available")
 
+# Import domain dictionary module
+try:
+    from gtmo_domain_dictionary import DomainDictionary
+    DOMAIN_DICTIONARY_AVAILABLE = True
+    print("✔ GTMØ Domain Dictionary loaded")
+except ImportError:
+    DOMAIN_DICTIONARY_AVAILABLE = False
+    print("✗ GTMØ Domain Dictionary not available")
+
 # Required imports
 try:
     import morfeusz2
@@ -525,7 +534,7 @@ class QuantumMorphosyntaxEngine:
         synt_weight = 1.0 - morph_weight
         return morph_weight, synt_weight
 
-    def __init__(self):
+    def __init__(self, domain_dictionary: Optional['DomainDictionary'] = None):
         self.case_coords = CASE_COORDS
         self.pos_coords = POS_COORDS
         self.quantum_states = {}
@@ -541,6 +550,10 @@ class QuantumMorphosyntaxEngine:
             self.rhetorical_analyzer = GTMORhetoricalAnalyzer()
         else:
             self.rhetorical_analyzer = None
+
+        # Initialize domain dictionary
+        self.domain_dictionary = domain_dictionary
+        self.use_domain_filtering = domain_dictionary is not None
 
     def analyze_morphology_quantum(self, text: str) -> Tuple[np.ndarray, Dict, Dict[str, QuantumSemanticState]]:
         """Morphological analysis with quantum superposition."""
@@ -568,11 +581,42 @@ class QuantumMorphosyntaxEngine:
             
             # Process each word with quantum superposition
             for form, analyses_list in word_analyses.items():
+                # Apply domain dictionary filtering if available
+                if self.use_domain_filtering and self.domain_dictionary:
+                    # Filter analyses using domain knowledge
+                    filtered_analyses = analyses_list.copy()
+
+                    # Use domain dictionary to prioritize
+                    domain_scores = []
+                    for analysis in filtered_analyses:
+                        _, _, _, lemma, tag, _, _ = analysis
+                        score = 0
+
+                        # Check if lemma is domain term
+                        if self.domain_dictionary.is_domain_term(lemma):
+                            score += 5
+
+                        # Check if tag matches domain tags
+                        domain_tags = self.domain_dictionary.get_domain_tags_for_word(lemma)
+                        if tag in domain_tags:
+                            score += 10
+
+                        domain_scores.append(score)
+
+                    # If we have domain-specific analyses, prioritize them
+                    if max(domain_scores) > 0:
+                        # Keep only analyses with highest scores
+                        max_score = max(domain_scores)
+                        analyses_list = [
+                            filtered_analyses[i] for i, s in enumerate(domain_scores)
+                            if s >= max_score * 0.7  # Keep analyses with score >= 70% of max
+                        ]
+
                 word_case_frequencies = {}
                 word_pos_frequencies = {}
-                
+
                 for start, end, form, lemma, tag, labels, qualifiers in analyses_list:
-                    debug_info.append(f"{form}:{tag}")
+                    debug_info.append(f"{lemma}:{tag}")
                     tag_parts = tag.split(':')
                     main_pos = tag_parts[0]
                     
