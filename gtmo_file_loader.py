@@ -350,22 +350,37 @@ def main():
         file_filter=args.filter
     )
     
-    # Save results
-    output_data = {
-        'metadata': {
-            'source_path': str(args.path),
-            'analysis_timestamp': datetime.now().isoformat(),
-            'total_files': len(results),
-            'chunk_size': args.chunk_size,
-            'recursive': args.recursive,
-            'filter': args.filter
-        },
-        'results': results,
-        'errors': loader.errors
-    }
-    
-    with open('gtmo_results.json', 'w', encoding='utf-8') as f:
-        json.dump(output_data, f, ensure_ascii=False, indent=2)
+    # Create results directory if it doesn't exist
+    results_dir = Path('gtmo_results')
+    results_dir.mkdir(exist_ok=True)
+
+    # Save each result as a separate file
+    for i, result in enumerate(results):
+        # Generate filename from timestamp and file name
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        source_filename = Path(result['file']).stem
+        output_filename = f"{timestamp}_{source_filename}_{i:03d}.json"
+        output_path = results_dir / output_filename
+
+        # Prepare output data for this result
+        output_data = {
+            'metadata': {
+                'source_path': str(args.path),
+                'source_file': result['file'],
+                'analysis_timestamp': result['timestamp'],
+                'chunk_size': args.chunk_size,
+                'recursive': args.recursive,
+                'filter': args.filter
+            },
+            'result': result,
+            'errors': [e for e in loader.errors if e.get('file') == result['file']]
+        }
+
+        # Save to individual file
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(output_data, f, ensure_ascii=False, indent=2)
+
+        logger.info(f"Saved analysis to: {output_path}")
     
     saver = GTMOOptimizedSaver()
 
@@ -384,7 +399,7 @@ def main():
                     additional_metrics=metadata
                 )
     
-    print(f"Analysis saved to: gtmo_results.json")
+    print(f"Analysis saved to: {results_dir}/ ({len(results)} files)")
     print(f"Files processed: {len(loader.processed_files)}")
     print(f"Errors encountered: {len(loader.errors)}")
 
