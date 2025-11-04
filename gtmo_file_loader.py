@@ -19,19 +19,19 @@ import re
 import spacy
 from gtmo_json_saver import GTMOOptimizedSaver
 
-# Import the GTMØ morphosyntax engine
-try:
-    # Usuńmy niepotrzebne importy - będziemy używać funkcji bezpośrednio
-    pass
-except ImportError:
-    pass
-
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
+
+# Import the GTMØ morphosyntax engine
+try:
+    from gtmo_morphosyntax import analyze_quantum_with_axioms as gtmo_analyze
+except ImportError:
+    logger.warning("Could not import gtmo_morphosyntax, using fallback")
+    gtmo_analyze = None
 
 nlp = spacy.load("pl_core_news_sm")  # lub inny model polski
 

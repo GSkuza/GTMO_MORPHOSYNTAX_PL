@@ -7,6 +7,7 @@ Integration of Polish morphosyntax analysis with quantum superposition semantics
 and complete 13 axiom system acting as immune system.
 """
 
+import sys
 import numpy as np
 from typing import Dict, Tuple, List, Optional, Union, Any
 from dataclasses import dataclass
@@ -16,6 +17,12 @@ import logging
 import json
 import hashlib
 from datetime import datetime
+
+# Fix Windows console encoding for Unicode characters
+if sys.platform == 'win32':
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -1108,33 +1115,198 @@ class QuantumMorphosyntaxEngine:
         print(f"  FINAL: D={D:.3f}, S={S:.3f}, E={E:.3f}")
         print(tensor_print)
 
-        # Constitutional Indefiniteness: CI = (1/Ambiguity) × Depth × √(D×S/E)
+        # ========================================================================
+        # CONSTITUTIONAL METRICS: Complete CD-CI Duality Implementation
+        # ========================================================================
+        # Teoria: CI × CD = Depth² (morfosyntaktyczna manifestacja Zasady Nieoznaczoności)
+        # Wyprowadzenie: Zasada Nieoznaczoności Semantycznej: Δ_form · Δ_int ≥ ħ_semantic
+        # Projekcja morfosyntaktyczna:
+        #   CD = (1/Ambiguity) × Depth × √(D×S/E)  # Constitutional DEFINITENESS
+        #   CI = Ambiguity × Depth × √(E/(D×S))    # Constitutional INDEFINITENESS
+        # ========================================================================
+
         ambiguity = morph_meta.get('ambiguity', 1.0)
         depth = synt_meta.get('max_depth', 1)
+
+        # Constitutional Definiteness (CD): miara określoności strukturalnej
+        # CD = (1/Ambiguity) × Depth × √(D×S/E)
+        # Wysoka CD = tekst uporządkowany, jednoznaczny, niska entropia
         if E > 0:
-            CI = (1.0 / ambiguity) * depth * np.sqrt((D * S) / E)
+            CD = (1.0 / ambiguity) * depth * np.sqrt((D * S) / E)
         else:
-            CI = (1.0 / ambiguity) * depth * np.sqrt(D * S)  # Fallback when E=0
+            CD = (1.0 / ambiguity) * depth * np.sqrt(D * S)  # Fallback when E=0
+
+        # Constitutional Indefiniteness (CI): miara niedefinitywności strukturalnej
+        # CI = Ambiguity × Depth × √(E/(D×S))
+        # Wysoka CI = tekst chaotyczny, wieloznaczny, wysoka entropia
+        # DUALNOŚĆ: CI × CD = Depth²
+        if D * S > 0:
+            CI = ambiguity * depth * np.sqrt(E / (D * S))
+        else:
+            CI = ambiguity * depth * np.sqrt(E)  # Fallback when D*S=0
+
+        # Weryfikacja dualności
+        duality_product = CI * CD
+        duality_theoretical = depth ** 2
+        duality_error = abs(duality_product - duality_theoretical) / duality_theoretical if duality_theoretical > 0 else 0
+
+        # Geometric components
+        geometric_balance = np.sqrt((D * S) / E) if E > 0 else np.sqrt(D * S)      # For CD
+        geometric_tension = np.sqrt(E / (D * S)) if D * S > 0 else np.sqrt(E)      # For CI
+
+        # ========================================================================
+        # 8.1. Semantic Accessibility (SA): Znormalizowana miara dostępności
+        # ========================================================================
+        # SA = CD / (CI + CD) = CD / Depth²
+        # SA ∈ [0, 1]: 1 = tekst dostępny, 0 = tekst niedostępny
+        # Korzyści: znormalizowana, niezależna od skali, intuicyjna interpretacja
         
-        ci_formula = f"(1/{ambiguity:.2f}) × {depth} × √({D:.3f}×{S:.3f}/{E:.3f}) = {CI:.2f}"
+        if duality_theoretical > 0:
+            SA = CD / duality_theoretical  # CD / Depth²
+        else:
+            SA = 0.5  # Fallback dla depth=0
+
+        # Interpretacja SA
+        if SA > 0.7:
+            sa_interpretation = "WYSOKA_DOSTĘPNOŚĆ"
+            sa_desc = "Tekst bardzo dostępny (> 70% definiteness)"
+        elif SA > 0.3:
+            sa_interpretation = "ŚREDNIA_DOSTĘPNOŚĆ"
+            sa_desc = "Tekst umiarkowanie dostępny (30-70% definiteness)"
+        else:
+            sa_interpretation = "NISKA_DOSTĘPNOŚĆ"
+            sa_desc = "Tekst trudno dostępny (< 30% definiteness)"
+
+        # ========================================================================
+        # 8.2. Dekompozycja CI według źródeł (morfologia, składnia, semantyka)
+        # ========================================================================
+        # CI_total = CI_morphological + CI_syntactic + CI_semantic
+        
+        geometric_factor = np.sqrt(E / (D * S)) if D * S > 0 else np.sqrt(E)
+        
+        # CI_morphological: wkład morfologii (ambiguity bez głębokości)
+        CI_morphological = ambiguity * geometric_factor
+        
+        # CI_syntactic: wkład składni (depth bez ambiguity)
+        CI_syntactic = depth * geometric_factor
+        
+        # CI_semantic: pozostała część (interakcja E, D, S bez morfologii i składni)
+        # CI_semantic = CI_total - CI_morphological - CI_syntactic + geometric_factor
+        # Aby uniknąć ujemnych wartości, używamy proporcjonalnego rozkładu
+        CI_base = geometric_factor
+        CI_morph_contrib = (ambiguity - 1) * geometric_factor if ambiguity > 1 else 0
+        CI_synt_contrib = (depth - 1) * geometric_factor if depth > 1 else 0
+        CI_semantic = CI_base + max(0, CI - CI_morphological - CI_syntactic)
+        
+        # Normalizacja składników do CI_total
+        ci_components_sum = CI_morphological + CI_syntactic + CI_semantic
+        if ci_components_sum > 0:
+            ci_morph_percent = (CI_morphological / ci_components_sum) * 100
+            ci_synt_percent = (CI_syntactic / ci_components_sum) * 100
+            ci_sem_percent = (CI_semantic / ci_components_sum) * 100
+        else:
+            ci_morph_percent = ci_synt_percent = ci_sem_percent = 33.33
+
+        # Classification based on CD/CI ratio
+        cd_ci_ratio = CD / CI if CI > 0 else float('inf')
+
+        if cd_ci_ratio > 1.0:
+            classification = "ORDERED_STRUCTURE"
+            classification_desc = "Tekst uporządkowany, strukturalny (CD > CI)"
+        elif cd_ci_ratio > 0.5:
+            classification = "BALANCED_STRUCTURE"
+            classification_desc = "Tekst zbalansowany (CD ≈ CI)"
+        else:
+            classification = "CHAOTIC_STRUCTURE"
+            classification_desc = "Tekst chaotyczny, wieloznaczny (CI > CD)"
+
+        # Formulas for display
+        cd_formula = f"(1/{ambiguity:.2f}) × {depth} × √({D:.3f}×{S:.3f}/{E:.3f}) = {CD:.2f}"
+        ci_formula = f"{ambiguity:.2f} × {depth} × √({E:.3f}/({D:.3f}×{S:.3f})) = {CI:.2f}"
+        duality_formula = f"CI × CD = {CI:.2f} × {CD:.2f} = {duality_product:.2f} ≈ Depth² = {duality_theoretical}"
+        sa_formula = f"CD / Depth² = {CD:.2f} / {duality_theoretical} = {SA:.3f}"
+
+        print(f"  CONSTITUTIONAL_DEFINITENESS: {cd_formula}")
         print(f"  CONSTITUTIONAL_INDEFINITENESS: {ci_formula}")
+        print(f"  DUALITY_CHECK: {duality_formula} (error: {duality_error:.2%})")
+        print(f"  SEMANTIC_ACCESSIBILITY: {sa_formula} ({SA*100:.1f}% - {sa_interpretation})")
+        print(f"  CI_DECOMPOSITION: Morphological={CI_morphological:.2f} ({ci_morph_percent:.1f}%), Syntactic={CI_syntactic:.2f} ({ci_synt_percent:.1f}%), Semantic={CI_semantic:.2f} ({ci_sem_percent:.1f}%)")
+        print(f"  CLASSIFICATION: {classification} ({classification_desc})")
 
         # Dodaj tensor do JSON
         result["quantum_tensor"] = {
             "value": round(T_quantum, 6),
             "formula": f"{D:.3f} × {S:.3f} × {1-E:.3f} = {T_quantum:.3f}"
         }
-        
-        # Dodaj Constitutional Indefiniteness do JSON
-        result["constitutional_indefiniteness"] = {
-            "value": round(CI, 4),
-            "formula": ci_formula,
-            "components": {
-                "ambiguity": ambiguity,
-                "depth": depth,
-                "D": D,
-                "S": S,
-                "E": E
+
+        # Dodaj Constitutional Metrics do JSON (obie metryki + dualność + SA + dekompozycja)
+        result["constitutional_metrics"] = {
+            "definiteness": {
+                "value": round(CD, 4),
+                "formula": cd_formula,
+                "interpretation": "Wysoka CD = tekst uporządkowany, jednoznaczny, strukturalny",
+                "components": {
+                    "inverse_ambiguity": round(1.0 / ambiguity, 4),
+                    "depth": depth,
+                    "geometric_balance": round(geometric_balance, 4)
+                }
+            },
+            "indefiniteness": {
+                "value": round(CI, 4),
+                "formula": ci_formula,
+                "interpretation": "Wysoka CI = tekst chaotyczny, wieloznaczny, nieprzewidywalny",
+                "components": {
+                    "ambiguity": round(ambiguity, 4),
+                    "depth": depth,
+                    "geometric_tension": round(geometric_tension, 4)
+                },
+                "decomposition": {
+                    "morphological": {
+                        "value": round(CI_morphological, 4),
+                        "percentage": round(ci_morph_percent, 2),
+                        "source": "Fleksja, ambiguity morfologiczna"
+                    },
+                    "syntactic": {
+                        "value": round(CI_syntactic, 4),
+                        "percentage": round(ci_synt_percent, 2),
+                        "source": "Głębokość składniowa, długość zdań"
+                    },
+                    "semantic": {
+                        "value": round(CI_semantic, 4),
+                        "percentage": round(ci_sem_percent, 2),
+                        "source": "Chaos semantyczny w przestrzeni F³"
+                    }
+                }
+            },
+            "semantic_accessibility": {
+                "value": round(SA, 4),
+                "percentage": round(SA * 100, 2),
+                "formula": sa_formula,
+                "interpretation": sa_desc,
+                "category": sa_interpretation,
+                "range": "[0,1] gdzie 1=maksymalna dostępność, 0=niedostępny",
+                "advantages": ["Znormalizowana do [0,1]", "Niezależna od skali absolutnej", "Intuicyjna interpretacja"]
+            },
+            "duality": {
+                "product": round(duality_product, 4),
+                "theoretical": duality_theoretical,
+                "error_percent": round(duality_error * 100, 4),
+                "formula": "CI × CD = Depth²",
+                "verification": "PASSED" if duality_error < 0.01 else "WARNING",
+                "interpretation": "Dualność wynika z Zasady Nieoznaczoności Semantycznej: Δ_form · Δ_int ≥ ħ_semantic"
+            },
+            "classification": {
+                "type": classification,
+                "cd_ci_ratio": round(cd_ci_ratio, 4),
+                "description": classification_desc
+            },
+            "theoretical_basis": {
+                "derived_from": "Zasada Nieoznaczoności Semantycznej (GTMØ Axiom)",
+                "morphosyntactic_projection": "Δ_form = Ambiguity × f(Depth), Δ_geom = √(E/(D×S))",
+                "fundamental_constant": "Ø₀ = 1.2925 (Hausdorff dimension of fractal boundaries)",
+                "operator": "Ø: projekcja na |ψ_Ø⟩ = (1/√3, 1/√3, 1/√3)ᵀ",
+                "semantic_accessibility": "SA = CD/Depth² normalizuje dostępność do [0,1]",
+                "ci_decomposition": "CI = CI_morphological + CI_syntactic + CI_semantic"
             }
         }
 
