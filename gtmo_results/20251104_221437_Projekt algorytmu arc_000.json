@@ -1,0 +1,698 @@
+{
+  "metadata": {
+    "source_path": "C:\\Users\\develop22\\Desktop\\Projekt algorytmu arc.md",
+    "source_file": "C:\\Users\\develop22\\Desktop\\Projekt algorytmu arc.md",
+    "analysis_timestamp": "2025-11-04T22:14:37.110567",
+    "chunk_size": 700,
+    "recursive": false,
+    "filter": null
+  },
+  "result": {
+    "file": "C:\\Users\\develop22\\Desktop\\Projekt algorytmu arc.md",
+    "file_hash": "a8a96749ac5246b180a9c39771d26bccaac533b17ca4b22f207912fac9169ca3",
+    "file_size": 2406,
+    "timestamp": "2025-11-04T22:14:37.110567",
+    "total_blocks": 4,
+    "analyzed_blocks": 4,
+    "failed_blocks": 0,
+    "analyses": [
+      {
+        "version": "2.0",
+        "analysis_type": "GTMØ",
+        "timestamp": "2025-11-04T22:14:37.021452",
+        "content": {
+          "text": "Projekt Rozwiązania Abstrakcyjnego Rozumowania z użyciem GTMØ Cel Projektu: Stworzenie innowacyjnego algorytmu zgodnego z Generalized Theory of Mathematical Indefiniteness (GTMØ), zdolnego do abstrakcyjnego rozumowania i generalizacji wiedzy, a nie tylko zapamiętywania wzorców Algorytm musi identyfikować reguły transformacji danych wejściowych w dane wyjściowe i generować precyzyjne rozwiązania zgodne z oczekiwanymi wynikami Zakres i Struktura Danych: Dostarczone pliki danych: arc-agitraining-challenges.json – zadania treningowe (input-output) arc-agitraining-solutions.json – poprawne rozwiązania treningowe arc-agievaluation-challenges.json – zestaw walidacyjny",
+          "length": 669,
+          "word_count": 71
+        },
+        "coordinates": {
+          "determination": 0.674498,
+          "stability": 0.564305,
+          "entropy": 0.507756
+        },
+        "analysis_metadata": {
+          "analyzed_at": "2025-11-04T22:14:37.021452",
+          "sequence_number": 0,
+          "daily_date": "04112025"
+        },
+        "additional_metrics": {
+          "total_analyses": 219,
+          "cases": {
+            "nom": 52,
+            "gen": 47,
+            "acc": 30,
+            "dat": 3,
+            "loc": 11
+          },
+          "pos": {
+            "subst": 58,
+            "adj": 54,
+            "prep": 10,
+            "part": 9,
+            "interp": 22,
+            "conj": 6
+          },
+          "ambiguity": 3.084507042253521,
+          "debug_tags": [
+            "Projekt:subst:sg:nom.acc:m3",
+            "Rozwiązania:ger:pl:nom.acc:n:perf:aff",
+            "Rozwiązania:ger:sg:gen:n:perf:aff",
+            "Rozwiązania:subst:sg:gen:n:ncol",
+            "Rozwiązania:subst:pl:nom.acc.voc:n:ncol",
+            "Abstrakcyjnego:adj:sg:acc:m1.m2:pos",
+            "Abstrakcyjnego:adj:sg:gen:m1.m2.m3.n:pos",
+            "Rozumowania:ger:pl:nom.acc:n:imperf:aff",
+            "Rozumowania:ger:sg:gen:n:imperf:aff",
+            "Rozumowania:subst:sg:gen:n:ncol"
+          ],
+          "coords_count": 106
+        },
+        "interpretation": {
+          "determination": "moderate",
+          "stability": "moderate",
+          "entropy": "mixed",
+          "overall": "mixed_quality",
+          "overall_score": 0.5868
+        },
+        "source_file": "unknown",
+        "quantum_metrics": {
+          "total_coherence": 0.8225,
+          "quantum_words": 43,
+          "entanglements": 10,
+          "superposition_type": "COHERENT_SUPERPOSITION"
+        },
+        "axiom_protection": {
+          "axioms_activated": 0,
+          "violations_prevented": 0,
+          "meta_reflections": 0
+        },
+        "rhetorical_analysis": {
+          "mode": "literal",
+          "irony_score": 0.5,
+          "paradox_score": 0.0,
+          "structural_divergence": 0.3974,
+          "pos_anomalies": {
+            "adj_ratio": 0.3396,
+            "verb_ratio": 0.0,
+            "anomaly_score": 0.9689
+          }
+        },
+        "quantum_tensor": {
+          "value": 0.197667,
+          "formula": "0.684 × 0.569 × 0.507 = 0.198"
+        },
+        "constitutional_metrics": {
+          "definiteness": {
+            "value": 2.3065,
+            "formula": "(1/3.08) × 8 × √(0.684×0.569/0.493) = 2.31",
+            "interpretation": "Wysoka CD = tekst uporządkowany, jednoznaczny, strukturalny",
+            "components": {
+              "inverse_ambiguity": 0.3242,
+              "depth": 8,
+              "geometric_balance": 0.8893
+            }
+          },
+          "indefiniteness": {
+            "value": 27.7481,
+            "formula": "3.08 × 8 × √(0.493/(0.684×0.569)) = 27.75",
+            "interpretation": "Wysoka CI = tekst chaotyczny, wieloznaczny, nieprzewidywalny",
+            "components": {
+              "ambiguity": 3.0845,
+              "depth": 8,
+              "geometric_tension": 1.1245
+            },
+            "decomposition": {
+              "morphological": {
+                "value": 3.4685,
+                "percentage": 12.01,
+                "source": "Fleksja, ambiguity morfologiczna"
+              },
+              "syntactic": {
+                "value": 8.996,
+                "percentage": 31.16,
+                "source": "Głębokość składniowa, długość zdań"
+              },
+              "semantic": {
+                "value": 16.4081,
+                "percentage": 56.83,
+                "source": "Chaos semantyczny w przestrzeni F³"
+              }
+            }
+          },
+          "semantic_accessibility": {
+            "value": 0.036,
+            "percentage": 3.6,
+            "formula": "CD / Depth² = 2.31 / 64 = 0.036",
+            "interpretation": "Tekst trudno dostępny (< 30% definiteness)",
+            "category": "NISKA_DOSTĘPNOŚĆ",
+            "range": "[0,1] gdzie 1=maksymalna dostępność, 0=niedostępny",
+            "advantages": [
+              "Znormalizowana do [0,1]",
+              "Niezależna od skali absolutnej",
+              "Intuicyjna interpretacja"
+            ]
+          },
+          "duality": {
+            "product": 64.0,
+            "theoretical": 64,
+            "error_percent": 0.0,
+            "formula": "CI × CD = Depth²",
+            "verification": "PASSED",
+            "interpretation": "Dualność wynika z Zasady Nieoznaczoności Semantycznej: Δ_form · Δ_int ≥ ħ_semantic"
+          },
+          "classification": {
+            "type": "CHAOTIC_STRUCTURE",
+            "cd_ci_ratio": 0.0831,
+            "description": "Tekst chaotyczny, wieloznaczny (CI > CD)"
+          },
+          "theoretical_basis": {
+            "derived_from": "Zasada Nieoznaczoności Semantycznej (GTMØ Axiom)",
+            "morphosyntactic_projection": "Δ_form = Ambiguity × f(Depth), Δ_geom = √(E/(D×S))",
+            "fundamental_constant": "Ø₀ = 1.2925 (Hausdorff dimension of fractal boundaries)",
+            "operator": "Ø: projekcja na |ψ_Ø⟩ = (1/√3, 1/√3, 1/√3)ᵀ",
+            "semantic_accessibility": "SA = CD/Depth² normalizuje dostępność do [0,1]",
+            "ci_decomposition": "CI = CI_morphological + CI_syntactic + CI_semantic"
+          }
+        },
+        "metadata": {
+          "header": "Document Start",
+          "text": "Projekt Rozwiązania Abstrakcyjnego Rozumowania z użyciem GTMØ Cel Projektu: Stworzenie innowacyjnego algorytmu zgodnego z Generalized Theory of Mathematical Indefiniteness (GTMØ), zdolnego do abstrakcyjnego rozumowania i generalizacji wiedzy, a nie tylko zapamiętywania wzorców Algorytm musi identyfikować reguły transformacji danych wejściowych w dane wyjściowe i generować precyzyjne rozwiązania zgodne z oczekiwanymi wynikami Zakres i Struktura Danych: Dostarczone pliki danych: arc-agitraining-challenges.json – zadania treningowe (input-output) arc-agitraining-solutions.json – poprawne rozwiązania treningowe arc-agievaluation-challenges.json – zestaw walidacyjny",
+          "char_count": 669,
+          "word_count": 71
+        }
+      },
+      {
+        "version": "2.0",
+        "analysis_type": "GTMØ",
+        "timestamp": "2025-11-04T22:14:37.065538",
+        "content": {
+          "text": "arc-agievaluation-solutions.json – poprawne rozwiązania walidacyjne arc-agitest-challenges.json – finalny zestaw testowy konkursu Zasady Tworzenia Rozwiązania: Rozwiązania mają postać matryc: określona wysokość i szerokość, wartości całkowite od 0 do 9 (oznaczające kolory) Rozwiązanie musi dokładnie odpowiadać oczekiwanemu wyjściu Wyzwania Projektu: Generalizacja abstrakcyjnych zasad z ograniczonej liczby przykładów Odporność na overfitting Umiejętność manipulacji wizualno-abstrakcyjnymi danymi Podejście oparte o GTMØ: Dynamiczna identyfikacja cząstek wiedzy Ψᴷ oraz cieni wiedzy Ψʰ Wykorzystanie entropii poznawczej EGTMØ(x) do klasyfikacji semantycznej złożoności zadań",
+          "length": 677,
+          "word_count": 74
+        },
+        "coordinates": {
+          "determination": 0.675646,
+          "stability": 0.579154,
+          "entropy": 0.502564
+        },
+        "analysis_metadata": {
+          "analyzed_at": "2025-11-04T22:14:37.065538",
+          "sequence_number": 0,
+          "daily_date": "04112025"
+        },
+        "additional_metrics": {
+          "total_analyses": 198,
+          "cases": {
+            "acc": 16,
+            "nom": 50,
+            "gen": 47,
+            "dat": 14,
+            "voc": 2,
+            "loc": 7
+          },
+          "pos": {
+            "interp": 18,
+            "adj": 34,
+            "subst": 76,
+            "part": 3,
+            "conj": 2,
+            "prep": 9,
+            "adv": 2
+          },
+          "ambiguity": 2.675675675675676,
+          "debug_tags": [
+            "arc:ign",
+            "arc:ign",
+            "-:interp",
+            "-:interp",
+            "-:interp",
+            "-:interp",
+            "-:interp",
+            "agievaluation:ign",
+            "solutions:ign",
+            ".:interp"
+          ],
+          "coords_count": 124
+        },
+        "interpretation": {
+          "determination": "moderate",
+          "stability": "moderate",
+          "entropy": "mixed",
+          "overall": "mixed_quality",
+          "overall_score": 0.5932
+        },
+        "source_file": "unknown",
+        "quantum_metrics": {
+          "total_coherence": 1.0422,
+          "quantum_words": 53,
+          "entanglements": 11,
+          "superposition_type": "COHERENT_SUPERPOSITION"
+        },
+        "axiom_protection": {
+          "axioms_activated": 0,
+          "violations_prevented": 0,
+          "meta_reflections": 0
+        },
+        "rhetorical_analysis": {
+          "mode": "literal",
+          "irony_score": 0.3,
+          "paradox_score": 0.0,
+          "structural_divergence": 0.403,
+          "pos_anomalies": {
+            "adj_ratio": 0.2361,
+            "verb_ratio": 0.0,
+            "anomaly_score": 0.6583
+          }
+        },
+        "quantum_tensor": {
+          "value": 0.205242,
+          "formula": "0.686 × 0.584 × 0.512 = 0.205"
+        },
+        "constitutional_metrics": {
+          "definiteness": {
+            "value": 3.0486,
+            "formula": "(1/2.68) × 9 × √(0.686×0.584/0.488) = 3.05",
+            "interpretation": "Wysoka CD = tekst uporządkowany, jednoznaczny, strukturalny",
+            "components": {
+              "inverse_ambiguity": 0.3737,
+              "depth": 9,
+              "geometric_balance": 0.9064
+            }
+          },
+          "indefiniteness": {
+            "value": 26.5692,
+            "formula": "2.68 × 9 × √(0.488/(0.686×0.584)) = 26.57",
+            "interpretation": "Wysoka CI = tekst chaotyczny, wieloznaczny, nieprzewidywalny",
+            "components": {
+              "ambiguity": 2.6757,
+              "depth": 9,
+              "geometric_tension": 1.1033
+            },
+            "decomposition": {
+              "morphological": {
+                "value": 2.9521,
+                "percentage": 10.67,
+                "source": "Fleksja, ambiguity morfologiczna"
+              },
+              "syntactic": {
+                "value": 9.9299,
+                "percentage": 35.88,
+                "source": "Głębokość składniowa, długość zdań"
+              },
+              "semantic": {
+                "value": 14.7905,
+                "percentage": 53.45,
+                "source": "Chaos semantyczny w przestrzeni F³"
+              }
+            }
+          },
+          "semantic_accessibility": {
+            "value": 0.0376,
+            "percentage": 3.76,
+            "formula": "CD / Depth² = 3.05 / 81 = 0.038",
+            "interpretation": "Tekst trudno dostępny (< 30% definiteness)",
+            "category": "NISKA_DOSTĘPNOŚĆ",
+            "range": "[0,1] gdzie 1=maksymalna dostępność, 0=niedostępny",
+            "advantages": [
+              "Znormalizowana do [0,1]",
+              "Niezależna od skali absolutnej",
+              "Intuicyjna interpretacja"
+            ]
+          },
+          "duality": {
+            "product": 81.0,
+            "theoretical": 81,
+            "error_percent": 0.0,
+            "formula": "CI × CD = Depth²",
+            "verification": "PASSED",
+            "interpretation": "Dualność wynika z Zasady Nieoznaczoności Semantycznej: Δ_form · Δ_int ≥ ħ_semantic"
+          },
+          "classification": {
+            "type": "CHAOTIC_STRUCTURE",
+            "cd_ci_ratio": 0.1147,
+            "description": "Tekst chaotyczny, wieloznaczny (CI > CD)"
+          },
+          "theoretical_basis": {
+            "derived_from": "Zasada Nieoznaczoności Semantycznej (GTMØ Axiom)",
+            "morphosyntactic_projection": "Δ_form = Ambiguity × f(Depth), Δ_geom = √(E/(D×S))",
+            "fundamental_constant": "Ø₀ = 1.2925 (Hausdorff dimension of fractal boundaries)",
+            "operator": "Ø: projekcja na |ψ_Ø⟩ = (1/√3, 1/√3, 1/√3)ᵀ",
+            "semantic_accessibility": "SA = CD/Depth² normalizuje dostępność do [0,1]",
+            "ci_decomposition": "CI = CI_morphological + CI_syntactic + CI_semantic"
+          }
+        },
+        "metadata": {
+          "header": "Document Start",
+          "text": "arc-agievaluation-solutions.json – poprawne rozwiązania walidacyjne arc-agitest-challenges.json – finalny zestaw testowy konkursu Zasady Tworzenia Rozwiązania: Rozwiązania mają postać matryc: określona wysokość i szerokość, wartości całkowite od 0 do 9 (oznaczające kolory) Rozwiązanie musi dokładnie odpowiadać oczekiwanemu wyjściu Wyzwania Projektu: Generalizacja abstrakcyjnych zasad z ograniczonej liczby przykładów Odporność na overfitting Umiejętność manipulacji wizualno-abstrakcyjnymi danymi Podejście oparte o GTMØ: Dynamiczna identyfikacja cząstek wiedzy Ψᴷ oraz cieni wiedzy Ψʰ Wykorzystanie entropii poznawczej EGTMØ(x) do klasyfikacji semantycznej złożoności zadań",
+          "char_count": 677,
+          "word_count": 74
+        }
+      },
+      {
+        "version": "2.0",
+        "analysis_type": "GTMØ",
+        "timestamp": "2025-11-04T22:14:37.093813",
+        "content": {
+          "text": "Implementacja mechanizmu meta-feedback loop do adaptacyjnego dostosowania progów i heurystyk Etapy realizacji: Analiza danych wejściowych Wczytanie i analiza zestawów danych Ekstrakcja reguł transformacyjnych Rozpoznawanie typów transformacji (symetria, translacja, multiplikacja itp.) Implementacja algorytmu rozwiązującego Konstrukcja wyjściowych matryc zgodnie z regułami Meta-feedback loop Iteracyjne dostosowanie progów klasyfikacyjnych Wykrywanie emergentnych reguł abstrakcyjnych Testowanie i ewaluacja Walidacja rozwiązania na zbiorach walidacyjnych Oficjalne rozwiązanie konkursowe Wygenerowanie finalnego submission.json",
+          "length": 630,
+          "word_count": 63
+        },
+        "coordinates": {
+          "determination": 0.746118,
+          "stability": 0.569165,
+          "entropy": 0.490046
+        },
+        "analysis_metadata": {
+          "analyzed_at": "2025-11-04T22:14:37.093813",
+          "sequence_number": 0,
+          "daily_date": "04112025"
+        },
+        "additional_metrics": {
+          "total_analyses": 145,
+          "cases": {
+            "nom": 40,
+            "gen": 39,
+            "acc": 21,
+            "dat": 2,
+            "loc": 15
+          },
+          "pos": {
+            "subst": 54,
+            "interp": 9,
+            "prep": 5,
+            "adj": 43,
+            "part": 4,
+            "conj": 3,
+            "adv": 1
+          },
+          "ambiguity": 2.3015873015873014,
+          "debug_tags": [
+            "Implementacja:subst:sg:nom:f",
+            "Implementacja:subst:sg:nom:f",
+            "mechanizmu:subst:sg:gen:m3",
+            "meta:subst:sg:nom:f",
+            "meta-feedback:subst:sg:nom.acc:m3",
+            "meta-feedback:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:m3",
+            "-:interp",
+            "-:interp",
+            "feedback:subst:sg:nom.acc:m3",
+            "feedback:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:m3"
+          ],
+          "coords_count": 111
+        },
+        "interpretation": {
+          "determination": "high",
+          "stability": "moderate",
+          "entropy": "mixed",
+          "overall": "moderate_quality",
+          "overall_score": 0.6222
+        },
+        "source_file": "unknown",
+        "quantum_metrics": {
+          "total_coherence": 0.9335,
+          "quantum_words": 53,
+          "entanglements": 9,
+          "superposition_type": "COHERENT_SUPERPOSITION"
+        },
+        "axiom_protection": {
+          "axioms_activated": 0,
+          "violations_prevented": 0,
+          "meta_reflections": 0
+        },
+        "rhetorical_analysis": {
+          "mode": "literal",
+          "irony_score": 0.5,
+          "paradox_score": 0.0,
+          "structural_divergence": 0.3943,
+          "pos_anomalies": {
+            "adj_ratio": 0.3613,
+            "verb_ratio": 0.0,
+            "anomaly_score": 1.034
+          }
+        },
+        "quantum_tensor": {
+          "value": 0.227902,
+          "formula": "0.756 × 0.574 × 0.525 = 0.228"
+        },
+        "constitutional_metrics": {
+          "definiteness": {
+            "value": 2.0768,
+            "formula": "(1/2.30) × 5 × √(0.756×0.574/0.475) = 2.08",
+            "interpretation": "Wysoka CD = tekst uporządkowany, jednoznaczny, strukturalny",
+            "components": {
+              "inverse_ambiguity": 0.4345,
+              "depth": 5,
+              "geometric_balance": 0.956
+            }
+          },
+          "indefiniteness": {
+            "value": 12.0379,
+            "formula": "2.30 × 5 × √(0.475/(0.756×0.574)) = 12.04",
+            "interpretation": "Wysoka CI = tekst chaotyczny, wieloznaczny, nieprzewidywalny",
+            "components": {
+              "ambiguity": 2.3016,
+              "depth": 5,
+              "geometric_tension": 1.0461
+            },
+            "decomposition": {
+              "morphological": {
+                "value": 2.4076,
+                "percentage": 18.4,
+                "source": "Fleksja, ambiguity morfologiczna"
+              },
+              "syntactic": {
+                "value": 5.2303,
+                "percentage": 39.97,
+                "source": "Głębokość składniowa, długość zdań"
+              },
+              "semantic": {
+                "value": 5.4461,
+                "percentage": 41.62,
+                "source": "Chaos semantyczny w przestrzeni F³"
+              }
+            }
+          },
+          "semantic_accessibility": {
+            "value": 0.0831,
+            "percentage": 8.31,
+            "formula": "CD / Depth² = 2.08 / 25 = 0.083",
+            "interpretation": "Tekst trudno dostępny (< 30% definiteness)",
+            "category": "NISKA_DOSTĘPNOŚĆ",
+            "range": "[0,1] gdzie 1=maksymalna dostępność, 0=niedostępny",
+            "advantages": [
+              "Znormalizowana do [0,1]",
+              "Niezależna od skali absolutnej",
+              "Intuicyjna interpretacja"
+            ]
+          },
+          "duality": {
+            "product": 25.0,
+            "theoretical": 25,
+            "error_percent": 0.0,
+            "formula": "CI × CD = Depth²",
+            "verification": "PASSED",
+            "interpretation": "Dualność wynika z Zasady Nieoznaczoności Semantycznej: Δ_form · Δ_int ≥ ħ_semantic"
+          },
+          "classification": {
+            "type": "CHAOTIC_STRUCTURE",
+            "cd_ci_ratio": 0.1725,
+            "description": "Tekst chaotyczny, wieloznaczny (CI > CD)"
+          },
+          "theoretical_basis": {
+            "derived_from": "Zasada Nieoznaczoności Semantycznej (GTMØ Axiom)",
+            "morphosyntactic_projection": "Δ_form = Ambiguity × f(Depth), Δ_geom = √(E/(D×S))",
+            "fundamental_constant": "Ø₀ = 1.2925 (Hausdorff dimension of fractal boundaries)",
+            "operator": "Ø: projekcja na |ψ_Ø⟩ = (1/√3, 1/√3, 1/√3)ᵀ",
+            "semantic_accessibility": "SA = CD/Depth² normalizuje dostępność do [0,1]",
+            "ci_decomposition": "CI = CI_morphological + CI_syntactic + CI_semantic"
+          }
+        },
+        "metadata": {
+          "header": "Document Start",
+          "text": "Implementacja mechanizmu meta-feedback loop do adaptacyjnego dostosowania progów i heurystyk Etapy realizacji: Analiza danych wejściowych Wczytanie i analiza zestawów danych Ekstrakcja reguł transformacyjnych Rozpoznawanie typów transformacji (symetria, translacja, multiplikacja itp.) Implementacja algorytmu rozwiązującego Konstrukcja wyjściowych matryc zgodnie z regułami Meta-feedback loop Iteracyjne dostosowanie progów klasyfikacyjnych Wykrywanie emergentnych reguł abstrakcyjnych Testowanie i ewaluacja Walidacja rozwiązania na zbiorach walidacyjnych Oficjalne rozwiązanie konkursowe Wygenerowanie finalnego submission.json",
+          "char_count": 630,
+          "word_count": 63
+        }
+      },
+      {
+        "version": "2.0",
+        "analysis_type": "GTMØ",
+        "timestamp": "2025-11-04T22:14:37.109369",
+        "content": {
+          "text": "Oczekiwany Wynik: Algorytm dynamicznie dostosowujący się do nowych zadań abstrakcyjnych, wykorzystujący GTMØ, osiągający wysoką skuteczność poprzez idealną zgodność z oczekiwanymi rozwiązaniami.",
+          "length": 194,
+          "word_count": 21
+        },
+        "coordinates": {
+          "determination": 0.692035,
+          "stability": 0.632356,
+          "entropy": 0.439232
+        },
+        "analysis_metadata": {
+          "analyzed_at": "2025-11-04T22:14:37.109369",
+          "sequence_number": 0,
+          "daily_date": "04112025"
+        },
+        "additional_metrics": {
+          "total_analyses": 52,
+          "cases": {
+            "acc": 12,
+            "nom": 13,
+            "gen": 8,
+            "loc": 4
+          },
+          "pos": {
+            "adj": 13,
+            "subst": 13,
+            "interp": 4,
+            "adv": 1,
+            "part": 2,
+            "prep": 4
+          },
+          "ambiguity": 2.4761904761904763,
+          "debug_tags": [
+            "Oczekiwany:adj:sg:acc:m3:pos",
+            "Oczekiwany:adj:sg:nom.voc:m1.m2.m3:pos",
+            "Oczekiwany:ppas:sg:acc:m3:imperf:aff",
+            "Oczekiwany:ppas:sg:nom.voc:m1.m2.m3:imperf:aff",
+            "Wynik:subst:sg:nom.acc:m3",
+            "::interp",
+            "Algorytm:subst:sg:nom.acc:m3",
+            "dynamicznie:adv:pos",
+            "dostosowujący:pact:pl:nom.voc:m1:imperf:aff",
+            "dostosowujący:pact:sg:acc:m3:imperf:aff"
+          ],
+          "coords_count": 39
+        },
+        "interpretation": {
+          "determination": "moderate",
+          "stability": "moderate",
+          "entropy": "mixed",
+          "overall": "moderate_quality",
+          "overall_score": 0.6348
+        },
+        "source_file": "unknown",
+        "quantum_metrics": {
+          "total_coherence": 0.8146,
+          "quantum_words": 16,
+          "entanglements": 5,
+          "superposition_type": "COHERENT_SUPERPOSITION"
+        },
+        "axiom_protection": {
+          "axioms_activated": 0,
+          "violations_prevented": 0,
+          "meta_reflections": 0
+        },
+        "rhetorical_analysis": {
+          "mode": "literal",
+          "irony_score": 0.5,
+          "paradox_score": 0.0,
+          "structural_divergence": 0.4527,
+          "pos_anomalies": {
+            "adj_ratio": 0.3514,
+            "verb_ratio": 0.0,
+            "anomaly_score": 1.0041
+          }
+        },
+        "quantum_tensor": {
+          "value": 0.257625,
+          "formula": "0.702 × 0.637 × 0.576 = 0.258"
+        },
+        "constitutional_metrics": {
+          "definiteness": {
+            "value": 3.318,
+            "formula": "(1/2.48) × 8 × √(0.702×0.637/0.424) = 3.32",
+            "interpretation": "Wysoka CD = tekst uporządkowany, jednoznaczny, strukturalny",
+            "components": {
+              "inverse_ambiguity": 0.4038,
+              "depth": 8,
+              "geometric_balance": 1.027
+            }
+          },
+          "indefiniteness": {
+            "value": 19.2888,
+            "formula": "2.48 × 8 × √(0.424/(0.702×0.637)) = 19.29",
+            "interpretation": "Wysoka CI = tekst chaotyczny, wieloznaczny, nieprzewidywalny",
+            "components": {
+              "ambiguity": 2.4762,
+              "depth": 8,
+              "geometric_tension": 0.9737
+            },
+            "decomposition": {
+              "morphological": {
+                "value": 2.4111,
+                "percentage": 11.9,
+                "source": "Fleksja, ambiguity morfologiczna"
+              },
+              "syntactic": {
+                "value": 7.7897,
+                "percentage": 38.44,
+                "source": "Głębokość składniowa, długość zdań"
+              },
+              "semantic": {
+                "value": 10.0617,
+                "percentage": 49.66,
+                "source": "Chaos semantyczny w przestrzeni F³"
+              }
+            }
+          },
+          "semantic_accessibility": {
+            "value": 0.0518,
+            "percentage": 5.18,
+            "formula": "CD / Depth² = 3.32 / 64 = 0.052",
+            "interpretation": "Tekst trudno dostępny (< 30% definiteness)",
+            "category": "NISKA_DOSTĘPNOŚĆ",
+            "range": "[0,1] gdzie 1=maksymalna dostępność, 0=niedostępny",
+            "advantages": [
+              "Znormalizowana do [0,1]",
+              "Niezależna od skali absolutnej",
+              "Intuicyjna interpretacja"
+            ]
+          },
+          "duality": {
+            "product": 64.0,
+            "theoretical": 64,
+            "error_percent": 0.0,
+            "formula": "CI × CD = Depth²",
+            "verification": "PASSED",
+            "interpretation": "Dualność wynika z Zasady Nieoznaczoności Semantycznej: Δ_form · Δ_int ≥ ħ_semantic"
+          },
+          "classification": {
+            "type": "CHAOTIC_STRUCTURE",
+            "cd_ci_ratio": 0.172,
+            "description": "Tekst chaotyczny, wieloznaczny (CI > CD)"
+          },
+          "theoretical_basis": {
+            "derived_from": "Zasada Nieoznaczoności Semantycznej (GTMØ Axiom)",
+            "morphosyntactic_projection": "Δ_form = Ambiguity × f(Depth), Δ_geom = √(E/(D×S))",
+            "fundamental_constant": "Ø₀ = 1.2925 (Hausdorff dimension of fractal boundaries)",
+            "operator": "Ø: projekcja na |ψ_Ø⟩ = (1/√3, 1/√3, 1/√3)ᵀ",
+            "semantic_accessibility": "SA = CD/Depth² normalizuje dostępność do [0,1]",
+            "ci_decomposition": "CI = CI_morphological + CI_syntactic + CI_semantic"
+          }
+        },
+        "metadata": {
+          "header": "Document Start",
+          "text": "Oczekiwany Wynik: Algorytm dynamicznie dostosowujący się do nowych zadań abstrakcyjnych, wykorzystujący GTMØ, osiągający wysoką skuteczność poprzez idealną zgodność z oczekiwanymi rozwiązaniami.",
+          "char_count": 194,
+          "word_count": 21
+        }
+      }
+    ],
+    "aggregate_metrics": {
+      "mean_determination": 0.69707425,
+      "mean_stability": 0.586245,
+      "mean_entropy": 0.48489950000000004,
+      "std_determination": 0.029152788960706635,
+      "std_stability": 0.027155094374720946,
+      "std_entropy": 0.0271406575592781,
+      "min_determination": 0.674498,
+      "max_determination": 0.746118,
+      "min_stability": 0.564305,
+      "max_stability": 0.632356,
+      "min_entropy": 0.439232,
+      "max_entropy": 0.507756
+    }
+  },
+  "errors": []
+}

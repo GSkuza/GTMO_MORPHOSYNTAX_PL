@@ -27,6 +27,15 @@ if sys.platform == 'win32':
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# Import rhetorical analysis module
+try:
+    from gtmo_pure_rhetoric import GTMORhetoricalAnalyzer
+    RHETORICAL_ANALYZER_AVAILABLE = True
+    print("✔ GTMØ Rhetorical Analyzer loaded")
+except ImportError:
+    RHETORICAL_ANALYZER_AVAILABLE = False
+    print("✗ GTMØ Rhetorical Analyzer not available")
+
 # Required imports
 try:
     import morfeusz2
@@ -526,6 +535,12 @@ class QuantumMorphosyntaxEngine:
         self.pauli_y = np.array([[0, -1j], [1j, 0]], dtype=complex)
         self.pauli_z = np.array([[1, 0], [0, -1]], dtype=complex)
         self.axiom_system = GTMOAxiomSystem(enable_adaptive_learning=True)
+
+        # Initialize rhetorical analyzer if available
+        if RHETORICAL_ANALYZER_AVAILABLE:
+            self.rhetorical_analyzer = GTMORhetoricalAnalyzer()
+        else:
+            self.rhetorical_analyzer = None
 
     def analyze_morphology_quantum(self, text: str) -> Tuple[np.ndarray, Dict, Dict[str, QuantumSemanticState]]:
         """Morphological analysis with quantum superposition."""
@@ -1111,9 +1126,73 @@ class QuantumMorphosyntaxEngine:
         # Add topological classification if present
         if 'topological_classification' in axiom_result:
             result["topology"] = axiom_result['topological_classification']
-        
+
         print(f"  FINAL: D={D:.3f}, S={S:.3f}, E={E:.3f}")
         print(tensor_print)
+
+        # ========================================================================
+        # RHETORICAL ANALYSIS: Irony/Paradox Detection
+        # ========================================================================
+        if self.rhetorical_analyzer:
+            try:
+                # Prepare syntax coords (use synt_coords directly)
+                syntax_coords = synt_coords
+
+                # Perform rhetorical analysis
+                transformed_coords, rhetorical_mode, rhetorical_metadata = self.rhetorical_analyzer.analyze_rhetorical_mode(
+                    text=text,
+                    morph_coords=final_coords,
+                    syntax_coords=syntax_coords,
+                    morph_metadata=morph_meta,
+                    syntax_metadata=synt_meta
+                )
+
+                # Add rhetorical analysis to result
+                result["rhetorical_analysis"] = {
+                    "mode": rhetorical_mode,
+                    "irony_score": round(rhetorical_metadata.get('irony_score', 0.0), 4),
+                    "paradox_score": round(rhetorical_metadata.get('paradox_score', 0.0), 4),
+                    "structural_divergence": round(rhetorical_metadata.get('structural_divergence', 0.0), 4),
+                    "pos_anomalies": {
+                        "adj_ratio": round(rhetorical_metadata.get('pos_anomalies', {}).get('adj_ratio', 0.0), 4),
+                        "verb_ratio": round(rhetorical_metadata.get('pos_anomalies', {}).get('verb_ratio', 0.0), 4),
+                        "anomaly_score": round(rhetorical_metadata.get('pos_anomalies', {}).get('anomaly_score', 0.0), 4)
+                    }
+                }
+
+                # If irony detected, show coordinate transformation
+                if rhetorical_mode == 'irony':
+                    result["rhetorical_analysis"]["coordinate_inversion"] = {
+                        "original": {
+                            "determination": round(float(final_coords[0]), 4),
+                            "stability": round(float(final_coords[1]), 4),
+                            "entropy": round(float(final_coords[2]), 4)
+                        },
+                        "inverted": {
+                            "determination": round(float(transformed_coords[0]), 4),
+                            "stability": round(float(transformed_coords[1]), 4),
+                            "entropy": round(float(transformed_coords[2]), 4)
+                        }
+                    }
+                    result["rhetorical_analysis"]["irony_indicators"] = rhetorical_metadata.get('irony_analysis', {}).get('irony_indicators', [])
+                    print(f"  🎭 IRONY DETECTED: score={rhetorical_metadata.get('irony_score', 0.0):.2f}")
+                    print(f"     Coordinates INVERTED: D={transformed_coords[0]:.3f}, S={transformed_coords[1]:.3f}, E={transformed_coords[2]:.3f}")
+
+                # If paradox detected, show details
+                elif rhetorical_mode == 'paradox':
+                    result["rhetorical_analysis"]["paradox_indicators"] = rhetorical_metadata.get('paradox_analysis', {}).get('paradox_indicators', [])
+                    result["rhetorical_analysis"]["symmetry_score"] = round(rhetorical_metadata.get('paradox_analysis', {}).get('symmetry_score', 0.0), 4)
+                    print(f"  ⚖️ PARADOX DETECTED: score={rhetorical_metadata.get('paradox_score', 0.0):.2f}")
+
+                else:
+                    print(f"  📝 LITERAL MODE (no rhetorical transformation)")
+
+            except Exception as e:
+                print(f"  ⚠️ Rhetorical analysis failed: {e}")
+                result["rhetorical_analysis"] = {
+                    "mode": "error",
+                    "error": str(e)
+                }
 
         # ========================================================================
         # CONSTITUTIONAL METRICS: Complete CD-CI Duality Implementation
