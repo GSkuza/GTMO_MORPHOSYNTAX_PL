@@ -18,11 +18,17 @@ import json
 import hashlib
 from datetime import datetime
 
-# Fix Windows console encoding for Unicode characters
+# Fix Windows console encoding for Unicode characters (with error handling)
 if sys.platform == 'win32':
     import io
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+    try:
+        if not sys.stdout.closed:
+            sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+        if not sys.stderr.closed:
+            sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+    except (ValueError, AttributeError):
+        # Skip if streams are already wrapped or closed
+        pass
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -31,40 +37,49 @@ logger = logging.getLogger(__name__)
 try:
     from gtmo_pure_rhetoric import GTMORhetoricalAnalyzer
     RHETORICAL_ANALYZER_AVAILABLE = True
-    print("✔ GTMØ Rhetorical Analyzer loaded")
+    # print("✔ GTMØ Rhetorical Analyzer loaded")
 except ImportError:
     RHETORICAL_ANALYZER_AVAILABLE = False
-    print("✗ GTMØ Rhetorical Analyzer not available")
+    # print("✗ GTMØ Rhetorical Analyzer not available")
 
 # Import domain dictionary module
 try:
     from gtmo_domain_dictionary import DomainDictionary
     DOMAIN_DICTIONARY_AVAILABLE = True
-    print("✔ GTMØ Domain Dictionary loaded")
+    # print("✔ GTMØ Domain Dictionary loaded")
 except ImportError:
     DOMAIN_DICTIONARY_AVAILABLE = False
-    print("✗ GTMØ Domain Dictionary not available")
+    # print("✗ GTMØ Domain Dictionary not available")
+
+# Import constitutional duality calculator
+try:
+    from gtmo_constitutional_duality import ConstitutionalDualityCalculator
+    CONSTITUTIONAL_DUALITY_AVAILABLE = True
+    # print("✔ GTMØ Constitutional Duality Calculator loaded")
+except ImportError:
+    CONSTITUTIONAL_DUALITY_AVAILABLE = False
+    # print("✗ GTMØ Constitutional Duality Calculator not available")
 
 # Required imports
 try:
     import morfeusz2
     morfeusz = morfeusz2.Morfeusz()
-    print("✔ Morfeusz2 loaded")
+    # print("✔ Morfeusz2 loaded")
 except ImportError:
     morfeusz = None
-    print("✗ Morfeusz2 missing: pip install morfeusz2")
+    # print("✗ Morfeusz2 missing: pip install morfeusz2")
 
 try:
     import spacy
     nlp = spacy.load('pl_core_news_lg')
-    print("✔ spaCy loaded")
+    # print("✔ spaCy loaded")
 except:
     try:
         nlp = spacy.load('pl_core_news_sm')
-        print("✔ spaCy (small) loaded")
+        # print("✔ spaCy (small) loaded")
     except:
         nlp = None
-        print("✗ spaCy missing: pip install spacy && python -m spacy download pl_core_news_lg")
+        # print("✗ spaCy missing: pip install spacy && python -m spacy download pl_core_news_lg")
 
 # GTMØ Theoretical Constants
 PHI = (1 + np.sqrt(5)) / 2
@@ -555,6 +570,12 @@ class QuantumMorphosyntaxEngine:
         self.domain_dictionary = domain_dictionary
         self.use_domain_filtering = domain_dictionary is not None
 
+        # Initialize constitutional duality calculator
+        if CONSTITUTIONAL_DUALITY_AVAILABLE:
+            self.constitutional_calculator = ConstitutionalDualityCalculator()
+        else:
+            self.constitutional_calculator = None
+
     def analyze_morphology_quantum(self, text: str) -> Tuple[np.ndarray, Dict, Dict[str, QuantumSemanticState]]:
         """Morphological analysis with quantum superposition."""
         if not morfeusz:
@@ -766,7 +787,8 @@ class QuantumMorphosyntaxEngine:
                         break
                 
                 if not has_dependencies:
-                    print("  SYNTAX: spaCy returned no dependencies, using fallback")
+                    # print("  SYNTAX: spaCy returned no dependencies, using fallback")
+                    pass
                     coords, metadata = fallback_syntax_analysis(text)
                     return coords, metadata, []
                 
@@ -1241,197 +1263,51 @@ class QuantumMorphosyntaxEngine:
         # ========================================================================
         # CONSTITUTIONAL METRICS: Complete CD-CI Duality Implementation
         # ========================================================================
-        # Teoria: CI × CD = Depth² (morfosyntaktyczna manifestacja Zasady Nieoznaczoności)
-        # Wyprowadzenie: Zasada Nieoznaczoności Semantycznej: Δ_form · Δ_int ≥ ħ_semantic
-        # Projekcja morfosyntaktyczna:
-        #   CD = (1/Ambiguity) × Depth × √(D×S/E)  # Constitutional DEFINITENESS
-        #   CI = Ambiguity × Depth × √(E/(D×S))    # Constitutional INDEFINITENESS
-        # ========================================================================
+        # Using dedicated ConstitutionalDualityCalculator class
 
-        ambiguity = morph_meta.get('ambiguity', 1.0)
-        depth = synt_meta.get('max_depth', 1)
+        if self.constitutional_calculator:
+            ambiguity = morph_meta.get('ambiguity', 1.0)
+            depth = synt_meta.get('max_depth', 1)
 
-        # Constitutional Definiteness (CD): miara określoności strukturalnej
-        # CD = (1/Ambiguity) × Depth × √(D×S/E)
-        # Wysoka CD = tekst uporządkowany, jednoznaczny, niska entropia
-        if E > 0:
-            CD = (1.0 / ambiguity) * depth * np.sqrt((D * S) / E)
-        else:
-            CD = (1.0 / ambiguity) * depth * np.sqrt(D * S)  # Fallback when E=0
+            # Calculate metrics using dedicated calculator
+            const_metrics = self.constitutional_calculator.calculate_metrics(
+                ambiguity=ambiguity,
+                depth=depth,
+                D=D,
+                S=S,
+                E=E
+            )
 
-        # Constitutional Indefiniteness (CI): miara niedefinitywności strukturalnej
-        # CI = Ambiguity × Depth × √(E/(D×S))
-        # Wysoka CI = tekst chaotyczny, wieloznaczny, wysoka entropia
-        # DUALNOŚĆ: CI × CD = Depth²
-        if D * S > 0:
-            CI = ambiguity * depth * np.sqrt(E / (D * S))
-        else:
-            CI = ambiguity * depth * np.sqrt(E)  # Fallback when D*S=0
+            # Print summary
+            print(f"  CONSTITUTIONAL_DEFINITENESS: {const_metrics.CD:.4f}")
+            print(f"  CONSTITUTIONAL_INDEFINITENESS: {const_metrics.CI:.4f}")
+            print(f"  DUALITY_CHECK: CI × CD = {const_metrics.duality_product:.4f} ≈ Depth² = {const_metrics.duality_theoretical} (error: {const_metrics.duality_error:.2%})")
+            print(f"  SEMANTIC_ACCESSIBILITY: {const_metrics.SA:.4f} ({const_metrics.SA*100:.1f}% - {const_metrics.sa_category.value})")
+            print(f"  CI_DECOMPOSITION: Morphological={const_metrics.CI_morphological:.2f}, Syntactic={const_metrics.CI_syntactic:.2f}, Semantic={const_metrics.CI_semantic:.2f}")
+            print(f"  CLASSIFICATION: {const_metrics.structure_classification.value} (CD/CI = {const_metrics.cd_ci_ratio:.4f})")
 
-        # Weryfikacja dualności
-        duality_product = CI * CD
-        duality_theoretical = depth ** 2
-        duality_error = abs(duality_product - duality_theoretical) / duality_theoretical if duality_theoretical > 0 else 0
-
-        # Geometric components
-        geometric_balance = np.sqrt((D * S) / E) if E > 0 else np.sqrt(D * S)      # For CD
-        geometric_tension = np.sqrt(E / (D * S)) if D * S > 0 else np.sqrt(E)      # For CI
-
-        # ========================================================================
-        # 8.1. Semantic Accessibility (SA): Znormalizowana miara dostępności
-        # ========================================================================
-        # SA = CD / (CI + CD) = CD / Depth²
-        # SA ∈ [0, 1]: 1 = tekst dostępny, 0 = tekst niedostępny
-        # Korzyści: znormalizowana, niezależna od skali, intuicyjna interpretacja
-        
-        if duality_theoretical > 0:
-            SA = CD / duality_theoretical  # CD / Depth²
-        else:
-            SA = 0.5  # Fallback dla depth=0
-
-        # Interpretacja SA
-        if SA > 0.7:
-            sa_interpretation = "WYSOKA_DOSTĘPNOŚĆ"
-            sa_desc = "Tekst bardzo dostępny (> 70% definiteness)"
-        elif SA > 0.3:
-            sa_interpretation = "ŚREDNIA_DOSTĘPNOŚĆ"
-            sa_desc = "Tekst umiarkowanie dostępny (30-70% definiteness)"
-        else:
-            sa_interpretation = "NISKA_DOSTĘPNOŚĆ"
-            sa_desc = "Tekst trudno dostępny (< 30% definiteness)"
-
-        # ========================================================================
-        # 8.2. Dekompozycja CI według źródeł (morfologia, składnia, semantyka)
-        # ========================================================================
-        # CI_total = CI_morphological + CI_syntactic + CI_semantic
-        
-        geometric_factor = np.sqrt(E / (D * S)) if D * S > 0 else np.sqrt(E)
-        
-        # CI_morphological: wkład morfologii (ambiguity bez głębokości)
-        CI_morphological = ambiguity * geometric_factor
-        
-        # CI_syntactic: wkład składni (depth bez ambiguity)
-        CI_syntactic = depth * geometric_factor
-        
-        # CI_semantic: pozostała część (interakcja E, D, S bez morfologii i składni)
-        # CI_semantic = CI_total - CI_morphological - CI_syntactic + geometric_factor
-        # Aby uniknąć ujemnych wartości, używamy proporcjonalnego rozkładu
-        CI_base = geometric_factor
-        CI_morph_contrib = (ambiguity - 1) * geometric_factor if ambiguity > 1 else 0
-        CI_synt_contrib = (depth - 1) * geometric_factor if depth > 1 else 0
-        CI_semantic = CI_base + max(0, CI - CI_morphological - CI_syntactic)
-        
-        # Normalizacja składników do CI_total
-        ci_components_sum = CI_morphological + CI_syntactic + CI_semantic
-        if ci_components_sum > 0:
-            ci_morph_percent = (CI_morphological / ci_components_sum) * 100
-            ci_synt_percent = (CI_syntactic / ci_components_sum) * 100
-            ci_sem_percent = (CI_semantic / ci_components_sum) * 100
-        else:
-            ci_morph_percent = ci_synt_percent = ci_sem_percent = 33.33
-
-        # Classification based on CD/CI ratio
-        cd_ci_ratio = CD / CI if CI > 0 else float('inf')
-
-        if cd_ci_ratio > 1.0:
-            classification = "ORDERED_STRUCTURE"
-            classification_desc = "Tekst uporządkowany, strukturalny (CD > CI)"
-        elif cd_ci_ratio > 0.5:
-            classification = "BALANCED_STRUCTURE"
-            classification_desc = "Tekst zbalansowany (CD ≈ CI)"
-        else:
-            classification = "CHAOTIC_STRUCTURE"
-            classification_desc = "Tekst chaotyczny, wieloznaczny (CI > CD)"
-
-        # Formulas for display
-        cd_formula = f"(1/{ambiguity:.2f}) × {depth} × √({D:.3f}×{S:.3f}/{E:.3f}) = {CD:.2f}"
-        ci_formula = f"{ambiguity:.2f} × {depth} × √({E:.3f}/({D:.3f}×{S:.3f})) = {CI:.2f}"
-        duality_formula = f"CI × CD = {CI:.2f} × {CD:.2f} = {duality_product:.2f} ≈ Depth² = {duality_theoretical}"
-        sa_formula = f"CD / Depth² = {CD:.2f} / {duality_theoretical} = {SA:.3f}"
-
-        print(f"  CONSTITUTIONAL_DEFINITENESS: {cd_formula}")
-        print(f"  CONSTITUTIONAL_INDEFINITENESS: {ci_formula}")
-        print(f"  DUALITY_CHECK: {duality_formula} (error: {duality_error:.2%})")
-        print(f"  SEMANTIC_ACCESSIBILITY: {sa_formula} ({SA*100:.1f}% - {sa_interpretation})")
-        print(f"  CI_DECOMPOSITION: Morphological={CI_morphological:.2f} ({ci_morph_percent:.1f}%), Syntactic={CI_syntactic:.2f} ({ci_synt_percent:.1f}%), Semantic={CI_semantic:.2f} ({ci_sem_percent:.1f}%)")
-        print(f"  CLASSIFICATION: {classification} ({classification_desc})")
-
-        # Dodaj tensor do JSON
-        result["quantum_tensor"] = {
-            "value": round(T_quantum, 6),
-            "formula": f"{D:.3f} × {S:.3f} × {1-E:.3f} = {T_quantum:.3f}"
-        }
-
-        # Dodaj Constitutional Metrics do JSON (obie metryki + dualność + SA + dekompozycja)
-        result["constitutional_metrics"] = {
-            "definiteness": {
-                "value": round(CD, 4),
-                "formula": cd_formula,
-                "interpretation": "Wysoka CD = tekst uporządkowany, jednoznaczny, strukturalny",
-                "components": {
-                    "inverse_ambiguity": round(1.0 / ambiguity, 4),
-                    "depth": depth,
-                    "geometric_balance": round(geometric_balance, 4)
-                }
-            },
-            "indefiniteness": {
-                "value": round(CI, 4),
-                "formula": ci_formula,
-                "interpretation": "Wysoka CI = tekst chaotyczny, wieloznaczny, nieprzewidywalny",
-                "components": {
-                    "ambiguity": round(ambiguity, 4),
-                    "depth": depth,
-                    "geometric_tension": round(geometric_tension, 4)
-                },
-                "decomposition": {
-                    "morphological": {
-                        "value": round(CI_morphological, 4),
-                        "percentage": round(ci_morph_percent, 2),
-                        "source": "Fleksja, ambiguity morfologiczna"
-                    },
-                    "syntactic": {
-                        "value": round(CI_syntactic, 4),
-                        "percentage": round(ci_synt_percent, 2),
-                        "source": "Głębokość składniowa, długość zdań"
-                    },
-                    "semantic": {
-                        "value": round(CI_semantic, 4),
-                        "percentage": round(ci_sem_percent, 2),
-                        "source": "Chaos semantyczny w przestrzeni F³"
-                    }
-                }
-            },
-            "semantic_accessibility": {
-                "value": round(SA, 4),
-                "percentage": round(SA * 100, 2),
-                "formula": sa_formula,
-                "interpretation": sa_desc,
-                "category": sa_interpretation,
-                "range": "[0,1] gdzie 1=maksymalna dostępność, 0=niedostępny",
-                "advantages": ["Znormalizowana do [0,1]", "Niezależna od skali absolutnej", "Intuicyjna interpretacja"]
-            },
-            "duality": {
-                "product": round(duality_product, 4),
-                "theoretical": duality_theoretical,
-                "error_percent": round(duality_error * 100, 4),
-                "formula": "CI × CD = Depth²",
-                "verification": "PASSED" if duality_error < 0.01 else "WARNING",
-                "interpretation": "Dualność wynika z Zasady Nieoznaczoności Semantycznej: Δ_form · Δ_int ≥ ħ_semantic"
-            },
-            "classification": {
-                "type": classification,
-                "cd_ci_ratio": round(cd_ci_ratio, 4),
-                "description": classification_desc
-            },
-            "theoretical_basis": {
-                "derived_from": "Zasada Nieoznaczoności Semantycznej (GTMØ Axiom)",
-                "morphosyntactic_projection": "Δ_form = Ambiguity × f(Depth), Δ_geom = √(E/(D×S))",
-                "fundamental_constant": "Ø₀ = 1.2925 (Hausdorff dimension of fractal boundaries)",
-                "operator": "Ø: projekcja na |ψ_Ø⟩ = (1/√3, 1/√3, 1/√3)ᵀ",
-                "semantic_accessibility": "SA = CD/Depth² normalizuje dostępność do [0,1]",
-                "ci_decomposition": "CI = CI_morphological + CI_syntactic + CI_semantic"
+            # Dodaj tensor do JSON
+            result["quantum_tensor"] = {
+                "value": round(T_quantum, 6),
+                "formula": f"{D:.3f} × {S:.3f} × {1-E:.3f} = {T_quantum:.3f}"
             }
-        }
+
+            # Dodaj Constitutional Metrics do JSON using dedicated calculator
+            result["constitutional_metrics"] = const_metrics.to_dict()
+
+        else:
+            # Fallback gdy Constitutional Calculator niedostępny
+            print("  ⚠️ Constitutional Duality Calculator not available - skipping CI-CD metrics")
+
+            # Dodaj tensor do JSON
+            result["quantum_tensor"] = {
+                "value": round(T_quantum, 6),
+                "formula": f"{D:.3f} × {S:.3f} × {1-E:.3f} = {T_quantum:.3f}"
+            }
+
+            result["constitutional_metrics"] = {
+                "error": "ConstitutionalDualityCalculator not available"
+            }
 
         return result
 

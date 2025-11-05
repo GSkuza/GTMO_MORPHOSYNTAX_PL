@@ -1,0 +1,40 @@
+# GTMØ Testing Requirements
+# ========================
+# Required packages for comprehensive testing suite
+
+# Core testing frameworks
+hypothesis>=6.0.0
+pytest>=7.0.0
+pytest-cov>=4.0.0
+pytest-benchmark>=4.0.0
+
+# Data analysis and validation
+numpy>=1.20.0
+scipy>=1.7.0
+pandas>=1.3.0
+
+# NLP and morphological analysis
+morfeusz2>=1.0.0
+spacy>=3.4.0
+
+# Development and debugging
+ipython>=8.0.0
+jupyter>=1.0.0
+
+# Visualization (for test result analysis)
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# Code quality
+black>=22.0.0
+flake8>=4.0.0
+mypy>=0.900
+
+# Performance testing
+memory-profiler>=0.60.0
+psutil>=5.8.0
+
+# Additional testing utilities
+faker>=15.0.0  # For generating test data
+parameterized>=0.8.0  # For parameterized tests
+coverage>=6.0.0  # Code coverage analysis

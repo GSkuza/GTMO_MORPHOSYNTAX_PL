@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "total_samples": 8,
+    "created_at": "2025-11-05"
+  },
+  "samples": [
+    {
+      "id": "golden_000",
+      "input_text": "Kot śpi na macie.",
+      "expected_coordinates": {
+        "determination": 0.827552,
+        "stability": 0.772815,
+        "entropy": 0.23073
+      },
+      "expected_cd": 0.7281,
+      "expected_ci": 5.4939,
+      "expected_sa": 0.117,
+      "expected_duality_error": 0.0
+    },
+    {
+      "id": "golden_001",
+      "input_text": "Rzeczpospolita Polska jest demokratycznym państwem prawnym.",
+      "expected_coordinates": {
+        "determination": 0.773621,
+        "stability": 0.712884,
+        "entropy": 0.272595
+      },
+      "expected_cd": 0.9333,
+      "expected_ci": 4.2857,
+      "expected_sa": 0.1788,
+      "expected_duality_error": 0.0
+    },
+    {
+      "id": "golden_002",
+      "input_text": "Sąd Konstytucyjny orzeka o zgodności ustaw z Konstytucją.",
+      "expected_coordinates": {
+        "determination": 0.733683,
+        "stability": 0.669097,
+        "entropy": 0.376723
+      },
+      "expected_cd": 1.9827,
+      "expected_ci": 8.0697,
+      "expected_sa": 0.1972,
+      "expected_duality_error": 0.0
+    },
+    {
+      "id": "golden_003",
+      "input_text": "Nieantykonstytucjonalizacyjność jest bardzo długim słowem.",
+      "expected_coordinates": {
+        "determination": 0.7572,
+        "stability": 0.7006,
+        "entropy": 0.3026
+      },
+      "expected_cd": 1.7149,
+      "expected_ci": 2.3324,
+      "expected_sa": 0.4237,
+      "expected_duality_error": 0.0
+    },
+    {
+      "id": "golden_004",
+      "input_text": "To wspaniałe, że znowu pada deszcz!",
+      "expected_coordinates": {
+        "determination": 0.761884,
+        "stability": 0.678899,
+        "entropy": 0.327675
+      },
+      "expected_cd": 0.8206,
+      "expected_ci": 4.8742,
+      "expected_sa": 0.1441,
+      "expected_duality_error": 0.0
+    },
+    {
+      "id": "golden_005",
+      "input_text": "Jedyną stałą jest zmiana.",
+      "expected_coordinates": {
+        "determination": 0.831426,
+        "stability": 0.767626,
+        "entropy": 0.21579
+      },
+      "expected_cd": 0.6506,
+      "expected_ci": 1.5371,
+      "expected_sa": 0.2974,
+      "expected_duality_error": 0.0
+    },
+    {
+      "id": "golden_006",
+      "input_text": "123 456 789",
+      "expected_coordinates": {
+        "determination": 0.73,
+        "stability": 0.645,
+        "entropy": 0.365
+      },
+      "expected_cd": 2.3446,
+      "expected_ci": 1.706,
+      "expected_sa": 0.5788,
+      "expected_duality_error": 0.0
+    },
+    {
+      "id": "golden_007",
+      "input_text": "Bardzo bardzo bardzo długie zdanie z wieloma powtórzeniami i skomplikowaną strukturą składniową która testuje wydajność i dokładność analizy morfosyntaktycznej.",
+      "expected_coordinates": {
+        "determination": 0.695487,
+        "stability": 0.621342,
+        "entropy": 0.451118
+      },
+      "expected_cd": 3.1014,
+      "expected_ci": 11.6078,
+      "expected_sa": 0.2108,
+      "expected_duality_error": 0.0
+    }
+  ]
+}
