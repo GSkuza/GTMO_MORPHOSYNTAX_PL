@@ -114,7 +114,43 @@ POS_COORDS = {
     'prep': np.array([0.76, 0.75, 0.24]),   
     'conj': np.array([0.65, 0.85, 0.20]),   
     'part': np.array([0.40, 0.26, 0.84]),   
-    'interp': np.array([0.95, 0.95, 0.05])  
+    'interp': np.array([0.95, 0.95, 0.05])
+}
+
+# GTMØ coordinates for temporal analysis
+TEMPORAL_COORDS = {
+    # Time -> [temporal_determination, temporal_stability, temporal_entropy]
+    'past': np.array([0.85, 0.90, 0.15]),      # Past - high determination
+    'present': np.array([0.70, 0.60, 0.40]),   # Present - medium determination
+    'future': np.array([0.40, 0.30, 0.85]),    # Future - high entropy
+    'conditional': np.array([0.35, 0.25, 0.90]), # Conditional - max entropy
+    'imperative': np.array([0.95, 0.50, 0.20]), # Imperative - high intention determination
+    'aorist': np.array([0.90, 0.95, 0.10]),    # Aorist - closed event
+    'iterative': np.array([0.60, 0.80, 0.35])  # Iterative - cyclical
+}
+
+# Patterns for rhetorical analysis (irony/sarcasm/paradox)
+RHETORICAL_PATTERNS = {
+    'irony_markers': [
+        'oczywiście', 'jakże', 'ależ', 'no pewnie', 'świetnie', 'super', 'bosko',
+        'wspaniale', 'cudownie', 'genialnie', 'no tak', 'ach tak', 'nie do wiary', 'serio?',
+    ],
+    'paradox_markers': [
+        'jednocześnie', 'zarazem', 'a jednak', 'mimo to',
+        'wbrew', 'choć', 'aczkolwiek', 'niemniej', 'wszelako', 'pomimo', 'paradoksalnie'
+    ],
+    'sarcasm_patterns': [
+        r'\b(super|świetny|genialny|wspaniały)\b.*\b(ale|tylko|że)\b',
+        r'\".*\"',  # Quoted text often sarcastic
+        r'\.{3,}',  # Multiple dots
+        r'\?{2,}',  # Multiple question marks
+        r'!{2,}'    # Multiple exclamation marks
+    ],
+    'negativity_context': [
+        'znowu', 'znów', 'kolejny', 'kolejna', 'kolejne', 'jeszcze raz', 'bez przerwy', 'bez rezultatu',
+        'po raz kolejny', 'jak zawsze', 'można było się tego spodziewać','jak zwykle', 'oczywiście',
+        'niestety', 'szkoda', 'porażka', 'bez sensu', 'beznadziejnie','przykro', 'źle', 'kiepsko'
+    ]
 }
 
 class QuantumState(Enum):
@@ -528,6 +564,333 @@ class GTMOAxiomSystem:
         
         return state
 
+# =============================================================================
+# TEMPORAL ANALYSIS FUNCTIONS
+# =============================================================================
+
+def analyze_temporality(text: str, doc=None) -> Tuple[np.ndarray, Dict]:
+    """
+    Analyze temporality of utterance using spaCy.
+
+    Args:
+        text: Text to analyze
+        doc: spaCy doc object (optional)
+
+    Returns:
+        Temporal coordinates and metadata
+    """
+    if doc is None and nlp is not None:
+        doc = nlp(text)
+
+    if doc is None:
+        return np.array([0.5, 0.5, 0.5]), {"error": "No NLP model available"}
+
+    temporal_markers = []
+    temporal_metadata = {
+        'tenses': {},
+        'aspects': {},
+        'dominant_time': None
+    }
+
+    for token in doc:
+        if token.pos_ == 'VERB':
+            morph = token.morph.to_dict()
+
+            # Extract tense
+            tense = morph.get('Tense', '')
+            if tense:
+                temporal_metadata['tenses'][tense] = temporal_metadata['tenses'].get(tense, 0) + 1
+
+                if tense == 'Past':
+                    temporal_markers.append(TEMPORAL_COORDS['past'])
+                elif tense == 'Pres':
+                    temporal_markers.append(TEMPORAL_COORDS['present'])
+                elif tense == 'Fut':
+                    temporal_markers.append(TEMPORAL_COORDS['future'])
+
+            # Extract mood
+            mood = morph.get('Mood', '')
+            if mood == 'Cnd':
+                temporal_markers.append(TEMPORAL_COORDS['conditional'])
+            elif mood == 'Imp':
+                temporal_markers.append(TEMPORAL_COORDS['imperative'])
+
+            # Extract aspect
+            aspect = morph.get('Aspect', '')
+            if aspect:
+                temporal_metadata['aspects'][aspect] = temporal_metadata['aspects'].get(aspect, 0) + 1
+
+                # Perfective aspect increases stability
+                if aspect == 'Perf' and temporal_markers:
+                    temporal_markers[-1] = temporal_markers[-1] * np.array([1.0, 1.2, 0.8])
+                    temporal_markers[-1] = np.clip(temporal_markers[-1], 0, 1)
+
+    # Calculate dominant time
+    if temporal_metadata['tenses']:
+        temporal_metadata['dominant_time'] = max(temporal_metadata['tenses'],
+                                                key=temporal_metadata['tenses'].get)
+
+    if temporal_markers:
+        avg_coords = np.mean(temporal_markers, axis=0)
+        return np.clip(avg_coords, 0, 1), temporal_metadata
+
+    return np.array([0.5, 0.5, 0.5]), temporal_metadata
+
+# =============================================================================
+# ENHANCED RHETORICAL ANALYSIS FUNCTIONS
+# =============================================================================
+
+def has_semantic_contradiction(text: str) -> bool:
+    """Detect semantic contradiction suggesting irony."""
+    import re
+    contradictory_pairs = [
+        (['świetnie', 'wspaniale', 'genialnie', 'super'],
+         ['źle', 'kiepsko', 'tragicznie', 'okropnie', 'strasznie']),
+        (['kocham', 'uwielbiam'], ['nienawidzę', 'nie znoszę']),
+        (['piękny', 'ładny', 'śliczny'], ['brzydki', 'szpetny', 'ohydny'])
+    ]
+
+    text_lower = text.lower()
+    for positive_words, negative_words in contradictory_pairs:
+        has_positive = any(word in text_lower for word in positive_words)
+        has_negative = any(word in text_lower for word in negative_words)
+        if has_positive and has_negative:
+            return True
+
+    return False
+
+def detect_enhanced_rhetorical_mode(text: str, base_coords: np.ndarray, morph_metadata: Dict) -> Tuple[np.ndarray, str, Dict]:
+    """
+    Enhanced detection of irony/sarcasm (inversion) or paradox (preservation).
+
+    Args:
+        text: Text to analyze
+        base_coords: Base coordinates [D, S, E]
+        morph_metadata: Morphological metadata
+
+    Returns:
+        Transformed coordinates, mode name, and metadata
+    """
+    import re
+    text_lower = text.lower()
+    metadata = {
+        'irony_score': 0,
+        'paradox_score': 0,
+        'sarcasm_score': 0,
+        'context_score': 0,
+        'detected_markers': []
+    }
+
+    # Detect irony markers
+    for marker in RHETORICAL_PATTERNS['irony_markers']:
+        if marker in text_lower:
+            metadata['irony_score'] += 1.5  # Increased weight
+            metadata['detected_markers'].append(('irony', marker))
+
+    # Detect sarcasm patterns
+    for pattern in RHETORICAL_PATTERNS['sarcasm_patterns']:
+        if re.search(pattern, text, re.IGNORECASE):
+            metadata['sarcasm_score'] += 1.5
+            metadata['detected_markers'].append(('sarcasm', pattern))
+
+    # Check for negative context with positive words (strong irony indicator)
+    has_positive = any(word in text_lower for word in [
+        'super', 'świetnie', 'wspaniale', 'cudownie', 'genialnie',
+        'rewelacyjnie', 'fantastycznie', 'ekstra', 'bombowo'
+    ])
+    has_negative_context = any(word in text_lower for word in RHETORICAL_PATTERNS['negativity_context'])
+
+    if has_positive and has_negative_context:
+        metadata['context_score'] += 2
+        metadata['detected_markers'].append(('context', 'positive_with_negative'))
+        metadata['irony_score'] += 2  # Strong indicator of irony
+
+    # Detect paradox markers
+    for marker in RHETORICAL_PATTERNS['paradox_markers']:
+        if marker in text_lower:
+            metadata['paradox_score'] += 1
+            metadata['detected_markers'].append(('paradox', marker))
+
+    # Check for semantic contradictions
+    if has_semantic_contradiction(text):
+        metadata['irony_score'] += 2
+        metadata['detected_markers'].append(('contradiction', 'semantic'))
+
+    # Decision and transformation
+    total_irony_sarcasm = metadata['irony_score'] + metadata['sarcasm_score'] + metadata['context_score']
+
+    # Lower threshold for better detection
+    if total_irony_sarcasm > 1.5:
+        # INVERSION for irony/sarcasm
+        inverted_coords = np.array([
+            1.0 - base_coords[0],  # D: certainty -> uncertainty
+            1.0 - base_coords[1],  # S: stability -> instability
+            1.0 - base_coords[2]   # E: entropy -> neg-entropy
+        ])
+        return inverted_coords, 'irony', metadata
+
+    elif metadata['paradox_score'] > 1:
+        # PRESERVATION for paradox with entropy boost
+        paradox_coords = base_coords.copy()
+        paradox_coords[2] = min(paradox_coords[2] * 1.5, 1.0)  # Increase entropy
+        return paradox_coords, 'paradox', metadata
+
+    return base_coords, 'literal', metadata
+
+# =============================================================================
+# QUANTUM SUPERPOSITION FOR AMBIGUITY
+# =============================================================================
+
+class QuantumAmbiguityAnalyzer:
+    """Quantum representation for ambiguous utterances."""
+
+    def __init__(self, superposition_threshold: float = 0.3):
+        self.superposition_threshold = superposition_threshold
+        self.ambiguity_indicators = [
+            'może', 'chyba', 'prawdopodobnie', 'możliwe', 'ewentualnie',
+            'lub', 'albo', 'czy', 'bądź', 'względnie',
+            'zarówno', 'jak i', 'ani', 'niby', 'jakby',
+            'przypuszczalnie', 'domniemanie', 'najprawdopodobniej'
+        ]
+
+    def detect_ambiguity(self, text: str, variance_threshold: float = 0.1) -> Tuple[bool, Dict]:
+        """
+        Detect if text requires quantum representation.
+
+        Args:
+            text: Text to analyze
+            variance_threshold: Threshold for variance-based detection
+
+        Returns:
+            Boolean and metadata about ambiguity
+        """
+        text_lower = text.lower()
+        metadata = {
+            'ambiguity_markers': [],
+            'marker_count': 0,
+            'question_marks': text.count('?'),
+            'ellipsis': text.count('...')
+        }
+
+        # Check linguistic markers
+        for marker in self.ambiguity_indicators:
+            if marker in text_lower:
+                metadata['ambiguity_markers'].append(marker)
+                metadata['marker_count'] += 1
+
+        # Additional ambiguity from punctuation
+        ambiguity_score = metadata['marker_count'] + \
+                         metadata['question_marks'] * 0.5 + \
+                         metadata['ellipsis'] * 0.3
+
+        needs_superposition = ambiguity_score > 2
+        metadata['ambiguity_score'] = ambiguity_score
+        metadata['needs_superposition'] = needs_superposition
+
+        return needs_superposition, metadata
+
+    def create_superposition(self, interpretations: List[np.ndarray],
+                           probabilities: Optional[List[float]] = None) -> Dict:
+        """
+        Create superposition of states for ambiguous utterances.
+
+        Args:
+            interpretations: List of possible interpretations [D,S,E]
+            probabilities: Probabilities of each interpretation
+
+        Returns:
+            Quantum representation of coordinates
+        """
+        if not interpretations:
+            raise ValueError("At least one interpretation required")
+
+        # Default equal probabilities if not provided
+        if probabilities is None:
+            probabilities = [1.0 / len(interpretations)] * len(interpretations)
+
+        # Normalize probabilities
+        probs = np.array(probabilities)
+        probs = probs / probs.sum()
+
+        # Base state (weighted average)
+        base_state = np.average(interpretations, weights=probs, axis=0)
+
+        # Covariance matrix - measures uncertainty/blur
+        if len(interpretations) > 1:
+            interp_array = np.array(interpretations)
+            if interp_array.ndim == 1:
+                interp_array = interp_array.reshape(1, -1)
+
+            try:
+                covariance = np.cov(interp_array.T, aweights=probs)
+            except:
+                covariance = np.zeros((len(base_state), len(base_state)))
+        else:
+            covariance = np.zeros((len(base_state), len(base_state)))
+
+        # Von Neumann entropy - measure of quantum uncertainty
+        try:
+            eigenvalues = np.linalg.eigvalsh(covariance)
+            eigenvalues = eigenvalues[eigenvalues > 1e-10]
+            if len(eigenvalues) > 0:
+                eigenvalues_norm = eigenvalues / eigenvalues.sum()
+                von_neumann_entropy = -np.sum(eigenvalues_norm * np.log(eigenvalues_norm + 1e-10))
+            else:
+                von_neumann_entropy = 0.0
+        except:
+            von_neumann_entropy = 0.0
+
+        # Determine if in superposition
+        uncertainty = np.sqrt(np.trace(covariance))
+        is_superposed = uncertainty > self.superposition_threshold
+
+        return {
+            'base_state': base_state.tolist(),
+            'superposition': is_superposed,
+            'states': [state.tolist() for state in interpretations],
+            'probabilities': probs.tolist(),
+            'covariance': covariance.tolist(),
+            'von_neumann_entropy': float(von_neumann_entropy),
+            'uncertainty': float(uncertainty),
+            'collapsed': False
+        }
+
+def generate_alternative_interpretations(text: str, base_coords: np.ndarray) -> Dict:
+    """
+    Generate alternative interpretations for ambiguous text.
+
+    Args:
+        text: Text to analyze
+        base_coords: Base coordinates
+
+    Returns:
+        Dictionary with alternative states and probabilities
+    """
+    interpretations = [base_coords]
+    probabilities = [0.5]  # Base interpretation has highest probability
+
+    # Generate variations based on text characteristics
+    text_lower = text.lower()
+
+    # If question, add high-entropy interpretation
+    if '?' in text:
+        high_entropy = base_coords.copy()
+        high_entropy[2] = min(high_entropy[2] * 1.5, 1.0)
+        interpretations.append(high_entropy)
+        probabilities.append(0.3)
+
+    # If conditional markers, add low-determination interpretation
+    if any(word in text_lower for word in ['może', 'chyba', 'gdyby']):
+        low_determination = base_coords.copy()
+        low_determination[0] *= 0.7
+        interpretations.append(low_determination)
+        probabilities.append(0.2)
+
+    return {
+        'states': interpretations,
+        'probabilities': probabilities
+    }
+
 class QuantumMorphosyntaxEngine:
     def calculate_adaptive_weights(self, text: str, morph_meta: Dict, synt_meta: Dict) -> Tuple[float, float]:
         word_count = len(text.split())
@@ -575,6 +938,9 @@ class QuantumMorphosyntaxEngine:
             self.constitutional_calculator = ConstitutionalDualityCalculator()
         else:
             self.constitutional_calculator = None
+
+        # Initialize quantum ambiguity analyzer
+        self.quantum_ambiguity_analyzer = QuantumAmbiguityAnalyzer()
 
     def analyze_morphology_quantum(self, text: str) -> Tuple[np.ndarray, Dict, Dict[str, QuantumSemanticState]]:
         """Morphological analysis with quantum superposition."""
@@ -795,6 +1161,9 @@ class QuantumMorphosyntaxEngine:
                 # Count dependencies
                 dep_counts = {}
                 max_depth = 0
+                avg_depth = 0
+                depth_variance = 0
+                depth_list = []
                 entanglements = []
                 total_tokens = len(doc)
                 
@@ -802,8 +1171,10 @@ class QuantumMorphosyntaxEngine:
                     dep = token.dep_
                     if dep:  # Only count non-empty dependencies
                         dep_counts[dep] = dep_counts.get(dep, 0) + 1
-                    
+
+                    # Enhanced depth calculation with full tree analysis
                     depth = len(list(token.ancestors))
+                    depth_list.append(depth)
                     max_depth = max(max_depth, depth)
                     
                     # Check for syntactic entanglement
@@ -816,7 +1187,15 @@ class QuantumMorphosyntaxEngine:
                             if interference > ENTANGLEMENT_THRESHOLD:
                                 self.create_entanglement(head_form, token_form, coupling_strength=0.5)
                                 entanglements.append((head_form, token_form, interference))
-                
+
+                # Calculate depth statistics
+                if depth_list:
+                    avg_depth = np.mean(depth_list)
+                    depth_variance = np.var(depth_list)
+                else:
+                    avg_depth = 0
+                    depth_variance = 0
+
                 # If we got this far but have no meaningful dependencies, use fallback
                 if not dep_counts or len(dep_counts) < 2:
                     print("  SYNTAX: Too few dependency types found, using fallback")
@@ -883,6 +1262,8 @@ class QuantumMorphosyntaxEngine:
                     'tokens': total_tokens,
                     'sentences': len(sentences),
                     'max_depth': max_depth,
+                    'avg_depth': float(avg_depth),
+                    'depth_variance': float(depth_variance),
                     'dependencies': dep_counts,
                     'dep_types': num_dep_types,
                     'core_ratio': core_count / total_tokens if total_tokens > 0 else 0
@@ -1076,7 +1457,11 @@ class QuantumMorphosyntaxEngine:
         
         # Run syntactic analysis with entanglement detection
         synt_coords, synt_meta, entanglements = self.analyze_syntax_quantum(text, word_quantum_states)
-        
+
+        # TEMPORAL ANALYSIS
+        doc = nlp(text) if nlp else None
+        temporal_coords, temporal_meta = analyze_temporality(text, doc)
+
         # Calculate quantum coherence metrics
         total_quantum_coherence = 0.0
         if word_quantum_states:
@@ -1096,6 +1481,31 @@ class QuantumMorphosyntaxEngine:
         
         final_coords = morph_weight * morph_coords + synt_weight * synt_coords
         final_coords = np.clip(final_coords, 0, 1)
+
+        # ENHANCED RHETORICAL ANALYSIS (Extended from gtmo_extended.py)
+        rhetorical_coords, rhetorical_mode, rhetorical_metadata_extended = detect_enhanced_rhetorical_mode(
+            text, final_coords, morph_meta
+        )
+
+        # If irony/paradox detected, update final coordinates
+        if rhetorical_mode in ['irony', 'paradox']:
+            final_coords = rhetorical_coords
+            print(f"  🎭 EXTENDED RHETORICAL: {rhetorical_mode.upper()} detected")
+            print(f"     Coordinates transformed: D={final_coords[0]:.3f}, S={final_coords[1]:.3f}, E={final_coords[2]:.3f}")
+
+        # QUANTUM AMBIGUITY ANALYSIS
+        needs_quantum, quantum_ambiguity_meta = self.quantum_ambiguity_analyzer.detect_ambiguity(text)
+
+        quantum_superposition_state = None
+        if needs_quantum:
+            # Generate alternative interpretations
+            alt_interpretations = generate_alternative_interpretations(text, final_coords)
+            quantum_superposition_state = self.quantum_ambiguity_analyzer.create_superposition(
+                alt_interpretations['states'],
+                alt_interpretations.get('probabilities')
+            )
+            print(f"  ⚛️ QUANTUM SUPERPOSITION: {len(alt_interpretations['states'])} states detected")
+            print(f"     Von Neumann entropy: {quantum_superposition_state['von_neumann_entropy']:.4f}")
 
         # Quantum tensor: T_quantum = D × S × (1-E)
         D = float(final_coords[0])
@@ -1192,6 +1602,51 @@ class QuantumMorphosyntaxEngine:
         # Add topological classification if present
         if 'topological_classification' in axiom_result:
             result["topology"] = axiom_result['topological_classification']
+
+        # Add temporal analysis
+        result["temporal_analysis"] = {
+            "coordinates": {
+                "determination": round(float(temporal_coords[0]), 4),
+                "stability": round(float(temporal_coords[1]), 4),
+                "entropy": round(float(temporal_coords[2]), 4)
+            },
+            "tenses": temporal_meta.get('tenses', {}),
+            "aspects": temporal_meta.get('aspects', {}),
+            "dominant_time": temporal_meta.get('dominant_time', None)
+        }
+
+        # Add extended rhetorical analysis
+        result["extended_rhetorical_analysis"] = {
+            "mode": rhetorical_mode,
+            "irony_score": round(rhetorical_metadata_extended.get('irony_score', 0.0), 4),
+            "paradox_score": round(rhetorical_metadata_extended.get('paradox_score', 0.0), 4),
+            "sarcasm_score": round(rhetorical_metadata_extended.get('sarcasm_score', 0.0), 4),
+            "context_score": round(rhetorical_metadata_extended.get('context_score', 0.0), 4),
+            "detected_markers": rhetorical_metadata_extended.get('detected_markers', [])
+        }
+
+        # Add quantum ambiguity analysis
+        result["quantum_ambiguity"] = {
+            "needs_superposition": needs_quantum,
+            "ambiguity_score": quantum_ambiguity_meta.get('ambiguity_score', 0.0),
+            "ambiguity_markers": quantum_ambiguity_meta.get('ambiguity_markers', []),
+            "marker_count": quantum_ambiguity_meta.get('marker_count', 0)
+        }
+
+        if quantum_superposition_state:
+            result["quantum_ambiguity"]["superposition_state"] = {
+                "von_neumann_entropy": round(quantum_superposition_state['von_neumann_entropy'], 4),
+                "uncertainty": round(quantum_superposition_state['uncertainty'], 4),
+                "num_states": len(quantum_superposition_state['states']),
+                "probabilities": [round(p, 4) for p in quantum_superposition_state['probabilities']]
+            }
+
+        # Add enhanced depth metrics
+        result["depth_metrics"] = {
+            "max_depth": synt_meta.get('max_depth', 0),
+            "avg_depth": round(synt_meta.get('avg_depth', 0.0), 4),
+            "depth_variance": round(synt_meta.get('depth_variance', 0.0), 4)
+        }
 
         print(f"  FINAL: D={D:.3f}, S={S:.3f}, E={E:.3f}")
         print(tensor_print)
