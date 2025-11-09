@@ -412,15 +412,20 @@ class GTMOOptimizedSaver:
 
     def save_full_document_analysis(self,
                                    source_file: str,
-                                   sentences: List[str],
-                                   sentence_analyses: List[Dict],
+                                   articles: List[str] = None,
+                                   article_analyses: List[Dict] = None,
+                                   sentences: List[str] = None,
+                                   sentence_analyses: List[Dict] = None,
                                    compress: bool = False) -> str:
         """
-        Save complete document analysis with all sentences.
+        Save complete document analysis with all articles or sentences.
+        Supports both article-based (legal docs) and sentence-based (general text) analysis.
 
         Args:
             source_file: Path to source .md file
-            sentences: List of all sentences
+            articles: List of all articles (for legal documents)
+            article_analyses: List of all article analysis results
+            sentences: List of all sentences (for general documents)
             sentence_analyses: List of all sentence analysis results
             compress: Whether to gzip the output
 
@@ -430,6 +435,18 @@ class GTMOOptimizedSaver:
         if not self.current_analysis_folder:
             raise ValueError("No analysis folder created. Call create_analysis_folder() first.")
 
+        # Determine if we're processing articles or sentences
+        if article_analyses is not None:
+            analyses = article_analyses
+            units = articles if articles else []
+            unit_type = "articles"
+        elif sentence_analyses is not None:
+            analyses = sentence_analyses
+            units = sentences if sentences else []
+            unit_type = "sentences"
+        else:
+            raise ValueError("Either article_analyses or sentence_analyses must be provided")
+
         filename = "full_document.json"
         if compress:
             filename = "full_document.json.gz"
@@ -437,10 +454,10 @@ class GTMOOptimizedSaver:
         filepath = self.current_analysis_folder / filename
 
         # Calculate aggregate metrics
-        if sentence_analyses:
-            d_values = [a['coordinates']['determination'] for a in sentence_analyses if 'coordinates' in a]
-            s_values = [a['coordinates']['stability'] for a in sentence_analyses if 'coordinates' in a]
-            e_values = [a['coordinates']['entropy'] for a in sentence_analyses if 'coordinates' in a]
+        if analyses:
+            d_values = [a['coordinates']['determination'] for a in analyses if 'coordinates' in a]
+            s_values = [a['coordinates']['stability'] for a in analyses if 'coordinates' in a]
+            e_values = [a['coordinates']['entropy'] for a in analyses if 'coordinates' in a]
 
             aggregate_coords = {
                 'determination': sum(d_values) / len(d_values) if d_values else 0.5,
@@ -448,10 +465,10 @@ class GTMOOptimizedSaver:
                 'entropy': sum(e_values) / len(e_values) if e_values else 0.5
             }
 
-            # Aggregate ambiguity and depth across sentences
+            # Aggregate ambiguity and depth across units
             ambiguities = []
             depths = []
-            for a in sentence_analyses:
+            for a in analyses:
                 # Prefer top-level keys if present, fallback to nested metrics
                 amb = a.get('ambiguity')
                 if amb is None:
@@ -468,7 +485,7 @@ class GTMOOptimizedSaver:
             # Aggregate geometric factors (with fallback to nested constitutional metrics)
             balances = []
             tensions = []
-            for a in sentence_analyses:
+            for a in analyses:
                 bal = a.get('geometric_balance')
                 if bal is None:
                     bal = (
@@ -581,10 +598,11 @@ class GTMOOptimizedSaver:
                 'hash': self._calculate_file_hash(source_file) if Path(source_file).exists() else None
             },
             'document_metadata': {
-                'total_sentences': len(sentences),
-                'analyzed_sentences': len(sentence_analyses),
-                'total_characters': sum(len(s) for s in sentences),
-                'total_words': sum(len(s.split()) for s in sentences)
+                'unit_type': unit_type,
+                'total_units': len(units),
+                'analyzed_units': len(analyses),
+                'total_characters': sum(len(u) for u in units),
+                'total_words': sum(len(u.split()) for u in units)
             },
             'aggregate_coordinates': {
                 'determination': round(aggregate_coords['determination'], 6),
@@ -593,7 +611,7 @@ class GTMOOptimizedSaver:
             },
             'aggregate_metrics': aggregate_metrics,
             'interpretation': self._generate_interpretation(aggregate_coords),
-            'sentences': sentence_analyses,
+            unit_type: analyses,
             'analysis_metadata': {
                 'analyzed_at': timestamp.isoformat(),
                 'daily_date': self.current_date,
@@ -655,6 +673,52 @@ class GTMOOptimizedSaver:
                 json.dump(result, f, ensure_ascii=False, indent=2)
 
         logger.info(f"Saved sentence {sentence_number} analysis to: {filepath}")
+        return str(filepath)
+
+    def save_article_analysis(self,
+                             result: Dict,
+                             article: str,
+                             article_number: int,
+                             compress: bool = False) -> str:
+        """
+        Save individual article analysis result (article = complete legal unit with all paragraphs).
+
+        Args:
+            result: Complete GTMØ analysis result
+            article: Original article text (including all paragraphs)
+            article_number: Article number in document
+            compress: Whether to gzip the output
+
+        Returns:
+            Path to saved JSON file
+        """
+        if not self.current_analysis_folder:
+            raise ValueError("No analysis folder created. Call create_analysis_folder() first.")
+
+        # Create filename with article number
+        custom_filename = f"article_{article_number:03d}.json"
+        if compress:
+            custom_filename = custom_filename.replace('.json', '.json.gz')
+
+        filepath = self.current_analysis_folder / custom_filename
+
+        # Ensure result has proper structure and add article info
+        if 'analysis_metadata' not in result:
+            result['analysis_metadata'] = {}
+
+        result['analysis_metadata']['article_number'] = article_number
+        result['analysis_metadata']['saved_at'] = datetime.now().isoformat()
+        result['analysis_metadata']['unit_type'] = 'legal_article'
+
+        # Save file
+        if compress:
+            with gzip.open(filepath, 'wt', encoding='utf-8') as f:
+                json.dump(result, f, ensure_ascii=False, indent=2)
+        else:
+            with open(filepath, 'w', encoding='utf-8') as f:
+                json.dump(result, f, ensure_ascii=False, indent=2)
+
+        logger.info(f"Saved article {article_number} analysis to: {filepath}")
         return str(filepath)
 
 

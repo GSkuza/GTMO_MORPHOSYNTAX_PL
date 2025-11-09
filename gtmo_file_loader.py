@@ -406,35 +406,61 @@ def main():
 
 def load_markdown_file(file_path: str) -> List[str]:
     """
-    Load and parse a markdown file into sentences.
-    
+    Load and parse a markdown file into legal articles (not sentences).
+    For legal documents, each article with all its paragraphs is one unit.
+
     Args:
         file_path: Path to the markdown file
-        
+
     Returns:
-        List of sentences from the file
+        List of articles (complete legal units)
     """
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
-        
+
         # Remove markdown formatting
         content = re.sub(r'#+ ', '', content)  # Remove headers
         content = re.sub(r'\*\*(.*?)\*\*', r'\1', content)  # Remove bold
         content = re.sub(r'\*(.*?)\*', r'\1', content)  # Remove italic
         content = re.sub(r'\[(.*?)\]\(.*?\)', r'\1', content)  # Remove links
         content = re.sub(r'`(.*?)`', r'\1', content)  # Remove code
-        
-        # Split into sentences using spaCy
-        doc = nlp(content)
-        sentences = [sent.text.strip() for sent in doc.sents if sent.text.strip()]
-        
-        # Filter out very short sentences (less than 10 characters)
-        sentences = [s for s in sentences if len(s) >= 10]
-        
-        logger.info(f"Loaded {len(sentences)} sentences from {file_path}")
-        return sentences
-        
+
+        # Find article boundaries using lookahead to capture full content
+        # Matches from "Art. X" to the next "Art. Y" (or end of document)
+        # This preserves all paragraphs (§1, §2, §3) within one article
+        # Using DOTALL flag and .*? for lazy matching until next article
+        article_pattern = r'(?:Art\.|Artykuł|ART\.)\s*\d+\.?\s*.*?(?=(?:Art\.|Artykuł|ART\.)\s*\d+\.|\Z)'
+
+        article_matches = re.findall(article_pattern, content, flags=re.MULTILINE | re.IGNORECASE | re.DOTALL)
+
+        articles = []
+
+        if article_matches:
+            for match in article_matches:
+                # Clean up excessive whitespace but preserve paragraph structure
+                article_text = re.sub(r'\n\s*\n', '\n', match)  # Remove blank lines
+                article_text = re.sub(r'[ \t]+', ' ', article_text)  # Normalize spaces
+                article_text = article_text.strip()
+
+                # Skip metadata headers (©Kancelaria, Dz. U., etc.)
+                if any(skip in article_text[:30] for skip in ['©Kancelaria', 'Dz. U.', 'U S T A W A', 'KSIĘGA', 'TYTUŁ', 'DZIAŁ', 'Rozdział']):
+                    continue
+
+                # Filter very short fragments (likely headers or metadata)
+                if len(article_text) >= 50:  # Increased threshold for meaningful articles
+                    articles.append(article_text)
+        else:
+            # No articles found - try splitting by paragraphs
+            paragraphs = content.split('\n\n')
+            for para in paragraphs:
+                para_clean = re.sub(r'\s+', ' ', para).strip()
+                if len(para_clean) >= 20:
+                    articles.append(para_clean)
+
+        logger.info(f"Loaded {len(articles)} articles from {file_path}")
+        return articles
+
     except Exception as e:
         logger.error(f"Error loading file {file_path}: {e}")
         return []

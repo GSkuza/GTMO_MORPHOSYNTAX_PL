@@ -60,6 +60,37 @@ except ImportError:
     CONSTITUTIONAL_DUALITY_AVAILABLE = False
     # print("✗ GTMØ Constitutional Duality Calculator not available")
 
+# Import file loader for markdown parsing
+try:
+    from gtmo_file_loader import load_markdown_file
+    FILE_LOADER_AVAILABLE = True
+except ImportError:
+    FILE_LOADER_AVAILABLE = False
+    # Fallback will be defined below if needed
+
+# Import topological attractors module
+try:
+    from gtmo_topological_attractors import (
+        TopologicalAttractorAnalyzer,
+        TemporalEvolutionAnalyzer,
+        analyze_topological_context
+    )
+    TOPOLOGICAL_ATTRACTORS_AVAILABLE = True
+except ImportError:
+    TOPOLOGICAL_ATTRACTORS_AVAILABLE = False
+    # print("✗ GTMØ Topological Attractors not available")
+
+# Import enhanced quantum metrics module
+try:
+    from gtmo_quantum_enhanced import (
+        EnhancedQuantumAnalyzer,
+        analyze_quantum_enhanced
+    )
+    QUANTUM_ENHANCED_AVAILABLE = True
+except ImportError:
+    QUANTUM_ENHANCED_AVAILABLE = False
+    # print("✗ GTMØ Enhanced Quantum Metrics not available")
+
 # Required imports
 try:
     import morfeusz2
@@ -942,6 +973,20 @@ class QuantumMorphosyntaxEngine:
         # Initialize quantum ambiguity analyzer
         self.quantum_ambiguity_analyzer = QuantumAmbiguityAnalyzer()
 
+        # Initialize topological attractors analyzer
+        if TOPOLOGICAL_ATTRACTORS_AVAILABLE:
+            self.topological_analyzer = TopologicalAttractorAnalyzer()
+            self.temporal_evolution = TemporalEvolutionAnalyzer(history_size=100)
+        else:
+            self.topological_analyzer = None
+            self.temporal_evolution = None
+
+        # Initialize enhanced quantum analyzer
+        if QUANTUM_ENHANCED_AVAILABLE:
+            self.quantum_enhanced = EnhancedQuantumAnalyzer()
+        else:
+            self.quantum_enhanced = None
+
     def analyze_morphology_quantum(self, text: str) -> Tuple[np.ndarray, Dict, Dict[str, QuantumSemanticState]]:
         """Morphological analysis with quantum superposition."""
         if not morfeusz:
@@ -1788,54 +1833,81 @@ class QuantumMorphosyntaxEngine:
                 "error": "ConstitutionalDualityCalculator not available"
             }
 
+        # ========================================================================
+        # TOPOLOGICAL ATTRACTORS ANALYSIS
+        # ========================================================================
+        if self.topological_analyzer:
+            try:
+                coords_array = np.array([D, S, E])
+
+                # Find nearest attractor
+                nearest_name, distance, attractor_meta = \
+                    self.topological_analyzer.find_nearest_attractor(coords_array)
+
+                # Basin analysis
+                basin_analysis = self.topological_analyzer.analyze_basin_of_attraction(coords_array)
+
+                # Add to temporal evolution if enabled
+                if self.temporal_evolution:
+                    import time
+                    self.temporal_evolution.add_state(coords_array, timestamp=time.time())
+
+                    # Get evolution summary if we have history
+                    evolution_summary = self.temporal_evolution.get_evolution_summary()
+
+                result["topological_attractors"] = {
+                    "nearest_attractor": attractor_meta,
+                    "basin_analysis": basin_analysis
+                }
+
+                if self.temporal_evolution and evolution_summary and 'error' not in evolution_summary:
+                    result["temporal_evolution"] = evolution_summary
+
+                print(f"  🌐 TOPOLOGICAL: Nearest attractor = {attractor_meta['attractor_name']}")
+                print(f"     Distance: {distance:.3f}, In basin: {attractor_meta['in_basin']}")
+
+            except Exception as e:
+                print(f"  ⚠️ Topological analysis failed: {e}")
+
+        # ========================================================================
+        # ENHANCED QUANTUM METRICS
+        # ========================================================================
+        if self.quantum_enhanced:
+            try:
+                # Extract words - use final_coords for all words since per-word coords aren't stored
+                words = list(word_quantum_states.keys())
+
+                # Use the final D-S-E coordinates for all words
+                # (This is a simplification - in future could modify morphology analysis to store per-word coords)
+                coords_per_word = [np.array([D, S, E]) for _ in words]
+
+                if len(words) > 0:
+                    from gtmo_quantum_enhanced import analyze_quantum_enhanced as qe_analyze
+
+                    quantum_enhanced_result = qe_analyze(
+                        text=text,
+                        words=words,
+                        coords_per_word=coords_per_word,
+                        base_coherence=total_quantum_coherence
+                    )
+
+                    result["quantum_enhanced"] = quantum_enhanced_result
+
+                    print(f"  ⚛️ QUANTUM ENHANCED: {quantum_enhanced_result['num_quantum_states']} states")
+                    print(f"     Phase coherence: {quantum_enhanced_result['coherence_detailed']['phase_coherence']:.3f}")
+                    print(f"     Entanglement: {quantum_enhanced_result['entanglement']['mean_entanglement']:.3f}")
+                    print(f"     Classification: {quantum_enhanced_result['quantum_classification']}")
+
+            except Exception as e:
+                print(f"  ⚠️ Enhanced quantum analysis failed: {e}")
+
         return result
 
 
 # ==================================================
 # UTILITY FUNCTIONS
 # ==================================================
-
-def load_markdown_file(file_path: str) -> List[str]:
-    """
-    Load and parse a markdown file into sentences.
-    
-    Args:
-        file_path: Path to the markdown file
-        
-    Returns:
-        List of sentences from the file
-    """
-    import re
-    
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Remove markdown formatting
-        content = re.sub(r'#+ ', '', content)  # Remove headers
-        content = re.sub(r'\*\*(.*?)\*\*', r'\1', content)  # Remove bold
-        content = re.sub(r'\*(.*?)\*', r'\1', content)  # Remove italic
-        content = re.sub(r'\[(.*?)\]\(.*?\)', r'\1', content)  # Remove links
-        content = re.sub(r'`(.*?)`', r'\1', content)  # Remove code
-        
-        # Split into sentences using spaCy if available
-        if nlp:
-            doc = nlp(content)
-            sentences = [sent.text.strip() for sent in doc.sents if sent.text.strip()]
-        else:
-            # Fallback: simple sentence splitting
-            sentences = re.split(r'[.!?]+', content)
-            sentences = [s.strip() for s in sentences if s.strip()]
-        
-        # Filter out very short sentences (less than 10 characters)
-        sentences = [s for s in sentences if len(s) >= 10]
-        
-        print(f"📄 Loaded {len(sentences)} sentences from {file_path}")
-        return sentences
-        
-    except Exception as e:
-        print(f"❌ Error loading file {file_path}: {e}")
-        return []
+# Note: load_markdown_file() is now imported from gtmo_file_loader module
 
 # ==================================================
 # MAIN ANALYSIS FUNCTIONS
@@ -1883,23 +1955,23 @@ if __name__ == "__main__":
         print(f"🔍 Loading file: {file_path}")
         
         try:
-            # Load markdown file
-            sentences = load_markdown_file(file_path)
-            
-            if not sentences:
-                print("❌ No sentences found in file")
+            # Load markdown file - now returns articles, not sentences
+            articles = load_markdown_file(file_path)
+
+            if not articles:
+                print("❌ No articles found in file")
                 sys.exit(1)
-            
-            print(f"📄 Found {len(sentences)} sentences")
+
+            print(f"📄 Found {len(articles)} articles/units")
             print("🌟 Starting GTMØ Quantum Analysis...")
             print("=" * 70)
-            
+
             if not morfeusz or not nlp:
                 print("❌ Missing required components. Install:")
                 print("pip install morfeusz2 spacy")
                 print("python -m spacy download pl_core_news_lg")
                 sys.exit(1)
-            
+
             # Initialize saver
             saver = GTMOOptimizedSaver()
 
@@ -1907,38 +1979,90 @@ if __name__ == "__main__":
             analysis_folder = saver.create_analysis_folder(os.path.basename(file_path))
             print(f"📁 Created analysis folder: {analysis_folder}")
 
-            # Store all sentence analyses for full document
-            sentence_analyses = []
+            # Store all article analyses for full document
+            article_analyses = []
 
-            # Analyze each sentence and save individually
-            for i, sentence in enumerate(sentences, 1):
-                print(f"\n🌌 Analyzing sentence {i}/{len(sentences)}")
-                print(f"Text: {sentence[:60]}{'...' if len(sentence) > 60 else ''}")
+            # Analyze each article and save individually
+            for i, article in enumerate(articles, 1):
+                print(f"\n🌌 Analyzing article {i}/{len(articles)}")
+                print(f"Text: {article[:100]}{'...' if len(article) > 100 else ''}")
 
                 try:
-                    # Analyze single sentence
-                    result = analyze_quantum_with_axioms(sentence, os.path.basename(file_path))
-                    result["sentence_number"] = i
-                    result["total_sentences"] = len(sentences)
+                    # Split article into paragraphs (§1, §2, §3, etc.)
+                    import re
+                    paragraph_pattern = r'§\s*\d+[^\n]*(?:\n(?!§\s*\d+)[^\n]*)*'
+                    paragraph_matches = re.findall(paragraph_pattern, article, flags=re.MULTILINE | re.DOTALL)
 
-                    # Save individual sentence result
-                    saved_file = saver.save_sentence_analysis(result, sentence, i)
-                    print(f"✅ Saved sentence to: {saved_file}")
+                    # If no paragraphs found, treat entire article as one unit
+                    if not paragraph_matches:
+                        paragraph_matches = [article]
+
+                    # Analyze each paragraph
+                    paragraph_analyses = []
+                    total_sentences = 0
+
+                    for p_idx, paragraph in enumerate(paragraph_matches, 1):
+                        # Split paragraph into sentences using spaCy
+                        if nlp:
+                            doc = nlp(paragraph)
+                            sentences = [sent.text.strip() for sent in doc.sents if sent.text.strip() and len(sent.text.strip()) >= 10]
+                        else:
+                            # Fallback: simple sentence splitting
+                            sentences = re.split(r'[.!?]+', paragraph)
+                            sentences = [s.strip() for s in sentences if s.strip() and len(s.strip()) >= 10]
+
+                        # Analyze each sentence in paragraph
+                        sentence_analyses = []
+                        for s_idx, sentence in enumerate(sentences, 1):
+                            try:
+                                sent_result = analyze_quantum_with_axioms(sentence, os.path.basename(file_path))
+                                sent_result['sentence_number'] = s_idx
+                                sent_result['paragraph_number'] = p_idx
+                                sentence_analyses.append(sent_result)
+                            except Exception as e:
+                                print(f"  ⚠️  Error analyzing sentence {s_idx} in §{p_idx}: {e}")
+                                continue
+
+                        # Analyze entire paragraph
+                        try:
+                            para_result = analyze_quantum_with_axioms(paragraph, os.path.basename(file_path))
+                            para_result['paragraph_number'] = p_idx
+                            para_result['sentence_count'] = len(sentences)
+                            para_result['sentences'] = sentence_analyses
+                            paragraph_analyses.append(para_result)
+                            total_sentences += len(sentences)
+                            print(f"  ✓ §{p_idx}: {len(sentences)} sentences analyzed")
+                        except Exception as e:
+                            print(f"  ⚠️  Error analyzing paragraph {p_idx}: {e}")
+                            continue
+
+                    # Analyze complete article (all paragraphs together)
+                    result = analyze_quantum_with_axioms(article, os.path.basename(file_path))
+                    result["article_number"] = i
+                    result["total_articles"] = len(articles)
+                    result["paragraph_count"] = len(paragraph_matches)
+                    result["sentence_count"] = total_sentences
+                    result["paragraphs"] = paragraph_analyses
+
+                    # Save individual article result
+                    saved_file = saver.save_article_analysis(result, article, i)
+                    print(f"✅ Saved article to: {saved_file}")
+                    print(f"   Hierarchy: {len(paragraph_matches)} paragraphs, {total_sentences} sentences")
 
                     # Store for full document analysis
-                    sentence_analyses.append(result)
+                    article_analyses.append(result)
 
                 except Exception as e:
-                    print(f"❌ Error analyzing sentence {i}: {e}")
+                    print(f"❌ Error analyzing article {i}: {e}")
                     continue
 
             # Save full document analysis
-            if sentence_analyses:
+            if article_analyses:
                 try:
                     full_doc_file = saver.save_full_document_analysis(
                         source_file=file_path,
-                        sentences=sentences,
-                        sentence_analyses=sentence_analyses
+                        articles=articles,
+                        article_analyses=article_analyses
                     )
                     print(f"\n📄 Saved full document analysis to: {full_doc_file}")
                 except Exception as e:
