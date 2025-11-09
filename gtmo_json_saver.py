@@ -30,7 +30,7 @@ class GTMOOptimizedSaver:
     def __init__(self, output_dir: str = "gtmo_results"):
         """
         Initialize optimized JSON saver.
-        
+
         Args:
             output_dir: Directory for saving results
         """
@@ -38,6 +38,7 @@ class GTMOOptimizedSaver:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.daily_counter = self._initialize_daily_counter()
         self.current_date = datetime.now().strftime("%d%m%Y")
+        self.current_analysis_folder = None  # Track current analysis folder
         
     def _initialize_daily_counter(self) -> int:
         """
@@ -373,47 +374,113 @@ class GTMOOptimizedSaver:
             with open(filepath, 'r', encoding='utf-8') as f:
                 return json.load(f)
     
-    def save_sentence_analysis(self, 
-                             result: Dict,
-                             sentence: str,
-                             sentence_number: int,
-                             compress: bool = False) -> str:
+    def create_analysis_folder(self, source_file_name: str = None) -> Path:
         """
-        Save individual sentence analysis result with optimized format.
-        
+        Create a new subfolder for current analysis.
+
         Args:
-            result: Complete GTMØ analysis result
-            sentence: Original sentence text
-            sentence_number: Sentence number in document
+            source_file_name: Optional source file name to include in folder name
+
+        Returns:
+            Path to created folder
+        """
+        # Check if date changed (new day)
+        current_date = datetime.now().strftime("%d%m%Y")
+        if current_date != self.current_date:
+            self.current_date = current_date
+            self.daily_counter = 1
+
+        # Create folder name
+        if source_file_name:
+            # Remove extension and clean filename
+            clean_name = Path(source_file_name).stem
+            clean_name = clean_name.replace(' ', '_')
+            folder_name = f"analysis_{self.current_date}_no{self.daily_counter}_{clean_name}"
+        else:
+            folder_name = f"analysis_{self.current_date}_no{self.daily_counter}"
+
+        # Create folder
+        analysis_folder = self.output_dir / folder_name
+        analysis_folder.mkdir(parents=True, exist_ok=True)
+
+        self.current_analysis_folder = analysis_folder
+        self.daily_counter += 1
+
+        logger.info(f"Created analysis folder: {analysis_folder}")
+        return analysis_folder
+
+    def save_full_document_analysis(self,
+                                   source_file: str,
+                                   sentences: List[str],
+                                   sentence_analyses: List[Dict],
+                                   compress: bool = False) -> str:
+        """
+        Save complete document analysis with all sentences.
+
+        Args:
+            source_file: Path to source .md file
+            sentences: List of all sentences
+            sentence_analyses: List of all sentence analysis results
             compress: Whether to gzip the output
-            
+
         Returns:
             Path to saved JSON file
         """
-        # Generate filename
-        filename = self._get_next_filename()
+        if not self.current_analysis_folder:
+            raise ValueError("No analysis folder created. Call create_analysis_folder() first.")
+
+        filename = "full_document.json"
         if compress:
-            filename = filename.replace('.json', '.json.gz')
-        
-        # Create custom filename with sentence number
-        base_name = filename.replace('.json', '')
-        if compress:
-            base_name = base_name.replace('.gz', '')
-        
-        custom_filename = f"{base_name}_sentence_{sentence_number}.json"
-        if compress:
-            custom_filename += ".gz"
-        
-        filepath = self.output_dir / custom_filename
-        
-        # Ensure result has proper structure and add sentence info
-        if 'analysis_metadata' not in result:
-            result['analysis_metadata'] = {}
-        
-        result['analysis_metadata']['sentence_number'] = sentence_number
-        result['analysis_metadata']['saved_at'] = datetime.now().isoformat()
-        result['analysis_metadata']['file_counter'] = self.daily_counter - 1
-        
+            filename = "full_document.json.gz"
+
+        filepath = self.current_analysis_folder / filename
+
+        # Calculate aggregate metrics
+        if sentence_analyses:
+            d_values = [a['coordinates']['determination'] for a in sentence_analyses if 'coordinates' in a]
+            s_values = [a['coordinates']['stability'] for a in sentence_analyses if 'coordinates' in a]
+            e_values = [a['coordinates']['entropy'] for a in sentence_analyses if 'coordinates' in a]
+
+            aggregate_coords = {
+                'determination': sum(d_values) / len(d_values) if d_values else 0.5,
+                'stability': sum(s_values) / len(s_values) if s_values else 0.5,
+                'entropy': sum(e_values) / len(e_values) if e_values else 0.5
+            }
+        else:
+            aggregate_coords = {'determination': 0.5, 'stability': 0.5, 'entropy': 0.5}
+
+        # Prepare full document result
+        timestamp = datetime.now()
+        result = {
+            'version': '2.0',
+            'analysis_type': 'GTMØ_FULL_DOCUMENT',
+            'timestamp': timestamp.isoformat(),
+            'source_file': {
+                'path': str(source_file),
+                'name': Path(source_file).name,
+                'extension': Path(source_file).suffix,
+                'hash': self._calculate_file_hash(source_file) if Path(source_file).exists() else None
+            },
+            'document_metadata': {
+                'total_sentences': len(sentences),
+                'analyzed_sentences': len(sentence_analyses),
+                'total_characters': sum(len(s) for s in sentences),
+                'total_words': sum(len(s.split()) for s in sentences)
+            },
+            'aggregate_coordinates': {
+                'determination': round(aggregate_coords['determination'], 6),
+                'stability': round(aggregate_coords['stability'], 6),
+                'entropy': round(aggregate_coords['entropy'], 6)
+            },
+            'interpretation': self._generate_interpretation(aggregate_coords),
+            'sentences': sentence_analyses,
+            'analysis_metadata': {
+                'analyzed_at': timestamp.isoformat(),
+                'daily_date': self.current_date,
+                'folder': str(self.current_analysis_folder)
+            }
+        }
+
         # Save file
         if compress:
             with gzip.open(filepath, 'wt', encoding='utf-8') as f:
@@ -421,7 +488,52 @@ class GTMOOptimizedSaver:
         else:
             with open(filepath, 'w', encoding='utf-8') as f:
                 json.dump(result, f, ensure_ascii=False, indent=2)
-        
+
+        logger.info(f"Saved full document analysis to: {filepath}")
+        return str(filepath)
+
+    def save_sentence_analysis(self,
+                             result: Dict,
+                             sentence: str,
+                             sentence_number: int,
+                             compress: bool = False) -> str:
+        """
+        Save individual sentence analysis result with optimized format.
+
+        Args:
+            result: Complete GTMØ analysis result
+            sentence: Original sentence text
+            sentence_number: Sentence number in document
+            compress: Whether to gzip the output
+
+        Returns:
+            Path to saved JSON file
+        """
+        if not self.current_analysis_folder:
+            raise ValueError("No analysis folder created. Call create_analysis_folder() first.")
+
+        # Create filename with sentence number
+        custom_filename = f"sentence_{sentence_number:03d}.json"
+        if compress:
+            custom_filename = custom_filename.replace('.json', '.json.gz')
+
+        filepath = self.current_analysis_folder / custom_filename
+
+        # Ensure result has proper structure and add sentence info
+        if 'analysis_metadata' not in result:
+            result['analysis_metadata'] = {}
+
+        result['analysis_metadata']['sentence_number'] = sentence_number
+        result['analysis_metadata']['saved_at'] = datetime.now().isoformat()
+
+        # Save file
+        if compress:
+            with gzip.open(filepath, 'wt', encoding='utf-8') as f:
+                json.dump(result, f, ensure_ascii=False, indent=2)
+        else:
+            with open(filepath, 'w', encoding='utf-8') as f:
+                json.dump(result, f, ensure_ascii=False, indent=2)
+
         logger.info(f"Saved sentence {sentence_number} analysis to: {filepath}")
         return str(filepath)
 

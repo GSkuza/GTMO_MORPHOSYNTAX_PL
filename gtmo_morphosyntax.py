@@ -1878,27 +1878,49 @@ if __name__ == "__main__":
             
             # Initialize saver
             saver = GTMOOptimizedSaver()
-            
+
+            # Create analysis folder for this document
+            analysis_folder = saver.create_analysis_folder(os.path.basename(file_path))
+            print(f"📁 Created analysis folder: {analysis_folder}")
+
+            # Store all sentence analyses for full document
+            sentence_analyses = []
+
             # Analyze each sentence and save individually
             for i, sentence in enumerate(sentences, 1):
                 print(f"\n🌌 Analyzing sentence {i}/{len(sentences)}")
                 print(f"Text: {sentence[:60]}{'...' if len(sentence) > 60 else ''}")
-                
+
                 try:
                     # Analyze single sentence
                     result = analyze_quantum_with_axioms(sentence, os.path.basename(file_path))
                     result["sentence_number"] = i
                     result["total_sentences"] = len(sentences)
-                    
-                    # Save individual result
+
+                    # Save individual sentence result
                     saved_file = saver.save_sentence_analysis(result, sentence, i)
-                    print(f"✅ Saved to: {saved_file}")
-                    
+                    print(f"✅ Saved sentence to: {saved_file}")
+
+                    # Store for full document analysis
+                    sentence_analyses.append(result)
+
                 except Exception as e:
                     print(f"❌ Error analyzing sentence {i}: {e}")
                     continue
-            
-            print(f"\n🎯 Analysis complete! Check 'gtmo_results' directory for individual JSON files.")
+
+            # Save full document analysis
+            if sentence_analyses:
+                try:
+                    full_doc_file = saver.save_full_document_analysis(
+                        source_file=file_path,
+                        sentences=sentences,
+                        sentence_analyses=sentence_analyses
+                    )
+                    print(f"\n📄 Saved full document analysis to: {full_doc_file}")
+                except Exception as e:
+                    print(f"❌ Error saving full document: {e}")
+
+            print(f"\n🎯 Analysis complete! Check '{analysis_folder}' for results.")
             
         except Exception as e:
             print(f"❌ Error processing file: {e}")
