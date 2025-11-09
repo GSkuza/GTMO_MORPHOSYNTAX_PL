@@ -151,6 +151,8 @@ class ConstitutionalMetrics:
     sa_category: AccessibilityCategory
     structure_classification: StructureClassification
     cd_ci_ratio: float
+    # Enhanced classification label
+    enhanced_structure_classification: str = ""
 
     def to_dict(self) -> Dict:
         """
@@ -266,7 +268,8 @@ class ConstitutionalMetrics:
             "classification": {
                 "type": self.structure_classification.value,
                 "cd_ci_ratio": round(self.cd_ci_ratio, 4),
-                "description": classification_desc
+                "description": classification_desc,
+                "enhanced_type": self.enhanced_structure_classification
             },
             "theoretical_basis": {
                 "derived_from": "Zasada Nieoznaczoności Semantycznej (GTMØ Axiom)",
@@ -333,7 +336,8 @@ class ConstitutionalDualityCalculator:
         depth: int,
         D: float,
         S: float,
-        E: float
+        E: float,
+        inflectional_forms_count: Optional[int] = None
     ) -> ConstitutionalMetrics:
         """
         Oblicz kompletne metryki Constitutional Duality.
@@ -386,13 +390,25 @@ class ConstitutionalDualityCalculator:
 
         # Dekompozycja CI
         CI_morph, CI_synt, CI_sem = self._decompose_CI(
-            ambiguity, depth, geometric_tension, CI
+            ambiguity=ambiguity,
+            depth=depth,
+            D=D,
+            S=S,
+            E=E,
+            geometric_tension=geometric_tension,
+            CI_total=CI,
+            inflectional_forms_count=inflectional_forms_count
         )
 
         # Klasyfikacje
         sa_category = self._classify_accessibility(SA)
         cd_ci_ratio = CD / CI if CI > self.epsilon else float('inf')
         structure_classification = self._classify_structure(cd_ci_ratio)
+
+        # Enhanced structure classification per GTMO criteria
+        ci_sum = CI_morph + CI_synt + CI_sem if (CI_morph + CI_synt + CI_sem) > self.epsilon else 0.0
+        synt_share = (CI_synt / ci_sum) if ci_sum else 0.0
+        enhanced_label = self._classify_structure_enhanced(D, S, E, synt_share)
 
         # Zwróć kompletne metryki
         return ConstitutionalMetrics(
@@ -416,6 +432,7 @@ class ConstitutionalDualityCalculator:
             sa_category=sa_category,
             structure_classification=structure_classification,
             cd_ci_ratio=cd_ci_ratio
+            ,enhanced_structure_classification=enhanced_label
         )
 
     # -------------------------------------------------------------------------
@@ -568,20 +585,24 @@ class ConstitutionalDualityCalculator:
         self,
         ambiguity: float,
         depth: int,
+        D: float,
+        S: float,
+        E: float,
         geometric_tension: float,
-        CI_total: float
+        CI_total: float,
+        inflectional_forms_count: Optional[int] = None
     ) -> Tuple[float, float, float]:
         """
         Rozłóż CI na składniki: morfologiczny, składniowy, semantyczny.
 
-        Dekompozycja:
-            CI_morphological = ambiguity × geometric_tension
-            CI_syntactic = depth × geometric_tension
-            CI_semantic = reszta (z zabezpieczeniem przed ujemnymi wartościami)
+        Dekompozycja zaawansowana:
+            CI_morphological = inflectional_forms_count × ambiguity × tension
+            CI_syntactic = (depth² / ambiguity) × tension
+            CI_semantic = E × depth × ambiguity × balance_inv
 
         Uzasadnienie teoretyczne:
-            - CI_morphological izoluje wpływ fleksji morfologicznej
-            - CI_syntactic izoluje wpływ struktury składniowej
+            - CI_morphological izoluje wpływ fleksji morfologicznej (liczba form × ambiguity)
+            - CI_syntactic izoluje wpływ struktury składniowej (depth²/ambiguity - konkurencja)
             - CI_semantic reprezentuje "czystą" entropię semantyczną F³
 
         Uwaga: Suma nie zawsze równa się dokładnie CI_total ze względu na
@@ -591,29 +612,34 @@ class ConstitutionalDualityCalculator:
         Args:
             ambiguity: średnia liczba interpretacji na słowo
             depth: głębokość składniowa
+            D: Determination coordinate
+            S: Stability coordinate
+            E: Entropy coordinate
             geometric_tension: √(E/(D×S))
             CI_total: całkowite CI z głównej formuły
+            inflectional_forms_count: liczba różnych form fleksyjnych w tekście
 
         Returns:
             (CI_morphological, CI_syntactic, CI_semantic)
         """
-        # Składnik morfologiczny: ambiguity bez depth
-        CI_morph = ambiguity * geometric_tension
+        # Zaawansowana dekompozycja z uwzględnieniem liczby form fleksyjnych
+        DS_safe = max(D * S, self.epsilon)
+        tension = np.sqrt(E / DS_safe)
+        balance_inv = 1.0 / np.sqrt(DS_safe)
 
-        # Składnik składniowy: depth bez ambiguity
-        CI_synt = depth * geometric_tension
+        # Jeśli nie mamy inflectional_forms_count, używamy depth jako proxy
+        infl_count = float(inflectional_forms_count) if inflectional_forms_count is not None else depth
 
-        # Składnik semantyczny: reszta z geometric_tension jako baza
-        # Zabezpieczenie: jeśli suma przekracza CI_total, rescale proporcjonalnie
-        CI_base = geometric_tension
-        CI_prelim_sum = CI_morph + CI_synt + CI_base
+        CI_morph = infl_count * ambiguity * tension
+        CI_synt = (depth ** 2) / max(ambiguity, self.epsilon) * tension
+        CI_sem = E * depth * ambiguity * balance_inv
 
+        CI_prelim_sum = CI_morph + CI_synt + CI_sem
         if CI_prelim_sum > self.epsilon:
-            # Proporcjonalne przeskalowanie do CI_total
             scale_factor = CI_total / CI_prelim_sum
             CI_morph *= scale_factor
             CI_synt *= scale_factor
-            CI_sem = CI_base * scale_factor
+            CI_sem *= scale_factor
         else:
             # Fallback: równy podział
             CI_sem = CI_total / 3.0
@@ -669,6 +695,27 @@ class ConstitutionalDualityCalculator:
             return StructureClassification.BALANCED
         else:
             return StructureClassification.CHAOTIC
+
+    def _classify_structure_enhanced(self, D: float, S: float, E: float, synt_share: float) -> str:
+        """Improved structural classification per GTMO criteria.
+
+        Rules:
+          - PRECISE:    D>0.7, S>0.7, E<0.3
+          - CHAOTIC_STRUCTURE: D<0.4, S<0.4, E>0.6
+          - PARADOX:    S>0.7 and E>0.7
+          - SYNTACTICALLY_COMPLEX: syntactic share of CI > 0.6
+          - STRUCTURED: otherwise
+        """
+        if D > 0.7 and S > 0.7 and E < 0.3:
+            return "PRECISE"
+        elif D < 0.4 and S < 0.4 and E > 0.6:
+            return "CHAOTIC_STRUCTURE"
+        elif S > 0.7 and E > 0.7:
+            return "PARADOX"
+        elif synt_share > 0.6:
+            return "SYNTACTICALLY_COMPLEX"
+        else:
+            return "STRUCTURED"
 
     def _validate_inputs(
         self,

@@ -10,6 +10,7 @@ sequential naming: gtmoanalysisddmmyyyynoX.json
 import json
 import gzip
 import os
+import statistics
 from pathlib import Path
 from typing import Dict, List, Optional, Any, Union
 from datetime import datetime
@@ -446,8 +447,126 @@ class GTMOOptimizedSaver:
                 'stability': sum(s_values) / len(s_values) if s_values else 0.5,
                 'entropy': sum(e_values) / len(e_values) if e_values else 0.5
             }
+
+            # Aggregate ambiguity and depth across sentences
+            ambiguities = []
+            depths = []
+            for a in sentence_analyses:
+                # Prefer top-level keys if present, fallback to nested metrics
+                amb = a.get('ambiguity')
+                if amb is None:
+                    amb = a.get('additional_metrics', {}).get('ambiguity')
+                if amb is not None:
+                    ambiguities.append(float(amb))
+
+                dep = a.get('depth')
+                if dep is None:
+                    dep = a.get('depth_metrics', {}).get('max_depth')
+                if dep is not None:
+                    depths.append(int(dep))
+
+            # Aggregate geometric factors (with fallback to nested constitutional metrics)
+            balances = []
+            tensions = []
+            for a in sentence_analyses:
+                bal = a.get('geometric_balance')
+                if bal is None:
+                    bal = (
+                        a.get('constitutional_metrics', {})
+                         .get('definiteness', {})
+                         .get('components', {})
+                         .get('geometric_balance')
+                    )
+                if bal is not None:
+                    try:
+                        balances.append(float(bal))
+                    except Exception:
+                        pass
+
+                ten = a.get('geometric_tension')
+                if ten is None:
+                    ten = (
+                        a.get('constitutional_metrics', {})
+                         .get('indefiniteness', {})
+                         .get('components', {})
+                         .get('geometric_tension')
+                    )
+                if ten is not None:
+                    try:
+                        tensions.append(float(ten))
+                    except Exception:
+                        pass
+
+            # Coordinates (D,S,E) stats across sentences
+            # Stddev for coordinates
+            d_std = round(statistics.stdev(d_values), 6) if len(d_values) > 1 else None
+            s_std = round(statistics.stdev(s_values), 6) if len(s_values) > 1 else None
+            e_std = round(statistics.stdev(e_values), 6) if len(e_values) > 1 else None
+
+            coord_stats = {
+                'determination': {
+                    'average': round(sum(d_values) / len(d_values), 6) if d_values else None,
+                    'min': round(min(d_values), 6) if d_values else None,
+                    'max': round(max(d_values), 6) if d_values else None,
+                    'stddev': d_std,
+                    'sample_count': len(d_values)
+                },
+                'stability': {
+                    'average': round(sum(s_values) / len(s_values), 6) if s_values else None,
+                    'min': round(min(s_values), 6) if s_values else None,
+                    'max': round(max(s_values), 6) if s_values else None,
+                    'stddev': s_std,
+                    'sample_count': len(s_values)
+                },
+                'entropy': {
+                    'average': round(sum(e_values) / len(e_values), 6) if e_values else None,
+                    'min': round(min(e_values), 6) if e_values else None,
+                    'max': round(max(e_values), 6) if e_values else None,
+                    'stddev': e_std,
+                    'sample_count': len(e_values)
+                }
+            }
+
+            # Precompute standard deviations (None if <2 samples)
+            amb_std = round(statistics.stdev(ambiguities), 4) if len(ambiguities) > 1 else None
+            depth_std = round(statistics.stdev(depths), 4) if len(depths) > 1 else None
+            bal_std = round(statistics.stdev(balances), 6) if len(balances) > 1 else None
+            ten_std = round(statistics.stdev(tensions), 6) if len(tensions) > 1 else None
+
+            aggregate_metrics = {
+                # Ambiguity stats
+                'average_ambiguity': round(sum(ambiguities) / len(ambiguities), 4) if ambiguities else None,
+                'min_ambiguity': round(min(ambiguities), 4) if ambiguities else None,
+                'max_ambiguity': round(max(ambiguities), 4) if ambiguities else None,
+                'std_ambiguity': amb_std,
+                'sample_count_ambiguity': len(ambiguities),
+
+                # Depth stats (based on per-sentence max_depth)
+                'average_max_depth': round(sum(depths) / len(depths), 4) if depths else None,
+                'min_max_depth': int(min(depths)) if depths else None,
+                'max_max_depth': int(max(depths)) if depths else None,
+                'std_max_depth': depth_std,
+                'sample_count_max_depth': len(depths),
+
+                # Geometric balance/tension stats
+                'average_geometric_balance': round(sum(balances) / len(balances), 6) if balances else None,
+                'min_geometric_balance': round(min(balances), 6) if balances else None,
+                'max_geometric_balance': round(max(balances), 6) if balances else None,
+                'std_geometric_balance': bal_std,
+                'sample_count_geometric_balance': len(balances),
+
+                'average_geometric_tension': round(sum(tensions) / len(tensions), 6) if tensions else None,
+                'min_geometric_tension': round(min(tensions), 6) if tensions else None,
+                'max_geometric_tension': round(max(tensions), 6) if tensions else None,
+                'std_geometric_tension': ten_std,
+                'sample_count_geometric_tension': len(tensions),
+
+                # Coordinates stats
+                'coordinates_stats': coord_stats
+            }
         else:
             aggregate_coords = {'determination': 0.5, 'stability': 0.5, 'entropy': 0.5}
+            aggregate_metrics = {'average_ambiguity': None, 'average_max_depth': None, 'max_depth': None}
 
         # Prepare full document result
         timestamp = datetime.now()
@@ -472,6 +591,7 @@ class GTMOOptimizedSaver:
                 'stability': round(aggregate_coords['stability'], 6),
                 'entropy': round(aggregate_coords['entropy'], 6)
             },
+            'aggregate_metrics': aggregate_metrics,
             'interpretation': self._generate_interpretation(aggregate_coords),
             'sentences': sentence_analyses,
             'analysis_metadata': {

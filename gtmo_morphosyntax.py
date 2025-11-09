@@ -1583,6 +1583,14 @@ class QuantumMorphosyntaxEngine:
             })
         }
         
+        # Add explicit top-level depth and ambiguity for convenience
+        try:
+            result["depth"] = synt_meta.get('max_depth', 0)
+            result["ambiguity"] = morph_meta.get('ambiguity', 1.0)
+        except Exception:
+            # keep result intact if metadata missing
+            pass
+
         # Add source file info if provided
         if source_file:
             result["source_file"] = source_file
@@ -1730,7 +1738,8 @@ class QuantumMorphosyntaxEngine:
                 depth=depth,
                 D=D,
                 S=S,
-                E=E
+                E=E,
+                inflectional_forms_count=morph_meta.get('total_analyses')
             )
 
             # Print summary
@@ -1749,6 +1758,21 @@ class QuantumMorphosyntaxEngine:
 
             # Dodaj Constitutional Metrics do JSON using dedicated calculator
             result["constitutional_metrics"] = const_metrics.to_dict()
+
+            # Jawne czynniki geometryczne na poziomie zdania
+            try:
+                result["geometric_balance"] = round(float(const_metrics.geometric_balance), 6)
+                result["geometric_tension"] = round(float(const_metrics.geometric_tension), 6)
+            except Exception:
+                pass
+
+            # Mark critical blocks with low semantic accessibility
+            try:
+                if const_metrics.SA < 0.3:
+                    result["critical_block"] = True
+                    result["critical_reason"] = "LOW_SA"
+            except Exception:
+                pass
 
         else:
             # Fallback gdy Constitutional Calculator niedostępny
