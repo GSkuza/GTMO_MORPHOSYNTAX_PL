@@ -1,0 +1,13 @@
+{
+  "domain_stats": {
+    "total_tokens": 0,
+    "unique_lemmas": 0,
+    "total_files": 1,
+    "domain_name": "konstytucja_rp_2025"
+  },
+  "domain_terms": {},
+  "top_tags": [],
+  "loaded_files": [
+    "D:\\GTMO_MORPHOSYNTAX\\GTMO_MORPHOSYNTAX_PL\\gtmo_results\\analysis_09112025_no1_RP_KONSTYTUCJA\\Konstytucja RP 09 11 2025.json"
+  ]
+}
