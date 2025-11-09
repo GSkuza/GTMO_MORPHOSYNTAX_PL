@@ -497,34 +497,43 @@ class GTMOAxiomSystem:
     
     def _ax9_operator_irreducibility(self, state: Dict) -> Dict:
         """Prevent standard operators from acting on Singularity."""
-        coords = self._extract_coordinates(state)
-        if coords is None:
-            return state
+        try:
+            if state is None or 'coordinates' not in state:
+                raise ValueError("State is None or does not contain 'coordinates' key")
             
-        if 'operation' in state:
-            distance = np.linalg.norm(coords - SINGULARITY_COORDS)
-            if distance < 0.05:
-                blocked_ops = ['add', 'subtract', 'multiply', 'divide']
-                if any(op in str(state['operation']).lower() for op in blocked_ops):
-                    self._activate_axiom("AX9", f"Blocking operator near Ø")
-                    state['operation_result'] = {'type': 'irreducible'}
-                    raise SingularityError(f"AX9: Operator cannot act on Ø")
+            coords = self._extract_coordinates(state)
+            if coords is None:
+                raise ValueError("State does not contain valid coordinates")
+                
+            if 'operation' in state:
+                distance = np.linalg.norm(coords - SINGULARITY_COORDS)
+                if distance < 0.05:
+                    blocked_ops = ['add', 'subtract', 'multiply', 'divide']
+                    if any(op in str(state['operation']).lower() for op in blocked_ops):
+                        self._activate_axiom("AX9", f"Blocking operator near Ø")
+                        state['operation_result'] = {'type': 'irreducible'}
+                        raise SingularityError(f"AX9: Operator cannot act on Ø")
+        except Exception as e:
+            print(f"AX9: Unhandled exception: {str(e)}")
         
         return state
     
     def _ax10_meta_operator_definition(self, state: Dict) -> Dict:
         """Allow only meta-operators near Singularity."""
+        if state is None or 'coordinates' not in state:
+            raise ValueError("State is None or does not contain 'coordinates' key")
+        
         coords = self._extract_coordinates(state)
         if coords is None:
-            return state
-            
+            raise ValueError("State does not contain valid coordinates")
+        
         distance = np.linalg.norm(coords - SINGULARITY_COORDS)
         if distance < 0.05 and 'meta_operation' in state:
             allowed_meta_ops = ['psi_gtmo', 'e_gtmo', 'topology_classification']
             if any(allowed in str(state['meta_operation']).lower() for allowed in allowed_meta_ops):
                 self._activate_axiom("AX10", f"Allowing meta-operator near Ø")
             else:
-                raise SingularityError("AX10: Only meta-operators can act near Ø")
+                raise ValueError(f"AX10: Only meta-operators can act near Ø, but {state['meta_operation']} was found")
         
         return state
     
@@ -1628,6 +1637,13 @@ class QuantumMorphosyntaxEngine:
             })
         }
         
+        # Compute Φ⁹ and attach to result
+        try:
+            _phi9_arr = F3_to_Phi9(float(final_coords[0]), float(final_coords[1]), float(final_coords[2]))
+            result["phi9"] = [float(x) for x in np.asarray(_phi9_arr).flatten().tolist()]
+        except Exception:
+            pass
+
         # Add explicit top-level depth and ambiguity for convenience
         try:
             result["depth"] = synt_meta.get('max_depth', 0)
@@ -1909,6 +1925,64 @@ class QuantumMorphosyntaxEngine:
 # ==================================================
 # Note: load_markdown_file() is now imported from gtmo_file_loader module
 
+def F3_to_Phi9(D, S, E, *, max_iter=1000, R_escape=2.0, c_base=(-0.8, 0.156)):
+    """
+    KOMPLETNA transformacja F³ → Φ⁹
+
+    Input:  (D, S, E) ∈ [0,1]³  (Phase Space)
+    Output: (D, S, E, θ_D, φ_D, ρ_D, θ_S, φ_S, ρ_S) ∈ Φ⁹
+    """
+    import numpy as np
+
+    D = float(D); S = float(S); E = float(E)
+    D, S, E = (np.clip(D, 0.0, 1.0),
+               np.clip(S, 0.0, 1.0),
+               np.clip(E, 0.0, 1.0))
+
+    z0_DS = complex(D, S)
+    z0_DE = complex(D, E)
+
+    c = complex(*c_base) * (1.0 + E)
+
+    def julia_iterate(z0, c, max_iter=1000, R_escape=2.0):
+        z = z0
+        R2 = R_escape * R_escape
+        for n in range(1, max_iter + 1):
+            z = z*z + c
+            if (z.real*z.real + z.imag*z.imag) > R2:
+                return True, n, z
+        return False, max_iter, z
+
+    escaped_DS, n_DS, z_final_DS = julia_iterate(z0_DS, c, max_iter, R_escape)
+    escaped_DE, n_DE, z_final_DE = julia_iterate(z0_DE, c, max_iter, R_escape)
+
+    def extract_K6_from_escape(escaped, n_escape, z_final, z0):
+        import numpy as np
+        if not escaped:
+            return 0.0, 0.0, 0.0
+
+        r_final = abs(z_final)
+        theta = float(np.mod(np.angle(z_final), 2.0 * np.pi))
+        denom = r_final if r_final > 0.0 else 1.0
+        val = np.clip(z_final.imag / denom, -1.0, 1.0)
+        phi = float(np.arccos(val))
+        r0 = abs(z0)
+        ratio = (r_final / r0) if r0 > 0.0 else r_final
+        ratio = max(ratio, 1e-12)
+        rho = float(np.log(ratio) / max(n_escape, 1))
+        return theta, phi, rho
+
+    theta_D, phi_D, rho_D = extract_K6_from_escape(escaped_DS, n_DS, z_final_DS, z0_DS)
+    theta_S, phi_S, rho_S = extract_K6_from_escape(escaped_DE, n_DE, z_final_DE, z0_DE)
+
+    phi9 = np.array([
+        D, S, E,
+        theta_D, phi_D, rho_D,
+        theta_S, phi_S, rho_S
+    ], dtype=float)
+
+    return phi9
+
 # ==================================================
 # MAIN ANALYSIS FUNCTIONS
 # ==================================================
@@ -1933,6 +2007,185 @@ def batch_analyze_quantum_with_axioms(texts: List[str], source_file: str = "batc
         results.append(result)
     
     return results
+
+# ==================================================
+# STANZA INTEGRATION FOR LEGAL TEXT ANALYSIS
+# ==================================================
+
+try:
+    import stanza
+    stanza_nlp = stanza.Pipeline('pl',
+                                 processors='tokenize,mwt,pos,lemma,depparse',
+                                 verbose=False,
+                                 use_gpu=False)
+    STANZA_AVAILABLE = True
+    logger.info("✔ Stanza Polish pipeline loaded")
+except ImportError:
+    stanza_nlp = None
+    STANZA_AVAILABLE = False
+    logger.warning("✗ Stanza not available")
+
+class EnhancedGTMOProcessor:
+    """Main processor with Stanza integration for legal text analysis."""
+
+    def __init__(self):
+        self.stanza = stanza_nlp
+        self.engine = QuantumMorphosyntaxEngine() if morfeusz else None
+
+    def analyze_legal_text(self, text: str) -> Dict[str, Any]:
+        """
+        Comprehensive legal text analysis combining GTMØ + Stanza.
+
+        Returns dict with:
+        - gtmo_coordinates: [D, S, E]
+        - stanza_analysis: dependency structure + smoking guns
+        - legal_assessment: quality scoring
+        """
+        analysis = {
+            'metadata': {
+                'timestamp': datetime.now().isoformat(),
+                'text_hash': hashlib.sha256(text.encode()).hexdigest()[:16],
+                'engines_used': {
+                    'stanza': STANZA_AVAILABLE,
+                    'morfeusz2': morfeusz is not None,
+                    'gtmo_quantum': True
+                }
+            },
+            'text': text
+        }
+
+        # GTMØ analysis
+        if self.engine:
+            gtmo_result = self.engine.gtmo_analyze_quantum(text)
+            coords = gtmo_result.get('coordinates', {})
+            analysis['gtmo_coordinates'] = {
+                'determination': float(coords.get('determination', 0.5)),
+                'stability': float(coords.get('stability', 0.5)),
+                'entropy': float(coords.get('entropy', 0.5))
+            }
+        else:
+            analysis['gtmo_coordinates'] = {
+                'determination': 0.5,
+                'stability': 0.5,
+                'entropy': 0.5
+            }
+
+        # Stanza analysis
+        if STANZA_AVAILABLE and self.stanza:
+            stanza_result = self._analyze_with_stanza(text)
+            analysis['stanza_analysis'] = stanza_result
+        else:
+            analysis['stanza_analysis'] = {'error': 'Stanza not available'}
+
+        # Legal assessment
+        analysis['legal_assessment'] = self._generate_assessment(analysis)
+
+        return analysis
+
+    def _analyze_with_stanza(self, text: str) -> Dict:
+        """Analyze with Stanza - advanced smoking gun detection."""
+        try:
+            doc = self.stanza(text)
+
+            sentences = []
+            smoking_guns = []
+
+            # Track key verbs and negations across sentences
+            negated_verbs = []
+            affirming_verbs = []
+
+            for sent in doc.sentences:
+                sent_info = {
+                    'text': sent.text,
+                    'words': len(sent.words),
+                    'dependencies': []
+                }
+
+                # Extract dependencies and track semantic patterns
+                has_negation = False
+                negated_action = None
+
+                for word in sent.words:
+                    sent_info['dependencies'].append({
+                        'text': word.text,
+                        'lemma': word.lemma,
+                        'upos': word.upos,
+                        'deprel': word.deprel
+                    })
+
+                    # Track negations
+                    if word.lemma == 'nie' and word.deprel == 'advmod:neg':
+                        has_negation = True
+
+                    # Track negated verbs (legal actions)
+                    if word.upos == 'VERB' and has_negation:
+                        negated_action = word.lemma
+                        negated_verbs.append({
+                            'lemma': word.lemma,
+                            'text': word.text,
+                            'sentence': sent.text
+                        })
+
+                    # Track affirming actions (consequences)
+                    if word.lemma in ['skazywać', 'skazać', 'ukarać'] and word.upos == 'VERB':
+                        affirming_verbs.append({
+                            'lemma': word.lemma,
+                            'text': word.text,
+                            'sentence': sent.text
+                        })
+
+                sentences.append(sent_info)
+
+            # Cross-sentence contradiction detection
+            # "nie popełnił" → "skazuje"
+            if negated_verbs and affirming_verbs:
+                for neg in negated_verbs:
+                    for aff in affirming_verbs:
+                        if neg['sentence'] != aff['sentence']:
+                            smoking_guns.append({
+                                'type': 'negation_consequence_conflict',
+                                'severity': 0.95,
+                                'details': {
+                                    'negation': f"'{neg['text']}' (nie {neg['lemma']})",
+                                    'consequence': f"'{aff['text']}' ({aff['lemma']})",
+                                    'conflict': f"'{neg['text']}' → '{aff['text']}'"
+                                },
+                                'sentences': [neg['sentence'], aff['sentence']]
+                            })
+
+            return {
+                'sentences': sentences,
+                'smoking_guns': smoking_guns,
+                'sentence_count': len(sentences)
+            }
+
+        except Exception as e:
+            return {'error': str(e)}
+
+    def _generate_assessment(self, analysis: Dict) -> Dict:
+        """Generate legal quality assessment."""
+        coords = analysis['gtmo_coordinates']
+        stanza = analysis.get('stanza_analysis', {})
+
+        # Simple quality scoring
+        coherence = (coords['stability'] + (1 - coords['entropy'])) / 2
+
+        smoking_gun_count = len(stanza.get('smoking_guns', []))
+
+        if smoking_gun_count > 2 or coherence < 0.3:
+            quality = 'critical'
+        elif smoking_gun_count > 0 or coherence < 0.5:
+            quality = 'poor'
+        elif coherence < 0.7:
+            quality = 'fair'
+        else:
+            quality = 'good'
+
+        return {
+            'quality': quality,
+            'legal_coherence_score': float(coherence),
+            'smoking_gun_count': smoking_gun_count
+        }
 
 # ==================================================
 # TEST IMPLEMENTATION
@@ -2094,9 +2347,46 @@ if __name__ == "__main__":
             print("python -m spacy download pl_core_news_lg")
         else:
             results = batch_analyze_quantum_with_axioms(test_texts, "test_file.md")
-            
+
             print("\n📊 RESULTS (JSON format):")
             print("=" * 70)
             for r in results:
                 print(json.dumps(r, indent=2, ensure_ascii=False))
                 print("-" * 70)
+
+            # Test Stanza integration
+            print("\n" + "=" * 70)
+            print("🧪 TESTING STANZA INTEGRATION (EnhancedGTMOProcessor)")
+            print("=" * 70)
+            print(f"Stanza available: {STANZA_AVAILABLE}")
+
+            if STANZA_AVAILABLE:
+                print("✔ Testing smoking gun detection...")
+                processor = EnhancedGTMOProcessor()
+                test_legal = "Sąd uznał, że oskarżony nie popełnił czynu. Jednak go skazuje."
+                result = processor.analyze_legal_text(test_legal)
+
+                print(f"\n📄 Text: {test_legal}")
+                print(f"🎯 GTMØ Coordinates: D={result['gtmo_coordinates']['determination']:.3f}, "
+                      f"S={result['gtmo_coordinates']['stability']:.3f}, "
+                      f"E={result['gtmo_coordinates']['entropy']:.3f}")
+
+                if result['stanza_analysis']['smoking_guns']:
+                    print(f"\n🔫 SMOKING GUNS DETECTED: {len(result['stanza_analysis']['smoking_guns'])}")
+                    for gun in result['stanza_analysis']['smoking_guns']:
+                        print(f"   Type: {gun['type']}")
+                        print(f"   Severity: {gun['severity']}")
+                        if 'details' in gun:
+                            print(f"   Conflict: {gun['details'].get('conflict', 'N/A')}")
+                else:
+                    print("\n✓ No contradictions detected")
+
+                print(f"\n⚖️ Legal Assessment:")
+                print(f"   Quality: {result['legal_assessment']['quality']}")
+                print(f"   Coherence: {result['legal_assessment']['legal_coherence_score']:.3f}")
+            else:
+                print("✗ Stanza not available - install with:")
+                print("  pip install stanza")
+                print("  python -c \"import stanza; stanza.download('pl')\"")
+
+            print("=" * 70)

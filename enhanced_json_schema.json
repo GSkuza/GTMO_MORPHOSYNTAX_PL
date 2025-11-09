@@ -1,0 +1,618 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GTMØ Stanza Enhanced Analysis Result Schema",
+  "description": "Comprehensive JSON schema for GTMØ morphosyntactic and legal analysis with Stanza integration",
+  "type": "object",
+  "required": ["metadata", "gtmo_coordinates", "stanza_analysis", "legal_assessment"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "analysis_version": {
+          "type": "string",
+          "example": "4.0-STANZA"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "input_text": {
+          "type": "string"
+        },
+        "text_hash": {
+          "type": "string",
+          "description": "SHA-256 hash of input text for integrity"
+        },
+        "processing_time_ms": {
+          "type": "number"
+        },
+        "engines_used": {
+          "type": "object",
+          "properties": {
+            "stanza": {"type": "boolean"},
+            "morfeusz2": {"type": "boolean"},
+            "gtmo_quantum": {"type": "boolean"}
+          }
+        }
+      }
+    },
+
+    "gtmo_coordinates": {
+      "type": "object",
+      "description": "GTMØ phase space coordinates [D, S, E]",
+      "properties": {
+        "determination": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Determination axis (certainty/modal strength)"
+        },
+        "stability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Stability axis (logical coherence)"
+        },
+        "entropy": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Entropy axis (complexity/contradiction)"
+        },
+        "vector": {
+          "type": "array",
+          "items": {"type": "number"},
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "distance_to_singularity": {
+          "type": "number",
+          "description": "Euclidean distance to paradox singularity [1,1,0]"
+        },
+        "cognitive_distance": {
+          "type": "number",
+          "description": "Distance from cognitive center [0.5,0.5,0.5]"
+        },
+        "phase_classification": {
+          "type": "string",
+          "enum": ["stable", "metastable", "unstable", "paradoxical", "singularity_approach"]
+        }
+      }
+    },
+
+    "stanza_analysis": {
+      "type": "object",
+      "description": "Deep syntactic analysis from Stanza",
+      "properties": {
+        "dependency_structure": {
+          "type": "object",
+          "properties": {
+            "sentences": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "sentence_id": {"type": "integer"},
+                  "text": {"type": "string"},
+                  "tree_depth": {
+                    "type": "integer",
+                    "description": "Maximum depth of dependency tree"
+                  },
+                  "clause_type": {
+                    "type": "string",
+                    "enum": ["declarative", "conditional", "imperative", "modal", "negative"]
+                  },
+                  "subject": {
+                    "type": "object",
+                    "properties": {
+                      "text": {"type": "string"},
+                      "lemma": {"type": "string"},
+                      "pos": {"type": "string"},
+                      "case": {
+                        "type": "string",
+                        "enum": ["Nom", "Gen", "Dat", "Acc", "Ins", "Loc", "Voc"]
+                      },
+                      "number": {"type": "string", "enum": ["Sing", "Plur"]},
+                      "gender": {"type": "string", "enum": ["Masc", "Fem", "Neut"]}
+                    }
+                  },
+                  "predicate": {
+                    "type": "object",
+                    "properties": {
+                      "text": {"type": "string"},
+                      "lemma": {"type": "string"},
+                      "tense": {
+                        "type": "string",
+                        "enum": ["Past", "Pres", "Fut"]
+                      },
+                      "aspect": {
+                        "type": "string",
+                        "enum": ["Perf", "Imp"],
+                        "description": "Perfective vs Imperfective aspect (Polish)"
+                      },
+                      "mood": {
+                        "type": "string",
+                        "enum": ["Ind", "Imp", "Cnd"]
+                      },
+                      "negated": {"type": "boolean"}
+                    }
+                  },
+                  "object": {
+                    "type": "object",
+                    "properties": {
+                      "text": {"type": "string"},
+                      "lemma": {"type": "string"},
+                      "case": {"type": "string"},
+                      "role": {
+                        "type": "string",
+                        "enum": ["obj", "iobj", "obl"]
+                      }
+                    }
+                  },
+                  "modality": {
+                    "type": "object",
+                    "description": "Legal modality (musi/powinien/może)",
+                    "properties": {
+                      "certainty": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      },
+                      "obligation": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      },
+                      "modal_verb": {"type": "string"}
+                    }
+                  },
+                  "negations": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "negator": {"type": "string"},
+                        "scope": {"type": "integer"},
+                        "strength": {"type": "number"}
+                      }
+                    }
+                  },
+                  "conditions": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "marker": {"type": "string"},
+                        "type": {"type": "string"},
+                        "clause": {"type": "string"}
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "logical_chains": {
+              "type": "array",
+              "description": "Extracted logical argument chains",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": ["premise", "conclusion", "statement"]
+                    },
+                    "content": {"type": "object"}
+                  }
+                }
+              }
+            },
+            "hierarchical_structure": {
+              "type": "array",
+              "description": "Document clause hierarchy",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "level": {"type": "integer"},
+                  "type": {"type": "string"},
+                  "main_verb": {"type": "string"},
+                  "text": {"type": "string"},
+                  "children": {"type": "array"}
+                }
+              }
+            }
+          }
+        },
+
+        "smoking_guns": {
+          "type": "array",
+          "description": "CRITICAL: Detected logical contradictions",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "negation_conflict",
+                  "modal_conflict",
+                  "logical_inconsistency",
+                  "temporal_paradox"
+                ]
+              },
+              "severity": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "0=minor, 1=critical"
+              },
+              "details": {
+                "type": "object",
+                "properties": {
+                  "conflict": {"type": "string"},
+                  "sentences": {
+                    "type": "array",
+                    "items": {"type": "string"}
+                  },
+                  "affected_lemmas": {
+                    "type": "array",
+                    "items": {"type": "string"}
+                  }
+                }
+              },
+              "gtmo_impact": {
+                "type": "object",
+                "description": "Impact on GTMØ coordinates",
+                "properties": {
+                  "entropy_increase": {"type": "number"},
+                  "stability_decrease": {"type": "number"},
+                  "singularity_approach": {"type": "number"}
+                }
+              }
+            }
+          }
+        },
+
+        "contradiction_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Overall contradiction level (0=none, 1=severe)"
+        }
+      }
+    },
+
+    "causality_analysis": {
+      "type": "object",
+      "description": "Causal chain validation",
+      "properties": {
+        "causal_chains": {
+          "type": "array",
+          "description": "Valid cause-effect chains",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["cause", "effect", "condition", "purpose", "contrast"]
+                },
+                "marker": {"type": "string"},
+                "antecedent": {"type": "string"},
+                "consequent": {"type": "string"},
+                "sentence": {"type": "string"},
+                "subject": {"type": "string"},
+                "predicate": {"type": "string"}
+              }
+            }
+          }
+        },
+        "broken_chains": {
+          "type": "array",
+          "description": "Invalid/broken causal chains",
+          "items": {
+            "type": "object",
+            "properties": {
+              "chain": {"type": "array"},
+              "break_point": {"type": "integer"},
+              "reason": {
+                "type": "string",
+                "enum": [
+                  "semantic_discontinuity",
+                  "causal_contradiction",
+                  "missing_link"
+                ]
+              },
+              "severity": {"type": "number"}
+            }
+          }
+        },
+        "circular_reasoning": {
+          "type": "array",
+          "description": "Detected circular arguments",
+          "items": {
+            "type": "object",
+            "properties": {
+              "chain": {"type": "array"},
+              "circularity_strength": {"type": "number"}
+            }
+          }
+        },
+        "causal_strength": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Overall causal reasoning quality"
+        }
+      }
+    },
+
+    "temporal_analysis": {
+      "type": "object",
+      "description": "Temporal consistency checking",
+      "properties": {
+        "timeline": {
+          "type": "array",
+          "description": "Chronological event timeline",
+          "items": {
+            "type": "object",
+            "properties": {
+              "event": {"type": "string"},
+              "tense": {"type": "string"},
+              "dates": {
+                "type": "array",
+                "items": {"type": "string"}
+              },
+              "text": {"type": "string"},
+              "temporal_position": {"type": "number"}
+            }
+          }
+        },
+        "inconsistencies": {
+          "type": "array",
+          "description": "Temporal ordering inconsistencies",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "cyclic_before",
+                  "contradictory_order",
+                  "impossible_sequence"
+                ]
+              },
+              "events": {
+                "type": "array",
+                "items": {"type": "string"}
+              },
+              "description": {"type": "string"}
+            }
+          }
+        },
+        "paradoxes": {
+          "type": "array",
+          "description": "Temporal paradoxes",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "future_past_paradox",
+                  "sequence_paradox",
+                  "tense_mismatch"
+                ]
+              },
+              "event": {"type": "string"},
+              "description": {"type": "string"}
+            }
+          }
+        },
+        "temporal_graph": {
+          "type": "object",
+          "description": "Graph of temporal relationships",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "event": {"type": "object"},
+              "before": {"type": "array"},
+              "after": {"type": "array"},
+              "simultaneous": {"type": "array"}
+            }
+          }
+        }
+      }
+    },
+
+    "legal_assessment": {
+      "type": "object",
+      "description": "Overall legal text quality assessment",
+      "required": ["quality", "legal_coherence_score"],
+      "properties": {
+        "quality": {
+          "type": "string",
+          "enum": ["excellent", "good", "fair", "poor", "critical"]
+        },
+        "legal_coherence_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Comprehensive coherence score (1=perfect, 0=incoherent)"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "category": {
+                "type": "string",
+                "enum": [
+                  "logical_contradiction",
+                  "causal_breakdown",
+                  "temporal_inconsistency",
+                  "excessive_complexity",
+                  "modal_confusion"
+                ]
+              },
+              "severity": {
+                "type": "string",
+                "enum": ["critical", "major", "minor"]
+              },
+              "description": {"type": "string"},
+              "location": {
+                "type": "object",
+                "properties": {
+                  "sentence_id": {"type": "integer"},
+                  "text_snippet": {"type": "string"}
+                }
+              }
+            }
+          }
+        },
+        "recommendations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "priority": {
+                "type": "string",
+                "enum": ["critical", "high", "medium", "low"]
+              },
+              "action": {"type": "string"},
+              "rationale": {"type": "string"}
+            }
+          }
+        },
+        "strengths": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+
+    "singularity_warning": {
+      "type": "object",
+      "description": "Warning if approaching logical singularity/paradox",
+      "properties": {
+        "active": {"type": "boolean"},
+        "distance": {
+          "type": "number",
+          "description": "Distance to singularity point [1,1,0]"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "logical_paradox",
+            "semantic_collapse",
+            "temporal_loop",
+            "modal_contradiction"
+          ]
+        },
+        "severity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "trigger_elements": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+
+    "visualization_data": {
+      "type": "object",
+      "description": "Data for visualizing results",
+      "properties": {
+        "dependency_trees": {
+          "type": "array",
+          "description": "JSON for dependency tree visualization"
+        },
+        "causal_graph": {
+          "type": "object",
+          "description": "JSON for causal chain graph"
+        },
+        "temporal_timeline": {
+          "type": "object",
+          "description": "JSON for timeline visualization"
+        },
+        "gtmo_phase_space": {
+          "type": "object",
+          "description": "3D coordinates for phase space plot",
+          "properties": {
+            "current_position": {"type": "array"},
+            "trajectory": {"type": "array"},
+            "singularity_location": {"type": "array"},
+            "cognitive_center": {"type": "array"}
+          }
+        }
+      }
+    },
+
+    "quantum_metrics": {
+      "type": "object",
+      "description": "Advanced GTMØ quantum measurements",
+      "properties": {
+        "superposition_index": {
+          "type": "number",
+          "description": "Degree of semantic/logical superposition"
+        },
+        "entanglement_score": {
+          "type": "number",
+          "description": "Interconnectedness of concepts"
+        },
+        "collapse_probability": {
+          "type": "number",
+          "description": "Probability of meaning collapse under scrutiny"
+        },
+        "wavefunction": {
+          "type": "array",
+          "description": "Complex probability amplitudes",
+          "items": {
+            "type": "object",
+            "properties": {
+              "real": {"type": "number"},
+              "imag": {"type": "number"}
+            }
+          }
+        }
+      }
+    },
+
+    "polish_linguistic_features": {
+      "type": "object",
+      "description": "Polish-specific linguistic analysis",
+      "properties": {
+        "case_distribution": {
+          "type": "object",
+          "description": "Distribution of 7 Polish grammatical cases",
+          "properties": {
+            "nominative": {"type": "integer"},
+            "genitive": {"type": "integer"},
+            "dative": {"type": "integer"},
+            "accusative": {"type": "integer"},
+            "instrumental": {"type": "integer"},
+            "locative": {"type": "integer"},
+            "vocative": {"type": "integer"}
+          }
+        },
+        "aspect_analysis": {
+          "type": "object",
+          "description": "Perfective vs Imperfective aspect usage",
+          "properties": {
+            "perfective_count": {"type": "integer"},
+            "imperfective_count": {"type": "integer"},
+            "aspect_consistency": {"type": "number"}
+          }
+        },
+        "formality_level": {
+          "type": "string",
+          "enum": ["very_formal", "formal", "neutral", "informal"],
+          "description": "Polish formality markers (Pan/Pani, -by forms, etc.)"
+        }
+      }
+    }
+  }
+}

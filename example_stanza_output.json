@@ -1,0 +1,418 @@
+{
+  "metadata": {
+    "analysis_version": "4.0-STANZA",
+    "timestamp": "2025-11-09T14:30:45.123Z",
+    "input_text": "Sąd uznał, że oskarżony nie popełnił zarzucanego mu czynu z art. 286 k.k., ponieważ brak jest dowodów jego winy. Jednak biorąc pod uwagę jego wcześniejszą karalność, sąd skazuje oskarżonego na karę 2 lat pozbawienia wolności.",
+    "text_hash": "a3b5c7d9e1f2a4b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8a0b2c4d6e8f0a2b4",
+    "processing_time_ms": 1247.3,
+    "engines_used": {
+      "stanza": true,
+      "morfeusz2": true,
+      "gtmo_quantum": true
+    }
+  },
+
+  "gtmo_coordinates": {
+    "determination": 0.87,
+    "stability": 0.23,
+    "entropy": 0.91,
+    "vector": [0.87, 0.23, 0.91],
+    "distance_to_singularity": 0.14,
+    "cognitive_distance": 0.63,
+    "phase_classification": "singularity_approach"
+  },
+
+  "stanza_analysis": {
+    "dependency_structure": {
+      "sentences": [
+        {
+          "sentence_id": 0,
+          "text": "Sąd uznał, że oskarżony nie popełnił zarzucanego mu czynu z art. 286 k.k., ponieważ brak jest dowodów jego winy.",
+          "tree_depth": 7,
+          "clause_type": "negative",
+          "subject": {
+            "text": "Sąd",
+            "lemma": "sąd",
+            "pos": "NOUN",
+            "case": "Nom",
+            "number": "Sing",
+            "gender": "Masc"
+          },
+          "predicate": {
+            "text": "uznał",
+            "lemma": "uznać",
+            "tense": "Past",
+            "aspect": "Perf",
+            "mood": "Ind",
+            "negated": false
+          },
+          "object": {
+            "text": "czynu",
+            "lemma": "czyn",
+            "case": "Gen",
+            "role": "obj"
+          },
+          "modality": null,
+          "negations": [
+            {
+              "negator": "nie",
+              "scope": 4,
+              "strength": 0.9
+            }
+          ],
+          "conditions": [
+            {
+              "marker": "ponieważ",
+              "type": "causal",
+              "clause": "brak jest dowodów jego winy"
+            }
+          ]
+        },
+        {
+          "sentence_id": 1,
+          "text": "Jednak biorąc pod uwagę jego wcześniejszą karalność, sąd skazuje oskarżonego na karę 2 lat pozbawienia wolności.",
+          "tree_depth": 6,
+          "clause_type": "declarative",
+          "subject": {
+            "text": "sąd",
+            "lemma": "sąd",
+            "pos": "NOUN",
+            "case": "Nom",
+            "number": "Sing",
+            "gender": "Masc"
+          },
+          "predicate": {
+            "text": "skazuje",
+            "lemma": "skazać",
+            "tense": "Pres",
+            "aspect": "Imp",
+            "mood": "Ind",
+            "negated": false
+          },
+          "object": {
+            "text": "oskarżonego",
+            "lemma": "oskarżony",
+            "case": "Acc",
+            "role": "obj"
+          },
+          "modality": null,
+          "negations": [],
+          "conditions": []
+        }
+      ],
+      "logical_chains": [
+        [
+          {
+            "type": "premise",
+            "content": {
+              "text": "nie popełnił czynu",
+              "negation": true,
+              "certainty": 0.85
+            }
+          },
+          {
+            "type": "premise",
+            "content": {
+              "text": "brak dowodów",
+              "supports_previous": true
+            }
+          },
+          {
+            "type": "conclusion",
+            "content": {
+              "text": "skazuje oskarżonego",
+              "contradicts_premises": true,
+              "contradiction_severity": 0.98
+            }
+          }
+        ]
+      ],
+      "hierarchical_structure": [
+        {
+          "level": 0,
+          "type": "main_clause",
+          "main_verb": "uznać",
+          "text": "Sąd uznał",
+          "children": [
+            {
+              "level": 1,
+              "type": "ccomp",
+              "text": "że oskarżony nie popełnił zarzucanego mu czynu"
+            },
+            {
+              "level": 1,
+              "type": "advcl",
+              "text": "ponieważ brak jest dowodów jego winy"
+            }
+          ]
+        },
+        {
+          "level": 0,
+          "type": "main_clause",
+          "main_verb": "skazać",
+          "text": "sąd skazuje oskarżonego",
+          "children": [
+            {
+              "level": 1,
+              "type": "advcl",
+              "text": "Jednak biorąc pod uwagę jego wcześniejszą karalność"
+            }
+          ]
+        }
+      ]
+    },
+
+    "smoking_guns": [
+      {
+        "type": "negation_conflict",
+        "severity": 0.98,
+        "details": {
+          "conflict": "'nie popełnił czynu' (not guilty) → 'skazuje' (convicts)",
+          "sentences": [
+            "Sąd uznał, że oskarżony nie popełnił zarzucanego mu czynu...",
+            "...sąd skazuje oskarżonego na karę 2 lat pozbawienia wolności."
+          ],
+          "affected_lemmas": ["popełnić", "skazać", "niewinny"]
+        },
+        "gtmo_impact": {
+          "entropy_increase": 0.45,
+          "stability_decrease": 0.67,
+          "singularity_approach": 0.86
+        }
+      },
+      {
+        "type": "logical_inconsistency",
+        "severity": 0.85,
+        "details": {
+          "conflict": "Causal marker 'ponieważ' (because) followed by adversative 'jednak' (however)",
+          "sentences": [
+            "...ponieważ brak jest dowodów jego winy. Jednak..."
+          ],
+          "affected_lemmas": ["ponieważ", "jednak"]
+        },
+        "gtmo_impact": {
+          "entropy_increase": 0.32,
+          "stability_decrease": 0.41,
+          "singularity_approach": 0.28
+        }
+      }
+    ],
+
+    "contradiction_score": 0.98
+  },
+
+  "causality_analysis": {
+    "causal_chains": [],
+    "broken_chains": [
+      {
+        "chain": [
+          {
+            "type": "cause",
+            "marker": "ponieważ",
+            "antecedent": "sąd uznał że oskarżony nie popełnił czynu",
+            "consequent": "brak jest dowodów jego winy",
+            "sentence": "Sąd uznał, że oskarżony nie popełnił... ponieważ brak jest dowodów jego winy.",
+            "subject": "sąd",
+            "predicate": "uznać"
+          },
+          {
+            "type": "contrast",
+            "marker": "jednak",
+            "antecedent": "brak jest dowodów jego winy",
+            "consequent": "sąd skazuje oskarżonego",
+            "sentence": "Jednak biorąc pod uwagę... sąd skazuje oskarżonego...",
+            "subject": "sąd",
+            "predicate": "skazać"
+          }
+        ],
+        "break_point": 0,
+        "reason": "causal_contradiction",
+        "severity": 0.95
+      }
+    ],
+    "circular_reasoning": [],
+    "causal_strength": 0.05
+  },
+
+  "temporal_analysis": {
+    "timeline": [
+      {
+        "event": "popełnić",
+        "tense": "Past",
+        "dates": [],
+        "text": "nie popełnił zarzucanego mu czynu",
+        "temporal_position": -1.0
+      },
+      {
+        "event": "skazać",
+        "tense": "Pres",
+        "dates": [],
+        "text": "sąd skazuje oskarżonego",
+        "temporal_position": 0.0
+      }
+    ],
+    "inconsistencies": [],
+    "paradoxes": [],
+    "temporal_graph": {
+      "event_0": {
+        "event": {
+          "sentence_id": 0,
+          "verb": "popełnić",
+          "tense": "Past"
+        },
+        "before": [],
+        "after": ["event_1"],
+        "simultaneous": []
+      },
+      "event_1": {
+        "event": {
+          "sentence_id": 1,
+          "verb": "skazać",
+          "tense": "Pres"
+        },
+        "before": ["event_0"],
+        "after": [],
+        "simultaneous": []
+      }
+    }
+  },
+
+  "legal_assessment": {
+    "quality": "critical",
+    "legal_coherence_score": 0.12,
+    "issues": [
+      {
+        "category": "logical_contradiction",
+        "severity": "critical",
+        "description": "Court declares defendant not guilty but then convicts him - fundamental logical contradiction",
+        "location": {
+          "sentence_id": 1,
+          "text_snippet": "nie popełnił... skazuje oskarżonego"
+        }
+      },
+      {
+        "category": "causal_breakdown",
+        "severity": "critical",
+        "description": "Causal reasoning chain is broken by adversative 'jednak' contradicting the established premise",
+        "location": {
+          "sentence_id": 1,
+          "text_snippet": "ponieważ brak... Jednak... skazuje"
+        }
+      },
+      {
+        "category": "excessive_complexity",
+        "severity": "minor",
+        "description": "Sentence tree depth of 7 indicates overly complex structure",
+        "location": {
+          "sentence_id": 0,
+          "text_snippet": "Sąd uznał, że oskarżony nie popełnił..."
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "REWRITE: Resolve fundamental contradiction between 'not guilty' and 'convicts'",
+        "rationale": "Current text contains a logical impossibility that invalidates the entire judgment"
+      },
+      {
+        "priority": "critical",
+        "action": "CLARIFY: If defendant is guilty of different charge, explicitly state this",
+        "rationale": "Distinguish between what was not proven (art. 286) and what was proven"
+      },
+      {
+        "priority": "high",
+        "action": "RESTRUCTURE: Separate acquittal reasoning from conviction reasoning",
+        "rationale": "Current structure creates false causal chain between incompatible conclusions"
+      }
+    ],
+    "strengths": []
+  },
+
+  "singularity_warning": {
+    "active": true,
+    "distance": 0.14,
+    "type": "logical_paradox",
+    "severity": 0.98,
+    "trigger_elements": [
+      "nie popełnił",
+      "skazuje",
+      "brak dowodów",
+      "uznał"
+    ]
+  },
+
+  "visualization_data": {
+    "dependency_trees": [
+      {
+        "sentence_id": 0,
+        "root": "uznał",
+        "nodes": [
+          {"id": 1, "text": "Sąd", "head": 2, "deprel": "nsubj"},
+          {"id": 2, "text": "uznał", "head": 0, "deprel": "root"},
+          {"id": 3, "text": "że", "head": 5, "deprel": "mark"},
+          {"id": 4, "text": "oskarżony", "head": 5, "deprel": "nsubj"},
+          {"id": 5, "text": "popełnił", "head": 2, "deprel": "ccomp"},
+          {"id": 6, "text": "nie", "head": 5, "deprel": "advmod"}
+        ]
+      }
+    ],
+    "causal_graph": {
+      "nodes": [
+        {"id": "n1", "label": "nie popełnił", "type": "conclusion"},
+        {"id": "n2", "label": "brak dowodów", "type": "premise"},
+        {"id": "n3", "label": "skazuje", "type": "conclusion"}
+      ],
+      "edges": [
+        {"from": "n2", "to": "n1", "type": "support", "strength": 0.8},
+        {"from": "n1", "to": "n3", "type": "contradiction", "strength": 0.98}
+      ]
+    },
+    "temporal_timeline": {
+      "events": [
+        {"time": -1, "label": "nie popełnił", "tense": "Past"},
+        {"time": 0, "label": "skazuje", "tense": "Pres"}
+      ]
+    },
+    "gtmo_phase_space": {
+      "current_position": [0.87, 0.23, 0.91],
+      "trajectory": [
+        [0.5, 0.5, 0.5],
+        [0.6, 0.4, 0.6],
+        [0.75, 0.3, 0.78],
+        [0.87, 0.23, 0.91]
+      ],
+      "singularity_location": [1.0, 1.0, 0.0],
+      "cognitive_center": [0.5, 0.5, 0.5]
+    }
+  },
+
+  "quantum_metrics": {
+    "superposition_index": 0.94,
+    "entanglement_score": 0.87,
+    "collapse_probability": 0.96,
+    "wavefunction": [
+      {"real": 0.62, "imag": 0.78},
+      {"real": -0.43, "imag": 0.91},
+      {"real": 0.15, "imag": -0.32}
+    ]
+  },
+
+  "polish_linguistic_features": {
+    "case_distribution": {
+      "nominative": 3,
+      "genitive": 4,
+      "dative": 1,
+      "accusative": 2,
+      "instrumental": 1,
+      "locative": 1,
+      "vocative": 0
+    },
+    "aspect_analysis": {
+      "perfective_count": 2,
+      "imperfective_count": 1,
+      "aspect_consistency": 0.67
+    },
+    "formality_level": "very_formal"
+  }
+}
