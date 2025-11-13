@@ -1,0 +1,2842 @@
+{
+  "version": "2.0",
+  "analysis_type": "GTMØ",
+  "timestamp": "2025-11-13T09:49:06.489475",
+  "content": {
+    "text": "Art. 1. 1. Mieszkańcy gminy tworzą z mocy prawa wspólnotę samorządową.\n2. Ilekroć w ustawie jest mowa o gminie, należy przez to rozumieć wspólnotę\nsamorządową oraz odpowiednie terytorium.",
+    "length": 187,
+    "word_count": 28
+  },
+  "coordinates": {
+    "determination": 0.732036,
+    "stability": 0.428014,
+    "entropy": 0.526884
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-11-13T09:49:06.489475",
+    "sequence_number": 0,
+    "daily_date": "13112025",
+    "article_number": 1,
+    "saved_at": "2025-11-13T09:49:06.491934",
+    "unit_type": "legal_article"
+  },
+  "additional_metrics": {
+    "total_analyses": 71,
+    "cases": {
+      "nom": 14,
+      "gen": 6,
+      "dat": 4,
+      "voc": 3,
+      "acc": 11,
+      "loc": 4
+    },
+    "pos": {
+      "subst": 28,
+      "interp": 7,
+      "prep": 7,
+      "part": 2,
+      "adj": 11,
+      "adv": 2,
+      "conj": 2
+    },
+    "ambiguity": 2.5357142857142856,
+    "debug_tags": [
+      "artykuł:brev:pun",
+      "Art:Sf:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+      "Art:Sm1:subst:sg:nom:m1",
+      ".:interp",
+      ".:interp",
+      ".:interp",
+      ".:interp",
+      ".:interp",
+      ".:interp",
+      "1:dig"
+    ],
+    "coords_count": 44
+  },
+  "interpretation": {
+    "determination": "high",
+    "stability": "moderate",
+    "entropy": "mixed",
+    "overall": "mixed_quality",
+    "overall_score": 0.5632
+  },
+  "phi9": [
+    0.7320359217001421,
+    0.4280141538521142,
+    0.5268844001941435,
+    1.9568702752851646,
+    0.3860739484902679,
+    0.4794456443113193,
+    4.056670512968314,
+    2.4858741861734175,
+    0.43511718880035977
+  ],
+  "depth": 5,
+  "ambiguity": 2.5357142857142856,
+  "source_file": "Dz. U. 1990 Nr 16 poz. 95 v22.md",
+  "quantum_metrics": {
+    "total_coherence": 0.8838,
+    "quantum_words": 17,
+    "entanglements": 3,
+    "superposition_type": "COHERENT_SUPERPOSITION"
+  },
+  "axiom_protection": {
+    "axioms_activated": 0,
+    "violations_prevented": 0,
+    "meta_reflections": 0
+  },
+  "temporal_analysis": {
+    "coordinates": {
+      "determination": 0.7,
+      "stability": 0.6,
+      "entropy": 0.4
+    },
+    "tenses": {
+      "Pres": 4
+    },
+    "aspects": {
+      "Imp": 5
+    },
+    "dominant_time": "Pres"
+  },
+  "extended_rhetorical_analysis": {
+    "mode": "literal",
+    "irony_score": 1.5,
+    "paradox_score": 0,
+    "sarcasm_score": 0,
+    "context_score": 0,
+    "detected_markers": [
+      [
+        "irony",
+        "ależ"
+      ]
+    ]
+  },
+  "quantum_ambiguity": {
+    "needs_superposition": false,
+    "ambiguity_score": 0.0,
+    "ambiguity_markers": [],
+    "marker_count": 0
+  },
+  "depth_metrics": {
+    "max_depth": 5,
+    "avg_depth": 1.9459,
+    "depth_variance": 1.7268
+  },
+  "rhetorical_analysis": {
+    "mode": "literal",
+    "irony_score": 0.2,
+    "paradox_score": 0.0,
+    "structural_divergence": 0.1695,
+    "pos_anomalies": {
+      "adj_ratio": 0.1864,
+      "verb_ratio": 0.0,
+      "anomaly_score": 0.5093
+    }
+  },
+  "quantum_tensor": {
+    "value": 0.156837,
+    "formula": "0.742 × 0.433 × 0.488 = 0.157"
+  },
+  "constitutional_metrics": {
+    "definiteness": {
+      "value": 1.5622,
+      "formula": "(1/2.54) × 5 × √(0.742×0.433/0.512) = 1.56",
+      "interpretation": "Wysoka CD = tekst uporządkowany, jednoznaczny, strukturalny",
+      "components": {
+        "inverse_ambiguity": 0.3944,
+        "depth": 5,
+        "geometric_balance": 0.7923
+      }
+    },
+    "indefiniteness": {
+      "value": 16.0027,
+      "formula": "2.54 × 5 × √(0.512/(0.742×0.433)) = 16.00",
+      "interpretation": "Wysoka CI = tekst chaotyczny, wieloznaczny, nieprzewidywalny",
+      "components": {
+        "ambiguity": 2.5357,
+        "depth": 5,
+        "geometric_tension": 1.2622
+      },
+      "decomposition": {
+        "morphological": {
+          "value": 14.4801,
+          "percentage": 90.49,
+          "source": "Fleksja, ambiguity morfologiczna"
+        },
+        "syntactic": {
+          "value": 0.793,
+          "percentage": 4.96,
+          "source": "Głębokość składniowa, długość zdań"
+        },
+        "semantic": {
+          "value": 0.7296,
+          "percentage": 4.56,
+          "source": "Chaos semantyczny w przestrzeni F³"
+        }
+      }
+    },
+    "semantic_accessibility": {
+      "value": 0.0889,
+      "percentage": 8.89,
+      "formula": "CD / (CI + CD) = 1.56 / (16.00 + 1.56) = 0.089",
+      "interpretation": "Tekst trudno dostępny (< 30% definiteness)",
+      "category": "NISKA_DOSTĘPNOŚĆ",
+      "range": "[0,1] gdzie 1=maksymalna dostępność, 0=niedostępny",
+      "advantages": [
+        "Znormalizowana do [0,1]",
+        "Niezależna od skali absolutnej",
+        "Intuicyjna interpretacja"
+      ]
+    },
+    "duality": {
+      "product": 25.0,
+      "theoretical": 25,
+      "error_percent": 0.0,
+      "formula": "CI × CD = Depth²",
+      "verification": "PASSED",
+      "interpretation": "Dualność wynika z Zasady Nieoznaczoności Semantycznej: Δ_form · Δ_int ≥ ħ_semantic"
+    },
+    "classification": {
+      "type": "CHAOTIC_STRUCTURE",
+      "cd_ci_ratio": 0.0976,
+      "description": "Tekst chaotyczny, wieloznaczny (CI > CD)",
+      "enhanced_type": "STRUCTURED"
+    },
+    "theoretical_basis": {
+      "derived_from": "Zasada Nieoznaczoności Semantycznej (GTMØ Axiom)",
+      "morphosyntactic_projection": "Δ_form = Ambiguity × f(Depth), Δ_geom = √(E/(D×S))",
+      "fundamental_constant": "Ø₀ = 1.2925 (Hausdorff dimension of fractal boundaries)",
+      "operator": "Ø: projekcja na |ψ_Ø⟩ = (1/√3, 1/√3, 1/√3)ᵀ",
+      "semantic_accessibility": "SA = CD/(CI+CD) normalizuje dostępność do [0,1]",
+      "ci_decomposition": "CI = CI_morphological + CI_syntactic + CI_semantic"
+    }
+  },
+  "geometric_balance": 0.792278,
+  "geometric_tension": 1.262183,
+  "critical_block": true,
+  "critical_reason": "LOW_SA",
+  "topological_attractors": {
+    "nearest_attractor": {
+      "attractor_name": "Dyskurs zrównoważony",
+      "attractor_type": "fixed_point",
+      "distance": 0.32551284452800755,
+      "in_basin": false,
+      "basin_radius": 0.25,
+      "pull_strength": 1.0,
+      "stability_index": 0.75,
+      "coordinates": [
+        0.65,
+        0.7,
+        0.35
+      ]
+    },
+    "basin_analysis": {
+      "primary_basin": null,
+      "all_basins": [],
+      "num_basins": 0,
+      "nearest_attractors": [
+        {
+          "name": "BALANCED_DISCOURSE",
+          "display_name": "Dyskurs zrównoważony",
+          "distance": 0.32551284452800755,
+          "in_basin": false,
+          "type": "fixed_point",
+          "stability": 0.75
+        },
+        {
+          "name": "POETIC_AMBIGUITY",
+          "display_name": "Wieloznaczność poetycka",
+          "distance": 0.4328663752280897,
+          "in_basin": false,
+          "type": "limit_cycle",
+          "stability": 0.45
+        },
+        {
+          "name": "IMPERATIVE_COMMAND",
+          "display_name": "Rozkaz imperatywny",
+          "distance": 0.5098830007118424,
+          "in_basin": false,
+          "type": "fixed_point",
+          "stability": 0.92
+        }
+      ],
+      "is_in_basin": false,
+      "basin_overlap": false
+    }
+  },
+  "temporal_evolution": {
+    "num_states": 1,
+    "time_span": 0.0,
+    "total_distance": 0.0,
+    "mean_coords": [
+      0.7420359217001421,
+      0.4330141538521142,
+      0.5118844001941435
+    ],
+    "std_coords": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "current_coords": [
+      0.7420359217001421,
+      0.4330141538521142,
+      0.5118844001941435
+    ],
+    "current_attractor": {
+      "attractor_name": "Dyskurs zrównoważony",
+      "attractor_type": "fixed_point",
+      "distance": 0.32551284452800755,
+      "in_basin": false,
+      "basin_radius": 0.25,
+      "pull_strength": 1.0,
+      "stability_index": 0.75,
+      "coordinates": [
+        0.65,
+        0.7,
+        0.35
+      ]
+    },
+    "velocity": null,
+    "acceleration": null,
+    "num_bifurcations": 0,
+    "bifurcation_points": []
+  },
+  "quantum_enhanced": {
+    "num_quantum_states": 17,
+    "coherence_detailed": {
+      "total_coherence": 0.9950410171692365,
+      "phase_coherence": 1.0,
+      "amplitude_coherence": 0.9834700572307881,
+      "spatial_coherence": 1.0,
+      "mean_phase": -0.9244920718850642,
+      "mean_amplitude": 0.21691093373793063,
+      "phase_std": 0.0,
+      "amplitude_std": 0.12910494463834957
+    },
+    "entanglement": {
+      "entanglement_matrix": [
+        [
+          0.0,
+          0.19008037260866076,
+          0.11167099423438258,
+          0.029969961957786024,
+          0.09359171496827082,
+          0.11167099423438258,
+          0.17564788948783575,
+          0.19008037260866076,
+          0.029969961957786024,
+          0.14507197175569392,
+          0.09359171496827082,
+          0.029969961957786024,
+          0.1287778078713325,
+          0.11167099423438258,
+          0.053379172642442047,
+          0.19008037260866076,
+          0.19008037260866076
+        ],
+        [
+          0.19008037260866076,
+          0.0,
+          0.2753555402600032,
+          0.08088447515065636,
+          0.23483603079225765,
+          0.2753555402600032,
+          0.4076658861566823,
+          0.435023241018222,
+          0.08088447515065636,
+          0.34662135820429857,
+          0.23483603079225765,
+          0.08088447515065636,
+          0.31244117243085573,
+          0.2753555402600032,
+          0.13972315566336616,
+          0.435023241018222,
+          0.435023241018222
+        ],
+        [
+          0.11167099423438258,
+          0.2753555402600032,
+          0.0,
+          0.04592204586241286,
+          0.13972315566336616,
+          0.1657253270613423,
+          0.25556664616963626,
+          0.2753555402600032,
+          0.04592204586241286,
+          0.2130543057567581,
+          0.13972315566336616,
+          0.04592204586241286,
+          0.19008037260866076,
+          0.1657253270613423,
+          0.08088447515065636,
+          0.2753555402600032,
+          0.2753555402600032
+        ],
+        [
+          0.029969961957786024,
+          0.08088447515065636,
+          0.04592204586241286,
+          0.0,
+          0.03814586673459321,
+          0.04592204586241286,
+          0.07429804786410887,
+          0.08088447515065636,
+          0.011719650815669534,
+          0.060570551940322584,
+          0.03814586673459321,
+          0.011719650815669534,
+          0.053379172642442047,
+          0.04592204586241286,
+          0.02125735921079415,
+          0.08088447515065636,
+          0.08088447515065636
+        ],
+        [
+          0.09359171496827082,
+          0.23483603079225765,
+          0.13972315566336616,
+          0.03814586673459321,
+          0.0,
+          0.13972315566336616,
+          0.21750095222977603,
+          0.23483603079225765,
+          0.03814586673459321,
+          0.18051681858051158,
+          0.11747219568237748,
+          0.03814586673459321,
+          0.16066704048360894,
+          0.13972315566336616,
+          0.06753406854189527,
+          0.23483603079225765,
+          0.23483603079225765
+        ],
+        [
+          0.11167099423438258,
+          0.2753555402600032,
+          0.1657253270613423,
+          0.04592204586241286,
+          0.13972315566336616,
+          0.0,
+          0.25556664616963626,
+          0.2753555402600032,
+          0.04592204586241286,
+          0.2130543057567581,
+          0.13972315566336616,
+          0.04592204586241286,
+          0.19008037260866076,
+          0.1657253270613423,
+          0.08088447515065636,
+          0.2753555402600032,
+          0.2753555402600032
+        ],
+        [
+          0.17564788948783575,
+          0.4076658861566823,
+          0.25556664616963626,
+          0.07429804786410887,
+          0.21750095222977603,
+          0.25556664616963626,
+          0.0,
+          0.4076658861566823,
+          0.07429804786410887,
+          0.32298096583414926,
+          0.21750095222977603,
+          0.07429804786410887,
+          0.2905678347942905,
+          0.25556664616963626,
+          0.1287778078713325,
+          0.4076658861566823,
+          0.4076658861566823
+        ],
+        [
+          0.19008037260866076,
+          0.435023241018222,
+          0.2753555402600032,
+          0.08088447515065636,
+          0.23483603079225765,
+          0.2753555402600032,
+          0.4076658861566823,
+          0.0,
+          0.08088447515065636,
+          0.34662135820429857,
+          0.23483603079225765,
+          0.08088447515065636,
+          0.31244117243085573,
+          0.2753555402600032,
+          0.13972315566336616,
+          0.435023241018222,
+          0.435023241018222
+        ],
+        [
+          0.029969961957786024,
+          0.08088447515065636,
+          0.04592204586241286,
+          0.011719650815669534,
+          0.03814586673459321,
+          0.04592204586241286,
+          0.07429804786410887,
+          0.08088447515065636,
+          0.0,
+          0.060570551940322584,
+          0.03814586673459321,
+          0.011719650815669534,
+          0.053379172642442047,
+          0.04592204586241286,
+          0.02125735921079415,
+          0.08088447515065636,
+          0.08088447515065636
+        ],
+        [
+          0.14507197175569392,
+          0.34662135820429857,
+          0.2130543057567581,
+          0.060570551940322584,
+          0.18051681858051158,
+          0.2130543057567581,
+          0.32298096583414926,
+          0.34662135820429857,
+          0.060570551940322584,
+          0.0,
+          0.18051681858051158,
+          0.060570551940322584,
+          0.24324769848377037,
+          0.2130543057567581,
+          0.10576237344318126,
+          0.34662135820429857,
+          0.34662135820429857
+        ],
+        [
+          0.09359171496827082,
+          0.23483603079225765,
+          0.13972315566336616,
+          0.03814586673459321,
+          0.11747219568237748,
+          0.13972315566336616,
+          0.21750095222977603,
+          0.23483603079225765,
+          0.03814586673459321,
+          0.18051681858051158,
+          0.0,
+          0.03814586673459321,
+          0.16066704048360894,
+          0.13972315566336616,
+          0.06753406854189527,
+          0.23483603079225765,
+          0.23483603079225765
+        ],
+        [
+          0.029969961957786024,
+          0.08088447515065636,
+          0.04592204586241286,
+          0.011719650815669534,
+          0.03814586673459321,
+          0.04592204586241286,
+          0.07429804786410887,
+          0.08088447515065636,
+          0.011719650815669534,
+          0.060570551940322584,
+          0.03814586673459321,
+          0.0,
+          0.053379172642442047,
+          0.04592204586241286,
+          0.02125735921079415,
+          0.08088447515065636,
+          0.08088447515065636
+        ],
+        [
+          0.1287778078713325,
+          0.31244117243085573,
+          0.19008037260866076,
+          0.053379172642442047,
+          0.16066704048360894,
+          0.19008037260866076,
+          0.2905678347942905,
+          0.31244117243085573,
+          0.053379172642442047,
+          0.24324769848377037,
+          0.16066704048360894,
+          0.053379172642442047,
+          0.0,
+          0.19008037260866076,
+          0.09359171496827082,
+          0.31244117243085573,
+          0.31244117243085573
+        ],
+        [
+          0.11167099423438258,
+          0.2753555402600032,
+          0.1657253270613423,
+          0.04592204586241286,
+          0.13972315566336616,
+          0.1657253270613423,
+          0.25556664616963626,
+          0.2753555402600032,
+          0.04592204586241286,
+          0.2130543057567581,
+          0.13972315566336616,
+          0.04592204586241286,
+          0.19008037260866076,
+          0.0,
+          0.08088447515065636,
+          0.2753555402600032,
+          0.2753555402600032
+        ],
+        [
+          0.053379172642442047,
+          0.13972315566336616,
+          0.08088447515065636,
+          0.02125735921079415,
+          0.06753406854189527,
+          0.08088447515065636,
+          0.1287778078713325,
+          0.13972315566336616,
+          0.02125735921079415,
+          0.10576237344318126,
+          0.06753406854189527,
+          0.02125735921079415,
+          0.09359171496827082,
+          0.08088447515065636,
+          0.0,
+          0.13972315566336616,
+          0.13972315566336616
+        ],
+        [
+          0.19008037260866076,
+          0.435023241018222,
+          0.2753555402600032,
+          0.08088447515065636,
+          0.23483603079225765,
+          0.2753555402600032,
+          0.4076658861566823,
+          0.435023241018222,
+          0.08088447515065636,
+          0.34662135820429857,
+          0.23483603079225765,
+          0.08088447515065636,
+          0.31244117243085573,
+          0.2753555402600032,
+          0.13972315566336616,
+          0.0,
+          0.435023241018222
+        ],
+        [
+          0.19008037260866076,
+          0.435023241018222,
+          0.2753555402600032,
+          0.08088447515065636,
+          0.23483603079225765,
+          0.2753555402600032,
+          0.4076658861566823,
+          0.435023241018222,
+          0.08088447515065636,
+          0.34662135820429857,
+          0.23483603079225765,
+          0.08088447515065636,
+          0.31244117243085573,
+          0.2753555402600032,
+          0.13972315566336616,
+          0.435023241018222,
+          0.0
+        ]
+      ],
+      "mean_entanglement": 0.16823365752544645,
+      "max_entanglement": 0.435023241018222,
+      "total_entanglement": 22.879777423460716,
+      "num_states": 17,
+      "highly_entangled_pairs": []
+    },
+    "superposition": {
+      "is_superposed": false,
+      "superposition_degree": 0.04600859775443148,
+      "num_superposed_states": 5,
+      "mean_overlap": 0.04600859775443148,
+      "max_overlap": 0.1572153089096151,
+      "superposition_type": "DECOHERENT"
+    },
+    "quantum_observables": {
+      "mean_phase": -0.9244920718850642,
+      "std_phase": 0.0,
+      "mean_amplitude": 0.21691093373793063,
+      "std_amplitude": 0.12910494463834957,
+      "mean_frequency": 5.118844001941435,
+      "max_frequency": 5.118844001941435,
+      "min_frequency": 5.118844001941435
+    },
+    "wavefunction_samples": [
+      {
+        "word": "Art",
+        "amplitude": 0.11895115721112325,
+        "phase": -0.9244920718850642,
+        "frequency": 5.118844001941435,
+        "coords": [
+          0.7420359217001421,
+          0.4330141538521142,
+          0.5118844001941435
+        ]
+      },
+      {
+        "word": "Mieszkańcy",
+        "amplitude": 0.39650385737041083,
+        "phase": -0.9244920718850642,
+        "frequency": 5.118844001941435,
+        "coords": [
+          0.7420359217001421,
+          0.4330141538521142,
+          0.5118844001941435
+        ]
+      },
+      {
+        "word": "gminy",
+        "amplitude": 0.19825192868520541,
+        "phase": -0.9244920718850642,
+        "frequency": 5.118844001941435,
+        "coords": [
+          0.7420359217001421,
+          0.4330141538521142,
+          0.5118844001941435
+        ]
+      },
+      {
+        "word": "z",
+        "amplitude": 0.039650385737041084,
+        "phase": -0.9244920718850642,
+        "frequency": 5.118844001941435,
+        "coords": [
+          0.7420359217001421,
+          0.4330141538521142,
+          0.5118844001941435
+        ]
+      },
+      {
+        "word": "mocy",
+        "amplitude": 0.15860154294816434,
+        "phase": -0.9244920718850642,
+        "frequency": 5.118844001941435,
+        "coords": [
+          0.7420359217001421,
+          0.4330141538521142,
+          0.5118844001941435
+        ]
+      }
+    ],
+    "quantum_classification": "DECOHERENT"
+  },
+  "article_number": 1,
+  "total_articles": 4,
+  "paragraph_count": 1,
+  "sentence_count": 3,
+  "paragraphs": [
+    {
+      "version": "2.0",
+      "analysis_type": "GTMØ",
+      "timestamp": "2025-11-13T09:49:06.462407",
+      "content": {
+        "text": "Art. 1. 1. Mieszkańcy gminy tworzą z mocy prawa wspólnotę samorządową.\n2. Ilekroć w ustawie jest mowa o gminie, należy przez to rozumieć wspólnotę\nsamorządową oraz odpowiednie terytorium.",
+        "length": 187,
+        "word_count": 28
+      },
+      "coordinates": {
+        "determination": 0.731666,
+        "stability": 0.427854,
+        "entropy": 0.527772
+      },
+      "analysis_metadata": {
+        "analyzed_at": "2025-11-13T09:49:06.462407",
+        "sequence_number": 0,
+        "daily_date": "13112025"
+      },
+      "additional_metrics": {
+        "total_analyses": 71,
+        "cases": {
+          "nom": 14,
+          "gen": 6,
+          "dat": 4,
+          "voc": 3,
+          "acc": 11,
+          "loc": 4
+        },
+        "pos": {
+          "subst": 28,
+          "interp": 7,
+          "prep": 7,
+          "part": 2,
+          "adj": 11,
+          "adv": 2,
+          "conj": 2
+        },
+        "ambiguity": 2.5357142857142856,
+        "debug_tags": [
+          "artykuł:brev:pun",
+          "Art:Sf:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+          "Art:Sm1:subst:sg:nom:m1",
+          ".:interp",
+          ".:interp",
+          ".:interp",
+          ".:interp",
+          ".:interp",
+          ".:interp",
+          "1:dig"
+        ],
+        "coords_count": 44
+      },
+      "interpretation": {
+        "determination": "high",
+        "stability": "moderate",
+        "entropy": "mixed",
+        "overall": "mixed_quality",
+        "overall_score": 0.5627
+      },
+      "phi9": [
+        0.7316656139363402,
+        0.42785368646758004,
+        0.5277724494119092,
+        1.9592088821959772,
+        0.38841255540108044,
+        0.4797016959443077,
+        4.058964659941017,
+        2.488168333146121,
+        0.4359592375936826
+      ],
+      "depth": 5,
+      "ambiguity": 2.5357142857142856,
+      "source_file": "Dz. U. 1990 Nr 16 poz. 95 v22.md",
+      "quantum_metrics": {
+        "total_coherence": 0.8432,
+        "quantum_words": 17,
+        "entanglements": 3,
+        "superposition_type": "COHERENT_SUPERPOSITION"
+      },
+      "axiom_protection": {
+        "axioms_activated": 0,
+        "violations_prevented": 0,
+        "meta_reflections": 0
+      },
+      "temporal_analysis": {
+        "coordinates": {
+          "determination": 0.7,
+          "stability": 0.6,
+          "entropy": 0.4
+        },
+        "tenses": {
+          "Pres": 4
+        },
+        "aspects": {
+          "Imp": 5
+        },
+        "dominant_time": "Pres"
+      },
+      "extended_rhetorical_analysis": {
+        "mode": "literal",
+        "irony_score": 1.5,
+        "paradox_score": 0,
+        "sarcasm_score": 0,
+        "context_score": 0,
+        "detected_markers": [
+          [
+            "irony",
+            "ależ"
+          ]
+        ]
+      },
+      "quantum_ambiguity": {
+        "needs_superposition": false,
+        "ambiguity_score": 0.0,
+        "ambiguity_markers": [],
+        "marker_count": 0
+      },
+      "depth_metrics": {
+        "max_depth": 5,
+        "avg_depth": 1.9459,
+        "depth_variance": 1.7268
+      },
+      "rhetorical_analysis": {
+        "mode": "literal",
+        "irony_score": 0.2,
+        "paradox_score": 0.0,
+        "structural_divergence": 0.1682,
+        "pos_anomalies": {
+          "adj_ratio": 0.1864,
+          "verb_ratio": 0.0,
+          "anomaly_score": 0.5093
+        }
+      },
+      "quantum_tensor": {
+        "value": 0.156416,
+        "formula": "0.742 × 0.433 × 0.487 = 0.156"
+      },
+      "constitutional_metrics": {
+        "definiteness": {
+          "value": 1.5602,
+          "formula": "(1/2.54) × 5 × √(0.742×0.433/0.513) = 1.56",
+          "interpretation": "Wysoka CD = tekst uporządkowany, jednoznaczny, strukturalny",
+          "components": {
+            "inverse_ambiguity": 0.3944,
+            "depth": 5,
+            "geometric_balance": 0.7912
+          }
+        },
+        "indefiniteness": {
+          "value": 16.0235,
+          "formula": "2.54 × 5 × √(0.513/(0.742×0.433)) = 16.02",
+          "interpretation": "Wysoka CI = tekst chaotyczny, wieloznaczny, nieprzewidywalny",
+          "components": {
+            "ambiguity": 2.5357,
+            "depth": 5,
+            "geometric_tension": 1.2638
+          },
+          "decomposition": {
+            "morphological": {
+              "value": 14.4984,
+              "percentage": 90.48,
+              "source": "Fleksja, ambiguity morfologiczna"
+            },
+            "syntactic": {
+              "value": 0.794,
+              "percentage": 4.96,
+              "source": "Głębokość składniowa, długość zdań"
+            },
+            "semantic": {
+              "value": 0.7311,
+              "percentage": 4.56,
+              "source": "Chaos semantyczny w przestrzeni F³"
+            }
+          }
+        },
+        "semantic_accessibility": {
+          "value": 0.0887,
+          "percentage": 8.87,
+          "formula": "CD / (CI + CD) = 1.56 / (16.02 + 1.56) = 0.089",
+          "interpretation": "Tekst trudno dostępny (< 30% definiteness)",
+          "category": "NISKA_DOSTĘPNOŚĆ",
+          "range": "[0,1] gdzie 1=maksymalna dostępność, 0=niedostępny",
+          "advantages": [
+            "Znormalizowana do [0,1]",
+            "Niezależna od skali absolutnej",
+            "Intuicyjna interpretacja"
+          ]
+        },
+        "duality": {
+          "product": 25.0,
+          "theoretical": 25,
+          "error_percent": 0.0,
+          "formula": "CI × CD = Depth²",
+          "verification": "PASSED",
+          "interpretation": "Dualność wynika z Zasady Nieoznaczoności Semantycznej: Δ_form · Δ_int ≥ ħ_semantic"
+        },
+        "classification": {
+          "type": "CHAOTIC_STRUCTURE",
+          "cd_ci_ratio": 0.0974,
+          "description": "Tekst chaotyczny, wieloznaczny (CI > CD)",
+          "enhanced_type": "STRUCTURED"
+        },
+        "theoretical_basis": {
+          "derived_from": "Zasada Nieoznaczoności Semantycznej (GTMØ Axiom)",
+          "morphosyntactic_projection": "Δ_form = Ambiguity × f(Depth), Δ_geom = √(E/(D×S))",
+          "fundamental_constant": "Ø₀ = 1.2925 (Hausdorff dimension of fractal boundaries)",
+          "operator": "Ø: projekcja na |ψ_Ø⟩ = (1/√3, 1/√3, 1/√3)ᵀ",
+          "semantic_accessibility": "SA = CD/(CI+CD) normalizuje dostępność do [0,1]",
+          "ci_decomposition": "CI = CI_morphological + CI_syntactic + CI_semantic"
+        }
+      },
+      "geometric_balance": 0.791247,
+      "geometric_tension": 1.263827,
+      "critical_block": true,
+      "critical_reason": "LOW_SA",
+      "topological_attractors": {
+        "nearest_attractor": {
+          "attractor_name": "Dyskurs zrównoważony",
+          "attractor_type": "fixed_point",
+          "distance": 0.3259825269854823,
+          "in_basin": false,
+          "basin_radius": 0.25,
+          "pull_strength": 1.0,
+          "stability_index": 0.75,
+          "coordinates": [
+            0.65,
+            0.7,
+            0.35
+          ]
+        },
+        "basin_analysis": {
+          "primary_basin": null,
+          "all_basins": [],
+          "num_basins": 0,
+          "nearest_attractors": [
+            {
+              "name": "BALANCED_DISCOURSE",
+              "display_name": "Dyskurs zrównoważony",
+              "distance": 0.3259825269854823,
+              "in_basin": false,
+              "type": "fixed_point",
+              "stability": 0.75
+            },
+            {
+              "name": "POETIC_AMBIGUITY",
+              "display_name": "Wieloznaczność poetycka",
+              "distance": 0.4321291025593596,
+              "in_basin": false,
+              "type": "limit_cycle",
+              "stability": 0.45
+            },
+            {
+              "name": "IMPERATIVE_COMMAND",
+              "display_name": "Rozkaz imperatywny",
+              "distance": 0.5108197655638915,
+              "in_basin": false,
+              "type": "fixed_point",
+              "stability": 0.92
+            }
+          ],
+          "is_in_basin": false,
+          "basin_overlap": false
+        }
+      },
+      "temporal_evolution": {
+        "num_states": 1,
+        "time_span": 0.0,
+        "total_distance": 0.0,
+        "mean_coords": [
+          0.7416656139363402,
+          0.43285368646758005,
+          0.5127724494119091
+        ],
+        "std_coords": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "current_coords": [
+          0.7416656139363402,
+          0.43285368646758005,
+          0.5127724494119091
+        ],
+        "current_attractor": {
+          "attractor_name": "Dyskurs zrównoważony",
+          "attractor_type": "fixed_point",
+          "distance": 0.3259825269854823,
+          "in_basin": false,
+          "basin_radius": 0.25,
+          "pull_strength": 1.0,
+          "stability_index": 0.75,
+          "coordinates": [
+            0.65,
+            0.7,
+            0.35
+          ]
+        },
+        "velocity": null,
+        "acceleration": null,
+        "num_bifurcations": 0,
+        "bifurcation_points": []
+      },
+      "quantum_enhanced": {
+        "num_quantum_states": 17,
+        "coherence_detailed": {
+          "total_coherence": 0.9952765943786408,
+          "phase_coherence": 1.0,
+          "amplitude_coherence": 0.9842553145954689,
+          "spatial_coherence": 1.0,
+          "mean_phase": -0.9258692232706783,
+          "mean_amplitude": 0.21165393196513088,
+          "phase_std": 3.808033558317022e-17,
+          "amplitude_std": 0.1259759879225898
+        },
+        "entanglement": {
+          "entanglement_matrix": [
+            [
+              0.0,
+              0.18323433661477656,
+              0.10743833880944847,
+              0.028755732444741167,
+              0.08999976169090522,
+              0.10743833880944847,
+              0.1692625168948323,
+              0.18323433661477656,
+              0.028755732444741167,
+              0.13969315416885905,
+              0.08999976169090522,
+              0.028755732444741167,
+              0.12395207853085613,
+              0.10743833880944847,
+              0.05126589322220757,
+              0.18323433661477656,
+              0.18323433661477656
+            ],
+            [
+              0.18323433661477656,
+              0.0,
+              0.26599134603642033,
+              0.07775157678764054,
+              0.2266230973000449,
+              0.26599134603642033,
+              0.39525888863297787,
+              0.42216609829780044,
+              0.07775157678764054,
+              0.3354627383957688,
+              0.2266230973000449,
+              0.07775157678764054,
+              0.30210336699739837,
+              0.26599134603642033,
+              0.13452462713240868,
+              0.42216609829780044,
+              0.42216609829780044
+            ],
+            [
+              0.10743833880944847,
+              0.26599134603642033,
+              0.0,
+              0.04409177021788165,
+              0.13452462713240868,
+              0.1596620859302786,
+              0.24675391019648174,
+              0.26599134603642033,
+              0.04409177021788165,
+              0.20549470401394435,
+              0.13452462713240868,
+              0.04409177021788165,
+              0.18323433661477656,
+              0.1596620859302786,
+              0.07775157678764054,
+              0.26599134603642033,
+              0.26599134603642033
+            ],
+            [
+              0.028755732444741167,
+              0.07775157678764054,
+              0.04409177021788165,
+              0.0,
+              0.03661398685262357,
+              0.04409177021788165,
+              0.0714059992628617,
+              0.07775157678764054,
+              0.011231971022665908,
+              0.05818710862770612,
+              0.03661398685262357,
+              0.011231971022665908,
+              0.05126589322220757,
+              0.04409177021788165,
+              0.020386593125000588,
+              0.07775157678764054,
+              0.07775157678764054
+            ],
+            [
+              0.08999976169090522,
+              0.2266230973000449,
+              0.13452462713240868,
+              0.03661398685262357,
+              0.0,
+              0.13452462713240868,
+              0.20980610680333198,
+              0.2266230973000449,
+              0.03661398685262357,
+              0.17397498622117694,
+              0.11303699320673727,
+              0.03661398685262357,
+              0.15476969308322971,
+              0.13452462713240868,
+              0.06489148749577656,
+              0.2266230973000449,
+              0.2266230973000449
+            ],
+            [
+              0.10743833880944847,
+              0.26599134603642033,
+              0.1596620859302786,
+              0.04409177021788165,
+              0.13452462713240868,
+              0.0,
+              0.24675391019648174,
+              0.26599134603642033,
+              0.04409177021788165,
+              0.20549470401394435,
+              0.13452462713240868,
+              0.04409177021788165,
+              0.18323433661477656,
+              0.1596620859302786,
+              0.07775157678764054,
+              0.26599134603642033,
+              0.26599134603642033
+            ],
+            [
+              0.1692625168948323,
+              0.39525888863297787,
+              0.24675391019648174,
+              0.0714059992628617,
+              0.20980610680333198,
+              0.24675391019648174,
+              0.0,
+              0.39525888863297787,
+              0.0714059992628617,
+              0.3123817771122672,
+              0.20980610680333198,
+              0.0714059992628617,
+              0.28079448259944506,
+              0.24675391019648174,
+              0.12395207853085616,
+              0.39525888863297787,
+              0.39525888863297787
+            ],
+            [
+              0.18323433661477656,
+              0.42216609829780044,
+              0.26599134603642033,
+              0.07775157678764054,
+              0.2266230973000449,
+              0.26599134603642033,
+              0.39525888863297787,
+              0.0,
+              0.07775157678764054,
+              0.3354627383957688,
+              0.2266230973000449,
+              0.07775157678764054,
+              0.30210336699739837,
+              0.26599134603642033,
+              0.13452462713240868,
+              0.42216609829780044,
+              0.42216609829780044
+            ],
+            [
+              0.028755732444741167,
+              0.07775157678764054,
+              0.04409177021788165,
+              0.011231971022665908,
+              0.03661398685262357,
+              0.04409177021788165,
+              0.0714059992628617,
+              0.07775157678764054,
+              0.0,
+              0.05818710862770612,
+              0.03661398685262357,
+              0.011231971022665908,
+              0.05126589322220757,
+              0.04409177021788165,
+              0.020386593125000588,
+              0.07775157678764054,
+              0.07775157678764054
+            ],
+            [
+              0.13969315416885905,
+              0.3354627383957688,
+              0.20549470401394435,
+              0.05818710862770612,
+              0.17397498622117694,
+              0.20549470401394435,
+              0.3123817771122672,
+              0.3354627383957688,
+              0.05818710862770612,
+              0.0,
+              0.17397498622117694,
+              0.05818710862770612,
+              0.2347887389321457,
+              0.20549470401394435,
+              0.10173752681194852,
+              0.3354627383957688,
+              0.3354627383957688
+            ],
+            [
+              0.08999976169090522,
+              0.2266230973000449,
+              0.13452462713240868,
+              0.03661398685262357,
+              0.11303699320673727,
+              0.13452462713240868,
+              0.20980610680333198,
+              0.2266230973000449,
+              0.03661398685262357,
+              0.17397498622117694,
+              0.0,
+              0.03661398685262357,
+              0.15476969308322971,
+              0.13452462713240868,
+              0.06489148749577656,
+              0.2266230973000449,
+              0.2266230973000449
+            ],
+            [
+              0.028755732444741167,
+              0.07775157678764054,
+              0.04409177021788165,
+              0.011231971022665908,
+              0.03661398685262357,
+              0.04409177021788165,
+              0.0714059992628617,
+              0.07775157678764054,
+              0.011231971022665908,
+              0.05818710862770612,
+              0.03661398685262357,
+              0.0,
+              0.05126589322220757,
+              0.04409177021788165,
+              0.020386593125000588,
+              0.07775157678764054,
+              0.07775157678764054
+            ],
+            [
+              0.12395207853085613,
+              0.30210336699739837,
+              0.18323433661477656,
+              0.05126589322220757,
+              0.15476969308322971,
+              0.18323433661477656,
+              0.28079448259944506,
+              0.30210336699739837,
+              0.05126589322220757,
+              0.2347887389321457,
+              0.15476969308322971,
+              0.05126589322220757,
+              0.0,
+              0.18323433661477656,
+              0.08999976169090522,
+              0.30210336699739837,
+              0.30210336699739837
+            ],
+            [
+              0.10743833880944847,
+              0.26599134603642033,
+              0.1596620859302786,
+              0.04409177021788165,
+              0.13452462713240868,
+              0.1596620859302786,
+              0.24675391019648174,
+              0.26599134603642033,
+              0.04409177021788165,
+              0.20549470401394435,
+              0.13452462713240868,
+              0.04409177021788165,
+              0.18323433661477656,
+              0.0,
+              0.07775157678764054,
+              0.26599134603642033,
+              0.26599134603642033
+            ],
+            [
+              0.05126589322220757,
+              0.13452462713240868,
+              0.07775157678764054,
+              0.020386593125000588,
+              0.06489148749577656,
+              0.07775157678764054,
+              0.12395207853085616,
+              0.13452462713240868,
+              0.020386593125000588,
+              0.10173752681194852,
+              0.06489148749577656,
+              0.020386593125000588,
+              0.08999976169090522,
+              0.07775157678764054,
+              0.0,
+              0.13452462713240868,
+              0.13452462713240868
+            ],
+            [
+              0.18323433661477656,
+              0.42216609829780044,
+              0.26599134603642033,
+              0.07775157678764054,
+              0.2266230973000449,
+              0.26599134603642033,
+              0.39525888863297787,
+              0.42216609829780044,
+              0.07775157678764054,
+              0.3354627383957688,
+              0.2266230973000449,
+              0.07775157678764054,
+              0.30210336699739837,
+              0.26599134603642033,
+              0.13452462713240868,
+              0.0,
+              0.42216609829780044
+            ],
+            [
+              0.18323433661477656,
+              0.42216609829780044,
+              0.26599134603642033,
+              0.07775157678764054,
+              0.2266230973000449,
+              0.26599134603642033,
+              0.39525888863297787,
+              0.42216609829780044,
+              0.07775157678764054,
+              0.3354627383957688,
+              0.2266230973000449,
+              0.07775157678764054,
+              0.30210336699739837,
+              0.26599134603642033,
+              0.13452462713240868,
+              0.42216609829780044,
+              0.0
+            ]
+          ],
+          "mean_entanglement": 0.16242164493752576,
+          "max_entanglement": 0.42216609829780044,
+          "total_entanglement": 22.089343711503503,
+          "num_states": 17,
+          "highly_entangled_pairs": []
+        },
+        "superposition": {
+          "is_superposed": false,
+          "superposition_degree": 0.043805515070483206,
+          "num_superposed_states": 5,
+          "mean_overlap": 0.043805515070483206,
+          "max_overlap": 0.14968718717552054,
+          "superposition_type": "DECOHERENT"
+        },
+        "quantum_observables": {
+          "mean_phase": -0.9258692232706782,
+          "std_phase": 3.808033558317022e-17,
+          "mean_amplitude": 0.21165393196513088,
+          "std_amplitude": 0.1259759879225898,
+          "mean_frequency": 5.127724494119091,
+          "max_frequency": 5.127724494119091,
+          "min_frequency": 5.127724494119091
+        },
+        "wavefunction_samples": [
+          {
+            "word": "Art",
+            "amplitude": 0.11606828527120078,
+            "phase": -0.9258692232706783,
+            "frequency": 5.127724494119091,
+            "coords": [
+              0.7416656139363402,
+              0.43285368646758005,
+              0.5127724494119091
+            ]
+          },
+          {
+            "word": "Mieszkańcy",
+            "amplitude": 0.386894284237336,
+            "phase": -0.9258692232706782,
+            "frequency": 5.127724494119091,
+            "coords": [
+              0.7416656139363402,
+              0.43285368646758005,
+              0.5127724494119091
+            ]
+          },
+          {
+            "word": "gminy",
+            "amplitude": 0.193447142118668,
+            "phase": -0.9258692232706782,
+            "frequency": 5.127724494119091,
+            "coords": [
+              0.7416656139363402,
+              0.43285368646758005,
+              0.5127724494119091
+            ]
+          },
+          {
+            "word": "z",
+            "amplitude": 0.0386894284237336,
+            "phase": -0.9258692232706782,
+            "frequency": 5.127724494119091,
+            "coords": [
+              0.7416656139363402,
+              0.43285368646758005,
+              0.5127724494119091
+            ]
+          },
+          {
+            "word": "mocy",
+            "amplitude": 0.1547577136949344,
+            "phase": -0.9258692232706782,
+            "frequency": 5.127724494119091,
+            "coords": [
+              0.7416656139363402,
+              0.43285368646758005,
+              0.5127724494119091
+            ]
+          }
+        ],
+        "quantum_classification": "DECOHERENT"
+      },
+      "paragraph_number": 1,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "version": "2.0",
+          "analysis_type": "GTMØ",
+          "timestamp": "2025-11-13T09:49:06.395401",
+          "content": {
+            "text": "Art. 1. 1.",
+            "length": 10,
+            "word_count": 3
+          },
+          "coordinates": {
+            "determination": 0.715748,
+            "stability": 0.680968,
+            "entropy": 0.292608
+          },
+          "analysis_metadata": {
+            "analyzed_at": "2025-11-13T09:49:06.395401",
+            "sequence_number": 0,
+            "daily_date": "13112025"
+          },
+          "additional_metrics": {
+            "total_analyses": 8,
+            "cases": {
+              "nom": 2
+            },
+            "pos": {
+              "subst": 2,
+              "interp": 3
+            },
+            "ambiguity": 2.6666666666666665,
+            "debug_tags": [
+              "artykuł:brev:pun",
+              "Art:Sf:subst:sg.pl:nom.gen.dat.acc.inst.loc.voc:f",
+              "Art:Sm1:subst:sg:nom:m1",
+              ".:interp",
+              ".:interp",
+              ".:interp",
+              "1:dig",
+              "1:dig"
+            ],
+            "coords_count": 3
+          },
+          "interpretation": {
+            "determination": "high",
+            "stability": "moderate",
+            "entropy": "low",
+            "overall": "moderate_quality",
+            "overall_score": 0.7028
+          },
+          "phi9": [
+            0.7157479999999999,
+            0.6809679999999999,
+            0.292608,
+            4.112881741986857,
+            2.5420854151919605,
+            0.4769209001301252,
+            3.2961605525042867,
+            1.7253642257093902,
+            0.3275086646102171
+          ],
+          "depth": 2,
+          "ambiguity": 2.6666666666666665,
+          "source_file": "Dz. U. 1990 Nr 16 poz. 95 v22.md",
+          "quantum_metrics": {
+            "total_coherence": 0.98,
+            "quantum_words": 1,
+            "entanglements": 0,
+            "superposition_type": "COHERENT_SUPERPOSITION"
+          },
+          "axiom_protection": {
+            "axioms_activated": 0,
+            "violations_prevented": 0,
+            "meta_reflections": 0
+          },
+          "temporal_analysis": {
+            "coordinates": {
+              "determination": 0.5,
+              "stability": 0.5,
+              "entropy": 0.5
+            },
+            "tenses": {},
+            "aspects": {},
+            "dominant_time": null
+          },
+          "extended_rhetorical_analysis": {
+            "mode": "literal",
+            "irony_score": 0,
+            "paradox_score": 0,
+            "sarcasm_score": 0,
+            "context_score": 0,
+            "detected_markers": []
+          },
+          "quantum_ambiguity": {
+            "needs_superposition": false,
+            "ambiguity_score": 0.0,
+            "ambiguity_markers": [],
+            "marker_count": 0
+          },
+          "depth_metrics": {
+            "max_depth": 2,
+            "avg_depth": 1.0,
+            "depth_variance": 0.3333
+          },
+          "rhetorical_analysis": {
+            "mode": "literal",
+            "irony_score": 0.45,
+            "paradox_score": 0.0,
+            "structural_divergence": 0.1718,
+            "pos_anomalies": {
+              "adj_ratio": 0.0,
+              "verb_ratio": 0.0,
+              "anomaly_score": 1.3
+            }
+          },
+          "quantum_tensor": {
+            "value": 0.359636,
+            "formula": "0.726 × 0.686 × 0.722 = 0.360"
+          },
+          "constitutional_metrics": {
+            "definiteness": {
+              "value": 1.0044,
+              "formula": "(1/2.67) × 2 × √(0.726×0.686/0.278) = 1.00",
+              "interpretation": "Wysoka CD = tekst uporządkowany, jednoznaczny, strukturalny",
+              "components": {
+                "inverse_ambiguity": 0.375,
+                "depth": 2,
+                "geometric_balance": 1.3391
+              }
+            },
+            "indefiniteness": {
+              "value": 3.9826,
+              "formula": "2.67 × 2 × √(0.278/(0.726×0.686)) = 3.98",
+              "interpretation": "Wysoka CI = tekst chaotyczny, wieloznaczny, nieprzewidywalny",
+              "components": {
+                "ambiguity": 2.6667,
+                "depth": 2,
+                "geometric_tension": 0.7467
+              },
+              "decomposition": {
+                "morphological": {
+                  "value": 3.3132,
+                  "percentage": 83.19,
+                  "source": "Fleksja, ambiguity morfologiczna"
+                },
+                "syntactic": {
+                  "value": 0.233,
+                  "percentage": 5.85,
+                  "source": "Głębokość składniowa, długość zdań"
+                },
+                "semantic": {
+                  "value": 0.4364,
+                  "percentage": 10.96,
+                  "source": "Chaos semantyczny w przestrzeni F³"
+                }
+              }
+            },
+            "semantic_accessibility": {
+              "value": 0.2014,
+              "percentage": 20.14,
+              "formula": "CD / (CI + CD) = 1.00 / (3.98 + 1.00) = 0.201",
+              "interpretation": "Tekst trudno dostępny (< 30% definiteness)",
+              "category": "NISKA_DOSTĘPNOŚĆ",
+              "range": "[0,1] gdzie 1=maksymalna dostępność, 0=niedostępny",
+              "advantages": [
+                "Znormalizowana do [0,1]",
+                "Niezależna od skali absolutnej",
+                "Intuicyjna interpretacja"
+              ]
+            },
+            "duality": {
+              "product": 4.0,
+              "theoretical": 4,
+              "error_percent": 0.0,
+              "formula": "CI × CD = Depth²",
+              "verification": "PASSED",
+              "interpretation": "Dualność wynika z Zasady Nieoznaczoności Semantycznej: Δ_form · Δ_int ≥ ħ_semantic"
+            },
+            "classification": {
+              "type": "CHAOTIC_STRUCTURE",
+              "cd_ci_ratio": 0.2522,
+              "description": "Tekst chaotyczny, wieloznaczny (CI > CD)",
+              "enhanced_type": "STRUCTURED"
+            },
+            "theoretical_basis": {
+              "derived_from": "Zasada Nieoznaczoności Semantycznej (GTMØ Axiom)",
+              "morphosyntactic_projection": "Δ_form = Ambiguity × f(Depth), Δ_geom = √(E/(D×S))",
+              "fundamental_constant": "Ø₀ = 1.2925 (Hausdorff dimension of fractal boundaries)",
+              "operator": "Ø: projekcja na |ψ_Ø⟩ = (1/√3, 1/√3, 1/√3)ᵀ",
+              "semantic_accessibility": "SA = CD/(CI+CD) normalizuje dostępność do [0,1]",
+              "ci_decomposition": "CI = CI_morphological + CI_syntactic + CI_semantic"
+            }
+          },
+          "geometric_balance": 1.339149,
+          "geometric_tension": 0.746743,
+          "critical_block": true,
+          "critical_reason": "LOW_SA",
+          "topological_attractors": {
+            "nearest_attractor": {
+              "attractor_name": "Dyskurs zrównoważony",
+              "attractor_type": "fixed_point",
+              "distance": 0.10571309375853112,
+              "in_basin": true,
+              "basin_radius": 0.25,
+              "pull_strength": 1.0,
+              "stability_index": 0.75,
+              "coordinates": [
+                0.65,
+                0.7,
+                0.35
+              ]
+            },
+            "basin_analysis": {
+              "primary_basin": {
+                "name": "BALANCED_DISCOURSE",
+                "display_name": "Dyskurs zrównoważony",
+                "distance": 0.10571309375853112,
+                "in_basin": true,
+                "type": "fixed_point",
+                "stability": 0.75
+              },
+              "all_basins": [
+                {
+                  "name": "BALANCED_DISCOURSE",
+                  "display_name": "Dyskurs zrównoważony",
+                  "distance": 0.10571309375853112,
+                  "in_basin": true,
+                  "type": "fixed_point",
+                  "stability": 0.75
+                }
+              ],
+              "num_basins": 1,
+              "nearest_attractors": [
+                {
+                  "name": "BALANCED_DISCOURSE",
+                  "display_name": "Dyskurs zrównoważony",
+                  "distance": 0.10571309375853112,
+                  "in_basin": true,
+                  "type": "fixed_point",
+                  "stability": 0.75
+                },
+                {
+                  "name": "LEGAL_NORM",
+                  "display_name": "Norma prawna",
+                  "distance": 0.21148441595540798,
+                  "in_basin": false,
+                  "type": "fixed_point",
+                  "stability": 0.88
+                },
+                {
+                  "name": "IMPERATIVE_COMMAND",
+                  "display_name": "Rozkaz imperatywny",
+                  "distance": 0.2883179810417657,
+                  "in_basin": false,
+                  "type": "fixed_point",
+                  "stability": 0.92
+                }
+              ],
+              "is_in_basin": true,
+              "basin_overlap": false
+            }
+          },
+          "temporal_evolution": {
+            "num_states": 1,
+            "time_span": 0.0,
+            "total_distance": 0.0,
+            "mean_coords": [
+              0.725748,
+              0.6859679999999999,
+              0.27760799999999997
+            ],
+            "std_coords": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "current_coords": [
+              0.725748,
+              0.6859679999999999,
+              0.27760799999999997
+            ],
+            "current_attractor": {
+              "attractor_name": "Dyskurs zrównoważony",
+              "attractor_type": "fixed_point",
+              "distance": 0.10571309375853112,
+              "in_basin": true,
+              "basin_radius": 0.25,
+              "pull_strength": 1.0,
+              "stability_index": 0.75,
+              "coordinates": [
+                0.65,
+                0.7,
+                0.35
+              ]
+            },
+            "velocity": null,
+            "acceleration": null,
+            "num_bifurcations": 0,
+            "bifurcation_points": []
+          },
+          "quantum_enhanced": {
+            "num_quantum_states": 1,
+            "coherence_detailed": {
+              "total_coherence": 1.0,
+              "phase_coherence": 1.0,
+              "amplitude_coherence": 1.0,
+              "spatial_coherence": 1.0,
+              "mean_phase": -1.1249220052475846,
+              "mean_amplitude": 0.1804600813033287,
+              "phase_std": 0.0,
+              "amplitude_std": 0.0
+            },
+            "entanglement": {
+              "entanglement_matrix": [],
+              "mean_entanglement": 0.0,
+              "max_entanglement": 0.0,
+              "total_entanglement": 0.0,
+              "num_states": 1
+            },
+            "superposition": {
+              "is_superposed": false,
+              "superposition_degree": 0.0,
+              "num_superposed_states": 0,
+              "mean_overlap": 0.0,
+              "max_overlap": 0.0,
+              "superposition_type": "DECOHERENT"
+            },
+            "quantum_observables": {
+              "mean_phase": -1.1249220052475846,
+              "std_phase": 0.0,
+              "mean_amplitude": 0.1804600813033287,
+              "std_amplitude": 0.0,
+              "mean_frequency": 2.7760799999999994,
+              "max_frequency": 2.7760799999999994,
+              "min_frequency": 2.7760799999999994
+            },
+            "wavefunction_samples": [
+              {
+                "word": "Art",
+                "amplitude": 0.1804600813033287,
+                "phase": -1.1249220052475846,
+                "frequency": 2.7760799999999994,
+                "coords": [
+                  0.725748,
+                  0.6859679999999999,
+                  0.27760799999999997
+                ]
+              }
+            ],
+            "quantum_classification": "DECOHERENT"
+          },
+          "sentence_number": 1,
+          "paragraph_number": 1
+        },
+        {
+          "version": "2.0",
+          "analysis_type": "GTMØ",
+          "timestamp": "2025-11-13T09:49:06.413037",
+          "content": {
+            "text": "Mieszkańcy gminy tworzą z mocy prawa wspólnotę samorządową.",
+            "length": 59,
+            "word_count": 8
+          },
+          "coordinates": {
+            "determination": 0.806114,
+            "stability": 0.423891,
+            "entropy": 0.433268
+          },
+          "analysis_metadata": {
+            "analyzed_at": "2025-11-13T09:49:06.413037",
+            "sequence_number": 0,
+            "daily_date": "13112025"
+          },
+          "additional_metrics": {
+            "total_analyses": 21,
+            "cases": {
+              "nom": 6,
+              "gen": 5,
+              "dat": 1,
+              "voc": 2,
+              "acc": 2
+            },
+            "pos": {
+              "subst": 13,
+              "prep": 2,
+              "part": 1,
+              "adj": 3,
+              "interp": 1
+            },
+            "ambiguity": 2.625,
+            "debug_tags": [
+              "mieszkaniec:subst:pl:nom.voc:m1",
+              "gmin:subst:pl:nom.acc.voc:m3",
+              "gmina:subst:sg:gen:f",
+              "gmina:subst:pl:nom.acc.voc:f",
+              "tworzyć:fin:pl:ter:imperf",
+              "z:P:prep:gen:nwok",
+              "z:P:prep:inst:nwok",
+              "z:T:part:nwok",
+              "moc:S:subst:sg:gen:f",
+              "moc:S:subst:sg:dat.loc:f"
+            ],
+            "coords_count": 17
+          },
+          "interpretation": {
+            "determination": "high",
+            "stability": "moderate",
+            "entropy": "mixed",
+            "overall": "mixed_quality",
+            "overall_score": 0.6196
+          },
+          "phi9": [
+            0.806114220702342,
+            0.42389088150542964,
+            0.4332676037208777,
+            1.5304970128105875,
+            0.04029931398430847,
+            0.42508544105908236,
+            1.5384123772202944,
+            0.032383949574600196,
+            0.4375432844775394
+          ],
+          "depth": 3,
+          "ambiguity": 2.625,
+          "source_file": "Dz. U. 1990 Nr 16 poz. 95 v22.md",
+          "quantum_metrics": {
+            "total_coherence": 0.8068,
+            "quantum_words": 7,
+            "entanglements": 2,
+            "superposition_type": "COHERENT_SUPERPOSITION"
+          },
+          "axiom_protection": {
+            "axioms_activated": 0,
+            "violations_prevented": 0,
+            "meta_reflections": 0
+          },
+          "temporal_analysis": {
+            "coordinates": {
+              "determination": 0.7,
+              "stability": 0.6,
+              "entropy": 0.4
+            },
+            "tenses": {
+              "Pres": 1
+            },
+            "aspects": {
+              "Imp": 1
+            },
+            "dominant_time": "Pres"
+          },
+          "extended_rhetorical_analysis": {
+            "mode": "literal",
+            "irony_score": 0,
+            "paradox_score": 0,
+            "sarcasm_score": 0,
+            "context_score": 0,
+            "detected_markers": []
+          },
+          "quantum_ambiguity": {
+            "needs_superposition": false,
+            "ambiguity_score": 0.0,
+            "ambiguity_markers": [],
+            "marker_count": 0
+          },
+          "depth_metrics": {
+            "max_depth": 3,
+            "avg_depth": 1.4444,
+            "depth_variance": 0.6914
+          },
+          "rhetorical_analysis": {
+            "mode": "literal",
+            "irony_score": 0.0,
+            "paradox_score": 0.0,
+            "structural_divergence": 0.2039,
+            "pos_anomalies": {
+              "adj_ratio": 0.15,
+              "verb_ratio": 0.0,
+              "anomaly_score": 0.4
+            }
+          },
+          "quantum_tensor": {
+            "value": 0.20362,
+            "formula": "0.816 × 0.429 × 0.582 = 0.204"
+          },
+          "constitutional_metrics": {
+            "definiteness": {
+              "value": 1.0455,
+              "formula": "(1/2.62) × 3 × √(0.816×0.429/0.418) = 1.05",
+              "interpretation": "Wysoka CD = tekst uporządkowany, jednoznaczny, strukturalny",
+              "components": {
+                "inverse_ambiguity": 0.381,
+                "depth": 3,
+                "geometric_balance": 0.9148
+              }
+            },
+            "indefiniteness": {
+              "value": 8.6085,
+              "formula": "2.62 × 3 × √(0.418/(0.816×0.429)) = 8.61",
+              "interpretation": "Wysoka CI = tekst chaotyczny, wieloznaczny, nieprzewidywalny",
+              "components": {
+                "ambiguity": 2.625,
+                "depth": 3,
+                "geometric_tension": 1.0931
+              },
+              "decomposition": {
+                "morphological": {
+                  "value": 7.4559,
+                  "percentage": 86.61,
+                  "source": "Fleksja, ambiguity morfologiczna"
+                },
+                "syntactic": {
+                  "value": 0.4637,
+                  "percentage": 5.39,
+                  "source": "Głębokość składniowa, długość zdań"
+                },
+                "semantic": {
+                  "value": 0.6889,
+                  "percentage": 8.0,
+                  "source": "Chaos semantyczny w przestrzeni F³"
+                }
+              }
+            },
+            "semantic_accessibility": {
+              "value": 0.1083,
+              "percentage": 10.83,
+              "formula": "CD / (CI + CD) = 1.05 / (8.61 + 1.05) = 0.108",
+              "interpretation": "Tekst trudno dostępny (< 30% definiteness)",
+              "category": "NISKA_DOSTĘPNOŚĆ",
+              "range": "[0,1] gdzie 1=maksymalna dostępność, 0=niedostępny",
+              "advantages": [
+                "Znormalizowana do [0,1]",
+                "Niezależna od skali absolutnej",
+                "Intuicyjna interpretacja"
+              ]
+            },
+            "duality": {
+              "product": 9.0,
+              "theoretical": 9,
+              "error_percent": 0.0,
+              "formula": "CI × CD = Depth²",
+              "verification": "PASSED",
+              "interpretation": "Dualność wynika z Zasady Nieoznaczoności Semantycznej: Δ_form · Δ_int ≥ ħ_semantic"
+            },
+            "classification": {
+              "type": "CHAOTIC_STRUCTURE",
+              "cd_ci_ratio": 0.1214,
+              "description": "Tekst chaotyczny, wieloznaczny (CI > CD)",
+              "enhanced_type": "STRUCTURED"
+            },
+            "theoretical_basis": {
+              "derived_from": "Zasada Nieoznaczoności Semantycznej (GTMØ Axiom)",
+              "morphosyntactic_projection": "Δ_form = Ambiguity × f(Depth), Δ_geom = √(E/(D×S))",
+              "fundamental_constant": "Ø₀ = 1.2925 (Hausdorff dimension of fractal boundaries)",
+              "operator": "Ø: projekcja na |ψ_Ø⟩ = (1/√3, 1/√3, 1/√3)ᵀ",
+              "semantic_accessibility": "SA = CD/(CI+CD) normalizuje dostępność do [0,1]",
+              "ci_decomposition": "CI = CI_morphological + CI_syntactic + CI_semantic"
+            }
+          },
+          "geometric_balance": 0.914791,
+          "geometric_tension": 1.093146,
+          "critical_block": true,
+          "critical_reason": "LOW_SA",
+          "topological_attractors": {
+            "nearest_attractor": {
+              "attractor_name": "Dyskurs zrównoważony",
+              "attractor_type": "fixed_point",
+              "distance": 0.3251992530253416,
+              "in_basin": false,
+              "basin_radius": 0.25,
+              "pull_strength": 1.0,
+              "stability_index": 0.75,
+              "coordinates": [
+                0.65,
+                0.7,
+                0.35
+              ]
+            },
+            "basin_analysis": {
+              "primary_basin": null,
+              "all_basins": [],
+              "num_basins": 0,
+              "nearest_attractors": [
+                {
+                  "name": "BALANCED_DISCOURSE",
+                  "display_name": "Dyskurs zrównoważony",
+                  "distance": 0.3251992530253416,
+                  "in_basin": false,
+                  "type": "fixed_point",
+                  "stability": 0.75
+                },
+                {
+                  "name": "IMPERATIVE_COMMAND",
+                  "display_name": "Rozkaz imperatywny",
+                  "distance": 0.4100108678533007,
+                  "in_basin": false,
+                  "type": "fixed_point",
+                  "stability": 0.92
+                },
+                {
+                  "name": "LEGAL_NORM",
+                  "display_name": "Norma prawna",
+                  "distance": 0.4591706992770429,
+                  "in_basin": false,
+                  "type": "fixed_point",
+                  "stability": 0.88
+                }
+              ],
+              "is_in_basin": false,
+              "basin_overlap": false
+            }
+          },
+          "temporal_evolution": {
+            "num_states": 1,
+            "time_span": 0.0,
+            "total_distance": 0.0,
+            "mean_coords": [
+              0.816114220702342,
+              0.42889088150542964,
+              0.4182676037208777
+            ],
+            "std_coords": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "current_coords": [
+              0.816114220702342,
+              0.42889088150542964,
+              0.4182676037208777
+            ],
+            "current_attractor": {
+              "attractor_name": "Dyskurs zrównoważony",
+              "attractor_type": "fixed_point",
+              "distance": 0.3251992530253416,
+              "in_basin": false,
+              "basin_radius": 0.25,
+              "pull_strength": 1.0,
+              "stability_index": 0.75,
+              "coordinates": [
+                0.65,
+                0.7,
+                0.35
+              ]
+            },
+            "velocity": null,
+            "acceleration": null,
+            "num_bifurcations": 0,
+            "bifurcation_points": []
+          },
+          "quantum_enhanced": {
+            "num_quantum_states": 7,
+            "coherence_detailed": {
+              "total_coherence": 0.9946413080576206,
+              "phase_coherence": 1.0,
+              "amplitude_coherence": 0.9821376935254019,
+              "spatial_coherence": 1.0,
+              "mean_phase": -0.5918144723332129,
+              "mean_amplitude": 0.2641742046554504,
+              "phase_std": 1.1102230246251565e-16,
+              "amplitude_std": 0.13425260897989286
+            },
+            "entanglement": {
+              "entanglement_matrix": [
+                [
+                  0.0,
+                  0.2986252749187836,
+                  0.08880010940070401,
+                  0.2553251784655672,
+                  0.2986252749187836,
+                  0.43795726737494134,
+                  0.46624916407749684
+                ],
+                [
+                  0.2986252749187836,
+                  0.0,
+                  0.050561030686026784,
+                  0.15279608394470517,
+                  0.18094116209640215,
+                  0.27750925526038,
+                  0.2986252749187836
+                ],
+                [
+                  0.08880010940070401,
+                  0.050561030686026784,
+                  0.0,
+                  0.04203167713074975,
+                  0.050561030686026784,
+                  0.08160920893758682,
+                  0.08880010940070401
+                ],
+                [
+                  0.2553251784655672,
+                  0.15279608394470517,
+                  0.04203167713074975,
+                  0.0,
+                  0.15279608394470517,
+                  0.23672752888084284,
+                  0.2553251784655672
+                ],
+                [
+                  0.2986252749187836,
+                  0.18094116209640215,
+                  0.050561030686026784,
+                  0.15279608394470517,
+                  0.0,
+                  0.27750925526038,
+                  0.2986252749187836
+                ],
+                [
+                  0.43795726737494134,
+                  0.27750925526038,
+                  0.08160920893758682,
+                  0.23672752888084284,
+                  0.27750925526038,
+                  0.0,
+                  0.43795726737494134
+                ],
+                [
+                  0.46624916407749684,
+                  0.2986252749187836,
+                  0.08880010940070401,
+                  0.2553251784655672,
+                  0.2986252749187836,
+                  0.43795726737494134,
+                  0.0
+                ]
+              ],
+              "mean_entanglement": 0.22514084243156485,
+              "max_entanglement": 0.46624916407749684,
+              "total_entanglement": 4.727957691062862,
+              "num_states": 7,
+              "highly_entangled_pairs": []
+            },
+            "superposition": {
+              "is_superposed": false,
+              "superposition_degree": 0.06678404990235515,
+              "num_superposed_states": 3,
+              "mean_overlap": 0.06678404990235515,
+              "max_overlap": 0.17663287757549848,
+              "superposition_type": "DECOHERENT"
+            },
+            "quantum_observables": {
+              "mean_phase": -0.5918144723332129,
+              "std_phase": 1.1102230246251565e-16,
+              "mean_amplitude": 0.2641742046554504,
+              "std_amplitude": 0.13425260897989286,
+              "mean_frequency": 4.182676037208778,
+              "max_frequency": 4.182676037208777,
+              "min_frequency": 4.182676037208777
+            },
+            "wavefunction_samples": [
+              {
+                "word": "Mieszkańcy",
+                "amplitude": 0.4202771437700348,
+                "phase": -0.591814472333213,
+                "frequency": 4.182676037208777,
+                "coords": [
+                  0.816114220702342,
+                  0.42889088150542964,
+                  0.4182676037208777
+                ]
+              },
+              {
+                "word": "gminy",
+                "amplitude": 0.2101385718850174,
+                "phase": -0.591814472333213,
+                "frequency": 4.182676037208777,
+                "coords": [
+                  0.816114220702342,
+                  0.42889088150542964,
+                  0.4182676037208777
+                ]
+              },
+              {
+                "word": "z",
+                "amplitude": 0.042027714377003485,
+                "phase": -0.591814472333213,
+                "frequency": 4.182676037208777,
+                "coords": [
+                  0.816114220702342,
+                  0.42889088150542964,
+                  0.4182676037208777
+                ]
+              },
+              {
+                "word": "mocy",
+                "amplitude": 0.16811085750801394,
+                "phase": -0.591814472333213,
+                "frequency": 4.182676037208777,
+                "coords": [
+                  0.816114220702342,
+                  0.42889088150542964,
+                  0.4182676037208777
+                ]
+              },
+              {
+                "word": "prawa",
+                "amplitude": 0.2101385718850174,
+                "phase": -0.591814472333213,
+                "frequency": 4.182676037208777,
+                "coords": [
+                  0.816114220702342,
+                  0.42889088150542964,
+                  0.4182676037208777
+                ]
+              }
+            ],
+            "quantum_classification": "DECOHERENT"
+          },
+          "sentence_number": 2,
+          "paragraph_number": 1
+        },
+        {
+          "version": "2.0",
+          "analysis_type": "GTMØ",
+          "timestamp": "2025-11-13T09:49:06.435220",
+          "content": {
+            "text": "2. Ilekroć w ustawie jest mowa o gminie, należy przez to rozumieć wspólnotę\nsamorządową oraz odpowiednie terytorium.",
+            "length": 116,
+            "word_count": 17
+          },
+          "coordinates": {
+            "determination": 0.711658,
+            "stability": 0.462018,
+            "entropy": 0.480264
+          },
+          "analysis_metadata": {
+            "analyzed_at": "2025-11-13T09:49:06.435220",
+            "sequence_number": 0,
+            "daily_date": "13112025"
+          },
+          "additional_metrics": {
+            "total_analyses": 42,
+            "cases": {
+              "acc": 9,
+              "loc": 4,
+              "dat": 3,
+              "nom": 6,
+              "voc": 1,
+              "gen": 1
+            },
+            "pos": {
+              "interp": 3,
+              "adv": 2,
+              "prep": 5,
+              "subst": 13,
+              "conj": 2,
+              "part": 1,
+              "adj": 8
+            },
+            "ambiguity": 2.4705882352941178,
+            "debug_tags": [
+              "2:dig",
+              ".:interp",
+              ".:interp",
+              "ilekroć:adv",
+              "w:prep:acc:nwok",
+              "w:prep:loc:nwok",
+              "ustawa:subst:sg:dat.loc:f",
+              "być:fin:sg:ter:imperf",
+              "mowa:subst:sg:nom:f",
+              "o:I:interj"
+            ],
+            "coords_count": 30
+          },
+          "interpretation": {
+            "determination": "high",
+            "stability": "moderate",
+            "entropy": "mixed",
+            "overall": "mixed_quality",
+            "overall_score": 0.5792
+          },
+          "phi9": [
+            0.7116584640908263,
+            0.4620180350313988,
+            0.4802635254323082,
+            2.013727878472352,
+            0.44293155167745546,
+            0.49866616099640426,
+            2.0292861763492405,
+            0.45848984955434424,
+            0.5188165444431376
+          ],
+          "depth": 4,
+          "ambiguity": 2.4705882352941178,
+          "source_file": "Dz. U. 1990 Nr 16 poz. 95 v22.md",
+          "quantum_metrics": {
+            "total_coherence": 1.1121,
+            "quantum_words": 11,
+            "entanglements": 1,
+            "superposition_type": "COHERENT_SUPERPOSITION"
+          },
+          "axiom_protection": {
+            "axioms_activated": 0,
+            "violations_prevented": 0,
+            "meta_reflections": 0
+          },
+          "temporal_analysis": {
+            "coordinates": {
+              "determination": 0.7,
+              "stability": 0.6,
+              "entropy": 0.4
+            },
+            "tenses": {
+              "Pres": 3
+            },
+            "aspects": {
+              "Imp": 4
+            },
+            "dominant_time": "Pres"
+          },
+          "extended_rhetorical_analysis": {
+            "mode": "literal",
+            "irony_score": 1.5,
+            "paradox_score": 0,
+            "sarcasm_score": 0,
+            "context_score": 0,
+            "detected_markers": [
+              [
+                "irony",
+                "ależ"
+              ]
+            ]
+          },
+          "quantum_ambiguity": {
+            "needs_superposition": false,
+            "ambiguity_score": 0.0,
+            "ambiguity_markers": [],
+            "marker_count": 0
+          },
+          "depth_metrics": {
+            "max_depth": 4,
+            "avg_depth": 2.2381,
+            "depth_variance": 1.229
+          },
+          "rhetorical_analysis": {
+            "mode": "literal",
+            "irony_score": 0.5,
+            "paradox_score": 0.0,
+            "structural_divergence": 0.1876,
+            "pos_anomalies": {
+              "adj_ratio": 0.2353,
+              "verb_ratio": 0.0,
+              "anomaly_score": 0.6559
+            }
+          },
+          "quantum_tensor": {
+            "value": 0.180221,
+            "formula": "0.722 × 0.467 × 0.535 = 0.180"
+          },
+          "constitutional_metrics": {
+            "definiteness": {
+              "value": 1.378,
+              "formula": "(1/2.47) × 4 × √(0.722×0.467/0.465) = 1.38",
+              "interpretation": "Wysoka CD = tekst uporządkowany, jednoznaczny, strukturalny",
+              "components": {
+                "inverse_ambiguity": 0.4048,
+                "depth": 4,
+                "geometric_balance": 0.8511
+              }
+            },
+            "indefiniteness": {
+              "value": 11.6112,
+              "formula": "2.47 × 4 × √(0.465/(0.722×0.467)) = 11.61",
+              "interpretation": "Wysoka CI = tekst chaotyczny, wieloznaczny, nieprzewidywalny",
+              "components": {
+                "ambiguity": 2.4706,
+                "depth": 4,
+                "geometric_tension": 1.1749
+              },
+              "decomposition": {
+                "morphological": {
+                  "value": 10.2993,
+                  "percentage": 88.7,
+                  "source": "Fleksja, ambiguity morfologiczna"
+                },
+                "syntactic": {
+                  "value": 0.6428,
+                  "percentage": 5.54,
+                  "source": "Głębokość składniowa, długość zdań"
+                },
+                "semantic": {
+                  "value": 0.6691,
+                  "percentage": 5.76,
+                  "source": "Chaos semantyczny w przestrzeni F³"
+                }
+              }
+            },
+            "semantic_accessibility": {
+              "value": 0.1061,
+              "percentage": 10.61,
+              "formula": "CD / (CI + CD) = 1.38 / (11.61 + 1.38) = 0.106",
+              "interpretation": "Tekst trudno dostępny (< 30% definiteness)",
+              "category": "NISKA_DOSTĘPNOŚĆ",
+              "range": "[0,1] gdzie 1=maksymalna dostępność, 0=niedostępny",
+              "advantages": [
+                "Znormalizowana do [0,1]",
+                "Niezależna od skali absolutnej",
+                "Intuicyjna interpretacja"
+              ]
+            },
+            "duality": {
+              "product": 16.0,
+              "theoretical": 16,
+              "error_percent": 0.0,
+              "formula": "CI × CD = Depth²",
+              "verification": "PASSED",
+              "interpretation": "Dualność wynika z Zasady Nieoznaczoności Semantycznej: Δ_form · Δ_int ≥ ħ_semantic"
+            },
+            "classification": {
+              "type": "CHAOTIC_STRUCTURE",
+              "cd_ci_ratio": 0.1187,
+              "description": "Tekst chaotyczny, wieloznaczny (CI > CD)",
+              "enhanced_type": "STRUCTURED"
+            },
+            "theoretical_basis": {
+              "derived_from": "Zasada Nieoznaczoności Semantycznej (GTMØ Axiom)",
+              "morphosyntactic_projection": "Δ_form = Ambiguity × f(Depth), Δ_geom = √(E/(D×S))",
+              "fundamental_constant": "Ø₀ = 1.2925 (Hausdorff dimension of fractal boundaries)",
+              "operator": "Ø: projekcja na |ψ_Ø⟩ = (1/√3, 1/√3, 1/√3)ᵀ",
+              "semantic_accessibility": "SA = CD/(CI+CD) normalizuje dostępność do [0,1]",
+              "ci_decomposition": "CI = CI_morphological + CI_syntactic + CI_semantic"
+            }
+          },
+          "geometric_balance": 0.851105,
+          "geometric_tension": 1.174943,
+          "critical_block": true,
+          "critical_reason": "LOW_SA",
+          "topological_attractors": {
+            "nearest_attractor": {
+              "attractor_name": "Dyskurs zrównoważony",
+              "attractor_type": "fixed_point",
+              "distance": 0.2696316223508865,
+              "in_basin": false,
+              "basin_radius": 0.25,
+              "pull_strength": 1.0,
+              "stability_index": 0.75,
+              "coordinates": [
+                0.65,
+                0.7,
+                0.35
+              ]
+            },
+            "basin_analysis": {
+              "primary_basin": null,
+              "all_basins": [],
+              "num_basins": 0,
+              "nearest_attractors": [
+                {
+                  "name": "BALANCED_DISCOURSE",
+                  "display_name": "Dyskurs zrównoważony",
+                  "distance": 0.2696316223508865,
+                  "in_basin": false,
+                  "type": "fixed_point",
+                  "stability": 0.75
+                },
+                {
+                  "name": "POETIC_AMBIGUITY",
+                  "display_name": "Wieloznaczność poetycka",
+                  "distance": 0.43752146687969196,
+                  "in_basin": false,
+                  "type": "limit_cycle",
+                  "stability": 0.45
+                },
+                {
+                  "name": "IMPERATIVE_COMMAND",
+                  "display_name": "Rozkaz imperatywny",
+                  "distance": 0.468016772708382,
+                  "in_basin": false,
+                  "type": "fixed_point",
+                  "stability": 0.92
+                }
+              ],
+              "is_in_basin": false,
+              "basin_overlap": false
+            }
+          },
+          "temporal_evolution": {
+            "num_states": 1,
+            "time_span": 0.0,
+            "total_distance": 0.0,
+            "mean_coords": [
+              0.7216584640908263,
+              0.4670180350313988,
+              0.4652635254323082
+            ],
+            "std_coords": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "current_coords": [
+              0.7216584640908263,
+              0.4670180350313988,
+              0.4652635254323082
+            ],
+            "current_attractor": {
+              "attractor_name": "Dyskurs zrównoważony",
+              "attractor_type": "fixed_point",
+              "distance": 0.2696316223508865,
+              "in_basin": false,
+              "basin_radius": 0.25,
+              "pull_strength": 1.0,
+              "stability_index": 0.75,
+              "coordinates": [
+                0.65,
+                0.7,
+                0.35
+              ]
+            },
+            "velocity": null,
+            "acceleration": null,
+            "num_bifurcations": 0,
+            "bifurcation_points": []
+          },
+          "quantum_enhanced": {
+            "num_quantum_states": 11,
+            "coherence_detailed": {
+              "total_coherence": 0.9923403538075026,
+              "phase_coherence": 0.9999999999999999,
+              "amplitude_coherence": 0.9744678460250087,
+              "spatial_coherence": 1.0,
+              "mean_phase": -1.0662459104496789,
+              "mean_amplitude": 0.27760100745903143,
+              "phase_std": 0.0,
+              "amplitude_std": 0.16082212514285635
+            },
+            "entanglement": {
+              "entanglement_matrix": [
+                [
+                  0.0,
+                  0.07975439803651586,
+                  0.05054367526833296,
+                  0.015702792342604813,
+                  0.07041692208037104,
+                  0.060704955830706286,
+                  0.02834116281347622,
+                  0.09750516855960102,
+                  0.10598907824949644,
+                  0.10598907824949644,
+                  0.10598907824949644
+                ],
+                [
+                  0.07975439803651586,
+                  0.0,
+                  0.23188032770621578,
+                  0.07975439803651586,
+                  0.30872606086907123,
+                  0.27198788690274056,
+                  0.13784958866101668,
+                  0.40321786113888003,
+                  0.4304180592896033,
+                  0.4304180592896033,
+                  0.4304180592896033
+                ],
+                [
+                  0.05054367526833296,
+                  0.23188032770621578,
+                  0.0,
+                  0.05054367526833296,
+                  0.2071627369574627,
+                  0.18088463674308766,
+                  0.08877056094559818,
+                  0.2774282038880785,
+                  0.29853944566736157,
+                  0.29853944566736157,
+                  0.29853944566736157
+                ],
+                [
+                  0.015702792342604813,
+                  0.07975439803651586,
+                  0.05054367526833296,
+                  0.0,
+                  0.07041692208037104,
+                  0.060704955830706286,
+                  0.02834116281347622,
+                  0.09750516855960102,
+                  0.10598907824949644,
+                  0.10598907824949644,
+                  0.10598907824949644
+                ],
+                [
+                  0.07041692208037104,
+                  0.30872606086907123,
+                  0.2071627369574627,
+                  0.07041692208037104,
+                  0.0,
+                  0.24372253215526737,
+                  0.12229889424233259,
+                  0.36528312957559644,
+                  0.39096035417590286,
+                  0.39096035417590286,
+                  0.39096035417590286
+                ],
+                [
+                  0.060704955830706286,
+                  0.27198788690274056,
+                  0.18088463674308766,
+                  0.060704955830706286,
+                  0.24372253215526737,
+                  0.0,
+                  0.10598907824949644,
+                  0.32357445545000296,
+                  0.3472456224536514,
+                  0.3472456224536514,
+                  0.3472456224536514
+                ],
+                [
+                  0.02834116281347622,
+                  0.13784958866101668,
+                  0.08877056094559818,
+                  0.02834116281347622,
+                  0.12229889424233259,
+                  0.10598907824949644,
+                  0.0,
+                  0.16707191492155887,
+                  0.18088463674308766,
+                  0.18088463674308766,
+                  0.18088463674308766
+                ],
+                [
+                  0.09750516855960102,
+                  0.40321786113888003,
+                  0.2774282038880785,
+                  0.09750516855960102,
+                  0.36528312957559644,
+                  0.32357445545000296,
+                  0.16707191492155887,
+                  0.0,
+                  0.498496303827464,
+                  0.498496303827464,
+                  0.498496303827464
+                ],
+                [
+                  0.10598907824949644,
+                  0.4304180592896033,
+                  0.29853944566736157,
+                  0.10598907824949644,
+                  0.39096035417590286,
+                  0.3472456224536514,
+                  0.18088463674308766,
+                  0.498496303827464,
+                  0.0,
+                  0.5277914751543868,
+                  0.5277914751543868
+                ],
+                [
+                  0.10598907824949644,
+                  0.4304180592896033,
+                  0.29853944566736157,
+                  0.10598907824949644,
+                  0.39096035417590286,
+                  0.3472456224536514,
+                  0.18088463674308766,
+                  0.498496303827464,
+                  0.5277914751543868,
+                  0.0,
+                  0.5277914751543868
+                ],
+                [
+                  0.10598907824949644,
+                  0.4304180592896033,
+                  0.29853944566736157,
+                  0.10598907824949644,
+                  0.39096035417590286,
+                  0.3472456224536514,
+                  0.18088463674308766,
+                  0.498496303827464,
+                  0.5277914751543868,
+                  0.5277914751543868,
+                  0.0
+                ]
+              ],
+              "mean_entanglement": 0.23427318886106127,
+              "max_entanglement": 0.5277914751543868,
+              "total_entanglement": 12.88502538735837,
+              "num_states": 11,
+              "highly_entangled_pairs": [
+                {
+                  "word1": "samorządową",
+                  "word2": "odpowiednie",
+                  "index1": 8,
+                  "index2": 9,
+                  "entanglement": 0.5277914751543868,
+                  "distance": 1
+                },
+                {
+                  "word1": "samorządową",
+                  "word2": "terytorium",
+                  "index1": 8,
+                  "index2": 10,
+                  "entanglement": 0.5277914751543868,
+                  "distance": 2
+                },
+                {
+                  "word1": "odpowiednie",
+                  "word2": "terytorium",
+                  "index1": 9,
+                  "index2": 10,
+                  "entanglement": 0.5277914751543868,
+                  "distance": 1
+                }
+              ]
+            },
+            "superposition": {
+              "is_superposed": false,
+              "superposition_degree": 0.07447594374872275,
+              "num_superposed_states": 5,
+              "mean_overlap": 0.07447594374872275,
+              "max_overlap": 0.22069918675537456,
+              "superposition_type": "DECOHERENT"
+            },
+            "quantum_observables": {
+              "mean_phase": -1.0662459104496789,
+              "std_phase": 0.0,
+              "mean_amplitude": 0.27760100745903143,
+              "std_amplitude": 0.16082212514285635,
+              "mean_frequency": 4.652635254323081,
+              "max_frequency": 4.652635254323082,
+              "min_frequency": 4.652635254323082
+            },
+            "wavefunction_samples": [
+              {
+                "word": "w",
+                "amplitude": 0.0469786320315284,
+                "phase": -1.0662459104496789,
+                "frequency": 4.652635254323082,
+                "coords": [
+                  0.7216584640908263,
+                  0.4670180350313988,
+                  0.4652635254323082
+                ]
+              },
+              {
+                "word": "ustawie",
+                "amplitude": 0.3288504242206987,
+                "phase": -1.0662459104496789,
+                "frequency": 4.652635254323082,
+                "coords": [
+                  0.7216584640908263,
+                  0.4670180350313988,
+                  0.4652635254323082
+                ]
+              },
+              {
+                "word": "mowa",
+                "amplitude": 0.1879145281261136,
+                "phase": -1.0662459104496789,
+                "frequency": 4.652635254323082,
+                "coords": [
+                  0.7216584640908263,
+                  0.4670180350313988,
+                  0.4652635254323082
+                ]
+              },
+              {
+                "word": "o",
+                "amplitude": 0.0469786320315284,
+                "phase": -1.0662459104496789,
+                "frequency": 4.652635254323082,
+                "coords": [
+                  0.7216584640908263,
+                  0.4670180350313988,
+                  0.4652635254323082
+                ]
+              },
+              {
+                "word": "gminie",
+                "amplitude": 0.28187179218917036,
+                "phase": -1.0662459104496789,
+                "frequency": 4.652635254323082,
+                "coords": [
+                  0.7216584640908263,
+                  0.4670180350313988,
+                  0.4652635254323082
+                ]
+              }
+            ],
+            "quantum_classification": "DECOHERENT"
+          },
+          "sentence_number": 3,
+          "paragraph_number": 1
+        }
+      ]
+    }
+  ]
+}
