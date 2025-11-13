@@ -125,27 +125,27 @@ ENTANGLEMENT_THRESHOLD = 0.7
 
 # GTMØ coordinates for Polish cases
 CASE_COORDS = {
-    'nom': np.array([0.95, 0.92, 0.08]),  
-    'gen': np.array([0.55, 0.25, 0.88]),  
-    'dat': np.array([0.72, 0.65, 0.35]),  
-    'acc': np.array([0.89, 0.85, 0.15]),  
-    'ins': np.array([0.42, 0.18, 0.95]),  
-    'loc': np.array([0.78, 0.95, 0.12]),  
-    'voc': np.array([0.65, 0.35, 0.75])   
+    'nom': np.array([0.849, 0.271, 0.455]),  # mianownik
+    'gen': np.array([0.787, 0.270, 0.456]),  # dopełniacz
+    'dat': np.array([0.773, 0.357, 0.456]),  # celownik
+    'acc': np.array([0.836, 0.336, 0.450]),  # biernik
+    'ins': np.array([0.708, 0.354, 0.468]),  # narzędnik
+    'loc': np.array([0.728, 0.282, 0.456]),  # miejscownik
+    'voc': np.array([0.683, 0.368, 0.458])   # wołacz
 }
 
 # GTMØ coordinates for Polish POS tags
 POS_COORDS = {
-    'subst': np.array([0.80, 0.85, 0.20]),  
-    'adj': np.array([0.65, 0.68, 0.32]),    
-    'verb': np.array([0.70, 0.45, 0.65]),   
-    'adv': np.array([0.52, 0.38, 0.68]),    
-    'num': np.array([0.95, 0.90, 0.10]),    
-    'pron': np.array([0.68, 0.52, 0.53]),   
-    'prep': np.array([0.76, 0.75, 0.24]),   
-    'conj': np.array([0.65, 0.85, 0.20]),   
-    'part': np.array([0.40, 0.26, 0.84]),   
-    'interp': np.array([0.95, 0.95, 0.05])
+    'subst': np.array([0.804, 0.477, 0.483]),  # rzeczownik
+    'adj': np.array([0.747, 0.342, 0.477]),    # przymiotnik
+    'verb': np.array([0.763, 0.351, 0.478]),   # czasownik
+    'adv': np.array([0.732, 0.383, 0.481]),    # przysłówek
+    'num': np.array([0.835, 0.422, 0.486]),    # liczebnik
+    'pron': np.array([0.712, 0.453, 0.484]),   # zaimek
+    'prep': np.array([0.76, 0.75, 0.24]),      # przyimek
+    'conj': np.array([0.65, 0.85, 0.20]),      # spójnik
+    'part': np.array([0.40, 0.26, 0.84]),      # partykuła
+    'interp': np.array([0.95, 0.95, 0.05])     # interpunkcja
 }
 
 # GTMØ coordinates for temporal analysis
