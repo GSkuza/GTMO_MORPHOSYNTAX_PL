@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-11-16T19:17:46.958185",
+  "n_components": 20,
+  "n_samples_train": 49,
+  "n_samples_test": 13,
+  "models": {
+    "D": "RandomForest",
+    "SE": "GradientBoosting",
+    "E_ratio": "ElasticNet"
+  },
+  "se_stats": {
+    "mean": 0.9346715806451613,
+    "std": 0.04661058329273146,
+    "min": 0.8354980000000001,
+    "max": 1.0195
+  },
+  "theory": "fluid_constraint",
+  "constraint_range": "[0.835, 1.020]"
+}

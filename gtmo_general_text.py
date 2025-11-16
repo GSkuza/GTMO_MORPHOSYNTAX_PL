@@ -106,13 +106,18 @@ def main():
             sent_result['sentence_number'] = s_idx
             sent_result['text'] = sentence
 
-            # HerBERT embedding
-            try:
-                sent_embedding = herbert_mapper.get_herbert_embedding(sentence)
-                sent_result['herbert_embedding'] = sent_embedding.tolist()
+            # HerBERT embedding (use from gtmo_morphosyntax if available)
+            if 'herbert_embedding' not in sent_result:
+                try:
+                    sent_embedding = herbert_mapper.get_herbert_embedding(sentence)
+                    sent_result['herbert_embedding'] = sent_embedding.tolist()
+                    sent_result['herbert_magnitude'] = float(np.linalg.norm(sent_embedding))
+                except Exception as e:
+                    print(f"\n  ⚠️ HerBERT embedding failed for sentence {s_idx}: {e}")
+            else:
+                # Calculate magnitude from existing embedding
+                sent_embedding = np.array(sent_result['herbert_embedding'])
                 sent_result['herbert_magnitude'] = float(np.linalg.norm(sent_embedding))
-            except Exception as e:
-                print(f"\n  ⚠️ HerBERT embedding failed for sentence {s_idx}: {e}")
 
             sentence_analyses.append(sent_result)
 

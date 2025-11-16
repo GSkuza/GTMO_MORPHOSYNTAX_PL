@@ -91,6 +91,22 @@ except ImportError:
     QUANTUM_ENHANCED_AVAILABLE = False
     # print("✗ GTMØ Enhanced Quantum Metrics not available")
 
+# Import HerBERT for semantic embeddings
+try:
+    from transformers import AutoTokenizer, AutoModel
+    import torch
+    HERBERT_MODEL_NAME = "allegro/herbert-base-cased"
+    herbert_tokenizer = AutoTokenizer.from_pretrained(HERBERT_MODEL_NAME)
+    herbert_model = AutoModel.from_pretrained(HERBERT_MODEL_NAME)
+    herbert_model.eval()
+    HERBERT_AVAILABLE = True
+    print("✔ HerBERT loaded")
+except ImportError:
+    herbert_tokenizer = None
+    herbert_model = None
+    HERBERT_AVAILABLE = False
+    print("✗ HerBERT not available: pip install transformers torch")
+
 # Required imports
 try:
     import morfeusz2
@@ -1671,6 +1687,20 @@ class QuantumMorphosyntaxEngine:
         # Add topological classification if present
         if 'topological_classification' in axiom_result:
             result["topology"] = axiom_result['topological_classification']
+
+        # Add HerBERT embedding
+        if HERBERT_AVAILABLE:
+            try:
+                with torch.no_grad():
+                    inputs = herbert_tokenizer(text, return_tensors="pt", 
+                                              truncation=True, max_length=512, 
+                                              padding=True)
+                    outputs = herbert_model(**inputs)
+                    embedding = outputs.last_hidden_state[:, 0, :].squeeze().numpy()
+                result["herbert_embedding"] = embedding.tolist()
+                print(f"  🤖 HerBERT embedding: {embedding.shape}")
+            except Exception as e:
+                print(f"  ⚠️ HerBERT embedding failed: {e}")
 
         # Add temporal analysis
         result["temporal_analysis"] = {

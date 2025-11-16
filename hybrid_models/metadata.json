@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-11-16T20:41:34.042836",
+  "n_components": 20,
+  "n_samples_train": 63,
+  "n_samples_test": 13,
+  "models": {
+    "D": "GradientBoosting",
+    "SE": "GradientBoosting",
+    "E_ratio": "GradientBoosting"
+  },
+  "normalization_refs": {
+    "max_norm_ref": 19.65961798806221,
+    "max_dispersion_ref": 4.099572933626342
+  }
+}

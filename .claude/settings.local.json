@@ -8,7 +8,8 @@
       "Bash(else echo \"No .gitignore found\")",
       "Bash(fi)",
       "Bash(echo:*)",
-      "Bash(.gitignore)"
+      "Bash(.gitignore)",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []

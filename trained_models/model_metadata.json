@@ -1,0 +1,7 @@
+{
+  "timestamp": "2025-11-16T19:15:30.806765",
+  "n_samples_train": 49,
+  "n_samples_test": 13,
+  "embedding_dim": 768,
+  "model_type": "GradientBoostingRegressor"
+}
