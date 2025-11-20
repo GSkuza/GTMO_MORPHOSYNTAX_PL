@@ -210,4 +210,6 @@ __marimo__/
 gtmo_results/
 nul
 *.log
+temp_*.txt
+.claude/settings.local.json
 

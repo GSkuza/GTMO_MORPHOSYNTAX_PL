@@ -205,7 +205,14 @@ class GTMOVerdictAnalyzer:
 
                 # Metryki konstytucyjne
                 SA_obj = self._safe_get(const_metrics, 'semantic_accessibility', default={}) or self._safe_get(original_const_metrics, 'semantic_accessibility', default={})
-                SA = self._safe_get(SA_obj, 'value') if isinstance(SA_obj, dict) else SA_obj
+                # FIXED: Obsługa nowego formatu z v2/v3 oraz starego formatu z 'value'
+                if isinstance(SA_obj, dict):
+                    # Preferuj v3 (nowsze), potem v2, potem stary format
+                    SA = (self._safe_get(SA_obj, 'v3', 'value') or
+                          self._safe_get(SA_obj, 'v2', 'value') or
+                          self._safe_get(SA_obj, 'value'))
+                else:
+                    SA = SA_obj
 
                 CD_obj = self._safe_get(const_metrics, 'definiteness', default={}) or self._safe_get(original_const_metrics, 'definiteness', default={})
                 CD = self._safe_get(CD_obj, 'value') if isinstance(CD_obj, dict) else CD_obj

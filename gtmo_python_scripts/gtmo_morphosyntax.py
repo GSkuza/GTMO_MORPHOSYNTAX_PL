@@ -91,24 +91,21 @@ except ImportError:
     QUANTUM_ENHANCED_AVAILABLE = False
     # print("✗ GTMØ Enhanced Quantum Metrics not available")
 
-# Import HerBERT for semantic embeddings and sentence-BERT for coherence
+# Import HerBERT for semantic embeddings
 try:
     from transformers import AutoTokenizer, AutoModel
     import torch
-    from sentence_transformers import SentenceTransformer
     HERBERT_MODEL_NAME = "allegro/herbert-base-cased"
     herbert_tokenizer = AutoTokenizer.from_pretrained(HERBERT_MODEL_NAME)
     herbert_model = AutoModel.from_pretrained(HERBERT_MODEL_NAME)
     herbert_model.eval()
     HERBERT_AVAILABLE = True
-    TRANSFORMERS_AVAILABLE = True
     print("✔ HerBERT loaded")
 except ImportError:
     herbert_tokenizer = None
     herbert_model = None
     HERBERT_AVAILABLE = False
-    TRANSFORMERS_AVAILABLE = False
-    print("✗ HerBERT/sentence-transformers not available: pip install transformers torch sentence-transformers")
+    print("✗ HerBERT not available: pip install transformers torch")
 
 # Required imports
 try:
@@ -994,7 +991,7 @@ class QuantumMorphosyntaxEngine:
 
         # Initialize constitutional duality calculator
         if CONSTITUTIONAL_DUALITY_AVAILABLE:
-            self.constitutional_calculator = ConstitutionalDualityCalculator(use_sa_v3=True)
+            self.constitutional_calculator = ConstitutionalDualityCalculator()
         else:
             self.constitutional_calculator = None
 
@@ -1015,712 +1012,120 @@ class QuantumMorphosyntaxEngine:
         else:
             self.quantum_enhanced = None
 
-        # Lazy-loaded models for FIXED entropy measurement
-        self._herbert_tokenizer = None
-        self._herbert_model = None
-        self._sentence_model = None
-
-    # =========================================================================
-    # FIXED: HELPER METHODS FOR ENTROPY MEASUREMENT
-    # =========================================================================
-
-    def _load_herbert_model(self):
-        """Lazy load HerBERT model for polysemy detection."""
-        if not TRANSFORMERS_AVAILABLE:
-            return None, None
-
-        if self._herbert_tokenizer is None:
-            from transformers import AutoTokenizer, AutoModel
-            self._herbert_tokenizer = AutoTokenizer.from_pretrained("allegro/herbert-base-cased")
-            self._herbert_model = AutoModel.from_pretrained("allegro/herbert-base-cased")
-            self._herbert_model.eval()
-
-        return self._herbert_tokenizer, self._herbert_model
-
-    def _load_sentence_model(self):
-        """Lazy load sentence-BERT model for coherence measurement."""
-        if not TRANSFORMERS_AVAILABLE:
-            return None
-
-        if self._sentence_model is None:
-            from sentence_transformers import SentenceTransformer
-            # Use multilingual sentence-BERT that supports Polish
-            self._sentence_model = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
-
-        return self._sentence_model
-
-    def _estimate_disambiguation_confidence(self, spacy_token, num_analyses: int) -> float:
-        """
-        Estimate confidence of disambiguation based on syntactic context.
-
-        High confidence (0.9+): Content words with clear role (nsubj, obj, ROOT)
-        Medium confidence (0.7-0.9): Modifiers, adverbs
-        Low confidence (0.5-0.7): Function words, ambiguous attachments
-
-        Returns:
-            float [0,1]: disambiguation confidence
-        """
-        # Start with base confidence inversely proportional to ambiguity
-        if num_analyses == 1:
-            return 1.0
-        elif num_analyses == 2:
-            base_conf = 0.8
-        elif num_analyses <= 4:
-            base_conf = 0.6
-        else:
-            base_conf = 0.4
-
-        # Adjust based on dependency role
-        high_confidence_roles = ['ROOT', 'nsubj', 'obj', 'iobj', 'obl', 'aux']
-        medium_confidence_roles = ['amod', 'advmod', 'nmod', 'acl']
-
-        if spacy_token.dep_ in high_confidence_roles:
-            role_boost = 0.2
-        elif spacy_token.dep_ in medium_confidence_roles:
-            role_boost = 0.1
-        else:
-            role_boost = 0.0
-
-        # Adjust based on POS
-        if spacy_token.pos_ in ['NOUN', 'VERB', 'PROPN']:
-            pos_boost = 0.1
-        else:
-            pos_boost = 0.0
-
-        confidence = base_conf + role_boost + pos_boost
-        return np.clip(confidence, 0.0, 1.0)
-
-    def disambiguate_morfeusz(self, word: str, analyses_list: List, sentence_context: str) -> Tuple:
-        """
-        Select SINGLE best interpretation using context-aware disambiguation.
-
-        Args:
-            word: Word form to disambiguate
-            analyses_list: All possible Morfeusz2 interpretations
-            sentence_context: Full sentence for context
-
-        Returns:
-            Single best analysis tuple
-        """
-        if len(analyses_list) == 1:
-            return analyses_list[0]
-
-        # Strategy 1: Use spaCy POS tagging for disambiguation
-        if nlp:
-            try:
-                doc = nlp(sentence_context)
-                for token in doc:
-                    if token.text == word:
-                        spacy_pos = token.pos_
-
-                        # Map spaCy POS to Morfeusz tags
-                        pos_mapping = {
-                            'NOUN': 'subst', 'ADJ': 'adj', 'VERB': 'verb',
-                            'ADV': 'adv', 'NUM': 'num', 'PRON': 'pron',
-                            'ADP': 'prep', 'CONJ': 'conj', 'CCONJ': 'conj',
-                            'PART': 'part', 'PUNCT': 'interp'
-                        }
-
-                        target_pos = pos_mapping.get(spacy_pos)
-                        if target_pos:
-                            for analysis in analyses_list:
-                                _, _, _, lemma, tag, _, _ = analysis
-                                if tag.startswith(target_pos):
-                                    return analysis
-                        break
-            except:
-                pass
-
-        # Strategy 2: Use domain dictionary if available
-        if self.use_domain_filtering and self.domain_dictionary:
-            domain_scores = []
-            for analysis in analyses_list:
-                _, _, _, lemma, tag, _, _ = analysis
-                score = 0
-
-                if self.domain_dictionary.is_domain_term(lemma):
-                    score += 10
-
-                domain_tags = self.domain_dictionary.get_domain_tags_for_word(lemma)
-                if tag in domain_tags:
-                    score += 20
-
-                domain_scores.append(score)
-
-            if max(domain_scores) > 0:
-                best_idx = domain_scores.index(max(domain_scores))
-                return analyses_list[best_idx]
-
-        # Strategy 3: Frequency heuristic - prefer most common POS
-        # In Polish: subst > verb > adj > adv > others
-        pos_priority = ['subst', 'verb', 'adj', 'adv', 'num', 'pron', 'prep', 'conj', 'part']
-
-        for preferred_pos in pos_priority:
-            for analysis in analyses_list:
-                _, _, _, lemma, tag, _, _ = analysis
-                if tag.startswith(preferred_pos):
-                    return analysis
-
-        # Fallback: return first analysis
-        return analyses_list[0]
-
-    # =========================================================================
-    # FIXED: ENTROPY MEASUREMENT METHODS (from gtmo_morphosyntax_FIXED.py)
-    # =========================================================================
-
-    def calculate_polysemy_score(self, doc) -> float:
-        """
-        Measure polysemy (words with multiple meanings) using contextual embeddings.
-
-        FIX: Context-aware polysemy measurement.
-
-        For legal/technical text, terms are monosemous WITHIN their domain context.
-        "powód" has multiple meanings in general Polish, but ONE meaning in legal context.
-
-        Strategy:
-        1. For each content word, check if it's domain-specific (legal, technical)
-        2. Domain-specific words get low polysemy score (monosemous in context)
-        3. General words measured by embedding variance across sentences
-        4. Legal text should score ~0.3-0.5, not 0.8
-
-        Returns:
-            float [0,1]: 0 = monosemous in context, 1 = highly polysemous
-        """
-        tokenizer, model = self._load_herbert_model()
-
-        if model is None:
-            return self._calculate_polysemy_heuristic(doc)
-
-        # Identify content words
-        content_words = [t for t in doc if t.pos_ in ['NOUN', 'VERB', 'ADJ', 'ADV']]
-
-        if not content_words:
-            return 0.0
-
-        # Legal/technical term markers (monosemous in domain)
-        legal_markers = {
-            'wyrok', 'sad', 'pozwany', 'powod', 'zasadza', 'orzeka',
-            'postanowienie', 'sprawa', 'sygn', 'akt', 'rozpoznanie'
-        }
-
-        polysemy_scores = []
-
-        # Sample max 15 content words for performance
-        sampled_words = content_words[:15]
-
-        for token in sampled_words:
-            word_lemma = token.lemma_.lower()
-
-            # CRITICAL FIX: Domain-specific terms are monosemous in context
-            if word_lemma in legal_markers:
-                polysemy_scores.append(0.1)  # Low polysemy for legal terms
-                continue
-
-            # For general words, measure contextual variance
-            try:
-                sent_text = token.sent.text
-                with torch.no_grad():
-                    inputs = tokenizer(sent_text, return_tensors="pt", truncation=True, max_length=128)
-                    outputs = model(**inputs)
-                    emb_in_context = outputs.last_hidden_state.mean(dim=1).squeeze().numpy()
-
-                    # Compare with embedding of word alone (general meaning)
-                    inputs_general = tokenizer(token.text, return_tensors="pt", truncation=True, max_length=128)
-                    outputs_general = model(**inputs_general)
-                    emb_general = outputs_general.last_hidden_state.mean(dim=1).squeeze().numpy()
-
-                # Cosine distance
-                norm1 = np.linalg.norm(emb_in_context)
-                norm2 = np.linalg.norm(emb_general)
-
-                if norm1 > 1e-10 and norm2 > 1e-10:
-                    cos_sim = np.dot(emb_in_context, emb_general) / (norm1 * norm2)
-                    contextual_shift = 1.0 - cos_sim
-                    polysemy_score = np.clip(contextual_shift / 0.5, 0, 1)
-                    polysemy_scores.append(polysemy_score)
-                else:
-                    polysemy_scores.append(0.3)
-
-            except Exception:
-                polysemy_scores.append(0.3)  # Default moderate
-
-        if not polysemy_scores:
-            return 0.3
-
-        mean_polysemy = np.mean(polysemy_scores)
-        return np.clip(mean_polysemy, 0, 1)
-
-    def _calculate_polysemy_heuristic(self, doc) -> float:
-        """
-        Fallback polysemy estimation without HerBERT.
-
-        Uses linguistic heuristics:
-        - Short common words tend to be polysemous (e.g., "rzecz", "sprawa")
-        - Long technical words tend to be monosemous
-        """
-        content_words = [t for t in doc if t.pos_ in ['NOUN', 'VERB', 'ADJ', 'ADV']]
-
-        if not content_words:
-            return 0.3
-
-        polysemy_indicators = []
-
-        for token in content_words:
-            length_score = max(0, 1.0 - len(token.text) / 15.0)
-
-            if token.pos_ == 'VERB':
-                pos_score = 0.7
-            elif token.pos_ == 'NOUN':
-                pos_score = 0.5
-            else:
-                pos_score = 0.3
-
-            polysemy_indicators.append(0.6 * length_score + 0.4 * pos_score)
-
-        return np.clip(np.mean(polysemy_indicators), 0, 1)
-
-    def calculate_syntactic_ambiguity(self, doc) -> float:
-        """
-        Measure syntactic ambiguity from parse tree.
-
-        Indicators of syntactic ambiguity:
-        1. Multiple valid PP-attachment sites
-        2. Coordination ambiguity (what does "and" connect?)
-        3. Long-distance dependencies
-        4. Complex subordination
-
-        Returns:
-            float [0,1]: 0 = unambiguous syntax, 1 = highly ambiguous
-        """
-        ambiguity_scores = []
-
-        # 1. PP-attachment ambiguity
-        prep_phrases = [t for t in doc if t.pos_ == 'ADP']
-        for prep in prep_phrases:
-            distance = abs(prep.i - prep.head.i)
-            ambig_score = min(distance / 10.0, 1.0)
-            ambiguity_scores.append(ambig_score)
-
-        # 2. Coordination ambiguity
-        coord_conj = [t for t in doc if t.dep_ == 'conj']
-        for conj in coord_conj:
-            children = list(conj.children)
-            ambig_score = min(len(children) / 5.0, 1.0)
-            ambiguity_scores.append(ambig_score)
-
-        # 3. Long-distance dependencies
-        for token in doc:
-            if token.dep_ in ['csubj', 'ccomp', 'xcomp', 'advcl']:
-                distance = abs(token.i - token.head.i)
-                ambig_score = min(distance / 15.0, 1.0)
-                ambiguity_scores.append(ambig_score)
-
-        # 4. Clause complexity
-        sentences = list(doc.sents)
-        for sent in sentences:
-            subordinates = [t for t in sent if t.dep_ in ['csubj', 'ccomp', 'advcl']]
-            clause_ambig = min(len(subordinates) / 3.0, 1.0)
-            ambiguity_scores.append(clause_ambig)
-
-        if not ambiguity_scores:
-            return 0.2  # Default low ambiguity
-
-        return np.clip(np.mean(ambiguity_scores), 0, 1)
-
-    def calculate_coherence_score(self, doc) -> float:
-        """
-        Measure inter-sentence coherence using LOGICAL FLOW indicators.
-
-        FIX: Legal text has structural coherence, not just thematic similarity.
-
-        Indicators of logical coherence:
-        1. Logical connectors (dlatego, wobec tego, jednak)
-        2. Anaphoric references (pozwana, ona, strona → refers back)
-        3. Information progression (new info builds on old)
-        4. Semantic similarity (sentence-BERT as secondary measure)
-
-        Returns:
-            float [0,1]: 0 = random sentences, 1 = logically coherent
-        """
-        sentences = list(doc.sents)
-
-        if len(sentences) < 2:
-            return 1.0  # Single sentence is maximally coherent
-
-        # Component 1: Logical connectors (30% weight)
-        logical_connector_score = self._measure_logical_connectors(sentences)
-
-        # Component 2: Anaphoric coherence (30% weight)
-        anaphoric_score = self._measure_anaphoric_coherence(sentences)
-
-        # Component 3: Lexical cohesion (20% weight)
-        lexical_score = self._measure_lexical_cohesion(doc, sentences)
-
-        # Component 4: Semantic similarity via sentence-BERT (20% weight)
-        semantic_score = self._measure_semantic_coherence(sentences)
-
-        # ADAPTIVE: For short texts (<10 sentences), use formulaic structure detection
-        num_sentences = len(sentences)
-        if num_sentences < 10:
-            coherence = (0.10 * logical_connector_score +
-                        0.15 * anaphoric_score +
-                        0.25 * lexical_score +
-                        0.50 * semantic_score)
-        else:
-            coherence = (0.30 * logical_connector_score +
-                        0.30 * anaphoric_score +
-                        0.20 * lexical_score +
-                        0.20 * semantic_score)
-
-        return np.clip(coherence, 0, 1)
-
-    def _measure_logical_connectors(self, sentences) -> float:
-        """Measure presence of logical connectors between sentences."""
-        logical_connectors = {
-            'dlatego', 'wobec', 'zatem', 'wiec', 'stad',
-            'jednak', 'natomiast', 'ale', 'lecz', 'mimo',
-            'nastepnie', 'ponadto', 'dodatkowo', 'rowniez',
-            'ostatecznie', 'podsumowujac', 'konczac'
-        }
-
-        connector_count = 0
-        for sent in sentences:
-            sent_text_lower = sent.text.lower()
-            if any(conn in sent_text_lower for conn in logical_connectors):
-                connector_count += 1
-
-        score = min(connector_count / (len(sentences) * 0.4), 1.0)
-        return score
-
-    def _measure_anaphoric_coherence(self, sentences) -> float:
-        """Measure anaphoric references (pronouns/definite NPs referring back)."""
-        anaphora_indicators = 0
-        total_sentences = len(sentences)
-
-        for i, sent in enumerate(sentences):
-            if i == 0:
-                continue  # First sentence can't have anaphora
-
-            pronouns = [t for t in sent if t.pos_ == 'PRON']
-            anaphora_indicators += len(pronouns)
-
-            definite_markers = ['pozwany', 'pozwana', 'powod', 'sad', 'strona']
-            sent_lemmas = [t.lemma_.lower() for t in sent]
-            if any(marker in sent_lemmas for marker in definite_markers):
-                anaphora_indicators += 1
-
-        expected_anaphora = (total_sentences - 1) * 1.5
-        score = min(anaphora_indicators / expected_anaphora, 1.0) if expected_anaphora > 0 else 0.5
-
-        return score
-
-    def _measure_lexical_cohesion(self, doc, sentences) -> float:
-        """Measure lexical overlap between consecutive sentences."""
-        if len(sentences) < 2:
-            return 1.0
-
-        overlaps = []
-
-        for i in range(len(sentences) - 1):
-            sent1_lemmas = set(t.lemma_.lower() for t in sentences[i]
-                             if t.pos_ in ['NOUN', 'VERB', 'ADJ'])
-            sent2_lemmas = set(t.lemma_.lower() for t in sentences[i + 1]
-                             if t.pos_ in ['NOUN', 'VERB', 'ADJ'])
-
-            if sent1_lemmas and sent2_lemmas:
-                overlap = len(sent1_lemmas & sent2_lemmas) / min(len(sent1_lemmas), len(sent2_lemmas))
-                overlaps.append(overlap)
-
-        if not overlaps:
-            return 0.5
-
-        mean_overlap = np.mean(overlaps)
-        return np.clip(mean_overlap, 0, 1)
-
-    def _measure_semantic_coherence(self, sentences) -> float:
-        """Measure semantic similarity using sentence-BERT (if available)."""
-        sentence_model = self._load_sentence_model()
-
-        if sentence_model is None:
-            return 0.5  # Neutral fallback
-
-        sentence_texts = [sent.text.strip() for sent in sentences]
-        try:
-            embeddings = sentence_model.encode(sentence_texts, convert_to_numpy=True)
-
-            similarities = []
-            for i in range(len(embeddings) - 1):
-                emb1 = embeddings[i]
-                emb2 = embeddings[i + 1]
-
-                norm1 = np.linalg.norm(emb1)
-                norm2 = np.linalg.norm(emb2)
-
-                if norm1 > 1e-10 and norm2 > 1e-10:
-                    cos_sim = np.dot(emb1, emb2) / (norm1 * norm2)
-                    similarities.append(cos_sim)
-
-            if similarities:
-                return np.clip(np.mean(similarities), 0, 1)
-            else:
-                return 0.5
-
-        except Exception:
-            return 0.5
-
-    def _calculate_E_FIXED(self, text: str) -> float:
-        """
-        FIXED Entropy calculation using proper semantic measures.
-
-        Uses:
-        - Polysemy: words with multiple meanings (40% weight)
-        - Syntactic ambiguity: parse tree ambiguity (40% weight)
-        - Incoherence: 1 - coherence between sentences (20% weight)
-
-        Formula: E = 0.4×polysemy + 0.4×syntactic_amb + 0.2×(1 - coherence)
-
-        Returns:
-            float [0,1]: 0 = perfectly ordered, 1 = maximum chaos
-        """
-        if not nlp:
-            # Fallback if spaCy not available
-            return 0.5
-
-        doc = nlp(text)
-
-        # Component 1: Polysemy (semantic ambiguity)
-        polysemy = self.calculate_polysemy_score(doc)
-
-        # Component 2: Syntactic ambiguity
-        synt_ambig = self.calculate_syntactic_ambiguity(doc)
-
-        # Component 3: Incoherence (inverse of coherence)
-        coherence = self.calculate_coherence_score(doc)
-        incoherence = 1.0 - coherence
-
-        # Weighted combination
-        E_fixed = 0.4 * polysemy + 0.4 * synt_ambig + 0.2 * incoherence
-
-        return np.clip(E_fixed, 0.0, 1.0)
-
-    def extract_true_morphemes(self, analysis: Tuple) -> Dict[str, np.ndarray]:
-        """
-        Extract TRUE morphological segments (root, suffix, prefix).
-
-        This is real morpheme decomposition, not interpretation variants!
-
-        Args:
-            analysis: Selected Morfeusz analysis
-
-        Returns:
-            Dictionary with morpheme segments and their D-S-E coordinates
-        """
-        _, _, form, lemma, _, _, _ = analysis
-
-        morphemes = {}
-
-        # Extract root (lemma is approximation of root)
-        root = lemma
-        morphemes['root'] = root
-
-        # Extract suffix by comparing form to lemma
-        if len(form) > len(lemma) and form.startswith(lemma):
-            suffix = form[len(lemma):]
-            if suffix:
-                morphemes['suffix'] = suffix
-        elif form != lemma:
-            # Complex morphology - just note the difference
-            morphemes['inflection'] = form
-
-        # Assign D-S-E to morphemes (morphology ADDS PRECISION!)
-        # CRITICAL: High D MUST correlate with High S (precise → stable)
-        morpheme_coords = {}
-
-        # Root: Usually polysemous (moderate D) but lexically stable (moderate S)
-        # E is moderate because roots can have multiple senses
-        morpheme_coords['root'] = np.array([0.6, 0.65, 0.4])  # D-S correlation maintained
-
-        # Suffix: Grammatical endings are HIGHLY PRECISE AND STABLE
-        # Polish inflection is unambiguous once parsed correctly
-        # High D + High S + Low E = morphological precision
-        if 'suffix' in morphemes:
-            morpheme_coords['suffix'] = np.array([0.90, 0.92, 0.10])  # Perfect D-S correlation!
-
-        if 'inflection' in morphemes:
-            # Complete inflected form: very precise and stable
-            morpheme_coords['inflection'] = np.array([0.88, 0.90, 0.12])  # D-S correlation
-
-        return morpheme_coords
-
-    def tensor_product_composition(self, morpheme_coords: List[np.ndarray]) -> np.ndarray:
-        """
-        Compose morpheme D-S-E using tensor product, NOT averaging.
-
-        Averaging destroys information. Tensor product preserves compositionality.
-
-        Args:
-            morpheme_coords: List of [D, S, E] for each morpheme
-
-        Returns:
-            Composed [D, S, E] coordinates
-        """
-        if not morpheme_coords:
-            return np.array([0.5, 0.5, 0.5])
-
-        if len(morpheme_coords) == 1:
-            return morpheme_coords[0]
-
-        # Geometric mean preserves proportions without extreme sensitivity
-        # This is closer to tensor product composition than arithmetic mean
-        composed = np.ones(3)
-        for coords in morpheme_coords:
-            composed *= coords
-
-        # Take nth root where n = number of morphemes
-        composed = np.power(composed, 1.0 / len(morpheme_coords))
-
-        # Ensure constraints: High D MUST correlate with High S
-        # Morphological composition increases precision (D) and stability (S)
-        # while decreasing entropy (E)
-
-        # Apply composition boost: morphology makes meaning more precise
-        precision_boost = 0.05 * (len(morpheme_coords) - 1)
-        composed[0] = min(1.0, composed[0] + precision_boost)  # Increase D
-        composed[1] = min(1.0, composed[1] + precision_boost)  # Increase S
-        composed[2] = max(0.0, composed[2] - precision_boost)  # Decrease E
-
-        # CRITICAL FIX: Enforce D-S correlation
-        # If D is high, S must also be high (precise → stable)
-        # If D is low, S can be variable
-        if composed[0] > 0.7 and composed[1] < composed[0] - 0.1:
-            # High D but low S - CONTRADICTION!
-            # Boost S to match D (precise things are stable)
-            composed[1] = min(1.0, composed[0] - 0.05)
-
-        # Ensure E consistency: High D+S → Low E
-        if composed[0] > 0.7 and composed[1] > 0.7 and composed[2] > 0.3:
-            # High precision + high stability but high entropy - CONTRADICTION!
-            composed[2] = max(0.0, 1.0 - (composed[0] + composed[1]) / 2)
-
-        return composed
-
     def analyze_morphology_quantum(self, text: str) -> Tuple[np.ndarray, Dict, Dict[str, QuantumSemanticState]]:
-        """
-        Morphological analysis with PROPER disambiguation.
-
-        CRITICAL FIX:
-        - Each word gets ONE disambiguated interpretation, not all variants
-        - True morpheme decomposition when needed
-        - Tensor product composition, not averaging
-        """
+        """Morphological analysis with quantum superposition."""
         if not morfeusz:
             raise Exception("Morfeusz2 not available")
-
-        word_coords_list = []
+        
+        coords_list = []
         case_counts = {}
         pos_counts = {}
         debug_info = []
         word_quantum_states = {}
-        disambiguation_log = []
-
+        
         try:
-            # Get sentence for context
-            sentence = text
-
             analyses = morfeusz.analyse(text)
-
+            
             # Group analyses by word form
             word_analyses = {}
             for start, end, (form, lemma, tag, labels, qualifiers) in analyses:
                 if not form or form.isspace():
                     continue
-
+                
                 if form not in word_analyses:
                     word_analyses[form] = []
                 word_analyses[form].append((start, end, form, lemma, tag, labels, qualifiers))
-
-            # Process each word with DISAMBIGUATION (not aggregation!)
+            
+            # Process each word with quantum superposition
             for form, analyses_list in word_analyses.items():
-                # CRITICAL: Select ONE best interpretation
-                best_analysis = self.disambiguate_morfeusz(form, analyses_list, sentence)
+                # Apply domain dictionary filtering if available
+                if self.use_domain_filtering and self.domain_dictionary:
+                    # Filter analyses using domain knowledge
+                    filtered_analyses = analyses_list.copy()
 
-                start, end, form, lemma, tag, labels, qualifiers = best_analysis
+                    # Use domain dictionary to prioritize
+                    domain_scores = []
+                    for analysis in filtered_analyses:
+                        _, _, _, lemma, tag, _, _ = analysis
+                        score = 0
 
-                disambiguation_log.append(f"{form} → {lemma}:{tag} (from {len(analyses_list)} options)")
-                debug_info.append(f"{lemma}:{tag}")
+                        # Check if lemma is domain term
+                        if self.domain_dictionary.is_domain_term(lemma):
+                            score += 5
 
-                tag_parts = tag.split(':')
-                main_pos = tag_parts[0]
+                        # Check if tag matches domain tags
+                        domain_tags = self.domain_dictionary.get_domain_tags_for_word(lemma)
+                        if tag in domain_tags:
+                            score += 10
 
-                # Extract case from chosen interpretation
-                word_case = None
-                for part in tag_parts:
-                    if part in CASE_COORDS:
-                        word_case = part
-                        case_counts[part] = case_counts.get(part, 0) + 1
-                        break
-                    elif '.' in part:
-                        sub_parts = part.split('.')
-                        for sub_part in sub_parts:
-                            if sub_part in CASE_COORDS:
-                                word_case = sub_part
-                                case_counts[sub_part] = case_counts.get(sub_part, 0) + 1
-                                break
-                        if word_case:
+                        domain_scores.append(score)
+
+                    # If we have domain-specific analyses, prioritize them
+                    if max(domain_scores) > 0:
+                        # Keep only analyses with highest scores
+                        max_score = max(domain_scores)
+                        analyses_list = [
+                            filtered_analyses[i] for i, s in enumerate(domain_scores)
+                            if s >= max_score * 0.7  # Keep analyses with score >= 70% of max
+                        ]
+
+                word_case_frequencies = {}
+                word_pos_frequencies = {}
+
+                for start, end, form, lemma, tag, labels, qualifiers in analyses_list:
+                    debug_info.append(f"{lemma}:{tag}")
+                    tag_parts = tag.split(':')
+                    main_pos = tag_parts[0]
+                    
+                    # Extract case
+                    for part in tag_parts:
+                        if part in CASE_COORDS:
+                            word_case_frequencies[part] = word_case_frequencies.get(part, 0) + 1
+                            case_counts[part] = case_counts.get(part, 0) + 1
                             break
-
-                # Extract POS
-                if main_pos in POS_COORDS:
-                    pos_counts[main_pos] = pos_counts.get(main_pos, 0) + 1
-
-                # TRUE morpheme decomposition for this ONE interpretation
-                morpheme_coords_dict = self.extract_true_morphemes(best_analysis)
-                morpheme_coords_list = list(morpheme_coords_dict.values())
-
-                # Tensor product composition (not averaging!)
-                if morpheme_coords_list:
-                    word_coords = self.tensor_product_composition(morpheme_coords_list)
-                else:
-                    # Fallback to case/POS coords
-                    if word_case and word_case in CASE_COORDS:
-                        word_coords = CASE_COORDS[word_case].copy()
-                    elif main_pos in POS_COORDS:
-                        word_coords = POS_COORDS[main_pos].copy()
-                    else:
-                        word_coords = np.array([0.5, 0.5, 0.5])
-
-                word_coords_list.append(word_coords)
-
-                # Create quantum state (NOW based on single interpretation)
-                if word_case:
-                    quantum_state = self.create_superposition_state(form, {word_case: 1})
+                        elif '.' in part:
+                            sub_parts = part.split('.')
+                            for sub_part in sub_parts:
+                                if sub_part in CASE_COORDS:
+                                    word_case_frequencies[sub_part] = word_case_frequencies.get(sub_part, 0) + 1
+                                    case_counts[sub_part] = case_counts.get(sub_part, 0) + 1
+                                    break
+                    
+                    # Extract POS
+                    if main_pos in POS_COORDS:
+                        word_pos_frequencies[main_pos] = word_pos_frequencies.get(main_pos, 0) + 1
+                        pos_counts[main_pos] = pos_counts.get(main_pos, 0) + 1
+                
+                # Create quantum superposition state for this word
+                if word_case_frequencies:
+                    quantum_state = self.create_superposition_state(form, word_case_frequencies)
                     word_quantum_states[form] = quantum_state
-
-            # Final composition: geometric mean (not arithmetic!)
-            if word_coords_list:
-                final_coords = self.tensor_product_composition(word_coords_list)
+                    
+                    # Collapse to get coordinates
+                    collapsed_coords = self.collapse_superposition(form, list(word_case_frequencies.keys()))
+                    coords_list.append(collapsed_coords)
+                
+                # Add POS coordinates
+                for pos, freq in word_pos_frequencies.items():
+                    coords_list.append(POS_COORDS[pos])
+            
+            if coords_list:
+                final_coords = np.mean(coords_list, axis=0)
             else:
                 final_coords = np.array([0.5, 0.5, 0.5])
-
-            # Calculate morphological ambiguity (average interpretations per word)
-            avg_ambiguity = len(analyses) / len(word_analyses) if word_analyses else 1.0
-
+                
             metadata = {
                 'total_analyses': len(analyses),
-                'unique_words': len(word_analyses),
-                'disambiguations': len(disambiguation_log),
                 'cases': case_counts,
                 'pos': pos_counts,
-                'ambiguity': avg_ambiguity,  # CRITICAL: Required by constitutional calculator
-                'ambiguity_ratio': avg_ambiguity,  # Kept for backwards compatibility
+                'ambiguity': len(analyses) / len(text.split()) if text.split() else 1.0,
                 'debug_tags': debug_info[:10],
-                'disambiguation_log': disambiguation_log[:5],
-                'coords_count': len(word_coords_list),
+                'coords_count': len(coords_list),
                 'quantum_words': len(word_quantum_states)
             }
-
+            
             return final_coords, metadata, word_quantum_states
-
+            
         except Exception as e:
             raise Exception(f"Morphological quantum analysis failed: {e}")
     
@@ -1949,15 +1354,7 @@ class QuantumMorphosyntaxEngine:
             return coords, metadata, []
     
     def create_superposition_state(self, word: str, case_frequencies: Dict[str, int]) -> QuantumSemanticState:
-        """
-        Create quantum superposition state for word.
-
-        CRITICAL FIX: Phase coherence interpretation
-        - coherence = 1.0 means FULLY COHERENT (all phases aligned)
-        - coherence = 0.0 means FULLY DECOHERENT (random phases)
-
-        After disambiguation, we have ONE interpretation, so coherence should be HIGH!
-        """
+        """Create quantum superposition state for word."""
         total_observations = sum(case_frequencies.values())
         if total_observations == 0:
             amplitudes = {case: SQRT_2_INV for case in self.case_coords.keys()}
@@ -1965,77 +1362,42 @@ class QuantumMorphosyntaxEngine:
             amplitudes = {}
             for case, freq in case_frequencies.items():
                 probability = freq / total_observations
-                # FIXED: After disambiguation, single interpretation → aligned phases
-                # Use small phase variation, not random [0, 2π]
-                phase_variation = np.random.uniform(-0.1, 0.1)  # Small coherent phase
-                amplitude = np.sqrt(probability) * cmath.exp(1j * phase_variation)
+                amplitude = np.sqrt(probability) * cmath.exp(1j * np.random.uniform(0, 2*np.pi))
                 amplitudes[case] = amplitude
-
+        
         phase = np.angle(sum(amplitudes.values()))
-
-        # Calculate coherence: 1.0 = fully coherent, 0.0 = fully decoherent
-        # After disambiguation, we expect HIGH coherence!
-        total_amplitude = sum(amplitudes.values())
-        total_intensity = sum(abs(amp)**2 for amp in amplitudes.values())
-
-        if total_intensity > 0:
-            coherence = abs(total_amplitude)**2 / total_intensity
-        else:
-            coherence = 0.0
-
-        # CORRECTION: After disambiguation, boost coherence
-        # Single interpretation = high coherence (phases aligned)
-        if len(case_frequencies) == 1:
-            coherence = max(coherence, 0.95)  # Single case → highly coherent
-
+        coherence = abs(sum(amplitudes.values()))**2 / sum(abs(amp)**2 for amp in amplitudes.values())
+        
         quantum_state = QuantumSemanticState(
             amplitudes=amplitudes,
             phase=phase,
-            coherence=coherence,  # NOW: 1.0 = coherent, 0.0 = decoherent
+            coherence=coherence,
             entangled_with=[],
             measurement_count=0
         )
-
+        
         self.quantum_states[word] = quantum_state
         return quantum_state
     
     def collapse_superposition(self, word: str, observed_cases: List[str]) -> np.ndarray:
-        """
-        Collapse quantum superposition to classical coordinates.
-
-        FIXED: Use geometric composition instead of arithmetic weighted average.
-        """
+        """Collapse quantum superposition to classical coordinates."""
         if word not in self.quantum_states:
             coords_list = [self.case_coords[case] for case in observed_cases if case in self.case_coords]
-            # Use tensor product composition, not mean!
-            return self.tensor_product_composition(coords_list) if coords_list else np.array([0.5, 0.5, 0.5])
-
+            return np.mean(coords_list, axis=0) if coords_list else np.array([0.5, 0.5, 0.5])
+        
         quantum_state = self.quantum_states[word]
-
-        # Collect coordinates and their quantum probabilities
-        case_coords_with_probs = []
-
+        
+        total_probability = 0
+        weighted_coords = np.zeros(3)
+        
         for case in observed_cases:
             if case in quantum_state.amplitudes and case in self.case_coords:
                 probability = abs(quantum_state.amplitudes[case])**2
-                case_coords_with_probs.append((self.case_coords[case], probability))
-
-        if case_coords_with_probs:
-            # Geometric weighted composition
-            # More probable states contribute more, but geometrically not arithmetically
-            composed = np.ones(3)
-            total_weight = 0
-
-            for coords, prob in case_coords_with_probs:
-                # Weight by probability in geometric space
-                composed *= np.power(coords, prob)
-                total_weight += prob
-
-            # Normalize by total weight
-            if total_weight > 0:
-                collapsed_coords = np.power(composed, 1.0 / total_weight)
-            else:
-                collapsed_coords = composed
+                total_probability += probability
+                weighted_coords += probability * self.case_coords[case]
+        
+        if total_probability > 0:
+            collapsed_coords = weighted_coords / total_probability
         else:
             coords_list = [self.case_coords[case] for case in observed_cases if case in self.case_coords]
             collapsed_coords = np.mean(coords_list, axis=0) if coords_list else np.array([0.5, 0.5, 0.5])
@@ -2046,32 +1408,15 @@ class QuantumMorphosyntaxEngine:
         return collapsed_coords
     
     def _apply_decoherence(self, word: str):
-        """
-        Apply quantum decoherence over time.
-
-        FIXED: Decoherence REDUCES coherence (toward 0), not increases it!
-        - coherence *= (1 - rate) → CORRECT (reduces coherence)
-        - But after disambiguation, we should have STABLE high coherence
-        """
+        """Apply quantum decoherence over time."""
         if word not in self.quantum_states:
             return
-
+        
         quantum_state = self.quantum_states[word]
-
-        # Decoherence reduces coherence over measurements
-        # BUT: After disambiguation, meaning is stable → minimal decoherence
-        if quantum_state.measurement_count < 2:
-            # First few measurements: minimal decoherence (meaning is stable after disambiguation)
-            decoherence_rate = DECOHERENCE_RATE * 0.1  # 10% of normal rate
-        else:
-            # Multiple measurements: normal decoherence (semantic drift over time)
-            decoherence_rate = DECOHERENCE_RATE
-
-        quantum_state.coherence *= (1 - decoherence_rate)
-        quantum_state.coherence = max(quantum_state.coherence, 0.5)  # Minimum coherence after disambiguation
-
+        quantum_state.coherence *= (1 - DECOHERENCE_RATE)
+        
         for case in quantum_state.amplitudes:
-            phase_noise = np.random.normal(0, decoherence_rate)
+            phase_noise = np.random.normal(0, DECOHERENCE_RATE)
             quantum_state.amplitudes[case] *= cmath.exp(1j * phase_noise)
     
     def create_entanglement(self, word1: str, word2: str, coupling_strength: float = 0.5):
@@ -2145,27 +1490,20 @@ class QuantumMorphosyntaxEngine:
         }
     
     def _classify_superposition_type(self, word_quantum_states: Dict[str, QuantumSemanticState]) -> str:
-        """
-        Classify type of quantum superposition in the text.
-
-        FIXED: Coherence interpretation
-        - HIGH coherence (>0.8) = COHERENT state (phases aligned, stable meaning)
-        - LOW coherence (<0.5) = DECOHERENT state (phases random, unstable meaning)
-        """
+        """Classify type of quantum superposition in the text."""
         if not word_quantum_states:
             return "VACUUM_STATE"
-
+        
         total_coherence = sum(qs.coherence for qs in word_quantum_states.values())
         avg_coherence = total_coherence / len(word_quantum_states)
-
+        
         entangled_count = sum(len(qs.entangled_with) for qs in word_quantum_states.values()) / 2
-
-        # CORRECTED: High coherence = COHERENT (not decoherent!)
+        
         if avg_coherence > 0.8:
             if entangled_count > len(word_quantum_states) / 2:
                 return "HIGHLY_ENTANGLED_COHERENT"
             else:
-                return "COHERENT_SUPERPOSITION"  # Stable, well-defined meaning
+                return "COHERENT_SUPERPOSITION"
         elif avg_coherence > 0.5:
             if entangled_count > 0:
                 return "PARTIALLY_ENTANGLED_MIXED"
@@ -2492,19 +1830,14 @@ class QuantumMorphosyntaxEngine:
                 D=D,
                 S=S,
                 E=E,
-                inflectional_forms_count=morph_meta.get('total_analyses'),
-                text=text,  # Pass text for SA v3.0 calculation
-                kinetic_power_est=0.85  # High kinetic power for legal/formal texts
+                inflectional_forms_count=morph_meta.get('total_analyses')
             )
 
             # Print summary
             print(f"  CONSTITUTIONAL_DEFINITENESS: {const_metrics.CD:.4f}")
             print(f"  CONSTITUTIONAL_INDEFINITENESS: {const_metrics.CI:.4f}")
             print(f"  DUALITY_CHECK: CI × CD = {const_metrics.duality_product:.4f} ≈ Depth² = {const_metrics.duality_theoretical} (error: {const_metrics.duality_error:.2%})")
-            print(f"  SEMANTIC_ACCESSIBILITY v2.0: {const_metrics.SA:.4f} ({const_metrics.SA*100:.1f}% - {const_metrics.sa_category.value})")
-            if const_metrics.SA_v3 is not None:
-                delta = const_metrics.SA_v3 - const_metrics.SA
-                print(f"  SEMANTIC_ACCESSIBILITY v3.0: {const_metrics.SA_v3:.4f} ({const_metrics.SA_v3*100:.1f}%) [Δ={delta:+.4f}]")
+            print(f"  SEMANTIC_ACCESSIBILITY: {const_metrics.SA:.4f} ({const_metrics.SA*100:.1f}% - {const_metrics.sa_category.value})")
             print(f"  CI_DECOMPOSITION: Morphological={const_metrics.CI_morphological:.2f}, Syntactic={const_metrics.CI_syntactic:.2f}, Semantic={const_metrics.CI_semantic:.2f}")
             print(f"  CLASSIFICATION: {const_metrics.structure_classification.value} (CD/CI = {const_metrics.cd_ci_ratio:.4f})")
 

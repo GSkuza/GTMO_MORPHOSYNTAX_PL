@@ -51,9 +51,6 @@ import numpy as np
 from typing import Dict, Tuple, Optional
 from dataclasses import dataclass
 from enum import Enum
-import torch
-from transformers import AutoTokenizer, AutoModel
-import warnings
 
 # =============================================================================
 # THEORETICAL CONSTANTS
@@ -74,274 +71,6 @@ MIN_AMBIGUITY = 1.0
 
 # Minimalna głębokość składniowa (płaskie zdanie bez hierarchii)
 MIN_DEPTH = 1
-
-
-# =============================================================================
-# SA v3.0 CONFIGURATION
-# =============================================================================
-
-class SAv3Config:
-    """
-    Konfiguracja dla SA v3.0 - wersja z HerBERT embeddings i Hoyer sparsity.
-
-    SA v3.0 wprowadza:
-        - Weighted CI (różne wagi dla morfologii/składni/semantyki)
-        - Signal Physics: Hoyer sparsity na embeddings HerBERT
-        - Phase & Kinetic Quality
-        - Topological Balance
-        - Hybrid Boost
-    """
-    # Wagi CI (Morfologia / Składnia / Semantyka)
-    W_MORPH = 0.5
-    W_SYNT = 0.7
-    W_SEM = 1.0
-
-    # Parametry kalibracyjne Hoyera (dla HerBERT)
-    HOYER_MU = 0.28
-    HOYER_SIGMA = 0.08
-
-    # Boostery
-    ALPHA_PHI = 0.15
-    ALPHA_HOYER = 0.15
-    ALPHA_BAL = 0.10
-
-
-# =============================================================================
-# SA v3.0 CALCULATOR
-# =============================================================================
-
-class SAv3Calculator:
-    """
-    Kalkulator SA v3.0 - wersja z HerBERT embeddings i Signal Physics.
-
-    SA v3.0 = SA_base + (1 - SA_base) × Boost
-
-    gdzie:
-        SA_base = CD / (CD + CI_weighted)
-        Boost = α_phi × Q_phi + α_hoyer × Focus + α_bal × Balance
-
-    Components:
-        - CI_weighted: CI z uwzględnieniem wag kognitywnych
-        - Hoyer sparsity: miara ostrości sygnału z HerBERT embeddings
-        - Phase Quality: jakość fazy w przestrzeni F³
-        - Kinetic Power: moc kinetyczna (z estymacji lub autoenkodera)
-        - Topological Balance: balans topologiczny
-    """
-
-    def __init__(self, config: Optional[SAv3Config] = None, normalize_embeddings: bool = False):
-        """
-        Inicjalizacja kalkulatora SA v3.0.
-
-        Args:
-            config: Konfiguracja SA v3.0 (opcjonalna)
-            normalize_embeddings: Czy normalizować embeddingi do unit sphere
-        """
-        self.config = config or SAv3Config()
-        self.normalize_embeddings = normalize_embeddings
-        self._tokenizer = None
-        self._model = None
-
-    def _load_herbert_model(self):
-        """Lazy loading modelu HerBERT."""
-        if self._tokenizer is None or self._model is None:
-            warnings.filterwarnings('ignore')
-            print("Loading HerBERT model...")
-            self._tokenizer = AutoTokenizer.from_pretrained("allegro/herbert-base-cased")
-            self._model = AutoModel.from_pretrained("allegro/herbert-base-cased")
-            self._model.eval()  # Set to evaluation mode
-
-    def get_herbert_embedding(self, text: str) -> np.ndarray:
-        """
-        Pobiera surowy wektor 768D z modelu HerBERT.
-
-        Args:
-            text: Tekst do embedowania
-
-        Returns:
-            Wektor embeddings (768D)
-        """
-        self._load_herbert_model()
-
-        inputs = self._tokenizer(text, return_tensors="pt", truncation=True, max_length=512)
-
-        with torch.no_grad():
-            outputs = self._model(**inputs)
-
-        # Mean pooling (reprezentacja całego zdania)
-        embeddings = outputs.last_hidden_state.mean(dim=1).squeeze().numpy()
-
-        # Opcjonalna normalizacja do unit sphere
-        if self.normalize_embeddings:
-            norm = np.linalg.norm(embeddings)
-            if norm > EPSILON:
-                embeddings = embeddings / norm
-
-        return embeddings
-
-    def calculate_hoyer_sparsity(self, embedding: np.ndarray) -> float:
-        """
-        Fizyczna miara ostrości sygnału (Hoyer sparsity).
-
-        Hoyer = (√n - L1/L2) / (√n - 1)
-
-        Args:
-            embedding: Wektor embeddings
-
-        Returns:
-            Hoyer sparsity ∈ [0, 1]
-        """
-        n = len(embedding)
-        l1 = np.sum(np.abs(embedding))
-        l2 = np.linalg.norm(embedding)
-
-        if l2 == 0:
-            return 0.0
-
-        hoyer = (np.sqrt(n) - (l1 / l2)) / (np.sqrt(n) - 1)
-        return hoyer
-
-    @staticmethod
-    def estimate_kinetic_power(text: str, D: float, S: float, E: float) -> float:
-        """
-        Heurystyczna estymacja Q_kinetic bez autoenkodera.
-
-        Oparta na:
-        1. Markery dyrektywne (rozkazy, wyroki, regulacje)
-        2. Wysoka Determination (D)
-        3. Niska Entropia (E)
-
-        Args:
-            text: Tekst do analizy
-            D: Determination coordinate [0,1]
-            S: Stability coordinate [0,1]
-            E: Entropy coordinate [0,1]
-
-        Returns:
-            Estimated kinetic power ∈ [0, 1]
-        """
-        # Markery językowe dla tekstów dyrektywnych
-        directive_markers = [
-            "obowiazuje", "nakazuje", "zakazuje", "zasadza",
-            "wyrok", "postanawia", "zobowiazuje", "nalezy",
-            "orzeka", "postanowienie", "zarzadza", "przyznaje",
-            "odrzuca", "uwzglednia", "oddala"
-        ]
-
-        # Policz markery (case-insensitive)
-        text_lower = text.lower()
-        directive_count = sum(1 for marker in directive_markers if marker in text_lower)
-
-        # Składniki jakości kinetycznej
-        d_contrib = D                          # Wysoka determinacja
-        e_contrib = 1 - E                      # Niska entropia
-        directive_contrib = min(directive_count / 3.0, 1.0)  # Nasycenie przy 3 markerach
-
-        # Kombinacja liniowa (wagi sumują się do 1.0)
-        q_k_est = (0.5 +                       # Baseline
-                   0.2 * directive_contrib +   # Markery językowe
-                   0.15 * d_contrib +          # Geometria Phase
-                   0.15 * e_contrib)
-
-        return np.clip(q_k_est, 0.0, 1.0)
-
-    def calculate_sa_v3(
-        self,
-        text: str,
-        CD: float,
-        CI_morph: float,
-        CI_synt: float,
-        CI_sem: float,
-        D: float,
-        S: float,
-        E: float,
-        kinetic_power_est: Optional[float] = None
-    ) -> Dict:
-        """
-        Główny algorytm SA v3.0.
-
-        Args:
-            text: Tekst do analizy (dla HerBERT embeddings)
-            CD: Constitutional Definiteness
-            CI_morph: CI morfologiczne
-            CI_synt: CI składniowe
-            CI_sem: CI semantyczne
-            D: Determination
-            S: Stability
-            E: Entropy
-            kinetic_power_est: Estymacja mocy kinetycznej [0,1] (opcjonalne, None=auto-estimate)
-
-        Returns:
-            Dictionary z wynikami SA v3.0 i komponentami
-        """
-        # 1. Weighted CI Calculation (Korekta kognitywna)
-        ci_w = (CI_morph * self.config.W_MORPH +
-                CI_synt * self.config.W_SYNT +
-                CI_sem * self.config.W_SEM)
-
-        # 2. SA Base (Fundament geometryczny)
-        sa_base = CD / (CD + ci_w) if (CD + ci_w) > EPSILON else 0.5
-
-        # 3. Signal Physics (Hoyer)
-        try:
-            embedding = self.get_herbert_embedding(text)
-            raw_hoyer = self.calculate_hoyer_sparsity(embedding)
-
-            # CDF Scaling (Probabilistyczna ocena rzadkości)
-            z_score = (raw_hoyer - self.config.HOYER_MU) / self.config.HOYER_SIGMA
-            focus_score = 0.5 * (1.0 + np.tanh(z_score / np.sqrt(2)))  # Approx CDF
-        except Exception as e:
-            print(f"WARNING: Error calculating Hoyer sparsity: {e}")
-            raw_hoyer = 0.0
-            focus_score = 0.5
-
-        # 4. Phase & Kinetic Quality
-        # Phase Quality (preferujemy wysokie D, stabilne S)
-        q_phase = D * (1 - E) * (0.5 + 0.5 * S)
-
-        # Kinetic Power (auto-estimate if not provided)
-        if kinetic_power_est is None:
-            q_kinetic = self.estimate_kinetic_power(text, D, S, E)
-            kinetic_auto_estimated = True
-        else:
-            q_kinetic = kinetic_power_est
-            kinetic_auto_estimated = False
-
-        # Total Phi Quality
-        q_phi = 0.5 * q_phase + 0.5 * q_kinetic
-
-        # 5. Topological Balance
-        dist = np.linalg.norm(np.array([D, S, E]) - 0.5)
-        balance = 1.0 - (dist / np.sqrt(0.75))
-
-        # 6. Hybrid Boost
-        boost = (self.config.ALPHA_PHI * q_phi +
-                self.config.ALPHA_HOYER * focus_score +
-                self.config.ALPHA_BAL * balance)
-
-        # Final SA v3.0
-        sa_v3 = sa_base + (1.0 - sa_base) * boost
-
-        # SA v2.0 dla porównania
-        ci_total = CI_morph + CI_synt + CI_sem
-        sa_v2 = CD / (CD + ci_total) if (CD + ci_total) > EPSILON else 0.5
-
-        return {
-            "SA_v2": sa_v2,
-            "SA_v3": sa_v3,
-            "Delta": sa_v3 - sa_v2,
-            "Components": {
-                "CI_Weighted": ci_w,
-                "SA_Base": sa_base,
-                "Hoyer_Raw": raw_hoyer,
-                "Focus_Score": focus_score,
-                "Q_Phase": q_phase,
-                "Q_Kinetic": q_kinetic,
-                "Q_Kinetic_Auto": kinetic_auto_estimated,
-                "Q_Phi": q_phi,
-                "Balance": balance,
-                "Boost_Factor": boost
-            }
-        }
 
 
 # =============================================================================
@@ -370,8 +99,7 @@ class ConstitutionalMetrics:
     Attributes:
         CD (float): Constitutional Definiteness - miara strukturalnej określoności
         CI (float): Constitutional Indefiniteness - miara strukturalnej niedefinitywności
-        SA (float): Semantic Accessibility v2.0 - znormalizowana dostępność [0,1]
-        SA_v3 (float): Semantic Accessibility v3.0 - z HerBERT i Signal Physics
+        SA (float): Semantic Accessibility - znormalizowana dostępność [0,1]
         depth (int): Głębokość składniowa użyta w obliczeniach
         ambiguity (float): Ambiguity morfologiczna użyta w obliczeniach
         D, S, E (float): Współrzędne w przestrzeni fazowej
@@ -391,8 +119,6 @@ class ConstitutionalMetrics:
         sa_category (AccessibilityCategory): Kategoria dostępności
         structure_classification (StructureClassification): Klasyfikacja struktury
         cd_ci_ratio (float): Stosunek CD/CI
-
-        sa_v3_components (Dict): Komponenty SA v3.0 (opcjonalne)
     """
     # Core metrics
     CD: float
@@ -427,10 +153,6 @@ class ConstitutionalMetrics:
     cd_ci_ratio: float
     # Enhanced classification label
     enhanced_structure_classification: str = ""
-
-    # SA v3.0 (opcjonalne)
-    SA_v3: Optional[float] = None
-    sa_v3_components: Optional[Dict] = None
 
     def to_dict(self) -> Dict:
         """
@@ -520,27 +242,16 @@ class ConstitutionalMetrics:
                 }
             },
             "semantic_accessibility": {
-                "v2": {
-                    "value": round(self.SA, 4),
-                    "percentage": round(self.SA * 100, 2),
-                    "formula": sa_formula,
-                    "interpretation": sa_desc,
-                    "category": self.sa_category.value,
-                    "method": "SA v2.0: CD/(CI+CD)"
-                },
-                "v3": {
-                    "value": round(self.SA_v3, 4) if self.SA_v3 is not None else None,
-                    "percentage": round(self.SA_v3 * 100, 2) if self.SA_v3 is not None else None,
-                    "method": "SA v3.0: SA_base + (1-SA_base) × Boost (HerBERT + Hoyer)",
-                    "delta_from_v2": round(self.SA_v3 - self.SA, 4) if self.SA_v3 is not None else None,
-                    "components": self.sa_v3_components if self.sa_v3_components is not None else None
-                },
+                "value": round(self.SA, 4),
+                "percentage": round(self.SA * 100, 2),
+                "formula": sa_formula,
+                "interpretation": sa_desc,
+                "category": self.sa_category.value,
                 "range": "[0,1] gdzie 1=maksymalna dostępność, 0=niedostępny",
                 "advantages": [
                     "Znormalizowana do [0,1]",
                     "Niezależna od skali absolutnej",
-                    "Intuicyjna interpretacja",
-                    "v3.0: Uwzględnia HerBERT embeddings i Signal Physics"
+                    "Intuicyjna interpretacja"
                 ]
             },
             "duality": {
@@ -607,8 +318,7 @@ class ConstitutionalDualityCalculator:
     def __init__(
         self,
         epsilon: float = EPSILON,
-        duality_tolerance: float = DUALITY_ERROR_TOLERANCE,
-        use_sa_v3: bool = False
+        duality_tolerance: float = DUALITY_ERROR_TOLERANCE
     ):
         """
         Inicjalizacja kalkulatora z opcjonalnymi parametrami konfiguracyjnymi.
@@ -616,12 +326,9 @@ class ConstitutionalDualityCalculator:
         Args:
             epsilon: Minimalna wartość dla zabezpieczenia przed dzieleniem przez zero
             duality_tolerance: Próg tolerancji błędu dla weryfikacji dualności (domyślnie 1%)
-            use_sa_v3: Czy używać SA v3.0 (z HerBERT embeddings)
         """
         self.epsilon = epsilon
         self.duality_tolerance = duality_tolerance
-        self.use_sa_v3 = use_sa_v3
-        self.sa_v3_calculator = SAv3Calculator() if use_sa_v3 else None
 
     def calculate_metrics(
         self,
@@ -630,9 +337,7 @@ class ConstitutionalDualityCalculator:
         D: float,
         S: float,
         E: float,
-        inflectional_forms_count: Optional[int] = None,
-        text: Optional[str] = None,
-        kinetic_power_est: float = 0.5
+        inflectional_forms_count: Optional[int] = None
     ) -> ConstitutionalMetrics:
         """
         Oblicz kompletne metryki Constitutional Duality.
@@ -643,9 +348,6 @@ class ConstitutionalDualityCalculator:
             D: Determination - współrzędna w F³ [0, 1]
             S: Stability - współrzędna w F³ [0, 1]
             E: Entropy - współrzędna w F³ [0, 1]
-            inflectional_forms_count: Liczba różnych form fleksyjnych (opcjonalne)
-            text: Tekst oryginalny (wymagany dla SA v3.0)
-            kinetic_power_est: Estymacja mocy kinetycznej dla SA v3.0 [0,1]
 
         Returns:
             ConstitutionalMetrics zawierający wszystkie obliczone metryki i weryfikacje
@@ -708,29 +410,6 @@ class ConstitutionalDualityCalculator:
         synt_share = (CI_synt / ci_sum) if ci_sum else 0.0
         enhanced_label = self._classify_structure_enhanced(D, S, E, synt_share)
 
-        # Oblicz SA v3.0 jeśli włączone
-        SA_v3 = None
-        sa_v3_components = None
-        if self.use_sa_v3 and text is not None and self.sa_v3_calculator is not None:
-            try:
-                sa_v3_result = self.sa_v3_calculator.calculate_sa_v3(
-                    text=text,
-                    CD=CD,
-                    CI_morph=CI_morph,
-                    CI_synt=CI_synt,
-                    CI_sem=CI_sem,
-                    D=D,
-                    S=S,
-                    E=E,
-                    kinetic_power_est=kinetic_power_est
-                )
-                SA_v3 = sa_v3_result["SA_v3"]
-                sa_v3_components = sa_v3_result["Components"]
-            except Exception as e:
-                print(f"WARNING: Error calculating SA v3.0: {e}")
-                SA_v3 = None
-                sa_v3_components = None
-
         # Zwróć kompletne metryki
         return ConstitutionalMetrics(
             CD=CD,
@@ -752,10 +431,8 @@ class ConstitutionalDualityCalculator:
             CI_semantic=CI_sem,
             sa_category=sa_category,
             structure_classification=structure_classification,
-            cd_ci_ratio=cd_ci_ratio,
-            enhanced_structure_classification=enhanced_label,
-            SA_v3=SA_v3,
-            sa_v3_components=sa_v3_components
+            cd_ci_ratio=cd_ci_ratio
+            ,enhanced_structure_classification=enhanced_label
         )
 
     # -------------------------------------------------------------------------
@@ -918,80 +595,56 @@ class ConstitutionalDualityCalculator:
         """
         Rozłóż CI na składniki: morfologiczny, składniowy, semantyczny.
 
-        CRITICAL FIX: Polish morphology is RICH but PRECISE!
-        Morphological endings CLARIFY relationships, they don't create indefiniteness.
-
-        Corrected weights (based on linguistic reality):
-            - Semantic:    50%+ (Main source of ambiguity)
-            - Syntactic:   30-40% (Complex structure adds some ambiguity)
-            - Morphological: 10-20% MAX (Morphology adds precision, not chaos!)
-
-        Dekompozycja poprawiona:
-            CI_semantic = E × CI_total × 0.5      # Dominant source
-            CI_syntactic = (depth/10)² × CI_total × 0.35  # Moderate contribution
-            CI_morphological = min(ambiguity/10, 0.2) × CI_total  # Minimal (10-20% max)
+        Dekompozycja zaawansowana:
+            CI_morphological = inflectional_forms_count × ambiguity × tension
+            CI_syntactic = (depth² / ambiguity) × tension
+            CI_semantic = E × depth × ambiguity × balance_inv
 
         Uzasadnienie teoretyczne:
-            - Morfologia polska jest bogata ale PRECYZYJNA - końcówki określają przypadek,
-              liczbę, rodzaj etc. - to REDUKUJE niedefinitywność, nie zwiększa!
-            - Składnia może być złożona i tworzyć wieloznaczność (długie zdania,
-              zagnieżdżenia)
-            - Semantyka to główne źródło niedefinitywności (polisemia, metafory,
-              kontekst-zależność)
+            - CI_morphological izoluje wpływ fleksji morfologicznej (liczba form × ambiguity)
+            - CI_syntactic izoluje wpływ struktury składniowej (depth²/ambiguity - konkurencja)
+            - CI_semantic reprezentuje "czystą" entropię semantyczną F³
+
+        Uwaga: Suma nie zawsze równa się dokładnie CI_total ze względu na
+        nielinearny charakter interakcji między ambiguity i depth w pełnej formule.
+        Używamy proporcjonalnego rescalingu do zachowania CI_total.
 
         Args:
-            ambiguity: średnia liczba interpretacji na słowo (po disambiguation!)
+            ambiguity: średnia liczba interpretacji na słowo
             depth: głębokość składniowa
             D: Determination coordinate
             S: Stability coordinate
             E: Entropy coordinate
             geometric_tension: √(E/(D×S))
             CI_total: całkowite CI z głównej formuły
-            inflectional_forms_count: liczba różnych form fleksyjnych (NIE używane!)
+            inflectional_forms_count: liczba różnych form fleksyjnych w tekście
 
         Returns:
             (CI_morphological, CI_syntactic, CI_semantic)
         """
-        # CORRECTED DECOMPOSITION based on linguistic reality
+        # Zaawansowana dekompozycja z uwzględnieniem liczby form fleksyjnych
+        DS_safe = max(D * S, self.epsilon)
+        tension = np.sqrt(E / DS_safe)
+        balance_inv = 1.0 / np.sqrt(DS_safe)
 
-        # 1. SEMANTIC: Primary source of indefiniteness (50%+)
-        # Entropy E captures semantic chaos - this should dominate!
-        semantic_weight = 0.5 + (E * 0.3)  # 50-80% based on entropy
-        CI_sem = E * CI_total * semantic_weight
+        # Jeśli nie mamy inflectional_forms_count, używamy depth jako proxy
+        infl_count = float(inflectional_forms_count) if inflectional_forms_count is not None else depth
 
-        # 2. SYNTACTIC: Moderate contribution (20-40%)
-        # Depth adds complexity, but Polish syntax is relatively clear
-        # Normalize depth (typical range 2-8) to [0, 1]
-        depth_normalized = min(depth / 10.0, 1.0)
-        syntactic_weight = 0.2 + (depth_normalized * 0.2)  # 20-40%
-        CI_synt = (depth_normalized ** 2) * CI_total * syntactic_weight
+        CI_morph = infl_count * ambiguity * tension
+        CI_synt = (depth ** 2) / max(ambiguity, self.epsilon) * tension
+        CI_sem = E * depth * ambiguity * balance_inv
 
-        # 3. MORPHOLOGICAL: Minimal contribution (10-20% MAX)
-        # Morphology CLARIFIES, doesn't obscure!
-        # Even with high ambiguity_ratio, morphology contributes minimally
-        # because after disambiguation we have ONE interpretation
-        morphological_weight = min(0.1 + (ambiguity - 1.0) * 0.02, 0.2)  # Max 20%
-        CI_morph = morphological_weight * CI_total
-
-        # Normalize to sum to CI_total
-        CI_sum = CI_morph + CI_synt + CI_sem
-        if CI_sum > self.epsilon:
-            scale = CI_total / CI_sum
-            CI_morph *= scale
-            CI_synt *= scale
-            CI_sem *= scale
+        CI_prelim_sum = CI_morph + CI_synt + CI_sem
+        if CI_prelim_sum > self.epsilon:
+            scale_factor = CI_total / CI_prelim_sum
+            CI_morph *= scale_factor
+            CI_synt *= scale_factor
+            CI_sem *= scale_factor
         else:
-            # Fallback: Use corrected proportions
-            CI_sem = CI_total * 0.5
-            CI_synt = CI_total * 0.35
-            CI_morph = CI_total * 0.15
-
-        # Ensure morphology never exceeds 20% of total
-        if CI_morph > 0.2 * CI_total:
-            excess = CI_morph - (0.2 * CI_total)
-            CI_morph = 0.2 * CI_total
-            # Redistribute excess to semantics (primary source)
-            CI_sem += excess
+            # Fallback: równy podział
+            CI_sem = CI_total / 3.0
+            CI_morph = CI_total / 3.0
+            CI_synt = CI_total / 3.0
 
         return CI_morph, CI_synt, CI_sem
 
