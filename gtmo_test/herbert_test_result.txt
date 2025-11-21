@@ -1,0 +1,27 @@
+Some weights of the model checkpoint at allegro/herbert-base-cased were not used when initializing BertModel: ['cls.predictions.bias', 'cls.predictions.decoder.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight', 'cls.sso.sso_relationship.bias', 'cls.sso.sso_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+======================================================================
+HerBERT Availability Diagnostic Test
+======================================================================
+Timestamp: 2025-11-21 10:55:31.118266
+Python: 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]
+Working directory: D:\GTMO_MORPHOSYNTAX
+
+[1] Test: Import transformers...
+   [OK] transformers imported successfully
+[2] Test: Import torch...
+   [OK] torch imported successfully (version: 2.7.1+cpu)
+[3] Test: Load HerBERT model...
+   [OK] HerBERT model loaded successfully
+[4] Test: Generate test embedding...
+   [OK] Embedding generated successfully
+   Shape: (768,)
+   Dtype: float32
+   Sample values: [0.0494622  0.01456907 0.06925622 0.06671214 0.00408942]
+[5] Test: Check gtmo_morphosyntax.py...
+   [WARNING] Could not import gtmo_morphosyntax: '_io.BufferedWriter' object has no attribute 'buffer'
+
+======================================================================
+[SUCCESS] ALL TESTS PASSED - HerBERT IS AVAILABLE
+======================================================================

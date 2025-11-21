@@ -121,10 +121,8 @@ def main():
 
             sentence_analyses.append(sent_result)
 
-            # Save individual sentence to separate JSON file
-            sentence_file = os.path.join(analysis_folder, f"sentence_{s_idx:03d}.json")
-            with open(sentence_file, 'w', encoding='utf-8') as f:
-                json.dump(sent_result, f, ensure_ascii=False, indent=2)
+            # Save individual sentence using saver (extracts embeddings automatically)
+            saver.save_sentence_analysis(sent_result, sentence, s_idx)
 
         except Exception as e:
             print(f"\n  ⚠️ Error analyzing sentence {s_idx}: {e}")
@@ -232,6 +230,11 @@ def main():
     print(f"✅ Saved HerBERT analysis to: {herbert_file}")
     print(f"📊 Total sentences: {len(sentence_analyses)}")
     print(f"📊 Sentences with HerBERT embeddings: {len(sent_embeddings)}")
+
+    # Finalize and save HerBERT embeddings to .npz
+    embeddings_file = saver.finalize_embeddings()
+    if embeddings_file:
+        print(f"🤖 Saved {len(saver.embedding_storage.embeddings_cache)} HerBERT embeddings to: {embeddings_file}")
 
     print("\n🎯 Analysis complete!")
 

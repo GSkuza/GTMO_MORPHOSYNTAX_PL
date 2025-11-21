@@ -102,12 +102,17 @@ try:
     herbert_model.eval()
     HERBERT_AVAILABLE = True
     TRANSFORMERS_AVAILABLE = True
-    print("✔ HerBERT loaded")
+    # Global HerBERT instances to avoid reloading
+    GLOBAL_HERBERT_TOKENIZER = herbert_tokenizer
+    GLOBAL_HERBERT_MODEL = herbert_model
+    print("✔ HerBERT loaded (global instance)")
 except ImportError:
     herbert_tokenizer = None
     herbert_model = None
     HERBERT_AVAILABLE = False
     TRANSFORMERS_AVAILABLE = False
+    GLOBAL_HERBERT_TOKENIZER = None
+    GLOBAL_HERBERT_MODEL = None
     print("✗ HerBERT/sentence-transformers not available: pip install transformers torch sentence-transformers")
 
 # Required imports
@@ -971,7 +976,8 @@ class QuantumMorphosyntaxEngine:
         synt_weight = 1.0 - morph_weight
         return morph_weight, synt_weight
 
-    def __init__(self, domain_dictionary: Optional['DomainDictionary'] = None):
+    def __init__(self, domain_dictionary: Optional['DomainDictionary'] = None,
+                 herbert_tokenizer=None, herbert_model=None):
         self.case_coords = CASE_COORDS
         self.pos_coords = POS_COORDS
         self.quantum_states = {}
@@ -992,9 +998,13 @@ class QuantumMorphosyntaxEngine:
         self.domain_dictionary = domain_dictionary
         self.use_domain_filtering = domain_dictionary is not None
 
-        # Initialize constitutional duality calculator
+        # Initialize constitutional duality calculator with shared HerBERT
         if CONSTITUTIONAL_DUALITY_AVAILABLE:
-            self.constitutional_calculator = ConstitutionalDualityCalculator(use_sa_v3=True)
+            self.constitutional_calculator = ConstitutionalDualityCalculator(
+                use_sa_v3=True,
+                herbert_tokenizer=herbert_tokenizer,
+                herbert_model=herbert_model
+            )
         else:
             self.constitutional_calculator = None
 
@@ -1015,9 +1025,9 @@ class QuantumMorphosyntaxEngine:
         else:
             self.quantum_enhanced = None
 
-        # Lazy-loaded models for FIXED entropy measurement
-        self._herbert_tokenizer = None
-        self._herbert_model = None
+        # Use shared HerBERT models instead of lazy loading
+        self._herbert_tokenizer = herbert_tokenizer
+        self._herbert_model = herbert_model
         self._sentence_model = None
 
     # =========================================================================
@@ -1025,15 +1035,26 @@ class QuantumMorphosyntaxEngine:
     # =========================================================================
 
     def _load_herbert_model(self):
-        """Lazy load HerBERT model for polysemy detection."""
+        """Get HerBERT model (uses shared instance if available)."""
         if not TRANSFORMERS_AVAILABLE:
             return None, None
 
-        if self._herbert_tokenizer is None:
-            from transformers import AutoTokenizer, AutoModel
-            self._herbert_tokenizer = AutoTokenizer.from_pretrained("allegro/herbert-base-cased")
-            self._herbert_model = AutoModel.from_pretrained("allegro/herbert-base-cased")
-            self._herbert_model.eval()
+        # Use already loaded models (passed in constructor or global)
+        if self._herbert_tokenizer is not None and self._herbert_model is not None:
+            return self._herbert_tokenizer, self._herbert_model
+
+        # Fallback: try global instances
+        if GLOBAL_HERBERT_TOKENIZER is not None and GLOBAL_HERBERT_MODEL is not None:
+            self._herbert_tokenizer = GLOBAL_HERBERT_TOKENIZER
+            self._herbert_model = GLOBAL_HERBERT_MODEL
+            return self._herbert_tokenizer, self._herbert_model
+
+        # Last resort: load new (should not happen if global loading succeeded)
+        from transformers import AutoTokenizer, AutoModel
+        print("WARNING: Loading new HerBERT instance (global instance not found)")
+        self._herbert_tokenizer = AutoTokenizer.from_pretrained("allegro/herbert-base-cased")
+        self._herbert_model = AutoModel.from_pretrained("allegro/herbert-base-cased")
+        self._herbert_model.eval()
 
         return self._herbert_tokenizer, self._herbert_model
 
@@ -2183,12 +2204,16 @@ class QuantumMorphosyntaxEngine:
             raise Exception("Empty text")
         
         print(f"🌟 Quantum analyzing: {text[:50]}...")
-        
+        print(f"  🔄 Starting morphological analysis...")
+
         # Run morphological analysis with quantum superposition
         morph_coords, morph_meta, word_quantum_states = self.analyze_morphology_quantum(text)
-        
+        print(f"  ✅ Morphological analysis completed")
+
+        print(f"  🔄 Starting syntactic analysis...")
         # Run syntactic analysis with entanglement detection
         synt_coords, synt_meta, entanglements = self.analyze_syntax_quantum(text, word_quantum_states)
+        print(f"  ✅ Syntactic analysis completed")
 
         # TEMPORAL ANALYSIS
         doc = nlp(text) if nlp else None
@@ -2506,7 +2531,17 @@ class QuantumMorphosyntaxEngine:
                 delta = const_metrics.SA_v3 - const_metrics.SA
                 print(f"  SEMANTIC_ACCESSIBILITY v3.0: {const_metrics.SA_v3:.4f} ({const_metrics.SA_v3*100:.1f}%) [Δ={delta:+.4f}]")
             print(f"  CI_DECOMPOSITION: Morphological={const_metrics.CI_morphological:.2f}, Syntactic={const_metrics.CI_syntactic:.2f}, Semantic={const_metrics.CI_semantic:.2f}")
-            print(f"  CLASSIFICATION: {const_metrics.structure_classification.value} (CD/CI = {const_metrics.cd_ci_ratio:.4f})")
+            sys.stdout.flush()
+
+            # Safe print of classification (can hang for very complex sentences)
+            try:
+                classification_str = str(const_metrics.structure_classification.value)
+                cd_ci_ratio = float(const_metrics.cd_ci_ratio)
+                print(f"  CLASSIFICATION: {classification_str} (CD/CI = {cd_ci_ratio:.4f})")
+                sys.stdout.flush()
+            except Exception as e:
+                print(f"  CLASSIFICATION: <error computing: {e}>")
+                sys.stdout.flush()
 
             # Dodaj tensor do JSON
             result["quantum_tensor"] = {
@@ -2515,7 +2550,11 @@ class QuantumMorphosyntaxEngine:
             }
 
             # Dodaj Constitutional Metrics do JSON using dedicated calculator
-            result["constitutional_metrics"] = const_metrics.to_dict()
+            try:
+                result["constitutional_metrics"] = const_metrics.to_dict()
+            except Exception as e:
+                print(f"  ⚠️ Error serializing constitutional metrics: {e}")
+                result["constitutional_metrics"] = {"error": str(e)}
 
             # Jawne czynniki geometryczne na poziomie zdania
             try:
@@ -2549,11 +2588,16 @@ class QuantumMorphosyntaxEngine:
         # ========================================================================
         # TOPOLOGICAL ATTRACTORS ANALYSIS
         # ========================================================================
+        print("  🔄 Starting topological analysis...")
+        sys.stdout.flush()
+
         if self.topological_analyzer:
             try:
                 coords_array = np.array([D, S, E])
 
                 # Find nearest attractor
+                print("  🔄 Finding nearest attractor...")
+                sys.stdout.flush()
                 nearest_name, distance, attractor_meta = \
                     self.topological_analyzer.find_nearest_attractor(coords_array)
 
@@ -2585,10 +2629,15 @@ class QuantumMorphosyntaxEngine:
         # ========================================================================
         # ENHANCED QUANTUM METRICS
         # ========================================================================
+        print("  🔄 Starting enhanced quantum analysis...")
+        sys.stdout.flush()
+
         if self.quantum_enhanced:
             try:
                 # Extract words - use final_coords for all words since per-word coords aren't stored
                 words = list(word_quantum_states.keys())
+                print(f"  🔄 Processing {len(words)} words for quantum analysis...")
+                sys.stdout.flush()
 
                 # Use the final D-S-E coordinates for all words
                 # (This is a simplification - in future could modify morphology analysis to store per-word coords)
@@ -2597,6 +2646,9 @@ class QuantumMorphosyntaxEngine:
                 if len(words) > 0:
                     from gtmo_quantum_enhanced import analyze_quantum_enhanced as qe_analyze
 
+                    print(f"  🔄 Calling analyze_quantum_enhanced with {len(words)} words...")
+                    sys.stdout.flush()
+
                     quantum_enhanced_result = qe_analyze(
                         text=text,
                         words=words,
@@ -2604,12 +2656,25 @@ class QuantumMorphosyntaxEngine:
                         base_coherence=total_quantum_coherence
                     )
 
+                    print(f"  ✅ Quantum analysis completed")
+                    sys.stdout.flush()
+
+                    print(f"  🔄 Assigning results to dict...")
+                    sys.stdout.flush()
+
                     result["quantum_enhanced"] = quantum_enhanced_result
+
+                    print(f"  ✅ Results assigned")
+                    sys.stdout.flush()
+
+                    print(f"  🔄 Printing quantum enhanced results...")
+                    sys.stdout.flush()
 
                     print(f"  ⚛️ QUANTUM ENHANCED: {quantum_enhanced_result['num_quantum_states']} states")
                     print(f"     Phase coherence: {quantum_enhanced_result['coherence_detailed']['phase_coherence']:.3f}")
                     print(f"     Entanglement: {quantum_enhanced_result['entanglement']['mean_entanglement']:.3f}")
                     print(f"     Classification: {quantum_enhanced_result['quantum_classification']}")
+                    sys.stdout.flush()
 
             except Exception as e:
                 print(f"  ⚠️ Enhanced quantum analysis failed: {e}")
@@ -2684,25 +2749,40 @@ def F3_to_Phi9(D, S, E, *, max_iter=1000, R_escape=2.0, c_base=(-0.8, 0.156)):
 # MAIN ANALYSIS FUNCTIONS
 # ==================================================
 
+# Global engine instance (initialized lazily)
+_GLOBAL_ENGINE = None
+
+def _get_global_engine():
+    """Get or create global QuantumMorphosyntaxEngine instance."""
+    global _GLOBAL_ENGINE
+    if _GLOBAL_ENGINE is None:
+        _GLOBAL_ENGINE = QuantumMorphosyntaxEngine(
+            herbert_tokenizer=GLOBAL_HERBERT_TOKENIZER,
+            herbert_model=GLOBAL_HERBERT_MODEL
+        )
+    return _GLOBAL_ENGINE
+
 def analyze_quantum_with_axioms(text: str, source_file: str = "unknown") -> Dict:
     """
     Główna funkcja analizy z aksjomatami GTMØ
+    Uses shared global engine instance to avoid reloading models.
     """
-    engine = QuantumMorphosyntaxEngine()
+    engine = _get_global_engine()
     return engine.gtmo_analyze_quantum(text, source_file)
 
 def batch_analyze_quantum_with_axioms(texts: List[str], source_file: str = "batch") -> List[Dict]:
     """
     Analiza wsadowa z aksjomatami GTMØ
+    Uses shared global engine instance to avoid reloading models.
     """
-    engine = QuantumMorphosyntaxEngine()
+    engine = _get_global_engine()
     results = []
-    
+
     for i, text in enumerate(texts):
         source_info = f"{source_file}_sentence_{i+1}"
         result = engine.gtmo_analyze_quantum(text, source_info)
         results.append(result)
-    
+
     return results
 
 # ==================================================
@@ -2727,7 +2807,8 @@ class EnhancedGTMOProcessor:
 
     def __init__(self):
         self.stanza = stanza_nlp
-        self.engine = QuantumMorphosyntaxEngine() if morfeusz else None
+        # Use global engine instance
+        self.engine = _get_global_engine() if morfeusz else None
 
     def analyze_legal_text(self, text: str) -> Dict[str, Any]:
         """
@@ -2932,94 +3013,194 @@ if __name__ == "__main__":
             # Store all article analyses for full document
             article_analyses = []
 
-            # Analyze each article and save individually
-            for i, article in enumerate(articles, 1):
-                print(f"\n🌌 Analyzing article {i}/{len(articles)}")
-                print(f"Text: {article[:100]}{'...' if len(article) > 100 else ''}")
+            # Global sentence counter (to avoid overwriting sentence files)
+            global_sentence_counter = 0
 
-                try:
-                    # Split article into paragraphs (§1, §2, §3, etc.)
-                    import re
-                    paragraph_pattern = r'§\s*\d+[^\n]*(?:\n(?!§\s*\d+)[^\n]*)*'
-                    paragraph_matches = re.findall(paragraph_pattern, article, flags=re.MULTILINE | re.DOTALL)
+            try:
+                # Analyze each article and save individually
+                for i, article in enumerate(articles, 1):
+                    print(f"\n🌌 Analyzing article {i}/{len(articles)}")
+                    print(f"Text: {article[:100]}{'...' if len(article) > 100 else ''}")
 
-                    # If no paragraphs found, treat entire article as one unit
-                    if not paragraph_matches:
-                        paragraph_matches = [article]
+                    try:
+                        # Split article into paragraphs (§1, §2, §3, etc.)
+                        import re
+                        paragraph_pattern = r'§\s*\d+[^\n]*(?:\n(?!§\s*\d+)[^\n]*)*'
+                        paragraph_matches = re.findall(paragraph_pattern, article, flags=re.MULTILINE | re.DOTALL)
 
-                    # Analyze each paragraph
-                    paragraph_analyses = []
-                    total_sentences = 0
+                        # If no paragraphs found, treat entire article as sentences
+                        if not paragraph_matches:
+                            print(f"  ℹ️  No paragraph markers found - analyzing as individual sentences")
 
-                    for p_idx, paragraph in enumerate(paragraph_matches, 1):
-                        # Split paragraph into sentences using spaCy
-                        if nlp:
-                            doc = nlp(paragraph)
-                            sentences = [sent.text.strip() for sent in doc.sents if sent.text.strip() and len(sent.text.strip()) >= 10]
-                        else:
-                            # Fallback: simple sentence splitting
-                            sentences = re.split(r'[.!?]+', paragraph)
-                            sentences = [s.strip() for s in sentences if s.strip() and len(s.strip()) >= 10]
+                            # Split into sentences
+                            if nlp:
+                                doc = nlp(article)
+                                sentences = [sent.text.strip() for sent in doc.sents if sent.text.strip() and len(sent.text.strip()) >= 10]
+                            else:
+                                sentences = re.split(r'[.!?]+', article)
+                                sentences = [s.strip() for s in sentences if s.strip() and len(s.strip()) >= 10]
 
-                        # Analyze each sentence in paragraph
-                        sentence_analyses = []
-                        for s_idx, sentence in enumerate(sentences, 1):
-                            try:
-                                sent_result = analyze_quantum_with_axioms(sentence, os.path.basename(file_path))
-                                sent_result['sentence_number'] = s_idx
-                                sent_result['paragraph_number'] = p_idx
-                                sentence_analyses.append(sent_result)
-                            except Exception as e:
-                                print(f"  ⚠️  Error analyzing sentence {s_idx} in §{p_idx}: {e}")
-                                continue
+                            print(f"  📝 Found {len(sentences)} sentences to analyze")
 
-                        # Analyze entire paragraph
-                        try:
-                            para_result = analyze_quantum_with_axioms(paragraph, os.path.basename(file_path))
-                            para_result['paragraph_number'] = p_idx
-                            para_result['sentence_count'] = len(sentences)
-                            para_result['sentences'] = sentence_analyses
-                            paragraph_analyses.append(para_result)
-                            total_sentences += len(sentences)
-                            print(f"  ✓ §{p_idx}: {len(sentences)} sentences analyzed")
-                        except Exception as e:
-                            print(f"  ⚠️  Error analyzing paragraph {p_idx}: {e}")
+                            # Analyze and save each sentence individually
+                            sentence_analyses = []
+                            for s_idx, sentence in enumerate(sentences, 1):
+                                try:
+                                    global_sentence_counter += 1
+                                    print(f"\n🔄 Processing sentence {global_sentence_counter} (art {i}, local {s_idx}/{len(sentences)})")
+                                    print(f"   Text preview: {sentence[:100]}...")
+                                    sent_result = analyze_quantum_with_axioms(sentence, os.path.basename(file_path))
+                                    sent_result['sentence_number'] = s_idx
+                                    sent_result['global_sentence_number'] = global_sentence_counter
+                                    sent_result['article_number'] = i
+                                    sentence_analyses.append(sent_result)
+
+                                    # Save individual sentence using GLOBAL counter
+                                    saved_file = saver.save_sentence_analysis(sent_result, sentence, global_sentence_counter)
+                                    print(f"  ✅ Saved sentence {global_sentence_counter} (art {i}, local {s_idx}/{len(sentences)}): {saved_file}")
+
+                                except Exception as e:
+                                    print(f"  ⚠️  Error analyzing sentence {s_idx}: {e}")
+                                    continue
+
+                            # Create article analysis with sentences for full document
+                            article_result = {
+                                'article_number': i,
+                                'total_articles': len(articles),
+                                'sentence_count': len(sentence_analyses),
+                                'sentences': sentence_analyses,
+                                'article_text': article
+                            }
+                            article_analyses.append(article_result)
+
+                            # Skip the rest of the article processing (paragraphs)
                             continue
 
-                    # Analyze complete article (all paragraphs together)
-                    result = analyze_quantum_with_axioms(article, os.path.basename(file_path))
-                    result["article_number"] = i
-                    result["total_articles"] = len(articles)
-                    result["paragraph_count"] = len(paragraph_matches)
-                    result["sentence_count"] = total_sentences
-                    result["paragraphs"] = paragraph_analyses
+                        # Analyze each paragraph
+                        paragraph_analyses = []
+                        total_sentences = 0
 
-                    # Save individual article result
-                    saved_file = saver.save_article_analysis(result, article, i)
-                    print(f"✅ Saved article to: {saved_file}")
-                    print(f"   Hierarchy: {len(paragraph_matches)} paragraphs, {total_sentences} sentences")
+                        for p_idx, paragraph in enumerate(paragraph_matches, 1):
+                            # Split paragraph into sentences using spaCy
+                            if nlp:
+                                doc = nlp(paragraph)
+                                sentences = [sent.text.strip() for sent in doc.sents if sent.text.strip() and len(sent.text.strip()) >= 10]
+                            else:
+                                # Fallback: simple sentence splitting
+                                sentences = re.split(r'[.!?]+', paragraph)
+                                sentences = [s.strip() for s in sentences if s.strip() and len(s.strip()) >= 10]
 
-                    # Store for full document analysis
-                    article_analyses.append(result)
+                            # Analyze each sentence in paragraph
+                            sentence_analyses = []
+                            for s_idx, sentence in enumerate(sentences, 1):
+                                try:
+                                    global_sentence_counter += 1
+                                    print(f"\n🔄 Processing sentence {global_sentence_counter} (§{p_idx}, local {s_idx}/{len(sentences)})")
+                                    print(f"   Text preview: {sentence[:100]}...")
+                                    sent_result = analyze_quantum_with_axioms(sentence, os.path.basename(file_path))
+                                    sent_result['sentence_number'] = s_idx
+                                    sent_result['global_sentence_number'] = global_sentence_counter
+                                    sent_result['paragraph_number'] = p_idx
+                                    sent_result['article_number'] = i
+                                    sentence_analyses.append(sent_result)
 
-                except Exception as e:
-                    print(f"❌ Error analyzing article {i}: {e}")
-                    continue
+                                    # Save individual sentence to separate JSON file
+                                    saved_file = saver.save_sentence_analysis(sent_result, sentence, global_sentence_counter)
+                                    print(f"  ✅ Saved sentence {global_sentence_counter} (art {i}, §{p_idx}, local {s_idx}/{len(sentences)}): {saved_file}")
 
-            # Save full document analysis
-            if article_analyses:
+                                except Exception as e:
+                                    print(f"  ⚠️  Error analyzing sentence {s_idx} in §{p_idx}: {e}")
+                                    continue
+
+                            # Analyze entire paragraph (skip if too large to avoid hangs)
+                            try:
+                                # Skip paragraph-level analysis if too many sentences (>20) or too long (>5000 chars)
+                                if len(sentences) > 20 or len(paragraph) > 5000:
+                                    print(f"  ⏭️  Skipping paragraph-level analysis for §{p_idx} ({len(sentences)} sentences, {len(paragraph)} chars - too large)")
+                                    # Create minimal paragraph result without full analysis
+                                    para_result = {
+                                        'paragraph_number': p_idx,
+                                        'sentence_count': len(sentences),
+                                        'sentences': sentence_analyses,
+                                        'skipped': True,
+                                        'skip_reason': f'Too large: {len(sentences)} sentences, {len(paragraph)} characters'
+                                    }
+                                else:
+                                    para_result = analyze_quantum_with_axioms(paragraph, os.path.basename(file_path))
+                                    para_result['paragraph_number'] = p_idx
+                                    para_result['sentence_count'] = len(sentences)
+                                    para_result['sentences'] = sentence_analyses
+                                    print(f"  ✓ §{p_idx}: {len(sentences)} sentences analyzed")
+
+                                paragraph_analyses.append(para_result)
+                                total_sentences += len(sentences)
+                            except Exception as e:
+                                print(f"  ⚠️  Error analyzing paragraph {p_idx}: {e}")
+                                continue
+
+                        # Analyze complete article (all paragraphs together) - skip if too large
+                        result = analyze_quantum_with_axioms(article, os.path.basename(file_path))
+                        result["article_number"] = i
+                        result["total_articles"] = len(articles)
+                        result["paragraph_count"] = len(paragraph_matches)
+                        result["sentence_count"] = total_sentences
+                        result["paragraphs"] = paragraph_analyses
+
+                        # Save individual article result
+                        saved_file = saver.save_article_analysis(result, article, i)
+                        print(f"✅ Saved article to: {saved_file}")
+                        print(f"   Hierarchy: {len(paragraph_matches)} paragraphs, {total_sentences} sentences")
+
+                        # Store for full document analysis
+                        article_analyses.append(result)
+
+                    except Exception as e:
+                        print(f"❌ Error analyzing article {i}: {e}")
+                        continue
+
+                # Save full document analysis (after all articles processed)
+                if article_analyses:
+                    try:
+                        full_doc_file = saver.save_full_document_analysis(
+                            source_file=file_path,
+                            articles=articles,
+                            article_analyses=article_analyses
+                        )
+                        print(f"\n📄 Saved full document analysis to: {full_doc_file}")
+                    except Exception as e:
+                        print(f"❌ Error saving full document: {e}")
+
+            except KeyboardInterrupt:
+                print(f"\n⚠️  Analysis interrupted by user. Saving embeddings...")
+            except Exception as e:
+                print(f"\n❌ Error during analysis: {e}")
+            finally:
+                # ALWAYS finalize and save HerBERT embeddings, even if interrupted
                 try:
-                    full_doc_file = saver.save_full_document_analysis(
-                        source_file=file_path,
-                        articles=articles,
-                        article_analyses=article_analyses
-                    )
-                    print(f"\n📄 Saved full document analysis to: {full_doc_file}")
+                    embeddings_file = saver.finalize_embeddings()
+                    if embeddings_file:
+                        print(f"🤖 Saved {len(saver.embedding_storage.embeddings_cache)} HerBERT embeddings to: {embeddings_file}")
                 except Exception as e:
-                    print(f"❌ Error saving full document: {e}")
+                    print(f"⚠️  Error saving embeddings: {e}")
+
+                # ALWAYS finalize and save numeric matrices, even if interrupted
+                try:
+                    matrices_file = saver.finalize_matrices()
+                    if matrices_file:
+                        print(f"🔢 Saved {len(saver.matrix_storage.matrices_cache)} numeric matrices to: {matrices_file}")
+                except Exception as e:
+                    print(f"⚠️  Error saving matrices: {e}")
+
+                # Create HerBERT semantic flow analysis
+                try:
+                    herbert_analysis_file = saver.create_herbert_analysis()
+                    if herbert_analysis_file:
+                        print(f"📊 Saved HerBERT semantic analysis to: {herbert_analysis_file}")
+                except Exception as e:
+                    print(f"⚠️  Error creating HerBERT analysis: {e}")
 
             print(f"\n🎯 Analysis complete! Check '{analysis_folder}' for results.")
-            
+
         except Exception as e:
             print(f"❌ Error processing file: {e}")
             sys.exit(1)

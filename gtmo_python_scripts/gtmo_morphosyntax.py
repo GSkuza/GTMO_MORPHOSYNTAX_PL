@@ -947,6 +947,54 @@ def generate_alternative_interpretations(text: str, base_coords: np.ndarray) -> 
         'probabilities': probabilities
     }
 
+
+def batch_get_herbert_embeddings(texts: List[str]) -> List[Optional[np.ndarray]]:
+    """
+    Get HerBERT embeddings for multiple texts in a single batch.
+    This is MUCH faster than processing each text individually.
+
+    Args:
+        texts: List of text strings to embed
+
+    Returns:
+        List of embeddings (numpy arrays) or None for failed texts
+    """
+    if not HERBERT_AVAILABLE or not texts:
+        return [None] * len(texts)
+
+    embeddings = []
+    batch_size = 16  # Process 16 texts at once
+
+    try:
+        with torch.no_grad():
+            for i in range(0, len(texts), batch_size):
+                batch_texts = texts[i:i+batch_size]
+
+                # Tokenize batch
+                inputs = herbert_tokenizer(
+                    batch_texts,
+                    return_tensors="pt",
+                    truncation=True,
+                    max_length=512,
+                    padding=True
+                )
+
+                # Get embeddings
+                outputs = herbert_model(**inputs)
+
+                # Extract [CLS] token embeddings for each text in batch
+                batch_embeddings = outputs.last_hidden_state[:, 0, :].cpu().numpy()
+
+                for emb in batch_embeddings:
+                    embeddings.append(emb)
+
+        return embeddings
+
+    except Exception as e:
+        logger.error(f"Batch HerBERT embedding failed: {e}")
+        return [None] * len(texts)
+
+
 class QuantumMorphosyntaxEngine:
     def calculate_adaptive_weights(self, text: str, morph_meta: Dict, synt_meta: Dict) -> Tuple[float, float]:
         word_count = len(text.split())
@@ -1512,10 +1560,16 @@ class QuantumMorphosyntaxEngine:
         else:
             return "DECOHERENT_CLASSICAL"
     
-    def gtmo_analyze_quantum(self, text: str, source_file: Optional[Dict] = None) -> Dict:
+    def gtmo_analyze_quantum(self, text: str, source_file: Optional[Dict] = None,
+                            pre_computed_herbert_embedding: Optional[np.ndarray] = None) -> Dict:
         """
         Main GTMØ quantum analysis function with axiom integration.
         Returns JSON-compatible result.
+
+        Args:
+            text: Text to analyze
+            source_file: Source file metadata
+            pre_computed_herbert_embedding: Pre-computed HerBERT embedding (for batch processing)
         """
         if not text or not text.strip():
             raise Exception("Empty text")
@@ -1688,12 +1742,15 @@ class QuantumMorphosyntaxEngine:
         if 'topological_classification' in axiom_result:
             result["topology"] = axiom_result['topological_classification']
 
-        # Add HerBERT embedding
-        if HERBERT_AVAILABLE:
+        # Add HerBERT embedding (use pre-computed if available for batch efficiency)
+        if pre_computed_herbert_embedding is not None:
+            result["herbert_embedding"] = pre_computed_herbert_embedding.tolist()
+            print(f"  🤖 HerBERT embedding (pre-computed): {pre_computed_herbert_embedding.shape}")
+        elif HERBERT_AVAILABLE:
             try:
                 with torch.no_grad():
-                    inputs = herbert_tokenizer(text, return_tensors="pt", 
-                                              truncation=True, max_length=512, 
+                    inputs = herbert_tokenizer(text, return_tensors="pt",
+                                              truncation=True, max_length=512,
                                               padding=True)
                     outputs = herbert_model(**inputs)
                     embedding = outputs.last_hidden_state[:, 0, :].squeeze().numpy()
@@ -2350,6 +2407,21 @@ if __name__ == "__main__":
                     print(f"\n📄 Saved full document analysis to: {full_doc_file}")
                 except Exception as e:
                     print(f"❌ Error saving full document: {e}")
+
+            # Finalize embeddings and matrices (CRITICAL!)
+            try:
+                embeddings_file = saver.finalize_embeddings()
+                if embeddings_file:
+                    print(f"💾 Saved embeddings to: {embeddings_file}")
+            except Exception as e:
+                print(f"⚠️ Error saving embeddings: {e}")
+
+            try:
+                matrices_file = saver.finalize_matrices()
+                if matrices_file:
+                    print(f"💾 Saved matrices to: {matrices_file}")
+            except Exception as e:
+                print(f"⚠️ Error saving matrices: {e}")
 
             print(f"\n🎯 Analysis complete! Check '{analysis_folder}' for results.")
             

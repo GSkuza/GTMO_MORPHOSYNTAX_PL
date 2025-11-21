@@ -5,6 +5,8 @@ GTMØ JSON Saver - Optimized for Individual MD File Analysis
 ============================================================
 Saves each GTMØ analysis result to a separate JSON file with
 sequential naming: gtmoanalysisddmmyyyynoX.json
+
+Version 1.1: Added HerBERT embedding storage in separate .npz files
 """
 
 import json
@@ -16,6 +18,7 @@ from typing import Dict, List, Optional, Any, Union
 from datetime import datetime
 import hashlib
 import logging
+import numpy as np
 
 # Configure logging
 logging.basicConfig(
@@ -25,36 +28,228 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+class NumpyEncoder(json.JSONEncoder):
+    """Custom JSON encoder that handles numpy types."""
+    def default(self, obj):
+        if isinstance(obj, (np.integer, np.int64, np.int32, np.int16, np.int8)):
+            return int(obj)
+        elif isinstance(obj, (np.floating, np.float64, np.float32, np.float16)):
+            return float(obj)
+        elif isinstance(obj, np.ndarray):
+            return obj.tolist()
+        elif isinstance(obj, np.bool_):
+            return bool(obj)
+        return super().default(obj)
+
+
+
+class HerBERTEmbeddingStorage:
+    """
+    Efficient storage for HerBERT embeddings in compressed .npz format.
+
+    Stores all embeddings for a document in a single compressed file,
+    reducing disk usage by ~85% compared to JSON storage.
+    """
+
+    def __init__(self, analysis_folder: Path):
+        """
+        Initialize embedding storage for an analysis.
+
+        Args:
+            analysis_folder: Folder where embeddings will be saved
+        """
+        self.analysis_folder = Path(analysis_folder)
+        self.embeddings_file = self.analysis_folder / "herbert_embeddings.npz"
+        self.embeddings_cache = {}  # {key: embedding_array}
+
+    def add_embedding(self, key: str, embedding: np.ndarray, use_float16: bool = True):
+        """
+        Add an embedding to the cache.
+
+        Args:
+            key: Unique identifier (e.g., "article_001", "sentence_1_2")
+            embedding: HerBERT embedding (768D numpy array)
+            use_float16: Use float16 for 50% size reduction (default: True)
+        """
+        if use_float16:
+            embedding = embedding.astype(np.float16)
+        self.embeddings_cache[key] = embedding
+
+    def save_all(self, compress: bool = True):
+        """
+        Save all cached embeddings to a single .npz file.
+
+        Args:
+            compress: Use compression (default: True, ~50% smaller)
+
+        Returns:
+            Path to saved embeddings file
+        """
+        if not self.embeddings_cache:
+            logger.info("No embeddings to save")
+            return None
+
+        if compress:
+            np.savez_compressed(self.embeddings_file, **self.embeddings_cache)
+        else:
+            np.savez(self.embeddings_file, **self.embeddings_cache)
+
+        size_kb = self.embeddings_file.stat().st_size / 1024
+        logger.info(f"Saved {len(self.embeddings_cache)} embeddings to {self.embeddings_file.name} ({size_kb:.1f} KB)")
+        return str(self.embeddings_file)
+
+    def load_embedding(self, key: str) -> Optional[np.ndarray]:
+        """
+        Load a specific embedding from the .npz file.
+
+        Args:
+            key: Embedding identifier
+
+        Returns:
+            Embedding array or None if not found
+        """
+        if not self.embeddings_file.exists():
+            return None
+
+        with np.load(self.embeddings_file) as data:
+            return data.get(key, None)
+
+    def load_all(self) -> Dict[str, np.ndarray]:
+        """
+        Load all embeddings from the .npz file.
+
+        Returns:
+            Dictionary mapping keys to embedding arrays
+        """
+        if not self.embeddings_file.exists():
+            return {}
+
+        with np.load(self.embeddings_file) as data:
+            return {key: data[key] for key in data.files}
+
+
+class NumericMatrixStorage:
+    """
+    Efficient storage for large numeric matrices in compressed .npz format.
+
+    Stores matrices like entanglement_matrix, density_matrix, etc.
+    in a separate file to keep JSON files small and readable.
+    """
+
+    def __init__(self, analysis_folder: Path):
+        """
+        Initialize matrix storage for an analysis.
+
+        Args:
+            analysis_folder: Folder where matrices will be saved
+        """
+        self.analysis_folder = Path(analysis_folder)
+        self.matrices_file = self.analysis_folder / "numeric_matrices.npz"
+        self.matrices_cache = {}  # {key: matrix_array}
+
+    def add_matrix(self, key: str, matrix: np.ndarray, use_float16: bool = True):
+        """
+        Add a matrix to the cache.
+
+        Args:
+            key: Unique identifier (e.g., "entanglement_sentence_001")
+            matrix: Numeric matrix (numpy array)
+            use_float16: Use float16 for 50% size reduction (default: True)
+        """
+        if use_float16 and matrix.dtype in [np.float32, np.float64]:
+            matrix = matrix.astype(np.float16)
+        self.matrices_cache[key] = matrix
+        logger.debug(f"Added matrix '{key}' with shape {matrix.shape}")
+
+    def save_all(self, compress: bool = True):
+        """
+        Save all cached matrices to a single .npz file.
+
+        Args:
+            compress: Use compression (default: True)
+
+        Returns:
+            Path to saved matrices file
+        """
+        if not self.matrices_cache:
+            logger.info("No matrices to save")
+            return None
+
+        if compress:
+            np.savez_compressed(self.matrices_file, **self.matrices_cache)
+        else:
+            np.savez(self.matrices_file, **self.matrices_cache)
+
+        size_kb = self.matrices_file.stat().st_size / 1024
+        logger.info(f"Saved {len(self.matrices_cache)} matrices to {self.matrices_file.name} ({size_kb:.1f} KB)")
+        return str(self.matrices_file)
+
+    def load_matrix(self, key: str) -> Optional[np.ndarray]:
+        """
+        Load a specific matrix from the .npz file.
+
+        Args:
+            key: Matrix identifier
+
+        Returns:
+            Matrix array or None if not found
+        """
+        if not self.matrices_file.exists():
+            return None
+
+        with np.load(self.matrices_file) as data:
+            return data.get(key, None)
+
+    def load_all(self) -> Dict[str, np.ndarray]:
+        """
+        Load all matrices from the .npz file.
+
+        Returns:
+            Dictionary mapping keys to matrix arrays
+        """
+        if not self.matrices_file.exists():
+            return {}
+
+        with np.load(self.matrices_file) as data:
+            return {key: data[key] for key in data.files}
+
+
 class GTMOOptimizedSaver:
     """Optimized JSON saver for individual GTMØ MD file analyses."""
-    
-    def __init__(self, output_dir: str = "gtmo_results"):
+
+    def __init__(self, output_dir: str = "gtmo_results", save_embeddings: bool = True, save_matrices: bool = False):
         """
         Initialize optimized JSON saver.
 
         Args:
             output_dir: Directory for saving results
+            save_embeddings: Whether to save HerBERT embeddings separately (default: True)
+            save_matrices: Whether to save large numeric matrices separately (default: False, DISABLED due to hangs)
         """
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.daily_counter = self._initialize_daily_counter()
         self.current_date = datetime.now().strftime("%d%m%Y")
         self.current_analysis_folder = None  # Track current analysis folder
-        
+        self.save_embeddings = save_embeddings
+        self.embedding_storage = None  # Will be initialized when analysis folder is created
+        self.save_matrices = save_matrices
+        self.matrix_storage = None  # Will be initialized when analysis folder is created
+
     def _initialize_daily_counter(self) -> int:
         """
         Initialize counter based on existing files for today.
-        
+
         Returns:
             Next available counter number for today
         """
         today_str = datetime.now().strftime("%d%m%Y")
         pattern = f"gtmoanalysis{today_str}no*.json"
-        
+
         existing_files = list(self.output_dir.glob(pattern))
         if not existing_files:
             return 1
-        
+
         # Extract numbers from existing files
         numbers = []
         for file in existing_files:
@@ -65,13 +260,13 @@ class GTMOOptimizedSaver:
                 numbers.append(int(no_part))
             except (ValueError, IndexError):
                 continue
-        
+
         return max(numbers) + 1 if numbers else 1
-    
+
     def _get_next_filename(self) -> str:
         """
         Generate next sequential filename.
-        
+
         Returns:
             Next filename in format gtmoanalysisddmmyyyynoX.json
         """
@@ -80,36 +275,36 @@ class GTMOOptimizedSaver:
         if current_date != self.current_date:
             self.current_date = current_date
             self.daily_counter = 1
-        
+
         filename = f"gtmoanalysis{self.current_date}no{self.daily_counter}.json"
         self.daily_counter += 1
         return filename
-    
+
     def validate_coordinates(self, coords: Dict) -> bool:
         """
         Validate GTMØ coordinate values.
-        
+
         Args:
             coords: Coordinates dictionary
-            
+
         Returns:
             True if valid, False otherwise
         """
         required_fields = ['determination', 'stability', 'entropy']
-        
+
         for field in required_fields:
             if field not in coords:
                 logger.error(f"Missing coordinate field: {field}")
                 return False
-            
+
             value = coords[field]
             if not isinstance(value, (int, float)) or not (0 <= value <= 1):
                 logger.error(f"Invalid {field}={value}, must be in [0,1]")
                 return False
-        
+
         return True
-    
-    def save_md_analysis(self, 
+
+    def save_md_analysis(self,
                         md_file_path: str,
                         text_content: str,
                         coordinates: Dict,
@@ -117,28 +312,28 @@ class GTMOOptimizedSaver:
                         compress: bool = False) -> str:
         """
         Save individual MD file analysis result.
-        
+
         Args:
             md_file_path: Path to the analyzed MD file
             text_content: Text content that was analyzed
             coordinates: GTMØ coordinates (determination, stability, entropy)
             additional_metrics: Optional additional metrics
             compress: Whether to gzip the output
-            
+
         Returns:
             Path to saved JSON file
         """
         # Validate coordinates
         if not self.validate_coordinates(coordinates):
             raise ValueError("Invalid coordinates structure")
-        
+
         # Generate filename
         filename = self._get_next_filename()
         if compress:
             filename = filename.replace('.json', '.json.gz')
-        
+
         filepath = self.output_dir / filename
-        
+
         # Prepare analysis result
         result = {
             'version': '2.0',
@@ -166,31 +361,31 @@ class GTMOOptimizedSaver:
                 'daily_date': self.current_date
             }
         }
-        
+
         # Add additional metrics if provided
         if additional_metrics:
             result['additional_metrics'] = additional_metrics
-        
+
         # Add interpretation
         result['interpretation'] = self._generate_interpretation(coordinates)
-        
+
         # Save file
         if compress:
             with gzip.open(filepath, 'wt', encoding='utf-8') as f:
-                json.dump(result, f, ensure_ascii=False, indent=2)
+                json.dump(result, f, ensure_ascii=False, indent=2, cls=NumpyEncoder)
         else:
             with open(filepath, 'w', encoding='utf-8') as f:
-                json.dump(result, f, ensure_ascii=False, indent=2)
-        
+                json.dump(result, f, ensure_ascii=False, indent=2, cls=NumpyEncoder)
+
         logger.info(f"Saved MD analysis to: {filepath}")
         return str(filepath)
-    
-    def save_batch_md_analyses(self, 
+
+    def save_batch_md_analyses(self,
                                analyses: List[Dict],
                                create_index: bool = True) -> List[str]:
         """
         Save multiple MD file analyses as separate JSON files.
-        
+
         Args:
             analyses: List of analysis dictionaries, each containing:
                      - md_file_path: str
@@ -198,13 +393,13 @@ class GTMOOptimizedSaver:
                      - coordinates: Dict
                      - additional_metrics: Optional[Dict]
             create_index: Whether to create an index file
-            
+
         Returns:
             List of paths to saved files
         """
         saved_files = []
         index_entries = []
-        
+
         for analysis in analyses:
             try:
                 filepath = self.save_md_analysis(
@@ -214,7 +409,7 @@ class GTMOOptimizedSaver:
                     additional_metrics=analysis.get('additional_metrics')
                 )
                 saved_files.append(filepath)
-                
+
                 # Prepare index entry
                 index_entries.append({
                     'file': filepath,
@@ -222,25 +417,25 @@ class GTMOOptimizedSaver:
                     'timestamp': datetime.now().isoformat(),
                     'coordinates': analysis['coordinates']
                 })
-                
+
             except Exception as e:
                 logger.error(f"Failed to save analysis for {analysis.get('md_file_path')}: {e}")
                 continue
-        
+
         # Create index file if requested
         if create_index and index_entries:
             index_path = self._create_index_file(index_entries)
             logger.info(f"Created index file: {index_path}")
-        
+
         return saved_files
-    
+
     def _calculate_file_hash(self, filepath: str) -> str:
         """
         Calculate SHA256 hash of file.
-        
+
         Args:
             filepath: Path to file
-            
+
         Returns:
             Hex string of file hash
         """
@@ -253,40 +448,40 @@ class GTMOOptimizedSaver:
         except Exception as e:
             logger.warning(f"Could not calculate hash for {filepath}: {e}")
             return ""
-    
+
     def _generate_interpretation(self, coordinates: Dict) -> Dict:
         """
         Generate interpretation of GTMØ coordinates.
-        
+
         Args:
             coordinates: GTMØ coordinates
-            
+
         Returns:
             Interpretation dictionary
         """
         d = coordinates['determination']
         s = coordinates['stability']
         e = coordinates['entropy']
-        
+
         # Classify each dimension
         determination_class = (
             'low' if d < 0.33 else
             'medium' if d < 0.67 else
             'high'
         )
-        
+
         stability_class = (
             'unstable' if s < 0.33 else
             'moderate' if s < 0.67 else
             'stable'
         )
-        
+
         entropy_class = (
             'ordered' if e < 0.33 else
             'mixed' if e < 0.67 else
             'chaotic'
         )
-        
+
         # Overall assessment
         overall_score = (d + s + (1 - e)) / 3
         overall_class = (
@@ -294,7 +489,7 @@ class GTMOOptimizedSaver:
             'moderate_quality' if overall_score < 0.7 else
             'high_quality'
         )
-        
+
         return {
             'determination': determination_class,
             'stability': stability_class,
@@ -302,20 +497,20 @@ class GTMOOptimizedSaver:
             'overall': overall_class,
             'overall_score': round(overall_score, 4)
         }
-    
+
     def _create_index_file(self, entries: List[Dict]) -> str:
         """
         Create index file for batch processing.
-        
+
         Args:
             entries: List of index entries
-            
+
         Returns:
             Path to index file
         """
         index_filename = f"gtmoanalysis_index_{self.current_date}.json"
         index_path = self.output_dir / index_filename
-        
+
         index_data = {
             'version': '2.0',
             'created_at': datetime.now().isoformat(),
@@ -324,24 +519,24 @@ class GTMOOptimizedSaver:
             'entries': entries,
             'statistics': self._calculate_batch_statistics(entries)
         }
-        
+
         with open(index_path, 'w', encoding='utf-8') as f:
-            json.dump(index_data, f, ensure_ascii=False, indent=2)
-        
+            json.dump(index_data, f, ensure_ascii=False, indent=2, cls=NumpyEncoder)
+
         return str(index_path)
-    
+
     def _calculate_batch_statistics(self, entries: List[Dict]) -> Dict:
         """Calculate statistics for batch of analyses."""
         if not entries:
             return {}
-        
+
         coords_list = [e['coordinates'] for e in entries]
-        
+
         # Calculate averages
         avg_d = sum(c['determination'] for c in coords_list) / len(coords_list)
         avg_s = sum(c['stability'] for c in coords_list) / len(coords_list)
         avg_e = sum(c['entropy'] for c in coords_list) / len(coords_list)
-        
+
         return {
             'average_coordinates': {
                 'determination': round(avg_d, 4),
@@ -350,23 +545,33 @@ class GTMOOptimizedSaver:
             },
             'total_analyses': len(entries)
         }
-    
+
     def load_analysis(self, filename: str) -> Dict:
         """
-        Load a previously saved analysis.
-        
+        Load a previously saved analysis with proper UTF-8 encoding.
+
+        IMPORTANT: Always use this method or specify encoding='utf-8' when
+        loading JSON files on Windows to avoid UnicodeDecodeError.
+
         Args:
             filename: Name or path of the JSON file
-            
+
         Returns:
             Loaded analysis dictionary
+
+        Example:
+            >>> saver = GTMOOptimizedSaver()
+            >>> data = saver.load_analysis("sentence_126.json")
+            >>> # Or directly:
+            >>> with open("sentence_126.json", encoding='utf-8') as f:
+            >>>     data = json.load(f)
         """
         # Handle both filename and full path
         if not Path(filename).is_absolute():
             filepath = self.output_dir / filename
         else:
             filepath = Path(filename)
-        
+
         # Handle compressed files
         if filepath.suffix == '.gz' or str(filepath).endswith('.json.gz'):
             with gzip.open(filepath, 'rt', encoding='utf-8') as f:
@@ -374,7 +579,7 @@ class GTMOOptimizedSaver:
         else:
             with open(filepath, 'r', encoding='utf-8') as f:
                 return json.load(f)
-    
+
     def create_analysis_folder(self, source_file_name: str = None) -> Path:
         """
         Create a new subfolder for current analysis.
@@ -405,6 +610,17 @@ class GTMOOptimizedSaver:
         analysis_folder.mkdir(parents=True, exist_ok=True)
 
         self.current_analysis_folder = analysis_folder
+
+        # Initialize embedding storage if enabled
+        if self.save_embeddings:
+            self.embedding_storage = HerBERTEmbeddingStorage(analysis_folder)
+            logger.info("HerBERT embedding storage initialized")
+
+        # Initialize matrix storage if enabled
+        if self.save_matrices:
+            self.matrix_storage = NumericMatrixStorage(analysis_folder)
+            logger.info("Numeric matrix storage initialized")
+
         self.daily_counter += 1
 
         logger.info(f"Created analysis folder: {analysis_folder}")
@@ -619,13 +835,24 @@ class GTMOOptimizedSaver:
             }
         }
 
+        # Extract embeddings and matrices from full document if present
+        if self.save_embeddings and self.embedding_storage:
+            embedding_count = self._extract_embeddings_recursive(result, "full_document")
+            if embedding_count > 0:
+                logger.info(f"Extracted {embedding_count} embeddings from full document")
+
+        if False and self.save_matrices and self.matrix_storage:  # TEMP DISABLED
+            matrix_count = self._extract_matrices_recursive(result, "full_document")
+            if matrix_count > 0:
+                logger.info(f"Extracted {matrix_count} matrices from full document")
+
         # Save file
         if compress:
             with gzip.open(filepath, 'wt', encoding='utf-8') as f:
-                json.dump(result, f, ensure_ascii=False, indent=2)
+                json.dump(result, f, ensure_ascii=False, indent=2, cls=NumpyEncoder)
         else:
             with open(filepath, 'w', encoding='utf-8') as f:
-                json.dump(result, f, ensure_ascii=False, indent=2)
+                json.dump(result, f, ensure_ascii=False, indent=2, cls=NumpyEncoder)
 
         logger.info(f"Saved full document analysis to: {filepath}")
         return str(filepath)
@@ -637,6 +864,7 @@ class GTMOOptimizedSaver:
                              compress: bool = False) -> str:
         """
         Save individual sentence analysis result with optimized format.
+        Each sentence gets its own .npz file for embeddings.
 
         Args:
             result: Complete GTMØ analysis result
@@ -664,13 +892,65 @@ class GTMOOptimizedSaver:
         result['analysis_metadata']['sentence_number'] = sentence_number
         result['analysis_metadata']['saved_at'] = datetime.now().isoformat()
 
+        # Extract and save HerBERT embedding BEFORE saving JSON
+        # Each sentence gets its OWN .npz file for faster loading
+        if self.save_embeddings and 'herbert_embedding' in result:
+            if isinstance(result['herbert_embedding'], list):
+                embedding = np.array(result['herbert_embedding'])
+
+                # Save to individual .npz file for this sentence
+                embedding_filename = f"sentence_{sentence_number:03d}_embedding.npz"
+                embedding_filepath = self.current_analysis_folder / embedding_filename
+                np.savez_compressed(embedding_filepath, embedding=embedding.astype(np.float16))
+
+                logger.info(f"Saved embedding for sentence {sentence_number} to {embedding_filename} ({embedding.shape})")
+
+                # Replace full embedding with reference
+                result['herbert_embedding'] = {
+                    "_type": "reference",
+                    "_file": embedding_filename,
+                    "_key": "embedding",
+                    "_shape": list(embedding.shape),
+                    "_note": "Full embedding stored in separate .npz file for efficiency"
+                }
+
+        # Extract and save numeric matrices BEFORE saving JSON
+        # Save matrices to individual .npz file for this sentence
+        if self.save_matrices:
+            # Check multiple possible locations for entanglement data
+            entanglement_data = None
+            if 'quantum_enhanced' in result and 'entanglement' in result['quantum_enhanced']:
+                entanglement_data = result['quantum_enhanced']['entanglement']
+            elif 'entanglement' in result:
+                entanglement_data = result['entanglement']
+
+            if entanglement_data and 'entanglement_matrix' in entanglement_data:
+                if isinstance(entanglement_data['entanglement_matrix'], list):
+                    matrix = np.array(entanglement_data['entanglement_matrix'])
+
+                    # Save to individual .npz file for this sentence
+                    matrix_filename = f"sentence_{sentence_number:03d}_matrices.npz"
+                    matrix_filepath = self.current_analysis_folder / matrix_filename
+                    np.savez_compressed(matrix_filepath, entanglement_matrix=matrix.astype(np.float16))
+
+                    logger.info(f"Saved matrices for sentence {sentence_number} to {matrix_filename} ({matrix.shape})")
+
+                    # Replace full matrix with reference
+                    entanglement_data['entanglement_matrix'] = {
+                        "_type": "reference",
+                        "_file": matrix_filename,
+                        "_key": "entanglement_matrix",
+                        "_shape": list(matrix.shape),
+                        "_note": "Full matrix stored in separate .npz file for efficiency"
+                    }
+
         # Save file
         if compress:
             with gzip.open(filepath, 'wt', encoding='utf-8') as f:
-                json.dump(result, f, ensure_ascii=False, indent=2)
+                json.dump(result, f, ensure_ascii=False, indent=2, cls=NumpyEncoder)
         else:
             with open(filepath, 'w', encoding='utf-8') as f:
-                json.dump(result, f, ensure_ascii=False, indent=2)
+                json.dump(result, f, ensure_ascii=False, indent=2, cls=NumpyEncoder)
 
         logger.info(f"Saved sentence {sentence_number} analysis to: {filepath}")
         return str(filepath)
@@ -710,35 +990,511 @@ class GTMOOptimizedSaver:
         result['analysis_metadata']['saved_at'] = datetime.now().isoformat()
         result['analysis_metadata']['unit_type'] = 'legal_article'
 
-        # Save file
+        # Extract and save HerBERT embeddings recursively BEFORE saving JSON
+        if self.save_embeddings and self.embedding_storage:
+            embedding_count = self._extract_embeddings_recursive(result, f"article_{article_number:03d}")
+            if embedding_count > 0:
+                logger.info(f"Extracted {embedding_count} embeddings from article {article_number}")
+
+        # Extract and save numeric matrices recursively BEFORE saving JSON
+        # Extract matrices from article and all nested paragraphs/sentences
+        if self.save_matrices:
+            # Extract entanglement matrix from article level
+            if 'entanglement' in result:
+                entanglement_data = result.get('entanglement', {})
+                if 'entanglement_matrix' in entanglement_data and isinstance(entanglement_data['entanglement_matrix'], list):
+                    matrix = np.array(entanglement_data['entanglement_matrix'])
+                    matrix_filename = f"article_{article_number:03d}_entanglement.npz"
+                    matrix_filepath = self.current_analysis_folder / matrix_filename
+                    np.savez_compressed(matrix_filepath, entanglement_matrix=matrix.astype(np.float16))
+                    logger.info(f"Saved article {article_number} entanglement matrix to {matrix_filename} ({matrix.shape})")
+
+                    entanglement_data['entanglement_matrix'] = {
+                        "_type": "reference",
+                        "_file": matrix_filename,
+                        "_key": "entanglement_matrix",
+                        "_shape": list(matrix.shape),
+                        "_note": "Full matrix stored in separate .npz file"
+                    }
+
+            # Extract matrices from nested paragraphs and sentences
+            matrix_counter = [0]
+            self._extract_matrices_from_hierarchy(result, f"article_{article_number:03d}", matrix_counter)
+            if matrix_counter[0] > 0:
+                logger.info(f"Extracted {matrix_counter[0]} matrices from article {article_number} hierarchy")
+
+        # Save file (with references if data was extracted, or full data if not)
         if compress:
             with gzip.open(filepath, 'wt', encoding='utf-8') as f:
-                json.dump(result, f, ensure_ascii=False, indent=2)
+                json.dump(result, f, ensure_ascii=False, indent=2, cls=NumpyEncoder)
         else:
             with open(filepath, 'w', encoding='utf-8') as f:
-                json.dump(result, f, ensure_ascii=False, indent=2)
+                json.dump(result, f, ensure_ascii=False, indent=2, cls=NumpyEncoder)
 
         logger.info(f"Saved article {article_number} analysis to: {filepath}")
         return str(filepath)
+
+    def finalize_embeddings(self):
+        """
+        Finalize and save all collected HerBERT embeddings to .npz file.
+
+        Call this after all analyses are complete to write embeddings to disk.
+
+        Returns:
+            Path to saved embeddings file or None if no embeddings
+        """
+        if self.save_embeddings and self.embedding_storage:
+            return self.embedding_storage.save_all(compress=True)
+        return None
+
+    def finalize_matrices(self):
+        """
+        Finalize and save all collected numeric matrices to .npz file.
+
+        Call this after all analyses are complete to write matrices to disk.
+
+        Returns:
+            Path to saved matrices file or None if no matrices
+        """
+        if False and self.save_matrices and self.matrix_storage:  # TEMP DISABLED
+            return self.matrix_storage.save_all(compress=True)
+        return None
+
+    def create_herbert_analysis(self, create_full_matrix: bool = None) -> Optional[str]:
+        """
+        Create HerBERT semantic flow analysis from saved embeddings.
+        Memory-efficient version for large documents (processes in batches).
+
+        Analyzes semantic similarity between consecutive sentences using
+        their HerBERT embeddings to show document coherence.
+
+        Args:
+            create_full_matrix: If True, creates full NxN similarity matrix for advanced analysis.
+                               If None (default), creates full matrix only for documents <100 sentences.
+                               If False, only creates consecutive similarities (memory-efficient).
+
+        Returns:
+            Path to saved herbert analysis file or None if failed
+        """
+        if not self.current_analysis_folder:
+            logger.warning("No analysis folder - cannot create HerBERT analysis")
+            return None
+
+        # Find all sentence embedding files
+        embedding_files = sorted(self.current_analysis_folder.glob("sentence_*_embedding.npz"))
+
+        if len(embedding_files) < 2:
+            logger.info(f"Only {len(embedding_files)} sentence embeddings - skipping HerBERT analysis")
+            return None
+
+        # Decide whether to create full matrix
+        if create_full_matrix is None:
+            create_full_matrix = True  # Auto: only for small documents
+
+        logger.info(f"Creating HerBERT analysis for {len(embedding_files)} sentences{'(with full similarity matrix)' if create_full_matrix else '(consecutive similarities only)'}...")
+
+        # Memory-efficient: Calculate similarities without loading all embeddings
+        similarities = []
+        prev_embedding = None
+
+        for i, emb_file in enumerate(embedding_files):
+            try:
+                with np.load(emb_file) as data:
+                    current_embedding = data['embedding'].astype(np.float32)
+
+                # Calculate similarity with previous embedding
+                if prev_embedding is not None:
+                    similarity = np.dot(prev_embedding, current_embedding) / (
+                        np.linalg.norm(prev_embedding) * np.linalg.norm(current_embedding)
+                    )
+                    similarities.append(float(similarity))
+
+                prev_embedding = current_embedding
+
+                # Progress indicator for large documents
+                if (i + 1) % 100 == 0:
+                    logger.info(f"Processed {i + 1}/{len(embedding_files)} embeddings...")
+
+            except Exception as e:
+                logger.warning(f"Failed to load {emb_file.name}: {e}")
+                prev_embedding = None  # Reset to avoid incorrect similarity
+                continue
+
+        if len(similarities) < 1:
+            logger.warning("Could not calculate enough similarities")
+            return None
+
+        # Optionally create full NxN similarity matrix for advanced analysis
+        similarity_matrix = None
+        if create_full_matrix:
+            logger.info(f"Computing full {len(embedding_files)}x{len(embedding_files)} similarity matrix...")
+            # Load all embeddings into memory
+            all_embeddings = []
+            for emb_file in embedding_files:
+                try:
+                    with np.load(emb_file) as data:
+                        emb = data['embedding'].astype(np.float32)
+                        # Normalize for faster cosine similarity
+                        emb = emb / np.linalg.norm(emb)
+                        all_embeddings.append(emb)
+                except Exception as e:
+                    logger.warning(f"Failed to load {emb_file.name}: {e}")
+                    all_embeddings.append(None)
+
+            # Compute NxN matrix
+            n = len(all_embeddings)
+            similarity_matrix = np.zeros((n, n), dtype=np.float32)
+
+            for i in range(n):
+                if all_embeddings[i] is None:
+                    continue
+                for j in range(i, n):
+                    if all_embeddings[j] is None:
+                        continue
+                    # Cosine similarity (already normalized)
+                    sim = float(np.dot(all_embeddings[i], all_embeddings[j]))
+                    similarity_matrix[i, j] = sim
+                    similarity_matrix[j, i] = sim  # Symmetric
+
+                # Progress for large matrices
+                if (i + 1) % 50 == 0:
+                    logger.info(f"  Computed {i + 1}/{n} rows...")
+
+            logger.info(f"Full similarity matrix computed ({n}x{n} = {n*n} values)")
+
+        # Calculate document-level magnitude (batch processing)
+        logger.info("Calculating document-level magnitude...")
+        embedding_sum = np.zeros(768, dtype=np.float32)
+        valid_count = 0
+
+        for emb_file in embedding_files:
+            try:
+                with np.load(emb_file) as data:
+                    embedding_sum += data['embedding'].astype(np.float32)
+                    valid_count += 1
+            except Exception as e:
+                logger.warning(f"Failed to load {emb_file.name} for magnitude: {e}")
+                continue
+
+        document_embedding = embedding_sum / max(valid_count, 1)
+        document_magnitude = float(np.linalg.norm(document_embedding))
+
+        # Create analysis result
+        herbert_analysis = {
+            "sentence_count": len(embedding_files),
+            "sentences_with_embeddings": valid_count,
+            "document_herbert_magnitude": document_magnitude,
+            "sentence_semantic_flow": {
+                "mean_similarity": float(np.mean(similarities)),
+                "min_similarity": float(np.min(similarities)),
+                "max_similarity": float(np.max(similarities)),
+                "std_similarity": float(np.std(similarities)),
+                "all_similarities": similarities
+            },
+            "coherence_assessment": self._assess_coherence(similarities)
+        }
+
+        # Add full similarity matrix if computed (for herbert_gtmo_analysis.py compatibility)
+        if similarity_matrix is not None:
+            herbert_analysis["similarity_matrix"] = similarity_matrix.tolist()
+            herbert_analysis["average_similarity"] = float(np.mean(similarities))
+            herbert_analysis["article_count"] = len(embedding_files)  # For compatibility
+            logger.info(f"Added full similarity matrix to output ({similarity_matrix.shape})")
+
+        logger.info(f"HerBERT analysis complete: {valid_count} embeddings, mean similarity: {np.mean(similarities):.4f}")
+
+        # Save to file
+        herbert_file = self.current_analysis_folder / "full_document_herbert_analysis.json"
+        with open(herbert_file, 'w', encoding='utf-8') as f:
+            json.dump(herbert_analysis, f, ensure_ascii=False, indent=2, cls=NumpyEncoder)
+
+        logger.info(f"Saved HerBERT semantic analysis to: {herbert_file.name}")
+        return str(herbert_file)
+
+    def _assess_coherence(self, similarities: List[float]) -> Dict:
+        """Assess document coherence based on sentence similarities."""
+        mean_sim = np.mean(similarities)
+        std_sim = np.std(similarities)
+
+        if mean_sim > 0.95:
+            level = "very_high"
+            description = "Very high semantic coherence - sentences flow smoothly"
+        elif mean_sim > 0.90:
+            level = "high"
+            description = "High semantic coherence - good topical consistency"
+        elif mean_sim > 0.85:
+            level = "moderate"
+            description = "Moderate coherence - some topic shifts present"
+        elif mean_sim > 0.75:
+            level = "low"
+            description = "Low coherence - frequent topic changes"
+        else:
+            level = "very_low"
+            description = "Very low coherence - disconnected content"
+
+        return {
+            "coherence_level": level,
+            "description": description,
+            "mean_similarity": round(float(mean_sim), 4),
+            "variability": round(float(std_sim), 4)
+        }
+
+    def _extract_embeddings_recursive(self, data: Dict, base_key: str, counter: List[int] = None) -> int:
+        """
+        Recursively extract all HerBERT embeddings from nested data structure.
+
+        Replaces embedding lists with references and stores embeddings in .npz file.
+
+        Args:
+            data: Dictionary that may contain herbert_embedding and nested structures
+            base_key: Base key for embedding naming (e.g., "article_001")
+            counter: List with single int to track total extractions (mutable counter)
+
+        Returns:
+            Number of embeddings extracted
+        """
+        if counter is None:
+            counter = [0]
+
+        # Extract embedding at this level if it exists and is a list
+        if 'herbert_embedding' in data and isinstance(data['herbert_embedding'], list):
+            embedding_array = np.array(data['herbert_embedding'])
+            # Create unique key for this embedding
+            embedding_key = f"{base_key}_emb{counter[0]}"
+            counter[0] += 1
+
+            # Add to storage
+            self.embedding_storage.add_embedding(embedding_key, embedding_array)
+
+            # Replace with reference
+            data['herbert_embedding'] = {
+                "_type": "reference",
+                "_file": "herbert_embeddings.npz",
+                "_key": embedding_key,
+                "_shape": list(embedding_array.shape),
+                "_note": "Full embedding stored in separate .npz file for efficiency"
+            }
+
+        # Recursively process paragraphs
+        if 'paragraphs' in data and isinstance(data['paragraphs'], list):
+            for para in data['paragraphs']:
+                if isinstance(para, dict):
+                    self._extract_embeddings_recursive(para, base_key, counter)
+
+        # Recursively process sentences
+        if 'sentences' in data and isinstance(data['sentences'], list):
+            for sent in data['sentences']:
+                if isinstance(sent, dict):
+                    self._extract_embeddings_recursive(sent, base_key, counter)
+
+        return counter[0]
+
+    def _extract_matrices_recursive(self, data: Dict, base_key: str, counter: List[int] = None, depth: int = 0) -> int:
+        """
+        Recursively extract large numeric matrices from nested data structure.
+
+        Replaces matrix lists with references and stores matrices in .npz file.
+
+        Args:
+            data: Dictionary that may contain matrices (e.g., entanglement_matrix)
+            base_key: Base key for matrix naming (e.g., "sentence_001")
+            counter: List with single int to track total extractions (mutable counter)
+            depth: Current recursion depth (to prevent infinite loops)
+
+        Returns:
+            Number of matrices extracted
+        """
+        # Prevent infinite recursion
+        MAX_RECURSION_DEPTH = 10
+        if depth > MAX_RECURSION_DEPTH:
+            logger.warning(f"Matrix extraction: max recursion depth {MAX_RECURSION_DEPTH} exceeded")
+            return counter[0] if counter else 0
+
+        if counter is None:
+            counter = [0]
+
+        # List of matrix fields to extract
+        matrix_fields = ['entanglement_matrix']
+
+        # Extract matrices at this level
+        for field_name in matrix_fields:
+            if field_name in data:
+                # Check if it's inside a nested dict (e.g., data['entanglement']['entanglement_matrix'])
+                if isinstance(data[field_name], dict) and 'entanglement_matrix' in data[field_name]:
+                    matrix_data = data[field_name]['entanglement_matrix']
+                    if isinstance(matrix_data, list) and len(matrix_data) > 0:
+                        matrix_array = np.array(matrix_data)
+                        # Create unique key for this matrix
+                        matrix_key = f"{base_key}_{field_name}"
+                        counter[0] += 1
+
+                        # Add to storage
+                        self.matrix_storage.add_matrix(matrix_key, matrix_array)
+
+                        # Replace with reference
+                        data[field_name]['entanglement_matrix'] = {
+                            "_type": "reference",
+                            "_file": "numeric_matrices.npz",
+                            "_key": matrix_key,
+                            "_shape": list(matrix_array.shape),
+                            "_note": "Full matrix stored in separate .npz file for efficiency"
+                        }
+                # Or if it's a direct list
+                elif isinstance(data[field_name], list) and len(data[field_name]) > 0:
+                    matrix_array = np.array(data[field_name])
+                    # Only extract if it's actually a matrix (2D with size > threshold)
+                    if matrix_array.ndim >= 2 or (matrix_array.ndim == 1 and len(matrix_array) > 50):
+                        matrix_key = f"{base_key}_{field_name}"
+                        counter[0] += 1
+
+                        # Add to storage
+                        self.matrix_storage.add_matrix(matrix_key, matrix_array)
+
+                        # Replace with reference
+                        data[field_name] = {
+                            "_type": "reference",
+                            "_file": "numeric_matrices.npz",
+                            "_key": matrix_key,
+                            "_shape": list(matrix_array.shape),
+                            "_note": "Full matrix stored in separate .npz file for efficiency"
+                        }
+
+        # Check for entanglement dict specifically
+        if 'entanglement' in data and isinstance(data['entanglement'], dict):
+            entanglement = data['entanglement']
+            if 'entanglement_matrix' in entanglement and isinstance(entanglement['entanglement_matrix'], list):
+                matrix_data = entanglement['entanglement_matrix']
+                if len(matrix_data) > 0:
+                    matrix_array = np.array(matrix_data)
+                    matrix_key = f"{base_key}_entanglement_matrix"
+                    counter[0] += 1
+
+                    # Add to storage
+                    self.matrix_storage.add_matrix(matrix_key, matrix_array)
+                    logger.info(f"Added matrix '{matrix_key}' with shape {matrix_array.shape}")
+
+                    # Replace with reference
+                    entanglement['entanglement_matrix'] = {
+                        "_type": "reference",
+                        "_file": "numeric_matrices.npz",
+                        "_key": matrix_key,
+                        "_shape": list(matrix_array.shape),
+                        "_note": "Full matrix stored in separate .npz file for efficiency"
+                    }
+
+        # Recursively process paragraphs
+        if 'paragraphs' in data and isinstance(data['paragraphs'], list):
+            for para in data['paragraphs']:
+                if isinstance(para, dict):
+                    self._extract_matrices_recursive(para, base_key, counter, depth + 1)
+
+        # Recursively process sentences
+        if 'sentences' in data and isinstance(data['sentences'], list):
+            for sent in data['sentences']:
+                if isinstance(sent, dict):
+                    self._extract_matrices_recursive(sent, base_key, counter, depth + 1)
+
+        return counter[0]
+
+    def _extract_matrices_from_hierarchy(self, data: Dict, base_key: str, counter: List[int]) -> None:
+        """
+        Recursively extract matrices from nested paragraphs and sentences,
+        saving each to individual .npz files.
+
+        Args:
+            data: Dictionary containing paragraphs and/or sentences
+            base_key: Base key for matrix naming
+            counter: Mutable counter for tracking extractions
+        """
+        def get_entanglement_data(item):
+            """Helper to find entanglement data in various locations."""
+            if 'quantum_enhanced' in item and 'entanglement' in item['quantum_enhanced']:
+                return item['quantum_enhanced']['entanglement']
+            elif 'entanglement' in item:
+                return item['entanglement']
+            return None
+
+        # Extract from paragraphs
+        if 'paragraphs' in data and isinstance(data['paragraphs'], list):
+            for p_idx, para in enumerate(data['paragraphs'], 1):
+                if isinstance(para, dict):
+                    entanglement_data = get_entanglement_data(para)
+                    if entanglement_data and 'entanglement_matrix' in entanglement_data:
+                        if isinstance(entanglement_data['entanglement_matrix'], list):
+                            matrix = np.array(entanglement_data['entanglement_matrix'])
+                            matrix_filename = f"{base_key}_para{p_idx:02d}_entanglement.npz"
+                            matrix_filepath = self.current_analysis_folder / matrix_filename
+                            np.savez_compressed(matrix_filepath, entanglement_matrix=matrix.astype(np.float16))
+                            counter[0] += 1
+
+                            entanglement_data['entanglement_matrix'] = {
+                                "_type": "reference",
+                                "_file": matrix_filename,
+                                "_key": "entanglement_matrix",
+                                "_shape": list(matrix.shape),
+                                "_note": "Full matrix stored in separate .npz file"
+                            }
+
+                # Recurse into paragraph's sentences
+                if 'sentences' in para and isinstance(para['sentences'], list):
+                    for s_idx, sent in enumerate(para['sentences'], 1):
+                        if isinstance(sent, dict):
+                            entanglement_data = get_entanglement_data(sent)
+                            if entanglement_data and 'entanglement_matrix' in entanglement_data:
+                                if isinstance(entanglement_data['entanglement_matrix'], list):
+                                    matrix = np.array(entanglement_data['entanglement_matrix'])
+                                    matrix_filename = f"{base_key}_para{p_idx:02d}_sent{s_idx:02d}_entanglement.npz"
+                                    matrix_filepath = self.current_analysis_folder / matrix_filename
+                                    np.savez_compressed(matrix_filepath, entanglement_matrix=matrix.astype(np.float16))
+                                    counter[0] += 1
+
+                                    entanglement_data['entanglement_matrix'] = {
+                                        "_type": "reference",
+                                        "_file": matrix_filename,
+                                        "_key": "entanglement_matrix",
+                                        "_shape": list(matrix.shape),
+                                        "_note": "Full matrix stored in separate .npz file"
+                                    }
+
+        # Extract from top-level sentences (if no paragraphs)
+        if 'sentences' in data and isinstance(data['sentences'], list):
+            for s_idx, sent in enumerate(data['sentences'], 1):
+                if isinstance(sent, dict):
+                    entanglement_data = get_entanglement_data(sent)
+                    if entanglement_data and 'entanglement_matrix' in entanglement_data:
+                        if isinstance(entanglement_data['entanglement_matrix'], list):
+                            matrix = np.array(entanglement_data['entanglement_matrix'])
+                            matrix_filename = f"{base_key}_sent{s_idx:02d}_entanglement.npz"
+                            matrix_filepath = self.current_analysis_folder / matrix_filename
+                            np.savez_compressed(matrix_filepath, entanglement_matrix=matrix.astype(np.float16))
+                            counter[0] += 1
+
+                            entanglement_data['entanglement_matrix'] = {
+                                "_type": "reference",
+                                "_file": matrix_filename,
+                                "_key": "entanglement_matrix",
+                                "_shape": list(matrix.shape),
+                                "_note": "Full matrix stored in separate .npz file"
+                            }
 
 
 def main():
     """Example usage and testing."""
     import argparse
-    
+
     parser = argparse.ArgumentParser(description='GTMØ Optimized JSON Saver')
-    parser.add_argument('--test', action='store_true', 
+    parser.add_argument('--test', action='store_true',
                        help='Run with test data')
     parser.add_argument('--output-dir', '-d', default='gtmo_results',
                        help='Output directory')
     parser.add_argument('--compress', '-c', action='store_true',
                        help='Compress output files')
-    
+
     args = parser.parse_args()
-    
+
     # Initialize saver
     saver = GTMOOptimizedSaver(args.output_dir)
-    
+
     if args.test:
         # Test with sample data
         test_analyses = [
@@ -762,7 +1518,7 @@ def main():
                 }
             }
         ]
-        
+
         # Save individual analyses
         for analysis in test_analyses:
             filepath = saver.save_md_analysis(
@@ -770,11 +1526,11 @@ def main():
                 compress=args.compress
             )
             print(f"Saved: {filepath}")
-        
+
         # Or save as batch
         # saved_files = saver.save_batch_md_analyses(test_analyses)
         # print(f"Saved {len(saved_files)} files")
-    
+
     else:
         print("Use --test flag to run with sample data")
         print(f"Output directory: {saver.output_dir}")

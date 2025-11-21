@@ -9,7 +9,17 @@
       "Bash(fi)",
       "Bash(echo:*)",
       "Bash(.gitignore)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(find:*)",
+      "Bash(pip install:*)",
+      "Bash(git add:*)",
+      "Bash(git push:*)",
+      "Bash(tee:*)",
+      "Bash(pkill:*)",
+      "Bash(timeout 60 python:*)",
+      "Bash(timeout 10 python:*)",
+      "Bash(timeout 30 python:*)",
+      "Bash(tasklist:*)"
     ],
     "deny": [],
     "ask": []

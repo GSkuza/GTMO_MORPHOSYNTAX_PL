@@ -15,6 +15,9 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# Performance limits
+MAX_QUANTUM_STATES = 50  # Limit to prevent O(n²) performance issues with very long texts
+
 
 # =============================================================================
 # QUANTUM STATE REPRESENTATION
@@ -370,17 +373,50 @@ class EnhancedQuantumAnalyzer:
         # Count states in superposition (amplitude > threshold)
         active_states = int(sum(1 for s in states if abs(s.amplitude) > threshold))
 
+        # Calculate phase coherence
+        phases = [cmath.phase(s.amplitude) for s in states]
+        phase_coherence = float(1.0 - np.std(phases) / np.pi) if len(phases) > 1 else 1.0
+        phase_coherence = np.clip(phase_coherence, 0.0, 1.0)
+
         return {
             'is_superposed': is_superposed,
             'superposition_degree': superposition_degree,
             'num_superposed_states': active_states,
             'mean_overlap': float(mean_overlap),
             'max_overlap': float(max(overlaps)) if overlaps else 0.0,
-            'superposition_type': self._classify_superposition(superposition_degree)
+            'phase_coherence': float(phase_coherence),
+            'superposition_type': self._classify_superposition(superposition_degree, phase_coherence)
         }
 
-    def _classify_superposition(self, degree: float) -> str:
-        """Classify type of superposition."""
+    def _classify_superposition(self, degree: float, phase_coherence: float = None) -> str:
+        """
+        Classify type of superposition.
+
+        Args:
+            degree: Superposition degree (overlap between states)
+            phase_coherence: Phase coherence (0-1), if available
+
+        Returns:
+            Classification string
+
+        Logic:
+            - Phase coherence > 0.8 → COHERENT (even if overlap is low)
+            - Phase coherence < 0.3 → DECOHERENT (even if overlap is high)
+            - Otherwise, use overlap-based classification
+        """
+        # Priority: Phase coherence determines coherence vs decoherence
+        if phase_coherence is not None:
+            if phase_coherence >= 0.8:
+                # High phase coherence = COHERENT state
+                if degree >= 0.7:
+                    return 'MAXIMALLY_ENTANGLED_COHERENT'
+                else:
+                    return 'COHERENT_SUPERPOSITION'
+            elif phase_coherence <= 0.3:
+                # Low phase coherence = DECOHERENT
+                return 'DECOHERENT'
+
+        # Fallback: use overlap-based classification
         if degree < 0.2:
             return 'DECOHERENT'
         elif degree < 0.4:
@@ -416,10 +452,20 @@ def analyze_quantum_enhanced(text: str,
 
     analyzer = EnhancedQuantumAnalyzer()
 
-    # Create quantum states for all words
+    # Create quantum states for all words (with performance limit)
     quantum_states = []
 
-    for i, (word, coords) in enumerate(zip(words, coords_per_word)):
+    # If too many words, sample evenly to stay within MAX_QUANTUM_STATES
+    num_words = len(words)
+    if num_words > MAX_QUANTUM_STATES:
+        # Sample evenly across the text
+        indices = np.linspace(0, num_words-1, MAX_QUANTUM_STATES, dtype=int)
+        logger.info(f"Limiting quantum states: {num_words} words → {MAX_QUANTUM_STATES} states (sampled)")
+        words_to_process = [(words[i], coords_per_word[i], i) for i in indices]
+    else:
+        words_to_process = [(w, c, i) for i, (w, c) in enumerate(zip(words, coords_per_word))]
+
+    for word, coords, i in words_to_process:
         # Simple importance: longer words = higher importance
         importance = min(len(word) / 10.0, 1.0)
 

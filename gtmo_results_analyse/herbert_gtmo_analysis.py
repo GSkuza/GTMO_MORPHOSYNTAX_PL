@@ -15,12 +15,15 @@ Funkcjonalności:
 6. Analiza ewolucji dokumentów
 
 Użycie:
-    python herbert_gtmo_analysis.py <path_to_herbert_analysis.json> [opcje]
+    [opcje]
 
 Przykład:
     python herbert_gtmo_analysis.py ../gtmo_results/analysis_xyz/full_document_herbert_analysis.json --all
+    python herbert_gtmo_analysis.py <path_to_herbert_analysis.json> --redundancy
 """
 
+import sys
+import io
 import json
 import numpy as np
 import matplotlib.pyplot as plt
@@ -32,6 +35,17 @@ from dataclasses import dataclass
 from collections import defaultdict
 import warnings
 warnings.filterwarnings('ignore')
+
+# Fix Windows console encoding for Unicode characters (emojis)
+if sys.platform == 'win32':
+    try:
+        if not sys.stdout.closed:
+            sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+        if not sys.stderr.closed:
+            sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+    except (ValueError, AttributeError):
+        # Skip if streams are already wrapped or closed
+        pass
 
 # Zaawansowane biblioteki do klasteryzacji i wizualizacji
 try:

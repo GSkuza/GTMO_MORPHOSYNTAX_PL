@@ -1,0 +1,109 @@
+{
+  "hypothesis": "Constraint S+E=1 is NOT required for effective semantic representation",
+  "experiments": [
+    "GTMO_constraint_0.0",
+    "GTMO_constraint_0.1",
+    "GTMO_constraint_0.5",
+    "GTMO_constraint_1.0",
+    "TGN2_constraint_0.0",
+    "TGN2_constraint_0.1",
+    "TGN2_constraint_0.5",
+    "TGN2_constraint_1.0"
+  ],
+  "analysis": [
+    {
+      "experiment": "GTMO_constraint_0.0",
+      "mse": 0.9243956208229065,
+      "se_mean": 0.9563125371932983,
+      "se_std": 0.016143210232257843,
+      "se_distance_from_1": 0.04368746280670166,
+      "p_value_se_eq_1": 7.162059239194959e-07,
+      "d_mean": 0.48893770575523376,
+      "s_mean": 0.44969844818115234,
+      "e_mean": 0.5066141486167908
+    },
+    {
+      "experiment": "GTMO_constraint_0.1",
+      "mse": 0.9117466807365417,
+      "se_mean": 0.9995356798171997,
+      "se_std": 0.005682622082531452,
+      "se_distance_from_1": 0.00046432018280029297,
+      "p_value_se_eq_1": 0.7819638898641318,
+      "d_mean": 0.5410816073417664,
+      "s_mean": 0.5367406010627747,
+      "e_mean": 0.4627951383590698
+    },
+    {
+      "experiment": "GTMO_constraint_0.5",
+      "mse": 0.9002099633216858,
+      "se_mean": 0.9957276582717896,
+      "se_std": 0.004698982462286949,
+      "se_distance_from_1": 0.004272341728210449,
+      "p_value_se_eq_1": 0.00838144835268285,
+      "d_mean": 0.5574572682380676,
+      "s_mean": 0.4222928285598755,
+      "e_mean": 0.5734348893165588
+    },
+    {
+      "experiment": "GTMO_constraint_1.0",
+      "mse": 0.9478233456611633,
+      "se_mean": 1.009382963180542,
+      "se_std": 0.004009941127151251,
+      "se_distance_from_1": 0.009382963180541992,
+      "p_value_se_eq_1": 3.2861141936681086e-06,
+      "d_mean": 0.5059072971343994,
+      "s_mean": 0.5588842630386353,
+      "e_mean": 0.4504987895488739
+    },
+    {
+      "experiment": "TGN2_constraint_0.0",
+      "mse": 0.9841694831848145,
+      "se_mean": 1.014843225479126,
+      "se_std": 0.024723904207348824,
+      "se_distance_from_1": 0.014843225479125977,
+      "p_value_se_eq_1": 0.05965401319685785,
+      "d_mean": 0.49892300367355347,
+      "s_mean": 0.47307369112968445,
+      "e_mean": 0.5417696237564087
+    },
+    {
+      "experiment": "TGN2_constraint_0.1",
+      "mse": 0.9922427535057068,
+      "se_mean": 1.004547357559204,
+      "se_std": 0.013335246592760086,
+      "se_distance_from_1": 0.0045473575592041016,
+      "p_value_se_eq_1": 0.26037850489915915,
+      "d_mean": 0.49251702427864075,
+      "s_mean": 0.5039721727371216,
+      "e_mean": 0.500575065612793
+    },
+    {
+      "experiment": "TGN2_constraint_0.5",
+      "mse": 0.9723713994026184,
+      "se_mean": 0.9930925965309143,
+      "se_std": 0.008121976628899574,
+      "se_distance_from_1": 0.006907403469085693,
+      "p_value_se_eq_1": 0.012233124564658868,
+      "d_mean": 0.5559095740318298,
+      "s_mean": 0.4712276756763458,
+      "e_mean": 0.5218649506568909
+    },
+    {
+      "experiment": "TGN2_constraint_1.0",
+      "mse": 0.956225574016571,
+      "se_mean": 1.0152020454406738,
+      "se_std": 0.0047437092289328575,
+      "se_distance_from_1": 0.015202045440673828,
+      "p_value_se_eq_1": 1.1454658361432666e-07,
+      "d_mean": 0.5004909038543701,
+      "s_mean": 0.4504885971546173,
+      "e_mean": 0.5647134184837341
+    }
+  ],
+  "conclusion": {
+    "mse_correlation_with_constraint": -0.08841961819178878,
+    "best_model": "GTMO_constraint_0.5",
+    "best_mse": 0.9002099633216858,
+    "constraint_matters": false
+  }
+}

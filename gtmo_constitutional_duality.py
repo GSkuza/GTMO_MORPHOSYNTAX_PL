@@ -128,24 +128,27 @@ class SAv3Calculator:
         - Topological Balance: balans topologiczny
     """
 
-    def __init__(self, config: Optional[SAv3Config] = None, normalize_embeddings: bool = False):
+    def __init__(self, config: Optional[SAv3Config] = None, normalize_embeddings: bool = False,
+                 herbert_tokenizer=None, herbert_model=None):
         """
         Inicjalizacja kalkulatora SA v3.0.
 
         Args:
             config: Konfiguracja SA v3.0 (opcjonalna)
             normalize_embeddings: Czy normalizować embeddingi do unit sphere
+            herbert_tokenizer: Shared HerBERT tokenizer (optional)
+            herbert_model: Shared HerBERT model (optional)
         """
         self.config = config or SAv3Config()
         self.normalize_embeddings = normalize_embeddings
-        self._tokenizer = None
-        self._model = None
+        self._tokenizer = herbert_tokenizer
+        self._model = herbert_model
 
     def _load_herbert_model(self):
-        """Lazy loading modelu HerBERT."""
+        """Get HerBERT model (uses shared instance if available)."""
         if self._tokenizer is None or self._model is None:
             warnings.filterwarnings('ignore')
-            print("Loading HerBERT model...")
+            print("WARNING: Loading new HerBERT instance in SAv3Calculator (shared instance not provided)")
             self._tokenizer = AutoTokenizer.from_pretrained("allegro/herbert-base-cased")
             self._model = AutoModel.from_pretrained("allegro/herbert-base-cased")
             self._model.eval()  # Set to evaluation mode
@@ -608,7 +611,9 @@ class ConstitutionalDualityCalculator:
         self,
         epsilon: float = EPSILON,
         duality_tolerance: float = DUALITY_ERROR_TOLERANCE,
-        use_sa_v3: bool = False
+        use_sa_v3: bool = False,
+        herbert_tokenizer=None,
+        herbert_model=None
     ):
         """
         Inicjalizacja kalkulatora z opcjonalnymi parametrami konfiguracyjnymi.
@@ -617,11 +622,16 @@ class ConstitutionalDualityCalculator:
             epsilon: Minimalna wartość dla zabezpieczenia przed dzieleniem przez zero
             duality_tolerance: Próg tolerancji błędu dla weryfikacji dualności (domyślnie 1%)
             use_sa_v3: Czy używać SA v3.0 (z HerBERT embeddings)
+            herbert_tokenizer: Shared HerBERT tokenizer (optional)
+            herbert_model: Shared HerBERT model (optional)
         """
         self.epsilon = epsilon
         self.duality_tolerance = duality_tolerance
         self.use_sa_v3 = use_sa_v3
-        self.sa_v3_calculator = SAv3Calculator() if use_sa_v3 else None
+        self.sa_v3_calculator = SAv3Calculator(
+            herbert_tokenizer=herbert_tokenizer,
+            herbert_model=herbert_model
+        ) if use_sa_v3 else None
 
     def calculate_metrics(
         self,

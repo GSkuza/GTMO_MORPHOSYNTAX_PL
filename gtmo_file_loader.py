@@ -416,8 +416,22 @@ def load_markdown_file(file_path: str) -> List[str]:
         List of articles (complete legal units)
     """
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+        # Try multiple encodings (Polish files often use cp1250 or latin-2)
+        content = None
+        encodings = ['utf-8', 'utf-8-sig', 'cp1250', 'latin-2', 'iso-8859-2', 'windows-1250']
+
+        for encoding in encodings:
+            try:
+                with open(file_path, 'r', encoding=encoding) as f:
+                    content = f.read()
+                logger.info(f"Successfully loaded file with {encoding} encoding")
+                break
+            except (UnicodeDecodeError, LookupError):
+                continue
+
+        if content is None:
+            logger.error(f"Could not decode file with any encoding: {encodings}")
+            return []
 
         # Remove markdown formatting
         content = re.sub(r'#+ ', '', content)  # Remove headers

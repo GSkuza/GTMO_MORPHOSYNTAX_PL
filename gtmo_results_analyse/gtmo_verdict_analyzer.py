@@ -16,7 +16,7 @@ Funkcjonalności:
 - Eksport wyników do CSV/JSON
 
 Użycie:
-    python gtmo_verdict_analyzer.py <path_to_analysis.json> [opcje]
+  python gtmo_verdict_analyzer.py   <path_to_analysis.json> [opcje]
 
 Przykład:
     python gtmo_verdict_analyzer.py ../gtmo_results/analysis_xyz/full_document.json --all
@@ -123,6 +123,20 @@ class GTMOVerdictAnalyzer:
             elif 'results' in data:
                 print(f"   ✓ Wykryto strukturę z kluczem 'results'")
                 analyses = data['results']
+            elif 'articles' in data:
+                print(f"   ✓ Wykryto strukturę z kluczem 'articles'")
+                # Wyciągnij zdania z każdego artykułu
+                articles = data['articles']
+                sentences = []
+                for article in articles:
+                    if isinstance(article, dict) and 'sentences' in article:
+                        sentences.extend(article['sentences'])
+                if sentences:
+                    print(f"   ✓ Wyekstrahowano {len(sentences)} zdań z {len(articles)} artykułów")
+                    analyses = sentences
+                else:
+                    # Fallback: jeśli articles nie mają sentences, użyj articles jako bloków
+                    analyses = articles
             elif '_original_data' in data and isinstance(data['_original_data'], dict):
                 if 'articles' in data['_original_data']:
                     print(f"   ✓ Wykryto strukturę '_original_data/articles'")

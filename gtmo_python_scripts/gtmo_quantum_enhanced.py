@@ -15,6 +15,9 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# Performance limits
+MAX_QUANTUM_STATES = 50  # Limit to prevent O(n²) performance issues with very long texts
+
 
 # =============================================================================
 # QUANTUM STATE REPRESENTATION
@@ -29,366 +32,47 @@ class QuantumState:
     index: int          # Position in text
 
 
-class EnhancedQuantumAnalyzer:
-    """Enhanced quantum analysis with detailed metrics."""
-
-    def __init__(self):
-        """Initialize enhanced quantum analyzer."""
-        self.planck_h = 6.62607015e-34  # Planck constant (symbolic)
-        self.hbar = self.planck_h / (2 * np.pi)
-
-    def calculate_phase(self, coords: np.ndarray, word: str) -> float:
+    def _classify_superposition(self, degree: float, phase_coherence: Optional[float] = None) -> str:
         """
-        Calculate quantum phase based on semantic position.
+        Classify type of superposition.
 
         Args:
-            coords: D-S-E coordinates
-            word: Word being analyzed
+            degree: Superposition degree (overlap between states)
+            phase_coherence: Phase coherence (0-1), if available
 
         Returns:
-            Phase angle in radians [0, 2π]
+            Classification string
+
+        Logic:
+            - Phase coherence > 0.8 → COHERENT (even if overlap is low)
+            - Phase coherence < 0.3 → DECOHERENT (even if overlap is high)
+            - Otherwise, use overlap-based classification
         """
-        # Phase depends on position in semantic space
-        # D influences azimuthal angle, E influences polar angle
-        d, s, e = coords
-
-        # Map to spherical coordinates
-        # θ (polar) from E: 0 (low entropy) to π (high entropy)
-        theta = e * np.pi
-
-        # φ (azimuthal) from D: 0 to 2π
-        phi = d * 2 * np.pi
-
-        # Combined phase with stability modulation
-        phase = (phi + theta * s) % (2 * np.pi)
-
-        return float(phase)
-
-    def calculate_amplitude(self,
-                          coords: np.ndarray,
-                          coherence: float,
-                          word_importance: float = 1.0) -> float:
-        """
-        Calculate quantum amplitude (probability amplitude).
-
-        Args:
-            coords: D-S-E coordinates
-            coherence: Coherence measure
-            word_importance: Importance weight [0, 1]
-
-        Returns:
-            Amplitude value [0, 1]
-        """
-        d, s, e = coords
-
-        # Amplitude combines determination and stability
-        # High D and S = high amplitude
-        base_amplitude = np.sqrt(d * s) * (1 - 0.5 * e)
-
-        # Modulate by coherence
-        amplitude = base_amplitude * np.sqrt(coherence) * word_importance
-
-        return float(np.clip(amplitude, 0.0, 1.0))
-
-    def calculate_frequency(self, coords: np.ndarray, velocity: Optional[np.ndarray] = None) -> float:
-        """
-        Calculate semantic frequency (de Broglie-like).
-
-        Args:
-            coords: D-S-E coordinates
-            velocity: Velocity in semantic space (optional)
-
-        Returns:
-            Frequency in arbitrary units
-        """
-        d, s, e = coords
-
-        # Base frequency from entropy (high entropy = high frequency)
-        base_freq = e * 10.0  # Scale to reasonable range
-
-        # If velocity available, add Doppler-like shift
-        if velocity is not None:
-            velocity_mag = np.linalg.norm(velocity)
-            # Positive velocity increases frequency
-            freq = base_freq * (1.0 + 0.1 * velocity_mag)
-        else:
-            freq = base_freq
-
-        return float(freq)
-
-    def create_quantum_word_state(self,
-                                  word: str,
-                                  coords: np.ndarray,
-                                  index: int,
-                                  coherence: float,
-                                  importance: float = 1.0) -> QuantumState:
-        """
-        Create quantum state representation for a word.
-
-        Args:
-            word: The word
-            coords: D-S-E coordinates
-            index: Position in text
-            coherence: Coherence value
-            importance: Word importance
-
-        Returns:
-            QuantumState object
-        """
-        phase = self.calculate_phase(coords, word)
-        amplitude_mag = self.calculate_amplitude(coords, coherence, importance)
-
-        # Create complex amplitude: A = |A| * e^(iφ)
-        amplitude = amplitude_mag * cmath.exp(1j * phase)
-
-        return QuantumState(
-            amplitude=amplitude,
-            coords=coords,
-            word=word,
-            index=index
-        )
-
-    def calculate_entanglement_entropy(self,
-                                      state1: QuantumState,
-                                      state2: QuantumState) -> float:
-        """
-        Calculate entanglement entropy between two quantum states.
-
-        Args:
-            state1: First quantum state
-            state2: Second quantum state
-
-        Returns:
-            Entanglement entropy [0, ∞)
-        """
-        # Distance in semantic space
-        distance = np.linalg.norm(state1.coords - state2.coords)
-
-        # Phase difference
-        phase_diff = abs(cmath.phase(state1.amplitude) - cmath.phase(state2.amplitude))
-        phase_diff = min(phase_diff, 2*np.pi - phase_diff)  # Wrap to [0, π]
-
-        # Amplitude correlation
-        amp1 = abs(state1.amplitude)
-        amp2 = abs(state2.amplitude)
-        amp_product = amp1 * amp2
-
-        # Entanglement decreases with distance, increases with amplitude correlation
-        # and phase alignment
-        if distance > 0:
-            entanglement = amp_product * (1 - phase_diff / np.pi) / (1 + distance)
-        else:
-            entanglement = amp_product
-
-        # Convert to entropy (von Neumann-like)
-        if entanglement > 0 and entanglement < 1:
-            entropy = -entanglement * np.log(entanglement) - (1-entanglement) * np.log(1-entanglement + 1e-10)
-        else:
-            entropy = 0.0
-
-        return float(np.clip(entropy, 0.0, 10.0))
-
-    def calculate_pairwise_entanglement(self, states: List[QuantumState]) -> Dict:
-        """
-        Calculate pairwise entanglement between all quantum states.
-
-        Args:
-            states: List of quantum states
-
-        Returns:
-            Entanglement matrix and statistics
-        """
-        n = len(states)
-
-        if n < 2:
-            return {
-                'entanglement_matrix': [],
-                'mean_entanglement': 0.0,
-                'max_entanglement': 0.0,
-                'total_entanglement': 0.0,
-                'num_states': n
-            }
-
-        # Calculate entanglement matrix
-        entanglement_matrix = np.zeros((n, n))
-
-        for i in range(n):
-            for j in range(i+1, n):
-                entropy = self.calculate_entanglement_entropy(states[i], states[j])
-                entanglement_matrix[i, j] = entropy
-                entanglement_matrix[j, i] = entropy  # Symmetric
-
-        # Statistics
-        upper_triangle = entanglement_matrix[np.triu_indices(n, k=1)]
-
-        return {
-            'entanglement_matrix': entanglement_matrix.tolist(),
-            'mean_entanglement': float(upper_triangle.mean()) if len(upper_triangle) > 0 else 0.0,
-            'max_entanglement': float(upper_triangle.max()) if len(upper_triangle) > 0 else 0.0,
-            'total_entanglement': float(upper_triangle.sum()),
-            'num_states': n,
-            'highly_entangled_pairs': self._find_highly_entangled_pairs(states, entanglement_matrix)
-        }
-
-    def _find_highly_entangled_pairs(self,
-                                    states: List[QuantumState],
-                                    entanglement_matrix: np.ndarray,
-                                    threshold: float = 0.5) -> List[Dict]:
-        """
-        Find highly entangled word pairs.
-
-        Args:
-            states: List of quantum states
-            entanglement_matrix: Entanglement matrix
-            threshold: Threshold for "high" entanglement
-
-        Returns:
-            List of highly entangled pairs
-        """
-        pairs = []
-        n = len(states)
-
-        for i in range(n):
-            for j in range(i+1, n):
-                entanglement = entanglement_matrix[i, j]
-
-                if entanglement > threshold:
-                    pairs.append({
-                        'word1': states[i].word,
-                        'word2': states[j].word,
-                        'index1': states[i].index,
-                        'index2': states[j].index,
-                        'entanglement': float(entanglement),
-                        'distance': int(abs(states[j].index - states[i].index))
-                    })
-
-        # Sort by entanglement (descending)
-        pairs.sort(key=lambda x: x['entanglement'], reverse=True)
-
-        return pairs[:10]  # Return top 10
-
-    def calculate_coherence_detailed(self, states: List[QuantumState]) -> Dict:
-        """
-        Calculate detailed coherence metrics.
-
-        Args:
-            states: List of quantum states
-
-        Returns:
-            Detailed coherence analysis
-        """
-        if not states:
-            return {
-                'total_coherence': 0.0,
-                'phase_coherence': 0.0,
-                'amplitude_coherence': 0.0,
-                'spatial_coherence': 0.0
-            }
-
-        # Extract phases and amplitudes
-        phases = np.array([cmath.phase(s.amplitude) for s in states])
-        amplitudes = np.array([abs(s.amplitude) for s in states])
-        coords_array = np.array([s.coords for s in states])
-
-        # Phase coherence: how aligned are the phases?
-        # Using circular variance
-        phase_vectors = np.exp(1j * phases)
-        mean_phase_vector = np.mean(phase_vectors)
-        phase_coherence = abs(mean_phase_vector)
-
-        # Amplitude coherence: how uniform are the amplitudes?
-        amplitude_variance = np.var(amplitudes)
-        amplitude_coherence = np.exp(-amplitude_variance)  # Low variance = high coherence
-
-        # Spatial coherence: how clustered are the states in D-S-E space?
-        if len(coords_array) > 1:
-            spatial_variance = np.mean(np.var(coords_array, axis=0))
-            spatial_coherence = np.exp(-spatial_variance)
-        else:
-            spatial_coherence = 1.0
-
-        # Total coherence (weighted combination)
-        total_coherence = (
-            0.4 * phase_coherence +
-            0.3 * amplitude_coherence +
-            0.3 * spatial_coherence
-        )
-
-        return {
-            'total_coherence': float(total_coherence),
-            'phase_coherence': float(phase_coherence),
-            'amplitude_coherence': float(amplitude_coherence),
-            'spatial_coherence': float(spatial_coherence),
-            'mean_phase': float(cmath.phase(mean_phase_vector)),
-            'mean_amplitude': float(np.mean(amplitudes)),
-            'phase_std': float(np.std(phases)),
-            'amplitude_std': float(np.std(amplitudes))
-        }
-
-    def analyze_superposition_states(self,
-                                    states: List[QuantumState],
-                                    threshold: float = 0.3) -> Dict:
-        """
-        Analyze quantum superposition in the text.
-
-        Args:
-            states: List of quantum states
-            threshold: Threshold for superposition detection
-
-        Returns:
-            Superposition analysis
-        """
-        if len(states) < 2:
-            return {
-                'is_superposed': False,
-                'superposition_degree': 0.0,
-                'num_superposed_states': 0,
-                'mean_overlap': 0.0,
-                'max_overlap': 0.0,
-                'superposition_type': 'DECOHERENT'
-            }
-
-        # Calculate overlap integrals between states
-        overlaps = []
-
-        for i in range(len(states)):
-            for j in range(i+1, len(states)):
-                # Overlap = ⟨ψᵢ|ψⱼ⟩ (inner product)
-                # Using amplitude product and phase difference
-                amp_product = abs(states[i].amplitude) * abs(states[j].amplitude)
-                phase_diff = cmath.phase(states[i].amplitude) - cmath.phase(states[j].amplitude)
-
-                overlap = amp_product * np.cos(phase_diff)
-                overlaps.append(abs(overlap))
-
-        mean_overlap = np.mean(overlaps) if overlaps else 0.0
-
-        # High overlap = superposition
-        is_superposed = bool(mean_overlap > threshold)
-        superposition_degree = float(np.clip(mean_overlap, 0.0, 1.0))
-
-        # Count states in superposition (amplitude > threshold)
-        active_states = int(sum(1 for s in states if abs(s.amplitude) > threshold))
-
-        return {
-            'is_superposed': is_superposed,
-            'superposition_degree': superposition_degree,
-            'num_superposed_states': active_states,
-            'mean_overlap': float(mean_overlap),
-            'max_overlap': float(max(overlaps)) if overlaps else 0.0,
-            'superposition_type': self._classify_superposition(superposition_degree)
-        }
-
-    def _classify_superposition(self, degree: float) -> str:
-        """Classify type of superposition."""
-        if degree < 0.2:
+        try:
+            # Priority: Phase coherence determines coherence vs decoherence
+            if phase_coherence is not None:
+                if phase_coherence >= 0.8:
+                    # High phase coherence = COHERENT state
+                    if degree >= 0.7:
+                        return 'MAXIMALLY_ENTANGLED_COHERENT'
+                    else:
+                        return 'COHERENT_SUPERPOSITION'
+                elif phase_coherence <= 0.3:
+                    # Low phase coherence = DECOHERENT
+                    return 'DECOHERENT'
+
+            # Fallback: use overlap-based classification
+            if degree < 0.2:
+                return 'DECOHERENT'
+            elif degree < 0.4:
+                return 'WEAKLY_SUPERPOSED'
+            elif degree < 0.7:
+                return 'COHERENTLY_SUPERPOSED'
+            else:
+                return 'MAXIMALLY_ENTANGLED'
+        except TypeError:
+            logger.error("TypeError in _classify_superposition")
             return 'DECOHERENT'
-        elif degree < 0.4:
-            return 'WEAKLY_SUPERPOSED'
-        elif degree < 0.7:
-            return 'COHERENT_SUPERPOSITION'
-        else:
-            return 'MAXIMALLY_ENTANGLED'
 
 
 # =============================================================================
@@ -416,10 +100,20 @@ def analyze_quantum_enhanced(text: str,
 
     analyzer = EnhancedQuantumAnalyzer()
 
-    # Create quantum states for all words
+    # Create quantum states for all words (with performance limit)
     quantum_states = []
 
-    for i, (word, coords) in enumerate(zip(words, coords_per_word)):
+    # If too many words, sample evenly to stay within MAX_QUANTUM_STATES
+    num_words = len(words)
+    if num_words > MAX_QUANTUM_STATES:
+        # Sample evenly across the text
+        indices = np.linspace(0, num_words-1, MAX_QUANTUM_STATES, dtype=int)
+        logger.info(f"Limiting quantum states: {num_words} words → {MAX_QUANTUM_STATES} states (sampled)")
+        words_to_process = [(words[i], coords_per_word[i], i) for i in indices]
+    else:
+        words_to_process = [(w, c, i) for i, (w, c) in enumerate(zip(words, coords_per_word))]
+
+    for word, coords, i in words_to_process:
         # Simple importance: longer words = higher importance
         importance = min(len(word) / 10.0, 1.0)
 
