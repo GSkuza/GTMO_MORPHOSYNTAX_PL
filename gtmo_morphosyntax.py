@@ -1723,6 +1723,35 @@ class QuantumMorphosyntaxEngine:
             else:
                 final_coords = np.array([0.5, 0.5, 0.5])
 
+            # SEMANTIC CHAOS DETECTION (dodane 22.11.2025)
+            # Wulgaryzmy i język nieformalny tworzą chaos semantyczny, który MUSI być uwzględniony w entropii E
+            VULGAR_WORDS = {
+                'jebany', 'kurwa', 'pierdol', 'chuj', 'dupa', 'gówno',
+                'srać', 'pierdolić', 'kurewsk', 'zajebist', 'chujow', 'chul'
+            }
+
+            text_lower = text.lower()
+            vulgar_count = sum(1 for word in VULGAR_WORDS if word in text_lower)
+
+            if vulgar_count > 0:
+                # Wulgaryzmy: WYSOKA entropia (chaos semantyczny), NISKA stabilność
+                original_E = final_coords[2]
+                original_S = final_coords[1]
+
+                # Drastyczny boost entropii - wulgaryzmy tworzą MAKSYMALNY chaos semantyczny
+                # Każdy wulgaryzm: +0.6 do E, max 0.95
+                E_boost = min(0.6 * vulgar_count, 0.8)
+                final_coords[2] = min(final_coords[2] + E_boost, 0.95)
+
+                # Drastyczna penalty dla stabilności - język całkowicie niestabilny
+                # Każdy wulgaryzm: FORCE S down to 0.15-0.25 range
+                S_penalty = min(0.8 * vulgar_count, 0.85)
+                final_coords[1] = max(final_coords[1] - S_penalty, 0.15)
+
+                print(f"  ⚠️ SEMANTIC_CHAOS: {vulgar_count} vulgar word(s) detected")
+                print(f"     E: {original_E:.3f} → {final_coords[2]:.3f} (+{E_boost:.3f})")
+                print(f"     S: {original_S:.3f} → {final_coords[1]:.3f} (-{S_penalty:.3f})")
+
             # Calculate morphological ambiguity (average interpretations per word)
             avg_ambiguity = len(analyses) / len(word_analyses) if word_analyses else 1.0
 
