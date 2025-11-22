@@ -2598,6 +2598,45 @@ class QuantumMorphosyntaxEngine:
             except Exception:
                 pass
 
+            # OVERRIDE SA dla IRRATIONAL_ANOMALY (dodane 22.11.2025)
+            try:
+                register_violation = result.get("rhetorical_analysis", {}).get("register_violation", {})
+                if register_violation.get('classification') == 'IRRATIONAL_ANOMALY':
+                    severity = register_violation.get('severity', 'UNKNOWN')
+                    violation_score = register_violation.get('violation_score', 0)
+
+                    # Drastyczna penalty dla SA based on severity
+                    if severity == 'CRITICAL':
+                        # CRITICAL: SA max 15% (wulgaryzmy w kontekście formalnym)
+                        sa_override = min(const_metrics.SA_v3, 0.15)
+                        penalty_reason = "VULGAR_IN_FORMAL_CONTEXT"
+                    elif severity == 'HIGH':
+                        # HIGH: SA max 20% (wysoka ironia w tekście prawnym)
+                        sa_override = min(const_metrics.SA_v3, 0.20)
+                        penalty_reason = "HIGH_IRONY_IN_LEGAL"
+                    else:
+                        # MODERATE/LOW: SA max 25%
+                        sa_override = min(const_metrics.SA_v3, 0.25)
+                        penalty_reason = "INFORMAL_LANGUAGE"
+
+                    original_sa = const_metrics.SA_v3
+
+                    # Nadpisz SA w result["constitutional_metrics"]
+                    if "constitutional_metrics" in result and "semantic_accessibility" in result["constitutional_metrics"]:
+                        result["constitutional_metrics"]["semantic_accessibility"]["v3"]["value"] = sa_override
+                        result["constitutional_metrics"]["semantic_accessibility"]["v3"]["percentage"] = sa_override * 100
+                        result["constitutional_metrics"]["semantic_accessibility"]["v3"]["anomaly_override"] = True
+                        result["constitutional_metrics"]["semantic_accessibility"]["v3"]["original_value"] = original_sa
+                        result["constitutional_metrics"]["semantic_accessibility"]["v3"]["penalty_reason"] = penalty_reason
+
+                    # Oznacz jako krytyczny blok
+                    result["critical_block"] = True
+                    result["critical_reason"] = "IRRATIONAL_ANOMALY"
+
+                    print(f"  ⚠️ SA OVERRIDDEN: {original_sa:.4f} → {sa_override:.4f} (reason: {penalty_reason})")
+            except Exception as override_err:
+                print(f"  ⚠️ SA override failed: {override_err}")
+
         else:
             # Fallback gdy Constitutional Calculator niedostępny
             print("  ⚠️ Constitutional Duality Calculator not available - skipping CI-CD metrics")
