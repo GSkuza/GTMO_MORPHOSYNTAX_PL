@@ -2494,6 +2494,33 @@ class QuantumMorphosyntaxEngine:
                 else:
                     print(f"  📝 LITERAL MODE (no rhetorical transformation)")
 
+                # Formal Register Violation Detection (dodane 22.11.2025)
+                try:
+                    irony_score = rhetorical_metadata.get('irony_score', 0.0)
+                    register_violation = self.rhetorical_analyzer.detect_formal_register_violation(
+                        text=text,
+                        irony_score=irony_score,
+                        context_type='legal'
+                    )
+
+                    # Add to result
+                    result["rhetorical_analysis"]["register_violation"] = register_violation
+
+                    # Override mode if IRRATIONAL_ANOMALY detected
+                    if register_violation.get('classification') == 'IRRATIONAL_ANOMALY':
+                        result["rhetorical_analysis"]["mode"] = 'IRRATIONAL_ANOMALY'
+                        severity = register_violation.get('severity', 'UNKNOWN')
+                        anomaly_type = register_violation.get('anomaly_type', 'UNKNOWN')
+                        print(f"  🚨 ANOMALY DETECTED: {anomaly_type} (severity: {severity})")
+
+                        if register_violation.get('vulgar_words_found'):
+                            print(f"     Vulgar words: {', '.join(register_violation['vulgar_words_found'])}")
+                        if register_violation.get('irony_triggered'):
+                            print(f"     High irony in legal context: {irony_score:.2f}")
+
+                except Exception as reg_err:
+                    print(f"  ⚠️ Register violation detection failed: {reg_err}")
+
             except Exception as e:
                 print(f"  ⚠️ Rhetorical analysis failed: {e}")
                 result["rhetorical_analysis"] = {

@@ -35,6 +35,7 @@ if sys.platform == 'win32':
     except (ValueError, AttributeError):
         pass
 
+import os
 import json
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -58,6 +59,406 @@ plt.rcParams['font.size'] = 10
 # Progi krytyczne
 CRITICAL_THRESHOLD = 0.10   # SA < 10% = krytyczne
 WARNING_THRESHOLD = 0.30    # SA < 30% = ostrzeżenie
+
+
+class NaturalLanguageRecommendations:
+    """
+    Generuje rekomendacje w języku naturalnym BEZ żargonu technicznego.
+
+    Tłumaczy metryki GTMØ (SA, CI, ambiguity) na praktyczne porady
+    dla prawników i legislatorów.
+    """
+
+    def __init__(self, use_llm: bool = True, api_key: str = None):
+        """
+        Args:
+            use_llm: Czy używać LLM (Claude) dla generowania przykładów
+            api_key: Klucz API do Anthropic Claude (opcjonalny, z env)
+        """
+        self.use_llm = use_llm
+        self.api_key = api_key or os.getenv('ANTHROPIC_API_KEY')
+
+        if self.use_llm and not self.api_key:
+            print("⚠️  Brak klucza API - LLM wyłączony. Ustaw ANTHROPIC_API_KEY w .env")
+            self.use_llm = False
+
+
+    def translate_severity(self, sa: float) -> str:
+        """Tłumaczy SA na poziom problemu w języku naturalnym"""
+        if sa < 0.10:
+            return "ekstremalnie trudny do zrozumienia"
+        elif sa < 0.20:
+            return "bardzo trudny do zrozumienia"
+        elif sa < 0.30:
+            return "trudny do zrozumienia"
+        elif sa < 0.40:
+            return "średnio czytelny, wymaga poprawy"
+        elif sa < 0.50:
+            return "akceptowalny, ale można uprościć"
+        else:
+            return "czytelny"
+
+
+    def identify_main_problem(self, ci_morph_pct: float, ci_synt_pct: float,
+                             ci_sem_pct: float) -> tuple[str, str]:
+        """
+        Identyfikuje główny problem na podstawie dekompozycji CI
+
+        Returns:
+            (problem_short, problem_detailed)
+        """
+        problems = {
+            'morphological': (ci_morph_pct,
+                            "zbyt skomplikowane słownictwo",
+                            "Za dużo trudnych wyrazów prawniczych i skomplikowanych form gramatycznych"),
+            'syntactic': (ci_synt_pct,
+                         "zdania za długie i zagmatwane",
+                         "Zdanie ma zbyt wiele zagnieżdżeń, podrzędnych części i wtrąceń"),
+            'semantic': (ci_sem_pct,
+                        "niejasne znaczenie słów",
+                        "Wyrazy mają wieloznaczne znaczenie lub nie są jasno zdefiniowane")
+        }
+
+        # Znajdź dominujący problem
+        max_problem = max(problems.items(), key=lambda x: x[1][0])
+        _problem_type, (_pct, short, detailed) = max_problem
+
+        return short, detailed
+
+
+    def generate_quick_fixes(self, sentence_data: dict) -> list[str]:
+        """
+        Generuje listę szybkich poprawek (bez żargonu)
+
+        Args:
+            sentence_data: Dict z metrykami (SA, CI_decomp, ambiguity, depth, etc.)
+        """
+        fixes = []
+
+        ci_morph = sentence_data.get('CI_morph_pct', 0)
+        ci_synt = sentence_data.get('CI_synt_pct', 0)
+        ci_sem = sentence_data.get('CI_sem_pct', 0)
+        ambiguity = sentence_data.get('ambiguity', 0)
+        depth = sentence_data.get('depth', 0)
+
+        # Morfologia
+        if ci_morph > 40:
+            fixes.append("Zamień trudne wyrazy prawnicze na prostsze, codzienne słowa")
+            fixes.append(f"Ogranicz użycie skomplikowanych form wyrazów (obecnie: {ci_morph:.0f}% problemu)")
+        elif ci_morph > 30:
+            fixes.append("Uprość niektóre wyrazy - użyj prostszych synonimów")
+
+        # Składnia
+        if ci_synt > 40:
+            if depth > 12:
+                fixes.append(f"Rozbij zdanie na 3-4 krótsze (obecna głębokość składniowa: {depth:.0f} poziomów)")
+            elif depth > 8:
+                fixes.append(f"Rozbij zdanie na 2 krótsze (obecna głębokość: {depth:.0f} poziomów)")
+            fixes.append("Usuń niepotrzebne wtrącenia i nawiasy")
+        elif ci_synt > 30:
+            fixes.append("Rozbij na 2 krótsze zdania")
+
+        # Semantyka
+        if ci_sem > 40:
+            fixes.append("Dodaj definicje dla niejasnych terminów prawnych")
+            fixes.append("Precyzuj znaczenie wieloznacznych wyrażeń")
+        elif ci_sem > 30:
+            fixes.append("Wyjaśnij lub zdefiniuj kluczowe pojęcia")
+
+        # Wieloznaczność
+        if ambiguity > 4:
+            fixes.append(f"Usuń wieloznaczności - zdanie można zrozumieć na {ambiguity:.1f} różnych sposobów")
+        elif ambiguity > 3.5:
+            fixes.append("Precyzuj sformułowania, aby ograniczyć możliwe interpretacje")
+
+        # Jeśli brak konkretnych problemów, ogólne rady
+        if not fixes:
+            fixes.append("Uprość strukturę zdania")
+            fixes.append("Użyj prostszego języka")
+
+        return fixes
+
+
+    def generate_long_term_fixes(self, sentence_data: dict) -> list[str]:
+        """Generuje listę głębszych zmian długoterminowych"""
+        fixes = []
+
+        sa = sentence_data.get('SA', 0)
+
+        if sa < 0.20:
+            fixes.append("Przepisz cały artykuł od podstaw, prostszym językiem")
+            fixes.append("Rozważ podział na kilka krótszych artykułów")
+            fixes.append("Dodaj sekcję z przykładami praktycznymi")
+        elif sa < 0.30:
+            fixes.append("Przepisz artykuł używając listy punktowanej zamiast długiego zdania")
+            fixes.append("Dodaj glosariusz z definicjami kluczowych pojęć")
+        else:
+            fixes.append("Wprowadź przykłady zastosowania w komentarzu")
+            fixes.append("Ujednolicaj terminologię w całej ustawie")
+
+        return fixes
+
+
+    def generate_legal_risks(self, sentence_data: dict) -> str:
+        """
+        Generuje opis ryzyk prawnych w naturalnym języku
+
+        Bazuje na classification, ambiguity, SA
+        """
+        classification = sentence_data.get('classification', 'UNKNOWN')
+        ambiguity = sentence_data.get('ambiguity', 0)
+        sa = sentence_data.get('SA', 0)
+
+        risks = []
+
+        # Klasyfikacja
+        if classification == 'CHAOTIC_STRUCTURE':
+            risks.append("🔴 WYSOKIE RYZYKO: Przepis chaotyczny i nieprzewidywalny")
+        elif classification == 'BALANCED_NORM':
+            risks.append("🟡 ŚREDNIE RYZYKO: Przepis wyważony, ale wymaga poprawy")
+
+        # Wieloznaczność
+        if ambiguity > 5:
+            risks.append(f"⚖️ Ekstremalna wieloznaczność ({ambiguity:.1f} interpretacji) - może być zakwestionowany jako niekonstytucyjny (naruszenie zasady lex certa)")
+        elif ambiguity > 4:
+            risks.append("⚖️ Wysoka wieloznaczność - różne sądy mogą interpretować na różne sposoby, co prowadzi do chaosu orzeczniczego")
+        elif ambiguity > 3:
+            risks.append("⚖️ Możliwe spory interpretacyjne między stronami postępowania")
+
+        # Niska dostępność semantyczna
+        if sa < 0.15:
+            risks.append("📋 Organy stosujące prawo nie będą wiedzieć jak wykonać przepis - problemy w egzekucji")
+        elif sa < 0.25:
+            risks.append("📋 Trudności w praktycznym stosowaniu - urzędnicy będą potrzebować szczegółowych wytycznych")
+
+        # Ryzyko sporów
+        if ambiguity > 3.5 and sa < 0.30:
+            risks.append("🔍 Wysokie ryzyko długotrwałych sporów sądowych o interpretację")
+
+        if not risks:
+            risks.append("⚠️ Średnie ryzyko problemów z interpretacją")
+
+        return " ".join(risks)
+
+
+    def generate_recommendations(self, sentence_data: dict) -> dict:
+        """
+        Główna metoda - generuje pełny zestaw rekomendacji
+
+        Args:
+            sentence_data: Dict z metrykami zdania
+
+        Returns:
+            Dict z rekomendacjami w języku naturalnym
+        """
+        sa = sentence_data.get('SA', 0)
+        text = sentence_data.get('text', '')
+
+        # 1. Poziom problemu
+        severity = self.translate_severity(sa)
+
+        # 2. Główny problem
+        main_problem_short, main_problem_detailed = self.identify_main_problem(
+            sentence_data.get('CI_morph_pct', 0),
+            sentence_data.get('CI_synt_pct', 0),
+            sentence_data.get('CI_sem_pct', 0)
+        )
+
+        # 3. Szybkie poprawki
+        quick_fixes = self.generate_quick_fixes(sentence_data)
+
+        # 4. Długoterminowe zmiany
+        long_term = self.generate_long_term_fixes(sentence_data)
+
+        # 5. Ryzyka prawne
+        legal_risks = self.generate_legal_risks(sentence_data)
+
+        # 6. Przykład lepszej wersji (LLM lub szablon)
+        if self.use_llm and len(text) > 50:
+            example = self._generate_example_with_llm(sentence_data)
+        else:
+            example = self._generate_example_template(sentence_data)
+
+        return {
+            'severity': severity,
+            'main_problem_short': main_problem_short,
+            'main_problem_detailed': main_problem_detailed,
+            'quick_fixes': quick_fixes,
+            'long_term_fixes': long_term,
+            'legal_risks': legal_risks,
+            'example_better_version': example
+        }
+
+
+    def _generate_example_template(self, sentence_data: dict) -> str:
+        """Generuje przykład poprawki używając szablonu (fallback)"""
+        text = sentence_data.get('text', '')
+        ci_synt = sentence_data.get('CI_synt_pct', 0)
+
+        if ci_synt > 40:
+            return f"""Było: "{text[:100]}..."
+
+Może być (przykład uproszczenia):
+"[Przepis należy rozbić na 2-3 krótsze zdania. Każde zdanie powinno mieć jeden główny cel.]"
+
+Uwaga: To szablon - dla precyzyjnego przykładu użyj trybu z LLM."""
+        else:
+            return f"""Było: "{text[:100]}..."
+
+Może być: "[Uprość słownictwo i strukturę zdania]"
+
+Uwaga: Dla konkretnego przykładu włącz tryb LLM."""
+
+
+    def _generate_example_with_llm(self, sentence_data: dict) -> str:
+        """Generuje szczegółową analizę i rekomendacje używając Claude API"""
+        try:
+            import anthropic
+
+            client = anthropic.Anthropic(api_key=self.api_key)
+
+            text = sentence_data.get('text', '')
+            sa = sentence_data.get('SA', 0)
+            ci_morph_pct = sentence_data.get('CI_morph_pct', 0)
+            ci_synt_pct = sentence_data.get('CI_synt_pct', 0)
+            ci_sem_pct = sentence_data.get('CI_sem_pct', 0)
+            ambiguity = sentence_data.get('ambiguity', 0)
+            depth = sentence_data.get('depth', 0)
+
+            prompt = f"""Jesteś ekspertem od przystępności języka prawnego i analizy konstytucyjnej.
+
+ZADANIE: Przeanalizuj poniższy przepis i wygeneruj SZCZEGÓŁOWĄ rekomendację w języku naturalnym (bez żargonu technicznego).
+
+═══════════════════════════════════════════════════════════════════════════════
+ORYGINALNY PRZEPIS:
+"{text}"
+
+METRYKI GTMØ (dla kontekstu - NIE pokazuj ich użytkownikowi w formie liczb):
+• Dostępność Semantyczna (SA): {sa*100:.1f}%
+• Dekompozycja Niedefinitywności (CI):
+  - Morfologiczna (trudne słowa): {ci_morph_pct:.0f}%
+  - Składniowa (długie zdania): {ci_synt_pct:.0f}%
+  - Semantyczna (niejasne znaczenie): {ci_sem_pct:.0f}%
+• Wieloznaczność: {ambiguity:.1f} możliwych interpretacji
+• Głębokość składniowa: {depth:.0f} poziomów zagnieżdżenia
+
+═══════════════════════════════════════════════════════════════════════════════
+
+INSTRUKCJE FORMATOWANIA:
+
+1. **Użyj wizualnych ramek** z Unicode:
+   - Główne sekcje: ╔══════╗, ║, ╚══════╝
+   - Podsekcje: ┏━━━┓, ┃, ┗━━━┛
+   - Listy: ├─, │, └─
+
+2. **Struktura odpowiedzi** (OBOWIĄZKOWA):
+
+   ╔═══════════════════════════════════════════════════════════════════════════╗
+   ║ 📋 ANALIZA SEMANTYCZNA                                                    ║
+   ╚═══════════════════════════════════════════════════════════════════════════╝
+
+   [Wyjaśnij JĘZYKIEM NATURALNYM dlaczego ten przepis jest trudny do zrozumienia.
+    Bazuj na dekompozycji CI, ale NIE używaj żargonu - wyjaśnij konkretnie co jest nie tak:
+    - Jeśli CI_morph dominuje: "Za dużo skomplikowanych wyrazów prawniczych"
+    - Jeśli CI_synt dominuje: "Zdanie zbyt długie, za dużo wtrąceń i podrzędników"
+    - Jeśli CI_sem dominuje: "Wyrazy mają niejasne lub wieloznaczne znaczenie"]
+
+   ╔═══════════════════════════════════════════════════════════════════════════╗
+   ║ 🔍 MOŻLIWE INTERPRETACJE (problem wieloznaczności)                        ║
+   ╚═══════════════════════════════════════════════════════════════════════════╝
+
+   [Opisz 3-7 różnych sposobów, w jakie ten przepis może być zrozumiany.
+    Ponumeruj je: 1️⃣, 2️⃣, 3️⃣, itd.
+    Dla każdej interpretacji:
+    - Wyjaśnij JAK można to zrozumieć
+    - Napisz JAKI byłby skutek prawny tej interpretacji
+    - Wskaż KTÓRY fragment przepisu powoduje tę wieloznaczność]
+
+   Przykład:
+   1️⃣ Pierwsza interpretacja: [opis]
+      → Skutek prawny: [co by to oznaczało?]
+      → Źródło problemu: [który fragment?]
+
+   2️⃣ Druga interpretacja: [opis]
+      → Skutek prawny: [...]
+      → Źródło problemu: [...]
+
+   ╔═══════════════════════════════════════════════════════════════════════════╗
+   ║ 🛠️ PROPOZYCJE NAPRAWY                                                     ║
+   ╚═══════════════════════════════════════════════════════════════════════════╝
+
+   [Zaproponuj 2-3 WARIANTY poprawki. Każdy wariant to KONKRETNY przepisany tekst.]
+
+   ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+   ┃ WARIANT A: [nazwa, np. "Podział na krótsze zdania"]                      ┃
+   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+   📝 Przepisany tekst:
+   [Konkretny przepisany tekst - pełna wersja artykułu po poprawce]
+
+   ✅ Zalety:
+   ├─ [zaleta 1]
+   ├─ [zaleta 2]
+   └─ [zaleta 3]
+
+   ⚠️ Wady:
+   ├─ [wada 1 lub "Brak istotnych wad"]
+   └─ [wada 2]
+
+   📈 Szacowany wzrost SA: [np. "z 23% → ~55%"] (zwiększenie czytelności o ~140%)
+
+   🎯 Rekomendacja: [Czy zalecasz ten wariant? Dla kogo jest najlepszy?]
+
+   ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+   ┃ WARIANT B: [nazwa, np. "Lista punktowana + definicje"]                   ┃
+   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+   [Powtórz strukturę jak w WARIANT A]
+
+   ╔═══════════════════════════════════════════════════════════════════════════╗
+   ║ ⚖️ RYZYKO PRAWNE                                                          ║
+   ╚═══════════════════════════════════════════════════════════════════════════╝
+
+   [Opisz KONKRETNE ryzyka:
+    - Jeśli SA < 15%: "Organy stosujące prawo nie będą wiedziały jak wykonać przepis"
+    - Jeśli wieloznaczność > 4: "Różne sądy mogą interpretować na różne sposoby - chaos orzeczniczy"
+    - Jeśli CI_sem dominuje: "Ryzyko zakwestionowania jako niekonstytucyjny (naruszenie lex certa)"
+
+    NIE używaj metrycznych wartości - pisz JĘZYKIEM NATURALNYM o skutkach prawnych]
+
+   ╔═══════════════════════════════════════════════════════════════════════════╗
+   ║ 🎯 RANKING PRIORYTETÓW                                                    ║
+   ╚═══════════════════════════════════════════════════════════════════════════╝
+
+   1. [Najważniejsze działanie - co zrobić TERAZ]
+   2. [Drugie w kolejności]
+   3. [Trzecie w kolejności]
+
+   ⏱️ Szacowany czas wdrożenia: [np. "2-3 dni robocze dla legislatora"]
+   💰 Koszty: [np. "Niskie - wymaga tylko przeformułowania"]
+
+WAŻNE ZASADY:
+- NIE używaj żargonu technicznego (SA, CI, D-S-E, entropia, itp.) w odpowiedzi
+- Pisz tak, żeby zrozumiał prawnik-praktyk lub urzędnik
+- Wyjaśnij DLACZEGO coś jest problemem, a nie JAKI ma wskaźnik
+- Wszystkie propozycje poprawek muszą zachować treść normatywną
+- Używaj emojis do wizualizacji (📋, 🔍, 🛠️, ✅, ⚠️, 📈, 🎯, ⏱️, 💰)
+- Ramki Unicode muszą być DOKŁADNIE wyrównane
+
+TERAZ WYGENERUJ PEŁNĄ ANALIZĘ:"""
+
+            message = client.messages.create(
+                model="claude-sonnet-4-20250514",
+                max_tokens=3000,
+                temperature=0.4,
+                messages=[{"role": "user", "content": prompt}]
+            )
+
+            return message.content[0].text
+
+        except Exception as e:
+            print(f"⚠️  LLM error: {e}")
+            return self._generate_example_template(sentence_data)
 
 
 class GTMOVerdictAnalyzer:
@@ -676,6 +1077,126 @@ class GTMOVerdictAnalyzer:
 
 
     # ========================================================================
+    # REKOMENDACJE W JĘZYKU NATURALNYM
+    # ========================================================================
+
+    def generate_natural_language_recommendations(self, use_llm: bool = True):
+        """
+        Generuje rekomendacje w języku naturalnym dla przepisów z SA < 30%
+
+        Args:
+            use_llm: Czy używać LLM (Claude) dla generowania przykładów poprawek
+        """
+        print(f"\n📝 Generowanie rekomendacji w języku naturalnym...")
+
+        # Filtruj zdania z SA < 30%
+        problematic = self.df[self.df['SA'] < WARNING_THRESHOLD].copy()
+
+        if len(problematic) == 0:
+            print(f"   ✓ Świetnie! Brak przepisów wymagających poprawy (SA < {WARNING_THRESHOLD*100}%)")
+            return
+
+        print(f"   📊 Znaleziono {len(problematic)} przepisów wymagających poprawy ({len(problematic)/len(self.df)*100:.1f}% dokumentu)")
+
+        # Inicjalizuj generator rekomendacji
+        recommender = NaturalLanguageRecommendations(
+            use_llm=use_llm,
+            api_key=os.getenv('ANTHROPIC_API_KEY')
+        )
+
+        # Generuj rekomendacje
+        recommendations = []
+
+        for idx, row in problematic.iterrows():
+            sentence_data = {
+                'text': row['full_text'],
+                'SA': row['SA'],
+                'CI_morph_pct': row.get('CI_morph_pct', 0),
+                'CI_synt_pct': row.get('CI_synt_pct', 0),
+                'CI_sem_pct': row.get('CI_sem_pct', 0),
+                'ambiguity': row.get('ambiguity', 0),
+                'depth': row.get('depth', 0),
+                'classification': row.get('classification', 'UNKNOWN')
+            }
+
+            # Generuj rekomendacje
+            rec = recommender.generate_recommendations(sentence_data)
+
+            recommendations.append({
+                'sentence_id': row['block_id'],
+                'sentence_number': row.get('sentence_number', idx),
+                'text_preview': row['text'][:100],
+                'full_text': row['full_text'],
+                **rec
+            })
+
+            # Progress
+            if (len(recommendations) % 20 == 0):
+                print(f"   🔄 Przetworzono {len(recommendations)}/{len(problematic)} przepisów...")
+
+        print(f"   ✓ Wygenerowano {len(recommendations)} rekomendacji")
+
+        # Zapisz raport
+        self._save_recommendations_report(recommendations)
+
+        return recommendations
+
+
+    def _save_recommendations_report(self, recommendations: List[dict]):
+        """Zapisuje raport rekomendacji w czytelnym formacie"""
+
+        report_path = self.output_dir / "recommendations_natural_language.txt"
+
+        with open(report_path, 'w', encoding='utf-8') as f:
+            f.write("=" * 80 + "\n")
+            f.write("RAPORT: PRZEPISY WYMAGAJĄCE POPRAWY\n")
+            f.write("Wnioski w języku naturalnym (bez żargonu technicznego)\n")
+            f.write("=" * 80 + "\n\n")
+
+            f.write(f"Dokument: {self.json_path.parent.name}\n")
+            f.write(f"Problemów znalezionych: {len(recommendations)} przepisów\n\n")
+
+            for i, rec in enumerate(recommendations, 1):
+                f.write("-" * 80 + "\n")
+                f.write(f"PRZEPIS #{i} (Zdanie #{rec['sentence_number']})\n")
+                f.write("-" * 80 + "\n\n")
+
+                f.write("TEKST:\n")
+                f.write(f'"{rec["full_text"]}"\n\n')
+
+                f.write("PROBLEM:\n")
+                f.write(f"Ten przepis jest {rec['severity']}.\n")
+                f.write(f"Główny problem: {rec['main_problem_detailed']}\n\n")
+
+                f.write("CO ZROBIĆ TERAZ (proste poprawki):\n")
+                for j, fix in enumerate(rec['quick_fixes'], 1):
+                    f.write(f"  {j}. {fix}\n")
+                f.write("\n")
+
+                f.write("CO ZROBIĆ DŁUGOTERMINOWO:\n")
+                for j, fix in enumerate(rec['long_term_fixes'], 1):
+                    f.write(f"  {j}. {fix}\n")
+                f.write("\n")
+
+                f.write("PRZYKŁAD LEPSZEJ WERSJI:\n")
+                f.write(rec['example_better_version'])
+                f.write("\n\n")
+
+                f.write("RYZYKO PRAWNE:\n")
+                f.write(rec['legal_risks'])
+                f.write("\n\n")
+
+        print(f"   💾 Raport zapisany: {report_path.name}")
+
+        # Zapisz też JSON dla łatwiejszego parsowania
+        json_path = self.output_dir / "recommendations_natural_language.json"
+        with open(json_path, 'w', encoding='utf-8') as f:
+            json.dump(recommendations, f, indent=2, ensure_ascii=False)
+
+        print(f"   💾 JSON zapisany: {json_path.name}")
+
+
+    # ========================================================================
     # EKSPORT WYNIKÓW
     # ========================================================================
 
@@ -774,6 +1295,10 @@ Przykłady użycia:
     parser.add_argument('--distribution', action='store_true', help='Rozkład SA')
     parser.add_argument('--visualize', action='store_true', help='Wszystkie wizualizacje')
     parser.add_argument('--export', action='store_true', help='Eksport wyników')
+    parser.add_argument('--recommendations', action='store_true',
+                       help='Generuj rekomendacje w języku naturalnym (z LLM)')
+    parser.add_argument('--no-llm', action='store_true',
+                       help='Wyłącz LLM (szybsze, ale bez konkretnych przykładów)')
 
     args = parser.parse_args()
 
@@ -800,10 +1325,14 @@ Przykłady użycia:
             analyzer.visualize_sa_distribution()
         if args.export:
             analyzer.export_results()
+        if args.recommendations:
+            use_llm = not args.no_llm  # LLM domyślnie włączony, chyba że --no-llm
+            analyzer.generate_natural_language_recommendations(use_llm=use_llm)
 
         # Jeśli nic nie wybrano, pokaż wszystko
         if not any([args.stats, args.ekg, args.smoking_guns, args.chaos,
-                   args.correlation, args.distribution, args.visualize, args.export]):
+                   args.correlation, args.distribution, args.visualize, args.export,
+                   args.recommendations]):
             analyzer.generate_all()
 
 

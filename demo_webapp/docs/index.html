@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTMØ Constitutional Metrics Analyzer</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏛️ GTMØ Constitutional Metrics Analyzer</h1>
+            <p class="subtitle">Analiza Morfosyntaktyczna Dokumentów Prawnych</p>
+        </header>
+
+        <main>
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <div class="card">
+                    <h2>📄 Wgraj Dokument lub Wpisz Tekst</h2>
+                    <p>Wybierz sposób wprowadzenia treści ustawy lub dokumentu prawnego</p>
+
+                    <!-- Tabs -->
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="file">📁 Upload pliku</button>
+                        <button class="tab-btn" data-tab="text">✍️ Wpisz tekst</button>
+                    </div>
+
+                    <form id="uploadForm">
+                        <!-- File Upload Tab -->
+                        <div id="fileTab" class="tab-content active">
+                            <div class="file-input-wrapper">
+                                <input
+                                    type="file"
+                                    id="fileInput"
+                                    accept=".txt,.md"
+                                >
+                                <label for="fileInput" class="file-label">
+                                    <span id="fileName">Wybierz plik...</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Text Editor Tab -->
+                        <div id="textTab" class="tab-content">
+                            <div class="text-editor-wrapper">
+                                <textarea
+                                    id="textEditor"
+                                    placeholder="Wpisz lub wklej treść ustawy (max 1200 znaków)&#10;&#10;Przykład:&#10;Art. 1. Ustawa określa zasady ochrony zdrowia publicznego..."
+                                    maxlength="1200"
+                                ></textarea>
+                                <div class="char-counter">
+                                    <span id="charCount">0</span> / 1200 znaków
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="checkbox-wrapper">
+                            <label>
+                                <input type="checkbox" id="useLLM" checked>
+                                Użyj LLM (Claude) do generowania rekomendacji
+                                <span class="hint">Rekomenduje się włączyć dla szczegółowych przykładów poprawek</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-primary" id="analyzeBtn">
+                            🔍 Analizuj Dokument
+                        </button>
+                    </form>
+
+                    <div id="progressBar" class="progress-bar" style="display: none;">
+                        <div class="progress-fill"></div>
+                        <p class="progress-text">Analizuję dokument...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="resultsSection" style="display: none;">
+                <!-- Document Stats -->
+                <div class="card">
+                    <h2>📊 Statystyki Dokumentu</h2>
+                    <div id="documentStats" class="stats-grid"></div>
+                </div>
+
+                <!-- Metrics Table -->
+                <div class="card">
+                    <h2>📈 Metryki Konstytucyjne</h2>
+                    <p class="section-description">
+                        Poniższa tabela przedstawia kluczowe metryki dla każdego zdania w dokumencie:
+                    </p>
+                    <div class="legend">
+                        <div class="legend-item">
+                            <strong>SA (Semantic Accessibility):</strong> Dostępność semantyczna - im wyższa, tym bardziej czytelny przepis
+                        </div>
+                        <div class="legend-item">
+                            <strong>D-S-E:</strong> Współrzędne GTMØ (Determination, Stability, Entropy)
+                        </div>
+                        <div class="legend-item">
+                            <strong>CI:</strong> Constitutional Indefiniteness - nieokreśloność konstytucyjna
+                        </div>
+                    </div>
+
+                    <div class="table-controls">
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Szukaj w tabeli..."
+                            class="search-input"
+                        >
+                        <select id="filterSelect" class="filter-select">
+                            <option value="all">Wszystkie</option>
+                            <option value="critical">Krytyczne (SA < 10%)</option>
+                            <option value="warning">Ostrzeżenie (SA < 30%)</option>
+                            <option value="good">Dobre (SA ≥ 30%)</option>
+                        </select>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table id="metricsTable" class="metrics-table">
+                            <thead>
+                                <tr>
+                                    <th>Art.</th>
+                                    <th>Zdanie</th>
+                                    <th>Tekst (podgląd)</th>
+                                    <th>SA (%)</th>
+                                    <th>D</th>
+                                    <th>S</th>
+                                    <th>E</th>
+                                    <th>CD</th>
+                                    <th>CI</th>
+                                    <th>Głęb.</th>
+                                    <th>Wielozn.</th>
+                                    <th>Klasyfikacja</th>
+                                </tr>
+                            </thead>
+                            <tbody id="metricsTableBody">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Recommendations Section -->
+                <div class="card">
+                    <h2>💡 Wyjaśnienie wyników</h2>
+                    <p class="section-description">
+                        Rekomendacje wygenerowane przez Claude API - przepisy wymagające poprawy:
+                    </p>
+                    <div id="recommendationsContainer">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <section id="errorSection" style="display: none;">
+                <div class="card error-card">
+                    <h2>❌ Błąd</h2>
+                    <p id="errorMessage"></p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>GTMØ Quantum Morphosyntax Engine &copy; 2025 |
+                <a href="https://github.com/yourusername/GTMO_MORPHOSYNTAX" target="_blank">GitHub</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

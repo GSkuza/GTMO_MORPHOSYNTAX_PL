@@ -257,7 +257,9 @@ class SAv3Calculator:
         D: float,
         S: float,
         E: float,
-        kinetic_power_est: Optional[float] = None
+        kinetic_power_est: Optional[float] = None,
+        depth: Optional[float] = None,
+        ambiguity: Optional[float] = None
     ) -> Dict:
         """
         Główny algorytm SA v3.0.
@@ -272,6 +274,8 @@ class SAv3Calculator:
             S: Stability
             E: Entropy
             kinetic_power_est: Estymacja mocy kinetycznej [0,1] (opcjonalne, None=auto-estimate)
+            depth: Syntactic depth (opcjonalne)
+            ambiguity: Ambiguity score (opcjonalne)
 
         Returns:
             Dictionary z wynikami SA v3.0 i komponentami
@@ -284,14 +288,41 @@ class SAv3Calculator:
         # 2. SA Base (Fundament geometryczny)
         sa_base = CD / (CD + ci_w) if (CD + ci_w) > EPSILON else 0.5
 
-        # 3. Signal Physics (Hoyer)
+        # 3. Signal Physics (Hoyer) + Context-Aware Penalties
         try:
             embedding = self.get_herbert_embedding(text)
             raw_hoyer = self.calculate_hoyer_sparsity(embedding)
 
             # CDF Scaling (Probabilistyczna ocena rzadkości)
             z_score = (raw_hoyer - self.config.HOYER_MU) / self.config.HOYER_SIGMA
-            focus_score = 0.5 * (1.0 + np.tanh(z_score / np.sqrt(2)))  # Approx CDF
+            focus_base = 0.5 * (1.0 + np.tanh(z_score / np.sqrt(2)))  # Approx CDF
+
+            # CONTEXT-AWARE PENALTIES (dodane 22.11.2025)
+            # Penalty za długość tekstu
+            text_length = len(text)
+            length_penalty = 0.0
+            if text_length > 100:
+                length_penalty = min(0.15, (text_length - 100) / 1000 * 0.15)
+
+            # Penalty za wysoką wieloznaczność
+            ambig_penalty = 0.0
+            if ambiguity is not None and ambiguity > 2.0:
+                ambig_penalty = min(0.20, (ambiguity - 2.0) / 5.0 * 0.20)
+
+            # Penalty za głębokość składniową
+            depth_penalty = 0.0
+            if depth is not None and depth > 5:
+                depth_penalty = min(0.15, (depth - 5) / 10.0 * 0.15)
+
+            # Penalty za wysoką entropię (chaos semantyczny)
+            entropy_penalty = E * 0.10  # 0-10% based on entropy
+
+            # Total penalty
+            total_penalty = length_penalty + ambig_penalty + depth_penalty + entropy_penalty
+
+            # Apply penalties and cap at maximum
+            focus_score = max(0.1, min(0.95, focus_base - total_penalty))
+
         except Exception as e:
             print(f"WARNING: Error calculating Hoyer sparsity: {e}")
             raw_hoyer = 0.0
@@ -732,7 +763,9 @@ class ConstitutionalDualityCalculator:
                     D=D,
                     S=S,
                     E=E,
-                    kinetic_power_est=kinetic_power_est
+                    kinetic_power_est=kinetic_power_est,
+                    depth=depth,
+                    ambiguity=ambiguity
                 )
                 SA_v3 = sa_v3_result["SA_v3"]
                 sa_v3_components = sa_v3_result["Components"]

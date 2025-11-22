@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test CORS</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        button { padding: 10px 20px; font-size: 16px; margin: 5px; }
+        .result { margin-top: 20px; padding: 15px; border-radius: 5px; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test CORS</h1>
+    <button onclick="testHealth()">Test /health</button>
+    <button onclick="testUpload()">Test /test (POST)</button>
+    <div id="result"></div>
+
+    <script>
+        async function testHealth() {
+            const div = document.getElementById('result');
+            div.innerHTML = '⏳ Testing...';
+
+            try {
+                const response = await fetch('http://127.0.0.1:8000/health');
+                const data = await response.json();
+
+                div.className = 'result success';
+                div.innerHTML = `
+                    <h3>✅ Success!</h3>
+                    <pre>${JSON.stringify(data, null, 2)}</pre>
+                    <p>Headers: ${JSON.stringify([...response.headers])}</p>
+                `;
+            } catch (error) {
+                div.className = 'result error';
+                div.innerHTML = `
+                    <h3>❌ Error</h3>
+                    <p>${error.message}</p>
+                    <p>Check console (F12) for details</p>
+                `;
+                console.error('Error:', error);
+            }
+        }
+
+        async function testUpload() {
+            const div = document.getElementById('result');
+            div.innerHTML = '⏳ Testing upload...';
+
+            try {
+                const blob = new Blob(['Test data'], { type: 'text/plain' });
+                const file = new File([blob], 'test.txt', { type: 'text/plain' });
+
+                const formData = new FormData();
+                formData.append('file', file);
+
+                const response = await fetch('http://127.0.0.1:8000/test', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                div.className = 'result success';
+                div.innerHTML = `
+                    <h3>✅ Upload Success!</h3>
+                    <pre>${JSON.stringify(data, null, 2)}</pre>
+                `;
+            } catch (error) {
+                div.className = 'result error';
+                div.innerHTML = `
+                    <h3>❌ Upload Error</h3>
+                    <p>${error.message}</p>
+                `;
+                console.error('Error:', error);
+            }
+        }
+    </script>
+</body>
+</html>

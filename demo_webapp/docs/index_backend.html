@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>GTMØ - Analiza Morfosyntaktyczna</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 1000px; margin: 0 auto; background: #f5f5f5; }
+        h1 { color: #2563eb; margin-bottom: 20px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        textarea { width: 100%; height: 150px; padding: 10px; border: 2px solid #ddd; border-radius: 4px; font-size: 14px; font-family: 'Consolas', monospace; }
+        button { background: #2563eb; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; margin-top: 10px; }
+        button:hover { background: #1d4ed8; }
+        button:disabled { background: #9ca3af; cursor: not-allowed; }
+        .counter { text-align: right; margin-top: 5px; color: #666; }
+        .result { margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+        th { background: #2563eb; color: white; }
+        .sa-good { background: #d1fae5; }
+        .sa-warning { background: #fef3c7; }
+        .sa-critical { background: #fee2e2; }
+        .loading { display: none; background: #dbeafe; padding: 15px; border-radius: 4px; margin-top: 10px; }
+        .loading.active { display: block; }
+        .option-group { margin-top: 15px; padding: 10px; background: #f9fafb; border-radius: 4px; }
+        .checkbox-wrapper { display: flex; align-items: center; gap: 10px; }
+        .checkbox-wrapper input[type="checkbox"] { width: 18px; height: 18px; cursor: pointer; }
+        .checkbox-wrapper label { cursor: pointer; user-select: none; }
+        .info-box { background: #dbeafe; padding: 12px; border-radius: 4px; margin-bottom: 15px; border-left: 4px solid #2563eb; }
+    </style>
+</head>
+<body>
+    <h1>🏛️ GTMØ Constitutional Metrics Analyzer</h1>
+
+    <div class="card">
+        <div class="info-box">
+            <strong>ℹ️ Prawdziwa analiza GTMØ</strong><br>
+            Analiza wykorzystuje pełny pipeline morfosyntaktyczny (Morfeusz2, Stanza, HerBERT).<br>
+            Czas analizy: 2-5 minut w zależności od długości tekstu.
+        </div>
+
+        <h2>📝 Wpisz tekst ustawy (max 1200 znaków)</h2>
+        <textarea id="textInput" maxlength="1200" placeholder="Przykład:
+Art. 1. Ustawa określa zasady ochrony zdrowia publicznego przed skutkami nadużywania alkoholu.
+
+Art. 2. Ilekroć w ustawie jest mowa o napojach alkoholowych, rozumie się przez to napoje zawierające alkohol etylowy w stężeniu przekraczającym 0,5% objętościowych."></textarea>
+        <div class="counter"><span id="charCount">0</span> / 1200 znaków</div>
+
+        <div class="option-group">
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="useLLM" name="useLLM">
+                <label for="useLLM">
+                    <strong>🤖 Użyj LLM (Claude API) do generowania rekomendacji</strong><br>
+                    <small style="color: #666;">
+                        Bez LLM: podstawowe rekomendacje (szybko, ~2-3 min)<br>
+                        Z LLM: szczegółowe rekomendacje z AI (wolniej, ~5-10 min, wymaga klucza API)
+                    </small>
+                </label>
+            </div>
+        </div>
+
+        <button onclick="analyze()" id="analyzeBtn">🔍 Analizuj - prawdziwa analiza GTMØ (2-5 min)</button>
+
+        <div id="loading" class="loading">
+            <strong>⏳ Analiza w trakcie...</strong><br>
+            Proszę czekać, może to potrwać 2-5 minut. Nie zamykaj strony!
+        </div>
+    </div>
+
+    <div id="results" style="display:none;">
+        <div class="card">
+            <h2>📊 Statystyki dokumentu</h2>
+            <p><strong>Słowa:</strong> <span id="wordCount"></span></p>
+            <p><strong>Znaki:</strong> <span id="charCountResult"></span></p>
+            <p><strong>Artykuły:</strong> <span id="articleCount"></span></p>
+            <p><strong>Zdania:</strong> <span id="sentenceCount"></span></p>
+            <p><strong>Średnia SA:</strong> <span id="avgSA"></span>%</p>
+            <p style="margin-top: 10px;">
+                <span style="background: #fee2e2; padding: 5px 10px; border-radius: 3px; margin-right: 10px;">
+                    ⚠️ Krytyczne (SA&lt;10%): <strong id="criticalCount">0</strong>
+                </span>
+                <span style="background: #fef3c7; padding: 5px 10px; border-radius: 3px;">
+                    ⚡ Wymaga poprawy (10-30%): <strong id="warningCount">0</strong>
+                </span>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>📈 Metryki GTMØ dla każdego zdania</h2>
+            <table id="metricsTable">
+                <thead>
+                    <tr>
+                        <th>Tekst</th>
+                        <th>SA (%)</th>
+                        <th>D</th>
+                        <th>S</th>
+                        <th>E</th>
+                        <th>Ocena</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>💡 Rekomendacje</h2>
+            <div id="recommendations"></div>
+        </div>
+    </div>
+
+    <script>
+        const textInput = document.getElementById('textInput');
+        const charCountSpan = document.getElementById('charCount');
+        const analyzeBtn = document.getElementById('analyzeBtn');
+        const loadingDiv = document.getElementById('loading');
+        const useLLMCheckbox = document.getElementById('useLLM');
+
+        textInput.addEventListener('input', () => {
+            charCountSpan.textContent = textInput.value.length;
+        });
+
+        async function analyze() {
+            const text = textInput.value.trim();
+
+            if (!text || text.length < 10) {
+                alert('Proszę wpisać tekst (min. 10 znaków)!');
+                return;
+            }
+
+            const useLLM = useLLMCheckbox.checked;
+
+            // Disable button and show loading
+            analyzeBtn.disabled = true;
+            loadingDiv.classList.add('active');
+            document.getElementById('results').style.display = 'none';
+
+            try {
+                // Create file from text
+                const blob = new Blob([text], { type: 'text/plain' });
+                const file = new File([blob], 'user_input.txt', { type: 'text/plain' });
+                const formData = new FormData();
+                formData.append('file', file);
+
+                console.log('Sending to backend...');
+                console.log('Use LLM:', useLLM);
+
+                const response = await fetch(`/analyze?use_llm=${useLLM}`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error('Backend error: ' + response.status);
+                }
+
+                const data = await response.json();
+                console.log('Backend response:', data);
+
+                if (!data.success) {
+                    throw new Error(data.message || 'Analysis failed');
+                }
+
+                displayResults(data);
+
+            } catch (error) {
+                alert('Błąd połączenia z backendem: ' + error.message);
+                console.error('Error:', error);
+            } finally {
+                // Re-enable button and hide loading
+                analyzeBtn.disabled = false;
+                loadingDiv.classList.remove('active');
+            }
+        }
+
+        function displayResults(data) {
+            // Display document statistics
+            const metadata = data.document_metadata || {};
+            const stats = data.aggregate_stats || {};
+
+            document.getElementById('wordCount').textContent = metadata.total_words || 0;
+            document.getElementById('charCountResult').textContent = textInput.value.length;
+            document.getElementById('articleCount').textContent = stats.total_articles || 0;
+            document.getElementById('sentenceCount').textContent = stats.total_sentences || 0;
+            document.getElementById('avgSA').textContent = stats.average_SA || 0;
+            document.getElementById('criticalCount').textContent = stats.critical_sentences || 0;
+            document.getElementById('warningCount').textContent = stats.warning_sentences || 0;
+
+            // Display metrics table
+            const tableBody = document.getElementById('tableBody');
+            tableBody.innerHTML = '';
+
+            (data.metrics_table || []).forEach(row => {
+                let saClass = 'sa-good';
+                let ocena = 'Dobry';
+                if (row.SA < 10) {
+                    saClass = 'sa-critical';
+                    ocena = 'Krytyczny';
+                } else if (row.SA < 30) {
+                    saClass = 'sa-warning';
+                    ocena = 'Wymaga poprawy';
+                }
+
+                const tr = `
+                    <tr>
+                        <td>${row.text_preview || row.full_text.substring(0, 100)}...</td>
+                        <td class="${saClass}"><strong>${row.SA}%</strong></td>
+                        <td>${row.D}</td>
+                        <td>${row.S}</td>
+                        <td>${row.E}</td>
+                        <td>${ocena}</td>
+                    </tr>
+                `;
+                tableBody.innerHTML += tr;
+            });
+
+            // Display recommendations
+            const recommendations = document.getElementById('recommendations');
+            recommendations.innerHTML = '';
+
+            if (!data.recommendations || data.recommendations.length === 0) {
+                recommendations.innerHTML = `
+                    <div style="background: #d1fae5; padding: 15px; border-radius: 4px;">
+                        ✅ <strong>Świetnie!</strong> Wszystkie przepisy są czytelne (SA &gt; 30%)
+                    </div>
+                `;
+            } else {
+                (data.recommendations || []).forEach((rec, i) => {
+                    // Check if this is LLM-generated (has rich formatting) or simple template
+                    const hasLLMContent = rec.example_better_version && rec.example_better_version.includes('╔═══');
+
+                    let recHtml;
+                    if (hasLLMContent) {
+                        // Rich LLM output - display in monospace with preserved formatting
+                        recHtml = `
+                            <div style="background: #ffffff; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 2px solid #2563eb;">
+                                <h3 style="margin-bottom: 15px; color: #2563eb;">📌 Rekomendacja #${i + 1}</h3>
+                                <div style="background: #f9fafb; padding: 10px; border-radius: 4px; margin-bottom: 15px;">
+                                    <strong>Analizowany przepis (SA: ${rec.SA_percent}%):</strong><br>
+                                    <em style="color: #666;">"${rec.text_preview}..."</em>
+                                </div>
+                                <pre style="
+                                    font-family: 'Consolas', 'Monaco', monospace;
+                                    font-size: 13px;
+                                    line-height: 1.5;
+                                    white-space: pre-wrap;
+                                    word-wrap: break-word;
+                                    background: #f9fafb;
+                                    padding: 15px;
+                                    border-radius: 4px;
+                                    border-left: 4px solid #2563eb;
+                                    overflow-x: auto;
+                                ">${rec.example_better_version}</pre>
+                            </div>
+                        `;
+                    } else {
+                        // Simple template output - use old format
+                        recHtml = `
+                            <div style="background: #fef3c7; padding: 15px; border-radius: 4px; margin-bottom: 10px;">
+                                <h3>📌 Rekomendacja #${i + 1}</h3>
+                                <p><strong>Tekst:</strong> ${rec.text_preview}</p>
+                                <p><strong>SA:</strong> ${rec.SA_percent}% - ${rec.severity}</p>
+                                <p><strong>Problem:</strong> ${rec.main_problem_detailed}</p>
+                                <p><strong>Szybkie poprawki:</strong></p>
+                                <ul style="margin-left: 20px;">
+                                    ${rec.quick_fixes.map(f => `<li>${f}</li>`).join('')}
+                                </ul>
+                            </div>
+                        `;
+                    }
+
+                    recommendations.innerHTML += recHtml;
+                });
+            }
+
+            // Show results
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>GTMØ Demo - Standalone</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 1000px; margin: 0 auto; background: #f5f5f5; }
+        h1 { color: #2563eb; margin-bottom: 20px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        textarea { width: 100%; height: 150px; padding: 10px; border: 2px solid #ddd; border-radius: 4px; font-size: 14px; }
+        button { background: #2563eb; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; margin-top: 10px; }
+        button:hover { background: #1d4ed8; }
+        .counter { text-align: right; margin-top: 5px; color: #666; }
+        .result { margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+        th { background: #2563eb; color: white; }
+        .sa-good { background: #d1fae5; }
+        .sa-warning { background: #fef3c7; }
+        .sa-critical { background: #fee2e2; }
+    </style>
+</head>
+<body>
+    <h1>🏛️ GTMØ Constitutional Metrics Analyzer - DEMO</h1>
+
+    <div class="card">
+        <h2>📝 Wpisz tekst ustawy (max 1200 znaków)</h2>
+        <textarea id="textInput" maxlength="1200" placeholder="Przykład:
+Art. 1. Ustawa określa zasady ochrony zdrowia publicznego przed skutkami nadużywania alkoholu.
+
+Art. 2. Ilekroć w ustawie jest mowa o napojach alkoholowych, rozumie się przez to napoje zawierające alkohol etylowy w stężeniu przekraczającym 0,5% objętościowych."></textarea>
+        <div class="counter"><span id="charCount">0</span> / 1200 znaków</div>
+        <button onclick="analyze()">🔍 Analizuj (DEMO - symulowane wyniki)</button>
+    </div>
+
+    <div id="results" style="display:none;">
+        <div class="card">
+            <h2>📊 Statystyki</h2>
+            <p><strong>Słowa:</strong> <span id="wordCount"></span></p>
+            <p><strong>Znaki:</strong> <span id="charCountResult"></span></p>
+        </div>
+
+        <div class="card">
+            <h2>📈 Metryki GTMØ (przykładowe)</h2>
+            <p style="color: #666; margin-bottom: 15px;">
+                <strong>Uwaga:</strong> To jest demo bez backendu. Wyniki są symulowane losowo.
+                Rzeczywista analiza wymaga uruchomienia backendu Python.
+            </p>
+            <table id="metricsTable">
+                <thead>
+                    <tr>
+                        <th>Tekst</th>
+                        <th>SA (%)</th>
+                        <th>D</th>
+                        <th>S</th>
+                        <th>E</th>
+                        <th>Ocena</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>💡 Przykładowe rekomendacje</h2>
+            <div id="recommendations"></div>
+        </div>
+    </div>
+
+    <script>
+        const textInput = document.getElementById('textInput');
+        const charCountSpan = document.getElementById('charCount');
+
+        textInput.addEventListener('input', () => {
+            charCountSpan.textContent = textInput.value.length;
+        });
+
+        function analyze() {
+            const text = textInput.value.trim();
+
+            if (!text) {
+                alert('Proszę wpisać tekst!');
+                return;
+            }
+
+            if (text.length < 10) {
+                alert('Tekst jest za krótki (min. 10 znaków)');
+                return;
+            }
+
+            // Symuluj analizę
+            const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
+            const wordCount = text.split(/\s+/).filter(w => w.length > 0).length;
+
+            // Statystyki
+            document.getElementById('wordCount').textContent = wordCount;
+            document.getElementById('charCountResult').textContent = text.length;
+
+            // Generuj losowe metryki
+            const tableBody = document.getElementById('tableBody');
+            tableBody.innerHTML = '';
+
+            sentences.slice(0, 5).forEach((sentence, i) => {
+                const sa = Math.random() * 60 + 20; // 20-80%
+                const d = (Math.random() * 0.4 + 0.5).toFixed(2); // 0.5-0.9
+                const s = (Math.random() * 0.4 + 0.5).toFixed(2);
+                const e = (Math.random() * 0.5 + 0.2).toFixed(2);
+
+                let saClass = 'sa-good';
+                let ocena = 'Dobry';
+                if (sa < 30) {
+                    saClass = 'sa-critical';
+                    ocena = 'Krytyczny';
+                } else if (sa < 50) {
+                    saClass = 'sa-warning';
+                    ocena = 'Wymaga poprawy';
+                }
+
+                const row = `
+                    <tr>
+                        <td>${sentence.trim().substring(0, 100)}...</td>
+                        <td class="${saClass}"><strong>${sa.toFixed(1)}%</strong></td>
+                        <td>${d}</td>
+                        <td>${s}</td>
+                        <td>${e}</td>
+                        <td>${ocena}</td>
+                    </tr>
+                `;
+                tableBody.innerHTML += row;
+            });
+
+            // Rekomendacje
+            const recommendations = document.getElementById('recommendations');
+            recommendations.innerHTML = `
+                <div style="background: #fef3c7; padding: 15px; border-radius: 4px; margin-bottom: 10px;">
+                    <h3>📌 Rekomendacja #1</h3>
+                    <p><strong>Problem:</strong> Zdania są zbyt długie i skomplikowane</p>
+                    <p><strong>Rozwiązanie:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Rozbij długie zdania na 2-3 krótsze</li>
+                        <li>Uprość słownictwo prawnicze</li>
+                        <li>Użyj listy punktowanej gdzie możliwe</li>
+                    </ul>
+                </div>
+                <div style="background: #d1fae5; padding: 15px; border-radius: 4px;">
+                    <p><strong>Uwaga:</strong> To są przykładowe rekomendacje. Dla szczegółowej analizy potrzebny jest backend z Claude API.</p>
+                </div>
+            `;
+
+            // Pokaż wyniki
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

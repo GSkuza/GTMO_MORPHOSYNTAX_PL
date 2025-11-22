@@ -308,6 +308,103 @@ class GTMORhetoricalAnalyzer:
         
         return transformed_coords, mode, metadata
 
+    def detect_formal_register_violation(
+        self,
+        text: str,
+        irony_score: float,
+        context_type: str = 'legal'
+    ) -> Dict:
+        """
+        Wykrywa naruszenia rejestru formalnego w tekstach prawnych.
+
+        Sprawdza:
+        1. Wulgaryzmy i język potoczny
+        2. Slang i bełkot
+        3. Wysoką ironię (> 0.7) jako anomalię
+        4. Niespójność stylistyczną
+
+        Args:
+            text: Tekst do analizy
+            irony_score: Wynik analizy ironii (0-1)
+            context_type: Typ kontekstu ('legal', 'formal', 'informal')
+
+        Returns:
+            Dict ze szczegółami naruszenia rejestru
+        """
+
+        # Lista wulgaryzmów i języka nieformalnego
+        VULGAR_WORDS = {
+            # Wulgaryzmy
+            'jebany', 'kurwa', 'pierdol', 'chuj', 'dupa', 'gówno',
+            'srać', 'pierdolić', 'kurewsk', 'zajebist',
+            # Slang i potoczyzmy
+            'koleś', 'ziom', 'fajn', 'spoko', 'git', 'ogarn',
+            'mega', 'super', 'ekstra', 'zajebiście',
+            # Bełkot / nonsens
+            'bzdura', 'bullshit', 'gówniany', 'sratwy'
+        }
+
+        # Markery języka nieformalnego
+        INFORMAL_MARKERS = {
+            'no', 'jak', 'jakby', 'typu', 'znaczy', 'wiesz',
+            'elo', 'hej', 'cześć', 'siema'
+        }
+
+        text_lower = text.lower()
+        words = text_lower.split()
+
+        # Wykryj wulgaryzmy
+        vulgar_found = []
+        for word in VULGAR_WORDS:
+            if word in text_lower:
+                vulgar_found.append(word)
+
+        # Wykryj markery nieformalne
+        informal_found = []
+        for marker in INFORMAL_MARKERS:
+            if f' {marker} ' in f' {text_lower} ':
+                informal_found.append(marker)
+
+        # Oblicz severity
+        register_violation_score = 0.0
+        anomaly_type = None
+        severity = 'NONE'
+
+        # Wulgaryzmy w kontekście formalnym = CRITICAL
+        if vulgar_found and context_type in ['legal', 'formal']:
+            register_violation_score = 1.0
+            anomaly_type = 'VULGAR_IN_FORMAL_CONTEXT'
+            severity = 'CRITICAL'
+
+        # Wysoka ironia (> 0.7) w tekście prawnym = ANOMALY
+        elif irony_score > 0.7 and context_type == 'legal':
+            register_violation_score = min(irony_score, 1.0)
+            anomaly_type = 'HIGH_IRONY_IN_LEGAL'
+            severity = 'HIGH'
+
+        # Nadmiar markerów nieformalnych
+        elif len(informal_found) >= 3:
+            register_violation_score = min(len(informal_found) / 5.0, 1.0)
+            anomaly_type = 'EXCESSIVE_INFORMAL_MARKERS'
+            severity = 'MODERATE'
+
+        # Pojedyncze markery nieformalne
+        elif informal_found:
+            register_violation_score = 0.3
+            anomaly_type = 'INFORMAL_MARKERS_PRESENT'
+            severity = 'LOW'
+
+        return {
+            'has_violation': register_violation_score > 0.0,
+            'violation_score': register_violation_score,
+            'anomaly_type': anomaly_type,
+            'severity': severity,
+            'vulgar_words_found': vulgar_found,
+            'informal_markers_found': informal_found,
+            'irony_triggered': irony_score > 0.7,
+            'classification': 'IRRATIONAL_ANOMALY' if severity in ['CRITICAL', 'HIGH'] else None
+        }
+
 
 def integrate_with_gtmo(text: str, base_result: Dict) -> Dict:
     """

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>GTMØ - Prosty Test</title>
+    <style>
+        body { font-family: Arial; padding: 20px; max-width: 800px; margin: 0 auto; }
+        textarea { width: 100%; height: 150px; font-size: 14px; padding: 10px; }
+        button { padding: 15px 30px; font-size: 16px; background: #2563eb; color: white; border: none; cursor: pointer; margin: 10px 0; }
+        button:hover { background: #1d4ed8; }
+        .result { margin-top: 20px; padding: 15px; background: #f0f0f0; border-radius: 5px; }
+        .error { background: #fee; color: #c00; }
+        .success { background: #efe; color: #060; }
+    </style>
+</head>
+<body>
+    <h1>🏛️ GTMØ - Prosty Test</h1>
+
+    <h3>Wpisz tekst (max 1200 znaków):</h3>
+    <textarea id="text" maxlength="1200">Art. 1. Prawo nic nie znaczy dla bogaczy, którzy mogą sobie pozwolić na wszystko.</textarea>
+
+    <div>
+        <button onclick="testBackend()">1️⃣ Test Backendu</button>
+        <button onclick="analyzeText()">2️⃣ Analizuj Tekst</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+        const API_URL = 'http://127.0.0.1:8000';
+
+        function showResult(message, isError = false) {
+            const div = document.getElementById('result');
+            div.className = 'result ' + (isError ? 'error' : 'success');
+            div.innerHTML = message;
+        }
+
+        async function testBackend() {
+            showResult('⏳ Testuję backend...');
+
+            try {
+                const response = await fetch(`${API_URL}/health`);
+                const data = await response.json();
+
+                showResult(`
+                    <h3>✅ Backend działa!</h3>
+                    <pre>${JSON.stringify(data, null, 2)}</pre>
+                    <p>Możesz teraz kliknąć "Analizuj Tekst"</p>
+                `);
+            } catch (error) {
+                showResult(`
+                    <h3>❌ Błąd połączenia</h3>
+                    <p>${error.message}</p>
+                    <p><strong>Sprawdź:</strong></p>
+                    <ul>
+                        <li>Backend działa? <code>python demo_webapp/api/main.py</code></li>
+                        <li>Port 8000: <a href="${API_URL}/docs" target="_blank">${API_URL}/docs</a></li>
+                        <li>Firewall/Antywirus nie blokuje?</li>
+                    </ul>
+                `, true);
+            }
+        }
+
+        async function analyzeText() {
+            const text = document.getElementById('text').value.trim();
+
+            if (!text || text.length < 10) {
+                showResult('❌ Tekst jest za krótki (minimum 10 znaków)', true);
+                return;
+            }
+
+            showResult('⏳ Analizuję... (to może potrwać 2-5 minut)');
+
+            try {
+                // Create file from text
+                const blob = new Blob([text], { type: 'text/plain' });
+                const file = new File([blob], 'user_input.txt', { type: 'text/plain' });
+
+                const formData = new FormData();
+                formData.append('file', file);
+
+                console.log('Sending to:', `${API_URL}/analyze?use_llm=false`);
+
+                const response = await fetch(`${API_URL}/analyze?use_llm=false`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                console.log('Response status:', response.status);
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(`Server error ${response.status}: ${errorText}`);
+                }
+
+                const data = await response.json();
+                console.log('Result:', data);
+
+                if (!data.success) {
+                    throw new Error(data.message || 'Analiza nie powiodła się');
+                }
+
+                // Display results
+                const stats = data.aggregate_stats || {};
+                const metrics = data.metrics_table || [];
+
+                let html = `
+                    <h3>✅ Analiza zakończona!</h3>
+                    <h4>📊 Statystyki:</h4>
+                    <ul>
+                        <li>Zdania: ${stats.total_sentences || 0}</li>
+                        <li>Słowa: ${stats.total_words || 0}</li>
+                        <li>Średnia SA: ${stats.average_SA || 0}%</li>
+                        <li>Krytyczne: ${stats.critical_sentences || 0}</li>
+                        <li>Ostrzeżenia: ${stats.warning_sentences || 0}</li>
+                    </ul>
+                    <h4>📈 Pierwsze 3 zdania:</h4>
+                    <table border="1" cellpadding="5" style="width:100%; border-collapse:collapse;">
+                        <tr>
+                            <th>Tekst</th>
+                            <th>SA (%)</th>
+                            <th>D</th>
+                            <th>S</th>
+                            <th>E</th>
+                        </tr>
+                `;
+
+                metrics.slice(0, 3).forEach(row => {
+                    const saColor = row.SA < 10 ? '#fcc' : row.SA < 30 ? '#ffc' : '#cfc';
+                    html += `
+                        <tr style="background: ${saColor}">
+                            <td>${row.text_preview}</td>
+                            <td><strong>${row.SA}%</strong></td>
+                            <td>${row.D}</td>
+                            <td>${row.S}</td>
+                            <td>${row.E}</td>
+                        </tr>
+                    `;
+                });
+
+                html += `</table>`;
+
+                showResult(html);
+
+            } catch (error) {
+                console.error('Full error:', error);
+                showResult(`
+                    <h3>❌ Błąd podczas analizy</h3>
+                    <p>${error.message}</p>
+                    <p>Sprawdź konsolę przeglądarki (F12) dla szczegółów</p>
+                `, true);
+            }
+        }
+
+        // Auto-test on load
+        window.addEventListener('load', () => {
+            console.log('Page loaded. Click "Test Backendu" to check connection.');
+        });
+    </script>
+</body>
+</html>

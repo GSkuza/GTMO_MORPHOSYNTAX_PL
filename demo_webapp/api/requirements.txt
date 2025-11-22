@@ -1,0 +1,21 @@
+# FastAPI and server
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.9
+python-dotenv==1.0.0
+
+# GTMØ dependencies
+anthropic>=0.18.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.18.0
+numpy>=1.24.0
+
+# Core analysis dependencies (should already be installed)
+morfeusz2>=1.9.9
+spacy>=3.5.0
+stanza>=1.5.0
+transformers>=4.35.0
+torch>=2.0.0
+sentence-transformers>=2.2.0
