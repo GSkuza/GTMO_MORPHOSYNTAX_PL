@@ -1030,6 +1030,19 @@ class QuantumMorphosyntaxEngine:
         self._herbert_model = herbert_model
         self._sentence_model = None
 
+        # Initialize Adelic Semantic Layer
+        try:
+            from gtmo_adelic_layer import AdelicSemanticLayer
+            self.adelic_layer = AdelicSemanticLayer(
+                epsilon=0.15,
+                kappa_comm=1.0,
+                kappa_context=0.5
+            )
+            logger.info("✔ Adelic Semantic Layer initialized")
+        except ImportError:
+            self.adelic_layer = None
+            logger.warning("✗ Adelic Layer not available")
+
     # =========================================================================
     # FIXED: HELPER METHODS FOR ENTROPY MEASUREMENT
     # =========================================================================
@@ -3059,6 +3072,99 @@ class EnhancedGTMOProcessor:
             'legal_coherence_score': float(coherence),
             'smoking_gun_count': smoking_gun_count
         }
+
+    # =================================================================
+    # ADELIC SEMANTIC LAYER INTEGRATION
+    # =================================================================
+
+    def analyze_adelic(
+        self,
+        text: str,
+        observers: Optional[List] = None,
+        context_attractor_name: Optional[str] = None,
+        metric: str = 'phi9',
+        source_file: Optional[Dict] = None
+    ) -> Dict[str, Any]:
+        """
+        Analiza tekstu z warstwą adeliczną (p-adyczna emergencja semantyczna).
+
+        Wykonuje:
+        1. Standardową analizę GTMØ → base_coords [D, S, E]
+        2. Aplikację biasów obserwatorów → lokalne interpretacje
+        3. Próbę adelicznej emergencji (jeśli n ≥ 2)
+        4. Obliczenie energii komunikacyjnej V_Comm
+        5. Gradienty kolapsu (jeśli brak emergencji)
+
+        Args:
+            text: Tekst do analizy
+            observers: Lista obserwatorów (jeśli None, użyje domyślnych)
+            context_attractor_name: Nazwa attraktora kontekstowego ('Ψᴷ', 'Ψˢ', etc.)
+            metric: Metryka ('phi9' lub 'euclidean')
+            source_file: Opcjonalne metadane źródła
+
+        Returns:
+            Dict z pełnymi wynikami (GTMØ + adeliczne):
+            {
+                'gtmo_coordinates': {...},  # Standardowe wyniki GTMØ
+                'adelic': {
+                    'emerged': bool,
+                    'global_value': Optional[list],
+                    'local_values': Dict,
+                    'synchronization_energy': float,
+                    'n_observers': int,
+                    'collapse_gradients': Optional[Dict],
+                    'diagnosis': Optional[Dict],
+                    'status': str
+                }
+            }
+
+        Example:
+            >>> engine = GTMOMorphosyntaxEngine()
+            >>> result = engine.analyze_adelic("Świetny pomysł")
+            >>> print(result['adelic']['emerged'])  # True lub False
+        """
+        if self.adelic_layer is None:
+            logger.warning("Adelic layer not initialized - returning standard analysis only")
+            return self.gtmo_analyze_quantum(text, source_file=source_file)
+
+        # 1. Standardowa analiza GTMØ
+        base_result = self.gtmo_analyze_quantum(text, source_file=source_file)
+
+        # Ekstrahuj bazowe współrzędne
+        base_coords = np.array([
+            base_result['gtmo_coordinates']['determination'],
+            base_result['gtmo_coordinates']['stability'],
+            base_result['gtmo_coordinates']['entropy']
+        ])
+
+        # 2. Przygotuj atraktor kontekstowy (jeśli podano nazwę)
+        context_attractor = None
+        if context_attractor_name is not None:
+            # Mapowanie nazw atraktorów na współrzędne
+            attractor_map = {
+                'Ψᴷ': np.array([0.85, 0.85, 0.15]),  # Certainty/Knowledge
+                'Ψˢ': np.array([0.25, 0.30, 0.85]),  # Sarcasm/Chaos
+                'Ψʰ': np.array([0.15, 0.15, 0.85]),  # Chaos
+                'Ψᴺ': np.array([0.50, 0.30, 0.90]),  # Neologism
+                'Ψ~': np.array([0.50, 0.50, 0.80]),  # Meta-reflection
+            }
+            context_attractor = attractor_map.get(context_attractor_name)
+
+        # 3. Analiza adeliczna
+        adelic_result = self.adelic_layer.analyze_with_observers(
+            text=text,
+            base_coords=base_coords,
+            observers=observers,
+            context_attractor=context_attractor,
+            context_name=context_attractor_name,
+            metric=metric
+        )
+
+        # 4. Połącz wyniki
+        base_result['adelic'] = adelic_result
+
+        return base_result
+
 
 # ==================================================
 # TEST IMPLEMENTATION
