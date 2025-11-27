@@ -721,23 +721,37 @@ class AdelicSemanticLayer:
         epsilon: float = 0.15,
         kappa_comm: float = 1.0,
         kappa_context: float = 0.5,
-        cache_size: int = 1000
+        cache_size: int = 1000,
+        use_energy_threshold: bool = True,
+        energy_threshold_emerged: float = 100.0,
+        energy_threshold_borderline: float = 150.0
     ):
         """
         Inicjalizacja warstwy adelicznej.
 
         Args:
             default_observers: Domyślni obserwatorzy (jeśli None, tworzy standardowy zestaw)
-            epsilon: Próg emergencji adelicznej
+            epsilon: Próg emergencji adelicznej (używany jeśli use_energy_threshold=False)
             kappa_comm: Stała komunikacyjna
             kappa_context: Stała kontekstowa
             cache_size: Maksymalny rozmiar cache pierścieni
+            use_energy_threshold: Czy używać progów V_Comm zamiast epsilon (zalecane)
+            energy_threshold_emerged: Próg V_Comm dla emergencji (domyślnie 100)
+            energy_threshold_borderline: Próg V_Comm dla borderline (domyślnie 150)
         """
         self.observers = default_observers if default_observers is not None else create_standard_observers()
         self.epsilon = epsilon
+        self.base_epsilon = epsilon  # Zachowaj oryginalny epsilon
         self.kappa_comm = kappa_comm
         self.kappa_context = kappa_context
         self.cache_size = cache_size
+
+        # Kalibracja energii V_Comm
+        self.use_energy_threshold = use_energy_threshold
+        self.energy_threshold_emerged = energy_threshold_emerged
+        self.energy_threshold_borderline = energy_threshold_borderline
+        self.observed_energies: List[float] = []  # Historia energii dla auto-kalibracji
+        self.calibrated = False
 
         # Cache pierścieni adelicznych {word: AdelicRing}
         self.adelic_rings: Dict[str, AdelicRing] = {}
@@ -747,7 +761,12 @@ class AdelicSemanticLayer:
         self.successful_emergences = 0
         self.failed_emergences = 0
 
-        logger.info(f"AdelicSemanticLayer initialized with {len(self.observers)} observers, ε={epsilon}")
+        if use_energy_threshold:
+            logger.info(f"AdelicSemanticLayer initialized with {len(self.observers)} observers, "
+                       f"V_Comm thresholds: emerged<{energy_threshold_emerged}, "
+                       f"borderline<{energy_threshold_borderline}")
+        else:
+            logger.info(f"AdelicSemanticLayer initialized with {len(self.observers)} observers, ε={epsilon}")
 
     def analyze_with_observers(
         self,
@@ -811,12 +830,37 @@ class AdelicSemanticLayer:
         # Oblicz energię synchronizacyjną
         sync_energy = ring.compute_synchronization_energy(metric=metric)
 
-        # Próba emergencji
-        emerged, global_value = ring.attempt_emergence(
-            epsilon=self.epsilon,
-            context_attractor=context_attractor,
-            metric=metric
-        )
+        # Zapisz energię dla kalibracji
+        self.observed_energies.append(sync_energy)
+
+        # Próba emergencji - użyj V_Comm threshold jeśli włączony
+        if self.use_energy_threshold:
+            # Nowy mechanizm: porównaj V_Comm z progami energii
+            if sync_energy < self.energy_threshold_emerged:
+                emerged = True
+                status = 'emerged'
+                # Oblicz globalną wartość jako consensus
+                coords_list = [av.local_value for av in ring.local_values.values()]
+                global_value = np.clip(np.mean(coords_list, axis=0), 0, 1)
+                # Oznacz jako collapsed
+                for av in ring.local_values.values():
+                    av.can_collapse = True
+            elif sync_energy < self.energy_threshold_borderline:
+                emerged = False
+                status = 'borderline'
+                global_value = None
+            else:
+                emerged = False
+                status = 'alienated'
+                global_value = None
+        else:
+            # Stary mechanizm: użyj epsilon i pairwise distances
+            emerged, global_value = ring.attempt_emergence(
+                epsilon=self.epsilon,
+                context_attractor=context_attractor,
+                metric=metric
+            )
+            status = 'emerged' if emerged else 'alienated'
 
         # Przygotuj wynik
         result = {
@@ -829,17 +873,23 @@ class AdelicSemanticLayer:
             'synchronization_energy': sync_energy,
             'n_observers': len(ring.local_values),
             'metric': metric,
-            'epsilon': self.epsilon,
-            'text': text
+            'text': text,
+            'status': status
         }
+
+        # Dodaj informacje o progach jeśli używamy energy threshold
+        if self.use_energy_threshold:
+            result['energy_threshold_emerged'] = self.energy_threshold_emerged
+            result['energy_threshold_borderline'] = self.energy_threshold_borderline
+            result['calibrated'] = self.calibrated
+        else:
+            result['epsilon'] = self.epsilon
 
         # Aktualizuj statystyki
         if emerged:
             self.successful_emergences += 1
-            result['status'] = 'emerged'
         else:
             self.failed_emergences += 1
-            result['status'] = 'alienated'
 
             # Oblicz gradienty kolapsu jeśli mamy atraktor kontekstowy
             if context_attractor is not None and len(ring.local_values) >= 2:
@@ -853,14 +903,15 @@ class AdelicSemanticLayer:
                 }
                 result['context_attractor'] = context_name
 
-            # Diagnoza niepowodzenia
-            from gtmo_adelic_metrics import diagnose_emergence_failure
-            diagnosis = diagnose_emergence_failure(
-                [av.local_value for av in ring.local_values.values()],
-                epsilon=self.epsilon,
-                metric=metric
-            )
-            result['diagnosis'] = diagnosis
+            # Diagnoza niepowodzenia (tylko jeśli nie używamy energy threshold)
+            if not self.use_energy_threshold:
+                from gtmo_adelic_metrics import diagnose_emergence_failure
+                diagnosis = diagnose_emergence_failure(
+                    [av.local_value for av in ring.local_values.values()],
+                    epsilon=self.epsilon,
+                    metric=metric
+                )
+                result['diagnosis'] = diagnosis
 
         return result
 
@@ -1002,6 +1053,55 @@ class AdelicSemanticLayer:
             'metric': metric
         }
 
+    def calibrate_epsilon(self, min_samples: int = 20, percentile_emerged: float = 40, percentile_borderline: float = 70):
+        """
+        Automatyczna kalibracja progów energii na podstawie obserwowanych wartości V_Comm.
+
+        Analizuje rozkład energii i ustawia progi tak, aby:
+        - Teksty faktyczne (niskie energie) były klasyfikowane jako EMERGED
+        - Teksty patologiczne (wysokie energie) jako ALIENATED
+        - Środkowe jako BORDERLINE
+
+        Args:
+            min_samples: Minimalna liczba obserwacji do kalibracji
+            percentile_emerged: Percentyl dla progu emergencji (domyślnie 40)
+            percentile_borderline: Percentyl dla progu borderline (domyślnie 70)
+
+        Returns:
+            True jeśli kalibracja się powiodła, False jeśli za mało danych
+        """
+        if len(self.observed_energies) < min_samples:
+            logger.warning(f"Not enough observations for calibration ({len(self.observed_energies)} < {min_samples})")
+            return False
+
+        energies = np.array(self.observed_energies)
+
+        # Oblicz percentyle
+        p_emerged = np.percentile(energies, percentile_emerged)
+        p_borderline = np.percentile(energies, percentile_borderline)
+
+        # Statystyki dla logowania
+        mean_energy = np.mean(energies)
+        median_energy = np.median(energies)
+        std_energy = np.std(energies)
+        min_energy = np.min(energies)
+        max_energy = np.max(energies)
+
+        logger.info(f"Calibration based on {len(energies)} observations:")
+        logger.info(f"  V_Comm range: [{min_energy:.1f}, {max_energy:.1f}]")
+        logger.info(f"  Mean: {mean_energy:.1f}, Median: {median_energy:.1f}, Std: {std_energy:.1f}")
+        logger.info(f"  Percentiles: P{percentile_emerged}={p_emerged:.1f}, P{percentile_borderline}={p_borderline:.1f}")
+
+        # Ustaw nowe progi
+        self.energy_threshold_emerged = float(p_emerged)
+        self.energy_threshold_borderline = float(p_borderline)
+        self.calibrated = True
+
+        logger.info(f"✅ Calibrated thresholds: EMERGED<{self.energy_threshold_emerged:.1f}, "
+                   f"BORDERLINE<{self.energy_threshold_borderline:.1f}, ALIENATED≥{self.energy_threshold_borderline:.1f}")
+
+        return True
+
     def get_or_create_ring(self, word: str, base_coords: np.ndarray) -> AdelicRing:
         """
         Pobiera istniejący lub tworzy nowy pierścień adeliczny dla słowa.
@@ -1107,7 +1207,8 @@ class AdelicSemanticLayer:
 # TESTY MODUŁU
 # =============================================================================
 
-if __name__ == "__main__":
+def run_tests():
+    """Uruchamia testy wbudowane modułu."""
     print("=" * 60)
     print("GTMØ Adelic Layer - Test modułu")
     print("=" * 60)
@@ -1162,3 +1263,149 @@ if __name__ == "__main__":
     print("\n" + "=" * 60)
     print("✓ Moduł gtmo_adelic_layer.py załadowany pomyślnie")
     print("=" * 60)
+
+
+def analyze_file_with_adelic(file_path: str, epsilon: float = None):
+    """
+    Analizuje plik tekstowy z warstwą adeliczną.
+
+    Args:
+        file_path: Ścieżka do pliku tekstowego
+        epsilon: Próg emergencji (jeśli None, używa V_Comm thresholds)
+    """
+    from pathlib import Path
+
+    # Wczytaj plik
+    path = Path(file_path)
+    if not path.exists():
+        print(f"❌ File not found: {file_path}")
+        return
+
+    print(f"📂 Loading: {path.name}")
+    with open(path, 'r', encoding='utf-8') as f:
+        text = f.read()
+
+    # Split na zdania (prosty split)
+    import re
+    sentences = re.split(r'[.!?]+\s+', text)
+    sentences = [s.strip() for s in sentences if s.strip() and len(s.strip()) > 10]
+
+    print(f"📄 Found {len(sentences)} sentences\n")
+
+    # Inicjalizuj adelic layer
+    if epsilon is None:
+        print(f"🔮 Initializing Adelic Layer with V_Comm thresholds...")
+        adelic = AdelicSemanticLayer(
+            use_energy_threshold=True,
+            energy_threshold_emerged=100.0,
+            energy_threshold_borderline=150.0
+        )
+        print(f"   {len(adelic.observers)} observers loaded")
+        print(f"   V_Comm thresholds: EMERGED<100, BORDERLINE<150, ALIENATED≥150\n")
+    else:
+        print(f"🔮 Initializing Adelic Layer (ε={epsilon})...")
+        adelic = AdelicSemanticLayer(epsilon=epsilon, use_energy_threshold=False)
+        print(f"   {len(adelic.observers)} observers loaded\n")
+
+    # Analizuj każde zdanie przez GTMØ najpierw
+    from gtmo_morphosyntax import analyze_dse_standard
+
+    emergences = 0
+    total = 0
+
+    print("=" * 70)
+    for idx, sentence in enumerate(sentences, 1):
+        print(f"\n📝 Sentence {idx}/{len(sentences)}")
+        print(f"   Text: {sentence[:80]}{'...' if len(sentence) > 80 else ''}")
+
+        # GTMØ analysis (standard mode - bez quantum)
+        try:
+            gtmo_result = analyze_dse_standard(sentence)
+            coords = gtmo_result['coordinates']
+            base_coords = np.array([
+                coords['determination'],
+                coords['stability'],
+                coords['entropy']
+            ])
+
+            print(f"   D-S-E: [{base_coords[0]:.3f}, {base_coords[1]:.3f}, {base_coords[2]:.3f}]")
+
+            if 'ambiguity' in gtmo_result:
+                print(f"   Ambiguity: {gtmo_result['ambiguity']:.3f}, Depth: {gtmo_result.get('depth', 0)}")
+
+        except Exception as e:
+            print(f"   ⚠️ GTMØ analysis failed: {e}")
+            continue
+
+        # Adelic analysis
+        try:
+            result = adelic.analyze_with_observers(
+                text=sentence,
+                base_coords=base_coords,
+                metric='phi9'
+            )
+
+            total += 1
+            emerged = result['emerged']
+            status = result['status']
+            if emerged:
+                emergences += 1
+
+            # Ikony statusu
+            if status == 'emerged':
+                status_icon = "✨"
+            elif status == 'borderline':
+                status_icon = "🟡"
+            else:
+                status_icon = "⚠️"
+
+            print(f"   {status_icon} Adelic: {status.upper()}")
+            print(f"      V_Comm Energy: {result['synchronization_energy']:.1f}")
+            print(f"      Observers: {result['n_observers']}")
+
+            if emerged:
+                gv = result['global_value']
+                print(f"      Global φ_∞: [{gv[0]:.3f}, {gv[1]:.3f}, {gv[2]:.3f}]")
+            elif status == 'borderline':
+                print(f"      ⚠️ Borderline - uncertain semantic convergence")
+
+        except Exception as e:
+            print(f"   ⚠️ Adelic analysis failed: {e}")
+
+    print("\n" + "=" * 70)
+    print(f"\n📊 Summary:")
+    print(f"   Total sentences: {total}")
+    print(f"   Emerged: {emergences} ({100*emergences/total if total > 0 else 0:.1f}%)")
+    print(f"   Alienated: {total - emergences} ({100*(total-emergences)/total if total > 0 else 0:.1f}%)")
+
+    if adelic.use_energy_threshold:
+        print(f"   Method: V_Comm thresholds (EMERGED<{adelic.energy_threshold_emerged}, "
+              f"BORDERLINE<{adelic.energy_threshold_borderline})")
+    else:
+        print(f"   Method: epsilon={epsilon}")
+
+
+if __name__ == "__main__":
+    import sys
+
+    # Sprawdź argumenty
+    if len(sys.argv) > 1:
+        # Pre-import gtmo_morphosyntax BEFORE any stdout manipulation
+        from gtmo_morphosyntax import analyze_dse_standard  # noqa: F401
+
+        # Now safe to wrap stdout for emoji output
+        import io
+        if sys.platform == 'win32' and hasattr(sys.stdout, 'buffer'):
+            sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+
+        # Plik podany jako argument - analizuj
+        file_path = sys.argv[1]
+
+        # Opcjonalny epsilon jako drugi argument
+        # Jeśli nie podano, użyje V_Comm thresholds (None)
+        epsilon = float(sys.argv[2]) if len(sys.argv) > 2 else None
+
+        analyze_file_with_adelic(file_path, epsilon=epsilon)
+    else:
+        # Brak argumentów - uruchom testy
+        run_tests()

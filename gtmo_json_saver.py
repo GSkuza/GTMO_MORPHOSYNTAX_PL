@@ -671,9 +671,18 @@ class GTMOOptimizedSaver:
 
         # Calculate aggregate metrics
         if analyses:
-            d_values = [a['coordinates']['determination'] for a in analyses if 'coordinates' in a]
-            s_values = [a['coordinates']['stability'] for a in analyses if 'coordinates' in a]
-            e_values = [a['coordinates']['entropy'] for a in analyses if 'coordinates' in a]
+            # Flatten nested sentences if we're processing articles
+            flat_analyses = []
+            if unit_type == "articles":
+                for article in analyses:
+                    if 'sentences' in article and article['sentences']:
+                        flat_analyses.extend(article['sentences'])
+            else:
+                flat_analyses = analyses
+
+            d_values = [a['coordinates']['determination'] for a in flat_analyses if 'coordinates' in a]
+            s_values = [a['coordinates']['stability'] for a in flat_analyses if 'coordinates' in a]
+            e_values = [a['coordinates']['entropy'] for a in flat_analyses if 'coordinates' in a]
 
             aggregate_coords = {
                 'determination': sum(d_values) / len(d_values) if d_values else 0.5,
@@ -681,10 +690,10 @@ class GTMOOptimizedSaver:
                 'entropy': sum(e_values) / len(e_values) if e_values else 0.5
             }
 
-            # Aggregate ambiguity and depth across units
+            # Aggregate ambiguity and depth across units (use flat_analyses)
             ambiguities = []
             depths = []
-            for a in analyses:
+            for a in flat_analyses:
                 # Prefer top-level keys if present, fallback to nested metrics
                 amb = a.get('ambiguity')
                 if amb is None:
@@ -698,10 +707,10 @@ class GTMOOptimizedSaver:
                 if dep is not None:
                     depths.append(int(dep))
 
-            # Aggregate geometric factors (with fallback to nested constitutional metrics)
+            # Aggregate geometric factors (with fallback to nested constitutional metrics, use flat_analyses)
             balances = []
             tensions = []
-            for a in analyses:
+            for a in flat_analyses:
                 bal = a.get('geometric_balance')
                 if bal is None:
                     bal = (
