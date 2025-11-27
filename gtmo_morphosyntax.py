@@ -60,13 +60,7 @@ except ImportError:
     CONSTITUTIONAL_DUALITY_AVAILABLE = False
     # print("✗ GTMØ Constitutional Duality Calculator not available")
 
-# Import file loader for markdown parsing
-try:
-    from gtmo_file_loader import load_markdown_file
-    FILE_LOADER_AVAILABLE = True
-except ImportError:
-    FILE_LOADER_AVAILABLE = False
-    # Fallback will be defined below if needed
+# Note: gtmo_file_loader is imported lazily where needed to avoid circular import
 
 # Import topological attractors module
 try:
@@ -2462,12 +2456,29 @@ class QuantumMorphosyntaxEngine:
         }
 
         if quantum_superposition_state:
+            # Oblicz Shannon entropy z prawdopodobieństw (alternatywa dla von Neumann)
+            probs = quantum_superposition_state['probabilities']
+            shannon_entropy = 0.0
+            for p in probs:
+                if p > 1e-10:
+                    shannon_entropy -= p * np.log2(p)
+
             result["quantum_ambiguity"]["superposition_state"] = {
                 "von_neumann_entropy": round(quantum_superposition_state['von_neumann_entropy'], 4),
+                "shannon_entropy": round(shannon_entropy, 4),  # Dodane: entropia Shannona
                 "uncertainty": round(quantum_superposition_state['uncertainty'], 4),
                 "num_states": len(quantum_superposition_state['states']),
                 "probabilities": [round(p, 4) for p in quantum_superposition_state['probabilities']]
             }
+
+            # Diagnostyka rozbieżności entropii
+            von_neumann = quantum_superposition_state['von_neumann_entropy']
+            if shannon_entropy > 0.1 and von_neumann < 0.01:
+                result["quantum_ambiguity"]["entropy_diagnostic"] = {
+                    "status": "DIVERGENT",
+                    "reason": "Shannon > 0 but von Neumann ≈ 0 indicates syntactic ambiguity without quantum superposition",
+                    "recommendation": "Use Shannon entropy for marker-based ambiguity analysis"
+                }
 
         # Add enhanced depth metrics
         result["depth_metrics"] = {
@@ -2536,13 +2547,15 @@ class QuantumMorphosyntaxEngine:
                 else:
                     print(f"  📝 LITERAL MODE (no rhetorical transformation)")
 
-                # Formal Register Violation Detection (dodane 22.11.2025)
+                # Formal Register Violation Detection (dodane 22.11.2025, poprawione 27.11.2025)
+                # Zmiana: auto-detekcja kontekstu zamiast hardcoded 'legal'
+                # Fix dla FALSE POSITIVES w formalnych tekstach prawnych
                 try:
                     irony_score = rhetorical_metadata.get('irony_score', 0.0)
                     register_violation = self.rhetorical_analyzer.detect_formal_register_violation(
                         text=text,
                         irony_score=irony_score,
-                        context_type='legal'
+                        context_type='auto'  # Auto-detekcja kontekstu prawnego
                     )
 
                     # Add to result
@@ -2559,6 +2572,12 @@ class QuantumMorphosyntaxEngine:
                             print(f"     Vulgar words: {', '.join(register_violation['vulgar_words_found'])}")
                         if register_violation.get('irony_triggered'):
                             print(f"     High irony in legal context: {irony_score:.2f}")
+
+                    # Informacja o wyciszonej ironii (dla debugowania)
+                    elif register_violation.get('irony_suppressed'):
+                        detected_ctx = register_violation.get('detected_context', 'unknown')
+                        print(f"  ✅ FORMAL LEGAL TEXT detected (context: {detected_ctx})")
+                        print(f"     Irony score {irony_score:.2f} SUPPRESSED (formal legal structure)")
 
                 except Exception as reg_err:
                     print(f"  ⚠️ Register violation detection failed: {reg_err}")
@@ -2893,6 +2912,144 @@ def batch_analyze_quantum_with_axioms(texts: List[str], source_file: str = "batc
 
     return results
 
+def analyze_dse_lite(text: str, source_file: str = "unknown") -> Dict:
+    """
+    Lightweight D-S-E analysis WITHOUT quantum mechanics.
+
+    Returns only basic coordinates:
+    - ✅ Morphological analysis (D-S-E from morphology)
+    - ✅ Syntactic analysis (D-S-E from syntax)
+    - ✅ Fused coordinates (weighted combination)
+    - ❌ NO quantum coherence/entanglement/superposition
+    - ❌ NO axiom checking
+    - ❌ NO embeddings (HerBERT)
+    - ❌ NO topological attractors
+
+    Fast and minimal - suitable for bulk processing.
+    """
+    if not text or not text.strip():
+        return {
+            'error': 'Empty text',
+            'coordinates': {'determination': 0.0, 'stability': 0.0, 'entropy': 1.0}
+        }
+
+    engine = _get_global_engine()
+
+    # Morphological analysis (ignore quantum states - third return value)
+    morph_coords, morph_meta, _ = engine.analyze_morphology_quantum(text)
+
+    # Syntactic analysis (ignore entanglements - third return value)
+    synt_coords, synt_meta, _ = engine.analyze_syntax_quantum(text, {})
+
+    # Calculate adaptive weights
+    morph_weight, synt_weight = engine.calculate_adaptive_weights(text, morph_meta, synt_meta)
+
+    # Fuse coordinates
+    final_coords = morph_weight * morph_coords + synt_weight * synt_coords
+    final_coords = np.clip(final_coords, 0, 1)
+
+    # Return minimal result
+    return {
+        'text': text[:100] + ('...' if len(text) > 100 else ''),
+        'source_file': source_file,
+        'coordinates': {
+            'determination': round(float(final_coords[0]), 4),
+            'stability': round(float(final_coords[1]), 4),
+            'entropy': round(float(final_coords[2]), 4)
+        },
+        'metadata': {
+            'morph_weight': round(float(morph_weight), 3),
+            'synt_weight': round(float(synt_weight), 3),
+            'word_count': len(text.split()),
+            'analysis_mode': 'lite'
+        }
+    }
+
+def analyze_dse_standard(text: str, source_file: str = "unknown") -> Dict:
+    """
+    Standard D-S-E analysis with additional metrics but WITHOUT quantum mechanics.
+
+    Returns:
+    - ✅ D-S-E coordinates (like lite)
+    - ✅ Ambiguity score (morphological)
+    - ✅ Max depth (syntactic)
+    - ✅ Geometric balance & tension (from constitutional calculator)
+    - ❌ NO quantum coherence/entanglement/superposition
+    - ❌ NO axiom checking
+    - ❌ NO embeddings (HerBERT)
+    - ❌ NO topological attractors
+
+    Suitable for detailed analysis without quantum overhead.
+    """
+    if not text or not text.strip():
+        return {
+            'error': 'Empty text',
+            'coordinates': {'determination': 0.0, 'stability': 0.0, 'entropy': 1.0},
+            'ambiguity': 0.0,
+            'depth': 0,
+            'geometric_balance': 0.0,
+            'geometric_tension': 0.0
+        }
+
+    engine = _get_global_engine()
+
+    # Morphological analysis (ignore quantum states - third return value)
+    morph_coords, morph_meta, _ = engine.analyze_morphology_quantum(text)
+
+    # Syntactic analysis (ignore entanglements - third return value)
+    synt_coords, synt_meta, _ = engine.analyze_syntax_quantum(text, {})
+
+    # Calculate adaptive weights
+    morph_weight, synt_weight = engine.calculate_adaptive_weights(text, morph_meta, synt_meta)
+
+    # Fuse coordinates
+    final_coords = morph_weight * morph_coords + synt_weight * synt_coords
+    final_coords = np.clip(final_coords, 0, 1)
+
+    # Extract additional metrics
+    D, S, E = float(final_coords[0]), float(final_coords[1]), float(final_coords[2])
+    ambiguity = morph_meta.get('ambiguity', 1.0)
+    max_depth = synt_meta.get('max_depth', 0)
+
+    # Calculate geometric metrics using constitutional calculator (if available)
+    geometric_balance = 0.0
+    geometric_tension = 0.0
+
+    if engine.constitutional_calculator:
+        try:
+            const_metrics = engine.constitutional_calculator.calculate_metrics(
+                ambiguity=ambiguity,
+                depth=max_depth,
+                D=D,
+                S=S,
+                E=E
+            )
+            geometric_balance = float(const_metrics.geometric_balance)
+            geometric_tension = float(const_metrics.geometric_tension)
+        except Exception as e:
+            print(f"  ⚠️ Constitutional metrics calculation failed: {e}")
+
+    # Return standard result
+    return {
+        'text': text[:100] + ('...' if len(text) > 100 else ''),
+        'source_file': source_file,
+        'coordinates': {
+            'determination': round(D, 4),
+            'stability': round(S, 4),
+            'entropy': round(E, 4)
+        },
+        'ambiguity': round(float(ambiguity), 4),
+        'depth': int(max_depth),
+        'geometric_balance': round(geometric_balance, 6),
+        'geometric_tension': round(geometric_tension, 6),
+        'metadata': {
+            'morph_weight': round(float(morph_weight), 3),
+            'synt_weight': round(float(synt_weight), 3),
+            'word_count': len(text.split()),
+            'analysis_mode': 'standard'
+        }
+    }
+
 # ==================================================
 # STANZA INTEGRATION FOR LEGAL TEXT ANALYSIS
 # ==================================================
@@ -3175,7 +3332,30 @@ if __name__ == "__main__":
     import sys
     import os
     from gtmo_json_saver import GTMOOptimizedSaver
-    
+
+    # Check for flags
+    no_analysis = '--no-analysis' in sys.argv or '--load-only' in sys.argv
+    lite_mode = '--lite' in sys.argv or '--dse-only' in sys.argv
+    standard_mode = '--standard' in sys.argv
+
+    if no_analysis:
+        sys.argv = [arg for arg in sys.argv if arg not in ['--no-analysis', '--load-only']]
+    if lite_mode:
+        sys.argv = [arg for arg in sys.argv if arg not in ['--lite', '--dse-only']]
+    if standard_mode:
+        sys.argv = [arg for arg in sys.argv if arg not in ['--standard']]
+
+    # Select analysis function based on mode (priority: lite > standard > full)
+    if lite_mode:
+        analyze_func = analyze_dse_lite
+        mode_name = "LITE"
+    elif standard_mode:
+        analyze_func = analyze_dse_standard
+        mode_name = "STANDARD"
+    else:
+        analyze_func = analyze_quantum_with_axioms
+        mode_name = "FULL"
+
     # Check if file argument provided
     if len(sys.argv) > 1:
         file_path = sys.argv[1]
@@ -3185,7 +3365,10 @@ if __name__ == "__main__":
             sys.exit(1)
         
         print(f"🔍 Loading file: {file_path}")
-        
+
+        # Lazy import to avoid circular dependency
+        from gtmo_file_loader import load_markdown_file
+
         try:
             # Load markdown file - now returns articles, not sentences
             articles = load_markdown_file(file_path)
@@ -3195,7 +3378,25 @@ if __name__ == "__main__":
                 sys.exit(1)
 
             print(f"📄 Found {len(articles)} articles/units")
-            print("🌟 Starting GTMØ Quantum Analysis...")
+
+            # If --no-analysis flag is set, just display articles and exit
+            if no_analysis:
+                print("ℹ️  Running in NO-ANALYSIS mode (--no-analysis)")
+                print("=" * 70)
+                for i, article in enumerate(articles, 1):
+                    print(f"\n📄 Article {i}/{len(articles)}")
+                    print("-" * 70)
+                    print(article)
+                    print("-" * 70)
+                print(f"\n✅ Loaded {len(articles)} articles successfully (no analysis performed)")
+                sys.exit(0)
+
+            if lite_mode:
+                print("⚡ Starting GTMØ D-S-E Analysis (LITE mode - minimal metrics)")
+            elif standard_mode:
+                print("📊 Starting GTMØ D-S-E Analysis (STANDARD mode - with aggregate metrics)")
+            else:
+                print("🌟 Starting GTMØ Quantum Analysis (FULL mode - complete analysis)")
             print("=" * 70)
 
             if not morfeusz or not nlp:
@@ -3250,7 +3451,7 @@ if __name__ == "__main__":
                                     global_sentence_counter += 1
                                     print(f"\n🔄 Processing sentence {global_sentence_counter} (art {i}, local {s_idx}/{len(sentences)})")
                                     print(f"   Text preview: {sentence[:100]}...")
-                                    sent_result = analyze_quantum_with_axioms(sentence, os.path.basename(file_path))
+                                    sent_result = analyze_func(sentence, os.path.basename(file_path))
                                     sent_result['sentence_number'] = s_idx
                                     sent_result['global_sentence_number'] = global_sentence_counter
                                     sent_result['article_number'] = i
@@ -3298,7 +3499,7 @@ if __name__ == "__main__":
                                     global_sentence_counter += 1
                                     print(f"\n🔄 Processing sentence {global_sentence_counter} (§{p_idx}, local {s_idx}/{len(sentences)})")
                                     print(f"   Text preview: {sentence[:100]}...")
-                                    sent_result = analyze_quantum_with_axioms(sentence, os.path.basename(file_path))
+                                    sent_result = analyze_func(sentence, os.path.basename(file_path))
                                     sent_result['sentence_number'] = s_idx
                                     sent_result['global_sentence_number'] = global_sentence_counter
                                     sent_result['paragraph_number'] = p_idx
@@ -3327,7 +3528,7 @@ if __name__ == "__main__":
                                         'skip_reason': f'Too large: {len(sentences)} sentences, {len(paragraph)} characters'
                                     }
                                 else:
-                                    para_result = analyze_quantum_with_axioms(paragraph, os.path.basename(file_path))
+                                    para_result = analyze_func(paragraph, os.path.basename(file_path))
                                     para_result['paragraph_number'] = p_idx
                                     para_result['sentence_count'] = len(sentences)
                                     para_result['sentences'] = sentence_analyses
@@ -3340,7 +3541,7 @@ if __name__ == "__main__":
                                 continue
 
                         # Analyze complete article (all paragraphs together) - skip if too large
-                        result = analyze_quantum_with_axioms(article, os.path.basename(file_path))
+                        result = analyze_func(article, os.path.basename(file_path))
                         result["article_number"] = i
                         result["total_articles"] = len(articles)
                         result["paragraph_count"] = len(paragraph_matches)

@@ -308,11 +308,61 @@ class GTMORhetoricalAnalyzer:
         
         return transformed_coords, mode, metadata
 
+    def detect_legal_formal_context(self, text: str) -> str:
+        """
+        Auto-detekcja kontekstu prawnego/formalnego.
+
+        Rozróżnia:
+        - 'legal_formal': Formalny tekst prawny (konstytucje, ustawy, umowy)
+          → Wyłączona detekcja ironii strukturalnej (false positives)
+        - 'legal': Ogólny kontekst prawny, ale potencjalnie z ironią
+        - 'formal': Tekst formalny nie-prawny
+        - 'informal': Tekst nieformalny
+
+        Returns:
+            Typ kontekstu jako string
+        """
+        text_lower = text.lower()
+
+        # Markery formalnego tekstu prawnego (konstytucje, ustawy)
+        LEGAL_FORMAL_MARKERS = {
+            # Struktura ustaw/konstytucji
+            'art.', 'ust.', '§', 'rozdział', 'dział', 'tytuł',
+            # Terminologia konstytucyjna
+            'konstytucj', 'rzeczpospolit', 'sejm', 'senat', 'prezydent',
+            'trybunał', 'sąd najwyższy', 'rada ministrów',
+            # Terminologia ustawowa
+            'ustaw', 'rozporządzen', 'dekret', 'uchwał',
+            # Frazy prawne
+            'wchodzi w życie', 'traci moc', 'stosuje się', 'podlega',
+            'na podstawie', 'w drodze', 'zgodnie z', 'w trybie'
+        }
+
+        # Markery ogólnego kontekstu prawnego (mniej formalnego)
+        LEGAL_GENERAL_MARKERS = {
+            'umow', 'regulamin', 'statut', 'kodeks',
+            'pozwan', 'powód', 'oskarżon', 'wyrok'
+        }
+
+        # Zlicz markery
+        formal_count = sum(1 for m in LEGAL_FORMAL_MARKERS if m in text_lower)
+        general_count = sum(1 for m in LEGAL_GENERAL_MARKERS if m in text_lower)
+
+        # Decyzja
+        if formal_count >= 2:
+            return 'legal_formal'  # Formalny tekst prawny - BEZ detekcji ironii
+        elif formal_count >= 1 or general_count >= 2:
+            return 'legal'  # Ogólny kontekst prawny
+        elif general_count >= 1:
+            return 'formal'  # Formalny ale nie prawny
+        else:
+            return 'informal'  # Nieformalny - pełna detekcja ironii
+
     def detect_formal_register_violation(
         self,
         text: str,
         irony_score: float,
-        context_type: str = 'legal'
+        context_type: str = 'auto'
     ) -> Dict:
         """
         Wykrywa naruszenia rejestru formalnego w tekstach prawnych.
@@ -320,17 +370,22 @@ class GTMORhetoricalAnalyzer:
         Sprawdza:
         1. Wulgaryzmy i język potoczny
         2. Slang i bełkot
-        3. Wysoką ironię (> 0.7) jako anomalię
+        3. Wysoką ironię (> 0.7) jako anomalię (TYLKO dla context_type != 'legal_formal')
         4. Niespójność stylistyczną
 
         Args:
             text: Tekst do analizy
             irony_score: Wynik analizy ironii (0-1)
-            context_type: Typ kontekstu ('legal', 'formal', 'informal')
+            context_type: Typ kontekstu ('auto', 'legal_formal', 'legal', 'formal', 'informal')
+                         'auto' = automatyczna detekcja
+                         'legal_formal' = formalny tekst prawny (wyłączona detekcja ironii)
 
         Returns:
             Dict ze szczegółami naruszenia rejestru
         """
+        # Auto-detekcja kontekstu jeśli 'auto'
+        if context_type == 'auto':
+            context_type = self.detect_legal_formal_context(text)
 
         # Lista wulgaryzmów i języka nieformalnego
         VULGAR_WORDS = {
@@ -371,13 +426,16 @@ class GTMORhetoricalAnalyzer:
         severity = 'NONE'
 
         # Wulgaryzmy w kontekście formalnym = CRITICAL
-        if vulgar_found and context_type in ['legal', 'formal']:
+        if vulgar_found and context_type in ['legal', 'legal_formal', 'formal']:
             register_violation_score = 1.0
             anomaly_type = 'VULGAR_IN_FORMAL_CONTEXT'
             severity = 'CRITICAL'
 
         # Wysoka ironia (> 0.7) w tekście prawnym = ANOMALY
+        # UWAGA: Wyłączone dla 'legal_formal' (formalnych tekstów prawnych)
+        # ponieważ struktura prawna generuje FALSE POSITIVES
         elif irony_score > 0.7 and context_type == 'legal':
+            # Tylko dla 'legal' (nie 'legal_formal')
             register_violation_score = min(irony_score, 1.0)
             anomaly_type = 'HIGH_IRONY_IN_LEGAL'
             severity = 'HIGH'
@@ -401,8 +459,10 @@ class GTMORhetoricalAnalyzer:
             'severity': severity,
             'vulgar_words_found': vulgar_found,
             'informal_markers_found': informal_found,
-            'irony_triggered': irony_score > 0.7,
-            'classification': 'IRRATIONAL_ANOMALY' if severity in ['CRITICAL', 'HIGH'] else None
+            'irony_triggered': irony_score > 0.7 and context_type != 'legal_formal',
+            'classification': 'IRRATIONAL_ANOMALY' if severity in ['CRITICAL', 'HIGH'] else None,
+            'detected_context': context_type,  # Dodane: wykryty/użyty kontekst
+            'irony_suppressed': context_type == 'legal_formal' and irony_score > 0.7  # Czy ironia została wyciszona
         }
 
 
