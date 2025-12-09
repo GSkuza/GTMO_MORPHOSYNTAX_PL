@@ -23,7 +23,7 @@ MAX_QUANTUM_STATES = 50  # Limit to prevent O(n²) performance issues with very 
 # QUANTUM STATE REPRESENTATION
 # =============================================================================
 
-@dataclass
+@dataclass(frozen=True)
 class QuantumState:
     """Represents a quantum state in GTMØ space."""
     amplitude: complex  # Complex amplitude (magnitude + phase)
@@ -162,7 +162,7 @@ class EnhancedQuantumAnalyzer:
             state2: Second quantum state
 
         Returns:
-            Entanglement entropy [0, ∞)
+            Entanglement entropy [0, ∞]
         """
         # Distance in semantic space
         distance = np.linalg.norm(state1.coords - state2.coords)
@@ -294,23 +294,21 @@ class EnhancedQuantumAnalyzer:
         coords_array = np.array([s.coords for s in states])
 
         # Phase coherence: how aligned are the phases?
-        # Using circular variance
-        phase_vectors = np.exp(1j * phases)
-        mean_phase_vector = np.mean(phase_vectors)
-        phase_coherence = abs(mean_phase_vector)
+        phase_coherence = np.abs(np.mean(np.exp(1j * phases)))
 
         # Amplitude coherence: how uniform are the amplitudes?
-        amplitude_variance = np.var(amplitudes)
-        amplitude_coherence = np.exp(-amplitude_variance)  # Low variance = high coherence
+        amplitude_coherence = np.exp(-np.var(amplitudes))
 
         # Spatial coherence: how clustered are the states in D-S-E space?
         if len(coords_array) > 1:
-            spatial_variance = np.mean(np.var(coords_array, axis=0))
-            spatial_coherence = np.exp(-spatial_variance)
+            # Calculate variance of the coordinates
+            spatial_variance = np.var(coords_array, axis=0)
+            # Calculate spatial coherence
+            spatial_coherence = np.exp(-np.sum(spatial_variance))
         else:
-            spatial_coherence = 1.0
+            spatial_coherence = 1.0  # Single state = perfect coherence
 
-        # Total coherence (weighted combination)
+        # Total coherence: weighted average
         total_coherence = (
             0.4 * phase_coherence +
             0.3 * amplitude_coherence +
@@ -321,111 +319,60 @@ class EnhancedQuantumAnalyzer:
             'total_coherence': float(total_coherence),
             'phase_coherence': float(phase_coherence),
             'amplitude_coherence': float(amplitude_coherence),
-            'spatial_coherence': float(spatial_coherence),
-            'mean_phase': float(cmath.phase(mean_phase_vector)),
-            'mean_amplitude': float(np.mean(amplitudes)),
-            'phase_std': float(np.std(phases)),
-            'amplitude_std': float(np.std(amplitudes))
+            'spatial_coherence': float(spatial_coherence)
         }
 
-    def analyze_superposition_states(self,
-                                    states: List[QuantumState],
-                                    threshold: float = 0.3) -> Dict:
+    def analyze_superposition_states(self, states: List[QuantumState]) -> Dict:
         """
-        Analyze quantum superposition in the text.
+        Analyze superposition characteristics of quantum states.
 
         Args:
             states: List of quantum states
-            threshold: Threshold for superposition detection
 
         Returns:
-            Superposition analysis
+            Dictionary with superposition analysis
         """
-        if len(states) < 2:
+        if not states:
             return {
-                'is_superposed': False,
+                'superposition_type': 'none',
                 'superposition_degree': 0.0,
-                'num_superposed_states': 0,
-                'mean_overlap': 0.0,
-                'max_overlap': 0.0,
-                'superposition_type': 'DECOHERENT'
+                'dominant_state_index': -1,
+                'state_probabilities': []
             }
 
-        # Calculate overlap integrals between states
-        overlaps = []
+        # Calculate probabilities from amplitudes
+        amplitudes = np.array([abs(s.amplitude) for s in states])
+        probabilities = amplitudes ** 2
+        probabilities = probabilities / np.sum(probabilities) if np.sum(probabilities) > 0 else probabilities
 
-        for i in range(len(states)):
-            for j in range(i+1, len(states)):
-                # Overlap = ⟨ψᵢ|ψⱼ⟩ (inner product)
-                # Using amplitude product and phase difference
-                amp_product = abs(states[i].amplitude) * abs(states[j].amplitude)
-                phase_diff = cmath.phase(states[i].amplitude) - cmath.phase(states[j].amplitude)
+        # Superposition degree: entropy-based measure
+        # High entropy = strong superposition, low entropy = collapsed state
+        entropy = -np.sum(probabilities * np.log2(probabilities + 1e-10))
+        max_entropy = np.log2(len(states)) if len(states) > 1 else 1.0
+        superposition_degree = entropy / max_entropy if max_entropy > 0 else 0.0
 
-                overlap = amp_product * np.cos(phase_diff)
-                overlaps.append(abs(overlap))
+        # Dominant state
+        dominant_idx = int(np.argmax(probabilities))
+        dominant_prob = probabilities[dominant_idx]
 
-        mean_overlap = np.mean(overlaps) if overlaps else 0.0
-
-        # High overlap = superposition
-        is_superposed = bool(mean_overlap > threshold)
-        superposition_degree = float(np.clip(mean_overlap, 0.0, 1.0))
-
-        # Count states in superposition (amplitude > threshold)
-        active_states = int(sum(1 for s in states if abs(s.amplitude) > threshold))
-
-        # Calculate phase coherence
-        phases = [cmath.phase(s.amplitude) for s in states]
-        phase_coherence = float(1.0 - np.std(phases) / np.pi) if len(phases) > 1 else 1.0
-        phase_coherence = np.clip(phase_coherence, 0.0, 1.0)
+        # Classification
+        if dominant_prob > 0.9:
+            superposition_type = 'collapsed'
+        elif superposition_degree > 0.8:
+            superposition_type = 'strong_superposition'
+        elif superposition_degree > 0.5:
+            superposition_type = 'moderate_superposition'
+        else:
+            superposition_type = 'weak_superposition'
 
         return {
-            'is_superposed': is_superposed,
-            'superposition_degree': superposition_degree,
-            'num_superposed_states': active_states,
-            'mean_overlap': float(mean_overlap),
-            'max_overlap': float(max(overlaps)) if overlaps else 0.0,
-            'phase_coherence': float(phase_coherence),
-            'superposition_type': self._classify_superposition(superposition_degree, phase_coherence)
+            'superposition_type': superposition_type,
+            'superposition_degree': float(superposition_degree),
+            'dominant_state_index': dominant_idx,
+            'dominant_probability': float(dominant_prob),
+            'state_probabilities': probabilities.tolist(),
+            'entropy': float(entropy)
         }
-
-    def _classify_superposition(self, degree: float, phase_coherence: float = None) -> str:
-        """
-        Classify type of superposition.
-
-        Args:
-            degree: Superposition degree (overlap between states)
-            phase_coherence: Phase coherence (0-1), if available
-
-        Returns:
-            Classification string
-
-        Logic:
-            - Phase coherence > 0.8 → COHERENT (even if overlap is low)
-            - Phase coherence < 0.3 → DECOHERENT (even if overlap is high)
-            - Otherwise, use overlap-based classification
-        """
-        # Priority: Phase coherence determines coherence vs decoherence
-        if phase_coherence is not None:
-            if phase_coherence >= 0.8:
-                # High phase coherence = COHERENT state
-                if degree >= 0.7:
-                    return 'MAXIMALLY_ENTANGLED_COHERENT'
-                else:
-                    return 'COHERENT_SUPERPOSITION'
-            elif phase_coherence <= 0.3:
-                # Low phase coherence = DECOHERENT
-                return 'DECOHERENT'
-
-        # Fallback: use overlap-based classification
-        if degree < 0.2:
-            return 'DECOHERENT'
-        elif degree < 0.4:
-            return 'WEAKLY_SUPERPOSED'
-        elif degree < 0.7:
-            return 'COHERENT_SUPERPOSITION'
-        else:
-            return 'MAXIMALLY_ENTANGLED'
-
 
 # =============================================================================
 # INTEGRATION FUNCTION
@@ -528,7 +475,9 @@ def analyze_quantum_enhanced(text: str,
 
 
 if __name__ == "__main__":
-    print("GTMØ Enhanced Quantum Metrics Module")
+    import sys
+    sys.stdout.reconfigure(encoding='utf-8')
+    print("GTMO Enhanced Quantum Metrics Module")
     print("=" * 60)
 
     # Test quantum analysis
@@ -579,8 +528,10 @@ if __name__ == "__main__":
     print("\n" + "=" * 60)
     superposition = analyzer.analyze_superposition_states(states)
     print("Superposition Analysis:")
-    print(f"  Is superposed: {superposition['is_superposed']}")
+    print(f"  Superposition type: {superposition['superposition_type']}")
     print(f"  Superposition degree: {superposition['superposition_degree']:.3f}")
-    print(f"  Type: {superposition['superposition_type']}")
+    print(f"  Dominant state index: {superposition['dominant_state_index']}")
+    print(f"  Dominant probability: {superposition['dominant_probability']:.3f}")
+    print(f"  Entropy: {superposition['entropy']:.3f}")
 
     print("\n" + "=" * 60)

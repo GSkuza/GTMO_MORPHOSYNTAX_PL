@@ -19,6 +19,7 @@ License: MIT
 
 import numpy as np
 from typing import List, Optional, Dict, Any
+from concurrent.futures import ThreadPoolExecutor
 import warnings
 
 try:
@@ -158,24 +159,22 @@ class HerBERTtoGTMO9DMapper:
             )
 
             # Move to device
-            inputs = {k: v.to(self.device) for k, v in inputs.items()}
+            inputs = inputs.to(self.device)
 
             # Get embeddings (no gradient computation needed)
             with torch.no_grad():
-                outputs = self.model(**inputs)
-                # outputs.last_hidden_state shape: (batch_size, seq_length, hidden_size)
-                hidden_states = outputs.last_hidden_state
+                hidden_states = self.model(inputs["input_ids"], attention_mask=inputs["attention_mask"])[0]
 
             # Apply pooling
             if pooling == "cls":
                 # Use [CLS] token (first token)
-                embedding = hidden_states[0, 0, :].cpu().numpy()
+                embedding = hidden_states[:, 0, :].cpu().numpy()
             elif pooling == "max":
                 # Max pooling over sequence
-                embedding = torch.max(hidden_states[0], dim=0)[0].cpu().numpy()
+                embedding = torch.max(hidden_states, dim=1)[0].cpu().numpy()
             else:  # mean pooling (default)
                 # Average over sequence length
-                embedding = torch.mean(hidden_states[0], dim=0).cpu().numpy()
+                embedding = torch.mean(hidden_states, dim=1).cpu().numpy()
 
             return embedding.astype(np.float32)
 
@@ -200,17 +199,33 @@ class HerBERTtoGTMO9DMapper:
         Returns:
             numpy array of shape (len(texts), embedding_dim)
         """
-        embeddings = []
+        embeddings = np.zeros((len(texts), self.embedding_dim), dtype=np.float32)
 
         for i in range(0, len(texts), batch_size):
             batch_texts = texts[i:i + batch_size]
-            batch_embeddings = [
-                self.get_herbert_embedding(text, pooling)
-                for text in batch_texts
-            ]
-            embeddings.extend(batch_embeddings)
+            inputs = self.tokenizer(
+                batch_texts,
+                return_tensors="pt",
+                truncation=True,
+                max_length=self.max_length,
+                padding=True
+            )
 
-        return np.array(embeddings)
+            inputs = inputs.to(self.device)
+
+            with torch.no_grad():
+                hidden_states = self.model(inputs["input_ids"], attention_mask=inputs["attention_mask"])[0]
+
+            if pooling == "cls":
+                batch_embeddings = hidden_states[:, 0, :].cpu().numpy()
+            elif pooling == "max":
+                batch_embeddings = torch.max(hidden_states, dim=1)[0].cpu().numpy()
+            else:  # mean pooling (default)
+                batch_embeddings = torch.mean(hidden_states, dim=1).cpu().numpy()
+
+            embeddings[i:i + batch_size] = batch_embeddings
+
+        return embeddings
 
     def compute_similarity(
         self,
@@ -229,13 +244,18 @@ class HerBERTtoGTMO9DMapper:
         Returns:
             Similarity score (higher = more similar for cosine/dot)
         """
-        emb1 = self.get_herbert_embedding(text1)
-        emb2 = self.get_herbert_embedding(text2)
+        # Get embeddings in parallel
+        with ThreadPoolExecutor() as executor:
+            emb1 = executor.submit(self.get_herbert_embedding, text1).result()
+            emb2 = executor.submit(self.get_herbert_embedding, text2).result()
+
+        # Flatten embeddings if needed
+        emb1 = emb1.flatten()
+        emb2 = emb2.flatten()
 
         if metric == "cosine":
             # Cosine similarity
-            norm1 = np.linalg.norm(emb1)
-            norm2 = np.linalg.norm(emb2)
+            norm1, norm2 = np.linalg.norm(emb1), np.linalg.norm(emb2)
             if norm1 == 0 or norm2 == 0:
                 return 0.0
             return float(np.dot(emb1, emb2) / (norm1 * norm2))
@@ -261,14 +281,17 @@ class HerBERTtoGTMO9DMapper:
         Returns:
             Dictionary with statistics (magnitude, mean, std, etc.)
         """
-        return {
-            "magnitude": float(np.linalg.norm(embedding)),
-            "mean": float(np.mean(embedding)),
-            "std": float(np.std(embedding)),
-            "min": float(np.min(embedding)),
-            "max": float(np.max(embedding)),
-            "sparsity": float(np.sum(np.abs(embedding) < 1e-6) / len(embedding))
+        # Flatten embedding if needed
+        emb = embedding.flatten()
+        stats = {
+            "magnitude": float(np.linalg.norm(emb)),
+            "mean": float(np.mean(emb)),
+            "std": float(np.std(emb)),
+            "min": float(np.min(emb)),
+            "max": float(np.max(emb)),
+            "sparsity": float(np.count_nonzero(np.abs(emb) < 1e-6) / len(emb))
         }
+        return stats
 
 
 # Convenience function for quick embedding generation
